@@ -11,6 +11,9 @@ const SERIES_DESCRIPTIONS: Record<string, string> = {
   nascar: 'Stock car racing across America',
   nls: 'Endurance on the Nurburgring Nordschleife',
   wrc: 'Rally racing across the globe',
+  imsa: 'US endurance — Daytona 24h, Sebring, Petit Le Mans',
+  dtm: 'German touring car championship — GT3 racing',
+  gtwc: 'Europe\'s premier GT3 series — Spa 24 Hours',
 }
 
 const LOGO_FILES: Record<string, string> = {
@@ -19,6 +22,9 @@ const LOGO_FILES: Record<string, string> = {
   indycar: '/logos/indycar.svg',
   nascar: '/logos/nascar.svg',
   nls: '/logos/nls.png',
+  imsa: '/logos/imsa.svg',
+  dtm: '/logos/dtm.svg',
+  gtwc: '/logos/gtwc.svg',
   wrc: '/logos/wrc.png',
 }
 
@@ -141,8 +147,8 @@ export function SeriesSelector({ onConfirm, initialSelection = [] }: SeriesSelec
                     justifyContent: 'center',
                     marginBottom: 16,
                     borderRadius: 10,
-                    padding: ['wec', 'nls', 'wrc'].includes(series.id) ? '6px 16px' : '0',
-                    background: ['wec', 'nls', 'wrc'].includes(series.id) ? '#fff' : 'transparent',
+                    padding: ['wec', 'nls', 'wrc', 'imsa', 'dtm'].includes(series.id) ? '6px 16px' : '0',
+                    background: ['wec', 'nls', 'wrc', 'imsa', 'dtm'].includes(series.id) ? '#fff' : 'transparent',
                   }}
                 >
                   <Image
@@ -152,7 +158,7 @@ export function SeriesSelector({ onConfirm, initialSelection = [] }: SeriesSelec
                     height={56}
                     unoptimized
                     style={{
-                      maxHeight: ['wec', 'nls', 'wrc'].includes(series.id) ? 40 : 56,
+                      maxHeight: ['wec', 'nls', 'wrc', 'imsa', 'dtm'].includes(series.id) ? 40 : 56,
                       maxWidth: 160,
                       width: 'auto',
                       objectFit: 'contain',

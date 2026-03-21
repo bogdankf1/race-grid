@@ -80,8 +80,8 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                   alignItems: 'center',
                   borderRadius: 6,
                   overflow: 'hidden',
-                  padding: ['wec', 'nls', 'wrc'].includes(series.id) ? '2px 8px' : 0,
-                  background: ['wec', 'nls', 'wrc'].includes(series.id) ? '#fff' : 'transparent',
+                  padding: ['wec', 'nls', 'wrc', 'imsa', 'dtm'].includes(series.id) ? '2px 8px' : 0,
+                  background: ['wec', 'nls', 'wrc', 'imsa', 'dtm'].includes(series.id) ? '#fff' : 'transparent',
                 }}
               >
                 <SeriesLogo seriesId={series.id} className="" />

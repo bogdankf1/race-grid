@@ -13,6 +13,9 @@ const LOGO_MAP: Record<string, string> = {
   nascar: '/logos/nascar.svg',
   nls: '/logos/nls.png',
   wrc: '/logos/wrc.png',
+  imsa: '/logos/imsa.svg',
+  dtm: '/logos/dtm.svg',
+  gtwc: '/logos/gtwc.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {
