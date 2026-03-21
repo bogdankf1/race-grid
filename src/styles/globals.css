@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #161622;
+  --color-surface: #1E1E2E;
+  --color-elevated: #2A2A3E;
+  --color-border: #383852;
+  --color-primary: #EEEEF2;
+  --color-secondary: #9898B0;
+  --color-muted: #666680;
+  --color-today-ring: #FFFFFF40;
+
+  --color-f1: #FF1801;
+  --color-wec: #0066CC;
+  --color-indycar: #002F6C;
+  --color-nascar: #007AC2;
+  --color-nls: #009B3A;
+  --color-wrc: #FFD100;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-base); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-muted); }
+
+/* Display font */
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+/* Global interactive feedback */
+button, [role="button"], a {
+  cursor: pointer;
+  transition: opacity 0.15s ease, background-color 0.15s ease, transform 0.1s ease;
+}
+
+button:hover, [role="button"]:hover, a:hover {
+  opacity: 0.85;
+}
+
+button:active, [role="button"]:active, a:active {
+  transform: scale(0.97);
+  opacity: 0.75;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:disabled:hover {
+  opacity: 0.5;
+  transform: none;
+}
+
+button:disabled:active {
+  transform: none;
+}
+
+/* ── Layout containers ── */
+.rg-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rg-header-title {
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #eee;
+  white-space: nowrap;
+}
+
+.rg-calendar-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 32px 48px;
+}
+
+.rg-month-label {
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: #eee;
+  width: 320px;
+  text-align: center;
+}
+
+.rg-day-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 32px 48px;
+}
+
+.rg-day-heading {
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #eee;
+  margin-bottom: 28px;
+}
+
+.rg-event-card-header {
+  padding: 24px 28px 20px;
+}
+
+.rg-event-card-sessions {
+  padding: 0 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rg-event-name {
+  font-size: 20px;
+}
+
+/* ── Tablet (641–1024) ── */
+@media (max-width: 1024px) {
+  .rg-header-inner { padding: 12px 20px; }
+  .rg-calendar-wrap { padding: 24px 20px 36px; }
+  .rg-month-label { font-size: 26px; width: 260px; }
+  .rg-day-wrap { padding: 24px 20px 36px; }
+  .rg-day-heading { font-size: 26px; }
+  .rg-event-card-header { padding: 20px 20px 16px; }
+  .rg-event-card-sessions { padding: 0 20px 20px; }
+  .rg-event-name { font-size: 18px; }
+}
+
+/* ── Mobile (≤640) ── */
+@media (max-width: 640px) {
+  .rg-header-inner {
+    padding: 10px 16px;
+    gap: 8px;
+  }
+  .rg-header-title {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  .rg-header-controls {
+    gap: 6px !important;
+  }
+  .rg-calendar-wrap {
+    padding: 16px 12px 24px;
+  }
+  .rg-month-nav {
+    margin-bottom: 16px !important;
+  }
+  .rg-month-label {
+    font-size: 20px;
+    width: 200px;
+  }
+  .rg-weekday-header {
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
+    padding: 4px 0 !important;
+  }
+  .rg-day-grid {
+    gap: 3px !important;
+  }
+  .rg-day-cell-inner {
+    padding: 6px !important;
+    min-height: 70px !important;
+    border-radius: 8px !important;
+  }
+  .rg-day-number {
+    font-size: 12px !important;
+    margin-bottom: 3px !important;
+  }
+  .rg-chip-label {
+    display: none !important;
+  }
+  .rg-chip-series {
+    font-size: 9px !important;
+    padding: 3px 5px !important;
+    border-radius: 4px !important;
+  }
+  .rg-overflow-chip {
+    font-size: 9px !important;
+    padding: 2px 5px !important;
+  }
+  .rg-day-wrap {
+    padding: 16px 16px 24px;
+  }
+  .rg-day-heading {
+    font-size: 16px !important;
+    margin-bottom: 20px;
+    width: auto !important;
+  }
+  .rg-event-card-header {
+    padding: 16px 16px 12px;
+  }
+  .rg-event-card-sessions {
+    padding: 0 16px 16px;
+    gap: 6px;
+  }
+  .rg-event-name {
+    font-size: 16px;
+  }
+  .rg-session-row {
+    padding: 10px 12px !important;
+    gap: 10px !important;
+  }
+  .rg-session-time {
+    font-size: 12px !important;
+  }
+  .rg-dropdown-panel {
+    width: min(280px, 85vw) !important;
+  }
+  .rg-nav-btn {
+    padding: 6px !important;
+  }
+  .rg-today-btn {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+}

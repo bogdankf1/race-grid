@@ -1,0 +1,58 @@
+import { SeriesConfig } from '@/lib/types'
+import { f12026 } from './f1-2026'
+import { wec2026 } from './wec-2026'
+import { indycar2026 } from './indycar-2026'
+import { nascar2026 } from './nascar-2026'
+import { nls2026 } from './nls-2026'
+import { wrc2026 } from './wrc-2026'
+
+export const ALL_SERIES: SeriesConfig[] = [
+  {
+    id: 'f1',
+    name: 'Formula 1',
+    shortName: 'F1',
+    color: '#FF1801',
+    textColor: '#fff',
+    events: f12026,
+  },
+  {
+    id: 'indycar',
+    name: 'IndyCar Series',
+    shortName: 'INDY',
+    color: '#002F6C',
+    textColor: '#fff',
+    events: indycar2026,
+  },
+  {
+    id: 'nascar',
+    name: 'NASCAR Cup Series',
+    shortName: 'NASCAR',
+    color: '#007AC2',
+    textColor: '#fff',
+    events: nascar2026,
+  },
+  {
+    id: 'wec',
+    name: 'FIA World Endurance Championship',
+    shortName: 'WEC',
+    color: '#0066CC',
+    textColor: '#fff',
+    events: wec2026,
+  },
+  {
+    id: 'wrc',
+    name: 'FIA World Rally Championship',
+    shortName: 'WRC',
+    color: '#FFD100',
+    textColor: '#000',
+    events: wrc2026,
+  },
+  {
+    id: 'nls',
+    name: 'Nurburgring Langstrecken-Serie',
+    shortName: 'NLS',
+    color: '#009B3A',
+    textColor: '#fff',
+    events: nls2026,
+  },
+]
