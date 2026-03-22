@@ -14,8 +14,22 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'race-grid — Motorsport Calendar',
-  description: 'Universal motorsport calendar. Track F1, WEC, IndyCar, NASCAR, NLS, and WRC all in one place.',
+  title: 'Race Grid — Motorsport Calendar',
+  description: 'All your motorsport in one calendar. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GT World Challenge and more — with session times in your local timezone.',
+  icons: {
+    icon: '/favicon.svg',
+  },
+  openGraph: {
+    title: 'Race Grid — Motorsport Calendar',
+    description: 'All your motorsport in one calendar. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GTWC and more — with session times in your local timezone.',
+    siteName: 'Race Grid',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Race Grid — Motorsport Calendar',
+    description: 'All your motorsport in one calendar. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GTWC and more.',
+  },
 }
 
 export default function RootLayout({
