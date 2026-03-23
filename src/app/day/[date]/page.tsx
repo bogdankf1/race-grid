@@ -1,26 +1,13 @@
-import { ALL_SERIES } from '@/data/series-registry'
 import { DayPageClient } from '@/components/DayPageClient'
 import { eachDayOfInterval, format } from 'date-fns'
 
 export function generateStaticParams() {
-  const allDates = new Set<string>()
+  // Generate every day in 2026 so navigation never hits a 404
+  const start = new Date(2026, 0, 1)
+  const end = new Date(2026, 11, 31)
+  const days = eachDayOfInterval({ start, end })
 
-  for (const series of ALL_SERIES) {
-    for (const event of series.events) {
-      for (const session of event.sessions) {
-        const date = new Date(session.startUtc)
-        // Add the UTC date and adjacent dates to cover timezone shifts
-        const d = new Date(date)
-        allDates.add(format(d, 'yyyy-MM-dd'))
-        d.setDate(d.getDate() - 1)
-        allDates.add(format(d, 'yyyy-MM-dd'))
-        d.setDate(d.getDate() + 2)
-        allDates.add(format(d, 'yyyy-MM-dd'))
-      }
-    }
-  }
-
-  return Array.from(allDates).map(date => ({ date }))
+  return days.map(day => ({ date: format(day, 'yyyy-MM-dd') }))
 }
 
 export default async function DayPage({ params }: { params: Promise<{ date: string }> }) {
