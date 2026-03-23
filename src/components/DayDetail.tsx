@@ -6,6 +6,8 @@ import { ALL_SERIES } from '@/data/series-registry'
 import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
 import { SeriesChip } from './SeriesChip'
 import { SeriesLogo } from './SeriesLogo'
+import { getBroadcasts, detectCountry } from '@/data/broadcasts'
+import { Tv } from 'lucide-react'
 
 const SESSION_ICONS: Record<SessionType, string> = {
   race: '\u{1F3C1}', qualifying: '\u23F1', sprint: '\u26A1',
@@ -134,6 +136,65 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                 </div>
               </div>
             ))}
+
+            {/* Where to watch */}
+            {(() => {
+              const country = detectCountry(timezone)
+              if (!country) return null
+              const broadcasts = getBroadcasts(series.id, country)
+              if (broadcasts.length === 0) return null
+              return (
+                <div
+                  style={{
+                    marginTop: 12,
+                    padding: '14px 16px',
+                    borderRadius: 12,
+                    background: '#1a1a2e',
+                    border: '1px solid #2a2a42',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+                    <Tv style={{ width: 14, height: 14, color: '#888' }} />
+                    <span style={{ fontSize: 12, fontWeight: 600, color: '#888', textTransform: 'uppercase', letterSpacing: 1 }}>
+                      Where to watch
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    {broadcasts.map((b, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 10,
+                          fontSize: 13,
+                        }}
+                      >
+                        <span style={{ fontWeight: 600, color: '#ccc', flexShrink: 0 }}>
+                          {b.url ? (
+                            <a
+                              href={b.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ color: '#7ab3ff', textDecoration: 'none' }}
+                            >
+                              {b.name}
+                            </a>
+                          ) : (
+                            b.name
+                          )}
+                        </span>
+                        {b.note && (
+                          <span style={{ color: '#666', fontSize: 12 }}>
+                            — {b.note}
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            })()}
           </div>
         </div>
       ))}
