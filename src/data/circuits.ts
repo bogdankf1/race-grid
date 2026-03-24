@@ -21,7 +21,7 @@ const CIRCUITS: Record<string, CircuitInfo> = {
   'Hungaroring': { length: '4.381 km', turns: 14, type: 'permanent' },
   'Circuit Zandvoort': { length: '4.259 km', turns: 14, type: 'permanent' },
   'Autodromo Nazionale Monza': { length: '5.793 km', turns: 11, type: 'permanent' },
-  'Madring Circuit': { length: '5.473 km', turns: 16, type: 'street' },
+  'Circuito de Madrid': { length: '5.473 km', turns: 16, type: 'street' },
   'Baku City Circuit': { length: '6.003 km', turns: 20, type: 'street' },
   'Marina Bay Street Circuit': { length: '4.940 km', turns: 19, type: 'street' },
   'Circuit of the Americas': { length: '5.513 km', turns: 20, type: 'permanent' },
@@ -103,6 +103,9 @@ const CIRCUITS: Record<string, CircuitInfo> = {
   'VIRginia International Raceway': { length: '5.263 km', turns: 17, type: 'permanent' },
   'Michelin Raceway Road Atlanta': { length: '4.088 km', turns: 12, type: 'permanent' },
 
+  // Super GT
+  'Sepang International Circuit': { length: '5.543 km', turns: 15, type: 'permanent' },
+
   // Super GT / Super Formula
   'Okayama International Circuit': { length: '3.703 km', turns: 13, type: 'permanent' },
   'Sportsland Sugo': { length: '3.737 km', turns: 13, type: 'permanent' },
@@ -121,6 +124,10 @@ const CIRCUITS: Record<string, CircuitInfo> = {
   'Sandown Raceway': { length: '3.100 km', turns: 8, type: 'permanent' },
   'Surfers Paradise Street Circuit': { length: '2.960 km', turns: 12, type: 'street' },
   'Adelaide Street Circuit': { length: '3.220 km', turns: 14, type: 'street' },
+  'Wanneroo Raceway': { length: '2.410 km', turns: 9, type: 'permanent' },
+  'Queensland Raceway': { length: '3.120 km', turns: 8, type: 'permanent' },
+  'The Bend Motorsport Park': { length: '4.950 km', turns: 18, type: 'permanent' },
+  'Mike Pero Motorsport Park': { length: '2.550 km', turns: 9, type: 'permanent' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

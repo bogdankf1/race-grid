@@ -1,7 +1,7 @@
 import { RaceEvent } from '@/lib/types'
 
 // Super GT 2026 season calendar
-// Source: supergt.net — provisional 2026 schedule
+// Source: supergt.net, racingcalendar.net — verified March 2026
 export const supergt2026: RaceEvent[] = [
   {
     id: 'supergt-2026-okayama',
@@ -24,22 +24,22 @@ export const supergt2026: RaceEvent[] = [
     country: 'Japan',
     countryCode: 'JP',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-02T01:00:00Z', durationMinutes: 105 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-02T05:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-05-03T03:30:00Z', durationMinutes: 180 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-05-03T01:00:00Z', durationMinutes: 105 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-03T05:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race', startUtc: '2026-05-04T03:30:00Z', durationMinutes: 180 },
     ],
   },
   {
-    id: 'supergt-2026-suzuka-1',
+    id: 'supergt-2026-sepang',
     round: 3,
-    name: 'Suzuka GT 300km',
-    circuit: 'Suzuka International Racing Course',
-    country: 'Japan',
-    countryCode: 'JP',
+    name: 'Sepang GT 300km',
+    circuit: 'Sepang International Circuit',
+    country: 'Malaysia',
+    countryCode: 'MY',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-30T01:00:00Z', durationMinutes: 105 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-30T05:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-05-31T04:00:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-06-20T03:00:00Z', durationMinutes: 105 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-20T07:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race', startUtc: '2026-06-21T06:00:00Z', durationMinutes: 120 },
     ],
   },
   {
@@ -56,16 +56,16 @@ export const supergt2026: RaceEvent[] = [
     ],
   },
   {
-    id: 'supergt-2026-suzuka-2',
+    id: 'supergt-2026-suzuka',
     round: 5,
-    name: 'Suzuka 1000km',
+    name: 'Suzuka GT 300km',
     circuit: 'Suzuka International Racing Course',
     country: 'Japan',
     countryCode: 'JP',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-22T01:00:00Z', durationMinutes: 120 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T05:30:00Z', durationMinutes: 60 },
-      { type: 'endurance', label: 'Suzuka 1000km', startUtc: '2026-08-23T02:00:00Z', durationMinutes: 360 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-08-22T01:00:00Z', durationMinutes: 105 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T05:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race', startUtc: '2026-08-23T04:00:00Z', durationMinutes: 120 },
     ],
   },
   {
@@ -76,9 +76,9 @@ export const supergt2026: RaceEvent[] = [
     country: 'Japan',
     countryCode: 'JP',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-09-12T01:00:00Z', durationMinutes: 105 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T05:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-09-13T04:00:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-09-19T01:00:00Z', durationMinutes: 105 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-19T05:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race', startUtc: '2026-09-20T04:00:00Z', durationMinutes: 120 },
     ],
   },
   {
@@ -89,9 +89,9 @@ export const supergt2026: RaceEvent[] = [
     country: 'Japan',
     countryCode: 'JP',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-10-10T01:00:00Z', durationMinutes: 105 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-10T05:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-10-11T04:00:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-10-17T01:00:00Z', durationMinutes: 105 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-17T05:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race', startUtc: '2026-10-18T04:00:00Z', durationMinutes: 120 },
     ],
   },
   {

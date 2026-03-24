@@ -203,7 +203,7 @@ export const f12026: RaceEvent[] = [
     id: 'f1-2026-spain-madrid',
     round: 14,
     name: 'Spanish Grand Prix',
-    circuit: 'Madring Circuit',
+    circuit: 'Circuito de Madrid',
     country: 'Spain',
     countryCode: 'ES',
     sessions: [

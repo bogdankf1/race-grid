@@ -102,9 +102,9 @@ export const imsa2026: RaceEvent[] = [
     country: 'United States',
     countryCode: 'US',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-01T15:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-01T20:30:00Z', durationMinutes: 30 },
-      { type: 'endurance', label: 'Endurance Grand Prix', startUtc: '2026-08-02T15:40:00Z', durationMinutes: 160 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-29T15:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-29T20:30:00Z', durationMinutes: 30 },
+      { type: 'endurance', label: '6 Hours of Road America', startUtc: '2026-07-30T15:40:00Z', durationMinutes: 360 },
     ],
   },
   {
@@ -115,9 +115,9 @@ export const imsa2026: RaceEvent[] = [
     country: 'United States',
     countryCode: 'US',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-22T14:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T19:30:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-08-23T15:10:00Z', durationMinutes: 160 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-08-19T14:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-19T19:30:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race', startUtc: '2026-08-20T15:10:00Z', durationMinutes: 160 },
     ],
   },
   {
@@ -128,9 +128,9 @@ export const imsa2026: RaceEvent[] = [
     country: 'United States',
     countryCode: 'US',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-09-18T15:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-19T16:00:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-09-20T16:10:00Z', durationMinutes: 160 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-09-17T15:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-17T20:00:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race', startUtc: '2026-09-18T16:10:00Z', durationMinutes: 160 },
     ],
   },
   {

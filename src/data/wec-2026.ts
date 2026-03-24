@@ -26,11 +26,11 @@ export const wec2026: RaceEvent[] = [
     country: 'Belgium',
     countryCode: 'BE',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-08T09:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-08T14:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-09T10:00:00Z', durationMinutes: 30 },
-      { type: 'hyperpole', label: 'Hyperpole', startUtc: '2026-05-09T11:00:00Z', durationMinutes: 15 },
-      { type: 'race', label: '6 Hours of Spa', startUtc: '2026-05-10T10:00:00Z', durationMinutes: 360 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-07T09:00:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-07T14:00:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-08T10:00:00Z', durationMinutes: 30 },
+      { type: 'hyperpole', label: 'Hyperpole', startUtc: '2026-05-08T11:00:00Z', durationMinutes: 15 },
+      { type: 'race', label: '6 Hours of Spa', startUtc: '2026-05-09T10:00:00Z', durationMinutes: 360 },
     ],
   },
   {
@@ -117,11 +117,11 @@ export const wec2026: RaceEvent[] = [
     country: 'Bahrain',
     countryCode: 'BH',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-11-06T08:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-11-06T13:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-07T10:00:00Z', durationMinutes: 30 },
-      { type: 'hyperpole', label: 'Hyperpole', startUtc: '2026-11-07T11:00:00Z', durationMinutes: 15 },
-      { type: 'race', label: '8 Hours of Bahrain', startUtc: '2026-11-08T10:00:00Z', durationMinutes: 480 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-11-05T08:00:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-11-05T13:00:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-06T10:00:00Z', durationMinutes: 30 },
+      { type: 'hyperpole', label: 'Hyperpole', startUtc: '2026-11-06T11:00:00Z', durationMinutes: 15 },
+      { type: 'race', label: '8 Hours of Bahrain', startUtc: '2026-11-07T10:00:00Z', durationMinutes: 480 },
     ],
   },
 ]
