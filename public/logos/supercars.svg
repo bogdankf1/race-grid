@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48">
+  <!-- Supercars Championship stylized logo -->
+  <defs>
+    <linearGradient id="sc-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E31937"/>
+      <stop offset="60%" stop-color="#E31937"/>
+      <stop offset="100%" stop-color="#FF4D6A"/>
+    </linearGradient>
+  </defs>
+  <!-- Dynamic swoosh shape -->
+  <path d="M8,6 L200,2 C210,1.5 216,8 216,18 L214,34 C213,42 206,46 196,46 L16,46 C8,46 3,40 4,32 L6,14 C6.5,9 7,6.5 8,6Z" fill="url(#sc-grad)"/>
+  <!-- Speed stripe -->
+  <path d="M6,36 L50,36 L54,32 L8,32Z" fill="rgba(255,255,255,0.2)"/>
+  <!-- "SUPER" -->
+  <text x="18" y="22" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="12" fill="rgba(255,255,255,0.8)" letter-spacing="3">SUPER</text>
+  <!-- "CARS" large -->
+  <text x="18" y="40" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="22" fill="#fff" letter-spacing="4">CARS</text>
+  <!-- Star -->
+  <polygon points="160,12 163,20 172,20 165,25 167,34 160,28 153,34 155,25 148,20 157,20" fill="rgba(255,255,255,0.9)"/>
+  <!-- "CHAMPIONSHIP" tiny -->
+  <text x="130" y="44" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="5.5" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">CHAMPIONSHIP</text>
+</svg>

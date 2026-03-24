@@ -16,6 +16,11 @@ const LOGO_MAP: Record<string, string> = {
   imsa: '/logos/imsa.svg',
   dtm: '/logos/dtm.svg',
   gtwc: '/logos/gtwc.svg',
+  supergt: '/logos/supergt.svg',
+  elms: '/logos/elms.svg',
+  igtc: '/logos/igtc.svg',
+  superformula: '/logos/superformula.svg',
+  supercars: '/logos/supercars.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {

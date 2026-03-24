@@ -8,6 +8,11 @@ import { wrc2026 } from './wrc-2026'
 import { imsa2026 } from './imsa-2026'
 import { dtm2026 } from './dtm-2026'
 import { gtwc2026 } from './gtwc-2026'
+import { supergt2026 } from './supergt-2026'
+import { elms2026 } from './elms-2026'
+import { igtc2026 } from './igtc-2026'
+import { superformula2026 } from './superformula-2026'
+import { supercars2026 } from './supercars-2026'
 
 export const ALL_SERIES: SeriesConfig[] = [
   {
@@ -81,5 +86,45 @@ export const ALL_SERIES: SeriesConfig[] = [
     color: '#009B3A',
     textColor: '#fff',
     events: nls2026,
+  },
+  {
+    id: 'supergt',
+    name: 'Super GT',
+    shortName: 'SGT',
+    color: '#E60012',
+    textColor: '#fff',
+    events: supergt2026,
+  },
+  {
+    id: 'elms',
+    name: 'European Le Mans Series',
+    shortName: 'ELMS',
+    color: '#00529B',
+    textColor: '#fff',
+    events: elms2026,
+  },
+  {
+    id: 'igtc',
+    name: 'Intercontinental GT Challenge',
+    shortName: 'IGTC',
+    color: '#C8102E',
+    textColor: '#fff',
+    events: igtc2026,
+  },
+  {
+    id: 'superformula',
+    name: 'Super Formula',
+    shortName: 'SF',
+    color: '#1A1A6E',
+    textColor: '#fff',
+    events: superformula2026,
+  },
+  {
+    id: 'supercars',
+    name: 'Supercars Championship',
+    shortName: 'SC',
+    color: '#E31937',
+    textColor: '#fff',
+    events: supercars2026,
   },
 ]

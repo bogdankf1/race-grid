@@ -66,10 +66,11 @@ const BROADCASTS: Record<string, Record<CountryCode, BroadcastInfo[]>> = {
   wrc: {
     US: [
       { name: 'Rally.TV', url: 'https://www.rally.tv', note: 'Official — all stages live & on demand' },
-      { name: 'Red Bull TV', url: 'https://www.redbull.com/discover', note: 'Free live coverage' },
+      { name: 'Red Bull TV', url: 'https://www.redbull.com/int-en/event-series/fia-world-rally-championship', note: 'Free live coverage' },
     ],
     UA: [
       { name: 'Rally.TV', url: 'https://www.rally.tv', note: 'Official — all stages live & on demand' },
+      { name: 'Red Bull TV', url: 'https://www.redbull.com/int-en/event-series/fia-world-rally-championship', note: 'Free live coverage' },
     ],
   },
   dtm: {
@@ -97,6 +98,56 @@ const BROADCASTS: Record<string, Record<CountryCode, BroadcastInfo[]>> = {
     ],
     UA: [
       { name: 'YouTube — VLN Official', url: 'https://www.youtube.com/@VLNOFFICIAL', note: 'Free live stream' },
+    ],
+  },
+  supergt: {
+    US: [
+      { name: 'YouTube — Super GT Official', url: 'https://www.youtube.com/@SUPERGTOfficialChannel', note: 'Free live stream for international viewers' },
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'On-demand highlights' },
+    ],
+    UA: [
+      { name: 'YouTube — Super GT Official', url: 'https://www.youtube.com/@SUPERGTOfficialChannel', note: 'Free live stream' },
+    ],
+  },
+  elms: {
+    US: [
+      { name: 'ELMS Official', url: 'https://www.europeanlemansseries.com/en/', note: 'Official site — live timing & stream' },
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live streaming — all races' },
+    ],
+    UA: [
+      { name: 'ELMS Official', url: 'https://www.europeanlemansseries.com/en/', note: 'Official site — live stream' },
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+  },
+  igtc: {
+    US: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage of all rounds' },
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream for select events' },
+    ],
+    UA: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+  },
+  superformula: {
+    US: [
+      { name: 'YouTube — Super Formula Official', url: 'https://www.youtube.com/@SUPERFORMULA_official', note: 'Free live stream for international viewers' },
+      { name: 'Red Bull TV', url: 'https://www.redbull.com/int-en/event-series/super-formula', note: 'Free live coverage' },
+    ],
+    UA: [
+      { name: 'YouTube — Super Formula Official', url: 'https://www.youtube.com/@SUPERFORMULA_official', note: 'Free live stream' },
+      { name: 'Red Bull TV', url: 'https://www.redbull.com/int-en/event-series/super-formula', note: 'Free live coverage' },
+    ],
+  },
+  supercars: {
+    US: [
+      { name: 'Supercars Official', url: 'https://www.supercars.com/calendar', note: 'Official site — calendar & live updates' },
+      { name: 'Supercars Play', url: 'https://www.supercars.com/supercarsplay', note: 'Official streaming — international viewers' },
+      { name: 'Fox Sports', note: 'Select races via Fox Sports app' },
+    ],
+    UA: [
+      { name: 'Supercars Official', url: 'https://www.supercars.com/calendar', note: 'Official site — calendar & live updates' },
+      { name: 'Supercars Play', url: 'https://www.supercars.com/supercarsplay', note: 'Official streaming — international viewers' },
     ],
   },
 }

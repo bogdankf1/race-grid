@@ -9,6 +9,7 @@ interface DayCellProps {
   dayNumber: number
   isCurrentMonth: boolean
   isToday: boolean
+  isNextRaceDay?: boolean
   seriesInfos: DaySeriesInfo[]
 }
 
@@ -19,7 +20,7 @@ function cleanEventName(name: string): string {
     .replace(/^NLS\s*\d+\s*[—–-]\s*/i, '')
 }
 
-export function DayCell({ date, dayNumber, isCurrentMonth, isToday, seriesInfos }: DayCellProps) {
+export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, seriesInfos }: DayCellProps) {
   const [expanded, setExpanded] = useState(false)
   const MAX_CHIPS = 3
   const showAll = expanded || seriesInfos.length <= MAX_CHIPS
@@ -34,12 +35,15 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, seriesInfos 
         padding: 10,
         borderRadius: 12,
         overflow: 'hidden',
-        border: isToday
-          ? '2px solid var(--rg-today-border)'
-          : `1px solid ${isCurrentMonth ? 'var(--rg-card-border)' : 'transparent'}`,
+        border: isNextRaceDay
+          ? '2px solid var(--rg-link)'
+          : isToday
+            ? '2px solid var(--rg-today-border)'
+            : `1px solid ${isCurrentMonth ? 'var(--rg-card-border)' : 'transparent'}`,
         background: isToday
           ? 'var(--rg-elevated)'
           : isCurrentMonth ? 'var(--rg-surface)' : 'transparent',
+        boxShadow: isNextRaceDay ? '0 0 16px rgba(122,179,255,0.25)' : undefined,
         opacity: isCurrentMonth ? 1 : 0.3,
         cursor: isCurrentMonth ? 'pointer' : 'default',
         transition: 'background 0.15s ease',
@@ -52,18 +56,31 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, seriesInfos 
         if (isCurrentMonth) (e.currentTarget as HTMLDivElement).style.background = isToday ? 'var(--rg-elevated)' : 'var(--rg-surface)'
       }}
     >
-      <span
-        className="rg-day-number"
-        style={{
-          fontSize: 14,
-          fontWeight: isToday ? 700 : 500,
-          color: isToday ? 'var(--rg-text)' : 'var(--rg-text2)',
-          display: 'block',
-          marginBottom: 6,
-        }}
-      >
-        {dayNumber}
-      </span>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
+        <span
+          className="rg-day-number"
+          style={{
+            fontSize: 14,
+            fontWeight: isToday || isNextRaceDay ? 700 : 500,
+            color: isNextRaceDay ? 'var(--rg-link)' : isToday ? 'var(--rg-text)' : 'var(--rg-text2)',
+          }}
+        >
+          {dayNumber}
+        </span>
+        {isNextRaceDay && (
+          <span
+            style={{
+              fontSize: 8,
+              fontWeight: 700,
+              color: 'var(--rg-link)',
+              textTransform: 'uppercase',
+              letterSpacing: 1,
+            }}
+          >
+            NEXT UP
+          </span>
+        )}
+      </div>
 
       {seriesInfos.length > 0 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>

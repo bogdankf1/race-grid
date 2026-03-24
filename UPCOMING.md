@@ -5,12 +5,12 @@ Planned features for Race Grid, in priority order.
 ## 1. "Next up" indicator
 Highlight the nearest upcoming race day on the calendar grid so the user instantly sees what's coming without scanning. Subtle visual badge or glow on the day cell.
 
-**Status:** Not started
+**Status:** Done
 
 ## 2. Countdown timer
 On the day view, show a live countdown for upcoming sessions — e.g. "Race starts in 2h 34m". More useful than just showing the start time. Should tick down in real time.
 
-**Status:** Not started
+**Status:** Done
 
 ## 3. Google Calendar / iCal export
 Button to export a race weekend (or an entire series season) to Google Calendar or as an .ics file. Sessions should include proper timezone info so they show correctly in the user's calendar app.
@@ -58,4 +58,4 @@ Each series needs:
 - "Where to watch" broadcast data for US and Ukraine
 - White-background logo container if needed for dark theme visibility
 
-**Status:** Not started
+**Status:** Done

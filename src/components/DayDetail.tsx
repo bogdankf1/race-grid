@@ -9,6 +9,7 @@ import { SeriesLogo } from './SeriesLogo'
 import { getBroadcasts, detectCountry } from '@/data/broadcasts'
 import { getCircuitInfo, getCircuitTypeLabel } from '@/data/circuits'
 import { CalendarExport } from './CalendarExport'
+import { Countdown } from './Countdown'
 import { MapPin, Ruler, CornerDownRight } from 'lucide-react'
 import { t, type Locale } from '@/lib/i18n'
 import { Tv } from 'lucide-react'
@@ -166,6 +167,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale }: DayDeta
                       {formatDuration(session.durationMinutes)}
                     </div>
                   )}
+                  <Countdown targetUtc={session.startUtc} locale={locale} />
                 </div>
               </div>
             ))}

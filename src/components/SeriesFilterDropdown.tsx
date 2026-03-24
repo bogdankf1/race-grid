@@ -12,6 +12,19 @@ interface SeriesFilterDropdownProps {
   locale: Locale
 }
 
+interface SeriesGroup {
+  labelKey: string
+  ids: string[]
+}
+
+const GROUPS: SeriesGroup[] = [
+  { labelKey: 'group.openwheel', ids: ['f1', 'indycar', 'superformula'] },
+  { labelKey: 'group.endurance', ids: ['wec', 'elms', 'imsa', 'igtc'] },
+  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'supergt', 'nls', 'supercars'] },
+  { labelKey: 'group.stock', ids: ['nascar'] },
+  { labelKey: 'group.rally', ids: ['wrc'] },
+]
+
 export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }: SeriesFilterDropdownProps) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -39,6 +52,28 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
       onSetAll(ALL_SERIES.map(s => s.id))
     }
   }
+
+  const toggleGroup = (group: SeriesGroup) => {
+    const allInGroupSelected = group.ids.every(id => selectedIds.includes(id))
+    if (allInGroupSelected) {
+      onSetAll(selectedIds.filter(id => !group.ids.includes(id)))
+    } else {
+      const merged = new Set([...selectedIds, ...group.ids])
+      onSetAll(Array.from(merged))
+    }
+  }
+
+  const checkboxStyle = (active: boolean) => ({
+    width: 18,
+    height: 18,
+    borderRadius: 4,
+    border: `2px solid ${active ? '#4ade80' : 'var(--rg-border)'}`,
+    background: active ? '#4ade80' : 'transparent',
+    display: 'flex' as const,
+    alignItems: 'center' as const,
+    justifyContent: 'center' as const,
+    flexShrink: 0,
+  })
 
   return (
     <div ref={ref} style={{ position: 'relative' }}>
@@ -71,7 +106,9 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
             right: 0,
             top: '100%',
             marginTop: 8,
-            width: 280,
+            width: 300,
+            maxHeight: 480,
+            overflowY: 'auto',
             borderRadius: 14,
             background: 'var(--rg-surface)',
             border: '1px solid var(--rg-border)',
@@ -97,79 +134,105 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
               background: 'transparent',
               border: 'none',
               cursor: 'pointer',
-              borderBottom: '1px solid #2a2a42',
+              borderBottom: '1px solid var(--rg-border)',
               marginBottom: 4,
             }}
           >
-            <span
-              style={{
-                width: 18,
-                height: 18,
-                borderRadius: 4,
-                border: `2px solid ${allSelected ? '#4ade80' : 'var(--rg-border)'}`,
-                background: allSelected ? '#4ade80' : 'transparent',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-              }}
-            >
+            <span style={checkboxStyle(allSelected)}>
               {allSelected && <Check style={{ width: 12, height: 12, color: '#000' }} />}
             </span>
             <span>{allSelected ? t('filter.deselectAll', locale) : t('filter.selectAll', locale)}</span>
           </button>
 
-          {/* Series list */}
-          {ALL_SERIES.map(series => {
-            const active = selectedIds.includes(series.id)
+          {/* Grouped series list */}
+          {GROUPS.map(group => {
+            const groupSeries = group.ids
+              .map(id => ALL_SERIES.find(s => s.id === id))
+              .filter(Boolean) as typeof ALL_SERIES
+            const allGroupSelected = group.ids.every(id => selectedIds.includes(id))
+            const someGroupSelected = group.ids.some(id => selectedIds.includes(id))
+
             return (
-              <button
-                key={series.id}
-                onClick={() => onToggle(series.id)}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 12,
-                  width: '100%',
-                  textAlign: 'left',
-                  padding: '10px 14px',
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: active ? 'var(--rg-text)' : 'var(--rg-text3)',
-                  background: active ? 'var(--rg-elevated)' : 'transparent',
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
-              >
-                {/* Color dot */}
-                <span
+              <div key={group.labelKey}>
+                {/* Group header — clickable to toggle entire group */}
+                <button
+                  onClick={() => toggleGroup(group)}
                   style={{
-                    width: 10,
-                    height: 10,
-                    borderRadius: '50%',
-                    background: active ? series.color : 'var(--rg-border)',
-                    flexShrink: 0,
-                  }}
-                />
-                {/* Name */}
-                <span style={{ flex: 1 }}>{series.name}</span>
-                {/* Checkbox */}
-                <span
-                  style={{
-                    width: 18,
-                    height: 18,
-                    borderRadius: 4,
-                    border: `2px solid ${active ? '#4ade80' : 'var(--rg-border)'}`,
-                    background: active ? '#4ade80' : 'transparent',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
+                    gap: 10,
+                    width: '100%',
+                    textAlign: 'left',
+                    padding: '8px 14px',
+                    marginTop: 6,
+                    borderRadius: 8,
+                    fontSize: 11,
+                    fontWeight: 700,
+                    color: 'var(--rg-text3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 1,
+                    background: 'transparent',
+                    border: 'none',
+                    cursor: 'pointer',
                   }}
                 >
-                  {active && <Check style={{ width: 12, height: 12, color: '#000' }} />}
-                </span>
-              </button>
+                  <span
+                    style={{
+                      ...checkboxStyle(allGroupSelected),
+                      width: 16,
+                      height: 16,
+                      borderRadius: 3,
+                      border: `2px solid ${allGroupSelected ? '#4ade80' : someGroupSelected ? '#4ade80' : 'var(--rg-border)'}`,
+                      background: allGroupSelected ? '#4ade80' : someGroupSelected ? 'rgba(74,222,128,0.3)' : 'transparent',
+                    }}
+                  >
+                    {allGroupSelected && <Check style={{ width: 10, height: 10, color: '#000' }} />}
+                    {someGroupSelected && !allGroupSelected && (
+                      <span style={{ width: 8, height: 2, background: '#4ade80', borderRadius: 1 }} />
+                    )}
+                  </span>
+                  <span style={{ flex: 1 }}>{t(group.labelKey, locale)}</span>
+                </button>
+
+                {/* Series in group */}
+                {groupSeries.map(series => {
+                  const active = selectedIds.includes(series.id)
+                  return (
+                    <button
+                      key={series.id}
+                      onClick={() => onToggle(series.id)}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 12,
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '9px 14px 9px 28px',
+                        borderRadius: 8,
+                        fontSize: 13,
+                        color: active ? 'var(--rg-text)' : 'var(--rg-text3)',
+                        background: active ? 'var(--rg-elevated)' : 'transparent',
+                        border: 'none',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: 10,
+                          height: 10,
+                          borderRadius: '50%',
+                          background: active ? series.color : 'var(--rg-border)',
+                          flexShrink: 0,
+                        }}
+                      />
+                      <span style={{ flex: 1 }}>{series.name}</span>
+                      <span style={checkboxStyle(active)}>
+                        {active && <Check style={{ width: 12, height: 12, color: '#000' }} />}
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
             )
           })}
         </div>

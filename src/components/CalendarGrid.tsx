@@ -11,6 +11,14 @@ import { DayCell } from './DayCell'
 import { DaySeriesInfo } from '@/hooks/useCalendarEvents'
 import { t, formatMonthLocale, type Locale } from '@/lib/i18n'
 
+function findNextRaceDay(events: Map<string, DaySeriesInfo[]>): string | null {
+  const today = format(new Date(), 'yyyy-MM-dd')
+  const futureDates = Array.from(events.keys())
+    .filter(d => d >= today && events.get(d)!.length > 0)
+    .sort()
+  return futureDates[0] ?? null
+}
+
 interface CalendarGridProps {
   month: string
   onMonthChange: (month: string) => void
@@ -33,6 +41,8 @@ export function CalendarGrid({ month, onMonthChange, events, locale }: CalendarG
     const calendarEnd = endOfWeek(monthEnd, { weekStartsOn: 1 })
     return eachDayOfInterval({ start: calendarStart, end: calendarEnd })
   }, [currentDate])
+
+  const nextRaceDay = useMemo(() => findNextRaceDay(events), [events])
 
   const goToPrev = () => onMonthChange(format(subMonths(currentDate, 1), 'yyyy-MM'))
   const goToNext = () => onMonthChange(format(addMonths(currentDate, 1), 'yyyy-MM'))
@@ -147,6 +157,7 @@ export function CalendarGrid({ month, onMonthChange, events, locale }: CalendarG
               dayNumber={day.getDate()}
               isCurrentMonth={isSameMonth(day, currentDate)}
               isToday={isDateToday(day)}
+              isNextRaceDay={dateStr === nextRaceDay}
               seriesInfos={events.get(dateStr) || []}
             />
           )

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48">
+  <!-- IGTC stylized logo -->
+  <defs>
+    <linearGradient id="igtc-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B0000"/>
+      <stop offset="100%" stop-color="#C8102E"/>
+    </linearGradient>
+  </defs>
+  <!-- Globe/world outline hint -->
+  <circle cx="28" cy="24" r="18" fill="none" stroke="rgba(200,16,46,0.15)" stroke-width="1.5"/>
+  <ellipse cx="28" cy="24" rx="10" ry="18" fill="none" stroke="rgba(200,16,46,0.12)" stroke-width="1"/>
+  <line x1="10" y1="24" x2="46" y2="24" stroke="rgba(200,16,46,0.1)" stroke-width="1"/>
+  <!-- Background bar -->
+  <rect x="50" y="6" width="146" height="36" rx="6" fill="url(#igtc-grad)"/>
+  <!-- "IGTC" text -->
+  <text x="66" y="34" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="30" fill="#fff" letter-spacing="6">IGTC</text>
+  <!-- Subtitle -->
+  <text x="123" y="14" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="5" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="1">INTERCONTINENTAL GT CHALLENGE</text>
+</svg>

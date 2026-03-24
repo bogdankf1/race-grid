@@ -102,6 +102,25 @@ const CIRCUITS: Record<string, CircuitInfo> = {
   'Canadian Tire Motorsport Park': { length: '3.957 km', turns: 10, type: 'permanent' },
   'VIRginia International Raceway': { length: '5.263 km', turns: 17, type: 'permanent' },
   'Michelin Raceway Road Atlanta': { length: '4.088 km', turns: 12, type: 'permanent' },
+
+  // Super GT / Super Formula
+  'Okayama International Circuit': { length: '3.703 km', turns: 13, type: 'permanent' },
+  'Sportsland Sugo': { length: '3.737 km', turns: 13, type: 'permanent' },
+  'Autopolis': { length: '4.674 km', turns: 18, type: 'permanent' },
+  'Twin Ring Motegi': { length: '4.801 km', turns: 14, type: 'permanent' },
+
+  // IGTC
+  'Mount Panorama Circuit': { length: '6.213 km', turns: 23, type: 'permanent' },
+
+  // Supercars
+  'Sydney Motorsport Park': { length: '3.930 km', turns: 12, type: 'permanent' },
+  'Taupo Motorsport Park': { length: '3.500 km', turns: 11, type: 'permanent' },
+  'Symmons Plains Raceway': { length: '2.410 km', turns: 7, type: 'permanent' },
+  'Townsville Street Circuit': { length: '2.860 km', turns: 13, type: 'street' },
+  'Hidden Valley Raceway': { length: '2.870 km', turns: 10, type: 'permanent' },
+  'Sandown Raceway': { length: '3.100 km', turns: 8, type: 'permanent' },
+  'Surfers Paradise Street Circuit': { length: '2.960 km', turns: 12, type: 'street' },
+  'Adelaide Street Circuit': { length: '3.220 km', turns: 14, type: 'street' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {
