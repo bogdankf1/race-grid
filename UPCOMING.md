@@ -15,7 +15,7 @@ On the day view, show a live countdown for upcoming sessions — e.g. "Race star
 ## 3. Google Calendar / iCal export
 Button to export a race weekend (or an entire series season) to Google Calendar or as an .ics file. Sessions should include proper timezone info so they show correctly in the user's calendar app.
 
-**Status:** Not started
+**Status:** Done
 
 ## 4. Circuit info on day view
 Small section below the event header showing track layout image, lap length, number of turns. Data is static per circuit. Could include a simple SVG or image of the track layout.
@@ -35,7 +35,7 @@ Copy-link button on the day view so users can share a specific race day URL with
 ## 7. Push notifications / reminders
 Browser notifications before sessions start — e.g. "F1 Qualifying starts in 30 min". Uses the browser Notification API + a service worker. No backend needed. User chooses which series and how far in advance to be notified.
 
-**Status:** Not started
+**Status:** Done
 
 ## 8. Ukrainian localization
 Add Ukrainian language support. Language selector in the header (next to timezone/series selectors). Translate all UI strings: month/day names, session types, button labels, "Where to watch", "No races scheduled", header text, etc. Race/circuit/series names stay in English (they are proper nouns). Persist choice in localStorage. Auto-detect from browser language (`navigator.language`). Default: English.

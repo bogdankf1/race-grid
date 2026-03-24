@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ChevronLeft, Sun, Moon } from 'lucide-react'
 import { TimezoneSelector } from './TimezoneSelector'
 import { SeriesFilterDropdown } from './SeriesFilterDropdown'
+import { NotificationSettings } from './NotificationSettings'
 import { t, LOCALE_LABELS, type Locale } from '@/lib/i18n'
 import type { Theme } from '@/lib/theme'
 
@@ -72,6 +73,8 @@ export function Header({
             locale={locale}
           />
           <TimezoneSelector value={timezone} onChange={onTimezoneChange} locale={locale} />
+
+          <NotificationSettings locale={locale} />
 
           {/* Theme toggle */}
           <button
