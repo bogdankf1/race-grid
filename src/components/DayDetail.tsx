@@ -7,6 +7,8 @@ import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
 import { SeriesChip } from './SeriesChip'
 import { SeriesLogo } from './SeriesLogo'
 import { getBroadcasts, detectCountry } from '@/data/broadcasts'
+import { getCircuitInfo, getCircuitTypeLabel } from '@/data/circuits'
+import { MapPin, Ruler, CornerDownRight } from 'lucide-react'
 import { t, type Locale } from '@/lib/i18n'
 import { Tv } from 'lucide-react'
 
@@ -93,6 +95,35 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale }: DayDeta
             <p style={{ fontSize: 14, color: 'var(--rg-text3)' }}>
               {countryFlag(event.countryCode)} {event.circuit}, {event.country}
             </p>
+
+            {/* Circuit info */}
+            {(() => {
+              const circuit = getCircuitInfo(event.circuit)
+              if (!circuit) return null
+              return (
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: 16,
+                    marginTop: 12,
+                    flexWrap: 'wrap',
+                  }}
+                >
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--rg-text3)' }}>
+                    <Ruler style={{ width: 13, height: 13 }} />
+                    {circuit.length}
+                  </span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--rg-text3)' }}>
+                    <CornerDownRight style={{ width: 13, height: 13 }} />
+                    {circuit.turns} {locale === 'uk' ? 'поворотів' : 'turns'}
+                  </span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--rg-text3)' }}>
+                    <MapPin style={{ width: 13, height: 13 }} />
+                    {getCircuitTypeLabel(circuit.type, locale)}
+                  </span>
+                </div>
+              )
+            })()}
           </div>
 
           <div className="rg-event-card-sessions">

@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { format, parse, addDays, subDays } from 'date-fns'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Share2, Check } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { ALL_SERIES } from '@/data/series-registry'
@@ -41,8 +41,21 @@ export function DayPageClient({ date }: DayPageClientProps) {
     setSelectedSeries(updated)
   }
 
+  const [copied, setCopied] = useState(false)
+
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   const toggleLocale = () => setLocale(locale === 'en' ? 'uk' : 'en')
+
+  const shareDay = async () => {
+    const url = `${window.location.origin}/day/${date}`
+    try {
+      await navigator.clipboard.writeText(url)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // fallback
+    }
+  }
 
   const navBtnStyle: React.CSSProperties = {
     padding: 8,
@@ -96,6 +109,23 @@ export function DayPageClient({ date }: DayPageClientProps) {
             style={navBtnStyle}
           >
             <ChevronRight style={{ width: 20, height: 20 }} />
+          </button>
+
+          {/* Share button */}
+          <button
+            onClick={shareDay}
+            style={{
+              ...navBtnStyle,
+              marginLeft: 'auto',
+              gap: 6,
+              padding: '8px 14px',
+              fontSize: 13,
+              fontWeight: 500,
+              color: copied ? '#4ade80' : 'var(--rg-text2)',
+            }}
+          >
+            {copied ? <Check style={{ width: 15, height: 15 }} /> : <Share2 style={{ width: 15, height: 15 }} />}
+            <span>{copied ? (locale === 'uk' ? 'Скопійовано' : 'Copied!') : (locale === 'uk' ? 'Поділитись' : 'Share')}</span>
           </button>
         </div>
 

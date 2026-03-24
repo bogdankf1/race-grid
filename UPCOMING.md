@@ -20,7 +20,7 @@ Button to export a race weekend (or an entire series season) to Google Calendar 
 ## 4. Circuit info on day view
 Small section below the event header showing track layout image, lap length, number of turns. Data is static per circuit. Could include a simple SVG or image of the track layout.
 
-**Status:** Not started
+**Status:** Done
 
 ## 5. Dark/light theme toggle
 Some users prefer light mode during daytime. Add a toggle in the header (next to timezone/series selectors). Persist choice in localStorage. Current dark theme becomes the default.
@@ -30,7 +30,7 @@ Some users prefer light mode during daytime. Add a toggle in the header (next to
 ## 6. Share a specific day
 Copy-link button on the day view so users can share a specific race day URL with friends. Could also include a short summary text for pasting into chats — e.g. "Saturday, March 21 — F1 Japanese GP, NLS, NASCAR".
 
-**Status:** Not started
+**Status:** Done
 
 ## 7. Push notifications / reminders
 Browser notifications before sessions start — e.g. "F1 Qualifying starts in 30 min". Uses the browser Notification API + a service worker. No backend needed. User chooses which series and how far in advance to be notified.
