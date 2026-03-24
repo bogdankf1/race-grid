@@ -18,6 +18,24 @@
   --color-wrc: #FFD100;
 }
 
+/* Theme CSS variables — defaults to dark, overridden by JS */
+:root {
+  --rg-bg: #13131d;
+  --rg-surface: #1c1c30;
+  --rg-elevated: #232340;
+  --rg-border: #2e2e46;
+  --rg-text: #eee;
+  --rg-text2: #999;
+  --rg-text3: #666;
+  --rg-header-bg: rgba(22, 22, 34, 0.92);
+  --rg-chip-bg: rgba(255,255,255,0.06);
+  --rg-chip-text: #ccc;
+  --rg-btn-bg: #252538;
+  --rg-today-border: rgba(255,255,255,0.25);
+  --rg-link: #7ab3ff;
+  --rg-card-border: #2a2a42;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,8 +47,8 @@ html {
 }
 
 body {
-  background-color: var(--color-base);
-  color: var(--color-primary);
+  background-color: var(--rg-bg);
+  color: var(--rg-text);
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,7 +107,7 @@ button:disabled:active {
 .rg-header-title {
   font-size: 22px;
   letter-spacing: 3px;
-  color: #eee;
+  color: var(--rg-text);
   white-space: nowrap;
 }
 
@@ -102,7 +120,7 @@ button:disabled:active {
 .rg-month-label {
   font-size: 32px;
   letter-spacing: 2px;
-  color: #eee;
+  color: var(--rg-text);
   width: 320px;
   text-align: center;
 }
@@ -116,7 +134,7 @@ button:disabled:active {
 .rg-day-heading {
   font-size: 32px;
   letter-spacing: 1px;
-  color: #eee;
+  color: var(--rg-text);
   margin-bottom: 28px;
 }
 

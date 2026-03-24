@@ -7,6 +7,7 @@ import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
 import { SeriesChip } from './SeriesChip'
 import { SeriesLogo } from './SeriesLogo'
 import { getBroadcasts, detectCountry } from '@/data/broadcasts'
+import { t, type Locale } from '@/lib/i18n'
 import { Tv } from 'lucide-react'
 
 const SESSION_ICONS: Record<SessionType, string> = {
@@ -16,11 +17,8 @@ const SESSION_ICONS: Record<SessionType, string> = {
   stage: '\u{1F5FA}', shakedown: '\u{1F5FA}', endurance: '\u{1F3C1}',
 }
 
-const SESSION_LABELS: Record<SessionType, string> = {
-  race: 'Race', qualifying: 'Qualifying', sprint: 'Sprint',
-  sprint_qualifying: 'Sprint Quali', hyperpole: 'Hyperpole',
-  practice: 'Practice', warmup: 'Warmup', stage: 'Stage',
-  shakedown: 'Shakedown', endurance: 'Endurance',
+function sessionLabel(type: SessionType, locale: Locale): string {
+  return t(`session.${type}`, locale)
 }
 
 function countryFlag(countryCode: string): string {
@@ -29,9 +27,9 @@ function countryFlag(countryCode: string): string {
 }
 
 interface DayEventInfo { series: SeriesConfig; event: RaceEvent; sessions: Session[] }
-interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string }
+interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string; locale: Locale }
 
-export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps) {
+export function DayDetail({ date, selectedSeriesIds, timezone, locale }: DayDetailProps) {
   const dayEvents = useMemo(() => {
     const results: DayEventInfo[] = []
     const selectedSeries = ALL_SERIES.filter(s => selectedSeriesIds.includes(s.id))
@@ -53,8 +51,8 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
     return (
       <div style={{ textAlign: 'center', padding: '80px 0' }}>
         <div style={{ fontSize: 40, marginBottom: 16 }}>{'\u{1F3CE}'}</div>
-        <p style={{ color: '#999', fontSize: 18 }}>No races scheduled.</p>
-        <p style={{ color: '#666', fontSize: 14, marginTop: 6 }}>Enjoy the off day!</p>
+        <p style={{ color: 'var(--rg-text2)', fontSize: 18 }}>{t('day.noRaces', locale)}</p>
+        <p style={{ color: 'var(--rg-text3)', fontSize: 14, marginTop: 6 }}>{t('day.offDay', locale)}</p>
       </div>
     )
   }
@@ -66,8 +64,8 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
           key={`${series.id}-${event.id}`}
           style={{
             borderRadius: 16,
-            background: '#1c1c30',
-            border: '1px solid #2a2a42',
+            background: 'var(--rg-surface)',
+            border: '1px solid var(--rg-card-border)',
             borderLeft: `4px solid ${series.color}`,
             overflow: 'hidden',
           }}
@@ -89,10 +87,10 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                 <SeriesLogo seriesId={series.id} className="" />
               </div>
             </div>
-            <h3 className="font-display rg-event-name" style={{ color: '#eee', marginBottom: 4, letterSpacing: 0.5 }}>
+            <h3 className="font-display rg-event-name" style={{ color: 'var(--rg-text)', marginBottom: 4, letterSpacing: 0.5 }}>
               {event.name}
             </h3>
-            <p style={{ fontSize: 14, color: '#888' }}>
+            <p style={{ fontSize: 14, color: 'var(--rg-text3)' }}>
               {countryFlag(event.countryCode)} {event.circuit}, {event.country}
             </p>
           </div>
@@ -108,7 +106,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                   gap: 14,
                   padding: '12px 16px',
                   borderRadius: 12,
-                  background: '#232340',
+                  background: 'var(--rg-elevated)',
                 }}
               >
                 <span style={{ fontSize: 18, width: 28, textAlign: 'center', flexShrink: 0 }}>
@@ -116,20 +114,20 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                 </span>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-                    <span style={{ fontWeight: 600, fontSize: 14, color: '#ddd' }}>
+                    <span style={{ fontWeight: 600, fontSize: 14, color: 'var(--rg-text)' }}>
                       {session.label}
                     </span>
-                    <span style={{ fontSize: 11, color: '#777', padding: '3px 8px', borderRadius: 6, background: '#1c1c30', fontWeight: 500 }}>
-                      {SESSION_LABELS[session.type]}
+                    <span style={{ fontSize: 11, color: 'var(--rg-text3)', padding: '3px 8px', borderRadius: 6, background: 'var(--rg-surface)', fontWeight: 500 }}>
+                      {sessionLabel(session.type, locale)}
                     </span>
                   </div>
                 </div>
                 <div className="rg-session-time" style={{ textAlign: 'right', flexShrink: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: '#eee' }}>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)' }}>
                     {formatInTimezone(session.startUtc, timezone)}
                   </div>
                   {session.durationMinutes && (
-                    <div style={{ fontSize: 12, color: '#666', marginTop: 2 }}>
+                    <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
                       {formatDuration(session.durationMinutes)}
                     </div>
                   )}
@@ -149,14 +147,14 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                     marginTop: 12,
                     padding: '14px 16px',
                     borderRadius: 12,
-                    background: '#1a1a2e',
-                    border: '1px solid #2a2a42',
+                    background: 'var(--rg-surface)',
+                    border: '1px solid var(--rg-card-border)',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-                    <Tv style={{ width: 14, height: 14, color: '#888' }} />
-                    <span style={{ fontSize: 12, fontWeight: 600, color: '#888', textTransform: 'uppercase', letterSpacing: 1 }}>
-                      Where to watch
+                    <Tv style={{ width: 14, height: 14, color: 'var(--rg-text3)' }} />
+                    <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1 }}>
+                      {t('watch.title', locale)}
                     </span>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -170,13 +168,13 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                           fontSize: 13,
                         }}
                       >
-                        <span style={{ fontWeight: 600, color: '#ccc', flexShrink: 0 }}>
+                        <span style={{ fontWeight: 600, color: 'var(--rg-chip-text)', flexShrink: 0 }}>
                           {b.url ? (
                             <a
                               href={b.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              style={{ color: '#7ab3ff', textDecoration: 'none' }}
+                              style={{ color: 'var(--rg-link)', textDecoration: 'none' }}
                             >
                               {b.name}
                             </a>
@@ -185,7 +183,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone }: DayDetailProps)
                           )}
                         </span>
                         {b.note && (
-                          <span style={{ color: '#666', fontSize: 12 }}>
+                          <span style={{ color: 'var(--rg-text3)', fontSize: 12 }}>
                             — {b.note}
                           </span>
                         )}

@@ -35,21 +35,21 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, seriesInfos 
         borderRadius: 12,
         overflow: 'hidden',
         border: isToday
-          ? '2px solid rgba(255,255,255,0.25)'
-          : `1px solid ${isCurrentMonth ? '#2a2a42' : 'transparent'}`,
+          ? '2px solid var(--rg-today-border)'
+          : `1px solid ${isCurrentMonth ? 'var(--rg-card-border)' : 'transparent'}`,
         background: isToday
-          ? '#252540'
-          : isCurrentMonth ? '#1c1c30' : 'transparent',
+          ? 'var(--rg-elevated)'
+          : isCurrentMonth ? 'var(--rg-surface)' : 'transparent',
         opacity: isCurrentMonth ? 1 : 0.3,
         cursor: isCurrentMonth ? 'pointer' : 'default',
         transition: 'background 0.15s ease',
         minHeight: 100,
       }}
       onMouseEnter={e => {
-        if (isCurrentMonth) (e.currentTarget as HTMLDivElement).style.background = '#232340'
+        if (isCurrentMonth) (e.currentTarget as HTMLDivElement).style.background = 'var(--rg-elevated)'
       }}
       onMouseLeave={e => {
-        if (isCurrentMonth) (e.currentTarget as HTMLDivElement).style.background = isToday ? '#252540' : '#1c1c30'
+        if (isCurrentMonth) (e.currentTarget as HTMLDivElement).style.background = isToday ? 'var(--rg-elevated)' : 'var(--rg-surface)'
       }}
     >
       <span
@@ -57,7 +57,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, seriesInfos 
         style={{
           fontSize: 14,
           fontWeight: isToday ? 700 : 500,
-          color: isToday ? '#fff' : '#999',
+          color: isToday ? 'var(--rg-text)' : 'var(--rg-text2)',
           display: 'block',
           marginBottom: 6,
         }}
@@ -97,7 +97,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, seriesInfos 
                 style={{
                   padding: '5px 7px',
                   background: 'rgba(255,255,255,0.06)',
-                  color: '#ccc',
+                  color: 'var(--rg-chip-text)',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
@@ -126,8 +126,8 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, seriesInfos 
                 borderRadius: 6,
                 fontSize: 11,
                 fontWeight: 600,
-                background: '#2a2a42',
-                color: '#888',
+                background: 'var(--rg-border)',
+                color: 'var(--rg-text3)',
                 width: 'fit-content',
                 border: 'none',
               }}

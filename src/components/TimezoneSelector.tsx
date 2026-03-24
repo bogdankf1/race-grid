@@ -3,13 +3,15 @@
 import { useState, useRef, useEffect } from 'react'
 import { Globe, ChevronDown, Search } from 'lucide-react'
 import { TIMEZONE_GROUPS, getTimezoneLabel } from '@/lib/timezone'
+import { t, type Locale } from '@/lib/i18n'
 
 interface TimezoneSelectorProps {
   value: string
   onChange: (tz: string) => void
+  locale?: Locale
 }
 
-export function TimezoneSelector({ value, onChange }: TimezoneSelectorProps) {
+export function TimezoneSelector({ value, onChange, locale = 'en' }: TimezoneSelectorProps) {
   const [open, setOpen] = useState(false)
   const [search, setSearch] = useState('')
   const ref = useRef<HTMLDivElement>(null)
@@ -55,9 +57,9 @@ export function TimezoneSelector({ value, onChange }: TimezoneSelectorProps) {
           gap: 6,
           padding: '8px 14px',
           borderRadius: 10,
-          background: '#252538',
-          border: '1px solid #2e2e46',
-          color: '#aaa',
+          background: 'var(--rg-btn-bg)',
+          border: '1px solid var(--rg-border)',
+          color: 'var(--rg-text2)',
           fontSize: 13,
           cursor: 'pointer',
           whiteSpace: 'nowrap',
@@ -80,8 +82,8 @@ export function TimezoneSelector({ value, onChange }: TimezoneSelectorProps) {
             maxHeight: 360,
             overflowY: 'auto',
             borderRadius: 14,
-            background: '#1c1c30',
-            border: '1px solid #2e2e46',
+            background: 'var(--rg-surface)',
+            border: '1px solid var(--rg-border)',
             boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
             zIndex: 50,
           }}
@@ -91,7 +93,7 @@ export function TimezoneSelector({ value, onChange }: TimezoneSelectorProps) {
             style={{
               position: 'sticky',
               top: 0,
-              background: '#1c1c30',
+              background: 'var(--rg-surface)',
               padding: 12,
               borderBottom: '1px solid #2e2e46',
             }}
@@ -105,21 +107,21 @@ export function TimezoneSelector({ value, onChange }: TimezoneSelectorProps) {
                   transform: 'translateY(-50%)',
                   width: 15,
                   height: 15,
-                  color: '#666',
+                  color: 'var(--rg-text3)',
                 }}
               />
               <input
                 ref={inputRef}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                placeholder="Search timezone..."
+                placeholder={t("tz.search", locale)}
                 style={{
                   width: '100%',
                   padding: '10px 14px 10px 36px',
                   borderRadius: 10,
-                  background: '#252538',
-                  border: '1px solid #2e2e46',
-                  color: '#eee',
+                  background: 'var(--rg-btn-bg)',
+                  border: '1px solid var(--rg-border)',
+                  color: 'var(--rg-text)',
                   fontSize: 13,
                   outline: 'none',
                 }}
@@ -136,12 +138,12 @@ export function TimezoneSelector({ value, onChange }: TimezoneSelectorProps) {
                     padding: '10px 14px 6px',
                     fontSize: 11,
                     fontWeight: 700,
-                    color: '#555',
+                    color: 'var(--rg-text3)',
                     textTransform: 'uppercase',
                     letterSpacing: 1.5,
                   }}
                 >
-                  {group}
+                  {t(`tz.${group.toLowerCase()}`, locale)}
                 </div>
                 {zones.map(tz => (
                   <button
@@ -158,8 +160,8 @@ export function TimezoneSelector({ value, onChange }: TimezoneSelectorProps) {
                       padding: '8px 14px',
                       borderRadius: 8,
                       fontSize: 13,
-                      color: tz === value ? '#eee' : '#999',
-                      background: tz === value ? '#252538' : 'transparent',
+                      color: tz === value ? 'var(--rg-text)' : 'var(--rg-text2)',
+                      background: tz === value ? 'var(--rg-elevated)' : 'transparent',
                       border: 'none',
                       cursor: 'pointer',
                     }}

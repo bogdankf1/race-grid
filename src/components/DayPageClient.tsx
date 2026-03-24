@@ -1,11 +1,14 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { format, parse, addDays, subDays } from 'date-fns'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { ALL_SERIES } from '@/data/series-registry'
+import { getDefaultLocale, formatDateLocale, type Locale } from '@/lib/i18n'
+import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { DayDetail } from '@/components/DayDetail'
 
@@ -20,10 +23,14 @@ export function DayPageClient({ date }: DayPageClientProps) {
     ALL_SERIES.map(s => s.id)
   )
   const [timezone, setTimezone] = useLocalStorage<string>('race-grid:timezone', getDefaultTimezone())
+  const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
+  const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
+
+  useEffect(() => { applyTheme(theme) }, [theme])
 
   const parsed = parse(date, 'yyyy-MM-dd', new Date())
   const monthPath = format(parsed, 'yyyy-MM')
-  const dateLabel = format(parsed, 'EEEE, MMMM d, yyyy')
+  const dateLabel = formatDateLocale(parsed, locale)
   const prevDate = format(subDays(parsed, 1), 'yyyy-MM-dd')
   const nextDate = format(addDays(parsed, 1), 'yyyy-MM-dd')
 
@@ -34,29 +41,34 @@ export function DayPageClient({ date }: DayPageClientProps) {
     setSelectedSeries(updated)
   }
 
+  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
+  const toggleLocale = () => setLocale(locale === 'en' ? 'uk' : 'en')
+
   const navBtnStyle: React.CSSProperties = {
     padding: 8,
     borderRadius: 10,
     background: 'transparent',
-    border: '1px solid #2e2e46',
-    color: '#999',
+    border: '1px solid var(--rg-border)',
+    color: 'var(--rg-text2)',
     display: 'flex',
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#13131d' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--rg-bg)', color: 'var(--rg-text)' }}>
       <Header
         selectedSeriesIds={selectedSeries}
         onToggleSeries={toggleSeries}
         onSetSeries={setSelectedSeries}
         timezone={timezone}
         onTimezoneChange={setTimezone}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        locale={locale}
+        onToggleLocale={toggleLocale}
         backHref={`/?month=${monthPath}`}
-        backLabel="Back to calendar"
       />
 
       <div className="rg-day-wrap">
-        {/* Day nav */}
         <div
           style={{
             display: 'flex',
@@ -91,6 +103,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
           date={date}
           selectedSeriesIds={selectedSeries}
           timezone={timezone}
+          locale={locale}
         />
       </div>
     </div>

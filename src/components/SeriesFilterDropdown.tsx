@@ -3,14 +3,16 @@
 import { useState, useRef, useEffect } from 'react'
 import { Filter, ChevronDown, Check } from 'lucide-react'
 import { ALL_SERIES } from '@/data/series-registry'
+import { t, type Locale } from '@/lib/i18n'
 
 interface SeriesFilterDropdownProps {
   selectedIds: string[]
   onToggle: (id: string) => void
   onSetAll: (ids: string[]) => void
+  locale: Locale
 }
 
-export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: SeriesFilterDropdownProps) {
+export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }: SeriesFilterDropdownProps) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -27,8 +29,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
   const allSelected = selectedIds.length === ALL_SERIES.length
 
   const label = allSelected
-    ? 'All series'
-    : `${selectedIds.length} series`
+    ? t('filter.all', locale)
+    : `${selectedIds.length} ${t('filter.series', locale)}`
 
   const toggleAll = () => {
     if (allSelected) {
@@ -48,9 +50,9 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
           gap: 6,
           padding: '8px 14px',
           borderRadius: 10,
-          background: '#252538',
-          border: '1px solid #2e2e46',
-          color: '#aaa',
+          background: 'var(--rg-btn-bg)',
+          border: '1px solid var(--rg-border)',
+          color: 'var(--rg-text2)',
           fontSize: 13,
           cursor: 'pointer',
           whiteSpace: 'nowrap',
@@ -71,8 +73,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
             marginTop: 8,
             width: 280,
             borderRadius: 14,
-            background: '#1c1c30',
-            border: '1px solid #2e2e46',
+            background: 'var(--rg-surface)',
+            border: '1px solid var(--rg-border)',
             boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
             zIndex: 50,
             padding: 8,
@@ -91,7 +93,7 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
               borderRadius: 8,
               fontSize: 13,
               fontWeight: 600,
-              color: '#bbb',
+              color: 'var(--rg-text2)',
               background: 'transparent',
               border: 'none',
               cursor: 'pointer',
@@ -104,7 +106,7 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
                 width: 18,
                 height: 18,
                 borderRadius: 4,
-                border: `2px solid ${allSelected ? '#4ade80' : '#444'}`,
+                border: `2px solid ${allSelected ? '#4ade80' : 'var(--rg-border)'}`,
                 background: allSelected ? '#4ade80' : 'transparent',
                 display: 'flex',
                 alignItems: 'center',
@@ -114,7 +116,7 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
             >
               {allSelected && <Check style={{ width: 12, height: 12, color: '#000' }} />}
             </span>
-            <span>{allSelected ? 'Deselect all' : 'Select all'}</span>
+            <span>{allSelected ? t('filter.deselectAll', locale) : t('filter.selectAll', locale)}</span>
           </button>
 
           {/* Series list */}
@@ -133,8 +135,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
                   padding: '10px 14px',
                   borderRadius: 8,
                   fontSize: 13,
-                  color: active ? '#eee' : '#666',
-                  background: active ? '#252538' : 'transparent',
+                  color: active ? 'var(--rg-text)' : 'var(--rg-text3)',
+                  background: active ? 'var(--rg-elevated)' : 'transparent',
                   border: 'none',
                   cursor: 'pointer',
                 }}
@@ -145,7 +147,7 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
                     width: 10,
                     height: 10,
                     borderRadius: '50%',
-                    background: active ? series.color : '#3a3a50',
+                    background: active ? series.color : 'var(--rg-border)',
                     flexShrink: 0,
                   }}
                 />
@@ -157,7 +159,7 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll }: Series
                     width: 18,
                     height: 18,
                     borderRadius: 4,
-                    border: `2px solid ${active ? '#4ade80' : '#3a3a50'}`,
+                    border: `2px solid ${active ? '#4ade80' : 'var(--rg-border)'}`,
                     background: active ? '#4ade80' : 'transparent',
                     display: 'flex',
                     alignItems: 'center',

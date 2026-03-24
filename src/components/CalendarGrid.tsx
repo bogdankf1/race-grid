@@ -9,16 +9,18 @@ import {
 } from 'date-fns'
 import { DayCell } from './DayCell'
 import { DaySeriesInfo } from '@/hooks/useCalendarEvents'
+import { t, formatMonthLocale, type Locale } from '@/lib/i18n'
 
 interface CalendarGridProps {
   month: string
   onMonthChange: (month: string) => void
   events: Map<string, DaySeriesInfo[]>
+  locale: Locale
 }
 
-const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+const WEEKDAY_KEYS = ['weekday.mon', 'weekday.tue', 'weekday.wed', 'weekday.thu', 'weekday.fri', 'weekday.sat', 'weekday.sun']
 
-export function CalendarGrid({ month, onMonthChange, events }: CalendarGridProps) {
+export function CalendarGrid({ month, onMonthChange, events, locale }: CalendarGridProps) {
   const currentDate = useMemo(() => {
     const [year, m] = month.split('-').map(Number)
     return new Date(year, m - 1, 1)
@@ -56,15 +58,15 @@ export function CalendarGrid({ month, onMonthChange, events }: CalendarGridProps
               padding: 8,
               borderRadius: 10,
               background: 'transparent',
-              border: '1px solid #2e2e46',
-              color: '#999',
+              border: '1px solid var(--rg-border)',
+              color: 'var(--rg-text2)',
               display: 'flex',
             }}
           >
             <ChevronLeft style={{ width: 20, height: 20 }} />
           </button>
           <h2 className="font-display rg-month-label">
-            {format(currentDate, 'MMMM yyyy')}
+            {formatMonthLocale(currentDate, locale)}
           </h2>
           <button
             onClick={goToNext}
@@ -73,8 +75,8 @@ export function CalendarGrid({ month, onMonthChange, events }: CalendarGridProps
               padding: 8,
               borderRadius: 10,
               background: 'transparent',
-              border: '1px solid #2e2e46',
-              color: '#999',
+              border: '1px solid var(--rg-border)',
+              color: 'var(--rg-text2)',
               display: 'flex',
             }}
           >
@@ -88,14 +90,14 @@ export function CalendarGrid({ month, onMonthChange, events }: CalendarGridProps
           style={{
             padding: '8px 20px',
             borderRadius: 10,
-            background: '#252538',
-            border: '1px solid #2e2e46',
-            color: '#aaa',
+            background: 'var(--rg-btn-bg)',
+            border: '1px solid var(--rg-border)',
+            color: 'var(--rg-text2)',
             fontSize: 14,
             fontWeight: 500,
           }}
         >
-          Today
+          {t('nav.today', locale)}
         </button>
       </div>
 
@@ -108,21 +110,21 @@ export function CalendarGrid({ month, onMonthChange, events }: CalendarGridProps
           marginBottom: 6,
         }}
       >
-        {WEEKDAYS.map(day => (
+        {WEEKDAY_KEYS.map(key => (
           <div
-            key={day}
+            key={key}
             className="rg-weekday-header"
             style={{
               textAlign: 'center',
               fontSize: 12,
               fontWeight: 600,
-              color: '#666',
+              color: 'var(--rg-text3)',
               textTransform: 'uppercase',
               letterSpacing: 2,
               padding: '8px 0',
             }}
           >
-            {day}
+            {t(key, locale)}
           </div>
         ))}
       </div>

@@ -1,9 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, Sun, Moon } from 'lucide-react'
 import { TimezoneSelector } from './TimezoneSelector'
 import { SeriesFilterDropdown } from './SeriesFilterDropdown'
+import { t, LOCALE_LABELS, type Locale } from '@/lib/i18n'
+import type { Theme } from '@/lib/theme'
 
 interface HeaderProps {
   selectedSeriesIds: string[]
@@ -11,8 +13,11 @@ interface HeaderProps {
   onSetSeries: (ids: string[]) => void
   timezone: string
   onTimezoneChange: (tz: string) => void
+  theme: Theme
+  onToggleTheme: () => void
+  locale: Locale
+  onToggleLocale: () => void
   backHref?: string
-  backLabel?: string
 }
 
 export function Header({
@@ -21,8 +26,11 @@ export function Header({
   onSetSeries,
   timezone,
   onTimezoneChange,
+  theme,
+  onToggleTheme,
+  locale,
+  onToggleLocale,
   backHref,
-  backLabel,
 }: HeaderProps) {
   return (
     <header
@@ -30,10 +38,10 @@ export function Header({
         position: 'sticky',
         top: 0,
         zIndex: 40,
-        background: 'rgba(22, 22, 34, 0.92)',
+        background: 'var(--rg-header-bg)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
-        borderBottom: '1px solid #2e2e46',
+        borderBottom: '1px solid var(--rg-border)',
       }}
     >
       <div className="rg-header-inner">
@@ -45,24 +53,60 @@ export function Header({
               alignItems: 'center',
               gap: 4,
               fontSize: 14,
-              color: '#999',
+              color: 'var(--rg-text2)',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
             }}
           >
             <ChevronLeft style={{ width: 18, height: 18 }} />
-            <span>{backLabel || 'Back to calendar'}</span>
+            <span>{t('nav.back', locale)}</span>
           </Link>
         ) : (
-          <h1 className="font-display rg-header-title">RACE GRID</h1>
+          <h1 className="font-display rg-header-title">{t('app.title', locale)}</h1>
         )}
-        <div className="rg-header-controls" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div className="rg-header-controls" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <SeriesFilterDropdown
             selectedIds={selectedSeriesIds}
             onToggle={onToggleSeries}
             onSetAll={onSetSeries}
+            locale={locale}
           />
-          <TimezoneSelector value={timezone} onChange={onTimezoneChange} />
+          <TimezoneSelector value={timezone} onChange={onTimezoneChange} locale={locale} />
+
+          {/* Theme toggle */}
+          <button
+            onClick={onToggleTheme}
+            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            style={{
+              padding: 8,
+              borderRadius: 10,
+              background: 'var(--rg-btn-bg)',
+              border: '1px solid var(--rg-border)',
+              color: 'var(--rg-text2)',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            {theme === 'dark' ? <Sun style={{ width: 15, height: 15 }} /> : <Moon style={{ width: 15, height: 15 }} />}
+          </button>
+
+          {/* Locale toggle */}
+          <button
+            onClick={onToggleLocale}
+            title={locale === 'en' ? 'Перемкнути на українську' : 'Switch to English'}
+            style={{
+              padding: '6px 10px',
+              borderRadius: 10,
+              background: 'var(--rg-btn-bg)',
+              border: '1px solid var(--rg-border)',
+              color: 'var(--rg-text2)',
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: 1,
+            }}
+          >
+            {LOCALE_LABELS[locale]}
+          </button>
         </div>
       </div>
     </header>

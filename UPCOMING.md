@@ -25,7 +25,7 @@ Small section below the event header showing track layout image, lap length, num
 ## 5. Dark/light theme toggle
 Some users prefer light mode during daytime. Add a toggle in the header (next to timezone/series selectors). Persist choice in localStorage. Current dark theme becomes the default.
 
-**Status:** Not started
+**Status:** Done
 
 ## 6. Share a specific day
 Copy-link button on the day view so users can share a specific race day URL with friends. Could also include a short summary text for pasting into chats — e.g. "Saturday, March 21 — F1 Japanese GP, NLS, NASCAR".
@@ -40,7 +40,7 @@ Browser notifications before sessions start — e.g. "F1 Qualifying starts in 30
 ## 8. Ukrainian localization
 Add Ukrainian language support. Language selector in the header (next to timezone/series selectors). Translate all UI strings: month/day names, session types, button labels, "Where to watch", "No races scheduled", header text, etc. Race/circuit/series names stay in English (they are proper nouns). Persist choice in localStorage. Auto-detect from browser language (`navigator.language`). Default: English.
 
-**Status:** Not started
+**Status:** Done
 
 ## 9. New series: Super GT, ELMS, IGTC, Super Formula
 Add four new racing series with the full treatment:
