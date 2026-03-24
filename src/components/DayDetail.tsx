@@ -124,6 +124,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale }: DayDeta
                 </div>
               )
             })()}
+            {/* TODO: Add <CircuitLayout> here — SVG track outline in series.color, right-aligned */}
           </div>
 
           <div className="rg-event-card-sessions">
