@@ -259,6 +259,7 @@ button:disabled:active {
   }
   .rg-event-card-header {
     padding: 16px 16px 12px;
+    flex-direction: column !important;
   }
   .rg-event-card-sessions {
     padding: 0 16px 16px;
