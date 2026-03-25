@@ -100,27 +100,29 @@ export function DayPageClient({ date }: DayPageClientProps) {
             marginBottom: 28,
           }}
         >
-          <button
-            className="rg-nav-btn"
-            onClick={() => router.push(`/day/${prevDate}`)}
-            style={navBtnStyle}
-          >
-            <ChevronLeft style={{ width: 20, height: 20 }} />
-          </button>
-          <h1
-            className="font-display rg-day-heading"
-            style={{ margin: 0, flex: 1, textAlign: 'center', whiteSpace: 'nowrap' }}
-          >
-            <span className="rg-date-full">{dateLabel}</span>
-            <span className="rg-date-short">{dateLabelShort}</span>
-          </h1>
-          <button
-            className="rg-nav-btn"
-            onClick={() => router.push(`/day/${nextDate}`)}
-            style={navBtnStyle}
-          >
-            <ChevronRight style={{ width: 20, height: 20 }} />
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <button
+              className="rg-nav-btn"
+              onClick={() => router.push(`/day/${prevDate}`)}
+              style={navBtnStyle}
+            >
+              <ChevronLeft style={{ width: 20, height: 20 }} />
+            </button>
+            <h1
+              className="font-display rg-day-heading"
+              style={{ margin: 0, width: 420, textAlign: 'center', whiteSpace: 'nowrap' }}
+            >
+              <span className="rg-date-full">{dateLabel}</span>
+              <span className="rg-date-short">{dateLabelShort}</span>
+            </h1>
+            <button
+              className="rg-nav-btn"
+              onClick={() => router.push(`/day/${nextDate}`)}
+              style={navBtnStyle}
+            >
+              <ChevronRight style={{ width: 20, height: 20 }} />
+            </button>
+          </div>
 
           {/* Share button */}
           <button

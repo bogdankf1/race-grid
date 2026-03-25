@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useLayoutEffect, useCallback } from 'react'
 
 export function useLocalStorage<T>(key: string, initial: T): [T, (val: T) => void] {
   const [value, setValue] = useState<T>(initial)
-  const [hydrated, setHydrated] = useState(false)
 
-  useEffect(() => {
+  // Read from localStorage synchronously before paint (avoids flash)
+  useLayoutEffect(() => {
     try {
       const stored = localStorage.getItem(key)
       if (stored !== null) {
@@ -15,7 +15,6 @@ export function useLocalStorage<T>(key: string, initial: T): [T, (val: T) => voi
     } catch {
       // ignore parse errors
     }
-    setHydrated(true)
   }, [key])
 
   const set = useCallback(
@@ -30,6 +29,5 @@ export function useLocalStorage<T>(key: string, initial: T): [T, (val: T) => voi
     [key]
   )
 
-  if (!hydrated) return [initial, set]
   return [value, set]
 }
