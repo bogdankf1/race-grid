@@ -1,10 +1,11 @@
 'use client'
 
 import { useMemo } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Calendar, CalendarDays } from 'lucide-react'
 import {
   startOfMonth, endOfMonth, startOfWeek, endOfWeek,
   eachDayOfInterval, format, addMonths, subMonths,
+  addWeeks, subWeeks,
   isSameMonth, isToday as isDateToday,
 } from 'date-fns'
 import { DayCell } from './DayCell'
@@ -24,17 +25,45 @@ interface CalendarGridProps {
   onMonthChange: (month: string) => void
   events: Map<string, DaySeriesInfo[]>
   locale: Locale
+  viewMode: 'month' | 'week'
+  onViewModeChange: (mode: 'month' | 'week') => void
+  weekStart: string
+  onWeekStartChange: (weekStart: string) => void
 }
 
 const WEEKDAY_KEYS = ['weekday.mon', 'weekday.tue', 'weekday.wed', 'weekday.thu', 'weekday.fri', 'weekday.sat', 'weekday.sun']
 
-export function CalendarGrid({ month, onMonthChange, events, locale }: CalendarGridProps) {
+function formatWeekLabel(weekStart: string, locale: Locale): string {
+  const start = new Date(weekStart + 'T00:00:00')
+  const end = new Date(start)
+  end.setDate(end.getDate() + 6)
+
+  const loc = locale === 'uk' ? 'uk-UA' : 'en-US'
+  const sameMonth = start.getMonth() === end.getMonth()
+
+  if (sameMonth) {
+    const month = start.toLocaleDateString(loc, { month: 'long' })
+    return `${start.getDate()} – ${end.getDate()} ${month} ${start.getFullYear()}`
+  }
+
+  const startStr = start.toLocaleDateString(loc, { month: 'short', day: 'numeric' })
+  const endStr = end.toLocaleDateString(loc, { month: 'short', day: 'numeric', year: 'numeric' })
+  return `${startStr} – ${endStr}`
+}
+
+export function CalendarGrid({
+  month, onMonthChange, events, locale,
+  viewMode, onViewModeChange, weekStart, onWeekStartChange,
+}: CalendarGridProps) {
   const currentDate = useMemo(() => {
     const [year, m] = month.split('-').map(Number)
     return new Date(year, m - 1, 1)
   }, [month])
 
-  const days = useMemo(() => {
+  const weekStartDate = useMemo(() => new Date(weekStart + 'T00:00:00'), [weekStart])
+
+  // Month mode: full calendar grid
+  const monthDays = useMemo(() => {
     const monthStart = startOfMonth(currentDate)
     const monthEnd = endOfMonth(currentDate)
     const calendarStart = startOfWeek(monthStart, { weekStartsOn: 1 })
@@ -42,15 +71,83 @@ export function CalendarGrid({ month, onMonthChange, events, locale }: CalendarG
     return eachDayOfInterval({ start: calendarStart, end: calendarEnd })
   }, [currentDate])
 
+  // Week mode: 7 days
+  const weekDays = useMemo(() => {
+    return eachDayOfInterval({ start: weekStartDate, end: new Date(weekStartDate.getTime() + 6 * 86400000) })
+  }, [weekStartDate])
+
+  const days = viewMode === 'week' ? weekDays : monthDays
   const nextRaceDay = useMemo(() => findNextRaceDay(events), [events])
 
-  const goToPrev = () => onMonthChange(format(subMonths(currentDate, 1), 'yyyy-MM'))
-  const goToNext = () => onMonthChange(format(addMonths(currentDate, 1), 'yyyy-MM'))
-  const goToToday = () => onMonthChange(format(new Date(), 'yyyy-MM'))
+  // Navigation
+  const goToPrev = () => {
+    if (viewMode === 'week') {
+      onWeekStartChange(format(subWeeks(weekStartDate, 1), 'yyyy-MM-dd'))
+    } else {
+      onMonthChange(format(subMonths(currentDate, 1), 'yyyy-MM'))
+    }
+  }
+  const goToNext = () => {
+    if (viewMode === 'week') {
+      onWeekStartChange(format(addWeeks(weekStartDate, 1), 'yyyy-MM-dd'))
+    } else {
+      onMonthChange(format(addMonths(currentDate, 1), 'yyyy-MM'))
+    }
+  }
+  const goToToday = () => {
+    if (viewMode === 'week') {
+      onWeekStartChange(format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy-MM-dd'))
+    } else {
+      onMonthChange(format(new Date(), 'yyyy-MM'))
+    }
+  }
+
+  // When switching modes, sync the date context
+  const switchMode = (mode: 'month' | 'week') => {
+    if (mode === 'week' && viewMode === 'month') {
+      // Switch to week: jump to the week containing the 1st of current month (or today if same month)
+      const now = new Date()
+      const ref = isSameMonth(now, currentDate) ? now : currentDate
+      onWeekStartChange(format(startOfWeek(ref, { weekStartsOn: 1 }), 'yyyy-MM-dd'))
+    } else if (mode === 'month' && viewMode === 'week') {
+      // Switch to month: use the month of the current week's start
+      onMonthChange(format(weekStartDate, 'yyyy-MM'))
+    }
+    onViewModeChange(mode)
+  }
+
+  const navLabel = viewMode === 'week'
+    ? formatWeekLabel(weekStart, locale)
+    : formatMonthLocale(currentDate, locale)
+
+  const todayLabel = viewMode === 'week' ? t('nav.thisWeek', locale) : t('nav.today', locale)
+
+  const navBtnStyle: React.CSSProperties = {
+    padding: 8,
+    borderRadius: 10,
+    background: 'transparent',
+    border: '1px solid var(--rg-border)',
+    color: 'var(--rg-text2)',
+    display: 'flex',
+  }
+
+  const viewBtnStyle = (active: boolean): React.CSSProperties => ({
+    padding: '6px 10px',
+    borderRadius: 8,
+    background: active ? 'var(--rg-elevated)' : 'transparent',
+    border: active ? '1px solid var(--rg-border)' : '1px solid transparent',
+    color: active ? 'var(--rg-text)' : 'var(--rg-text3)',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 5,
+    fontSize: 12,
+    fontWeight: 600,
+    cursor: 'pointer',
+  })
 
   return (
     <div className="rg-calendar-wrap">
-      {/* Month nav */}
+      {/* Nav */}
       <div
         className="rg-month-nav"
         style={{
@@ -61,54 +158,46 @@ export function CalendarGrid({ month, onMonthChange, events, locale }: CalendarG
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <button
-            onClick={goToPrev}
-            className="rg-nav-btn"
-            style={{
-              padding: 8,
-              borderRadius: 10,
-              background: 'transparent',
-              border: '1px solid var(--rg-border)',
-              color: 'var(--rg-text2)',
-              display: 'flex',
-            }}
-          >
+          <button onClick={goToPrev} className="rg-nav-btn" style={navBtnStyle}>
             <ChevronLeft style={{ width: 20, height: 20 }} />
           </button>
           <h2 className="font-display rg-month-label">
-            {formatMonthLocale(currentDate, locale)}
+            {navLabel}
           </h2>
-          <button
-            onClick={goToNext}
-            className="rg-nav-btn"
-            style={{
-              padding: 8,
-              borderRadius: 10,
-              background: 'transparent',
-              border: '1px solid var(--rg-border)',
-              color: 'var(--rg-text2)',
-              display: 'flex',
-            }}
-          >
+          <button onClick={goToNext} className="rg-nav-btn" style={navBtnStyle}>
             <ChevronRight style={{ width: 20, height: 20 }} />
           </button>
         </div>
 
-        <button
-          onClick={goToToday}
-          className="rg-today-btn"
-          style={{
-            padding: '8px 20px',
-            borderRadius: 10,
-            background: 'var(--rg-btn-bg)',
-            border: '1px solid var(--rg-border)',
-            color: 'var(--rg-text2)',
-            fontSize: 14,
-            fontWeight: 500,
-          }}
-        >
-          {t('nav.today', locale)}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          {/* View mode toggle */}
+          <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2 }}>
+            <button onClick={() => switchMode('month')} style={viewBtnStyle(viewMode === 'month')}>
+              <Calendar style={{ width: 13, height: 13 }} />
+              {t('view.month', locale)}
+            </button>
+            <button onClick={() => switchMode('week')} style={viewBtnStyle(viewMode === 'week')}>
+              <CalendarDays style={{ width: 13, height: 13 }} />
+              {t('view.week', locale)}
+            </button>
+          </div>
+
+          <button
+            onClick={goToToday}
+            className="rg-today-btn"
+            style={{
+              padding: '8px 20px',
+              borderRadius: 10,
+              background: 'var(--rg-btn-bg)',
+              border: '1px solid var(--rg-border)',
+              color: 'var(--rg-text2)',
+              fontSize: 14,
+              fontWeight: 500,
+            }}
+          >
+            {todayLabel}
+          </button>
+        </div>
       </div>
 
       {/* Weekday headers */}
@@ -155,7 +244,7 @@ export function CalendarGrid({ month, onMonthChange, events, locale }: CalendarG
               key={dateStr}
               date={dateStr}
               dayNumber={day.getDate()}
-              isCurrentMonth={isSameMonth(day, currentDate)}
+              isCurrentMonth={viewMode === 'week' ? true : isSameMonth(day, currentDate)}
               isToday={isDateToday(day)}
               isNextRaceDay={dateStr === nextRaceDay}
               seriesInfos={events.get(dateStr) || []}

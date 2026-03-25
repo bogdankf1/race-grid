@@ -1,9 +1,10 @@
 'use client'
 
 import { useEffect } from 'react'
-import { format } from 'date-fns'
+import { format, startOfWeek } from 'date-fns'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useCalendarEvents } from '@/hooks/useCalendarEvents'
+import { useWeekEvents } from '@/hooks/useWeekEvents'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { ALL_SERIES } from '@/data/series-registry'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
@@ -20,10 +21,17 @@ export default function HomePage() {
   const [month, setMonth] = useLocalStorage<string>('race-grid:month', format(new Date(), 'yyyy-MM'))
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
+  const [viewMode, setViewMode] = useLocalStorage<'month' | 'week'>('race-grid:view', 'month')
+  const [weekStart, setWeekStart] = useLocalStorage<string>(
+    'race-grid:week',
+    format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy-MM-dd')
+  )
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
-  const events = useCalendarEvents(selectedSeries, timezone, month)
+  const monthEvents = useCalendarEvents(selectedSeries, timezone, month)
+  const weekEvents = useWeekEvents(selectedSeries, timezone, weekStart)
+  const events = viewMode === 'week' ? weekEvents : monthEvents
 
   const toggleSeries = (id: string) => {
     const updated = selectedSeries.includes(id)
@@ -53,6 +61,10 @@ export default function HomePage() {
         onMonthChange={setMonth}
         events={events}
         locale={locale}
+        viewMode={viewMode}
+        onViewModeChange={setViewMode}
+        weekStart={weekStart}
+        onWeekStartChange={setWeekStart}
       />
     </div>
   )
