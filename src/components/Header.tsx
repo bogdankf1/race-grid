@@ -81,13 +81,15 @@ export function Header({
             onClick={onToggleTheme}
             title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             style={{
-              padding: 8,
+              height: 36,
+              width: 36,
               borderRadius: 10,
               background: 'var(--rg-btn-bg)',
               border: '1px solid var(--rg-border)',
               color: 'var(--rg-text2)',
               display: 'flex',
               alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             {theme === 'dark' ? <Sun style={{ width: 15, height: 15 }} /> : <Moon style={{ width: 15, height: 15 }} />}
@@ -98,7 +100,8 @@ export function Header({
             onClick={onToggleLocale}
             title={locale === 'en' ? 'Перемкнути на українську' : 'Switch to English'}
             style={{
-              padding: '6px 10px',
+              height: 36,
+              padding: '0 10px',
               borderRadius: 10,
               background: 'var(--rg-btn-bg)',
               border: '1px solid var(--rg-border)',

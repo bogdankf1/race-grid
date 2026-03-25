@@ -33,13 +33,15 @@ export function NotificationSettings({ locale }: NotificationSettingsProps) {
         onClick={() => setOpen(!open)}
         title={t(prefs.enabled ? 'notify.disable' : 'notify.enable', locale)}
         style={{
-          padding: 8,
+          height: 36,
+          width: 36,
           borderRadius: 10,
           background: 'var(--rg-btn-bg)',
           border: '1px solid var(--rg-border)',
           color: prefs.enabled ? 'var(--rg-link)' : 'var(--rg-text2)',
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         {prefs.enabled ? <BellRing style={{ width: 15, height: 15 }} /> : <Bell style={{ width: 15, height: 15 }} />}
@@ -47,6 +49,7 @@ export function NotificationSettings({ locale }: NotificationSettingsProps) {
 
       {open && (
         <div
+          className="rg-dropdown-panel"
           style={{
             position: 'absolute',
             top: '100%',

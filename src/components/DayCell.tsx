@@ -68,22 +68,36 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
           {dayNumber}
         </span>
         {isNextRaceDay && (
-          <span
-            style={{
-              fontSize: 8,
-              fontWeight: 700,
-              color: 'var(--rg-link)',
-              textTransform: 'uppercase',
-              letterSpacing: 1,
-            }}
-          >
-            NEXT UP
-          </span>
+          <>
+            <span
+              className="rg-next-up-label"
+              style={{
+                fontSize: 8,
+                fontWeight: 700,
+                color: 'var(--rg-link)',
+                textTransform: 'uppercase',
+                letterSpacing: 1,
+              }}
+            >
+              NEXT UP
+            </span>
+            <span
+              className="rg-next-up-dot"
+              style={{
+                display: 'none',
+                width: 6,
+                height: 6,
+                borderRadius: '50%',
+                background: 'var(--rg-link)',
+                flexShrink: 0,
+              }}
+            />
+          </>
         )}
       </div>
 
       {seriesInfos.length > 0 && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        <div className="rg-chip-list" style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           {visibleSeries.map(info => (
             <div
               key={info.series.id}
@@ -149,7 +163,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
                 border: 'none',
               }}
             >
-              +{overflow} more
+              +{overflow}<span className="rg-overflow-more"> more</span>
             </button>
           )}
         </div>

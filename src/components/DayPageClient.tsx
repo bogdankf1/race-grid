@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight, Share2, Check } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { ALL_SERIES } from '@/data/series-registry'
-import { getDefaultLocale, formatDateLocale, type Locale } from '@/lib/i18n'
+import { getDefaultLocale, formatDateLocale, formatDateShort, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { DayDetail } from '@/components/DayDetail'
@@ -33,6 +33,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
   const parsed = parse(date, 'yyyy-MM-dd', new Date())
   const monthPath = format(parsed, 'yyyy-MM')
   const dateLabel = formatDateLocale(parsed, locale)
+  const dateLabelShort = formatDateShort(parsed, locale)
   const prevDate = format(subDays(parsed, 1), 'yyyy-MM-dd')
   const nextDate = format(addDays(parsed, 1), 'yyyy-MM-dd')
 
@@ -64,12 +65,15 @@ export function DayPageClient({ date }: DayPageClientProps) {
   }
 
   const navBtnStyle: React.CSSProperties = {
-    padding: 8,
+    height: 36,
+    width: 36,
     borderRadius: 10,
     background: 'transparent',
     border: '1px solid var(--rg-border)',
     color: 'var(--rg-text2)',
     display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 
   return (
@@ -105,9 +109,10 @@ export function DayPageClient({ date }: DayPageClientProps) {
           </button>
           <h1
             className="font-display rg-day-heading"
-            style={{ margin: 0, width: 460, textAlign: 'center' }}
+            style={{ margin: 0, flex: 1, textAlign: 'center', whiteSpace: 'nowrap' }}
           >
-            {dateLabel}
+            <span className="rg-date-full">{dateLabel}</span>
+            <span className="rg-date-short">{dateLabelShort}</span>
           </h1>
           <button
             className="rg-nav-btn"
@@ -123,8 +128,9 @@ export function DayPageClient({ date }: DayPageClientProps) {
             style={{
               ...navBtnStyle,
               marginLeft: 'auto',
+              width: 'auto',
               gap: 6,
-              padding: '8px 14px',
+              padding: '0 14px',
               fontSize: 13,
               fontWeight: 500,
               color: copied ? '#4ade80' : 'var(--rg-text2)',

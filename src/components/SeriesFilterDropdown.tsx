@@ -83,7 +83,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
           display: 'flex',
           alignItems: 'center',
           gap: 6,
-          padding: '8px 14px',
+          height: 36,
+          padding: '0 14px',
           borderRadius: 10,
           background: 'var(--rg-btn-bg)',
           border: '1px solid var(--rg-border)',
@@ -94,8 +95,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
         }}
       >
         <Filter style={{ width: 15, height: 15 }} />
-        <span>{label}</span>
-        <ChevronDown style={{ width: 13, height: 13 }} />
+        <span className="rg-btn-label">{label}</span>
+        <ChevronDown className="rg-btn-label" style={{ width: 13, height: 13 }} />
       </button>
 
       {open && (

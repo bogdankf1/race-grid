@@ -138,6 +138,10 @@ button:disabled:active {
   margin-bottom: 28px;
 }
 
+.rg-date-short {
+  display: none;
+}
+
 .rg-event-card-header {
   padding: 24px 28px 20px;
 }
@@ -168,8 +172,8 @@ button:disabled:active {
 /* ── Mobile (≤640) ── */
 @media (max-width: 640px) {
   .rg-header-inner {
-    padding: 10px 16px;
-    gap: 8px;
+    padding: 10px 12px;
+    gap: 6px;
   }
   .rg-header-title {
     font-size: 16px;
@@ -178,15 +182,31 @@ button:disabled:active {
   .rg-header-controls {
     gap: 6px !important;
   }
+  .rg-btn-label {
+    display: none !important;
+  }
   .rg-calendar-wrap {
     padding: 16px 12px 24px;
   }
   .rg-month-nav {
-    margin-bottom: 16px !important;
+    margin-bottom: 10px !important;
   }
   .rg-month-label {
-    font-size: 20px;
-    width: 200px;
+    font-size: 18px;
+    width: auto;
+    min-width: 0;
+  }
+  .rg-toolbar {
+    margin-bottom: 14px !important;
+  }
+  .rg-view-label {
+    display: none !important;
+  }
+  .rg-next-up-label {
+    display: none !important;
+  }
+  .rg-next-up-dot {
+    display: block !important;
   }
   .rg-weekday-header {
     font-size: 10px !important;
@@ -197,25 +217,31 @@ button:disabled:active {
     gap: 3px !important;
   }
   .rg-day-cell-inner {
-    padding: 6px !important;
+    padding: 4px !important;
     min-height: 70px !important;
     border-radius: 8px !important;
   }
   .rg-day-number {
     font-size: 12px !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 2px !important;
   }
   .rg-chip-label {
     display: none !important;
   }
+  .rg-chip-list {
+    gap: 2px !important;
+  }
   .rg-chip-series {
     font-size: 9px !important;
-    padding: 3px 5px !important;
-    border-radius: 4px !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
   }
   .rg-overflow-chip {
     font-size: 9px !important;
     padding: 2px 5px !important;
+  }
+  .rg-overflow-more {
+    display: none !important;
   }
   .rg-day-wrap {
     padding: 16px 16px 24px;
@@ -224,6 +250,12 @@ button:disabled:active {
     font-size: 16px !important;
     margin-bottom: 20px;
     width: auto !important;
+  }
+  .rg-date-full {
+    display: none !important;
+  }
+  .rg-date-short {
+    display: inline !important;
   }
   .rg-event-card-header {
     padding: 16px 16px 12px;
@@ -243,7 +275,11 @@ button:disabled:active {
     font-size: 12px !important;
   }
   .rg-dropdown-panel {
-    width: min(280px, 85vw) !important;
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-height: 70vh !important;
   }
   .rg-nav-btn {
     padding: 6px !important;

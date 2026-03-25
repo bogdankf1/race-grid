@@ -151,14 +151,14 @@ export function CalendarGrid({
 
   return (
     <div className="rg-calendar-wrap">
-      {/* Nav */}
+      {/* Nav — top row: prev/label/next */}
       <div
         className="rg-month-nav"
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          marginBottom: 28,
+          marginBottom: 12,
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -173,39 +173,49 @@ export function CalendarGrid({
           </button>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 1, justifyContent: 'flex-end' }}>
-          <CalendarSearch
-            selectedSeriesIds={selectedSeriesIds}
-            timezone={timezone}
-            locale={locale}
-          />
+        <button
+          onClick={goToToday}
+          className="rg-today-btn"
+          style={{
+            padding: '8px 20px',
+            borderRadius: 10,
+            background: 'var(--rg-btn-bg)',
+            border: '1px solid var(--rg-border)',
+            color: 'var(--rg-text2)',
+            fontSize: 14,
+            fontWeight: 500,
+            flexShrink: 0,
+          }}
+        >
+          {todayLabel}
+        </button>
+      </div>
 
-          {/* View mode toggle */}
-          <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2 }}>
-            <button onClick={() => switchMode('month')} style={viewBtnStyle(viewMode === 'month')}>
-              <Calendar style={{ width: 13, height: 13 }} />
-              {t('view.month', locale)}
-            </button>
-            <button onClick={() => switchMode('week')} style={viewBtnStyle(viewMode === 'week')}>
-              <CalendarDays style={{ width: 13, height: 13 }} />
-              {t('view.week', locale)}
-            </button>
-          </div>
+      {/* Nav — bottom row: search + view toggle */}
+      <div
+        className="rg-toolbar"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          marginBottom: 20,
+        }}
+      >
+        <CalendarSearch
+          selectedSeriesIds={selectedSeriesIds}
+          timezone={timezone}
+          locale={locale}
+        />
 
-          <button
-            onClick={goToToday}
-            className="rg-today-btn"
-            style={{
-              padding: '8px 20px',
-              borderRadius: 10,
-              background: 'var(--rg-btn-bg)',
-              border: '1px solid var(--rg-border)',
-              color: 'var(--rg-text2)',
-              fontSize: 14,
-              fontWeight: 500,
-            }}
-          >
-            {todayLabel}
+        {/* View mode toggle */}
+        <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, flexShrink: 0 }}>
+          <button onClick={() => switchMode('month')} style={viewBtnStyle(viewMode === 'month')} title={t('view.month', locale)}>
+            <Calendar style={{ width: 13, height: 13 }} />
+            <span className="rg-view-label">{t('view.month', locale)}</span>
+          </button>
+          <button onClick={() => switchMode('week')} style={viewBtnStyle(viewMode === 'week')} title={t('view.week', locale)}>
+            <CalendarDays style={{ width: 13, height: 13 }} />
+            <span className="rg-view-label">{t('view.week', locale)}</span>
           </button>
         </div>
       </div>

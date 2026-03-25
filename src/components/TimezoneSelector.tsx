@@ -55,7 +55,8 @@ export function TimezoneSelector({ value, onChange, locale = 'en' }: TimezoneSel
           display: 'flex',
           alignItems: 'center',
           gap: 6,
-          padding: '8px 14px',
+          height: 36,
+          padding: '0 14px',
           borderRadius: 10,
           background: 'var(--rg-btn-bg)',
           border: '1px solid var(--rg-border)',
@@ -66,8 +67,8 @@ export function TimezoneSelector({ value, onChange, locale = 'en' }: TimezoneSel
         }}
       >
         <Globe style={{ width: 15, height: 15 }} />
-        <span>{cityLabel}</span>
-        <ChevronDown style={{ width: 13, height: 13 }} />
+        <span className="rg-btn-label">{cityLabel}</span>
+        <ChevronDown className="rg-btn-label" style={{ width: 13, height: 13 }} />
       </button>
 
       {open && (

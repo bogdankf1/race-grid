@@ -144,6 +144,16 @@ export function formatDateLocale(date: Date, locale: Locale): string {
   })
 }
 
+export function formatDateShort(date: Date, locale: Locale): string {
+  const loc = locale === 'uk' ? 'uk-UA' : 'en-US'
+  return date.toLocaleDateString(loc, {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })
+}
+
 export function formatMonthLocale(date: Date, locale: Locale): string {
   const loc = locale === 'uk' ? 'uk-UA' : 'en-US'
   const str = date.toLocaleDateString(loc, { month: 'long', year: 'numeric' })
