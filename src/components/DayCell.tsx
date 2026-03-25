@@ -46,7 +46,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
         boxShadow: isNextRaceDay ? '0 0 16px rgba(122,179,255,0.25)' : undefined,
         opacity: isCurrentMonth ? 1 : 0.3,
         cursor: isCurrentMonth ? 'pointer' : 'default',
-        transition: 'background 0.15s ease',
+        transition: 'background 0.15s ease, opacity 0.2s ease',
         minHeight: 100,
       }}
       onMouseEnter={e => {

@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { DayPageClient } from '@/components/DayPageClient'
 import { eachDayOfInterval, format } from 'date-fns'
 
@@ -12,5 +13,9 @@ export function generateStaticParams() {
 
 export default async function DayPage({ params }: { params: Promise<{ date: string }> }) {
   const { date } = await params
-  return <DayPageClient date={date} />
+  return (
+    <Suspense>
+      <DayPageClient date={date} />
+    </Suspense>
+  )
 }

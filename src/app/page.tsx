@@ -65,6 +65,8 @@ export default function HomePage() {
         onViewModeChange={setViewMode}
         weekStart={weekStart}
         onWeekStartChange={setWeekStart}
+        selectedSeriesIds={selectedSeries}
+        timezone={timezone}
       />
     </div>
   )

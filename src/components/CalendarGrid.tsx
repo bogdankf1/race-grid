@@ -9,6 +9,7 @@ import {
   isSameMonth, isToday as isDateToday,
 } from 'date-fns'
 import { DayCell } from './DayCell'
+import { CalendarSearch } from './CalendarSearch'
 import { DaySeriesInfo } from '@/hooks/useCalendarEvents'
 import { t, formatMonthLocale, type Locale } from '@/lib/i18n'
 
@@ -29,6 +30,8 @@ interface CalendarGridProps {
   onViewModeChange: (mode: 'month' | 'week') => void
   weekStart: string
   onWeekStartChange: (weekStart: string) => void
+  selectedSeriesIds: string[]
+  timezone: string
 }
 
 const WEEKDAY_KEYS = ['weekday.mon', 'weekday.tue', 'weekday.wed', 'weekday.thu', 'weekday.fri', 'weekday.sat', 'weekday.sun']
@@ -54,6 +57,7 @@ function formatWeekLabel(weekStart: string, locale: Locale): string {
 export function CalendarGrid({
   month, onMonthChange, events, locale,
   viewMode, onViewModeChange, weekStart, onWeekStartChange,
+  selectedSeriesIds, timezone,
 }: CalendarGridProps) {
   const currentDate = useMemo(() => {
     const [year, m] = month.split('-').map(Number)
@@ -169,7 +173,13 @@ export function CalendarGrid({
           </button>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 1, justifyContent: 'flex-end' }}>
+          <CalendarSearch
+            selectedSeriesIds={selectedSeriesIds}
+            timezone={timezone}
+            locale={locale}
+          />
+
           {/* View mode toggle */}
           <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2 }}>
             <button onClick={() => switchMode('month')} style={viewBtnStyle(viewMode === 'month')}>

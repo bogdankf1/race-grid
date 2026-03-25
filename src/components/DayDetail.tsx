@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useEffect, useRef } from 'react'
 import { SeriesConfig, RaceEvent, Session, SessionType } from '@/lib/types'
 import { ALL_SERIES } from '@/data/series-registry'
 import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
@@ -31,9 +31,29 @@ function countryFlag(countryCode: string): string {
 }
 
 interface DayEventInfo { series: SeriesConfig; event: RaceEvent; sessions: Session[] }
-interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string; locale: Locale }
+interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string; locale: Locale; highlightEventId?: string }
 
-export function DayDetail({ date, selectedSeriesIds, timezone, locale }: DayDetailProps) {
+export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlightEventId }: DayDetailProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!highlightEventId || !containerRef.current) return
+
+    // Wait for render
+    const timer = setTimeout(() => {
+      const el = containerRef.current?.querySelector(`[data-event-id="${highlightEventId}"]`) as HTMLElement | null
+      if (!el) return
+
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      el.style.transition = 'box-shadow 0.3s ease'
+      el.style.boxShadow = '0 0 0 3px var(--rg-link), 0 0 24px rgba(122,179,255,0.3)'
+      setTimeout(() => {
+        el.style.boxShadow = ''
+      }, 2000)
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [highlightEventId])
   const dayEvents = useMemo(() => {
     const results: DayEventInfo[] = []
     const selectedSeries = ALL_SERIES.filter(s => selectedSeriesIds.includes(s.id))
@@ -62,16 +82,18 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale }: DayDeta
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+    <div ref={containerRef} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
       {dayEvents.map(({ series, event, sessions }) => (
         <div
           key={`${series.id}-${event.id}`}
+          data-event-id={event.id}
           style={{
             borderRadius: 16,
             background: 'var(--rg-surface)',
             border: '1px solid var(--rg-card-border)',
             borderLeft: `4px solid ${series.color}`,
             overflow: 'hidden',
+            transition: 'box-shadow 0.5s ease',
           }}
         >
           <div className="rg-event-card-header" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 }}>

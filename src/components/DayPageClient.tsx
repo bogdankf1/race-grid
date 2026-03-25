@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { format, parse, addDays, subDays } from 'date-fns'
 import { ChevronLeft, ChevronRight, Share2, Check } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
@@ -18,6 +18,8 @@ interface DayPageClientProps {
 
 export function DayPageClient({ date }: DayPageClientProps) {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const highlightEventId = searchParams.get('event') ?? undefined
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>(
     'race-grid:series',
     ALL_SERIES.map(s => s.id)
@@ -138,6 +140,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
           selectedSeriesIds={selectedSeries}
           timezone={timezone}
           locale={locale}
+          highlightEventId={highlightEventId}
         />
       </div>
     </div>
