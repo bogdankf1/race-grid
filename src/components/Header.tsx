@@ -78,10 +78,10 @@ export function Header({
 
           {/* Theme toggle */}
           <button
+            className="rg-control"
             onClick={onToggleTheme}
             title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             style={{
-              height: 36,
               width: 36,
               borderRadius: 10,
               background: 'var(--rg-btn-bg)',
@@ -97,10 +97,10 @@ export function Header({
 
           {/* Locale toggle */}
           <button
+            className="rg-control"
             onClick={onToggleLocale}
             title={locale === 'en' ? 'Перемкнути на українську' : 'Switch to English'}
             style={{
-              height: 36,
               padding: '0 10px',
               borderRadius: 10,
               background: 'var(--rg-btn-bg)',

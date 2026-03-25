@@ -127,12 +127,14 @@ export function CalendarGrid({
   const todayLabel = viewMode === 'week' ? t('nav.thisWeek', locale) : t('nav.today', locale)
 
   const navBtnStyle: React.CSSProperties = {
-    padding: 8,
+    width: 36,
     borderRadius: 10,
     background: 'transparent',
     border: '1px solid var(--rg-border)',
     color: 'var(--rg-text2)',
     display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 
   const viewBtnStyle = (active: boolean): React.CSSProperties => ({
@@ -162,36 +164,50 @@ export function CalendarGrid({
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <button onClick={goToPrev} className="rg-nav-btn" style={navBtnStyle}>
+          <button onClick={goToPrev} className="rg-nav-btn rg-control" style={navBtnStyle}>
             <ChevronLeft style={{ width: 20, height: 20 }} />
           </button>
           <h2 className="font-display rg-month-label">
             {navLabel}
           </h2>
-          <button onClick={goToNext} className="rg-nav-btn" style={navBtnStyle}>
+          <button onClick={goToNext} className="rg-nav-btn rg-control" style={navBtnStyle}>
             <ChevronRight style={{ width: 20, height: 20 }} />
           </button>
         </div>
 
-        <button
-          onClick={goToToday}
-          className="rg-today-btn"
-          style={{
-            padding: '8px 20px',
-            borderRadius: 10,
-            background: 'var(--rg-btn-bg)',
-            border: '1px solid var(--rg-border)',
-            color: 'var(--rg-text2)',
-            fontSize: 14,
-            fontWeight: 500,
-            flexShrink: 0,
-          }}
-        >
-          {todayLabel}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          {/* View mode toggle */}
+          <div className="rg-view-toggle-desktop rg-control" style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, flexShrink: 0, alignItems: 'center' }}>
+            <button onClick={() => switchMode('month')} style={viewBtnStyle(viewMode === 'month')} title={t('view.month', locale)}>
+              <Calendar style={{ width: 13, height: 13 }} />
+              <span className="rg-view-label">{t('view.month', locale)}</span>
+            </button>
+            <button onClick={() => switchMode('week')} style={viewBtnStyle(viewMode === 'week')} title={t('view.week', locale)}>
+              <CalendarDays style={{ width: 13, height: 13 }} />
+              <span className="rg-view-label">{t('view.week', locale)}</span>
+            </button>
+          </div>
+
+          <button
+            onClick={goToToday}
+            className="rg-today-btn rg-control"
+            style={{
+              padding: '0 20px',
+              borderRadius: 10,
+              background: 'var(--rg-btn-bg)',
+              border: '1px solid var(--rg-border)',
+              color: 'var(--rg-text2)',
+              fontSize: 14,
+              fontWeight: 500,
+              flexShrink: 0,
+            }}
+          >
+            {todayLabel}
+          </button>
+        </div>
       </div>
 
-      {/* Nav — bottom row: search + view toggle */}
+      {/* Toolbar: search + view toggle (mobile) */}
       <div
         className="rg-toolbar"
         style={{
@@ -207,15 +223,13 @@ export function CalendarGrid({
           locale={locale}
         />
 
-        {/* View mode toggle */}
-        <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, flexShrink: 0 }}>
+        {/* View mode toggle — mobile only */}
+        <div className="rg-view-toggle-mobile rg-control" style={{ display: 'none', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, flexShrink: 0, alignItems: 'center' }}>
           <button onClick={() => switchMode('month')} style={viewBtnStyle(viewMode === 'month')} title={t('view.month', locale)}>
             <Calendar style={{ width: 13, height: 13 }} />
-            <span className="rg-view-label">{t('view.month', locale)}</span>
           </button>
           <button onClick={() => switchMode('week')} style={viewBtnStyle(viewMode === 'week')} title={t('view.week', locale)}>
             <CalendarDays style={{ width: 13, height: 13 }} />
-            <span className="rg-view-label">{t('view.week', locale)}</span>
           </button>
         </div>
       </div>

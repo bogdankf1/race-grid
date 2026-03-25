@@ -32,8 +32,8 @@ export function NotificationSettings({ locale }: NotificationSettingsProps) {
       <button
         onClick={() => setOpen(!open)}
         title={t(prefs.enabled ? 'notify.disable' : 'notify.enable', locale)}
+        className="rg-control"
         style={{
-          height: 36,
           width: 36,
           borderRadius: 10,
           background: 'var(--rg-btn-bg)',

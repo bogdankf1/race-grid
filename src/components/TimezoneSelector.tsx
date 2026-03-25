@@ -50,12 +50,12 @@ export function TimezoneSelector({ value, onChange, locale = 'en' }: TimezoneSel
   return (
     <div ref={ref} style={{ position: 'relative' }}>
       <button
+        className="rg-control"
         onClick={() => setOpen(!open)}
         style={{
           display: 'flex',
           alignItems: 'center',
           gap: 6,
-          height: 36,
           padding: '0 14px',
           borderRadius: 10,
           background: 'var(--rg-btn-bg)',

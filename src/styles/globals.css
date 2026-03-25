@@ -20,6 +20,7 @@
 
 /* Theme CSS variables — defaults to dark, overridden by JS */
 :root {
+  --rg-control-h: 36px;
   --rg-bg: #13131d;
   --rg-surface: #1c1c30;
   --rg-elevated: #232340;
@@ -63,6 +64,11 @@ body {
 /* Display font */
 .font-display {
   font-family: var(--font-display), system-ui, sans-serif;
+}
+
+/* Uniform control height */
+.rg-control {
+  height: var(--rg-control-h) !important;
 }
 
 /* Global interactive feedback */
@@ -171,6 +177,9 @@ button:disabled:active {
 
 /* ── Mobile (≤640) ── */
 @media (max-width: 640px) {
+  :root {
+    --rg-control-h: 32px;
+  }
   .rg-header-inner {
     padding: 10px 12px;
     gap: 6px;
@@ -199,8 +208,11 @@ button:disabled:active {
   .rg-toolbar {
     margin-bottom: 14px !important;
   }
-  .rg-view-label {
+  .rg-view-toggle-desktop {
     display: none !important;
+  }
+  .rg-view-toggle-mobile {
+    display: flex !important;
   }
   .rg-next-up-label {
     display: none !important;

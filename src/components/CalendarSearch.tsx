@@ -110,11 +110,12 @@ export function CalendarSearch({ selectedSeriesIds, timezone, locale }: Calendar
   return (
     <div ref={ref} style={{ position: 'relative', flex: 1, maxWidth: 360 }}>
       <div
+        className="rg-control"
         style={{
           display: 'flex',
           alignItems: 'center',
           gap: 8,
-          padding: '7px 12px',
+          padding: '0 12px',
           borderRadius: 10,
           background: 'var(--rg-btn-bg)',
           border: '1px solid var(--rg-border)',

@@ -65,7 +65,6 @@ export function DayPageClient({ date }: DayPageClientProps) {
   }
 
   const navBtnStyle: React.CSSProperties = {
-    height: 36,
     width: 36,
     borderRadius: 10,
     background: 'transparent',
@@ -102,7 +101,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <button
-              className="rg-nav-btn"
+              className="rg-nav-btn rg-control"
               onClick={() => router.push(`/day/${prevDate}`)}
               style={navBtnStyle}
             >
@@ -116,7 +115,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
               <span className="rg-date-short">{dateLabelShort}</span>
             </h1>
             <button
-              className="rg-nav-btn"
+              className="rg-nav-btn rg-control"
               onClick={() => router.push(`/day/${nextDate}`)}
               style={navBtnStyle}
             >
@@ -126,6 +125,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
 
           {/* Share button */}
           <button
+            className="rg-control"
             onClick={shareDay}
             style={{
               ...navBtnStyle,
