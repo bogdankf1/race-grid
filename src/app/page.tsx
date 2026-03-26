@@ -11,6 +11,7 @@ import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { CalendarGrid } from '@/components/CalendarGrid'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { Footer } from '@/components/Footer'
 
 export default function HomePage() {
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>(
@@ -83,6 +84,7 @@ export default function HomePage() {
         highlightDate={highlightDate}
       />
       </ErrorBoundary>
+      <Footer locale={locale} />
     </div>
   )
 }
