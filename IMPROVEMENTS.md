@@ -44,14 +44,7 @@ Items for Claude Code to work through. Grouped by category, roughly prioritized 
 
 ## New Features
 
-### 25. Race results
-After a race, show the winner and podium finishers. Even a simple "Winner: Verstappen" adds significant value for users checking past race days.
-
-**Implementation:**
-- Create `src/data/results-2026.ts` with a `Record<string, { winner: string; second?: string; third?: string }>` keyed by event ID
-- In `DayDetail.tsx`, look up results for past race sessions and display below the session row
-- Results can be populated manually or via a verification runbook (add to `VERIFY-SEASON-DATA.md`)
-- Add i18n strings: "Winner", "Podium", etc.
+- ~~**25. Race results** — Fixed: `results-2026.ts` with overall winner + collapsible class podiums. Shows trophy icon + winner below finished race/endurance/sprint sessions. Expandable "All class results" for multi-class series (WEC, IMSA, etc). Fastest lap for F1. Sample results added for F1 Australia/China, NASCAR Daytona, IndyCar St. Pete, NLS R1, WRC Monte Carlo.~~
 
 ### 26. Favorites / "My series"
 Let users mark certain series as favorites. Favorites float to the top of the day view and get a subtle star indicator on the calendar grid.

@@ -27,6 +27,26 @@ export interface RaceEvent {
   sessions: Session[]
 }
 
+export interface PodiumEntry {
+  position: number
+  drivers: string[]
+  team: string
+}
+
+export interface ClassResult {
+  className: string
+  podium: PodiumEntry[]
+}
+
+export interface RaceResult {
+  overall: {
+    drivers: string[]
+    team: string
+  }
+  classes?: ClassResult[]
+  fastestLap?: string
+}
+
 export interface SeriesConfig {
   id: string
   name: string

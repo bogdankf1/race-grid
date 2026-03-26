@@ -32,6 +32,11 @@ Race Grid is a motorsport calendar web app (Next.js 15, static export) showing r
 **How:** Follow `docs/VERIFY-SEASON-DATA.md` — it walks through checking all 14 series against official sources and fixing discrepancies.
 **Command:** "Verify all race data" or "Check if calendar data is up to date"
 
+### Race results update
+**When:** Run manually whenever you want to catch up on results (e.g., after a race weekend or weekly).
+**How:** Follow `docs/UPDATE-RESULTS.md` — finds finished sessions without results, fetches from official sources, updates per-series files in `src/data/results/`.
+**Command:** "Update race results" or "Add results for last weekend"
+
 ### New season setup
 **When:** Current season has concluded (December/January) and next season's calendars are being published.
 **How:** Follow `docs/NEW-SEASON-SETUP.md` — it covers creating new data files, updating the registry, and handling series whose calendars aren't published yet.

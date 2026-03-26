@@ -10,9 +10,11 @@ import { getBroadcasts, detectCountry } from '@/data/broadcasts'
 import { getCircuitInfo, getCircuitTypeLabel } from '@/data/circuits'
 import { CalendarExport } from './CalendarExport'
 import { Countdown } from './Countdown'
+import { RaceResult } from './RaceResult'
+import { getResult } from '@/data/results'
+import { WhereToWatch } from './WhereToWatch'
 import { MapPin, Ruler, CornerDownRight } from 'lucide-react'
 import { t, type Locale } from '@/lib/i18n'
-import { Tv } from 'lucide-react'
 
 const SESSION_ICONS: Record<SessionType, string> = {
   race: '\u{1F3C1}', qualifying: '\u23F1', sprint: '\u26A1',
@@ -168,8 +170,8 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
               const isFinished = now >= endMs
 
               return (
+                <div key={`${session.label}-${i}`}>
                 <div
-                  key={`${session.label}-${i}`}
                   className="rg-session-row"
                   style={{
                     display: 'flex',
@@ -214,71 +216,34 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                     )}
                   </div>
                 </div>
+                </div>
               )
             })}
 
-            {/* Where to watch */}
+            {/* Results */}
             {(() => {
-              const country = detectCountry(timezone)
-              const broadcasts = country ? getBroadcasts(series.id, country) : []
-              return (
-                <div
-                  style={{
-                    marginTop: 12,
-                    padding: '14px 16px',
-                    borderRadius: 12,
-                    background: 'var(--rg-surface)',
-                    border: '1px solid var(--rg-card-border)',
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-                    <Tv style={{ width: 14, height: 14, color: 'var(--rg-text3)' }} />
-                    <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1 }}>
-                      {t('watch.title', locale)}
-                    </span>
-                  </div>
-                  {broadcasts.length > 0 ? (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                      {broadcasts.map((b, i) => (
-                        <div
-                          key={i}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 10,
-                            fontSize: 13,
-                          }}
-                        >
-                          <span style={{ fontWeight: 600, color: 'var(--rg-chip-text)', flexShrink: 0 }}>
-                            {b.url ? (
-                              <a
-                                href={b.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{ color: 'var(--rg-link)', textDecoration: 'none' }}
-                              >
-                                {b.name}
-                              </a>
-                            ) : (
-                              b.name
-                            )}
-                          </span>
-                          {b.note && (
-                            <span style={{ color: 'var(--rg-text3)', fontSize: 12 }}>
-                              — {b.note}
-                            </span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <p style={{ fontSize: 13, color: 'var(--rg-text3)' }}>
-                      {t('watch.fallback', locale)}
-                    </p>
-                  )}
-                </div>
-              )
+              const resultTypes: SessionType[] = ['race', 'endurance', 'sprint', 'qualifying', 'hyperpole', 'stage']
+              const seen = new Set<SessionType>()
+              const sessionResults = sessions
+                .filter(s => resultTypes.includes(s.type) && now >= new Date(s.startUtc).getTime() + (s.durationMinutes || 120) * 60000)
+                .map(s => ({ session: s, result: getResult(event.id, s.type) }))
+                .filter(r => {
+                  if (!r.result || seen.has(r.session.type)) return false
+                  seen.add(r.session.type)
+                  return true
+                }) as { session: Session; result: NonNullable<ReturnType<typeof getResult>> }[]
+              if (sessionResults.length === 0) return null
+              return <RaceResult results={sessionResults} locale={locale} />
             })()}
+
+            {/* Where to watch */}
+            <WhereToWatch
+              broadcasts={(() => {
+                const country = detectCountry(timezone)
+                return country ? getBroadcasts(series.id, country) : []
+              })()}
+              locale={locale}
+            />
           </div>
         </div>
       ))}
