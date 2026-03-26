@@ -50,10 +50,10 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
         minHeight: 100,
       }}
       onMouseEnter={e => {
-        if (isCurrentMonth) (e.currentTarget as HTMLDivElement).style.background = 'var(--rg-elevated)'
+        if (isCurrentMonth && !isToday) (e.currentTarget as HTMLDivElement).style.background = 'var(--rg-elevated)'
       }}
       onMouseLeave={e => {
-        if (isCurrentMonth) (e.currentTarget as HTMLDivElement).style.background = isToday ? 'var(--rg-elevated)' : 'var(--rg-surface)'
+        if (isCurrentMonth && !isToday) (e.currentTarget as HTMLDivElement).style.background = 'var(--rg-surface)'
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>

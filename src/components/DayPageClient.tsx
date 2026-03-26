@@ -135,7 +135,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
               padding: '0 14px',
               fontSize: 13,
               fontWeight: 500,
-              color: copied ? '#4ade80' : 'var(--rg-text2)',
+              color: copied ? 'var(--rg-success)' : 'var(--rg-text2)',
             }}
           >
             {copied ? <Check style={{ width: 15, height: 15 }} /> : <Share2 style={{ width: 15, height: 15 }} />}

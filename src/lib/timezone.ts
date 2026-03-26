@@ -88,20 +88,21 @@ export function getDefaultTimezone(): string {
   }
 }
 
-export function formatInTimezone(utcString: string, timezone: string, format: 'time' | 'date' | 'datetime' = 'time'): string {
+export function formatInTimezone(utcString: string, timezone: string, format: 'time' | 'date' | 'datetime' = 'time', locale: string = 'en'): string {
   const date = new Date(utcString)
+  const loc = locale === 'uk' ? 'uk-UA' : 'en-US'
 
   if (format === 'time') {
-    return date.toLocaleString('en-US', {
+    return date.toLocaleString(loc, {
       timeZone: timezone,
       hour: 'numeric',
       minute: '2-digit',
-      hour12: true,
+      hour12: locale !== 'uk',
     })
   }
 
   if (format === 'date') {
-    return date.toLocaleString('en-US', {
+    return date.toLocaleString(loc, {
       timeZone: timezone,
       weekday: 'long',
       year: 'numeric',
@@ -110,14 +111,14 @@ export function formatInTimezone(utcString: string, timezone: string, format: 't
     })
   }
 
-  return date.toLocaleString('en-US', {
+  return date.toLocaleString(loc, {
     timeZone: timezone,
     weekday: 'short',
     month: 'short',
     day: 'numeric',
     hour: 'numeric',
     minute: '2-digit',
-    hour12: true,
+    hour12: locale !== 'uk',
   })
 }
 

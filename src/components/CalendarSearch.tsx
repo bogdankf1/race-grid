@@ -172,9 +172,9 @@ export function CalendarSearch({ selectedSeriesIds, timezone, locale }: Calendar
               {t('search.noResults', locale)}
             </div>
           ) : (
-            results.map((r, i) => (
+            results.map((r) => (
               <button
-                key={`${r.seriesId}-${r.eventName}-${i}`}
+                key={r.eventId}
                 onClick={() => handleSelect(r)}
                 style={{
                   display: 'flex',

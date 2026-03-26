@@ -15,6 +15,7 @@ export const themes: Record<Theme, Record<string, string>> = {
     '--rg-btn-bg': '#252538',
     '--rg-today-border': 'rgba(255,255,255,0.25)',
     '--rg-link': '#7ab3ff',
+    '--rg-success': '#4ade80',
     '--rg-card-border': '#2a2a42',
   },
   light: {
@@ -31,6 +32,7 @@ export const themes: Record<Theme, Record<string, string>> = {
     '--rg-btn-bg': '#e4e4f0',
     '--rg-today-border': 'rgba(0,0,0,0.2)',
     '--rg-link': '#1a56db',
+    '--rg-success': '#16a34a',
     '--rg-card-border': '#d0d0e0',
   },
 }

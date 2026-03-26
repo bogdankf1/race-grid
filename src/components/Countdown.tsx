@@ -30,13 +30,15 @@ export function Countdown({ targetUtc, locale }: CountdownProps) {
   const [remaining, setRemaining] = useState<string | null>(null)
 
   useEffect(() => {
+    let active = true
     function update() {
+      if (!active) return
       const ms = new Date(targetUtc).getTime() - Date.now()
       setRemaining(formatRemaining(ms, locale))
     }
     update()
-    const id = setInterval(update, 30_000) // update every 30s
-    return () => clearInterval(id)
+    const id = setInterval(update, 30_000)
+    return () => { active = false; clearInterval(id) }
   }, [targetUtc, locale])
 
   if (!remaining) return null

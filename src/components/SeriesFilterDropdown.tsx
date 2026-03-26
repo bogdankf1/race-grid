@@ -67,8 +67,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
     width: 18,
     height: 18,
     borderRadius: 4,
-    border: `2px solid ${active ? '#4ade80' : 'var(--rg-border)'}`,
-    background: active ? '#4ade80' : 'transparent',
+    border: `2px solid ${active ? 'var(--rg-success)' : 'var(--rg-border)'}`,
+    background: active ? 'var(--rg-success)' : 'transparent',
     display: 'flex' as const,
     alignItems: 'center' as const,
     justifyContent: 'center' as const,
@@ -183,13 +183,13 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
                       width: 16,
                       height: 16,
                       borderRadius: 3,
-                      border: `2px solid ${allGroupSelected ? '#4ade80' : someGroupSelected ? '#4ade80' : 'var(--rg-border)'}`,
-                      background: allGroupSelected ? '#4ade80' : someGroupSelected ? 'rgba(74,222,128,0.3)' : 'transparent',
+                      border: `2px solid ${allGroupSelected ? 'var(--rg-success)' : someGroupSelected ? 'var(--rg-success)' : 'var(--rg-border)'}`,
+                      background: allGroupSelected ? 'var(--rg-success)' : someGroupSelected ? 'color-mix(in srgb, var(--rg-success) 30%, transparent)' : 'transparent',
                     }}
                   >
                     {allGroupSelected && <Check style={{ width: 10, height: 10, color: '#000' }} />}
                     {someGroupSelected && !allGroupSelected && (
-                      <span style={{ width: 8, height: 2, background: '#4ade80', borderRadius: 1 }} />
+                      <span style={{ width: 8, height: 2, background: 'var(--rg-success)', borderRadius: 1 }} />
                     )}
                   </span>
                   <span style={{ flex: 1 }}>{t(group.labelKey, locale)}</span>

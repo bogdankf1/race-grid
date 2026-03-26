@@ -4,32 +4,13 @@ Items for Claude Code to work through. Grouped by category, roughly prioritized 
 
 ---
 
-## Bugs
+## ~~Bugs~~ (Done)
 
-### 1. DayCell hover state bug
-`onMouseLeave` in `DayCell.tsx` only restores background if `isToday`, but `onMouseEnter` always sets it to `var(--rg-elevated)`. Hovering then leaving a non-today cell leaves it stuck with the wrong background.
-
-**Fix:** Restore correct background based on both `isToday` and `isCurrentMonth` in `onMouseLeave`.
-
-### 2. Countdown memory leak
-`Countdown.tsx` sets an interval in `useEffect` but can leak if the component remounts quickly (e.g., navigating between days). The cleanup function clears the interval, but the initial `setTimeout`-style `update()` call isn't guarded.
-
-**Fix:** Ensure the effect cleanup properly cancels all timers. Consider using `requestAnimationFrame` or a single global tick instead of per-component intervals.
-
-### 3. Search results key uses array index
-In `CalendarSearch.tsx`, search result items use `key={...${i}}` with array index. This causes React reconciliation issues if results reorder.
-
-**Fix:** Use `r.eventId` as the key since it's unique per event.
-
-### 4. Hardcoded green color for share button
-The "Copied!" state on the share button uses `#4ade80` which isn't in the theme system. It may look wrong in light mode.
-
-**Fix:** Add a `--rg-success` CSS variable to the theme system (both dark and light variants) and use it instead.
-
-### 5. `formatInTimezone` ignores app locale
-`formatInTimezone` in `timezone.ts` always uses `'en-US'` for formatting, even when the app is set to Ukrainian. Times like "2:30 PM" should respect locale.
-
-**Fix:** Accept a `locale` parameter and pass the appropriate locale string (`'uk-UA'` or `'en-US'`). Update all call sites (mainly `DayDetail.tsx`).
+- ~~**1. DayCell hover state bug** — Fixed: skip hover for `isToday` cells~~
+- ~~**2. Countdown memory leak** — Fixed: added `active` guard flag~~
+- ~~**3. Search results key** — Fixed: uses `r.eventId` instead of array index~~
+- ~~**4. Hardcoded green color** — Fixed: added `--rg-success` to theme system (dark/light)~~
+- ~~**5. `formatInTimezone` locale** — Fixed: accepts locale param, Ukrainian uses 24h format~~
 
 ---
 

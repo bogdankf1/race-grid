@@ -182,7 +182,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                 </div>
                 <div className="rg-session-time" style={{ textAlign: 'right', flexShrink: 0 }}>
                   <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)' }}>
-                    {formatInTimezone(session.startUtc, timezone)}
+                    {formatInTimezone(session.startUtc, timezone, 'time', locale)}
                   </div>
                   {session.durationMinutes && (
                     <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
