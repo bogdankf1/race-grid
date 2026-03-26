@@ -25,22 +25,11 @@ Items for Claude Code to work through. Grouped by category, roughly prioritized 
 
 ---
 
-## Performance
+## ~~Performance~~ (Done)
 
-### 18. Conditional event hook execution
-`page.tsx` calls both `useCalendarEvents` (for month) and `useWeekEvents` (for week) on every render, even though only one is used at a time.
-
-**Fix:** Conditionally call only the active hook. Since React hooks can't be called conditionally, refactor into a single `useCalendarEvents` hook that accepts a `mode` parameter (`'month' | 'week'`) and a date reference, returning events for the appropriate range.
-
-### 19. Search index rebuilds on every filter change
-`CalendarSearch.tsx` rebuilds the full search index (`buildIndex`) every time `selectedSeriesIds` changes. With 14 series and hundreds of events, this is unnecessary work.
-
-**Fix:** Memoize the full index (all series) once, then filter results by `selectedSeriesIds` at search time instead of rebuilding the index. The index rarely changes — only series selection does.
-
-### 20. Service worker timers don't survive page close
-Notification scheduling uses `setTimeout` inside the service worker. If the browser kills the SW (common on mobile), all scheduled notifications are lost.
-
-**Fix:** On every page load, re-send the notification schedule to the SW (the `useNotifications` hook already does this on prefs change, but should also do it on mount). Add a `visibilitychange` listener to reschedule when the page becomes visible again. Consider using the `Notification Triggers API` if available.
+- ~~**18. Conditional hooks** — Fixed: unified `useViewEvents` hook only computes events for the active view mode~~
+- ~~**19. Search index** — Fixed: full index built once (memoized on timezone), filtered by series at search time~~
+- ~~**20. SW notifications** — Fixed: extracted `sendSchedule()`, called on prefs change + `visibilitychange` listener reschedules when page becomes visible~~
 
 ---
 

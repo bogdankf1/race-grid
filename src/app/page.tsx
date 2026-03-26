@@ -3,8 +3,7 @@
 import { useEffect, useState } from 'react'
 import { format, startOfWeek } from 'date-fns'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
-import { useCalendarEvents } from '@/hooks/useCalendarEvents'
-import { useWeekEvents } from '@/hooks/useWeekEvents'
+import { useViewEvents } from '@/hooks/useCalendarEvents'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { ALL_SERIES } from '@/data/series-registry'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
@@ -44,9 +43,7 @@ export default function HomePage() {
     }
   }, [])
 
-  const monthEvents = useCalendarEvents(selectedSeries, timezone, month)
-  const weekEvents = useWeekEvents(selectedSeries, timezone, weekStart)
-  const events = viewMode === 'week' ? weekEvents : monthEvents
+  const events = useViewEvents(selectedSeries, timezone, viewMode, month, weekStart)
 
   const toggleSeries = (id: string) => {
     const updated = selectedSeries.includes(id)

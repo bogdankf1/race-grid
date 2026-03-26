@@ -60,8 +60,8 @@ export function useNotifications() {
     setPrefs({ ...prefs, seriesIds: ids })
   }, [prefs, setPrefs])
 
-  // Schedule notifications whenever prefs change
-  useEffect(() => {
+  // Build and send notification schedule to SW
+  const sendSchedule = useCallback(() => {
     if (!prefs.enabled || permission !== 'granted') return
     if (typeof navigator === 'undefined' || !navigator.serviceWorker) return
 
@@ -74,7 +74,7 @@ export function useNotifications() {
         for (const session of event.sessions) {
           const startMs = new Date(session.startUtc).getTime()
           const triggerAt = startMs - prefs.leadMinutes * 60 * 1000
-          if (triggerAt <= now) continue // already past
+          if (triggerAt <= now) continue
 
           sessions.push({
             key: `${event.id}-${session.label}`,
@@ -87,7 +87,6 @@ export function useNotifications() {
       }
     }
 
-    // Wait for SW to be ready, then send
     navigator.serviceWorker.ready.then((reg) => {
       reg.active?.postMessage({
         type: 'SCHEDULE_NOTIFICATIONS',
@@ -95,6 +94,18 @@ export function useNotifications() {
       })
     })
   }, [prefs, permission])
+
+  // Schedule on prefs change
+  useEffect(() => { sendSchedule() }, [sendSchedule])
+
+  // Reschedule when page becomes visible (SW may have been killed)
+  useEffect(() => {
+    function handleVisibility() {
+      if (document.visibilityState === 'visible') sendSchedule()
+    }
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => document.removeEventListener('visibilitychange', handleVisibility)
+  }, [sendSchedule])
 
   return {
     prefs,

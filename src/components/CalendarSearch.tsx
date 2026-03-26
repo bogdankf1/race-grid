@@ -25,11 +25,10 @@ interface CalendarSearchProps {
   locale: Locale
 }
 
-function buildIndex(selectedSeriesIds: string[], timezone: string): SearchResult[] {
+function buildFullIndex(timezone: string): SearchResult[] {
   const results: SearchResult[] = []
-  const selectedSeries = ALL_SERIES.filter(s => selectedSeriesIds.includes(s.id))
 
-  for (const series of selectedSeries) {
+  for (const series of ALL_SERIES) {
     for (const event of series.events) {
       // Find the first session date as the event's primary date
       const dates = new Set<string>()
@@ -58,14 +57,17 @@ function buildIndex(selectedSeriesIds: string[], timezone: string): SearchResult
   return results.sort((a, b) => a.date.localeCompare(b.date))
 }
 
-function searchEvents(index: SearchResult[], query: string): SearchResult[] {
+function searchEvents(index: SearchResult[], query: string, selectedSeriesIds: string[]): SearchResult[] {
   if (!query.trim()) return []
   const q = query.toLowerCase()
+  const selectedSet = new Set(selectedSeriesIds)
   return index.filter(r =>
-    r.eventName.toLowerCase().includes(q) ||
-    r.circuit.toLowerCase().includes(q) ||
-    r.country.toLowerCase().includes(q) ||
-    r.seriesShortName.toLowerCase().includes(q)
+    selectedSet.has(r.seriesId) && (
+      r.eventName.toLowerCase().includes(q) ||
+      r.circuit.toLowerCase().includes(q) ||
+      r.country.toLowerCase().includes(q) ||
+      r.seriesShortName.toLowerCase().includes(q)
+    )
   )
 }
 
@@ -76,8 +78,8 @@ export function CalendarSearch({ selectedSeriesIds, timezone, locale }: Calendar
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
 
-  const index = useMemo(() => buildIndex(selectedSeriesIds, timezone), [selectedSeriesIds, timezone])
-  const results = useMemo(() => searchEvents(index, query), [index, query])
+  const index = useMemo(() => buildFullIndex(timezone), [timezone])
+  const results = useMemo(() => searchEvents(index, query, selectedSeriesIds), [index, query, selectedSeriesIds])
 
   // Close on outside click
   useEffect(() => {

@@ -65,3 +65,35 @@ export function useCalendarEvents(
     })
   }, [selectedSeriesIds, timezone, month])
 }
+
+/**
+ * Unified hook — only computes events for the active view mode.
+ */
+export function useViewEvents(
+  selectedSeriesIds: string[],
+  timezone: string,
+  viewMode: 'month' | 'week',
+  month: string,
+  weekStart: string
+): Map<string, DaySeriesInfo[]> {
+  return useMemo(() => {
+    if (viewMode === 'week') {
+      const start = new Date(weekStart + 'T00:00:00')
+      const dates = new Set<string>()
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(start)
+        d.setDate(d.getDate() + i)
+        dates.add(d.toISOString().slice(0, 10))
+      }
+      return buildEventMap(selectedSeriesIds, timezone, (date) => dates.has(date))
+    }
+
+    const [yearStr, monthStr] = month.split('-')
+    const year = parseInt(yearStr)
+    const monthNum = parseInt(monthStr)
+    return buildEventMap(selectedSeriesIds, timezone, (date) => {
+      const [y, m] = date.split('-').map(Number)
+      return y === year && m === monthNum
+    })
+  }, [selectedSeriesIds, timezone, viewMode, month, weekStart])
+}
