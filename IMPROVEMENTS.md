@@ -14,7 +14,7 @@ Items for Claude Code to work through. Grouped by category, roughly prioritized 
 
 ---
 
-## UX Improvements
+## ~~UX Improvements~~ (Done)
 
 - ~~**11. Broadcast fallback** — Fixed: shows "Check your local listings" when country not supported~~
 - ~~**12. Swipe gestures** — Fixed: swipe left/right on calendar grid (month/week) and day view. Ignores iOS edge swipes (<30px). Slide animation with fade transition.~~
@@ -105,9 +105,6 @@ When sharing a day URL, generate a preview image showing which races are on that
 
 ---
 
-## Infrastructure
+## ~~Infrastructure~~ (Done)
 
-### 33. Static generation covers only 2026
-`generateStaticParams` in `src/app/day/[date]/page.tsx` only generates Jan 1 – Dec 31 2026. Navigating to any 2027 date (or late 2025) would result in a 404.
-
-**Fix:** Extend the date range to cover adjacent years or dynamically derive the range from the earliest and latest session dates across all series in the registry. This also matters when setting up a new season (see `docs/NEW-SEASON-SETUP.md`).
+- ~~**33. Static generation range** — Fixed: `generateStaticParams` now derives date range from actual session data across all series (earliest − 7 days to latest + 7 days). Automatically adapts when new seasons are added.~~
