@@ -12,6 +12,7 @@ import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { DayDetail } from '@/components/DayDetail'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { SwipeContainer } from '@/components/SwipeContainer'
 
 interface DayPageClientProps {
   date: string
@@ -144,15 +145,21 @@ export function DayPageClient({ date }: DayPageClientProps) {
           </button>
         </div>
 
-        <ErrorBoundary>
-        <DayDetail
-          date={date}
-          selectedSeriesIds={selectedSeries}
-          timezone={timezone}
-          locale={locale}
-          highlightEventId={highlightEventId}
-        />
-        </ErrorBoundary>
+        <SwipeContainer
+          onSwipeLeft={() => router.push(`/day/${nextDate}`)}
+          onSwipeRight={() => router.push(`/day/${prevDate}`)}
+          contentKey={date}
+        >
+          <ErrorBoundary>
+          <DayDetail
+            date={date}
+            selectedSeriesIds={selectedSeries}
+            timezone={timezone}
+            locale={locale}
+            highlightEventId={highlightEventId}
+          />
+          </ErrorBoundary>
+        </SwipeContainer>
       </div>
     </div>
   )

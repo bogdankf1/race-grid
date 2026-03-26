@@ -17,7 +17,7 @@ Items for Claude Code to work through. Grouped by category, roughly prioritized 
 ## UX Improvements
 
 - ~~**11. Broadcast fallback** — Fixed: shows "Check your local listings" when country not supported~~
-- **12. Swipe gestures on mobile calendar** — Not started
+- ~~**12. Swipe gestures** — Fixed: swipe left/right on calendar grid (month/week) and day view. Ignores iOS edge swipes (<30px). Slide animation with fade transition.~~
 - ~~**13. Back-to-calendar highlight** — Fixed: day cell flashes blue glow for 2s when returning~~
 - ~~**14. Dim past events** — Fixed: finished sessions show 50% opacity + "Finished" label~~
 - ~~**15. LIVE badge** — Fixed: pulsing red "LIVE" badge on running sessions, red left border on row~~

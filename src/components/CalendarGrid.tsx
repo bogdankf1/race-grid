@@ -10,6 +10,7 @@ import {
 } from 'date-fns'
 import { DayCell } from './DayCell'
 import { CalendarSearch } from './CalendarSearch'
+import { SwipeContainer } from './SwipeContainer'
 import { DaySeriesInfo } from '@/hooks/useCalendarEvents'
 import { t, formatMonthLocale, type Locale } from '@/lib/i18n'
 
@@ -263,38 +264,44 @@ export function CalendarGrid({
         ))}
       </div>
 
-      {/* Day grid */}
-      <div
-        className="rg-day-grid"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(7, minmax(0, 1fr))',
-          gap: 6,
-        }}
+      {/* Day grid — swipeable */}
+      <SwipeContainer
+        onSwipeLeft={goToNext}
+        onSwipeRight={goToPrev}
+        contentKey={viewMode === 'week' ? weekStart : month}
       >
-        {days.map(day => {
-          const dateStr = format(day, 'yyyy-MM-dd')
-          return (
-            <DayCell
-              key={dateStr}
-              date={dateStr}
-              dayNumber={day.getDate()}
-              isCurrentMonth={viewMode === 'week' ? true : isSameMonth(day, currentDate)}
-              isToday={isDateToday(day)}
-              isNextRaceDay={dateStr === nextRaceDay}
-              isHighlighted={dateStr === highlightDate}
-              seriesInfos={events.get(dateStr) || []}
-            />
-          )
-        })}
-      </div>
-
-      {/* Empty week message */}
-      {viewMode === 'week' && weekDays.every(d => (events.get(format(d, 'yyyy-MM-dd')) || []).length === 0) && (
-        <div style={{ textAlign: 'center', padding: '32px 0 16px', color: 'var(--rg-text3)', fontSize: 15 }}>
-          {t('week.noRaces', locale)}
+        <div
+          className="rg-day-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(7, minmax(0, 1fr))',
+            gap: 6,
+          }}
+        >
+          {days.map(day => {
+            const dateStr = format(day, 'yyyy-MM-dd')
+            return (
+              <DayCell
+                key={dateStr}
+                date={dateStr}
+                dayNumber={day.getDate()}
+                isCurrentMonth={viewMode === 'week' ? true : isSameMonth(day, currentDate)}
+                isToday={isDateToday(day)}
+                isNextRaceDay={dateStr === nextRaceDay}
+                isHighlighted={dateStr === highlightDate}
+                seriesInfos={events.get(dateStr) || []}
+              />
+            )
+          })}
         </div>
-      )}
+
+        {/* Empty week message */}
+        {viewMode === 'week' && weekDays.every(d => (events.get(format(d, 'yyyy-MM-dd')) || []).length === 0) && (
+          <div style={{ textAlign: 'center', padding: '32px 0 16px', color: 'var(--rg-text3)', fontSize: 15 }}>
+            {t('week.noRaces', locale)}
+          </div>
+        )}
+      </SwipeContainer>
     </div>
   )
 }
