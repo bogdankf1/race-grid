@@ -99,10 +99,9 @@ export function CalendarExport({ event, sessions, seriesName, locale }: Calendar
             </a>
           ))}
 
-          {/* Divider */}
+          {/* Divider + .ics download */}
           <div style={{ height: 1, background: 'var(--rg-border)', margin: '6px 0' }} />
 
-          {/* Download .ics */}
           <button
             onClick={() => { downloadIcs(event, sessions, seriesName); setOpen(false) }}
             style={{
@@ -123,7 +122,7 @@ export function CalendarExport({ event, sessions, seriesName, locale }: Calendar
             onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
           >
             <Download style={{ width: 16, height: 16 }} />
-            <span>{t('cal.ics', locale)}</span>
+            <span>{sessions.length > 1 ? `${t('cal.googleAll', locale)} (.ics)` : t('cal.ics', locale)}</span>
           </button>
         </div>
       )}

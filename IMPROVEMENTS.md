@@ -82,15 +82,8 @@ The i18n system is ready for more languages. Priority languages by motorsport au
 - Auto-detect from `navigator.language` for all supported locales
 - Race/circuit/series names stay in English (proper nouns)
 
-### 29. Batch "Add all to Google Calendar"
-Currently each session requires a separate Google Calendar link. Users want to add an entire race weekend with one action.
 
-**Implementation:**
-- Google Calendar URL API only supports one event per URL
-- Option A: Open multiple tabs (bad UX)
-- Option B: Generate a single `.ics` file with all sessions and offer "Open in Google Calendar" via the webcal: protocol
-- Option C: Add a "Add all sessions" button that sequentially opens Google Calendar URLs with a small delay
-- Recommend Option B: update `ical.ts` to support webcal: URL scheme, add a "Google Calendar (all sessions)" option in the `CalendarExport` dropdown
+~~**29. Batch calendar export** — Fixed: when 2+ sessions, dropdown shows "All sessions (.ics)" to download one .ics file with all sessions. Single-session events just show "Download .ics".~~
 
 ### 30. Dynamic OG share images
 When sharing a day URL, generate a preview image showing which races are on that day. Makes links look much better in Telegram, iMessage, Twitter, etc.
