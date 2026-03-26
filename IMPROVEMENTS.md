@@ -16,35 +16,12 @@ Items for Claude Code to work through. Grouped by category, roughly prioritized 
 
 ## UX Improvements
 
-### 11. Show fallback for unsupported broadcast countries
-The "Where to watch" section only supports US and UA. Users in other countries see nothing — no section at all, which is confusing.
-
-**Fix:** When `detectCountry()` returns `null`, show a generic message like "Check your local listings" or "Broadcast info not available for your region". Add i18n strings for both locales.
-
-### 12. Swipe gestures on mobile calendar
-On touch devices, swiping left/right on the calendar grid should navigate to the next/previous month (or week in week view). This is the natural mobile interaction pattern.
-
-**Fix:** Add touch event handlers (`touchstart`/`touchend`) to the calendar grid container. Detect horizontal swipe (threshold ~50px) and call `goToNext`/`goToPrev`. Consider a lightweight library like `use-gesture` or implement manually.
-
-### 13. Smoother "Back to calendar" navigation
-When returning from the day view to the calendar, the correct month is shown (via URL param), but there's no visual indication of which day you came from.
-
-**Fix:** Pass the date as a query param when navigating back. On the calendar page, briefly highlight the day cell you returned from (similar to the search highlight on the day view).
-
-### 14. Dim past events
-Events and sessions that have already happened look the same as upcoming ones. Users have to mentally filter what's relevant.
-
-**Fix:** In `DayDetail.tsx`, compare `session.startUtc + durationMinutes` against `Date.now()`. If a session has ended, apply reduced opacity and a "Finished" label. In the calendar grid, dim past day cells slightly (less than the out-of-month dimming).
-
-### 15. "LIVE" badge for running sessions
-When a session is currently in progress (now is between startUtc and startUtc + durationMinutes), show a pulsing "LIVE" indicator on the session row.
-
-**Fix:** In `DayDetail.tsx`, add a check: `const isLive = now >= start && now < start + duration`. Show a small red "LIVE" badge with a CSS pulse animation next to the session time. Also show it on the calendar day cell if any session is live that day.
-
-### 16. Empty week message
-In week view, a week with no races shows 7 empty cells which looks broken.
-
-**Fix:** After rendering the grid, check if the week has zero events. If so, show a centered message below the grid: "No races this week" / "Цього тижня немає гонок". Keep the empty cells visible so the grid structure is maintained.
+- ~~**11. Broadcast fallback** — Fixed: shows "Check your local listings" when country not supported~~
+- **12. Swipe gestures on mobile calendar** — Not started
+- ~~**13. Back-to-calendar highlight** — Fixed: day cell flashes blue glow for 2s when returning~~
+- ~~**14. Dim past events** — Fixed: finished sessions show 50% opacity + "Finished" label~~
+- ~~**15. LIVE badge** — Fixed: pulsing red "LIVE" badge on running sessions, red left border on row~~
+- ~~**16. Empty week message** — Fixed: shows "No races this week" below empty week grid~~
 
 ---
 

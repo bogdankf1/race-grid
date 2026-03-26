@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useEffect, useRef } from 'react'
+import { useMemo, useEffect, useRef, useState } from 'react'
 import { SeriesConfig, RaceEvent, Session, SessionType } from '@/lib/types'
 import { ALL_SERIES } from '@/data/series-registry'
 import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
@@ -54,6 +54,13 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
 
     return () => clearTimeout(timer)
   }, [highlightEventId])
+  // Tick every 30s for LIVE/Finished status
+  const [now, setNow] = useState(Date.now())
+  useEffect(() => {
+    const id = setInterval(() => setNow(Date.now()), 30_000)
+    return () => clearInterval(id)
+  }, [])
+
   const dayEvents = useMemo(() => {
     const results: DayEventInfo[] = []
     const selectedSeries = ALL_SERIES.filter(s => selectedSeriesIds.includes(s.id))
@@ -154,52 +161,66 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
           </div>
 
           <div className="rg-event-card-sessions">
-            {sessions.map((session, i) => (
-              <div
-                key={`${session.label}-${i}`}
-                className="rg-session-row"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 14,
-                  padding: '12px 16px',
-                  borderRadius: 12,
-                  background: 'var(--rg-elevated)',
-                }}
-              >
-                <span style={{ fontSize: 18, width: 28, textAlign: 'center', flexShrink: 0 }}>
-                  {SESSION_ICONS[session.type]}
-                </span>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-                    <span style={{ fontWeight: 600, fontSize: 14, color: 'var(--rg-text)' }}>
-                      {session.label}
-                    </span>
-                    <span style={{ fontSize: 11, color: 'var(--rg-text3)', padding: '3px 8px', borderRadius: 6, background: 'var(--rg-surface)', fontWeight: 500 }}>
-                      {sessionLabel(session.type, locale)}
-                    </span>
-                  </div>
-                </div>
-                <div className="rg-session-time" style={{ textAlign: 'right', flexShrink: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)' }}>
-                    {formatInTimezone(session.startUtc, timezone, 'time', locale)}
-                  </div>
-                  {session.durationMinutes && (
-                    <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
-                      {formatDuration(session.durationMinutes)}
+            {sessions.map((session, i) => {
+              const startMs = new Date(session.startUtc).getTime()
+              const endMs = startMs + (session.durationMinutes || 120) * 60000
+              const isLive = now >= startMs && now < endMs
+              const isFinished = now >= endMs
+
+              return (
+                <div
+                  key={`${session.label}-${i}`}
+                  className="rg-session-row"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 14,
+                    padding: '12px 16px',
+                    borderRadius: 12,
+                    background: isLive ? 'var(--rg-surface)' : 'var(--rg-elevated)',
+                    opacity: isFinished ? 0.5 : 1,
+                    borderLeft: isLive ? '3px solid #dc2626' : undefined,
+                  }}
+                >
+                  <span style={{ fontSize: 18, width: 28, textAlign: 'center', flexShrink: 0 }}>
+                    {SESSION_ICONS[session.type]}
+                  </span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                      <span style={{ fontWeight: 600, fontSize: 14, color: 'var(--rg-text)' }}>
+                        {session.label}
+                      </span>
+                      <span style={{ fontSize: 11, color: 'var(--rg-text3)', padding: '3px 8px', borderRadius: 6, background: 'var(--rg-surface)', fontWeight: 500 }}>
+                        {sessionLabel(session.type, locale)}
+                      </span>
+                      {isLive && <span className="rg-live-badge">{t('session.live', locale)}</span>}
                     </div>
-                  )}
-                  <Countdown targetUtc={session.startUtc} locale={locale} />
+                  </div>
+                  <div className="rg-session-time" style={{ textAlign: 'right', flexShrink: 0 }}>
+                    <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)' }}>
+                      {formatInTimezone(session.startUtc, timezone, 'time', locale)}
+                    </div>
+                    {session.durationMinutes && (
+                      <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
+                        {formatDuration(session.durationMinutes)}
+                      </div>
+                    )}
+                    {isFinished ? (
+                      <div style={{ fontSize: 11, color: 'var(--rg-text3)', marginTop: 2, fontWeight: 600 }}>
+                        {t('session.finished', locale)}
+                      </div>
+                    ) : (
+                      <Countdown targetUtc={session.startUtc} locale={locale} />
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
 
             {/* Where to watch */}
             {(() => {
               const country = detectCountry(timezone)
-              if (!country) return null
-              const broadcasts = getBroadcasts(series.id, country)
-              if (broadcasts.length === 0) return null
+              const broadcasts = country ? getBroadcasts(series.id, country) : []
               return (
                 <div
                   style={{
@@ -216,39 +237,45 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                       {t('watch.title', locale)}
                     </span>
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    {broadcasts.map((b, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: 10,
-                          fontSize: 13,
-                        }}
-                      >
-                        <span style={{ fontWeight: 600, color: 'var(--rg-chip-text)', flexShrink: 0 }}>
-                          {b.url ? (
-                            <a
-                              href={b.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: 'var(--rg-link)', textDecoration: 'none' }}
-                            >
-                              {b.name}
-                            </a>
-                          ) : (
-                            b.name
-                          )}
-                        </span>
-                        {b.note && (
-                          <span style={{ color: 'var(--rg-text3)', fontSize: 12 }}>
-                            — {b.note}
+                  {broadcasts.length > 0 ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                      {broadcasts.map((b, i) => (
+                        <div
+                          key={i}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 10,
+                            fontSize: 13,
+                          }}
+                        >
+                          <span style={{ fontWeight: 600, color: 'var(--rg-chip-text)', flexShrink: 0 }}>
+                            {b.url ? (
+                              <a
+                                href={b.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: 'var(--rg-link)', textDecoration: 'none' }}
+                              >
+                                {b.name}
+                              </a>
+                            ) : (
+                              b.name
+                            )}
                           </span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                          {b.note && (
+                            <span style={{ color: 'var(--rg-text3)', fontSize: 12 }}>
+                              — {b.note}
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p style={{ fontSize: 13, color: 'var(--rg-text3)' }}>
+                      {t('watch.fallback', locale)}
+                    </p>
+                  )}
                 </div>
               )
             })()}

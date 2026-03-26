@@ -10,6 +10,7 @@ interface DayCellProps {
   isCurrentMonth: boolean
   isToday: boolean
   isNextRaceDay?: boolean
+  isHighlighted?: boolean
   seriesInfos: DaySeriesInfo[]
 }
 
@@ -20,7 +21,8 @@ function cleanEventName(name: string): string {
     .replace(/^NLS\s*\d+\s*[—–-]\s*/i, '')
 }
 
-export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, seriesInfos }: DayCellProps) {
+export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, isHighlighted, seriesInfos }: DayCellProps) {
+  const isPast = !isToday && date < new Date().toISOString().slice(0, 10)
   const [expanded, setExpanded] = useState(false)
   const MAX_CHIPS = 3
   const showAll = expanded || seriesInfos.length <= MAX_CHIPS
@@ -43,10 +45,12 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
         background: isToday
           ? 'var(--rg-elevated)'
           : isCurrentMonth ? 'var(--rg-surface)' : 'transparent',
-        boxShadow: isNextRaceDay ? '0 0 16px rgba(122,179,255,0.25)' : undefined,
-        opacity: isCurrentMonth ? 1 : 0.3,
+        boxShadow: isHighlighted
+          ? 'inset 0 0 0 3px var(--rg-success), 0 0 20px rgba(74,222,128,0.25)'
+          : isNextRaceDay ? '0 0 16px rgba(122,179,255,0.25)' : undefined,
+        opacity: !isCurrentMonth ? 0.3 : isPast ? 0.5 : 1,
         cursor: isCurrentMonth ? 'pointer' : 'default',
-        transition: 'background 0.15s ease, opacity 0.2s ease',
+        transition: 'background 0.15s ease, opacity 0.2s ease, box-shadow 0.5s ease',
         minHeight: 100,
       }}
       onMouseEnter={e => {

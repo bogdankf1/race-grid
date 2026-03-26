@@ -87,7 +87,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
         onToggleTheme={toggleTheme}
         locale={locale}
         onToggleLocale={toggleLocale}
-        backHref={`/?month=${monthPath}`}
+        backHref={`/?month=${monthPath}&from=${date}`}
       />
 
       <div className="rg-day-wrap">

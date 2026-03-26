@@ -32,6 +32,7 @@ interface CalendarGridProps {
   onWeekStartChange: (weekStart: string) => void
   selectedSeriesIds: string[]
   timezone: string
+  highlightDate?: string | null
 }
 
 const WEEKDAY_KEYS = ['weekday.mon', 'weekday.tue', 'weekday.wed', 'weekday.thu', 'weekday.fri', 'weekday.sat', 'weekday.sun']
@@ -57,7 +58,7 @@ function formatWeekLabel(weekStart: string, locale: Locale): string {
 export function CalendarGrid({
   month, onMonthChange, events, locale,
   viewMode, onViewModeChange, weekStart, onWeekStartChange,
-  selectedSeriesIds, timezone,
+  selectedSeriesIds, timezone, highlightDate,
 }: CalendarGridProps) {
   const currentDate = useMemo(() => {
     const [year, m] = month.split('-').map(Number)
@@ -281,11 +282,19 @@ export function CalendarGrid({
               isCurrentMonth={viewMode === 'week' ? true : isSameMonth(day, currentDate)}
               isToday={isDateToday(day)}
               isNextRaceDay={dateStr === nextRaceDay}
+              isHighlighted={dateStr === highlightDate}
               seriesInfos={events.get(dateStr) || []}
             />
           )
         })}
       </div>
+
+      {/* Empty week message */}
+      {viewMode === 'week' && weekDays.every(d => (events.get(format(d, 'yyyy-MM-dd')) || []).length === 0) && (
+        <div style={{ textAlign: 'center', padding: '32px 0 16px', color: 'var(--rg-text3)', fontSize: 15 }}>
+          {t('week.noRaces', locale)}
+        </div>
+      )}
     </div>
   )
 }

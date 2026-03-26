@@ -72,6 +72,26 @@ body {
   height: var(--rg-control-h) !important;
 }
 
+/* LIVE pulse animation */
+@keyframes rg-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.rg-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  animation: rg-pulse 1.5s ease-in-out infinite;
+}
+
 /* Global interactive feedback */
 button, [role="button"], a {
   cursor: pointer;

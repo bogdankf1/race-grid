@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { format, startOfWeek } from 'date-fns'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useCalendarEvents } from '@/hooks/useCalendarEvents'
@@ -28,6 +28,20 @@ export default function HomePage() {
   )
 
   useEffect(() => { applyTheme(theme) }, [theme])
+
+  // Highlight day cell we navigated back from
+  const [highlightDate, setHighlightDate] = useState<string | null>(null)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const from = params.get('from')
+    if (from) {
+      setHighlightDate(from)
+      params.delete('from')
+      const clean = params.toString()
+      window.history.replaceState({}, '', clean ? `?${clean}` : window.location.pathname)
+      setTimeout(() => setHighlightDate(null), 2000)
+    }
+  }, [])
 
   const monthEvents = useCalendarEvents(selectedSeries, timezone, month)
   const weekEvents = useWeekEvents(selectedSeries, timezone, weekStart)
@@ -67,6 +81,7 @@ export default function HomePage() {
         onWeekStartChange={setWeekStart}
         selectedSeriesIds={selectedSeries}
         timezone={timezone}
+        highlightDate={highlightDate}
       />
     </div>
   )
