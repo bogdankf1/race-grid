@@ -114,8 +114,8 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                     alignItems: 'center',
                     borderRadius: 6,
                     overflow: 'hidden',
-                    padding: ['wec', 'nls', 'wrc', 'imsa', 'dtm'].includes(series.id) ? '2px 8px' : 0,
-                    background: ['wec', 'nls', 'wrc', 'imsa', 'dtm'].includes(series.id) ? '#fff' : 'transparent',
+                    padding: series.logoBgWhite ? '2px 8px' : 0,
+                    background: series.logoBgWhite ? '#fff' : 'transparent',
                   }}
                 >
                   <SeriesLogo seriesId={series.id} className="" />

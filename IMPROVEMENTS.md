@@ -44,27 +44,12 @@ Notification scheduling uses `setTimeout` inside the service worker. If the brow
 
 ---
 
-## Code Quality
+## ~~Code Quality~~ (Done)
 
-### 21. Extract hardcoded logo padding list
-The array `['wec', 'nls', 'wrc', 'imsa', 'dtm']` (series needing white background behind logos) appears in `DayDetail.tsx` and potentially other files. Adding a new series requires finding all instances.
-
-**Fix:** Add a `logoBgWhite: boolean` property to `SeriesConfig` in `types.ts`. Set it per series in `series-registry.ts`. Replace all hardcoded checks with `series.logoBgWhite`.
-
-### 22. Deduplicate event hooks
-`useCalendarEvents.ts` and `useWeekEvents.ts` share 90% of their logic (scanning series, matching dates, building the Map). Only the date filtering differs.
-
-**Fix:** Extract a shared `buildEventMap(selectedSeries, timezone, dateFilter: (date: string) => boolean)` function. Both hooks call it with different filter predicates. This also enables the conditional execution from item 18.
-
-### 23. Remove unused SeriesSelector component
-`src/components/SeriesSelector.tsx` exists but is not imported or used anywhere in the app.
-
-**Fix:** Delete the file. If it's needed in the future (e.g., onboarding flow), it can be recreated from git history.
-
-### 24. Add error boundaries
-A malformed date string, missing circuit data, or corrupt localStorage value can crash the entire page with no recovery.
-
-**Fix:** Create a reusable `ErrorBoundary` component that catches React errors and shows a friendly fallback ("Something went wrong — try refreshing"). Wrap `CalendarGrid` and `DayDetail` with it. Add try-catch in `useLocalStorage` initialization for corrupt JSON.
+- ~~**21. Logo padding list** — Fixed: added `logoBgWhite` property to `SeriesConfig`, replaced all hardcoded checks~~
+- ~~**22. Deduplicate hooks** — Fixed: extracted shared `buildEventMap()` function, both hooks use it with different filters~~
+- ~~**23. SeriesSelector** — Fixed: deleted unused component~~
+- ~~**24. Error boundaries** — Fixed: `ErrorBoundary` wraps `CalendarGrid` and `DayDetail`, shows friendly fallback with refresh button~~
 
 ---
 

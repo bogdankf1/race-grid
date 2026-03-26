@@ -11,6 +11,7 @@ import { getDefaultLocale, formatDateLocale, formatDateShort, type Locale } from
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { DayDetail } from '@/components/DayDetail'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 interface DayPageClientProps {
   date: string
@@ -143,6 +144,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
           </button>
         </div>
 
+        <ErrorBoundary>
         <DayDetail
           date={date}
           selectedSeriesIds={selectedSeries}
@@ -150,6 +152,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
           locale={locale}
           highlightEventId={highlightEventId}
         />
+        </ErrorBoundary>
       </div>
     </div>
   )

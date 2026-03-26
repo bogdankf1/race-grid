@@ -33,5 +33,6 @@ export interface SeriesConfig {
   shortName: string
   color: string
   textColor: string
+  logoBgWhite?: boolean
   events: RaceEvent[]
 }

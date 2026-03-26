@@ -45,6 +45,7 @@ export const ALL_SERIES: SeriesConfig[] = [
     shortName: 'WEC',
     color: '#0066CC',
     textColor: '#fff',
+    logoBgWhite: true,
     events: wec2026,
   },
   {
@@ -53,6 +54,7 @@ export const ALL_SERIES: SeriesConfig[] = [
     shortName: 'IMSA',
     color: '#CF171F',
     textColor: '#fff',
+    logoBgWhite: true,
     events: imsa2026,
   },
   {
@@ -61,6 +63,7 @@ export const ALL_SERIES: SeriesConfig[] = [
     shortName: 'WRC',
     color: '#FFD100',
     textColor: '#000',
+    logoBgWhite: true,
     events: wrc2026,
   },
   {
@@ -69,6 +72,7 @@ export const ALL_SERIES: SeriesConfig[] = [
     shortName: 'DTM',
     color: '#1E1E50',
     textColor: '#fff',
+    logoBgWhite: true,
     events: dtm2026,
   },
   {
@@ -85,6 +89,7 @@ export const ALL_SERIES: SeriesConfig[] = [
     shortName: 'NLS',
     color: '#009B3A',
     textColor: '#fff',
+    logoBgWhite: true,
     events: nls2026,
   },
   {

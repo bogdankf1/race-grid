@@ -11,6 +11,7 @@ import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { CalendarGrid } from '@/components/CalendarGrid'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 export default function HomePage() {
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>(
@@ -70,6 +71,7 @@ export default function HomePage() {
         locale={locale}
         onToggleLocale={toggleLocale}
       />
+      <ErrorBoundary>
       <CalendarGrid
         month={month}
         onMonthChange={setMonth}
@@ -83,6 +85,7 @@ export default function HomePage() {
         timezone={timezone}
         highlightDate={highlightDate}
       />
+      </ErrorBoundary>
     </div>
   )
 }
