@@ -3,6 +3,17 @@ import { EventResults } from './types'
 // IMSA 2026 results — verified from imsa.com, motorsport.com
 export const imsaResults2026: Record<string, EventResults> = {
   'imsa-2026-daytona': {
+    qualifying: {
+      overall: { drivers: ['Bamber'], team: 'Meyer Shank Racing Acura' },
+      classes: [{
+        className: 'GTP',
+        podium: [
+          { position: 1, drivers: ['Bamber'], team: 'Meyer Shank Racing Acura' },
+          { position: 2, drivers: ['Aitken'], team: 'Wayne Taylor Racing Cadillac' },
+          { position: 3, drivers: ['Nasr'], team: 'Porsche Penske Motorsport' },
+        ],
+      }],
+    },
     endurance: {
       overall: { drivers: ['Nasr', 'Andlauer', 'Heinrich'], team: 'Porsche Penske Motorsport' },
       classes: [

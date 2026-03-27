@@ -222,7 +222,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
 
             {/* Results */}
             {(() => {
-              const resultTypes: SessionType[] = ['race', 'endurance', 'sprint', 'qualifying', 'hyperpole', 'stage']
+              const resultTypes: SessionType[] = ['race', 'endurance', 'sprint', 'sprint_qualifying', 'qualifying', 'hyperpole', 'stage']
               const seen = new Set<SessionType>()
               const sessionResults = sessions
                 .filter(s => resultTypes.includes(s.type) && now >= new Date(s.startUtc).getTime() + (s.durationMinutes || 120) * 60000)

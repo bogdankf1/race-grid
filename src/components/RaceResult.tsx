@@ -14,7 +14,7 @@ const MEDAL = ['🥇', '🥈', '🥉']
 
 export function RaceResult({ results, locale }: RaceResultProps) {
   const [expanded, setExpanded] = useState(false)
-  const qualiTypes: SessionType[] = ['qualifying', 'hyperpole']
+  const qualiTypes: SessionType[] = ['qualifying', 'sprint_qualifying', 'hyperpole']
 
   return (
     <div
@@ -26,7 +26,6 @@ export function RaceResult({ results, locale }: RaceResultProps) {
         border: '1px solid var(--rg-card-border)',
       }}
     >
-      {/* Header — same style as "WHERE TO WATCH" */}
       <button
         className="rg-disclosure"
         onClick={() => setExpanded(!expanded)}
@@ -56,61 +55,40 @@ export function RaceResult({ results, locale }: RaceResultProps) {
         />
       </button>
 
-      {/* Expanded content */}
       {expanded && (
-        <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 16 }}>
           {results.map(({ session, result }) => {
-            const isQuali = qualiTypes.includes(session.type)
-            const sectionLabel = isQuali ? t('result.pole', locale) : t('result.winner', locale)
 
             return (
               <div key={session.label}>
                 {/* Session label if multiple results */}
                 {results.length > 1 && (
-                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 8 }}>
                     {session.label}
                   </div>
                 )}
 
-                {/* Winner / Pole */}
-                <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--rg-text3)', marginBottom: 4 }}>
-                  {sectionLabel}
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, marginBottom: 4 }}>
-                  <span style={{ width: 18, textAlign: 'center', flexShrink: 0 }}>🏆</span>
-                  <span style={{ fontWeight: 700, color: 'var(--rg-text)' }}>
-                    {result.overall.drivers.join(', ')}
-                  </span>
-                  <span style={{ color: 'var(--rg-text3)', fontSize: 12 }}>
-                    — {result.overall.team}
-                  </span>
-                </div>
-
-                {/* Fastest lap */}
-                {result.fastestLap && (
-                  <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginBottom: 4, paddingLeft: 24 }}>
-                    ⏱ {t('result.fastestLap', locale)}: {result.fastestLap}
-                  </div>
-                )}
-
-                {/* Class podiums */}
-                {result.classes && result.classes.length > 0 && (
-                  <div style={{ paddingLeft: 24, marginTop: 6, display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {/* Podium — classes or just overall top 3 */}
+                {result.classes && result.classes.length > 0 ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                     {result.classes.map((cls) => (
                       <div key={cls.className}>
-                        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 4 }}>
-                          {cls.className}
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                        {/* Only show class name if multiple classes */}
+                        {result.classes!.length > 1 && (
+                          <div style={{ fontSize: 10, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 4 }}>
+                            {cls.className}
+                          </div>
+                        )}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                           {cls.podium.map((entry) => (
-                            <div key={entry.position} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12 }}>
-                              <span style={{ width: 18, textAlign: 'center', flexShrink: 0 }}>
+                            <div key={entry.position} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                              <span style={{ width: 20, textAlign: 'center', flexShrink: 0 }}>
                                 {MEDAL[entry.position - 1] ?? `${entry.position}.`}
                               </span>
                               <span style={{ fontWeight: 600, color: 'var(--rg-text)' }}>
                                 {entry.drivers.join(', ')}
                               </span>
-                              <span style={{ color: 'var(--rg-text3)' }}>
+                              <span style={{ color: 'var(--rg-text3)', fontSize: 12 }}>
                                 — {entry.team}
                               </span>
                             </div>
@@ -118,6 +96,24 @@ export function RaceResult({ results, locale }: RaceResultProps) {
                         </div>
                       </div>
                     ))}
+                  </div>
+                ) : (
+                  /* No classes — just show overall winner */
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                    <span style={{ width: 20, textAlign: 'center', flexShrink: 0 }}>🏆</span>
+                    <span style={{ fontWeight: 600, color: 'var(--rg-text)' }}>
+                      {result.overall.drivers.join(', ')}
+                    </span>
+                    <span style={{ color: 'var(--rg-text3)', fontSize: 12 }}>
+                      — {result.overall.team}
+                    </span>
+                  </div>
+                )}
+
+                {/* Fastest lap */}
+                {result.fastestLap && (
+                  <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 6 }}>
+                    ⏱ {t('result.fastestLap', locale)}: {result.fastestLap}
                   </div>
                 )}
               </div>

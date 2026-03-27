@@ -1,6 +1,6 @@
 # Update Race Results
 
-This runbook is executed automatically by GitHub Actions (daily at midnight UTC) or manually via Claude Code. It finds sessions that finished since the last update and adds their official results.
+This runbook is executed manually via Claude Code. It finds sessions that finished since the last update and adds their official results.
 
 ---
 
@@ -9,11 +9,17 @@ This runbook is executed automatically by GitHub Actions (daily at midnight UTC)
 ### 1. Identify finished sessions without results
 
 Read `src/data/series-registry.ts` to get all series. For each series, scan events and find sessions where:
-- Session type is `race`, `endurance`, `sprint`, `qualifying`, `hyperpole`, or `stage`
+- Session type is `race`, `endurance`, `sprint`, `sprint_qualifying`, `qualifying`, `hyperpole`, or `stage`
 - Session `startUtc + durationMinutes` is in the past (already finished)
 - No result exists yet in `src/data/results/<series>-2026.ts`
 
-When running on schedule, focus on sessions that finished **yesterday** to keep the scope manageable.
+**Important:** Results are needed for ALL these session types, not just races:
+- **Qualifying** — pole position + top 3
+- **Sprint Qualifying** (F1) — sprint pole + top 3
+- **Hyperpole** (WEC) — pole + top 3
+- **Sprint** (F1) — winner + podium
+- **Race / Endurance** — winner + podium + class winners + fastest lap (F1)
+- **Stage** (WRC) — overall rally winner + podium (only for the final stage session of each rally)
 
 ### 2. Search for results from official sources
 
@@ -50,13 +56,36 @@ Add results to the appropriate file in `src/data/results/`:
 - If a file doesn't exist for a series yet, create it following the pattern of existing files
 - Import it in `src/data/results/index.ts`
 
-Result data structure:
+Result data structure — each event can have multiple session type results:
 ```typescript
 '<event-id>': {
-  <sessionType>: {
-    overall: { drivers: ['Driver1', 'Driver2'], team: 'Team Name' },
+  // Qualifying result (pole + top 3)
+  qualifying: {
+    overall: { drivers: ['PoleDriver'], team: 'Team Name' },
     classes: [{
-      className: 'Overall' | 'Hypercar' | 'LMGT3' | 'Top 3' | 'Classification',
+      className: 'Top 3',
+      podium: [
+        { position: 1, drivers: ['PoleDriver'], team: '...' },
+        { position: 2, drivers: ['P2'], team: '...' },
+        { position: 3, drivers: ['P3'], team: '...' },
+      ],
+    }],
+  },
+  // Sprint qualifying (F1 sprint weekends only)
+  sprint_qualifying: {
+    overall: { drivers: ['SprintPoleDriver'], team: 'Team' },
+    classes: [{ className: 'Top 3', podium: [...] }],
+  },
+  // Sprint race (F1 only)
+  sprint: {
+    overall: { drivers: ['SprintWinner'], team: 'Team' },
+    classes: [{ className: 'Top 3', podium: [...] }],
+  },
+  // Main race / endurance
+  race: {
+    overall: { drivers: ['Winner1', 'Winner2'], team: 'Team Name' },
+    classes: [{
+      className: 'Overall' | 'Hypercar' | 'LMGT3' | 'GTP' | 'Classification',
       podium: [
         { position: 1, drivers: [...], team: '...' },
         { position: 2, drivers: [...], team: '...' },
@@ -64,6 +93,11 @@ Result data structure:
       ],
     }],
     fastestLap: 'DriverName',  // F1 only
+  },
+  // WRC overall rally result (keyed as 'stage')
+  stage: {
+    overall: { drivers: ['Driver', 'CoDriver'], team: 'Team' },
+    classes: [{ className: 'Overall', podium: [...] }],
   },
 },
 ```
@@ -87,7 +121,11 @@ Update race results: <list of events updated>
 
 - **Only add verified results.** If a result is provisional or under protest, note it but still add the official classification.
 - **Event IDs must match** the IDs in the calendar data files exactly.
-- **Session types must match** — use `race`, `endurance`, `sprint`, `qualifying`, `hyperpole`, or `stage`.
+- **Session types must match** — use `race`, `endurance`, `sprint`, `sprint_qualifying`, `qualifying`, `hyperpole`, or `stage`.
+- **Every finished session needs a result** — qualifying (pole + top 3), sprint qualifying (F1), sprints, races, endurance, and stages. Don't skip qualifying sessions.
 - **Driver names:** Use the common English spelling (e.g., "Verstappen" not "Max Emilian Verstappen").
-- **For WRC:** Results go under the `stage` session type (the overall rally result, not individual stage results).
-- **For endurance series with classes:** Include class results in the `classes` array. Use official class names (e.g., "Hypercar", "LMGT3", "LMP2", "GT3").
+- **For F1 sprint weekends:** Add results for `sprint_qualifying`, `qualifying`, `sprint`, and `race` — all four session types.
+- **For WRC:** Results go under the `stage` session type (the overall rally result, not individual stage results). Only one result per rally, keyed to the `stage` type — the dedup logic ensures it only shows once.
+- **For endurance series with classes:** Include class results in the `classes` array. Use official class names (e.g., "Hypercar", "LMGT3", "LMP2", "GT3", "GTP", "GTD Pro", "GTD").
+- **For qualifying:** Use `className: 'Top 3'` for the podium. The UI shows "Pole position" label for qualifying results automatically.
+- **Cancelled events:** If a race/session was cancelled (e.g., weather), remove the session from the calendar data file rather than leaving it without a result.

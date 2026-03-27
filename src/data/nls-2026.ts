@@ -4,18 +4,7 @@ import { RaceEvent } from '@/lib/types'
 // 10 races at 8 events, all at Nurburgring Nordschleife
 // Source: nuerburgring-langstrecken-serie.de official calendar
 export const nls2026: RaceEvent[] = [
-  {
-    id: 'nls-2026-1',
-    round: 1,
-    name: 'NLS 1 — 71. ADAC Westfalenfahrt',
-    circuit: 'Nurburgring Nordschleife',
-    country: 'Germany',
-    countryCode: 'DE',
-    sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-14T07:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Race', startUtc: '2026-03-14T11:00:00Z', durationMinutes: 240 },
-    ],
-  },
+  // NLS 1 cancelled due to weather — removed from schedule
   {
     id: 'nls-2026-2',
     round: 2,
