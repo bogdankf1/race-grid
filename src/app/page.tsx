@@ -11,6 +11,7 @@ import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { CalendarGrid } from '@/components/CalendarGrid'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { UpcomingRaces } from '@/components/UpcomingRaces'
 import { Footer } from '@/components/Footer'
 
 export default function HomePage() {
@@ -69,6 +70,13 @@ export default function HomePage() {
         locale={locale}
         onToggleLocale={toggleLocale}
       />
+      <div className="rg-calendar-wrap" style={{ paddingBottom: 0 }}>
+        <UpcomingRaces
+          selectedSeriesIds={selectedSeries}
+          timezone={timezone}
+          locale={locale}
+        />
+      </div>
       <ErrorBoundary>
       <CalendarGrid
         month={month}

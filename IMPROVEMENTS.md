@@ -55,15 +55,7 @@ Let users mark certain series as favorites. Favorites float to the top of the da
 - In `DayCell.tsx`, show a small star icon if any favorite series has an event that day
 - Add a star/heart toggle button to the series filter dropdown next to each series checkbox
 
-### 27. Upcoming races compact list
-A "Next 5 races" widget showing the nearest upcoming events across all series, regardless of which month is displayed. Useful for quick at-a-glance info.
-
-**Implementation:**
-- Create `UpcomingRaces.tsx` component
-- Scan all series events, find sessions where `startUtc > now`, sort, take first 5-10
-- Show as a compact list: series chip + event name + date + countdown
-- Place below the calendar grid or as a collapsible panel
-- Each item links to the day view
+- ~~**27. Upcoming races widget** — Fixed: collapsible "Upcoming races" panel above the calendar grid showing next 7 events. Series chip + event name + circuit + date + countdown. Click navigates to day view with event highlight. Open/close state persisted in localStorage. Respects series filter.~~
 
 ### 28. Multi-language expansion
 The i18n system is ready for more languages. Priority languages by motorsport audience: German (DTM, F1), Japanese (Super GT, Super Formula), Spanish (F1), Portuguese (F1 Brazil).

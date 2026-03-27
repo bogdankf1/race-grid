@@ -46,12 +46,21 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
       const el = containerRef.current?.querySelector(`[data-event-id="${highlightEventId}"]`) as HTMLElement | null
       if (!el) return
 
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      el.style.transition = 'box-shadow 0.3s ease'
-      el.style.boxShadow = '0 0 0 3px var(--rg-link), 0 0 24px rgba(122,179,255,0.3)'
+      // Dim all other cards, keep the target fully visible
+      const allCards = containerRef.current?.children
+      if (allCards) {
+        for (const card of Array.from(allCards) as HTMLElement[]) {
+          card.style.transition = 'opacity 0.3s ease'
+          card.style.opacity = card === el ? '1' : '0.2'
+        }
+      }
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
       setTimeout(() => {
-        el.style.boxShadow = ''
-      }, 2000)
+        if (!allCards) return
+        for (const card of Array.from(allCards) as HTMLElement[]) {
+          card.style.opacity = '1'
+        }
+      }, 2500)
     }, 100)
 
     return () => clearTimeout(timer)
@@ -102,7 +111,6 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
             border: '1px solid var(--rg-card-border)',
             borderLeft: `4px solid ${series.color}`,
             overflow: 'hidden',
-            transition: 'box-shadow 0.5s ease',
           }}
         >
           <div className="rg-event-card-header" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 }}>
