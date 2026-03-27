@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Flag, ChevronDown } from 'lucide-react'
 import { t, type Locale } from '@/lib/i18n'
-import type { RaceResult as RaceResultType, Session, SessionType } from '@/lib/types'
+import type { RaceResult as RaceResultType, Session } from '@/lib/types'
 
 interface RaceResultProps {
   results: { session: Session; result: RaceResultType }[]
@@ -14,7 +14,6 @@ const MEDAL = ['🥇', '🥈', '🥉']
 
 export function RaceResult({ results, locale }: RaceResultProps) {
   const [expanded, setExpanded] = useState(false)
-  const qualiTypes: SessionType[] = ['qualifying', 'sprint_qualifying', 'hyperpole']
 
   return (
     <div
