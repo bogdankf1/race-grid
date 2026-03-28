@@ -73,4 +73,17 @@ export const f1Results2026: Record<string, EventResults> = {
       }],
     },
   },
+  'f1-2026-japan': {
+    qualifying: {
+      overall: { drivers: ['Antonelli'], team: 'Mercedes' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, drivers: ['Antonelli'], team: 'Mercedes' },
+          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+        ],
+      }],
+    },
+  },
 }
