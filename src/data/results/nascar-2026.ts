@@ -80,4 +80,17 @@ export const nascarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'nascar-2026-martinsville': {
+    qualifying: {
+      overall: { drivers: ['Hamlin'], team: 'Joe Gibbs Racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, drivers: ['Hamlin'], team: 'Joe Gibbs Racing' },
+          { position: 2, drivers: ['Byron'], team: 'Hendrick Motorsports' },
+          { position: 3, drivers: ['Berry'], team: 'Stewart-Haas Racing' },
+        ],
+      }],
+    },
+  },
 }
