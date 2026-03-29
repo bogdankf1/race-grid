@@ -92,6 +92,12 @@ const translations: Record<Locale, Record<string, string>> = {
     'progress.of': 'of',
     'spoiler.title': 'Spoiler-free mode',
     'spoiler.reveal': 'Tap to reveal results',
+    'settings.title': 'Settings',
+    'settings.theme': 'Theme',
+    'settings.dark': 'Dark',
+    'settings.light': 'Light',
+    'settings.language': 'Language',
+    'settings.timezone': 'Timezone',
   },
   uk: {
     'app.title': 'RACE GRID',
@@ -184,6 +190,12 @@ const translations: Record<Locale, Record<string, string>> = {
     'progress.of': 'з',
     'spoiler.title': 'Без спойлерів',
     'spoiler.reveal': 'Натисніть, щоб показати результати',
+    'settings.title': 'Налаштування',
+    'settings.theme': 'Тема',
+    'settings.dark': 'Темна',
+    'settings.light': 'Світла',
+    'settings.language': 'Мова',
+    'settings.timezone': 'Часова зона',
   },
 }
 
