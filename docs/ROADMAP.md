@@ -33,18 +33,9 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 ~~**What:** Generate `.ics` feed files at build time that users can subscribe to via `webcal://` URL.~~
 ~~**How:** `scripts/generate-ics.ts` runs as `prebuild`, generates `public/calendar/<series-id>.ics` + `public/calendar/all.ics`. CalendarExport dropdown includes "Subscribe to Calendar" link using `webcal://race-grid.com/calendar/<series>.ics`. Feeds include `REFRESH-INTERVAL:P1D` for auto-updating.~~
 
-### 8. Expand broadcast data
-**What:** Add broadcast/streaming info for UK, Germany, Australia, Japan, and Brazil to `src/data/broadcasts.ts`. Currently only US and UA are supported.
-**How:**
-- Add country codes `'GB'`, `'DE'`, `'AU'`, `'JP'`, `'BR'` to the `CountryCode` type in broadcasts.ts (or wherever it's defined).
-- Research and add broadcast entries for each series in each new country. Key broadcasters:
-  - **UK:** Sky Sports F1, TNT Sports, ITV, Channel 4, Motorsport.tv
-  - **Germany:** Sky Deutschland, DAZN, ProSieben (DTM), Motorsport.tv
-  - **Australia:** Fox Sports, Stan Sport, Kayo Sports, 10 Play (Supercars)
-  - **Japan:** DAZN Japan, Fuji TV, J Sports
-  - **Brazil:** Band, ESPN Brasil, BandSports
-- Update the country detection logic in `src/data/broadcasts.ts` to map timezones from these regions to the correct country code.
-- Use WebSearch to verify current 2026 broadcast deals for accuracy. Broadcast rights change yearly.
+### ~~8. Expand broadcast data~~ ✅
+~~**What:** Add broadcast/streaming info for 7 new countries to "Where to Watch".~~
+~~**How:** Added UK, Germany, Poland, Australia, Brazil, Japan, Colombia (GB, DE, PL, AU, BR, JP, CO) to `broadcasts.ts` for all 14 series. Fixed timezone-to-country detection to distinguish US from Latin American timezones. Verified against official 2026 broadcast deals.~~
 
 ### ~~9. Bulk "Add to Google Calendar"~~ ✅
 ~~**What:** Let users add an entire race weekend or series season to their calendar in one click.~~
@@ -62,20 +53,9 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 
 ## New Pages
 
-### 12. Unified settings modal
-**What:** Consolidate language toggle, theme toggle, timezone picker, and spoiler-free toggle into a single settings icon button that opens a modal. Reduces header clutter from 4+ controls to 1.
-**How:**
-- Add a gear/settings icon button in the header (replacing the individual theme, locale, spoiler, and timezone buttons).
-- Clicking opens a modal (not a new page — these are quick toggles, not content-heavy settings).
-- Modal shows:
-  - **Timezone:** current timezone picker (move from header).
-  - **Theme:** dark/light toggle with preview.
-  - **Language:** EN / UA toggle.
-  - **Spoiler-free mode:** toggle with description.
-  - **Notifications:** link to notification settings (from InstallOrNotify).
-- Close on backdrop click or X button.
-- Persist all settings in existing localStorage keys.
-- Keep the filter dropdown in the header — it's used frequently and deserves direct access.
+### ~~12. Unified settings modal~~ ✅
+~~**What:** Consolidate language toggle, theme toggle, timezone picker, and spoiler-free toggle into a single settings gear icon that opens a modal.~~
+~~**How:** Gear icon in header opens a bottom sheet (mobile) / centered modal (desktop) with theme, language, spoiler-free toggles and embedded timezone picker. Swipe down to dismiss on mobile. Header reduced from 6 controls to 3 (filter, install, settings).~~
 
 ### 14. Series pages (`/series`, `/series/[id]`)
 **What:** A hub page for each racing series — the central place to explore everything about a championship. Browse all 14 series, then drill into any one to see its full calendar, circuits, drivers, teams, and standings for a given year.
