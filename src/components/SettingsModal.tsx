@@ -76,6 +76,9 @@ export function SettingsModal({
   const [tzOpen, setTzOpen] = useState(false)
   const [tzSearch, setTzSearch] = useState('')
   const searchRef = useRef<HTMLInputElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
+  const touchStartY = useRef(0)
+  const touchDelta = useRef(0)
 
   useEffect(() => {
     if (tzOpen && searchRef.current) searchRef.current.focus()
@@ -129,7 +132,31 @@ export function SettingsModal({
       }}
     >
       <div
+        ref={panelRef}
         onClick={e => e.stopPropagation()}
+        onTouchStart={e => {
+          touchStartY.current = e.touches[0].clientY
+          touchDelta.current = 0
+        }}
+        onTouchMove={e => {
+          const delta = e.touches[0].clientY - touchStartY.current
+          touchDelta.current = delta
+          if (delta > 0 && panelRef.current) {
+            panelRef.current.style.transform = `translateY(${delta}px)`
+            panelRef.current.style.transition = 'none'
+          }
+        }}
+        onTouchEnd={() => {
+          if (!panelRef.current) return
+          if (touchDelta.current > 80) {
+            panelRef.current.style.transition = 'transform 0.2s ease'
+            panelRef.current.style.transform = 'translateY(100%)'
+            setTimeout(onClose, 200)
+          } else {
+            panelRef.current.style.transition = 'transform 0.2s ease'
+            panelRef.current.style.transform = 'translateY(0)'
+          }
+        }}
         className="rg-settings-panel"
         style={{
           width: '100%',
@@ -144,7 +171,7 @@ export function SettingsModal({
         }}
       >
         {/* Drag handle */}
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 8px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 8px', cursor: 'grab' }}>
           <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--rg-border)' }} />
         </div>
 
