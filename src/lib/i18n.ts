@@ -87,6 +87,9 @@ const translations: Record<Locale, Record<string, string>> = {
     'weekday.fri': 'Fri',
     'weekday.sat': 'Sat',
     'weekday.sun': 'Sun',
+    'progress.round': 'Rd.',
+    'progress.roundFull': 'Round',
+    'progress.of': 'of',
   },
   uk: {
     'app.title': 'RACE GRID',
@@ -174,6 +177,9 @@ const translations: Record<Locale, Record<string, string>> = {
     'weekday.fri': 'Пт',
     'weekday.sat': 'Сб',
     'weekday.sun': 'Нд',
+    'progress.round': 'Ет.',
+    'progress.roundFull': 'Етап',
+    'progress.of': 'з',
   },
 }
 

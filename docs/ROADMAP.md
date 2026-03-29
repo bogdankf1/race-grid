@@ -59,23 +59,54 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 - The toggle should be global — not per-event. Users who want spoiler-free mode want it everywhere.
 - Add i18n strings for "Spoiler-free mode", "Tap to reveal results", etc.
 
-### 11. Season progress tracker
-**What:** Show "Round 3 of 22" with a visual progress bar for each series, so users understand where we are in each championship season.
-**How:**
-- In the series filter dropdown or as a small indicator on each series chip in the calendar, show `Rd. X/Y` where X = last completed round, Y = total rounds.
-- Calculate from the calendar data: count events with `round` property, find the latest event whose last session `startUtc + durationMinutes` is in the past.
-- Could also show this on the day detail page next to the series badge.
-- Simple inline progress bar using CSS (colored bar matching series color, proportional width).
+### ~~11. Season progress tracker~~ ✅
+~~**What:** Show "Round 3 of 22" with a visual progress bar for each series, so users understand where we are in each championship season.~~
+~~**How:** Added progress bar per series in the filter dropdown (colored bar + X/Y counter) and "Rd. X of Y" label on the day detail page next to the series chip.~~
 
 ---
 
 ## New Pages
 
-### 12. Standings page (`/standings`)
-**What:** Championship standings for drivers and constructors/manufacturers, with year and series selectors.
+### 12. Series pages (`/series`, `/series/[id]`)
+**What:** A hub page for each racing series — the central place to explore everything about a championship. Browse all 14 series, then drill into any one to see its full calendar, circuits, drivers, teams, and standings for a given year.
 **How:**
-- Create `src/app/standings/page.tsx`.
-- Data structure: create `src/data/standings/` directory with files like `f1-2026.ts`, `nascar-2026.ts`, etc. Each file exports driver standings and constructor/manufacturer standings as arrays:
+- **Phase 1 — Series index & hub (use existing data):**
+  - Create `src/app/series/page.tsx` — grid of all 14 series cards with logo, name, season progress bar, next upcoming event, and total rounds.
+  - Create `src/app/series/[id]/page.tsx` — series detail hub with tabs/sections:
+    - **Calendar:** Full season schedule with round numbers, dates, circuits, and results (reuse existing calendar data + results).
+    - **Circuits:** All circuits this series visits, linking to `/circuits/[slug]` (item 13).
+    - **Standings:** Embed standings table (item 12's data) once available.
+  - Year selector (once multi-year data exists, item 14).
+  - Link to series pages from header navigation and from series chips throughout the app.
+- **Phase 2 — Drivers & teams (new data required):**
+  - Create `src/data/drivers/` directory with per-series files (e.g., `f1-2026.ts`). Each file exports an array:
+    ```typescript
+    export const f1Drivers2026 = [
+      { id: 'antonelli', name: 'Andrea Kimi Antonelli', number: 12, team: 'mercedes', nationality: 'IT' },
+      // ...
+    ]
+    ```
+  - Create `src/data/teams/` directory with per-series files:
+    ```typescript
+    export const f1Teams2026 = [
+      { id: 'mercedes', name: 'Mercedes-AMG Petronas', drivers: ['antonelli', 'russell'], color: '#27F4D2' },
+      // ...
+    ]
+    ```
+  - Add **Drivers** and **Teams** tabs to the series hub page, showing entry lists with links to detail pages.
+  - Create `src/app/drivers/[id]/page.tsx` — driver profile showing: bio, current team, series, season results, career stats (as data grows).
+  - Create `src/app/teams/[id]/page.tsx` — team profile showing: drivers, series entered, season results.
+  - Cross-link everything: series → drivers → teams → circuits → results.
+- **Phase 3 — Rich integration:**
+  - Series hub becomes the "home" for each championship — fans bookmark `/series/f1` as their entry point.
+  - Driver/team pages show historical results once multi-year data exists (item 14).
+  - SEO benefit: deep internal linking between series, circuits, drivers, teams, and results pages.
+- **Scope warning:** Phase 1 uses existing data and is achievable quickly. Phase 2 requires significant new data entry (drivers + teams for 14 series). Prioritize F1, NASCAR, IndyCar, WEC, WRC first.
+
+### 13. Standings integration (`/standings`, embedded in series pages)
+**What:** Championship standings for drivers and constructors/manufacturers. Standalone page + embedded in series hub pages (item 12).
+**How:**
+- Create `src/data/standings/` directory with files like `f1-2026.ts`, `nascar-2026.ts`, etc. Each file exports driver standings and constructor/manufacturer standings as arrays:
   ```typescript
   export const f1Standings2026 = {
     drivers: [
@@ -89,31 +120,34 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
     ],
   }
   ```
-- UI: Two tabs (Drivers / Constructors). Series selector dropdown at top (reuse series chips). Year selector (once multi-year data exists).
+- Create `src/app/standings/page.tsx` as a standalone page (quick access from header nav).
+- Also embed standings as a tab/section in `/series/[id]` (item 12).
+- UI: Two tabs (Drivers / Constructors). Series selector on standalone page. Year selector (once multi-year data exists).
 - Update standings alongside results when running `/update-results`. Add a step to the `docs/UPDATE-RESULTS.md` runbook.
 - For series with class-based championships (WEC, IMSA, GTWC), show standings per class.
 - Default view: current year, F1 (most popular series). Persist last-viewed series in localStorage.
-- Link to standings page from the header navigation.
+- Driver names link to `/drivers/[id]` and team names link to `/teams/[id]` once those pages exist (item 12 phase 2).
 
-### 13. Circuits page (`/circuits`)
-**What:** A browsable directory of all circuits used across all series, with metadata and historical context.
+### 14. Circuits page (`/circuits`, `/circuits/[slug]`)
+**What:** A browsable directory of all circuits used across all series, with metadata and cross-links to series and event pages.
 **How:**
-- Create `src/app/circuits/page.tsx`.
-- Show all circuits from `src/data/circuits.ts` in a searchable, filterable grid/list.
+- Create `src/app/circuits/page.tsx` — searchable, filterable grid/list of all circuits from `src/data/circuits.ts`.
 - Each circuit card shows: name, country (with flag), length, turns, type (permanent/street/oval), and which series race there.
-- Clicking a circuit opens a detail view (could be a modal or a `/circuits/[slug]` page) showing:
-  - All events at this circuit across all series and years
-  - Past results at this venue (once historical data exists)
-  - Circuit type, length, turns
+- Create `src/app/circuits/[slug]/page.tsx` — circuit detail page showing:
+  - Circuit metadata: type, length, turns, country.
+  - All events at this circuit across all series and years, linking to day detail pages.
+  - Past results at this venue (once historical data exists).
+  - Which series visit this circuit, linking to `/series/[id]` (item 12).
 - Cross-reference: find which series use each circuit by scanning all calendar data files.
 - Filter by: country, circuit type, series.
+- Linked from: series hub pages (item 12), day detail page circuit info section.
 - No track layout images needed initially (would require licensing). Text-based info is sufficient.
 
 ---
 
 ## Historical Data (Long-term)
 
-### 14. Multi-year support & historical backfill
+### 15. Multi-year support & historical backfill
 **What:** Support multiple seasons. Start with 2025 backfill, then 2024. Users can browse past seasons and see who won each race.
 **How:**
 - The file structure already supports this: `f1-2026.ts`, `f1-2025.ts`, etc.

@@ -4,6 +4,19 @@ import { useState, useRef, useEffect } from 'react'
 import { Filter, ChevronDown, Check } from 'lucide-react'
 import { ALL_SERIES } from '@/data/series-registry'
 import { t, type Locale } from '@/lib/i18n'
+import type { SeriesConfig } from '@/lib/types'
+
+function getSeriesProgress(series: SeriesConfig): { completed: number; total: number } {
+  const now = Date.now()
+  const total = series.events.length
+  const completed = series.events.filter(event => {
+    const lastSession = event.sessions[event.sessions.length - 1]
+    if (!lastSession) return false
+    const endMs = new Date(lastSession.startUtc).getTime() + (lastSession.durationMinutes || 120) * 60000
+    return now >= endMs
+  }).length
+  return { completed, total }
+}
 
 interface SeriesFilterDropdownProps {
   selectedIds: string[]
@@ -198,6 +211,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
                 {/* Series in group */}
                 {groupSeries.map(series => {
                   const active = selectedIds.includes(series.id)
+                  const { completed, total } = getSeriesProgress(series)
+                  const pct = total > 0 ? (completed / total) * 100 : 0
                   return (
                     <button
                       key={series.id}
@@ -226,7 +241,17 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
                           flexShrink: 0,
                         }}
                       />
-                      <span style={{ flex: 1 }}>{series.name}</span>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                          <span>{series.name}</span>
+                          <span style={{ fontSize: 10, color: 'var(--rg-text3)', fontWeight: 500, marginLeft: 'auto' }}>
+                            {completed}/{total}
+                          </span>
+                        </div>
+                        <div style={{ height: 3, borderRadius: 2, background: 'var(--rg-border)', marginTop: 5 }}>
+                          <div style={{ height: '100%', borderRadius: 2, background: series.color, width: `${pct}%`, transition: 'width 0.3s ease' }} />
+                        </div>
+                      </div>
                       <span style={checkboxStyle(active)}>
                         {active && <Check style={{ width: 12, height: 12, color: '#000' }} />}
                       </span>

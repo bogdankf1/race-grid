@@ -23,10 +23,6 @@ const SESSION_ICONS: Record<SessionType, string> = {
   stage: '\u{1F5FA}', shakedown: '\u{1F5FA}', endurance: '\u{1F3C1}',
 }
 
-function sessionLabel(type: SessionType, locale: Locale): string {
-  return t(`session.${type}`, locale)
-}
-
 function countryFlag(countryCode: string): string {
   return countryCode.toUpperCase().split('')
     .map(c => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65)).join('')
@@ -117,6 +113,15 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
                 <SeriesChip series={series} size="md" />
+                {event.round && (
+                  <span style={{
+                    fontSize: 11, fontWeight: 600, color: 'var(--rg-text3)',
+                    padding: '3px 10px', borderRadius: 6,
+                    background: 'var(--rg-elevated)', border: '1px solid var(--rg-border)',
+                  }}>
+                    {t('progress.roundFull', locale)} {event.round}/{series.events.length}
+                  </span>
+                )}
                 <div
                   style={{
                     height: 28,
@@ -199,9 +204,6 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                       <span style={{ fontWeight: 600, fontSize: 14, color: 'var(--rg-text)' }}>
                         {session.label}
-                      </span>
-                      <span style={{ fontSize: 11, color: 'var(--rg-text3)', padding: '3px 8px', borderRadius: 6, background: 'var(--rg-surface)', fontWeight: 500 }}>
-                        {sessionLabel(session.type, locale)}
                       </span>
                       {isLive && <span className="rg-live-badge">{t('session.live', locale)}</span>}
                     </div>
