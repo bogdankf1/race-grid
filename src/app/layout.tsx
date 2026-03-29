@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     title: 'Race Grid — Motorsport Calendar',
     description: 'All your motorsport in one calendar. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GTWC and more.',
   },
+  verification: {
+    google: 'vCQu6tYFys2uv5hJLV14zFKjA1LJKHrS3HpjomGmh7Q',
+  },
 }
 
 export default function RootLayout({
