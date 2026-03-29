@@ -1,0 +1,225 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — Intercontinental GT Challenge
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:igtc-2026-bathurst-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260212T220000Z
+DTEND:20260212T230000Z
+SUMMARY:Intercontinental GT Challenge: Practice 1 — Meguiar's Bathurst 12 Hour
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Practice 1 — Meguiar's Bathurst 12 Hour\\nMount Panorama Circuit\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-bathurst-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260213T010000Z
+DTEND:20260213T020000Z
+SUMMARY:Intercontinental GT Challenge: Practice 2 — Meguiar's Bathurst 12 Hour
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Practice 2 — Meguiar's Bathurst 12 Hour\\nMount Panorama Circuit\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-bathurst-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260213T040000Z
+DTEND:20260213T043000Z
+SUMMARY:Intercontinental GT Challenge: Qualifying — Meguiar's Bathurst 12 Hour
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Qualifying — Meguiar's Bathurst 12 Hour\\nMount Panorama Circuit\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-bathurst-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260214T201500Z
+DTEND:20260215T081500Z
+SUMMARY:Intercontinental GT Challenge: Bathurst 12 Hour — Meguiar's Bathurst 12 Hour
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Bathurst 12 Hour — Meguiar's Bathurst 12 Hour\\nMount Panorama Circuit\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-nurburgring-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260514T111500Z
+DTEND:20260514T131500Z
+SUMMARY:Intercontinental GT Challenge: Qualifying 1 — ADAC RAVENOL 24h Nürburgring
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying 1 — ADAC RAVENOL 24h Nürburgring\\nNurburgring Nordschleife\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-nurburgring-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260514T180000Z
+DTEND:20260514T213000Z
+SUMMARY:Intercontinental GT Challenge: Qualifying 2 (Night) — ADAC RAVENOL 24h Nürburgring
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying 2 (Night) — ADAC RAVENOL 24h Nürburgring\\nNurburgring Nordschleife\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-nurburgring-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260515T065000Z
+DTEND:20260515T072500Z
+SUMMARY:Intercontinental GT Challenge: Top Qualifying 1 — ADAC RAVENOL 24h Nürburgring
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Top Qualifying 1 — ADAC RAVENOL 24h Nürburgring\\nNurburgring Nordschleife\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-nurburgring-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260515T074500Z
+DTEND:20260515T082000Z
+SUMMARY:Intercontinental GT Challenge: Top Qualifying 2 — ADAC RAVENOL 24h Nürburgring
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Top Qualifying 2 — ADAC RAVENOL 24h Nürburgring\\nNurburgring Nordschleife\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-nurburgring-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260515T113500Z
+DTEND:20260515T123500Z
+SUMMARY:Intercontinental GT Challenge: Top Qualifying 3 — ADAC RAVENOL 24h Nürburgring
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Top Qualifying 3 — ADAC RAVENOL 24h Nürburgring\\nNurburgring Nordschleife\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-nurburgring-s5@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260516T080000Z
+DTEND:20260516T091500Z
+SUMMARY:Intercontinental GT Challenge: Warmup — ADAC RAVENOL 24h Nürburgring
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Warmup — ADAC RAVENOL 24h Nürburgring\\nNurburgring Nordschleife\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-nurburgring-s6@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260516T130000Z
+DTEND:20260517T130000Z
+SUMMARY:Intercontinental GT Challenge: 24h Nürburgring — ADAC RAVENOL 24h Nürburgring
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:24h Nürburgring — ADAC RAVENOL 24h Nürburgring\\nNurburgring Nordschleife\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-spa-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260625T090000Z
+DTEND:20260625T103000Z
+SUMMARY:Intercontinental GT Challenge: Practice 1 — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 1 — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-spa-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260625T140000Z
+DTEND:20260625T153000Z
+SUMMARY:Intercontinental GT Challenge: Practice 2 — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 2 — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-spa-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260626T160000Z
+DTEND:20260626T170000Z
+SUMMARY:Intercontinental GT Challenge: Qualifying — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Qualifying — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-spa-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260626T180000Z
+DTEND:20260626T183000Z
+SUMMARY:Intercontinental GT Challenge: Super Pole — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Super Pole — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-spa-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260627T143000Z
+DTEND:20260628T143000Z
+SUMMARY:Intercontinental GT Challenge: 24 Hours of Spa — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:24 Hours of Spa — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-suzuka-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260911T010000Z
+DTEND:20260911T023000Z
+SUMMARY:Intercontinental GT Challenge: Practice 1 — Suzuka 1000km
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Practice 1 — Suzuka 1000km\\nSuzuka International Racing Course\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-suzuka-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260911T060000Z
+DTEND:20260911T070000Z
+SUMMARY:Intercontinental GT Challenge: Practice 2 — Suzuka 1000km
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Practice 2 — Suzuka 1000km\\nSuzuka International Racing Course\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-suzuka-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260912T010000Z
+DTEND:20260912T014500Z
+SUMMARY:Intercontinental GT Challenge: Qualifying — Suzuka 1000km
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Qualifying — Suzuka 1000km\\nSuzuka International Racing Course\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-suzuka-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260913T010000Z
+DTEND:20260913T090000Z
+SUMMARY:Intercontinental GT Challenge: Suzuka 1000km — Suzuka 1000km
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Suzuka 1000km — Suzuka 1000km\\nSuzuka International Racing Course\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-indianapolis-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261008T140000Z
+DTEND:20261008T153000Z
+SUMMARY:Intercontinental GT Challenge: Practice 1 — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Practice 1 — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-indianapolis-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261008T190000Z
+DTEND:20261008T200000Z
+SUMMARY:Intercontinental GT Challenge: Practice 2 — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Practice 2 — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-indianapolis-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261009T140000Z
+DTEND:20261009T144500Z
+SUMMARY:Intercontinental GT Challenge: Qualifying — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Qualifying — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nIntercontinental GT Challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:igtc-2026-indianapolis-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261010T140000Z
+DTEND:20261010T220000Z
+SUMMARY:Intercontinental GT Challenge: Indianapolis 8 Hour — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Indianapolis 8 Hour — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nIntercontinental GT Challenge
+END:VEVENT
+END:VCALENDAR

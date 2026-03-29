@@ -1,0 +1,378 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — GT World Challenge Europe
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:gtwc-2026-paul-ricard-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260410T080000Z
+DTEND:20260410T093000Z
+SUMMARY:GT World Challenge Europe: Practice — 6 Hours of Paul Ricard
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:Practice — 6 Hours of Paul Ricard\\nCircuit Paul Ricard\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-paul-ricard-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260411T080000Z
+DTEND:20260411T090000Z
+SUMMARY:GT World Challenge Europe: Pre-Qualifying — 6 Hours of Paul Ricard
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:Pre-Qualifying — 6 Hours of Paul Ricard\\nCircuit Paul Ricard\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-paul-ricard-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260411T120000Z
+DTEND:20260411T123000Z
+SUMMARY:GT World Challenge Europe: Qualifying — 6 Hours of Paul Ricard
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:Qualifying — 6 Hours of Paul Ricard\\nCircuit Paul Ricard\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-paul-ricard-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260412T090000Z
+DTEND:20260412T150000Z
+SUMMARY:GT World Challenge Europe: 6 Hours of Paul Ricard — 6 Hours of Paul Ricard
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:6 Hours of Paul Ricard — 6 Hours of Paul Ricard\\nCircuit Paul Ricard\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-brands-hatch-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260501T080000Z
+DTEND:20260501T090000Z
+SUMMARY:GT World Challenge Europe: Practice — Brands Hatch Sprint
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:Practice — Brands Hatch Sprint\\nBrands Hatch\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-brands-hatch-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260502T083000Z
+DTEND:20260502T090000Z
+SUMMARY:GT World Challenge Europe: Qualifying — Brands Hatch Sprint
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:Qualifying — Brands Hatch Sprint\\nBrands Hatch\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-brands-hatch-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260502T130000Z
+DTEND:20260502T140000Z
+SUMMARY:GT World Challenge Europe: Race 1 — Brands Hatch Sprint
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:Race 1 — Brands Hatch Sprint\\nBrands Hatch\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-brands-hatch-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260503T120000Z
+DTEND:20260503T130000Z
+SUMMARY:GT World Challenge Europe: Race 2 — Brands Hatch Sprint
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:Race 2 — Brands Hatch Sprint\\nBrands Hatch\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-monza-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260529T080000Z
+DTEND:20260529T093000Z
+SUMMARY:GT World Challenge Europe: Practice — 3 Hours of Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Practice — 3 Hours of Monza\\nAutodromo Nazionale Monza\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-monza-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260530T080000Z
+DTEND:20260530T090000Z
+SUMMARY:GT World Challenge Europe: Pre-Qualifying — 3 Hours of Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Pre-Qualifying — 3 Hours of Monza\\nAutodromo Nazionale Monza\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-monza-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260530T120000Z
+DTEND:20260530T123000Z
+SUMMARY:GT World Challenge Europe: Qualifying — 3 Hours of Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Qualifying — 3 Hours of Monza\\nAutodromo Nazionale Monza\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-monza-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260531T110000Z
+DTEND:20260531T140000Z
+SUMMARY:GT World Challenge Europe: 3 Hours of Monza — 3 Hours of Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:3 Hours of Monza — 3 Hours of Monza\\nAutodromo Nazionale Monza\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-spa-24h-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260625T080000Z
+DTEND:20260625T100000Z
+SUMMARY:GT World Challenge Europe: Practice 1 — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 1 — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-spa-24h-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260625T150000Z
+DTEND:20260625T170000Z
+SUMMARY:GT World Challenge Europe: Practice 2 — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 2 — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-spa-24h-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260626T150000Z
+DTEND:20260626T160000Z
+SUMMARY:GT World Challenge Europe: Qualifying — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Qualifying — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-spa-24h-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260626T190000Z
+DTEND:20260626T193000Z
+SUMMARY:GT World Challenge Europe: Super Pole — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Super Pole — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-spa-24h-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260627T143000Z
+DTEND:20260628T143000Z
+SUMMARY:GT World Challenge Europe: 24 Hours of Spa — CrowdStrike 24 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:24 Hours of Spa — CrowdStrike 24 Hours of Spa\\nCircuit de Spa-Francorchamps\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-misano-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260717T080000Z
+DTEND:20260717T090000Z
+SUMMARY:GT World Challenge Europe: Practice — Misano Sprint
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Practice — Misano Sprint\\nMisano World Circuit\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-misano-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260718T083000Z
+DTEND:20260718T090000Z
+SUMMARY:GT World Challenge Europe: Qualifying — Misano Sprint
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Qualifying — Misano Sprint\\nMisano World Circuit\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-misano-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260718T130000Z
+DTEND:20260718T140000Z
+SUMMARY:GT World Challenge Europe: Race 1 — Misano Sprint
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Race 1 — Misano Sprint\\nMisano World Circuit\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-misano-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260719T120000Z
+DTEND:20260719T130000Z
+SUMMARY:GT World Challenge Europe: Race 2 — Misano Sprint
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Race 2 — Misano Sprint\\nMisano World Circuit\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-magny-cours-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260731T080000Z
+DTEND:20260731T090000Z
+SUMMARY:GT World Challenge Europe: Practice — Magny-Cours Sprint
+LOCATION:Circuit de Nevers Magny-Cours\, France
+DESCRIPTION:Practice — Magny-Cours Sprint\\nCircuit de Nevers Magny-Cours\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-magny-cours-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260801T083000Z
+DTEND:20260801T090000Z
+SUMMARY:GT World Challenge Europe: Qualifying — Magny-Cours Sprint
+LOCATION:Circuit de Nevers Magny-Cours\, France
+DESCRIPTION:Qualifying — Magny-Cours Sprint\\nCircuit de Nevers Magny-Cours\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-magny-cours-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260801T130000Z
+DTEND:20260801T140000Z
+SUMMARY:GT World Challenge Europe: Race 1 — Magny-Cours Sprint
+LOCATION:Circuit de Nevers Magny-Cours\, France
+DESCRIPTION:Race 1 — Magny-Cours Sprint\\nCircuit de Nevers Magny-Cours\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-magny-cours-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260802T120000Z
+DTEND:20260802T130000Z
+SUMMARY:GT World Challenge Europe: Race 2 — Magny-Cours Sprint
+LOCATION:Circuit de Nevers Magny-Cours\, France
+DESCRIPTION:Race 2 — Magny-Cours Sprint\\nCircuit de Nevers Magny-Cours\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-nurburgring-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260828T080000Z
+DTEND:20260828T093000Z
+SUMMARY:GT World Challenge Europe: Practice — 3 Hours of Nurburgring
+LOCATION:Nurburgring\, Germany
+DESCRIPTION:Practice — 3 Hours of Nurburgring\\nNurburgring\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-nurburgring-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260829T080000Z
+DTEND:20260829T090000Z
+SUMMARY:GT World Challenge Europe: Pre-Qualifying — 3 Hours of Nurburgring
+LOCATION:Nurburgring\, Germany
+DESCRIPTION:Pre-Qualifying — 3 Hours of Nurburgring\\nNurburgring\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-nurburgring-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260829T120000Z
+DTEND:20260829T123000Z
+SUMMARY:GT World Challenge Europe: Qualifying — 3 Hours of Nurburgring
+LOCATION:Nurburgring\, Germany
+DESCRIPTION:Qualifying — 3 Hours of Nurburgring\\nNurburgring\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-nurburgring-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260830T110000Z
+DTEND:20260830T140000Z
+SUMMARY:GT World Challenge Europe: 3 Hours of Nurburgring — 3 Hours of Nurburgring
+LOCATION:Nurburgring\, Germany
+DESCRIPTION:3 Hours of Nurburgring — 3 Hours of Nurburgring\\nNurburgring\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-zandvoort-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260918T080000Z
+DTEND:20260918T090000Z
+SUMMARY:GT World Challenge Europe: Practice — Zandvoort Sprint
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Practice — Zandvoort Sprint\\nCircuit Zandvoort\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-zandvoort-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260919T083000Z
+DTEND:20260919T090000Z
+SUMMARY:GT World Challenge Europe: Qualifying — Zandvoort Sprint
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Qualifying — Zandvoort Sprint\\nCircuit Zandvoort\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-zandvoort-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260919T130000Z
+DTEND:20260919T140000Z
+SUMMARY:GT World Challenge Europe: Race 1 — Zandvoort Sprint
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Race 1 — Zandvoort Sprint\\nCircuit Zandvoort\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-zandvoort-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260920T120000Z
+DTEND:20260920T130000Z
+SUMMARY:GT World Challenge Europe: Race 2 — Zandvoort Sprint
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Race 2 — Zandvoort Sprint\\nCircuit Zandvoort\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-barcelona-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261002T080000Z
+DTEND:20261002T090000Z
+SUMMARY:GT World Challenge Europe: Practice — Barcelona Sprint
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice — Barcelona Sprint\\nCircuit de Barcelona-Catalunya\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-barcelona-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261003T083000Z
+DTEND:20261003T090000Z
+SUMMARY:GT World Challenge Europe: Qualifying — Barcelona Sprint
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Qualifying — Barcelona Sprint\\nCircuit de Barcelona-Catalunya\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-barcelona-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261003T130000Z
+DTEND:20261003T140000Z
+SUMMARY:GT World Challenge Europe: Race 1 — Barcelona Sprint
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Race 1 — Barcelona Sprint\\nCircuit de Barcelona-Catalunya\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-barcelona-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261004T120000Z
+DTEND:20261004T130000Z
+SUMMARY:GT World Challenge Europe: Race 2 — Barcelona Sprint
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Race 2 — Barcelona Sprint\\nCircuit de Barcelona-Catalunya\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-portimao-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261016T080000Z
+DTEND:20261016T093000Z
+SUMMARY:GT World Challenge Europe: Practice — 3 Hours of Portimao
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Practice — 3 Hours of Portimao\\nAlgarve International Circuit\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-portimao-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261017T080000Z
+DTEND:20261017T090000Z
+SUMMARY:GT World Challenge Europe: Pre-Qualifying — 3 Hours of Portimao
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Pre-Qualifying — 3 Hours of Portimao\\nAlgarve International Circuit\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-portimao-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261017T120000Z
+DTEND:20261017T123000Z
+SUMMARY:GT World Challenge Europe: Qualifying — 3 Hours of Portimao
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Qualifying — 3 Hours of Portimao\\nAlgarve International Circuit\\nGT World Challenge Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwc-2026-portimao-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261018T110000Z
+DTEND:20261018T140000Z
+SUMMARY:GT World Challenge Europe: 3 Hours of Portimao — 3 Hours of Portimao
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:3 Hours of Portimao — 3 Hours of Portimao\\nAlgarve International Circuit\\nGT World Challenge Europe
+END:VEVENT
+END:VCALENDAR

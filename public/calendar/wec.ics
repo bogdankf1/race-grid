@@ -1,0 +1,378 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — FIA World Endurance Championship
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:wec-2026-imola-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260417T083000Z
+DTEND:20260417T100000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — 6 Hours of Imola
+LOCATION:Autodromo Enzo e Dino Ferrari\, Italy
+DESCRIPTION:Practice 1 — 6 Hours of Imola\\nAutodromo Enzo e Dino Ferrari\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-imola-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260417T130000Z
+DTEND:20260417T143000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — 6 Hours of Imola
+LOCATION:Autodromo Enzo e Dino Ferrari\, Italy
+DESCRIPTION:Practice 2 — 6 Hours of Imola\\nAutodromo Enzo e Dino Ferrari\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-imola-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260418T093000Z
+DTEND:20260418T100000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — 6 Hours of Imola
+LOCATION:Autodromo Enzo e Dino Ferrari\, Italy
+DESCRIPTION:Qualifying — 6 Hours of Imola\\nAutodromo Enzo e Dino Ferrari\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-imola-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260418T103000Z
+DTEND:20260418T104500Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — 6 Hours of Imola
+LOCATION:Autodromo Enzo e Dino Ferrari\, Italy
+DESCRIPTION:Hyperpole — 6 Hours of Imola\\nAutodromo Enzo e Dino Ferrari\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-imola-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260419T100000Z
+DTEND:20260419T160000Z
+SUMMARY:FIA World Endurance Championship: 6 Hours of Imola — 6 Hours of Imola
+LOCATION:Autodromo Enzo e Dino Ferrari\, Italy
+DESCRIPTION:6 Hours of Imola — 6 Hours of Imola\\nAutodromo Enzo e Dino Ferrari\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-spa-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260507T090000Z
+DTEND:20260507T103000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — 6 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 1 — 6 Hours of Spa\\nCircuit de Spa-Francorchamps\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-spa-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260507T140000Z
+DTEND:20260507T153000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — 6 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 2 — 6 Hours of Spa\\nCircuit de Spa-Francorchamps\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-spa-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260508T100000Z
+DTEND:20260508T103000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — 6 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Qualifying — 6 Hours of Spa\\nCircuit de Spa-Francorchamps\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-spa-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260508T110000Z
+DTEND:20260508T111500Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — 6 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Hyperpole — 6 Hours of Spa\\nCircuit de Spa-Francorchamps\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-spa-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260509T100000Z
+DTEND:20260509T160000Z
+SUMMARY:FIA World Endurance Championship: 6 Hours of Spa — 6 Hours of Spa
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:6 Hours of Spa — 6 Hours of Spa\\nCircuit de Spa-Francorchamps\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-le-mans-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260610T120000Z
+DTEND:20260610T150000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — 24 Hours of Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Practice 1 — 24 Hours of Le Mans\\nCircuit de la Sarthe\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-le-mans-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260611T190000Z
+DTEND:20260611T200000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — 24 Hours of Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Qualifying — 24 Hours of Le Mans\\nCircuit de la Sarthe\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-le-mans-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260611T203000Z
+DTEND:20260611T210000Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — 24 Hours of Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Hyperpole — 24 Hours of Le Mans\\nCircuit de la Sarthe\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-le-mans-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260611T220000Z
+DTEND:20260612T000000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — 24 Hours of Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Practice 2 — 24 Hours of Le Mans\\nCircuit de la Sarthe\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-le-mans-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260613T090000Z
+DTEND:20260613T091500Z
+SUMMARY:FIA World Endurance Championship: Warmup — 24 Hours of Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Warmup — 24 Hours of Le Mans\\nCircuit de la Sarthe\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-le-mans-s5@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260613T140000Z
+DTEND:20260614T140000Z
+SUMMARY:FIA World Endurance Championship: 24 Hours of Le Mans — 24 Hours of Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:24 Hours of Le Mans — 24 Hours of Le Mans\\nCircuit de la Sarthe\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-sao-paulo-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260710T130000Z
+DTEND:20260710T143000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — 6 Hours of Sao Paulo
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Practice 1 — 6 Hours of Sao Paulo\\nAutodromo Jose Carlos Pace\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-sao-paulo-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260710T180000Z
+DTEND:20260710T193000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — 6 Hours of Sao Paulo
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Practice 2 — 6 Hours of Sao Paulo\\nAutodromo Jose Carlos Pace\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-sao-paulo-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260711T140000Z
+DTEND:20260711T143000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — 6 Hours of Sao Paulo
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Qualifying — 6 Hours of Sao Paulo\\nAutodromo Jose Carlos Pace\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-sao-paulo-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260711T150000Z
+DTEND:20260711T151500Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — 6 Hours of Sao Paulo
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Hyperpole — 6 Hours of Sao Paulo\\nAutodromo Jose Carlos Pace\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-sao-paulo-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260712T140000Z
+DTEND:20260712T200000Z
+SUMMARY:FIA World Endurance Championship: 6 Hours of Sao Paulo — 6 Hours of Sao Paulo
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:6 Hours of Sao Paulo — 6 Hours of Sao Paulo\\nAutodromo Jose Carlos Pace\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-cota-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260904T150000Z
+DTEND:20260904T163000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — Lone Star Le Mans
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 1 — Lone Star Le Mans\\nCircuit of the Americas\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-cota-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260904T200000Z
+DTEND:20260904T213000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — Lone Star Le Mans
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 2 — Lone Star Le Mans\\nCircuit of the Americas\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-cota-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260905T160000Z
+DTEND:20260905T163000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — Lone Star Le Mans
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Qualifying — Lone Star Le Mans\\nCircuit of the Americas\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-cota-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260905T170000Z
+DTEND:20260905T171500Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — Lone Star Le Mans
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Hyperpole — Lone Star Le Mans\\nCircuit of the Americas\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-cota-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260906T160000Z
+DTEND:20260906T220000Z
+SUMMARY:FIA World Endurance Championship: Lone Star Le Mans — Lone Star Le Mans
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Lone Star Le Mans — Lone Star Le Mans\\nCircuit of the Americas\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-fuji-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260925T000000Z
+DTEND:20260925T013000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — 6 Hours of Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Practice 1 — 6 Hours of Fuji\\nFuji Speedway\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-fuji-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260925T050000Z
+DTEND:20260925T063000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — 6 Hours of Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Practice 2 — 6 Hours of Fuji\\nFuji Speedway\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-fuji-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260926T020000Z
+DTEND:20260926T023000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — 6 Hours of Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Qualifying — 6 Hours of Fuji\\nFuji Speedway\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-fuji-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260926T030000Z
+DTEND:20260926T031500Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — 6 Hours of Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Hyperpole — 6 Hours of Fuji\\nFuji Speedway\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-fuji-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260927T020000Z
+DTEND:20260927T080000Z
+SUMMARY:FIA World Endurance Championship: 6 Hours of Fuji — 6 Hours of Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:6 Hours of Fuji — 6 Hours of Fuji\\nFuji Speedway\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-qatar-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261022T080000Z
+DTEND:20261022T093000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — 1812km of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice 1 — 1812km of Qatar\\nLusail International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-qatar-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261022T133000Z
+DTEND:20261022T150000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — 1812km of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice 2 — 1812km of Qatar\\nLusail International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-qatar-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261023T100000Z
+DTEND:20261023T103000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — 1812km of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Qualifying — 1812km of Qatar\\nLusail International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-qatar-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261023T111500Z
+DTEND:20261023T113000Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — 1812km of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Hyperpole — 1812km of Qatar\\nLusail International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-qatar-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261024T110000Z
+DTEND:20261024T230000Z
+SUMMARY:FIA World Endurance Championship: 1812km Race — 1812km of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:1812km Race — 1812km of Qatar\\nLusail International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-bahrain-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261105T080000Z
+DTEND:20261105T093000Z
+SUMMARY:FIA World Endurance Championship: Practice 1 — 8 Hours of Bahrain
+LOCATION:Bahrain International Circuit\, Bahrain
+DESCRIPTION:Practice 1 — 8 Hours of Bahrain\\nBahrain International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-bahrain-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261105T130000Z
+DTEND:20261105T143000Z
+SUMMARY:FIA World Endurance Championship: Practice 2 — 8 Hours of Bahrain
+LOCATION:Bahrain International Circuit\, Bahrain
+DESCRIPTION:Practice 2 — 8 Hours of Bahrain\\nBahrain International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-bahrain-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261106T100000Z
+DTEND:20261106T103000Z
+SUMMARY:FIA World Endurance Championship: Qualifying — 8 Hours of Bahrain
+LOCATION:Bahrain International Circuit\, Bahrain
+DESCRIPTION:Qualifying — 8 Hours of Bahrain\\nBahrain International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-bahrain-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261106T110000Z
+DTEND:20261106T111500Z
+SUMMARY:FIA World Endurance Championship: Hyperpole — 8 Hours of Bahrain
+LOCATION:Bahrain International Circuit\, Bahrain
+DESCRIPTION:Hyperpole — 8 Hours of Bahrain\\nBahrain International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:wec-2026-bahrain-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261107T100000Z
+DTEND:20261107T180000Z
+SUMMARY:FIA World Endurance Championship: 8 Hours of Bahrain — 8 Hours of Bahrain
+LOCATION:Bahrain International Circuit\, Bahrain
+DESCRIPTION:8 Hours of Bahrain — 8 Hours of Bahrain\\nBahrain International Circuit\\nFIA World Endurance Championship
+END:VEVENT
+END:VCALENDAR

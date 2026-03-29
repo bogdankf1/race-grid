@@ -1,0 +1,567 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — Supercars Championship
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:sc-2026-sydney-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260219T230000Z
+DTEND:20260219T234500Z
+SUMMARY:Supercars Championship: Practice — Sydney 500
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Practice — Sydney 500\\nSydney Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sydney-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260220T020000Z
+DTEND:20260220T022000Z
+SUMMARY:Supercars Championship: Qualifying — Sydney 500
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Qualifying — Sydney 500\\nSydney Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sydney-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260220T041000Z
+DTEND:20260220T052000Z
+SUMMARY:Supercars Championship: Race 1 — Sydney 500
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Race 1 — Sydney 500\\nSydney Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sydney-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260221T000000Z
+DTEND:20260221T002000Z
+SUMMARY:Supercars Championship: Qualifying 2 — Sydney 500
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Qualifying 2 — Sydney 500\\nSydney Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sydney-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260221T024000Z
+DTEND:20260221T035000Z
+SUMMARY:Supercars Championship: Race 2 — Sydney 500
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Race 2 — Sydney 500\\nSydney Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sydney-s5@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260222T024000Z
+DTEND:20260222T035000Z
+SUMMARY:Supercars Championship: Race 3 — Sydney 500
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Race 3 — Sydney 500\\nSydney Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-melbourne-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260305T000000Z
+DTEND:20260305T003000Z
+SUMMARY:Supercars Championship: Practice — Melbourne SuperSprint
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Practice — Melbourne SuperSprint\\nAlbert Park Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-melbourne-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260305T020000Z
+DTEND:20260305T022000Z
+SUMMARY:Supercars Championship: Qualifying — Melbourne SuperSprint
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Qualifying — Melbourne SuperSprint\\nAlbert Park Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-melbourne-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260306T020000Z
+DTEND:20260306T024000Z
+SUMMARY:Supercars Championship: Race 1 — Melbourne SuperSprint
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Race 1 — Melbourne SuperSprint\\nAlbert Park Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-melbourne-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260307T020000Z
+DTEND:20260307T024000Z
+SUMMARY:Supercars Championship: Race 2 — Melbourne SuperSprint
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Race 2 — Melbourne SuperSprint\\nAlbert Park Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-melbourne-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260308T020000Z
+DTEND:20260308T024000Z
+SUMMARY:Supercars Championship: Race 3 — Melbourne SuperSprint
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Race 3 — Melbourne SuperSprint\\nAlbert Park Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-taupo-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260416T220000Z
+DTEND:20260416T224500Z
+SUMMARY:Supercars Championship: Practice — ITM Taupō Super 440
+LOCATION:Taupo Motorsport Park\, New Zealand
+DESCRIPTION:Practice — ITM Taupō Super 440\\nTaupo Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-taupo-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260417T010000Z
+DTEND:20260417T012000Z
+SUMMARY:Supercars Championship: Qualifying — ITM Taupō Super 440
+LOCATION:Taupo Motorsport Park\, New Zealand
+DESCRIPTION:Qualifying — ITM Taupō Super 440\\nTaupo Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-taupo-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260418T020000Z
+DTEND:20260418T030000Z
+SUMMARY:Supercars Championship: Race 1 — ITM Taupō Super 440
+LOCATION:Taupo Motorsport Park\, New Zealand
+DESCRIPTION:Race 1 — ITM Taupō Super 440\\nTaupo Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-taupo-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260419T020000Z
+DTEND:20260419T030000Z
+SUMMARY:Supercars Championship: Race 2 — ITM Taupō Super 440
+LOCATION:Taupo Motorsport Park\, New Zealand
+DESCRIPTION:Race 2 — ITM Taupō Super 440\\nTaupo Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-christchurch-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260521T220000Z
+DTEND:20260521T224500Z
+SUMMARY:Supercars Championship: Practice — ITM Christchurch Super 440
+LOCATION:Mike Pero Motorsport Park\, New Zealand
+DESCRIPTION:Practice — ITM Christchurch Super 440\\nMike Pero Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-christchurch-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260522T010000Z
+DTEND:20260522T012000Z
+SUMMARY:Supercars Championship: Qualifying — ITM Christchurch Super 440
+LOCATION:Mike Pero Motorsport Park\, New Zealand
+DESCRIPTION:Qualifying — ITM Christchurch Super 440\\nMike Pero Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-christchurch-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260523T020000Z
+DTEND:20260523T030000Z
+SUMMARY:Supercars Championship: Race 1 — ITM Christchurch Super 440
+LOCATION:Mike Pero Motorsport Park\, New Zealand
+DESCRIPTION:Race 1 — ITM Christchurch Super 440\\nMike Pero Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-christchurch-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260524T020000Z
+DTEND:20260524T030000Z
+SUMMARY:Supercars Championship: Race 2 — ITM Christchurch Super 440
+LOCATION:Mike Pero Motorsport Park\, New Zealand
+DESCRIPTION:Race 2 — ITM Christchurch Super 440\\nMike Pero Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-tasmania-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260618T230000Z
+DTEND:20260618T234500Z
+SUMMARY:Supercars Championship: Practice — Tyrepower Tasmania Super 440
+LOCATION:Symmons Plains Raceway\, Australia
+DESCRIPTION:Practice — Tyrepower Tasmania Super 440\\nSymmons Plains Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-tasmania-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260619T020000Z
+DTEND:20260619T022000Z
+SUMMARY:Supercars Championship: Qualifying — Tyrepower Tasmania Super 440
+LOCATION:Symmons Plains Raceway\, Australia
+DESCRIPTION:Qualifying — Tyrepower Tasmania Super 440\\nSymmons Plains Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-tasmania-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260620T020000Z
+DTEND:20260620T025500Z
+SUMMARY:Supercars Championship: Race 1 — Tyrepower Tasmania Super 440
+LOCATION:Symmons Plains Raceway\, Australia
+DESCRIPTION:Race 1 — Tyrepower Tasmania Super 440\\nSymmons Plains Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-tasmania-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260621T020000Z
+DTEND:20260621T025500Z
+SUMMARY:Supercars Championship: Race 2 — Tyrepower Tasmania Super 440
+LOCATION:Symmons Plains Raceway\, Australia
+DESCRIPTION:Race 2 — Tyrepower Tasmania Super 440\\nSymmons Plains Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-darwin-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260710T030000Z
+DTEND:20260710T034500Z
+SUMMARY:Supercars Championship: Practice — betr Darwin Triple Crown
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Practice — betr Darwin Triple Crown\\nHidden Valley Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-darwin-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260711T033000Z
+DTEND:20260711T035000Z
+SUMMARY:Supercars Championship: Qualifying — betr Darwin Triple Crown
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Qualifying — betr Darwin Triple Crown\\nHidden Valley Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-darwin-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260711T051500Z
+DTEND:20260711T061000Z
+SUMMARY:Supercars Championship: Race 1 — betr Darwin Triple Crown
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Race 1 — betr Darwin Triple Crown\\nHidden Valley Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-darwin-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260712T033000Z
+DTEND:20260712T042500Z
+SUMMARY:Supercars Championship: Race 2 — betr Darwin Triple Crown
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Race 2 — betr Darwin Triple Crown\\nHidden Valley Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-darwin-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260712T051500Z
+DTEND:20260712T061000Z
+SUMMARY:Supercars Championship: Race 3 — betr Darwin Triple Crown
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Race 3 — betr Darwin Triple Crown\\nHidden Valley Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-townsville-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260731T000000Z
+DTEND:20260731T004500Z
+SUMMARY:Supercars Championship: Practice — NTI Townsville 500
+LOCATION:Townsville Street Circuit\, Australia
+DESCRIPTION:Practice — NTI Townsville 500\\nTownsville Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-townsville-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260731T030000Z
+DTEND:20260731T032000Z
+SUMMARY:Supercars Championship: Qualifying — NTI Townsville 500
+LOCATION:Townsville Street Circuit\, Australia
+DESCRIPTION:Qualifying — NTI Townsville 500\\nTownsville Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-townsville-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260801T034500Z
+DTEND:20260801T050000Z
+SUMMARY:Supercars Championship: Race 1 — NTI Townsville 500
+LOCATION:Townsville Street Circuit\, Australia
+DESCRIPTION:Race 1 — NTI Townsville 500\\nTownsville Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-townsville-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260802T034500Z
+DTEND:20260802T050000Z
+SUMMARY:Supercars Championship: Race 2 — NTI Townsville 500
+LOCATION:Townsville Street Circuit\, Australia
+DESCRIPTION:Race 2 — NTI Townsville 500\\nTownsville Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-perth-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260821T010000Z
+DTEND:20260821T014500Z
+SUMMARY:Supercars Championship: Practice — Perth Super 440
+LOCATION:Wanneroo Raceway\, Australia
+DESCRIPTION:Practice — Perth Super 440\\nWanneroo Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-perth-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260821T040000Z
+DTEND:20260821T042000Z
+SUMMARY:Supercars Championship: Qualifying — Perth Super 440
+LOCATION:Wanneroo Raceway\, Australia
+DESCRIPTION:Qualifying — Perth Super 440\\nWanneroo Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-perth-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260822T040000Z
+DTEND:20260822T050000Z
+SUMMARY:Supercars Championship: Race 1 — Perth Super 440
+LOCATION:Wanneroo Raceway\, Australia
+DESCRIPTION:Race 1 — Perth Super 440\\nWanneroo Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-perth-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260823T040000Z
+DTEND:20260823T050000Z
+SUMMARY:Supercars Championship: Race 2 — Perth Super 440
+LOCATION:Wanneroo Raceway\, Australia
+DESCRIPTION:Race 2 — Perth Super 440\\nWanneroo Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-ipswich-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260910T230000Z
+DTEND:20260910T234500Z
+SUMMARY:Supercars Championship: Practice — Century Batteries Ipswich Super 440
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Practice — Century Batteries Ipswich Super 440\\nQueensland Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-ipswich-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260911T020000Z
+DTEND:20260911T022000Z
+SUMMARY:Supercars Championship: Qualifying — Century Batteries Ipswich Super 440
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Qualifying — Century Batteries Ipswich Super 440\\nQueensland Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-ipswich-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260912T020000Z
+DTEND:20260912T030000Z
+SUMMARY:Supercars Championship: Race 1 — Century Batteries Ipswich Super 440
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Race 1 — Century Batteries Ipswich Super 440\\nQueensland Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-ipswich-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260913T020000Z
+DTEND:20260913T030000Z
+SUMMARY:Supercars Championship: Race 2 — Century Batteries Ipswich Super 440
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Race 2 — Century Batteries Ipswich Super 440\\nQueensland Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-the-bend-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260925T000000Z
+DTEND:20260925T010000Z
+SUMMARY:Supercars Championship: Practice 1 — The Bend 500
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Practice 1 — The Bend 500\\nThe Bend Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-the-bend-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260925T040000Z
+DTEND:20260925T050000Z
+SUMMARY:Supercars Championship: Practice 2 — The Bend 500
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Practice 2 — The Bend 500\\nThe Bend Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-the-bend-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260926T020000Z
+DTEND:20260926T022000Z
+SUMMARY:Supercars Championship: Qualifying — The Bend 500
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Qualifying — The Bend 500\\nThe Bend Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-the-bend-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260927T013000Z
+DTEND:20260927T053000Z
+SUMMARY:Supercars Championship: The Bend 500 — The Bend 500
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:The Bend 500 — The Bend 500\\nThe Bend Motorsport Park\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-bathurst-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261022T000000Z
+DTEND:20261022T010000Z
+SUMMARY:Supercars Championship: Practice 1 — Repco Bathurst 1000
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Practice 1 — Repco Bathurst 1000\\nMount Panorama Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-bathurst-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261022T040000Z
+DTEND:20261022T050000Z
+SUMMARY:Supercars Championship: Practice 2 — Repco Bathurst 1000
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Practice 2 — Repco Bathurst 1000\\nMount Panorama Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-bathurst-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261023T000000Z
+DTEND:20261023T010000Z
+SUMMARY:Supercars Championship: Practice 3 — Repco Bathurst 1000
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Practice 3 — Repco Bathurst 1000\\nMount Panorama Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-bathurst-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261023T030000Z
+DTEND:20261023T034000Z
+SUMMARY:Supercars Championship: Qualifying — Repco Bathurst 1000
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Qualifying — Repco Bathurst 1000\\nMount Panorama Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-bathurst-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261024T220000Z
+DTEND:20261024T222000Z
+SUMMARY:Supercars Championship: Warmup — Repco Bathurst 1000
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Warmup — Repco Bathurst 1000\\nMount Panorama Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-bathurst-s5@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261025T001500Z
+DTEND:20261025T071500Z
+SUMMARY:Supercars Championship: Bathurst 1000 — Repco Bathurst 1000
+LOCATION:Mount Panorama Circuit\, Australia
+DESCRIPTION:Bathurst 1000 — Repco Bathurst 1000\\nMount Panorama Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-gold-coast-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261106T000000Z
+DTEND:20261106T004500Z
+SUMMARY:Supercars Championship: Practice — Boost Mobile Gold Coast 500
+LOCATION:Surfers Paradise Street Circuit\, Australia
+DESCRIPTION:Practice — Boost Mobile Gold Coast 500\\nSurfers Paradise Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-gold-coast-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261106T030000Z
+DTEND:20261106T032000Z
+SUMMARY:Supercars Championship: Qualifying — Boost Mobile Gold Coast 500
+LOCATION:Surfers Paradise Street Circuit\, Australia
+DESCRIPTION:Qualifying — Boost Mobile Gold Coast 500\\nSurfers Paradise Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-gold-coast-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261107T033000Z
+DTEND:20261107T044500Z
+SUMMARY:Supercars Championship: Race 1 — Boost Mobile Gold Coast 500
+LOCATION:Surfers Paradise Street Circuit\, Australia
+DESCRIPTION:Race 1 — Boost Mobile Gold Coast 500\\nSurfers Paradise Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-gold-coast-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261108T033000Z
+DTEND:20261108T044500Z
+SUMMARY:Supercars Championship: Race 2 — Boost Mobile Gold Coast 500
+LOCATION:Surfers Paradise Street Circuit\, Australia
+DESCRIPTION:Race 2 — Boost Mobile Gold Coast 500\\nSurfers Paradise Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sandown-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261125T220000Z
+DTEND:20261125T230000Z
+SUMMARY:Supercars Championship: Practice 1 — Penrite Oil Sandown 500
+LOCATION:Sandown Raceway\, Australia
+DESCRIPTION:Practice 1 — Penrite Oil Sandown 500\\nSandown Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sandown-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261126T020000Z
+DTEND:20261126T030000Z
+SUMMARY:Supercars Championship: Practice 2 — Penrite Oil Sandown 500
+LOCATION:Sandown Raceway\, Australia
+DESCRIPTION:Practice 2 — Penrite Oil Sandown 500\\nSandown Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sandown-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261127T020000Z
+DTEND:20261127T022000Z
+SUMMARY:Supercars Championship: Qualifying — Penrite Oil Sandown 500
+LOCATION:Sandown Raceway\, Australia
+DESCRIPTION:Qualifying — Penrite Oil Sandown 500\\nSandown Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-sandown-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261128T013000Z
+DTEND:20261128T053000Z
+SUMMARY:Supercars Championship: Sandown 500 — Penrite Oil Sandown 500
+LOCATION:Sandown Raceway\, Australia
+DESCRIPTION:Sandown 500 — Penrite Oil Sandown 500\\nSandown Raceway\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-adelaide-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261126T000000Z
+DTEND:20261126T004500Z
+SUMMARY:Supercars Championship: Practice — bp Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Practice — bp Adelaide Grand Final\\nAdelaide Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-adelaide-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261127T020000Z
+DTEND:20261127T022000Z
+SUMMARY:Supercars Championship: Qualifying — bp Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Qualifying — bp Adelaide Grand Final\\nAdelaide Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-adelaide-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261128T040000Z
+DTEND:20261128T051500Z
+SUMMARY:Supercars Championship: Race 1 — bp Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Race 1 — bp Adelaide Grand Final\\nAdelaide Street Circuit\\nSupercars Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:sc-2026-adelaide-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261129T040000Z
+DTEND:20261129T051500Z
+SUMMARY:Supercars Championship: Race 2 — bp Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Race 2 — bp Adelaide Grand Final\\nAdelaide Street Circuit\\nSupercars Championship
+END:VEVENT
+END:VCALENDAR

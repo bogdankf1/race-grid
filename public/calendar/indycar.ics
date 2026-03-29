@@ -1,0 +1,495 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — IndyCar Series
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:indycar-2026-st-petersburg-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260227T170000Z
+DTEND:20260227T181500Z
+SUMMARY:IndyCar Series: Practice — Firestone Grand Prix of St. Petersburg
+LOCATION:Streets of St. Petersburg\, United States
+DESCRIPTION:Practice — Firestone Grand Prix of St. Petersburg\\nStreets of St. Petersburg\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-st-petersburg-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260228T173000Z
+DTEND:20260228T183000Z
+SUMMARY:IndyCar Series: Qualifying — Firestone Grand Prix of St. Petersburg
+LOCATION:Streets of St. Petersburg\, United States
+DESCRIPTION:Qualifying — Firestone Grand Prix of St. Petersburg\\nStreets of St. Petersburg\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-st-petersburg-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260301T170000Z
+DTEND:20260301T190000Z
+SUMMARY:IndyCar Series: Race — Firestone Grand Prix of St. Petersburg
+LOCATION:Streets of St. Petersburg\, United States
+DESCRIPTION:Race — Firestone Grand Prix of St. Petersburg\\nStreets of St. Petersburg\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-phoenix-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260306T200000Z
+DTEND:20260306T210000Z
+SUMMARY:IndyCar Series: Practice — Good Ranchers 250
+LOCATION:Phoenix Raceway\, United States
+DESCRIPTION:Practice — Good Ranchers 250\\nPhoenix Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-phoenix-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260307T000000Z
+DTEND:20260307T010000Z
+SUMMARY:IndyCar Series: Qualifying — Good Ranchers 250
+LOCATION:Phoenix Raceway\, United States
+DESCRIPTION:Qualifying — Good Ranchers 250\\nPhoenix Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-phoenix-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260307T200000Z
+DTEND:20260307T220000Z
+SUMMARY:IndyCar Series: Race — Good Ranchers 250
+LOCATION:Phoenix Raceway\, United States
+DESCRIPTION:Race — Good Ranchers 250\\nPhoenix Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-arlington-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260314T160000Z
+DTEND:20260314T171500Z
+SUMMARY:IndyCar Series: Practice — Java House Grand Prix of Arlington
+LOCATION:Streets of Arlington\, United States
+DESCRIPTION:Practice — Java House Grand Prix of Arlington\\nStreets of Arlington\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-arlington-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260314T200000Z
+DTEND:20260314T210000Z
+SUMMARY:IndyCar Series: Qualifying — Java House Grand Prix of Arlington
+LOCATION:Streets of Arlington\, United States
+DESCRIPTION:Qualifying — Java House Grand Prix of Arlington\\nStreets of Arlington\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-arlington-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260315T163000Z
+DTEND:20260315T183000Z
+SUMMARY:IndyCar Series: Race — Java House Grand Prix of Arlington
+LOCATION:Streets of Arlington\, United States
+DESCRIPTION:Race — Java House Grand Prix of Arlington\\nStreets of Arlington\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-barber-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260328T150000Z
+DTEND:20260328T161500Z
+SUMMARY:IndyCar Series: Practice — Children's of Alabama Indy Grand Prix
+LOCATION:Barber Motorsports Park\, United States
+DESCRIPTION:Practice — Children's of Alabama Indy Grand Prix\\nBarber Motorsports Park\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-barber-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260328T190000Z
+DTEND:20260328T200000Z
+SUMMARY:IndyCar Series: Qualifying — Children's of Alabama Indy Grand Prix
+LOCATION:Barber Motorsports Park\, United States
+DESCRIPTION:Qualifying — Children's of Alabama Indy Grand Prix\\nBarber Motorsports Park\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-barber-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260329T170000Z
+DTEND:20260329T190000Z
+SUMMARY:IndyCar Series: Race — Children's of Alabama Indy Grand Prix
+LOCATION:Barber Motorsports Park\, United States
+DESCRIPTION:Race — Children's of Alabama Indy Grand Prix\\nBarber Motorsports Park\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-long-beach-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260417T190000Z
+DTEND:20260417T201500Z
+SUMMARY:IndyCar Series: Practice — Acura Grand Prix of Long Beach
+LOCATION:Streets of Long Beach\, United States
+DESCRIPTION:Practice — Acura Grand Prix of Long Beach\\nStreets of Long Beach\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-long-beach-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260418T210000Z
+DTEND:20260418T220000Z
+SUMMARY:IndyCar Series: Qualifying — Acura Grand Prix of Long Beach
+LOCATION:Streets of Long Beach\, United States
+DESCRIPTION:Qualifying — Acura Grand Prix of Long Beach\\nStreets of Long Beach\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-long-beach-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260419T213000Z
+DTEND:20260419T233000Z
+SUMMARY:IndyCar Series: Race — Acura Grand Prix of Long Beach
+LOCATION:Streets of Long Beach\, United States
+DESCRIPTION:Race — Acura Grand Prix of Long Beach\\nStreets of Long Beach\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-indianapolis-gp-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260508T160000Z
+DTEND:20260508T171500Z
+SUMMARY:IndyCar Series: Practice — Sonsio Grand Prix
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Practice — Sonsio Grand Prix\\nIndianapolis Motor Speedway (Road Course)\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-indianapolis-gp-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260509T183000Z
+DTEND:20260509T193000Z
+SUMMARY:IndyCar Series: Qualifying — Sonsio Grand Prix
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Qualifying — Sonsio Grand Prix\\nIndianapolis Motor Speedway (Road Course)\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-indianapolis-gp-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260509T203000Z
+DTEND:20260509T223000Z
+SUMMARY:IndyCar Series: Race — Sonsio Grand Prix
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Race — Sonsio Grand Prix\\nIndianapolis Motor Speedway (Road Course)\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-indy500-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260518T150000Z
+DTEND:20260518T210000Z
+SUMMARY:IndyCar Series: Practice - Opening Day — 110th Indianapolis 500
+LOCATION:Indianapolis Motor Speedway (Oval)\, United States
+DESCRIPTION:Practice - Opening Day — 110th Indianapolis 500\\nIndianapolis Motor Speedway (Oval)\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-indy500-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260523T150000Z
+DTEND:20260523T210000Z
+SUMMARY:IndyCar Series: Qualifying - Day 1 — 110th Indianapolis 500
+LOCATION:Indianapolis Motor Speedway (Oval)\, United States
+DESCRIPTION:Qualifying - Day 1 — 110th Indianapolis 500\\nIndianapolis Motor Speedway (Oval)\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-indy500-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260524T150000Z
+DTEND:20260524T200000Z
+SUMMARY:IndyCar Series: Qualifying - Day 2 — 110th Indianapolis 500
+LOCATION:Indianapolis Motor Speedway (Oval)\, United States
+DESCRIPTION:Qualifying - Day 2 — 110th Indianapolis 500\\nIndianapolis Motor Speedway (Oval)\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-indy500-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260524T140000Z
+DTEND:20260524T172000Z
+SUMMARY:IndyCar Series: Indianapolis 500 — 110th Indianapolis 500
+LOCATION:Indianapolis Motor Speedway (Oval)\, United States
+DESCRIPTION:Indianapolis 500 — 110th Indianapolis 500\\nIndianapolis Motor Speedway (Oval)\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-detroit-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260530T160000Z
+DTEND:20260530T171500Z
+SUMMARY:IndyCar Series: Practice — Chevrolet Detroit Grand Prix
+LOCATION:Streets of Detroit\, United States
+DESCRIPTION:Practice — Chevrolet Detroit Grand Prix\\nStreets of Detroit\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-detroit-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260530T200000Z
+DTEND:20260530T210000Z
+SUMMARY:IndyCar Series: Qualifying — Chevrolet Detroit Grand Prix
+LOCATION:Streets of Detroit\, United States
+DESCRIPTION:Qualifying — Chevrolet Detroit Grand Prix\\nStreets of Detroit\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-detroit-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260531T163000Z
+DTEND:20260531T183000Z
+SUMMARY:IndyCar Series: Race — Chevrolet Detroit Grand Prix
+LOCATION:Streets of Detroit\, United States
+DESCRIPTION:Race — Chevrolet Detroit Grand Prix\\nStreets of Detroit\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-wwtr-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260606T200000Z
+DTEND:20260606T210000Z
+SUMMARY:IndyCar Series: Practice — Bommarito Automotive Group 500
+LOCATION:World Wide Technology Raceway\, United States
+DESCRIPTION:Practice — Bommarito Automotive Group 500\\nWorld Wide Technology Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-wwtr-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260607T000000Z
+DTEND:20260607T010000Z
+SUMMARY:IndyCar Series: Qualifying — Bommarito Automotive Group 500
+LOCATION:World Wide Technology Raceway\, United States
+DESCRIPTION:Qualifying — Bommarito Automotive Group 500\\nWorld Wide Technology Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-wwtr-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260608T010000Z
+DTEND:20260608T030000Z
+SUMMARY:IndyCar Series: Race — Bommarito Automotive Group 500
+LOCATION:World Wide Technology Raceway\, United States
+DESCRIPTION:Race — Bommarito Automotive Group 500\\nWorld Wide Technology Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-road-america-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260620T160000Z
+DTEND:20260620T171500Z
+SUMMARY:IndyCar Series: Practice — XPEL Grand Prix at Road America
+LOCATION:Road America\, United States
+DESCRIPTION:Practice — XPEL Grand Prix at Road America\\nRoad America\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-road-america-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260620T200000Z
+DTEND:20260620T210000Z
+SUMMARY:IndyCar Series: Qualifying — XPEL Grand Prix at Road America
+LOCATION:Road America\, United States
+DESCRIPTION:Qualifying — XPEL Grand Prix at Road America\\nRoad America\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-road-america-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260621T180000Z
+DTEND:20260621T200000Z
+SUMMARY:IndyCar Series: Race — XPEL Grand Prix at Road America
+LOCATION:Road America\, United States
+DESCRIPTION:Race — XPEL Grand Prix at Road America\\nRoad America\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-mid-ohio-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260704T150000Z
+DTEND:20260704T161500Z
+SUMMARY:IndyCar Series: Practice — Honda Indy 200 at Mid-Ohio
+LOCATION:Mid-Ohio Sports Car Course\, United States
+DESCRIPTION:Practice — Honda Indy 200 at Mid-Ohio\\nMid-Ohio Sports Car Course\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-mid-ohio-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260704T190000Z
+DTEND:20260704T200000Z
+SUMMARY:IndyCar Series: Qualifying — Honda Indy 200 at Mid-Ohio
+LOCATION:Mid-Ohio Sports Car Course\, United States
+DESCRIPTION:Qualifying — Honda Indy 200 at Mid-Ohio\\nMid-Ohio Sports Car Course\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-mid-ohio-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260705T163000Z
+DTEND:20260705T183000Z
+SUMMARY:IndyCar Series: Race — Honda Indy 200 at Mid-Ohio
+LOCATION:Mid-Ohio Sports Car Course\, United States
+DESCRIPTION:Race — Honda Indy 200 at Mid-Ohio\\nMid-Ohio Sports Car Course\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-nashville-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260718T180000Z
+DTEND:20260718T190000Z
+SUMMARY:IndyCar Series: Practice — Borchetta Bourbon Music City Grand Prix
+LOCATION:Nashville Superspeedway\, United States
+DESCRIPTION:Practice — Borchetta Bourbon Music City Grand Prix\\nNashville Superspeedway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-nashville-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260718T220000Z
+DTEND:20260718T230000Z
+SUMMARY:IndyCar Series: Qualifying — Borchetta Bourbon Music City Grand Prix
+LOCATION:Nashville Superspeedway\, United States
+DESCRIPTION:Qualifying — Borchetta Bourbon Music City Grand Prix\\nNashville Superspeedway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-nashville-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260719T200000Z
+DTEND:20260719T220000Z
+SUMMARY:IndyCar Series: Race — Borchetta Bourbon Music City Grand Prix
+LOCATION:Nashville Superspeedway\, United States
+DESCRIPTION:Race — Borchetta Bourbon Music City Grand Prix\\nNashville Superspeedway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-portland-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260808T190000Z
+DTEND:20260808T201500Z
+SUMMARY:IndyCar Series: Practice — BITNILE.com Grand Prix of Portland
+LOCATION:Portland International Raceway\, United States
+DESCRIPTION:Practice — BITNILE.com Grand Prix of Portland\\nPortland International Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-portland-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260808T230000Z
+DTEND:20260809T000000Z
+SUMMARY:IndyCar Series: Qualifying — BITNILE.com Grand Prix of Portland
+LOCATION:Portland International Raceway\, United States
+DESCRIPTION:Qualifying — BITNILE.com Grand Prix of Portland\\nPortland International Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-portland-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260809T200000Z
+DTEND:20260809T220000Z
+SUMMARY:IndyCar Series: Race — BITNILE.com Grand Prix of Portland
+LOCATION:Portland International Raceway\, United States
+DESCRIPTION:Race — BITNILE.com Grand Prix of Portland\\nPortland International Raceway\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-markham-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260815T150000Z
+DTEND:20260815T161500Z
+SUMMARY:IndyCar Series: Practice — Ontario Honda Dealers Indy at Markham
+LOCATION:Streets of Markham\, Canada
+DESCRIPTION:Practice — Ontario Honda Dealers Indy at Markham\\nStreets of Markham\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-markham-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260815T190000Z
+DTEND:20260815T200000Z
+SUMMARY:IndyCar Series: Qualifying — Ontario Honda Dealers Indy at Markham
+LOCATION:Streets of Markham\, Canada
+DESCRIPTION:Qualifying — Ontario Honda Dealers Indy at Markham\\nStreets of Markham\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-markham-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260816T160000Z
+DTEND:20260816T180000Z
+SUMMARY:IndyCar Series: Race — Ontario Honda Dealers Indy at Markham
+LOCATION:Streets of Markham\, Canada
+DESCRIPTION:Race — Ontario Honda Dealers Indy at Markham\\nStreets of Markham\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-washington-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260822T160000Z
+DTEND:20260822T171500Z
+SUMMARY:IndyCar Series: Practice — Freedom 250 Grand Prix of Washington\, D.C.
+LOCATION:Streets of Washington\, D.C.\, United States
+DESCRIPTION:Practice — Freedom 250 Grand Prix of Washington\, D.C.\\nStreets of Washington\, D.C.\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-washington-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260822T200000Z
+DTEND:20260822T210000Z
+SUMMARY:IndyCar Series: Qualifying — Freedom 250 Grand Prix of Washington\, D.C.
+LOCATION:Streets of Washington\, D.C.\, United States
+DESCRIPTION:Qualifying — Freedom 250 Grand Prix of Washington\, D.C.\\nStreets of Washington\, D.C.\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-washington-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260823T180000Z
+DTEND:20260823T200000Z
+SUMMARY:IndyCar Series: Race — Freedom 250 Grand Prix of Washington\, D.C.
+LOCATION:Streets of Washington\, D.C.\, United States
+DESCRIPTION:Race — Freedom 250 Grand Prix of Washington\, D.C.\\nStreets of Washington\, D.C.\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-milwaukee-1-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260828T180000Z
+DTEND:20260828T190000Z
+SUMMARY:IndyCar Series: Practice — Snap-on Makers and Fixers 250
+LOCATION:Milwaukee Mile\, United States
+DESCRIPTION:Practice — Snap-on Makers and Fixers 250\\nMilwaukee Mile\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-milwaukee-1-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260829T160000Z
+DTEND:20260829T170000Z
+SUMMARY:IndyCar Series: Qualifying — Snap-on Makers and Fixers 250
+LOCATION:Milwaukee Mile\, United States
+DESCRIPTION:Qualifying — Snap-on Makers and Fixers 250\\nMilwaukee Mile\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-milwaukee-1-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260829T183000Z
+DTEND:20260829T200000Z
+SUMMARY:IndyCar Series: Race 1 — Snap-on Makers and Fixers 250
+LOCATION:Milwaukee Mile\, United States
+DESCRIPTION:Race 1 — Snap-on Makers and Fixers 250\\nMilwaukee Mile\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-milwaukee-2-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260830T150000Z
+DTEND:20260830T160000Z
+SUMMARY:IndyCar Series: Qualifying — Snap-on Milwaukee Mile 250
+LOCATION:Milwaukee Mile\, United States
+DESCRIPTION:Qualifying — Snap-on Milwaukee Mile 250\\nMilwaukee Mile\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-milwaukee-2-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260830T170000Z
+DTEND:20260830T183000Z
+SUMMARY:IndyCar Series: Race 2 — Snap-on Milwaukee Mile 250
+LOCATION:Milwaukee Mile\, United States
+DESCRIPTION:Race 2 — Snap-on Milwaukee Mile 250\\nMilwaukee Mile\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-laguna-seca-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260905T190000Z
+DTEND:20260905T201500Z
+SUMMARY:IndyCar Series: Practice — Firestone Grand Prix of Monterey
+LOCATION:WeatherTech Raceway Laguna Seca\, United States
+DESCRIPTION:Practice — Firestone Grand Prix of Monterey\\nWeatherTech Raceway Laguna Seca\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-laguna-seca-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260905T230000Z
+DTEND:20260906T000000Z
+SUMMARY:IndyCar Series: Qualifying — Firestone Grand Prix of Monterey
+LOCATION:WeatherTech Raceway Laguna Seca\, United States
+DESCRIPTION:Qualifying — Firestone Grand Prix of Monterey\\nWeatherTech Raceway Laguna Seca\\nIndyCar Series
+END:VEVENT
+BEGIN:VEVENT
+UID:indycar-2026-laguna-seca-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260906T183000Z
+DTEND:20260906T203000Z
+SUMMARY:IndyCar Series: Race — Firestone Grand Prix of Monterey
+LOCATION:WeatherTech Raceway Laguna Seca\, United States
+DESCRIPTION:Race — Firestone Grand Prix of Monterey\\nWeatherTech Raceway Laguna Seca\\nIndyCar Series
+END:VEVENT
+END:VCALENDAR

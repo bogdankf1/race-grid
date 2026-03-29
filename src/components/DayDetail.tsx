@@ -167,7 +167,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                 )
               })()}
             </div>
-            <CalendarExport event={event} sessions={sessions} seriesName={series.name} locale={locale} />
+            <CalendarExport event={event} sessions={sessions} seriesName={series.name} seriesId={series.id} seriesEvents={series.events} locale={locale} />
           </div>
 
           <div className="rg-event-card-sessions">

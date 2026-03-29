@@ -25,25 +25,13 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 
 ## Features
 
-### 6. Offline caching in the service worker
-**What:** `public/sw.js` currently only handles notification scheduling. Add a cache-first strategy so the app works fully offline after first visit.
-**How:**
-- On `install` event: pre-cache the app shell (HTML pages, JS/CSS chunks, favicon, logos, manifest.json).
-- On `fetch` event: serve from cache first, fall back to network. For navigation requests, serve the cached `/` page (since it's a static SPA-like export).
-- On `activate` event: clean up old cache versions.
-- Use a versioned cache name (e.g., `race-grid-v1`) so deploying new builds invalidates stale caches.
-- Keep the existing notification scheduling logic intact — it uses `message` events, not `fetch`.
-**Test:** Install the PWA, go offline (airplane mode), verify the calendar still loads and navigates between days.
+### ~~6. Offline caching in the service worker~~ ✅
+~~**What:** `public/sw.js` currently only handles notification scheduling. Add a cache-first strategy so the app works fully offline after first visit.~~
+~~**How:** Pre-caches app shell on install, cache-first for static assets (JS/CSS/images), network-first with cache fallback for navigation requests. Versioned cache (`race-grid-v1`) with old cache cleanup on activate.~~
 
-### 7. iCal subscription URL
-**What:** Generate a `.ics` feed file at build time that users can subscribe to (webcal:// URL). Unlike the current one-time .ics download per event, a subscription auto-updates when schedules change.
-**How:**
-- At build time (via a script in `package.json` or a Next.js `generateStaticParams`-adjacent approach), generate `public/calendar/<series-id>.ics` files — one per series — containing all sessions for the current year.
-- Also generate `public/calendar/all.ics` with all series combined.
-- Add a "Subscribe to Calendar" option in the UI (header or filter dropdown) that opens a `webcal://race-grid.com/calendar/<series>.ics` link.
-- Use the existing `generateICS` helper in `src/lib/ical.ts` as a starting point, but adapt it for multi-event feeds with proper `VCALENDAR` wrapping and unique `UID` per session.
-- Include `REFRESH-INTERVAL` property so calendar apps poll for updates.
-**UX:** Add a small calendar icon button near the series filter or in settings. Clicking shows a modal/dropdown listing each series with a "Subscribe" link, plus an "All Series" option.
+### ~~7. iCal subscription URL~~ ✅
+~~**What:** Generate `.ics` feed files at build time that users can subscribe to via `webcal://` URL.~~
+~~**How:** `scripts/generate-ics.ts` runs as `prebuild`, generates `public/calendar/<series-id>.ics` + `public/calendar/all.ics`. CalendarExport dropdown includes "Subscribe to Calendar" link using `webcal://race-grid.com/calendar/<series>.ics`. Feeds include `REFRESH-INTERVAL:P1D` for auto-updating.~~
 
 ### 8. Expand broadcast data
 **What:** Add broadcast/streaming info for UK, Germany, Australia, Japan, and Brazil to `src/data/broadcasts.ts`. Currently only US and UA are supported.
@@ -58,12 +46,9 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 - Update the country detection logic in `src/data/broadcasts.ts` to map timezones from these regions to the correct country code.
 - Use WebSearch to verify current 2026 broadcast deals for accuracy. Broadcast rights change yearly.
 
-### 9. Bulk "Add to Google Calendar"
-**What:** Let users add an entire race weekend (all sessions) or an entire series season to Google Calendar in one click, instead of one session at a time.
-**How:**
-- In the day detail view's calendar export dropdown, add an "Add all sessions" option that opens Google Calendar with a batch of events. Google Calendar doesn't support multi-event URLs natively, so the best approach is to generate a single `.ics` file containing all sessions for the event and trigger a download (the user then imports it).
-- In a new "Season Calendar" section (accessible from series filter or a dedicated button), offer "Download full season .ics" per series.
-- Reuse `generateICS` from `src/lib/ical.ts`, extending it to accept multiple events.
+### ~~9. Bulk "Add to Google Calendar"~~ ✅
+~~**What:** Let users add an entire race weekend or series season to their calendar in one click.~~
+~~**How:** CalendarExport dropdown now has "All sessions (.ics)" for the current event weekend and "Full season (.ics)" for the entire series. Uses `downloadSeriesIcs()` in `src/lib/ical.ts`.~~
 
 ### 10. Spoiler-free mode
 **What:** A toggle that hides race results by default. Users who record races and watch later don't want to see "Winner: Antonelli" when they open the app to check tomorrow's schedule.

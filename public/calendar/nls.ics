@@ -1,0 +1,171 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — Nurburgring Langstrecken-Serie
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:nls-2026-2-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260321T073000Z
+DTEND:20260321T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — NLS 2 — 58. ADAC Barbarossapreis
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — NLS 2 — 58. ADAC Barbarossapreis\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-2-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260321T110000Z
+DTEND:20260321T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Race — NLS 2 — 58. ADAC Barbarossapreis
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Race — NLS 2 — 58. ADAC Barbarossapreis\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-3-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260411T073000Z
+DTEND:20260411T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — NLS 3 — 57. Adenauer ADAC Rundstrecken-Trophy
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — NLS 3 — 57. Adenauer ADAC Rundstrecken-Trophy\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-3-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260411T110000Z
+DTEND:20260411T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Race — NLS 3 — 57. Adenauer ADAC Rundstrecken-Trophy
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Race — NLS 3 — 57. Adenauer ADAC Rundstrecken-Trophy\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-24h-quali-1-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260418T073000Z
+DTEND:20260418T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — ADAC 24h Qualifier — Race 1
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — ADAC 24h Qualifier — Race 1\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-24h-quali-1-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260418T110000Z
+DTEND:20260418T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Qualifying Race 1 — ADAC 24h Qualifier — Race 1
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Qualifying Race 1 — ADAC 24h Qualifier — Race 1\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-24h-quali-2-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260419T073000Z
+DTEND:20260419T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — ADAC 24h Qualifier — Race 2
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — ADAC 24h Qualifier — Race 2\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-24h-quali-2-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260419T110000Z
+DTEND:20260419T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Qualifying Race 2 — ADAC 24h Qualifier — Race 2
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Qualifying Race 2 — ADAC 24h Qualifier — Race 2\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-6-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260620T073000Z
+DTEND:20260620T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — NLS 6 — 1. ADAC Eifel Trophy
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — NLS 6 — 1. ADAC Eifel Trophy\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-6-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260620T110000Z
+DTEND:20260620T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Race — NLS 6 — 1. ADAC Eifel Trophy
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Race — NLS 6 — 1. ADAC Eifel Trophy\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-7-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260801T073000Z
+DTEND:20260801T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — NLS 7 — KW 6h ADAC Ruhr-Pokal-Rennen
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — NLS 7 — KW 6h ADAC Ruhr-Pokal-Rennen\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-7-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260801T100000Z
+DTEND:20260801T160000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 6h Race — NLS 7 — KW 6h ADAC Ruhr-Pokal-Rennen
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:6h Race — NLS 7 — KW 6h ADAC Ruhr-Pokal-Rennen\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-8-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260912T073000Z
+DTEND:20260912T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — NLS 8 — 65. ADAC Reinoldus-Langstreckenrennen
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — NLS 8 — 65. ADAC Reinoldus-Langstreckenrennen\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-8-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260912T110000Z
+DTEND:20260912T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Race — NLS 8 — 65. ADAC Reinoldus-Langstreckenrennen
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Race — NLS 8 — 65. ADAC Reinoldus-Langstreckenrennen\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-9-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260913T073000Z
+DTEND:20260913T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — NLS 9 — 58. ADAC Barbarossapreis
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — NLS 9 — 58. ADAC Barbarossapreis\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-9-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260913T110000Z
+DTEND:20260913T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Race — NLS 9 — 58. ADAC Barbarossapreis
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Race — NLS 9 — 58. ADAC Barbarossapreis\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-10-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261010T073000Z
+DTEND:20261010T090000Z
+SUMMARY:Nurburgring Langstrecken-Serie: Qualifying — NLS 10 — 2. NLS Sportwarte-Trophy
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:Qualifying — NLS 10 — 2. NLS Sportwarte-Trophy\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+BEGIN:VEVENT
+UID:nls-2026-10-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261010T110000Z
+DTEND:20261010T150000Z
+SUMMARY:Nurburgring Langstrecken-Serie: 4h Race — NLS 10 — 2. NLS Sportwarte-Trophy
+LOCATION:Nurburgring Nordschleife\, Germany
+DESCRIPTION:4h Race — NLS 10 — 2. NLS Sportwarte-Trophy\\nNurburgring Nordschleife\\nNurburgring Langstrecken-Serie
+END:VEVENT
+END:VCALENDAR

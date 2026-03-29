@@ -1,0 +1,999 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — Formula 1
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:f1-2026-australia-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260306T013000Z
+DTEND:20260306T023000Z
+SUMMARY:Formula 1: Practice 1 — Australian Grand Prix
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Practice 1 — Australian Grand Prix\\nAlbert Park Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-australia-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260306T050000Z
+DTEND:20260306T060000Z
+SUMMARY:Formula 1: Practice 2 — Australian Grand Prix
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Practice 2 — Australian Grand Prix\\nAlbert Park Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-australia-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260307T013000Z
+DTEND:20260307T023000Z
+SUMMARY:Formula 1: Practice 3 — Australian Grand Prix
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Practice 3 — Australian Grand Prix\\nAlbert Park Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-australia-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260307T050000Z
+DTEND:20260307T060000Z
+SUMMARY:Formula 1: Qualifying — Australian Grand Prix
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Qualifying — Australian Grand Prix\\nAlbert Park Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-australia-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260308T040000Z
+DTEND:20260308T060000Z
+SUMMARY:Formula 1: Race — Australian Grand Prix
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Race — Australian Grand Prix\\nAlbert Park Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-china-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260313T033000Z
+DTEND:20260313T043000Z
+SUMMARY:Formula 1: Practice 1 — Chinese Grand Prix
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Practice 1 — Chinese Grand Prix\\nShanghai International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-china-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260313T073000Z
+DTEND:20260313T081500Z
+SUMMARY:Formula 1: Sprint Qualifying — Chinese Grand Prix
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Sprint Qualifying — Chinese Grand Prix\\nShanghai International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-china-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260314T030000Z
+DTEND:20260314T033000Z
+SUMMARY:Formula 1: Sprint — Chinese Grand Prix
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Sprint — Chinese Grand Prix\\nShanghai International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-china-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260314T070000Z
+DTEND:20260314T080000Z
+SUMMARY:Formula 1: Qualifying — Chinese Grand Prix
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Qualifying — Chinese Grand Prix\\nShanghai International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-china-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260315T070000Z
+DTEND:20260315T090000Z
+SUMMARY:Formula 1: Race — Chinese Grand Prix
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Race — Chinese Grand Prix\\nShanghai International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-japan-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260327T023000Z
+DTEND:20260327T033000Z
+SUMMARY:Formula 1: Practice 1 — Japanese Grand Prix
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Practice 1 — Japanese Grand Prix\\nSuzuka International Racing Course\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-japan-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260327T060000Z
+DTEND:20260327T070000Z
+SUMMARY:Formula 1: Practice 2 — Japanese Grand Prix
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Practice 2 — Japanese Grand Prix\\nSuzuka International Racing Course\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-japan-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260328T023000Z
+DTEND:20260328T033000Z
+SUMMARY:Formula 1: Practice 3 — Japanese Grand Prix
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Practice 3 — Japanese Grand Prix\\nSuzuka International Racing Course\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-japan-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260328T060000Z
+DTEND:20260328T070000Z
+SUMMARY:Formula 1: Qualifying — Japanese Grand Prix
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Qualifying — Japanese Grand Prix\\nSuzuka International Racing Course\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-japan-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260329T050000Z
+DTEND:20260329T070000Z
+SUMMARY:Formula 1: Race — Japanese Grand Prix
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Race — Japanese Grand Prix\\nSuzuka International Racing Course\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-miami-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260501T163000Z
+DTEND:20260501T173000Z
+SUMMARY:Formula 1: Practice 1 — Miami Grand Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Practice 1 — Miami Grand Prix\\nMiami International Autodrome\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-miami-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260501T203000Z
+DTEND:20260501T211500Z
+SUMMARY:Formula 1: Sprint Qualifying — Miami Grand Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Sprint Qualifying — Miami Grand Prix\\nMiami International Autodrome\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-miami-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260502T160000Z
+DTEND:20260502T163000Z
+SUMMARY:Formula 1: Sprint — Miami Grand Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Sprint — Miami Grand Prix\\nMiami International Autodrome\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-miami-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260502T200000Z
+DTEND:20260502T210000Z
+SUMMARY:Formula 1: Qualifying — Miami Grand Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Qualifying — Miami Grand Prix\\nMiami International Autodrome\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-miami-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260503T200000Z
+DTEND:20260503T220000Z
+SUMMARY:Formula 1: Race — Miami Grand Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Race — Miami Grand Prix\\nMiami International Autodrome\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-canada-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260522T163000Z
+DTEND:20260522T173000Z
+SUMMARY:Formula 1: Practice 1 — Canadian Grand Prix
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Practice 1 — Canadian Grand Prix\\nCircuit Gilles Villeneuve\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-canada-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260522T203000Z
+DTEND:20260522T211500Z
+SUMMARY:Formula 1: Sprint Qualifying — Canadian Grand Prix
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Sprint Qualifying — Canadian Grand Prix\\nCircuit Gilles Villeneuve\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-canada-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260523T160000Z
+DTEND:20260523T163000Z
+SUMMARY:Formula 1: Sprint — Canadian Grand Prix
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Sprint — Canadian Grand Prix\\nCircuit Gilles Villeneuve\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-canada-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260523T200000Z
+DTEND:20260523T210000Z
+SUMMARY:Formula 1: Qualifying — Canadian Grand Prix
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Qualifying — Canadian Grand Prix\\nCircuit Gilles Villeneuve\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-canada-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260524T200000Z
+DTEND:20260524T220000Z
+SUMMARY:Formula 1: Race — Canadian Grand Prix
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Race — Canadian Grand Prix\\nCircuit Gilles Villeneuve\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-monaco-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260605T113000Z
+DTEND:20260605T123000Z
+SUMMARY:Formula 1: Practice 1 — Monaco Grand Prix
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Practice 1 — Monaco Grand Prix\\nCircuit de Monaco\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-monaco-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260605T150000Z
+DTEND:20260605T160000Z
+SUMMARY:Formula 1: Practice 2 — Monaco Grand Prix
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Practice 2 — Monaco Grand Prix\\nCircuit de Monaco\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-monaco-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260606T103000Z
+DTEND:20260606T113000Z
+SUMMARY:Formula 1: Practice 3 — Monaco Grand Prix
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Practice 3 — Monaco Grand Prix\\nCircuit de Monaco\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-monaco-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260606T140000Z
+DTEND:20260606T150000Z
+SUMMARY:Formula 1: Qualifying — Monaco Grand Prix
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Qualifying — Monaco Grand Prix\\nCircuit de Monaco\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-monaco-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260607T130000Z
+DTEND:20260607T150000Z
+SUMMARY:Formula 1: Race — Monaco Grand Prix
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Race — Monaco Grand Prix\\nCircuit de Monaco\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-barcelona-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260612T113000Z
+DTEND:20260612T123000Z
+SUMMARY:Formula 1: Practice 1 — Barcelona-Catalunya Grand Prix
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice 1 — Barcelona-Catalunya Grand Prix\\nCircuit de Barcelona-Catalunya\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-barcelona-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260612T150000Z
+DTEND:20260612T160000Z
+SUMMARY:Formula 1: Practice 2 — Barcelona-Catalunya Grand Prix
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice 2 — Barcelona-Catalunya Grand Prix\\nCircuit de Barcelona-Catalunya\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-barcelona-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260613T103000Z
+DTEND:20260613T113000Z
+SUMMARY:Formula 1: Practice 3 — Barcelona-Catalunya Grand Prix
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice 3 — Barcelona-Catalunya Grand Prix\\nCircuit de Barcelona-Catalunya\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-barcelona-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260613T140000Z
+DTEND:20260613T150000Z
+SUMMARY:Formula 1: Qualifying — Barcelona-Catalunya Grand Prix
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Qualifying — Barcelona-Catalunya Grand Prix\\nCircuit de Barcelona-Catalunya\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-barcelona-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260614T130000Z
+DTEND:20260614T150000Z
+SUMMARY:Formula 1: Race — Barcelona-Catalunya Grand Prix
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Race — Barcelona-Catalunya Grand Prix\\nCircuit de Barcelona-Catalunya\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-austria-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260626T113000Z
+DTEND:20260626T123000Z
+SUMMARY:Formula 1: Practice 1 — Austrian Grand Prix
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Practice 1 — Austrian Grand Prix\\nRed Bull Ring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-austria-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260626T150000Z
+DTEND:20260626T160000Z
+SUMMARY:Formula 1: Practice 2 — Austrian Grand Prix
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Practice 2 — Austrian Grand Prix\\nRed Bull Ring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-austria-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260627T103000Z
+DTEND:20260627T113000Z
+SUMMARY:Formula 1: Practice 3 — Austrian Grand Prix
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Practice 3 — Austrian Grand Prix\\nRed Bull Ring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-austria-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260627T140000Z
+DTEND:20260627T150000Z
+SUMMARY:Formula 1: Qualifying — Austrian Grand Prix
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Qualifying — Austrian Grand Prix\\nRed Bull Ring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-austria-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260628T130000Z
+DTEND:20260628T150000Z
+SUMMARY:Formula 1: Race — Austrian Grand Prix
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Race — Austrian Grand Prix\\nRed Bull Ring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-great-britain-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260703T113000Z
+DTEND:20260703T123000Z
+SUMMARY:Formula 1: Practice 1 — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Practice 1 — British Grand Prix\\nSilverstone Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-great-britain-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260703T153000Z
+DTEND:20260703T161500Z
+SUMMARY:Formula 1: Sprint Qualifying — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Sprint Qualifying — British Grand Prix\\nSilverstone Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-great-britain-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260704T110000Z
+DTEND:20260704T113000Z
+SUMMARY:Formula 1: Sprint — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Sprint — British Grand Prix\\nSilverstone Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-great-britain-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260704T150000Z
+DTEND:20260704T160000Z
+SUMMARY:Formula 1: Qualifying — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Qualifying — British Grand Prix\\nSilverstone Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-great-britain-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260705T140000Z
+DTEND:20260705T160000Z
+SUMMARY:Formula 1: Race — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Race — British Grand Prix\\nSilverstone Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-belgium-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260717T113000Z
+DTEND:20260717T123000Z
+SUMMARY:Formula 1: Practice 1 — Belgian Grand Prix
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 1 — Belgian Grand Prix\\nCircuit de Spa-Francorchamps\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-belgium-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260717T150000Z
+DTEND:20260717T160000Z
+SUMMARY:Formula 1: Practice 2 — Belgian Grand Prix
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 2 — Belgian Grand Prix\\nCircuit de Spa-Francorchamps\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-belgium-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260718T103000Z
+DTEND:20260718T113000Z
+SUMMARY:Formula 1: Practice 3 — Belgian Grand Prix
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice 3 — Belgian Grand Prix\\nCircuit de Spa-Francorchamps\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-belgium-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260718T140000Z
+DTEND:20260718T150000Z
+SUMMARY:Formula 1: Qualifying — Belgian Grand Prix
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Qualifying — Belgian Grand Prix\\nCircuit de Spa-Francorchamps\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-belgium-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260719T130000Z
+DTEND:20260719T150000Z
+SUMMARY:Formula 1: Race — Belgian Grand Prix
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Race — Belgian Grand Prix\\nCircuit de Spa-Francorchamps\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-hungary-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260724T113000Z
+DTEND:20260724T123000Z
+SUMMARY:Formula 1: Practice 1 — Hungarian Grand Prix
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Practice 1 — Hungarian Grand Prix\\nHungaroring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-hungary-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260724T150000Z
+DTEND:20260724T160000Z
+SUMMARY:Formula 1: Practice 2 — Hungarian Grand Prix
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Practice 2 — Hungarian Grand Prix\\nHungaroring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-hungary-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260725T103000Z
+DTEND:20260725T113000Z
+SUMMARY:Formula 1: Practice 3 — Hungarian Grand Prix
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Practice 3 — Hungarian Grand Prix\\nHungaroring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-hungary-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260725T140000Z
+DTEND:20260725T150000Z
+SUMMARY:Formula 1: Qualifying — Hungarian Grand Prix
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Qualifying — Hungarian Grand Prix\\nHungaroring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-hungary-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260726T130000Z
+DTEND:20260726T150000Z
+SUMMARY:Formula 1: Race — Hungarian Grand Prix
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Race — Hungarian Grand Prix\\nHungaroring\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-netherlands-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260821T103000Z
+DTEND:20260821T113000Z
+SUMMARY:Formula 1: Practice 1 — Dutch Grand Prix
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Practice 1 — Dutch Grand Prix\\nCircuit Zandvoort\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-netherlands-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260821T143000Z
+DTEND:20260821T151500Z
+SUMMARY:Formula 1: Sprint Qualifying — Dutch Grand Prix
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Sprint Qualifying — Dutch Grand Prix\\nCircuit Zandvoort\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-netherlands-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260822T100000Z
+DTEND:20260822T103000Z
+SUMMARY:Formula 1: Sprint — Dutch Grand Prix
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Sprint — Dutch Grand Prix\\nCircuit Zandvoort\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-netherlands-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260822T140000Z
+DTEND:20260822T150000Z
+SUMMARY:Formula 1: Qualifying — Dutch Grand Prix
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Qualifying — Dutch Grand Prix\\nCircuit Zandvoort\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-netherlands-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260823T130000Z
+DTEND:20260823T150000Z
+SUMMARY:Formula 1: Race — Dutch Grand Prix
+LOCATION:Circuit Zandvoort\, Netherlands
+DESCRIPTION:Race — Dutch Grand Prix\\nCircuit Zandvoort\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-italy-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260904T103000Z
+DTEND:20260904T113000Z
+SUMMARY:Formula 1: Practice 1 — Italian Grand Prix
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Practice 1 — Italian Grand Prix\\nAutodromo Nazionale Monza\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-italy-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260904T140000Z
+DTEND:20260904T150000Z
+SUMMARY:Formula 1: Practice 2 — Italian Grand Prix
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Practice 2 — Italian Grand Prix\\nAutodromo Nazionale Monza\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-italy-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260905T103000Z
+DTEND:20260905T113000Z
+SUMMARY:Formula 1: Practice 3 — Italian Grand Prix
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Practice 3 — Italian Grand Prix\\nAutodromo Nazionale Monza\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-italy-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260905T140000Z
+DTEND:20260905T150000Z
+SUMMARY:Formula 1: Qualifying — Italian Grand Prix
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Qualifying — Italian Grand Prix\\nAutodromo Nazionale Monza\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-italy-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260906T130000Z
+DTEND:20260906T150000Z
+SUMMARY:Formula 1: Race — Italian Grand Prix
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Race — Italian Grand Prix\\nAutodromo Nazionale Monza\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-madrid-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260911T113000Z
+DTEND:20260911T123000Z
+SUMMARY:Formula 1: Practice 1 — Spanish Grand Prix
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Practice 1 — Spanish Grand Prix\\nCircuito de Madrid\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-madrid-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260911T150000Z
+DTEND:20260911T160000Z
+SUMMARY:Formula 1: Practice 2 — Spanish Grand Prix
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Practice 2 — Spanish Grand Prix\\nCircuito de Madrid\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-madrid-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260912T103000Z
+DTEND:20260912T113000Z
+SUMMARY:Formula 1: Practice 3 — Spanish Grand Prix
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Practice 3 — Spanish Grand Prix\\nCircuito de Madrid\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-madrid-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260912T140000Z
+DTEND:20260912T150000Z
+SUMMARY:Formula 1: Qualifying — Spanish Grand Prix
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Qualifying — Spanish Grand Prix\\nCircuito de Madrid\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-spain-madrid-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260913T130000Z
+DTEND:20260913T150000Z
+SUMMARY:Formula 1: Race — Spanish Grand Prix
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Race — Spanish Grand Prix\\nCircuito de Madrid\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-azerbaijan-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260924T083000Z
+DTEND:20260924T093000Z
+SUMMARY:Formula 1: Practice 1 — Azerbaijan Grand Prix
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Practice 1 — Azerbaijan Grand Prix\\nBaku City Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-azerbaijan-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260924T120000Z
+DTEND:20260924T130000Z
+SUMMARY:Formula 1: Practice 2 — Azerbaijan Grand Prix
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Practice 2 — Azerbaijan Grand Prix\\nBaku City Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-azerbaijan-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260925T083000Z
+DTEND:20260925T093000Z
+SUMMARY:Formula 1: Practice 3 — Azerbaijan Grand Prix
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Practice 3 — Azerbaijan Grand Prix\\nBaku City Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-azerbaijan-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260925T120000Z
+DTEND:20260925T130000Z
+SUMMARY:Formula 1: Qualifying — Azerbaijan Grand Prix
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Qualifying — Azerbaijan Grand Prix\\nBaku City Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-azerbaijan-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20260926T110000Z
+DTEND:20260926T130000Z
+SUMMARY:Formula 1: Race — Azerbaijan Grand Prix
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Race — Azerbaijan Grand Prix\\nBaku City Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-singapore-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261009T083000Z
+DTEND:20261009T093000Z
+SUMMARY:Formula 1: Practice 1 — Singapore Grand Prix
+LOCATION:Marina Bay Street Circuit\, Singapore
+DESCRIPTION:Practice 1 — Singapore Grand Prix\\nMarina Bay Street Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-singapore-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261009T123000Z
+DTEND:20261009T131500Z
+SUMMARY:Formula 1: Sprint Qualifying — Singapore Grand Prix
+LOCATION:Marina Bay Street Circuit\, Singapore
+DESCRIPTION:Sprint Qualifying — Singapore Grand Prix\\nMarina Bay Street Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-singapore-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261010T090000Z
+DTEND:20261010T093000Z
+SUMMARY:Formula 1: Sprint — Singapore Grand Prix
+LOCATION:Marina Bay Street Circuit\, Singapore
+DESCRIPTION:Sprint — Singapore Grand Prix\\nMarina Bay Street Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-singapore-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261010T130000Z
+DTEND:20261010T140000Z
+SUMMARY:Formula 1: Qualifying — Singapore Grand Prix
+LOCATION:Marina Bay Street Circuit\, Singapore
+DESCRIPTION:Qualifying — Singapore Grand Prix\\nMarina Bay Street Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-singapore-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261011T120000Z
+DTEND:20261011T140000Z
+SUMMARY:Formula 1: Race — Singapore Grand Prix
+LOCATION:Marina Bay Street Circuit\, Singapore
+DESCRIPTION:Race — Singapore Grand Prix\\nMarina Bay Street Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-united-states-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261023T173000Z
+DTEND:20261023T183000Z
+SUMMARY:Formula 1: Practice 1 — United States Grand Prix
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 1 — United States Grand Prix\\nCircuit of the Americas\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-united-states-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261023T210000Z
+DTEND:20261023T220000Z
+SUMMARY:Formula 1: Practice 2 — United States Grand Prix
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 2 — United States Grand Prix\\nCircuit of the Americas\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-united-states-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261024T173000Z
+DTEND:20261024T183000Z
+SUMMARY:Formula 1: Practice 3 — United States Grand Prix
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 3 — United States Grand Prix\\nCircuit of the Americas\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-united-states-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261024T210000Z
+DTEND:20261024T220000Z
+SUMMARY:Formula 1: Qualifying — United States Grand Prix
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Qualifying — United States Grand Prix\\nCircuit of the Americas\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-united-states-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261025T200000Z
+DTEND:20261025T220000Z
+SUMMARY:Formula 1: Race — United States Grand Prix
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Race — United States Grand Prix\\nCircuit of the Americas\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-mexico-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261030T183000Z
+DTEND:20261030T193000Z
+SUMMARY:Formula 1: Practice 1 — Mexico City Grand Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Practice 1 — Mexico City Grand Prix\\nAutodromo Hermanos Rodriguez\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-mexico-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261030T220000Z
+DTEND:20261030T230000Z
+SUMMARY:Formula 1: Practice 2 — Mexico City Grand Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Practice 2 — Mexico City Grand Prix\\nAutodromo Hermanos Rodriguez\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-mexico-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261031T173000Z
+DTEND:20261031T183000Z
+SUMMARY:Formula 1: Practice 3 — Mexico City Grand Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Practice 3 — Mexico City Grand Prix\\nAutodromo Hermanos Rodriguez\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-mexico-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261031T210000Z
+DTEND:20261031T220000Z
+SUMMARY:Formula 1: Qualifying — Mexico City Grand Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Qualifying — Mexico City Grand Prix\\nAutodromo Hermanos Rodriguez\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-mexico-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261101T200000Z
+DTEND:20261101T220000Z
+SUMMARY:Formula 1: Race — Mexico City Grand Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Race — Mexico City Grand Prix\\nAutodromo Hermanos Rodriguez\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-brazil-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261106T153000Z
+DTEND:20261106T163000Z
+SUMMARY:Formula 1: Practice 1 — Brazilian Grand Prix
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Practice 1 — Brazilian Grand Prix\\nAutodromo Jose Carlos Pace\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-brazil-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261106T190000Z
+DTEND:20261106T200000Z
+SUMMARY:Formula 1: Practice 2 — Brazilian Grand Prix
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Practice 2 — Brazilian Grand Prix\\nAutodromo Jose Carlos Pace\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-brazil-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261107T143000Z
+DTEND:20261107T153000Z
+SUMMARY:Formula 1: Practice 3 — Brazilian Grand Prix
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Practice 3 — Brazilian Grand Prix\\nAutodromo Jose Carlos Pace\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-brazil-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261107T180000Z
+DTEND:20261107T190000Z
+SUMMARY:Formula 1: Qualifying — Brazilian Grand Prix
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Qualifying — Brazilian Grand Prix\\nAutodromo Jose Carlos Pace\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-brazil-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261108T170000Z
+DTEND:20261108T190000Z
+SUMMARY:Formula 1: Race — Brazilian Grand Prix
+LOCATION:Autodromo Jose Carlos Pace\, Brazil
+DESCRIPTION:Race — Brazilian Grand Prix\\nAutodromo Jose Carlos Pace\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-las-vegas-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261120T003000Z
+DTEND:20261120T013000Z
+SUMMARY:Formula 1: Practice 1 — Las Vegas Grand Prix
+LOCATION:Las Vegas Strip Circuit\, United States
+DESCRIPTION:Practice 1 — Las Vegas Grand Prix\\nLas Vegas Strip Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-las-vegas-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261120T040000Z
+DTEND:20261120T050000Z
+SUMMARY:Formula 1: Practice 2 — Las Vegas Grand Prix
+LOCATION:Las Vegas Strip Circuit\, United States
+DESCRIPTION:Practice 2 — Las Vegas Grand Prix\\nLas Vegas Strip Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-las-vegas-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261121T003000Z
+DTEND:20261121T013000Z
+SUMMARY:Formula 1: Practice 3 — Las Vegas Grand Prix
+LOCATION:Las Vegas Strip Circuit\, United States
+DESCRIPTION:Practice 3 — Las Vegas Grand Prix\\nLas Vegas Strip Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-las-vegas-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261121T040000Z
+DTEND:20261121T050000Z
+SUMMARY:Formula 1: Qualifying — Las Vegas Grand Prix
+LOCATION:Las Vegas Strip Circuit\, United States
+DESCRIPTION:Qualifying — Las Vegas Grand Prix\\nLas Vegas Strip Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-las-vegas-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261122T040000Z
+DTEND:20261122T060000Z
+SUMMARY:Formula 1: Race — Las Vegas Grand Prix
+LOCATION:Las Vegas Strip Circuit\, United States
+DESCRIPTION:Race — Las Vegas Grand Prix\\nLas Vegas Strip Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-qatar-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261127T133000Z
+DTEND:20261127T143000Z
+SUMMARY:Formula 1: Practice 1 — Qatar Grand Prix
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice 1 — Qatar Grand Prix\\nLusail International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-qatar-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261127T170000Z
+DTEND:20261127T180000Z
+SUMMARY:Formula 1: Practice 2 — Qatar Grand Prix
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice 2 — Qatar Grand Prix\\nLusail International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-qatar-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261128T143000Z
+DTEND:20261128T153000Z
+SUMMARY:Formula 1: Practice 3 — Qatar Grand Prix
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice 3 — Qatar Grand Prix\\nLusail International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-qatar-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261128T180000Z
+DTEND:20261128T190000Z
+SUMMARY:Formula 1: Qualifying — Qatar Grand Prix
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Qualifying — Qatar Grand Prix\\nLusail International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-qatar-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261129T160000Z
+DTEND:20261129T180000Z
+SUMMARY:Formula 1: Race — Qatar Grand Prix
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Race — Qatar Grand Prix\\nLusail International Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-abu-dhabi-s0@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261204T093000Z
+DTEND:20261204T103000Z
+SUMMARY:Formula 1: Practice 1 — Abu Dhabi Grand Prix
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Practice 1 — Abu Dhabi Grand Prix\\nYas Marina Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-abu-dhabi-s1@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261204T130000Z
+DTEND:20261204T140000Z
+SUMMARY:Formula 1: Practice 2 — Abu Dhabi Grand Prix
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Practice 2 — Abu Dhabi Grand Prix\\nYas Marina Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-abu-dhabi-s2@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261205T103000Z
+DTEND:20261205T113000Z
+SUMMARY:Formula 1: Practice 3 — Abu Dhabi Grand Prix
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Practice 3 — Abu Dhabi Grand Prix\\nYas Marina Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-abu-dhabi-s3@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261205T140000Z
+DTEND:20261205T150000Z
+SUMMARY:Formula 1: Qualifying — Abu Dhabi Grand Prix
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Qualifying — Abu Dhabi Grand Prix\\nYas Marina Circuit\\nFormula 1
+END:VEVENT
+BEGIN:VEVENT
+UID:f1-2026-abu-dhabi-s4@racegrid
+DTSTAMP:20260329T103853Z
+DTSTART:20261206T130000Z
+DTEND:20261206T150000Z
+SUMMARY:Formula 1: Race — Abu Dhabi Grand Prix
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Race — Abu Dhabi Grand Prix\\nYas Marina Circuit\\nFormula 1
+END:VEVENT
+END:VCALENDAR
