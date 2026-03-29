@@ -290,6 +290,7 @@ export function CalendarGrid({
                 isNextRaceDay={dateStr === nextRaceDay}
                 isHighlighted={dateStr === highlightDate}
                 seriesInfos={events.get(dateStr) || []}
+                moreLabel={t('day.more', locale)}
               />
             )
           })}

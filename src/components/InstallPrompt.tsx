@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { X, Share, MoreVertical, Plus, Download } from 'lucide-react'
+import { X, Download } from 'lucide-react'
+import { IOSSteps, IOSChromeSteps, IPadSteps, AndroidSteps, DesktopSteps } from './InstallSteps'
 import { t, type Locale } from '@/lib/i18n'
 
 type Platform = 'ios-safari' | 'ios-chrome' | 'ipad-safari' | 'ipad-chrome' | 'android' | 'desktop'
@@ -241,81 +242,3 @@ export function InstallPrompt({ locale }: InstallPromptProps) {
   )
 }
 
-// ── Step components ──
-
-function Step({ num, icon, text }: { num: number; icon: React.ReactNode; text: string }) {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-      <span style={{
-        width: 24, height: 24, borderRadius: '50%',
-        background: 'var(--rg-link)', color: '#fff',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: 11, fontWeight: 700, flexShrink: 0,
-      }}>
-        {num}
-      </span>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--rg-text)' }}>
-        {icon}
-        <span>{text}</span>
-      </div>
-    </div>
-  )
-}
-
-function IOSSteps() {
-  return (
-    <>
-      <p style={{ fontSize: 10, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1 }}>Safari</p>
-      <Step num={1} icon={<MoreVertical style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap the Settings button at the bottom' />
-      <Step num={2} icon={<Share style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap "Share"' />
-      <Step num={3} icon={null} text='Scroll down in the share sheet' />
-      <Step num={4} icon={<Plus style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap "Add to Home Screen"' />
-      <Step num={5} icon={null} text='Tap "Add" to confirm' />
-    </>
-  )
-}
-
-function IOSChromeSteps() {
-  return (
-    <>
-      <p style={{ fontSize: 10, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1 }}>Chrome</p>
-      <Step num={1} icon={<Share style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap the Share button' />
-      <Step num={2} icon={null} text='Scroll down in the share sheet' />
-      <Step num={3} icon={<Plus style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap "Add to Home Screen"' />
-      <Step num={4} icon={null} text='Tap "Add" to confirm' />
-    </>
-  )
-}
-
-function IPadSteps({ label }: { label: string }) {
-  return (
-    <>
-      <p style={{ fontSize: 10, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1 }}>{label}</p>
-      <Step num={1} icon={<Share style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap the Share icon at the top' />
-      <Step num={2} icon={null} text='Tap "View More"' />
-      <Step num={3} icon={<Plus style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap "Add to Home Screen"' />
-      <Step num={4} icon={null} text='Tap "Add" to confirm' />
-    </>
-  )
-}
-
-function AndroidSteps() {
-  return (
-    <>
-      <p style={{ fontSize: 10, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1 }}>Chrome</p>
-      <Step num={1} icon={<MoreVertical style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap the menu (three dots)' />
-      <Step num={2} icon={<Plus style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Tap "Add to Home Screen"' />
-      <Step num={3} icon={null} text='Tap "Install" to confirm' />
-    </>
-  )
-}
-
-function DesktopSteps() {
-  return (
-    <>
-      <p style={{ fontSize: 10, fontWeight: 700, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1 }}>Chrome or Edge</p>
-      <Step num={1} icon={<Download style={{ width: 14, height: 14, color: 'var(--rg-link)' }} />} text='Click the install icon in the address bar' />
-      <Step num={2} icon={null} text='Click "Install" to confirm' />
-    </>
-  )
-}

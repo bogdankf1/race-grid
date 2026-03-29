@@ -128,6 +128,22 @@ const CIRCUITS: Record<string, CircuitInfo> = {
   'Queensland Raceway': { length: '3.120 km', turns: 8, type: 'permanent' },
   'The Bend Motorsport Park': { length: '4.950 km', turns: 18, type: 'permanent' },
   'Mike Pero Motorsport Park': { length: '2.550 km', turns: 9, type: 'permanent' },
+
+  // WRC rally locations (length = total competitive stage km, turns = number of stages)
+  'Monaco / French Alps': { length: '~300 km', turns: 20, type: 'mixed' },
+  'Umea': { length: '~280 km', turns: 18, type: 'mixed' },
+  'Naivasha': { length: '~320 km', turns: 18, type: 'mixed' },
+  'Zagreb': { length: '~300 km', turns: 20, type: 'mixed' },
+  'Las Palmas de Gran Canaria': { length: '~280 km', turns: 20, type: 'mixed' },
+  'Matosinhos': { length: '~310 km', turns: 20, type: 'mixed' },
+  'Toyota City': { length: '~290 km', turns: 21, type: 'mixed' },
+  'Lamia': { length: '~300 km', turns: 18, type: 'mixed' },
+  'Tartu': { length: '~310 km', turns: 22, type: 'mixed' },
+  'Jyvaskyla': { length: '~320 km', turns: 23, type: 'mixed' },
+  'Asuncion': { length: '~280 km', turns: 18, type: 'mixed' },
+  'Concepcion': { length: '~290 km', turns: 18, type: 'mixed' },
+  'Sardinia / Various': { length: '~300 km', turns: 20, type: 'mixed' },
+  'Jeddah / NEOM': { length: '~310 km', turns: 18, type: 'mixed' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

@@ -12,6 +12,7 @@ interface DayCellProps {
   isNextRaceDay?: boolean
   isHighlighted?: boolean
   seriesInfos: DaySeriesInfo[]
+  moreLabel?: string
 }
 
 function cleanEventName(name: string): string {
@@ -21,7 +22,7 @@ function cleanEventName(name: string): string {
     .replace(/^NLS\s*\d+\s*[—–-]\s*/i, '')
 }
 
-export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, isHighlighted, seriesInfos }: DayCellProps) {
+export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, isHighlighted, seriesInfos, moreLabel = 'more' }: DayCellProps) {
   const isPast = !isToday && date < new Date().toISOString().slice(0, 10)
   const [expanded, setExpanded] = useState(false)
   const MAX_CHIPS = 3
@@ -167,7 +168,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
                 border: 'none',
               }}
             >
-              +{overflow}<span className="rg-overflow-more"> more</span>
+              +{overflow}<span className="rg-overflow-more"> {moreLabel}</span>
             </button>
           )}
         </div>

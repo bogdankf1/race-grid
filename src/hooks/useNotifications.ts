@@ -23,10 +23,26 @@ export function useNotifications() {
   const [permission, setPermission] = useState<NotificationPermission>('default')
 
   useEffect(() => {
-    if (typeof Notification !== 'undefined') {
-      setPermission(Notification.permission)
+    if (typeof Notification === 'undefined') return
+
+    function syncPermission() {
+      const current = Notification.permission
+      setPermission(current)
+      // If permission was revoked while notifications were "enabled", disable them
+      if (current === 'denied' && prefs.enabled) {
+        setPrefs({ ...prefs, enabled: false })
+      }
     }
-  }, [])
+
+    syncPermission()
+
+    // Re-check when page regains visibility (user may have changed permission in settings)
+    function handleVisibility() {
+      if (document.visibilityState === 'visible') syncPermission()
+    }
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => document.removeEventListener('visibilitychange', handleVisibility)
+  }, [prefs, setPrefs])
 
   const requestPermission = useCallback(async () => {
     if (typeof Notification === 'undefined') return 'denied' as const
