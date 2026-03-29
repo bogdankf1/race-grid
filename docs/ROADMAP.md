@@ -50,14 +50,9 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 ~~**What:** Let users add an entire race weekend or series season to their calendar in one click.~~
 ~~**How:** CalendarExport dropdown now has "All sessions (.ics)" for the current event weekend and "Full season (.ics)" for the entire series. Uses `downloadSeriesIcs()` in `src/lib/ical.ts`.~~
 
-### 10. Spoiler-free mode
-**What:** A toggle that hides race results by default. Users who record races and watch later don't want to see "Winner: Antonelli" when they open the app to check tomorrow's schedule.
-**How:**
-- Add a toggle in the header or settings (eye icon). Store preference in localStorage key `race-grid:spoiler-free`.
-- When enabled: hide the `RaceResult` component entirely on the day detail page. Show a blurred/hidden placeholder with a "Tap to reveal" button.
-- When disabled (default): show results normally as today.
-- The toggle should be global — not per-event. Users who want spoiler-free mode want it everywhere.
-- Add i18n strings for "Spoiler-free mode", "Tap to reveal results", etc.
+### ~~10. Spoiler-free mode~~ ✅
+~~**What:** A toggle that hides race results by default. Users who record races and watch later don't want to see spoilers.~~
+~~**How:** Eye icon toggle in header, stores preference in `race-grid:spoiler-free` localStorage. When enabled, results are hidden behind a "Tap to reveal results" button per event. Toggle highlights when active (blue border + icon).~~
 
 ### ~~11. Season progress tracker~~ ✅
 ~~**What:** Show "Round 3 of 22" with a visual progress bar for each series, so users understand where we are in each championship season.~~
@@ -67,16 +62,31 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 
 ## New Pages
 
-### 12. Series pages (`/series`, `/series/[id]`)
+### 12. Unified settings modal
+**What:** Consolidate language toggle, theme toggle, timezone picker, and spoiler-free toggle into a single settings icon button that opens a modal. Reduces header clutter from 4+ controls to 1.
+**How:**
+- Add a gear/settings icon button in the header (replacing the individual theme, locale, spoiler, and timezone buttons).
+- Clicking opens a modal (not a new page — these are quick toggles, not content-heavy settings).
+- Modal shows:
+  - **Timezone:** current timezone picker (move from header).
+  - **Theme:** dark/light toggle with preview.
+  - **Language:** EN / UA toggle.
+  - **Spoiler-free mode:** toggle with description.
+  - **Notifications:** link to notification settings (from InstallOrNotify).
+- Close on backdrop click or X button.
+- Persist all settings in existing localStorage keys.
+- Keep the filter dropdown in the header — it's used frequently and deserves direct access.
+
+### 14. Series pages (`/series`, `/series/[id]`)
 **What:** A hub page for each racing series — the central place to explore everything about a championship. Browse all 14 series, then drill into any one to see its full calendar, circuits, drivers, teams, and standings for a given year.
 **How:**
 - **Phase 1 — Series index & hub (use existing data):**
   - Create `src/app/series/page.tsx` — grid of all 14 series cards with logo, name, season progress bar, next upcoming event, and total rounds.
   - Create `src/app/series/[id]/page.tsx` — series detail hub with tabs/sections:
     - **Calendar:** Full season schedule with round numbers, dates, circuits, and results (reuse existing calendar data + results).
-    - **Circuits:** All circuits this series visits, linking to `/circuits/[slug]` (item 13).
-    - **Standings:** Embed standings table (item 12's data) once available.
-  - Year selector (once multi-year data exists, item 14).
+    - **Circuits:** All circuits this series visits, linking to `/circuits/[slug]` (item 16).
+    - **Standings:** Embed standings table (item 15's data) once available.
+  - Year selector (once multi-year data exists, item 17).
   - Link to series pages from header navigation and from series chips throughout the app.
 - **Phase 2 — Drivers & teams (new data required):**
   - Create `src/data/drivers/` directory with per-series files (e.g., `f1-2026.ts`). Each file exports an array:
@@ -99,12 +109,12 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
   - Cross-link everything: series → drivers → teams → circuits → results.
 - **Phase 3 — Rich integration:**
   - Series hub becomes the "home" for each championship — fans bookmark `/series/f1` as their entry point.
-  - Driver/team pages show historical results once multi-year data exists (item 14).
+  - Driver/team pages show historical results once multi-year data exists (item 17).
   - SEO benefit: deep internal linking between series, circuits, drivers, teams, and results pages.
 - **Scope warning:** Phase 1 uses existing data and is achievable quickly. Phase 2 requires significant new data entry (drivers + teams for 14 series). Prioritize F1, NASCAR, IndyCar, WEC, WRC first.
 
-### 13. Standings integration (`/standings`, embedded in series pages)
-**What:** Championship standings for drivers and constructors/manufacturers. Standalone page + embedded in series hub pages (item 12).
+### 15. Standings integration (`/standings`, embedded in series pages)
+**What:** Championship standings for drivers and constructors/manufacturers. Standalone page + embedded in series hub pages (item 14).
 **How:**
 - Create `src/data/standings/` directory with files like `f1-2026.ts`, `nascar-2026.ts`, etc. Each file exports driver standings and constructor/manufacturer standings as arrays:
   ```typescript
@@ -121,14 +131,14 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
   }
   ```
 - Create `src/app/standings/page.tsx` as a standalone page (quick access from header nav).
-- Also embed standings as a tab/section in `/series/[id]` (item 12).
+- Also embed standings as a tab/section in `/series/[id]` (item 14).
 - UI: Two tabs (Drivers / Constructors). Series selector on standalone page. Year selector (once multi-year data exists).
 - Update standings alongside results when running `/update-results`. Add a step to the `docs/UPDATE-RESULTS.md` runbook.
 - For series with class-based championships (WEC, IMSA, GTWC), show standings per class.
 - Default view: current year, F1 (most popular series). Persist last-viewed series in localStorage.
-- Driver names link to `/drivers/[id]` and team names link to `/teams/[id]` once those pages exist (item 12 phase 2).
+- Driver names link to `/drivers/[id]` and team names link to `/teams/[id]` once those pages exist (item 14 phase 2).
 
-### 14. Circuits page (`/circuits`, `/circuits/[slug]`)
+### 16. Circuits page (`/circuits`, `/circuits/[slug]`)
 **What:** A browsable directory of all circuits used across all series, with metadata and cross-links to series and event pages.
 **How:**
 - Create `src/app/circuits/page.tsx` — searchable, filterable grid/list of all circuits from `src/data/circuits.ts`.
@@ -137,17 +147,17 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
   - Circuit metadata: type, length, turns, country.
   - All events at this circuit across all series and years, linking to day detail pages.
   - Past results at this venue (once historical data exists).
-  - Which series visit this circuit, linking to `/series/[id]` (item 12).
+  - Which series visit this circuit, linking to `/series/[id]` (item 14).
 - Cross-reference: find which series use each circuit by scanning all calendar data files.
 - Filter by: country, circuit type, series.
-- Linked from: series hub pages (item 12), day detail page circuit info section.
+- Linked from: series hub pages (item 14), day detail page circuit info section.
 - No track layout images needed initially (would require licensing). Text-based info is sufficient.
 
 ---
 
 ## Historical Data (Long-term)
 
-### 15. Multi-year support & historical backfill
+### 17. Multi-year support & historical backfill
 **What:** Support multiple seasons. Start with 2025 backfill, then 2024. Users can browse past seasons and see who won each race.
 **How:**
 - The file structure already supports this: `f1-2026.ts`, `f1-2025.ts`, etc.

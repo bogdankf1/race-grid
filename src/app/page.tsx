@@ -24,6 +24,7 @@ export default function HomePage() {
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [viewMode, setViewMode] = useLocalStorage<'month' | 'week'>('race-grid:view', 'month')
+  const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [weekStart, setWeekStart] = useLocalStorage<string>(
     'race-grid:week',
     format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy-MM-dd')
@@ -56,6 +57,7 @@ export default function HomePage() {
 
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   const toggleLocale = () => setLocale(locale === 'en' ? 'uk' : 'en')
+  const toggleSpoilerFree = () => setSpoilerFree(!spoilerFree)
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--rg-bg)', color: 'var(--rg-text)' }}>
@@ -69,6 +71,8 @@ export default function HomePage() {
         onToggleTheme={toggleTheme}
         locale={locale}
         onToggleLocale={toggleLocale}
+        spoilerFree={spoilerFree}
+        onToggleSpoilerFree={toggleSpoilerFree}
       />
       <div className="rg-calendar-wrap" style={{ paddingBottom: 0 }}>
         <UpcomingRaces

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ChevronLeft, Sun, Moon } from 'lucide-react'
+import { ChevronLeft, Sun, Moon, EyeOff, Eye } from 'lucide-react'
 import { TimezoneSelector } from './TimezoneSelector'
 import { SeriesFilterDropdown } from './SeriesFilterDropdown'
 import { InstallOrNotify } from './InstallOrNotify'
@@ -18,6 +18,8 @@ interface HeaderProps {
   onToggleTheme: () => void
   locale: Locale
   onToggleLocale: () => void
+  spoilerFree: boolean
+  onToggleSpoilerFree: () => void
   backHref?: string
 }
 
@@ -31,6 +33,8 @@ export function Header({
   onToggleTheme,
   locale,
   onToggleLocale,
+  spoilerFree,
+  onToggleSpoilerFree,
   backHref,
 }: HeaderProps) {
   return (
@@ -75,6 +79,25 @@ export function Header({
           <TimezoneSelector value={timezone} onChange={onTimezoneChange} locale={locale} />
 
           <InstallOrNotify locale={locale} />
+
+          {/* Spoiler-free toggle */}
+          <button
+            className="rg-control"
+            onClick={onToggleSpoilerFree}
+            title={t('spoiler.title', locale)}
+            style={{
+              width: 36,
+              borderRadius: 10,
+              background: spoilerFree ? 'var(--rg-elevated)' : 'var(--rg-btn-bg)',
+              border: `1px solid ${spoilerFree ? 'var(--rg-link)' : 'var(--rg-border)'}`,
+              color: spoilerFree ? 'var(--rg-link)' : 'var(--rg-text2)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {spoilerFree ? <EyeOff style={{ width: 15, height: 15 }} /> : <Eye style={{ width: 15, height: 15 }} />}
+          </button>
 
           {/* Theme toggle */}
           <button

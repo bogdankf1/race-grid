@@ -14,7 +14,36 @@ import { RaceResult } from './RaceResult'
 import { getResult } from '@/data/results'
 import { WhereToWatch } from './WhereToWatch'
 import { MapPin, Ruler, CornerDownRight } from 'lucide-react'
+import { EyeOff } from 'lucide-react'
 import { t, type Locale } from '@/lib/i18n'
+
+function SpoilerGuard({ locale, results }: { locale: Locale; results: { session: Session; result: NonNullable<ReturnType<typeof getResult>> }[] }) {
+  const [revealed, setRevealed] = useState(false)
+  if (revealed) return <RaceResult results={results} locale={locale} />
+  return (
+    <button
+      onClick={() => setRevealed(true)}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 8,
+        width: '100%',
+        marginTop: 12,
+        padding: '16px',
+        borderRadius: 12,
+        background: 'var(--rg-surface)',
+        border: '1px solid var(--rg-card-border)',
+        color: 'var(--rg-text3)',
+        fontSize: 13,
+        cursor: 'pointer',
+      }}
+    >
+      <EyeOff style={{ width: 15, height: 15 }} />
+      {t('spoiler.reveal', locale)}
+    </button>
+  )
+}
 
 const SESSION_ICONS: Record<SessionType, string> = {
   race: '\u{1F3C1}', qualifying: '\u23F1', sprint: '\u26A1',
@@ -29,9 +58,9 @@ function countryFlag(countryCode: string): string {
 }
 
 interface DayEventInfo { series: SeriesConfig; event: RaceEvent; sessions: Session[] }
-interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string; locale: Locale; highlightEventId?: string }
+interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string; locale: Locale; highlightEventId?: string; spoilerFree?: boolean }
 
-export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlightEventId }: DayDetailProps) {
+export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlightEventId, spoilerFree }: DayDetailProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -243,6 +272,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                   return true
                 }) as { session: Session; result: NonNullable<ReturnType<typeof getResult>> }[]
               if (sessionResults.length === 0) return null
+              if (spoilerFree) return <SpoilerGuard locale={locale} results={sessionResults} />
               return <RaceResult results={sessionResults} locale={locale} />
             })()}
 

@@ -29,6 +29,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
   const [timezone, setTimezone] = useLocalStorage<string>('race-grid:timezone', getDefaultTimezone())
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
+  const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
@@ -50,6 +51,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
 
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   const toggleLocale = () => setLocale(locale === 'en' ? 'uk' : 'en')
+  const toggleSpoilerFree = () => setSpoilerFree(!spoilerFree)
 
   const shareDay = async () => {
     const url = `${window.location.origin}/day/${date}`
@@ -89,6 +91,8 @@ export function DayPageClient({ date }: DayPageClientProps) {
         onToggleTheme={toggleTheme}
         locale={locale}
         onToggleLocale={toggleLocale}
+        spoilerFree={spoilerFree}
+        onToggleSpoilerFree={toggleSpoilerFree}
         backHref={`/?month=${monthPath}&from=${date}`}
       />
 
@@ -157,6 +161,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
             timezone={timezone}
             locale={locale}
             highlightEventId={highlightEventId}
+            spoilerFree={spoilerFree}
           />
           </ErrorBoundary>
         </SwipeContainer>

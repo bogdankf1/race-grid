@@ -90,6 +90,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'progress.round': 'Rd.',
     'progress.roundFull': 'Round',
     'progress.of': 'of',
+    'spoiler.title': 'Spoiler-free mode',
+    'spoiler.reveal': 'Tap to reveal results',
   },
   uk: {
     'app.title': 'RACE GRID',
@@ -180,6 +182,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'progress.round': 'Ет.',
     'progress.roundFull': 'Етап',
     'progress.of': 'з',
+    'spoiler.title': 'Без спойлерів',
+    'spoiler.reveal': 'Натисніть, щоб показати результати',
   },
 }
 
