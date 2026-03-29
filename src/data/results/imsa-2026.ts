@@ -47,6 +47,17 @@ export const imsaResults2026: Record<string, EventResults> = {
     },
   },
   'imsa-2026-sebring': {
+    qualifying: {
+      overall: { drivers: ['Aitken'], team: 'Whelen Cadillac' },
+      classes: [{
+        className: 'GTP',
+        podium: [
+          { position: 1, drivers: ['Aitken'], team: 'Whelen Cadillac' },
+          { position: 2, drivers: ['Blomqvist'], team: 'Meyer Shank Racing Acura' },
+          { position: 3, drivers: ['Albuquerque'], team: 'Wayne Taylor Racing Cadillac' },
+        ],
+      }],
+    },
     endurance: {
       overall: { drivers: ['Nasr', 'Andlauer', 'Heinrich'], team: 'Porsche Penske Motorsport' },
       classes: [

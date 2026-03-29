@@ -50,6 +50,19 @@ export const indycarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'indycar-2026-barber': {
+    qualifying: {
+      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+          { position: 2, drivers: ['Malukas'], team: 'Team Penske' },
+          { position: 3, drivers: ['Rahal'], team: 'Rahal Letterman Lanigan Racing' },
+        ],
+      }],
+    },
+  },
   'indycar-2026-arlington': {
     qualifying: {
       overall: { drivers: ['Ericsson'], team: 'Andretti Global' },
