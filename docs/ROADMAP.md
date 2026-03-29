@@ -137,7 +137,7 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 
 ## Historical Data (Long-term)
 
-### 17. Multi-year support & historical backfill
+### ~~17. Multi-year support & historical backfill~~ ✅ (2025 done)
 **What:** Support multiple seasons. Start with 2025 backfill, then 2024. Users can browse past seasons and see who won each race.
 **How:**
 - The file structure already supports this: `f1-2026.ts`, `f1-2025.ts`, etc.

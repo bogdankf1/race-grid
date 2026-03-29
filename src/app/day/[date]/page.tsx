@@ -1,19 +1,21 @@
 import { Suspense } from 'react'
 import { DayPageClient } from '@/components/DayPageClient'
 import { eachDayOfInterval, format, subDays, addDays } from 'date-fns'
-import { ALL_SERIES } from '@/data/series-registry'
+import { getSeriesForYear, AVAILABLE_YEARS } from '@/data/series-registry'
 
 export function generateStaticParams() {
-  // Derive date range from actual session data across all series
+  // Derive date range from actual session data across all series and years
   let earliest = Infinity
   let latest = -Infinity
 
-  for (const series of ALL_SERIES) {
-    for (const event of series.events) {
-      for (const session of event.sessions) {
-        const ms = new Date(session.startUtc).getTime()
-        if (ms < earliest) earliest = ms
-        if (ms > latest) latest = ms
+  for (const year of AVAILABLE_YEARS) {
+    for (const series of getSeriesForYear(year)) {
+      for (const event of series.events) {
+        for (const session of event.sessions) {
+          const ms = new Date(session.startUtc).getTime()
+          if (ms < earliest) earliest = ms
+          if (ms > latest) latest = ms
+        }
       }
     }
   }

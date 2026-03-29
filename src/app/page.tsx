@@ -5,7 +5,7 @@ import { format, startOfWeek } from 'date-fns'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useViewEvents } from '@/hooks/useCalendarEvents'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { ALL_SERIES } from '@/data/series-registry'
+import { getSeriesForYear } from '@/data/series-registry'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
@@ -15,12 +15,14 @@ import { UpcomingRaces } from '@/components/UpcomingRaces'
 import { Footer } from '@/components/Footer'
 
 export default function HomePage() {
+  const [month, setMonth] = useLocalStorage<string>('race-grid:month', format(new Date(), 'yyyy-MM'))
+  const year = parseInt(month.slice(0, 4))
+  const allSeriesForYear = getSeriesForYear(year)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>(
     'race-grid:series',
-    ALL_SERIES.map(s => s.id)
+    allSeriesForYear.map(s => s.id)
   )
   const [timezone, setTimezone] = useLocalStorage<string>('race-grid:timezone', getDefaultTimezone())
-  const [month, setMonth] = useLocalStorage<string>('race-grid:month', format(new Date(), 'yyyy-MM'))
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [viewMode, setViewMode] = useLocalStorage<'month' | 'week'>('race-grid:view', 'month')
@@ -46,7 +48,7 @@ export default function HomePage() {
     }
   }, [])
 
-  const events = useViewEvents(selectedSeries, timezone, viewMode, month, weekStart)
+  const events = useViewEvents(selectedSeries, timezone, viewMode, month, weekStart, allSeriesForYear)
 
   const toggleSeries = (id: string) => {
     const updated = selectedSeries.includes(id)

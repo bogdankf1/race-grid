@@ -6,7 +6,7 @@ import { format, parse, addDays, subDays } from 'date-fns'
 import { ChevronLeft, ChevronRight, Share2, Check } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { ALL_SERIES } from '@/data/series-registry'
+import { getSeriesForYear } from '@/data/series-registry'
 import { getDefaultLocale, formatDateLocale, formatDateShort, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
@@ -22,9 +22,11 @@ export function DayPageClient({ date }: DayPageClientProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
   const highlightEventId = searchParams.get('event') ?? undefined
+  const pageYear = parseInt(date.slice(0, 4))
+  const allSeriesForYear = getSeriesForYear(pageYear)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>(
     'race-grid:series',
-    ALL_SERIES.map(s => s.id)
+    allSeriesForYear.map(s => s.id)
   )
   const [timezone, setTimezone] = useLocalStorage<string>('race-grid:timezone', getDefaultTimezone())
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())

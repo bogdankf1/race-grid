@@ -2,7 +2,7 @@
 
 import { useMemo, useEffect, useRef, useState } from 'react'
 import { SeriesConfig, RaceEvent, Session, SessionType } from '@/lib/types'
-import { ALL_SERIES } from '@/data/series-registry'
+import { getSeriesForYear } from '@/data/series-registry'
 import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
 import { SeriesChip } from './SeriesChip'
 import { SeriesLogo } from './SeriesLogo'
@@ -99,7 +99,8 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
 
   const dayEvents = useMemo(() => {
     const results: DayEventInfo[] = []
-    const selectedSeries = ALL_SERIES.filter(s => selectedSeriesIds.includes(s.id))
+    const yearSeries = getSeriesForYear(parseInt(date.slice(0, 4)))
+    const selectedSeries = yearSeries.filter(s => selectedSeriesIds.includes(s.id))
     for (const series of selectedSeries) {
       for (const event of series.events) {
         const daySessions = event.sessions.filter(s => getLocalDate(s.startUtc, timezone) === date)

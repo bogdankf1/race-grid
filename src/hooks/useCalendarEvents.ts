@@ -13,10 +13,11 @@ export interface DaySeriesInfo {
 export function buildEventMap(
   selectedSeriesIds: string[],
   timezone: string,
-  dateFilter: (date: string) => boolean
+  dateFilter: (date: string) => boolean,
+  seriesList: SeriesConfig[] = ALL_SERIES
 ): Map<string, DaySeriesInfo[]> {
   const map = new Map<string, DaySeriesInfo[]>()
-  const selectedSeries = ALL_SERIES.filter(s => selectedSeriesIds.includes(s.id))
+  const selectedSeries = seriesList.filter(s => selectedSeriesIds.includes(s.id))
 
   for (const series of selectedSeries) {
     for (const event of series.events) {
@@ -49,23 +50,6 @@ export function buildEventMap(
   return map
 }
 
-export function useCalendarEvents(
-  selectedSeriesIds: string[],
-  timezone: string,
-  month: string
-): Map<string, DaySeriesInfo[]> {
-  return useMemo(() => {
-    const [yearStr, monthStr] = month.split('-')
-    const year = parseInt(yearStr)
-    const monthNum = parseInt(monthStr)
-
-    return buildEventMap(selectedSeriesIds, timezone, (date) => {
-      const [y, m] = date.split('-').map(Number)
-      return y === year && m === monthNum
-    })
-  }, [selectedSeriesIds, timezone, month])
-}
-
 /**
  * Unified hook — only computes events for the active view mode.
  */
@@ -74,7 +58,8 @@ export function useViewEvents(
   timezone: string,
   viewMode: 'month' | 'week',
   month: string,
-  weekStart: string
+  weekStart: string,
+  seriesList: SeriesConfig[] = ALL_SERIES
 ): Map<string, DaySeriesInfo[]> {
   return useMemo(() => {
     if (viewMode === 'week') {
@@ -85,7 +70,7 @@ export function useViewEvents(
         d.setDate(d.getDate() + i)
         dates.add(d.toISOString().slice(0, 10))
       }
-      return buildEventMap(selectedSeriesIds, timezone, (date) => dates.has(date))
+      return buildEventMap(selectedSeriesIds, timezone, (date) => dates.has(date), seriesList)
     }
 
     const [yearStr, monthStr] = month.split('-')
@@ -94,6 +79,6 @@ export function useViewEvents(
     return buildEventMap(selectedSeriesIds, timezone, (date) => {
       const [y, m] = date.split('-').map(Number)
       return y === year && m === monthNum
-    })
-  }, [selectedSeriesIds, timezone, viewMode, month, weekStart])
+    }, seriesList)
+  }, [selectedSeriesIds, timezone, viewMode, month, weekStart, seriesList])
 }
