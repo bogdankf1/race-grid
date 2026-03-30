@@ -3,6 +3,10 @@ import { EventResults } from './types'
 // WEC 2025 results — verified from fiawec.com, en.wikipedia.org, motorsport.com
 export const wecResults2025: Record<string, EventResults> = {
   'wec-2025-qatar': {
+    qualifying: {
+      overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
       classes: [
@@ -20,7 +24,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse #50' },
       classes: [
         {
@@ -43,6 +47,10 @@ export const wecResults2025: Record<string, EventResults> = {
     },
   },
   'wec-2025-imola': {
+    qualifying: {
+      overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
       classes: [
@@ -60,7 +68,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Calado', 'Giovinazzi', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
       classes: [
         {
@@ -83,6 +91,10 @@ export const wecResults2025: Record<string, EventResults> = {
     },
   },
   'wec-2025-spa': {
+    qualifying: {
+      overall: { drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse' },
       classes: [
@@ -94,7 +106,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Calado', 'Giovinazzi', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
       classes: [
         {
@@ -117,6 +129,10 @@ export const wecResults2025: Record<string, EventResults> = {
     },
   },
   'wec-2025-le-mans': {
+    qualifying: {
+      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
       classes: [
@@ -128,7 +144,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Hanson', 'Kubica', 'Ye'], team: 'AF Corse Ferrari #83' },
       classes: [
         {
@@ -151,6 +167,10 @@ export const wecResults2025: Record<string, EventResults> = {
     },
   },
   'wec-2025-sao-paulo': {
+    qualifying: {
+      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
       classes: [
@@ -162,7 +182,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota #12' },
       classes: [
         {
@@ -185,6 +205,10 @@ export const wecResults2025: Record<string, EventResults> = {
     },
   },
   'wec-2025-cota': {
+    qualifying: {
+      overall: { drivers: ['Kubica', 'Hanson', 'Ye'], team: 'AF Corse Ferrari' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kubica', 'Hanson', 'Ye'], team: 'AF Corse Ferrari' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Kubica', 'Hanson', 'Ye'], team: 'AF Corse Ferrari' },
       classes: [
@@ -196,7 +220,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Estre', 'Vanthoor', 'Campbell'], team: 'Porsche Penske Motorsport #6' },
       classes: [
         {
@@ -219,6 +243,10 @@ export const wecResults2025: Record<string, EventResults> = {
     },
   },
   'wec-2025-fuji': {
+    qualifying: {
+      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
       classes: [
@@ -230,7 +258,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Chatin', 'Habsburg', 'Milesi'], team: 'Alpine Endurance Team #35' },
       classes: [
         {
@@ -253,6 +281,10 @@ export const wecResults2025: Record<string, EventResults> = {
     },
   },
   'wec-2025-bahrain': {
+    qualifying: {
+      overall: { drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing' }] }],
+    },
     hyperpole: {
       overall: { drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing' },
       classes: [
@@ -264,7 +296,7 @@ export const wecResults2025: Record<string, EventResults> = {
         },
       ],
     },
-    endurance: {
+    race: {
       overall: { drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing #7' },
       classes: [
         {
