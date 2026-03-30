@@ -1,7 +1,7 @@
 'use client'
 
-import { useMemo } from 'react'
-import { ChevronLeft, ChevronRight, Calendar, CalendarDays } from 'lucide-react'
+import { useMemo, useState, useRef } from 'react'
+import { ChevronLeft, ChevronRight, ChevronDown, Calendar, CalendarDays } from 'lucide-react'
 import {
   startOfMonth, endOfMonth, startOfWeek, endOfWeek,
   eachDayOfInterval, format, addMonths, subMonths,
@@ -11,6 +11,7 @@ import {
 import { DayCell } from './DayCell'
 import { CalendarSearch } from './CalendarSearch'
 import { SwipeContainer } from './SwipeContainer'
+import { MonthYearPicker } from './MonthYearPicker'
 import { DaySeriesInfo } from '@/hooks/useCalendarEvents'
 import { t, formatMonthLocale, type Locale } from '@/lib/i18n'
 
@@ -61,6 +62,9 @@ export function CalendarGrid({
   viewMode, onViewModeChange, weekStart, onWeekStartChange,
   selectedSeriesIds, timezone, highlightDate,
 }: CalendarGridProps) {
+  const [pickerOpen, setPickerOpen] = useState(false)
+  const monthLabelRef = useRef<HTMLButtonElement>(null)
+
   const currentDate = useMemo(() => {
     const [year, m] = month.split('-').map(Number)
     return new Date(year, m - 1, 1)
@@ -165,16 +169,42 @@ export function CalendarGrid({
           marginBottom: 12,
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, position: 'relative' }}>
           <button onClick={goToPrev} className="rg-nav-btn rg-control" style={navBtnStyle}>
             <ChevronLeft style={{ width: 20, height: 20 }} />
           </button>
-          <h2 className="font-display rg-month-label">
+          <button
+            ref={monthLabelRef}
+            onClick={() => viewMode === 'month' && setPickerOpen(o => !o)}
+            className="font-display rg-month-label"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'inherit',
+              cursor: viewMode === 'month' ? 'pointer' : 'default',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4,
+              padding: 0,
+              margin: 0,
+            }}
+          >
             {navLabel}
-          </h2>
+            {viewMode === 'month' && (
+              <ChevronDown style={{ width: 16, height: 16, color: 'var(--rg-text3)', transition: 'transform 0.2s', transform: pickerOpen ? 'rotate(180deg)' : 'none' }} />
+            )}
+          </button>
           <button onClick={goToNext} className="rg-nav-btn rg-control" style={navBtnStyle}>
             <ChevronRight style={{ width: 20, height: 20 }} />
           </button>
+          <MonthYearPicker
+            open={pickerOpen}
+            onClose={() => setPickerOpen(false)}
+            currentMonth={month}
+            onSelect={onMonthChange}
+            locale={locale}
+            anchorRef={monthLabelRef}
+          />
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

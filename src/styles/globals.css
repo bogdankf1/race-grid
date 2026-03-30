@@ -180,7 +180,7 @@ button:disabled:active {
 
 .rg-month-label {
   font-size: 32px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: var(--rg-text);
   width: 320px;
   text-align: center;

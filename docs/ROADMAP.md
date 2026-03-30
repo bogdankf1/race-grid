@@ -57,16 +57,9 @@ Ideas and planned work for race-grid.com, ordered by priority within each sectio
 ~~**What:** Consolidate language toggle, theme toggle, timezone picker, and spoiler-free toggle into a single settings gear icon that opens a modal.~~
 ~~**How:** Gear icon in header opens a bottom sheet (mobile) / centered modal (desktop) with theme, language, spoiler-free toggles and embedded timezone picker. Swipe down to dismiss on mobile. Header reduced from 6 controls to 3 (filter, install, settings).~~
 
-### 13. Month/year picker for calendar navigation
-**What:** Replace the simple left/right month arrows with a picker that lets users jump directly to any month and year. Currently users must tap through months one by one — navigating from March 2026 to June 2025 takes 9 taps.
-**How:**
-- Clicking the "MARCH 2026" heading (or a dropdown arrow) opens a picker panel.
-- Year row: show available years (from `AVAILABLE_YEARS`). Tapping a year switches to that year.
-- Month grid: 12 months in a 4x3 or 6x2 grid. Tapping a month navigates immediately.
-- Highlight current month. Dim months with no events for the selected year.
-- On mobile: could be a bottom sheet. On desktop: inline dropdown below the heading.
-- The picker replaces the current month string + arrow buttons. Keep arrows for quick prev/next navigation.
-- The year auto-derives from the selected month (existing behavior), so no separate year state needed.
+### ~~13. Month/year picker for calendar navigation~~ ✅
+~~**What:** Replace the simple left/right month arrows with a picker that lets users jump directly to any month and year. Currently users must tap through months one by one — navigating from March 2026 to June 2025 takes 9 taps.~~
+~~**How:** Clicking the "MARCH 2026" heading (with dropdown chevron) opens a bottom sheet picker. Year row with left/right arrows to switch years (from `AVAILABLE_YEARS`). Month grid in 4x3 layout — tapping a month navigates immediately. Current month highlighted with accent color, today's month outlined, months with no events dimmed. Swipe-to-dismiss on mobile. Left/right arrows kept for quick prev/next navigation.~~
 
 ### 14. Series pages (`/series`, `/series/[id]`)
 **What:** A hub page for each racing series — the central place to explore everything about a championship. Browse all 14 series, then drill into any one to see its full calendar, circuits, drivers, teams, and standings for a given year.
