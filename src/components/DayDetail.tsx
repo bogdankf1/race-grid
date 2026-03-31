@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useMemo, useEffect, useRef, useState } from 'react'
 import { SeriesConfig, RaceEvent, Session, SessionType } from '@/lib/types'
 import { getSeriesForYear } from '@/data/series-registry'
@@ -172,9 +173,9 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
               {(() => {
                 const circuit = getCircuit(event.circuitId)
                 return circuit ? (
-                  <p style={{ fontSize: 14, color: 'var(--rg-text3)' }}>
+                  <Link href={`/circuits/${circuit.id}`} style={{ display: 'block', fontSize: 14, color: 'var(--rg-text3)', textDecoration: 'none' }}>
                     {countryFlag(circuit.countryCode)} {circuit.name}, {circuit.country}
-                  </p>
+                  </Link>
                 ) : null
               })()}
 

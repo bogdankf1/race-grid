@@ -23,6 +23,7 @@ interface SeriesFilterDropdownProps {
   onToggle: (id: string) => void
   onSetAll: (ids: string[]) => void
   locale: Locale
+  showProgress?: boolean
 }
 
 interface SeriesGroup {
@@ -38,7 +39,7 @@ const GROUPS: SeriesGroup[] = [
   { labelKey: 'group.rally', ids: ['wrc'] },
 ]
 
-export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }: SeriesFilterDropdownProps) {
+export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale, showProgress = true }: SeriesFilterDropdownProps) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -211,8 +212,8 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
                 {/* Series in group */}
                 {groupSeries.map(series => {
                   const active = selectedIds.includes(series.id)
-                  const { completed, total } = getSeriesProgress(series)
-                  const pct = total > 0 ? (completed / total) * 100 : 0
+                  const progress = showProgress ? getSeriesProgress(series) : null
+                  const pct = progress && progress.total > 0 ? (progress.completed / progress.total) * 100 : 0
                   return (
                     <button
                       key={series.id}
@@ -244,13 +245,17 @@ export function SeriesFilterDropdown({ selectedIds, onToggle, onSetAll, locale }
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                           <span>{series.name}</span>
-                          <span style={{ fontSize: 10, color: 'var(--rg-text3)', fontWeight: 500, marginLeft: 'auto' }}>
-                            {completed}/{total}
-                          </span>
+                          {progress && (
+                            <span style={{ fontSize: 10, color: 'var(--rg-text3)', fontWeight: 500, marginLeft: 'auto' }}>
+                              {progress.completed}/{progress.total}
+                            </span>
+                          )}
                         </div>
-                        <div style={{ height: 3, borderRadius: 2, background: 'var(--rg-border)', marginTop: 5 }}>
-                          <div style={{ height: '100%', borderRadius: 2, background: series.color, width: `${pct}%`, transition: 'width 0.3s ease' }} />
-                        </div>
+                        {progress && (
+                          <div style={{ height: 3, borderRadius: 2, background: 'var(--rg-border)', marginTop: 5 }}>
+                            <div style={{ height: '100%', borderRadius: 2, background: series.color, width: `${pct}%`, transition: 'width 0.3s ease' }} />
+                          </div>
+                        )}
                       </div>
                       <span style={checkboxStyle(active)}>
                         {active && <Check style={{ width: 12, height: 12, color: '#000' }} />}

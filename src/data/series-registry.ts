@@ -37,7 +37,7 @@ interface SeriesMeta {
   logoBgWhite?: boolean
 }
 
-const SERIES_META: SeriesMeta[] = [
+export const SERIES_META: SeriesMeta[] = [
   { id: 'f1', name: 'Formula 1', shortName: 'F1', color: '#FF1801', textColor: '#fff' },
   { id: 'indycar', name: 'IndyCar Series', shortName: 'INDY', color: '#002F6C', textColor: '#fff' },
   { id: 'nascar', name: 'NASCAR Cup Series', shortName: 'NASCAR', color: '#007AC2', textColor: '#fff' },
