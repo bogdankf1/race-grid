@@ -36,7 +36,6 @@ export function DayPageClient({ date }: DayPageClientProps) {
   useEffect(() => { applyTheme(theme) }, [theme])
 
   const parsed = parse(date, 'yyyy-MM-dd', new Date())
-  const monthPath = format(parsed, 'yyyy-MM')
   const dateLabel = formatDateLocale(parsed, locale)
   const dateLabelShort = formatDateShort(parsed, locale)
   const prevDate = format(subDays(parsed, 1), 'yyyy-MM-dd')
@@ -95,7 +94,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
         onToggleLocale={toggleLocale}
         spoilerFree={spoilerFree}
         onToggleSpoilerFree={toggleSpoilerFree}
-        backHref={`/?month=${monthPath}&from=${date}`}
+        showSeriesFilter={true}
       />
 
       <div className="rg-day-wrap">

@@ -218,6 +218,16 @@ button:disabled:active {
   font-size: 20px;
 }
 
+/* ── Navigation responsive ── */
+.rg-desktop-nav { display: flex; }
+.rg-bottom-nav { display: none !important; }
+
+@media (max-width: 768px) {
+  .rg-desktop-nav { display: none !important; }
+  .rg-bottom-nav { display: block !important; }
+  body { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+}
+
 /* ── Tablet (641–1024) ── */
 @media (max-width: 1024px) {
   .rg-header-inner { padding: 12px 20px; }

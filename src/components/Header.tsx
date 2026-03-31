@@ -2,10 +2,11 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ChevronLeft, Settings } from 'lucide-react'
+import { Settings } from 'lucide-react'
 import { SeriesFilterDropdown } from './SeriesFilterDropdown'
 import { InstallOrNotify } from './InstallOrNotify'
 import { SettingsModal } from './SettingsModal'
+import { DesktopNav, BottomNav } from './Navigation'
 import { t, type Locale } from '@/lib/i18n'
 import type { Theme } from '@/lib/theme'
 
@@ -21,7 +22,7 @@ interface HeaderProps {
   onToggleLocale: () => void
   spoilerFree: boolean
   onToggleSpoilerFree: () => void
-  backHref?: string
+  showSeriesFilter?: boolean
 }
 
 export function Header({
@@ -36,7 +37,7 @@ export function Header({
   onToggleLocale,
   spoilerFree,
   onToggleSpoilerFree,
-  backHref,
+  showSeriesFilter = true,
 }: HeaderProps) {
   const [settingsOpen, setSettingsOpen] = useState(false)
 
@@ -54,32 +55,21 @@ export function Header({
         }}
       >
         <div className="rg-header-inner">
-          {backHref ? (
-            <Link
-              href={backHref}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 4,
-                fontSize: 14,
-                color: 'var(--rg-text2)',
-                textDecoration: 'none',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              <ChevronLeft style={{ width: 18, height: 18 }} />
-              <span>{t('nav.back', locale)}</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            <Link href="/" style={{ textDecoration: 'none' }}>
+              <h1 className="font-display rg-header-title" style={{ margin: 0 }}>{t('app.title', locale)}</h1>
             </Link>
-          ) : (
-            <h1 className="font-display rg-header-title">{t('app.title', locale)}</h1>
-          )}
+            <DesktopNav locale={locale} />
+          </div>
           <div className="rg-header-controls" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <SeriesFilterDropdown
-              selectedIds={selectedSeriesIds}
-              onToggle={onToggleSeries}
-              onSetAll={onSetSeries}
-              locale={locale}
-            />
+            {showSeriesFilter && (
+              <SeriesFilterDropdown
+                selectedIds={selectedSeriesIds}
+                onToggle={onToggleSeries}
+                onSetAll={onSetSeries}
+                locale={locale}
+              />
+            )}
 
             <InstallOrNotify locale={locale} />
 
@@ -104,6 +94,8 @@ export function Header({
           </div>
         </div>
       </header>
+
+      <BottomNav locale={locale} />
 
       <SettingsModal
         open={settingsOpen}

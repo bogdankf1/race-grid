@@ -98,6 +98,10 @@ const translations: Record<Locale, Record<string, string>> = {
     'settings.light': 'Light',
     'settings.language': 'Language',
     'settings.timezone': 'Timezone',
+    'nav.calendar': 'Calendar',
+    'nav.series': 'Series',
+    'nav.circuits': 'Circuits',
+    'nav.standings': 'Standings',
   },
   uk: {
     'app.title': 'RACE GRID',
@@ -196,6 +200,10 @@ const translations: Record<Locale, Record<string, string>> = {
     'settings.light': 'Світла',
     'settings.language': 'Мова',
     'settings.timezone': 'Часова зона',
+    'nav.calendar': 'Календар',
+    'nav.series': 'Серії',
+    'nav.circuits': 'Траси',
+    'nav.standings': 'Таблиця',
   },
 }
 
