@@ -143,7 +143,9 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
           <div className="rg-event-card-header" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 }}>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                <SeriesChip series={series} size="md" />
+                <Link href={`/series/${series.id}`} style={{ textDecoration: 'none' }}>
+                  <SeriesChip series={series} size="md" />
+                </Link>
                 {event.round && (
                   <span style={{
                     fontSize: 11, fontWeight: 600, color: 'var(--rg-text3)',
