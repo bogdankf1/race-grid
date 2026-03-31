@@ -1,411 +1,411 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // IndyCar 2025 results — verified from indycar.com, en.wikipedia.org, motorsport.com
 export const indycarResults2025: Record<string, EventResults> = {
   'indycar-2025-st-petersburg': {
     qualifying: {
-      overall: { drivers: ['McLaughlin'], team: 'Team Penske' },
+      overall: { driverIds: ['mclaughlin'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['McLaughlin'], team: 'Team Penske' },
-          { position: 2, drivers: ['Dixon'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Newgarden'], team: 'Team Penske' },
+          { position: 1, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['newgarden'], teamId: 'team-penske' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Dixon'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Newgarden'], team: 'Team Penske' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['newgarden'], teamId: 'team-penske' },
         ],
       }],
     },
   },
   'indycar-2025-thermal': {
     qualifying: {
-      overall: { drivers: ["O'Ward"], team: 'Arrow McLaren' },
+      overall: { driverIds: [], teamId: 'arrow-mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+          { position: 1, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
         ],
       }],
     },
   },
   'indycar-2025-long-beach': {
     qualifying: {
-      overall: { drivers: ['Kirkwood'], team: 'Andretti Global' },
+      overall: { driverIds: ['kirkwood'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Kirkwood'], team: 'Andretti Global' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Kirkwood'], team: 'Andretti Global' },
+      overall: { driverIds: ['kirkwood'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Kirkwood'], team: 'Andretti Global' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
         ],
       }],
     },
   },
   'indycar-2025-barber': {
     qualifying: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['McLaughlin'], team: 'Team Penske' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['McLaughlin'], team: 'Team Penske' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
         ],
       }],
     },
   },
   'indycar-2025-indianapolis-gp': {
     qualifying: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Power'], team: 'Team Penske' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['power'], teamId: 'team-penske' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Power'], team: 'Team Penske' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['power'], teamId: 'team-penske' },
         ],
       }],
     },
   },
   'indycar-2025-indy500': {
     qualifying: {
-      overall: { drivers: ['Shwartzman'], team: 'PREMA Racing' },
+      overall: { driverIds: ['shwartzman'], teamId: 'prema-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Shwartzman'], team: 'PREMA Racing' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ["O'Ward"], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['shwartzman'], teamId: 'prema-racing' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: [], teamId: 'arrow-mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Malukas'], team: 'A.J. Foyt Enterprises' },
-          { position: 3, drivers: ["O'Ward"], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['malukas'], teamId: 'a-j-foyt-enterprises' },
+          { position: 3, driverIds: [], teamId: 'arrow-mclaren' },
         ],
       }],
     },
   },
   'indycar-2025-detroit': {
     qualifying: {
-      overall: { drivers: ['Herta'], team: 'Andretti Global' },
+      overall: { driverIds: ['herta'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Herta'], team: 'Andretti Global' },
-          { position: 2, drivers: ['Kirkwood'], team: 'Andretti Global' },
-          { position: 3, drivers: ['Ferrucci'], team: 'A.J. Foyt Enterprises' },
+          { position: 1, driverIds: ['herta'], teamId: 'andretti-global' },
+          { position: 2, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 3, driverIds: ['ferrucci'], teamId: 'a-j-foyt-enterprises' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Kirkwood'], team: 'Andretti Global' },
+      overall: { driverIds: ['kirkwood'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Kirkwood'], team: 'Andretti Global' },
-          { position: 2, drivers: ['Ferrucci'], team: 'A.J. Foyt Enterprises' },
-          { position: 3, drivers: ['Herta'], team: 'Andretti Global' },
+          { position: 1, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 2, driverIds: ['ferrucci'], teamId: 'a-j-foyt-enterprises' },
+          { position: 3, driverIds: ['herta'], teamId: 'andretti-global' },
         ],
       }],
     },
   },
   'indycar-2025-wwtr': {
     qualifying: {
-      overall: { drivers: ['Power'], team: 'Team Penske' },
+      overall: { driverIds: ['power'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Power'], team: 'Team Penske' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Kirkwood'], team: 'Andretti Global' },
+          { position: 1, driverIds: ['power'], teamId: 'team-penske' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['kirkwood'], teamId: 'andretti-global' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Kirkwood'], team: 'Andretti Global' },
+      overall: { driverIds: ['kirkwood'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Kirkwood'], team: 'Andretti Global' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Rasmussen'], team: 'Ed Carpenter Racing' },
+          { position: 1, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['rasmussen'], teamId: 'ed-carpenter-racing' },
         ],
       }],
     },
   },
   'indycar-2025-road-america': {
     qualifying: {
-      overall: { drivers: ['Foster'], team: 'Rahal Letterman Lanigan Racing' },
+      overall: { driverIds: ['foster'], teamId: 'rahal-letterman-lanigan' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Foster'], team: 'Rahal Letterman Lanigan Racing' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Rosenqvist'], team: 'Meyer Shank Racing' },
+          { position: 1, driverIds: ['foster'], teamId: 'rahal-letterman-lanigan' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Rosenqvist'], team: 'Meyer Shank Racing' },
-          { position: 3, drivers: ['Ferrucci'], team: 'A.J. Foyt Enterprises' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+          { position: 3, driverIds: ['ferrucci'], teamId: 'a-j-foyt-enterprises' },
         ],
       }],
     },
   },
   'indycar-2025-mid-ohio': {
     qualifying: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Dixon'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Dixon'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Dixon'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Herta'], team: 'Andretti Global' },
+          { position: 1, driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['herta'], teamId: 'andretti-global' },
         ],
       }],
     },
   },
   'indycar-2025-iowa-1': {
     qualifying: {
-      overall: { drivers: ['Newgarden'], team: 'Team Penske' },
+      overall: { driverIds: ['newgarden'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Newgarden'], team: 'Team Penske' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Power'], team: 'Team Penske' },
+          { position: 1, driverIds: ['newgarden'], teamId: 'team-penske' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['power'], teamId: 'team-penske' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ["O'Ward"], team: 'Arrow McLaren' },
+      overall: { driverIds: [], teamId: 'arrow-mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 2, drivers: ['Newgarden'], team: 'Team Penske' },
-          { position: 3, drivers: ['Power'], team: 'Team Penske' },
+          { position: 1, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 2, driverIds: ['newgarden'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['power'], teamId: 'team-penske' },
         ],
       }],
     },
   },
   'indycar-2025-iowa-2': {
     qualifying: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Dixon'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Armstrong'], team: 'Meyer Shank Racing' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['armstrong'], teamId: 'meyer-shank-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Dixon'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Armstrong'], team: 'Meyer Shank Racing' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['armstrong'], teamId: 'meyer-shank-racing' },
         ],
       }],
     },
   },
   'indycar-2025-toronto': {
     qualifying: {
-      overall: { drivers: ['Herta'], team: 'Andretti Global' },
+      overall: { driverIds: ['herta'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Herta'], team: 'Andretti Global' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['VeeKay'], team: 'Dale Coyne Racing' },
+          { position: 1, driverIds: ['herta'], teamId: 'andretti-global' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['veekay'], teamId: 'dale-coyne-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ["O'Ward"], team: 'Arrow McLaren' },
+      overall: { driverIds: [], teamId: 'arrow-mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 2, drivers: ['VeeKay'], team: 'Dale Coyne Racing' },
-          { position: 3, drivers: ['Simpson'], team: 'Chip Ganassi Racing' },
+          { position: 1, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 2, driverIds: ['veekay'], teamId: 'dale-coyne-racing' },
+          { position: 3, driverIds: ['simpson'], teamId: 'chip-ganassi-racing' },
         ],
       }],
     },
   },
   'indycar-2025-laguna-seca': {
     qualifying: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Herta'], team: 'Andretti Global' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['herta'], teamId: 'andretti-global' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Herta'], team: 'Andretti Global' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['herta'], teamId: 'andretti-global' },
         ],
       }],
     },
   },
   'indycar-2025-portland': {
     qualifying: {
-      overall: { drivers: ['Lundgaard'], team: 'Arrow McLaren' },
+      overall: { driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
-          { position: 2, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+          { position: 1, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+          { position: 2, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Power'], team: 'Team Penske' },
+      overall: { driverIds: ['power'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Power'], team: 'Team Penske' },
-          { position: 2, drivers: ['Lundgaard'], team: 'Arrow McLaren' },
-          { position: 3, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+          { position: 1, driverIds: ['power'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
         ],
       }],
     },
   },
   'indycar-2025-milwaukee': {
     qualifying: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Rasmussen'], team: 'Ed Carpenter Racing' },
-          { position: 3, drivers: ['Newgarden'], team: 'Team Penske' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['rasmussen'], teamId: 'ed-carpenter-racing' },
+          { position: 3, driverIds: ['newgarden'], teamId: 'team-penske' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Rasmussen'], team: 'Ed Carpenter Racing' },
+      overall: { driverIds: ['rasmussen'], teamId: 'ed-carpenter-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Rasmussen'], team: 'Ed Carpenter Racing' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Newgarden'], team: 'Team Penske' },
+          { position: 1, driverIds: ['rasmussen'], teamId: 'ed-carpenter-racing' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['newgarden'], teamId: 'team-penske' },
         ],
       }],
     },
   },
   'indycar-2025-nashville': {
     qualifying: {
-      overall: { drivers: ["O'Ward"], team: 'Arrow McLaren' },
+      overall: { driverIds: [], teamId: 'arrow-mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ["O'Ward"], team: 'Arrow McLaren' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['McLaughlin'], team: 'Team Penske' },
+          { position: 1, driverIds: [], teamId: 'arrow-mclaren' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['mclaughlin'], teamId: 'team-penske' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Newgarden'], team: 'Team Penske' },
+      overall: { driverIds: ['newgarden'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Newgarden'], team: 'Team Penske' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['McLaughlin'], team: 'Team Penske' },
+          { position: 1, driverIds: ['newgarden'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['mclaughlin'], teamId: 'team-penske' },
         ],
       }],
     },

@@ -8,7 +8,7 @@ import type { SeriesConfig } from '@/lib/types'
 
 function getSeriesProgress(series: SeriesConfig): { completed: number; total: number } {
   const now = Date.now()
-  const total = series.events.length
+  const total = Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))
   const completed = series.events.filter(event => {
     const lastSession = event.sessions[event.sessions.length - 1]
     if (!lastSession) return false

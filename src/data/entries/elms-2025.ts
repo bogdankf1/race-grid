@@ -1,0 +1,26 @@
+import type { EntryItem } from './types'
+
+export const elmsEntries2025: EntryItem[] = [
+  { driverId: 'de-gerus', teamId: 'duqueine' },
+  { driverId: 'nissany', teamId: 'duqueine' },
+  { driverId: 'simonazzi', teamId: 'duqueine' },
+  { driverId: 'perrodo', teamId: 'af-corse' },
+  { driverId: 'rovera', teamId: 'af-corse' },
+  { driverId: 'vaxiviere', teamId: 'af-corse' },
+  { driverId: 'martin', teamId: 'iron-dames' },
+  { driverId: 'bovy', teamId: 'iron-dames' },
+  { driverId: 'gatting', teamId: 'iron-dames' },
+  { driverId: 'dillmann', teamId: 'inter-europol' },
+  { driverId: 'smiechowski', teamId: 'inter-europol' },
+  { driverId: 'yelloly', teamId: 'inter-europol' },
+  { driverId: 'juncadella', teamId: 'idec-sport' },
+  { driverId: 'jaubert', teamId: 'idec-sport' },
+  { driverId: 'chadwick', teamId: 'idec-sport' },
+  { driverId: 'binder', teamId: 'algarve-pro' },
+  { driverId: 'gray', teamId: 'vds-panis' },
+  { driverId: 'milesi', teamId: 'vds-panis' },
+  { driverId: 'masson', teamId: 'vds-panis' },
+  { driverId: 'nielsen', teamId: 'nielsen-racing' },
+  { driverId: 'eastwood', teamId: 'tf-sport' },
+  { driverId: 'deletraz', teamId: 'iron-lynx' },
+]

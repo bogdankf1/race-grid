@@ -1,31 +1,31 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // ELMS 2025 results — verified from europeanlemansseries.com, 24h-lemans.com, sportscar365.com
 export const elmsResults2025: Record<string, EventResults> = {
   'elms-2025-barcelona': {
     // Pole: No. 30 Duqueine Team (LMP2), No. 17 CLX Motorsport (LMGT3)
     qualifying: {
-      overall: { drivers: ['de Gerus', 'Nissany', 'Simonazzi'], team: 'Duqueine Team #30' },
+      overall: { driverIds: ['de-gerus', 'nissany', 'simonazzi'], teamId: 'duqueine' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['de Gerus', 'Nissany', 'Simonazzi'], team: 'Duqueine Team #30' },
+          { position: 1, driverIds: ['de-gerus', 'nissany', 'simonazzi'], teamId: 'duqueine' },
         ],
       }],
     },
     endurance: {
-      overall: { drivers: ['Perrodo', 'Rovera', 'Vaxivière'], team: 'AF Corse' },
+      overall: { driverIds: ['perrodo', 'rovera', 'vaxiviere'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Perrodo', 'Rovera', 'Vaxivière'], team: 'AF Corse' },
+            { position: 1, driverIds: ['perrodo', 'rovera', 'vaxiviere'], teamId: 'ferrari-af-corse' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Martin', 'Bovy', 'Gatting'], team: 'Iron Dames Porsche' },
+            { position: 1, driverIds: ['martin', 'bovy', 'gatting'], teamId: 'iron-dames' },
           ],
         },
       ],
@@ -33,21 +33,21 @@ export const elmsResults2025: Record<string, EventResults> = {
   },
   'elms-2025-le-castellet': {
     qualifying: {
-      overall: { drivers: ['Dillmann', 'Śmiechowski', 'Yelloly'], team: 'Inter Europol Competition #43' },
+      overall: { driverIds: ['dillmann', 'smiechowski', 'yelloly'], teamId: 'inter-europol' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Dillmann', 'Śmiechowski', 'Yelloly'], team: 'Inter Europol Competition #43' },
+          { position: 1, driverIds: ['dillmann', 'smiechowski', 'yelloly'], teamId: 'inter-europol' },
         ],
       }],
     },
     endurance: {
-      overall: { drivers: ['Juncadella', 'Jaubert', 'Chadwick'], team: 'IDEC Sport' },
+      overall: { driverIds: ['juncadella', 'jaubert', 'chadwick'], teamId: 'idec-sport' },
       classes: [
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Juncadella', 'Jaubert', 'Chadwick'], team: 'IDEC Sport' },
+            { position: 1, driverIds: ['juncadella', 'jaubert', 'chadwick'], teamId: 'idec-sport' },
           ],
         },
       ],
@@ -55,27 +55,27 @@ export const elmsResults2025: Record<string, EventResults> = {
   },
   'elms-2025-imola': {
     qualifying: {
-      overall: { drivers: ['Binder'], team: 'Algarve Pro Racing #25' },
+      overall: { driverIds: ['binder'], teamId: 'algarve-pro' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Binder'], team: 'Algarve Pro Racing #25' },
+          { position: 1, driverIds: ['binder'], teamId: 'algarve-pro' },
         ],
       }],
     },
     endurance: {
-      overall: { drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing' },
+      overall: { driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
       classes: [
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing' },
+            { position: 1, driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Eastwood'], team: 'TF Sport Corvette' },
+            { position: 1, driverIds: ['eastwood'], teamId: 'tf-sport' },
           ],
         },
       ],
@@ -83,21 +83,21 @@ export const elmsResults2025: Record<string, EventResults> = {
   },
   'elms-2025-spa': {
     qualifying: {
-      overall: { drivers: ['Nielsen'], team: 'Nielsen Racing #24' },
+      overall: { driverIds: ['nielsen'], teamId: 'nielsen-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Nielsen'], team: 'Nielsen Racing #24' },
+          { position: 1, driverIds: ['nielsen'], teamId: 'nielsen-racing' },
         ],
       }],
     },
     endurance: {
-      overall: { drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing' },
+      overall: { driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
       classes: [
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing' },
+            { position: 1, driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
           ],
         },
       ],
@@ -105,21 +105,21 @@ export const elmsResults2025: Record<string, EventResults> = {
   },
   'elms-2025-silverstone': {
     qualifying: {
-      overall: { drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing #48' },
+      overall: { driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing #48' },
+          { position: 1, driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
         ],
       }],
     },
     endurance: {
-      overall: { drivers: ['Juncadella', 'Jaubert', 'Chadwick'], team: 'IDEC Sport' },
+      overall: { driverIds: ['juncadella', 'jaubert', 'chadwick'], teamId: 'idec-sport' },
       classes: [
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Juncadella', 'Jaubert', 'Chadwick'], team: 'IDEC Sport' },
+            { position: 1, driverIds: ['juncadella', 'jaubert', 'chadwick'], teamId: 'idec-sport' },
           ],
         },
       ],
@@ -127,21 +127,21 @@ export const elmsResults2025: Record<string, EventResults> = {
   },
   'elms-2025-portimao': {
     qualifying: {
-      overall: { drivers: ['Deletraz'], team: 'Iron Lynx–Proton #9' },
+      overall: { driverIds: ['deletraz'], teamId: 'iron-lynx' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Deletraz'], team: 'Iron Lynx–Proton #9' },
+          { position: 1, driverIds: ['deletraz'], teamId: 'iron-lynx' },
         ],
       }],
     },
     endurance: {
-      overall: { drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing' },
+      overall: { driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
       classes: [
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Gray', 'Milesi', 'Masson'], team: 'VDS Panis Racing' },
+            { position: 1, driverIds: ['gray', 'milesi', 'masson'], teamId: 'vds-panis' },
           ],
         },
       ],

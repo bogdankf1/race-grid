@@ -21,9 +21,7 @@ export interface RaceEvent {
   id: string
   round?: number
   name: string
-  circuit: string
-  country: string
-  countryCode: string
+  circuitId: string
   sessions: Session[]
 }
 

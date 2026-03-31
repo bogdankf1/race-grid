@@ -1,5 +1,6 @@
-import { RaceResult, SessionType } from '@/lib/types'
-import { EventResults } from './types'
+import type { RaceResult, SessionType } from '@/lib/types'
+import type { EventResults } from './types'
+import { resolveResult } from './resolve'
 import { f1Results2025 } from './f1-2025'
 import { f1Results2026 } from './f1-2026'
 import { nascarResults2025 } from './nascar-2025'
@@ -49,5 +50,7 @@ const ALL_RESULTS: Record<string, EventResults> = {
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {
-  return ALL_RESULTS[eventId]?.[sessionType] ?? null
+  const normalized = ALL_RESULTS[eventId]?.[sessionType]
+  if (!normalized) return null
+  return resolveResult(normalized)
 }

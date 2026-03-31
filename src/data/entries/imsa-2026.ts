@@ -1,0 +1,25 @@
+import type { EntryItem } from './types'
+
+export const imsaEntries2026: EntryItem[] = [
+  { driverId: 'nasr', teamId: 'porsche-penske' },
+  { driverId: 'andlauer', teamId: 'porsche-penske' },
+  { driverId: 'heinrich', teamId: 'porsche-penske' },
+  { driverId: 'estre', teamId: 'porsche-penske' },
+  { driverId: 'bamber', teamId: 'meyer-shank-racing' },
+  { driverId: 'blomqvist', teamId: 'meyer-shank-racing' },
+  { driverId: 'aitken', teamId: 'whelen-engineering' },
+  { driverId: 'albuquerque', teamId: 'wayne-taylor-racing' },
+  { driverId: 'farfus', teamId: 'team-wrt' },
+  { driverId: 'kurtz', teamId: 'crowdstrike-racing' },
+  { driverId: 'quinn', teamId: 'crowdstrike-racing' },
+  { driverId: 'sowery', teamId: 'crowdstrike-racing' },
+  { driverId: 'jakobsen', teamId: 'crowdstrike-racing' },
+  { driverId: 'verhagen', teamId: 'paul-miller-racing' },
+  { driverId: 'de-phillippi', teamId: 'paul-miller-racing' },
+  { driverId: 'hesse', teamId: 'paul-miller-racing' },
+  { driverId: 'harper', teamId: 'paul-miller-racing' },
+  { driverId: 'ellis', teamId: 'winward-racing' },
+  { driverId: 'ward', teamId: 'winward-racing' },
+  { driverId: 'dontje', teamId: 'winward-racing' },
+  { driverId: 'auer', teamId: 'winward-racing' },
+]

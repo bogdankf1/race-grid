@@ -1,42 +1,42 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // WRC 2026 results — verified from wrc.com, dirtfish.com
 export const wrcResults2026: Record<string, EventResults> = {
   'wrc-2026-monte-carlo': {
     stage: {
-      overall: { drivers: ['Rovanperä', 'Halttunen'], team: 'Toyota Gazoo Racing' },
+      overall: { driverIds: ['rovanpera', 'halttunen'], teamId: 'toyota-gazoo-racing' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Rovanperä', 'Halttunen'], team: 'Toyota Gazoo Racing' },
-          { position: 2, drivers: ['Neuville', 'Wydaeghe'], team: 'Hyundai Shell Mobis' },
-          { position: 3, drivers: ['Evans', 'Martin'], team: 'Toyota Gazoo Racing' },
+          { position: 1, driverIds: ['rovanpera', 'halttunen'], teamId: 'toyota-gazoo-racing' },
+          { position: 2, driverIds: ['neuville', 'wydaeghe'], teamId: 'hyundai-wrt' },
+          { position: 3, driverIds: ['evans', 'martin'], teamId: 'toyota-gazoo-racing' },
         ],
       }],
     },
   },
   'wrc-2026-sweden': {
     stage: {
-      overall: { drivers: ['Tänak', 'Järveoja'], team: 'Hyundai Shell Mobis' },
+      overall: { driverIds: ['tanak', 'jarveoja'], teamId: 'hyundai-wrt' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Tänak', 'Järveoja'], team: 'Hyundai Shell Mobis' },
-          { position: 2, drivers: ['Rovanperä', 'Halttunen'], team: 'Toyota Gazoo Racing' },
-          { position: 3, drivers: ['Fourmaux', 'Coria'], team: 'Hyundai Shell Mobis' },
+          { position: 1, driverIds: ['tanak', 'jarveoja'], teamId: 'hyundai-wrt' },
+          { position: 2, driverIds: ['rovanpera', 'halttunen'], teamId: 'toyota-gazoo-racing' },
+          { position: 3, driverIds: ['fourmaux', 'coria'], teamId: 'hyundai-wrt' },
         ],
       }],
     },
   },
   'wrc-2026-kenya': {
     stage: {
-      overall: { drivers: ['Katsuta', 'Johnston'], team: 'Toyota Gazoo Racing' },
+      overall: { driverIds: ['katsuta', 'johnston'], teamId: 'toyota-gazoo-racing' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Katsuta', 'Johnston'], team: 'Toyota Gazoo Racing' },
-          { position: 2, drivers: ['Fourmaux', 'Coria'], team: 'Hyundai Shell Mobis' },
-          { position: 3, drivers: ['Pajari'], team: 'Toyota Gazoo Racing' },
+          { position: 1, driverIds: ['katsuta', 'johnston'], teamId: 'toyota-gazoo-racing' },
+          { position: 2, driverIds: ['fourmaux', 'coria'], teamId: 'hyundai-wrt' },
+          { position: 3, driverIds: ['pajari'], teamId: 'toyota-gazoo-racing' },
         ],
       }],
     },

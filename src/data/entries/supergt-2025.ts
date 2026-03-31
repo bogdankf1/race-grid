@@ -1,0 +1,27 @@
+import type { EntryItem } from './types'
+
+export const supergtEntries2025: EntryItem[] = [
+  { driverId: 'fukuzumi', teamId: 'eneos-x-prime' },
+  { driverId: 'tsuboi', teamId: 'tgr-toms' },
+  { driverId: 'yamashita', teamId: 'tgr-toms' },
+  { driverId: 'ishiura', teamId: 'keeper-cerumo' },
+  { driverId: 'oyu', teamId: 'keeper-cerumo' },
+  { driverId: 'kunimoto', teamId: 'tgr-wedssport-bandoh' },
+  { driverId: 'alesi', teamId: 'tgr-deloitte-toms' },
+  { driverId: 'sasahara', teamId: 'tgr-deloitte-toms' },
+  { driverId: 'otsu', teamId: 'arta-mugen' },
+  { driverId: 'sato', teamId: 'arta-mugen' },
+  { driverId: 'matsuda', teamId: 'nismo' },
+  { driverId: 'quintarelli', teamId: 'nismo' },
+  { driverId: 'natori', teamId: 'kondo-racing-nissan' },
+  { driverId: 'sekiguchi', teamId: 'denso-kobelco-sard' },
+  { driverId: 'fenestraz', teamId: 'denso-kobelco-sard' },
+  { driverId: 'tsukakoshi', teamId: 'astemo-honda' },
+  { driverId: 'koide', teamId: 'astemo-honda' },
+  { driverId: 'sasaki', teamId: 'nddp-racing' },
+  { driverId: 'miyake', teamId: 'nddp-racing' },
+  { driverId: 'yamamoto', teamId: 'stanley-kunimitsu' },
+  { driverId: 'makino', teamId: 'stanley-kunimitsu' },
+  { driverId: 'izawa', teamId: 'modulo-honda' },
+  { driverId: 'okusa', teamId: 'modulo-honda' },
+]

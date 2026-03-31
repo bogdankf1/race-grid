@@ -1,4 +1,5 @@
 import { RaceEvent, Session } from './types'
+import { getCircuit } from '@/data/circuits'
 
 function formatIcsDate(utcString: string): string {
   const d = new Date(utcString)
@@ -19,8 +20,11 @@ function vevent(event: RaceEvent, session: Session, seriesName: string, index: n
   const end = session.durationMinutes
     ? formatIcsDate(new Date(new Date(session.startUtc).getTime() + session.durationMinutes * 60000).toISOString())
     : formatIcsDate(new Date(new Date(session.startUtc).getTime() + 120 * 60000).toISOString()) // default 2h
+  const circuit = getCircuit(event.circuitId)
+  const circuitName = circuit?.name ?? event.circuitId
+  const countryName = circuit?.country ?? ''
   const summary = `${seriesName}: ${session.label} — ${event.name}`
-  const location = `${event.circuit}, ${event.country}`
+  const location = `${circuitName}, ${countryName}`
 
   return [
     'BEGIN:VEVENT',
@@ -30,7 +34,7 @@ function vevent(event: RaceEvent, session: Session, seriesName: string, index: n
     `DTEND:${end}`,
     `SUMMARY:${escapeIcs(summary)}`,
     `LOCATION:${escapeIcs(location)}`,
-    `DESCRIPTION:${escapeIcs(`${session.label} — ${event.name}\\n${event.circuit}\\n${seriesName}`)}`,
+    `DESCRIPTION:${escapeIcs(`${session.label} — ${event.name}\\n${circuitName}\\n${seriesName}`)}`,
     'END:VEVENT',
   ].join('\r\n')
 }
@@ -54,9 +58,12 @@ export function googleCalendarUrl(event: RaceEvent, session: Session, seriesName
   const start = formatIcsDate(session.startUtc)
   const endMs = new Date(session.startUtc).getTime() + (session.durationMinutes || 120) * 60000
   const end = formatIcsDate(new Date(endMs).toISOString())
+  const circuit = getCircuit(event.circuitId)
+  const circuitName = circuit?.name ?? event.circuitId
+  const countryName = circuit?.country ?? ''
   const title = `${seriesName}: ${session.label} — ${event.name}`
-  const location = `${event.circuit}, ${event.country}`
-  const details = `${session.label} — ${event.name}\n${event.circuit}\n${seriesName}`
+  const location = `${circuitName}, ${countryName}`
+  const details = `${session.label} — ${event.name}\n${circuitName}\n${seriesName}`
 
   const params = new URLSearchParams({
     action: 'TEMPLATE',

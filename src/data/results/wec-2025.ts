@@ -1,46 +1,46 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // WEC 2025 results — verified from fiawec.com, en.wikipedia.org, motorsport.com
 export const wecResults2025: Record<string, EventResults> = {
   'wec-2025-qatar': {
     qualifying: {
-      overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' }] }],
+      overall: { driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
+      overall: { driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
+            { position: 1, driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Edgar', 'Juncadella', 'Keating'], team: 'TF Sport Corvette #33' },
+            { position: 1, driverIds: ['edgar', 'juncadella', 'keating'], teamId: 'tf-sport' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse #50' },
+      overall: { driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse #50' },
-            { position: 2, drivers: ['Ye', 'Kubica', 'Hanson'], team: 'AF Corse Ferrari #83' },
-            { position: 3, drivers: ['Pier Guidi', 'Calado', 'Giovinazzi'], team: 'Ferrari AF Corse #51' },
+            { position: 1, driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
+            { position: 2, driverIds: ['ye', 'kubica', 'hanson'], teamId: 'ferrari-af-corse' },
+            { position: 3, driverIds: ['pier-guidi', 'calado', 'giovinazzi'], teamId: 'ferrari-af-corse' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Edgar', 'Juncadella', 'Keating'], team: 'TF Sport Corvette #33' },
-            { position: 2, drivers: ['Al Harthy', 'Sherwood', 'Sherwood'], team: 'United Autosports McLaren #59' },
-            { position: 3, drivers: ['Shahin', 'Boguslavskiy', 'Farfus'], team: 'Team WRT BMW #31' },
+            { position: 1, driverIds: ['edgar', 'juncadella', 'keating'], teamId: 'tf-sport' },
+            { position: 2, driverIds: ['al-harthy', 'sherwood', 'sherwood'], teamId: 'united-autosports' },
+            { position: 3, driverIds: ['shahin', 'boguslavskiy', 'farfus'], teamId: 'team-wrt' },
           ],
         },
       ],
@@ -48,43 +48,43 @@ export const wecResults2025: Record<string, EventResults> = {
   },
   'wec-2025-imola': {
     qualifying: {
-      overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' }] }],
+      overall: { driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse' },
+      overall: { driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Giovinazzi', 'Calado', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
+            { position: 1, driverIds: ['giovinazzi', 'calado', 'pier-guidi'], teamId: 'ferrari-af-corse' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['van der Linde', 'Rossi', 'Al Harthy'], team: 'Team WRT BMW #46' },
+            { position: 1, driverIds: ['van der Linde', 'rossi', 'al-harthy'], teamId: 'team-wrt' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Calado', 'Giovinazzi', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
+      overall: { driverIds: ['calado', 'giovinazzi', 'pier-guidi'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Calado', 'Giovinazzi', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
-            { position: 2, drivers: ['Frijns', 'Rast', 'van der Linde'], team: 'BMW M Team WRT #20' },
-            { position: 3, drivers: ['Schumacher', 'Gounon', 'Makowiecki'], team: 'Alpine Endurance Team #36' },
+            { position: 1, driverIds: ['calado', 'giovinazzi', 'pier-guidi'], teamId: 'ferrari-af-corse' },
+            { position: 2, driverIds: ['frijns', 'rast', 'van der Linde'], teamId: 'team-wrt' },
+            { position: 3, driverIds: ['schumacher', 'gounon', 'makowiecki'], teamId: 'alpine' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Hardwick', 'Lietz', 'Pera'], team: 'Manthey Porsche #92' },
-            { position: 2, drivers: ['van der Linde', 'Rossi', 'Al Harthy'], team: 'Team WRT BMW #46' },
-            { position: 3, drivers: ['Gehrsitz', 'Robin', 'Barnicoat'], team: 'Akkodis ASP Lexus #78' },
+            { position: 1, driverIds: ['hardwick', 'lietz', 'pera'], teamId: 'manthey' },
+            { position: 2, driverIds: ['van der Linde', 'rossi', 'al-harthy'], teamId: 'team-wrt' },
+            { position: 3, driverIds: ['gehrsitz', 'robin', 'barnicoat'], teamId: 'akkodis-asp' },
           ],
         },
       ],
@@ -92,37 +92,37 @@ export const wecResults2025: Record<string, EventResults> = {
   },
   'wec-2025-spa': {
     qualifying: {
-      overall: { drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse' }] }],
+      overall: { driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse' },
+      overall: { driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse #50' },
+            { position: 1, driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Calado', 'Giovinazzi', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
+      overall: { driverIds: ['calado', 'giovinazzi', 'pier-guidi'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Calado', 'Giovinazzi', 'Pier Guidi'], team: 'Ferrari AF Corse #51' },
-            { position: 2, drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse #50' },
-            { position: 3, drivers: ['Schumacher', 'Makowiecki', 'Gounon'], team: 'Alpine Endurance Team #36' },
+            { position: 1, driverIds: ['calado', 'giovinazzi', 'pier-guidi'], teamId: 'ferrari-af-corse' },
+            { position: 2, driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
+            { position: 3, driverIds: ['schumacher', 'makowiecki', 'gounon'], teamId: 'alpine' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Heriau', 'Mann', 'Rovera'], team: 'Vista AF Corse Ferrari #21' },
-            { position: 2, drivers: ['Olsen', 'Levorato', 'Gattuso'], team: 'Proton Competition Ford #88' },
-            { position: 3, drivers: ['Rigon'], team: 'Vista AF Corse Ferrari #54' },
+            { position: 1, driverIds: ['heriau', 'mann', 'rovera'], teamId: 'vista-af-corse' },
+            { position: 2, driverIds: ['olsen', 'levorato', 'gattuso'], teamId: 'proton-competition' },
+            { position: 3, driverIds: ['rigon'], teamId: 'vista-af-corse' },
           ],
         },
       ],
@@ -130,37 +130,37 @@ export const wecResults2025: Record<string, EventResults> = {
   },
   'wec-2025-le-mans': {
     qualifying: {
-      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' }] }],
+      overall: { driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
+      overall: { driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota #12' },
+            { position: 1, driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Hanson', 'Kubica', 'Ye'], team: 'AF Corse Ferrari #83' },
+      overall: { driverIds: ['hanson', 'kubica', 'ye'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Hanson', 'Kubica', 'Ye'], team: 'AF Corse Ferrari #83' },
-            { position: 2, drivers: ['Estre', 'Vanthoor', 'Campbell'], team: 'Porsche Penske Motorsport #6' },
-            { position: 3, drivers: ['Pier Guidi', 'Calado', 'Giovinazzi'], team: 'Ferrari AF Corse #51' },
+            { position: 1, driverIds: ['hanson', 'kubica', 'ye'], teamId: 'ferrari-af-corse' },
+            { position: 2, driverIds: ['estre', 'vanthoor', 'campbell'], teamId: 'porsche-penske' },
+            { position: 3, driverIds: ['pier-guidi', 'calado', 'giovinazzi'], teamId: 'ferrari-af-corse' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Hardwick', 'Lietz', 'Pera'], team: 'Manthey Porsche #92' },
-            { position: 2, drivers: ['Heriau', 'Mann', 'Rovera'], team: 'Vista AF Corse Ferrari #21' },
-            { position: 3, drivers: ['Eastwood', 'Andrade', 'Van Rompuy'], team: 'TF Sport Corvette #81' },
+            { position: 1, driverIds: ['hardwick', 'lietz', 'pera'], teamId: 'manthey' },
+            { position: 2, driverIds: ['heriau', 'mann', 'rovera'], teamId: 'vista-af-corse' },
+            { position: 3, driverIds: ['eastwood', 'andrade', 'van-rompuy'], teamId: 'tf-sport' },
           ],
         },
       ],
@@ -168,37 +168,37 @@ export const wecResults2025: Record<string, EventResults> = {
   },
   'wec-2025-sao-paulo': {
     qualifying: {
-      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' }] }],
+      overall: { driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
+      overall: { driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota #12' },
+            { position: 1, driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota #12' },
+      overall: { driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota #12' },
-            { position: 2, drivers: ['Bamber', 'Bourdais', 'Button'], team: 'Cadillac Hertz Team Jota #38' },
-            { position: 3, drivers: ['Andlauer', 'Christensen'], team: 'Porsche Penske Motorsport #5' },
+            { position: 1, driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
+            { position: 2, driverIds: ['bamber', 'bourdais', 'button'], teamId: 'jota' },
+            { position: 3, driverIds: ['andlauer', 'christensen'], teamId: 'porsche-penske' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Lopez', 'Schmid', 'Umbrarescu'], team: 'Akkodis ASP Lexus #87' },
-            { position: 2, drivers: ['Eastwood', 'Andrade', 'Van Rompuy'], team: 'TF Sport Corvette #81' },
-            { position: 3, drivers: ['Barrichello', 'Ruberti', 'Roda'], team: 'Racing Spirit of Leman Aston Martin #10' },
+            { position: 1, driverIds: ['lopez', 'schmid', 'umbrarescu'], teamId: 'akkodis-asp' },
+            { position: 2, driverIds: ['eastwood', 'andrade', 'van-rompuy'], teamId: 'tf-sport' },
+            { position: 3, driverIds: ['barrichello', 'ruberti', 'roda'], teamId: 'racing-spirit-of-leman' },
           ],
         },
       ],
@@ -206,37 +206,37 @@ export const wecResults2025: Record<string, EventResults> = {
   },
   'wec-2025-cota': {
     qualifying: {
-      overall: { drivers: ['Kubica', 'Hanson', 'Ye'], team: 'AF Corse Ferrari' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kubica', 'Hanson', 'Ye'], team: 'AF Corse Ferrari' }] }],
+      overall: { driverIds: ['kubica', 'hanson', 'ye'], teamId: 'ferrari-af-corse' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['kubica', 'hanson', 'ye'], teamId: 'ferrari-af-corse' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Kubica', 'Hanson', 'Ye'], team: 'AF Corse Ferrari' },
+      overall: { driverIds: ['kubica', 'hanson', 'ye'], teamId: 'ferrari-af-corse' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Kubica', 'Hanson', 'Ye'], team: 'AF Corse Ferrari #83' },
+            { position: 1, driverIds: ['kubica', 'hanson', 'ye'], teamId: 'ferrari-af-corse' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Estre', 'Vanthoor', 'Campbell'], team: 'Porsche Penske Motorsport #6' },
+      overall: { driverIds: ['estre', 'vanthoor', 'campbell'], teamId: 'porsche-penske' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Estre', 'Vanthoor', 'Campbell'], team: 'Porsche Penske Motorsport #6' },
-            { position: 2, drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse #50' },
-            { position: 3, drivers: ['Jakobsen', 'Vergne', 'di Resta'], team: 'Peugeot TotalEnergies #94' },
+            { position: 1, driverIds: ['estre', 'vanthoor', 'campbell'], teamId: 'porsche-penske' },
+            { position: 2, driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
+            { position: 3, driverIds: ['jakobsen', 'vergne', 'di-resta'], teamId: 'peugeot' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Gelael', 'Leung', 'Sato'], team: 'United Autosports McLaren #95' },
-            { position: 2, drivers: ['van der Linde', 'Rossi', 'Al Harthy'], team: 'Team WRT BMW #46' },
-            { position: 3, drivers: ['Rigon'], team: 'Vista AF Corse Ferrari #54' },
+            { position: 1, driverIds: ['gelael', 'leung', 'sato'], teamId: 'united-autosports' },
+            { position: 2, driverIds: ['van der Linde', 'rossi', 'al-harthy'], teamId: 'team-wrt' },
+            { position: 3, driverIds: ['rigon'], teamId: 'vista-af-corse' },
           ],
         },
       ],
@@ -244,37 +244,37 @@ export const wecResults2025: Record<string, EventResults> = {
   },
   'wec-2025-fuji': {
     qualifying: {
-      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' }] }],
+      overall: { driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota' },
+      overall: { driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Lynn', 'Nato', 'Stevens'], team: 'Cadillac Hertz Team Jota #12' },
+            { position: 1, driverIds: ['lynn', 'nato', 'stevens'], teamId: 'jota' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Chatin', 'Habsburg', 'Milesi'], team: 'Alpine Endurance Team #35' },
+      overall: { driverIds: ['chatin', 'habsburg', 'milesi'], teamId: 'alpine' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Chatin', 'Habsburg', 'Milesi'], team: 'Alpine Endurance Team #35' },
-            { position: 2, drivers: ['di Resta', 'Jensen', 'Vergne'], team: 'Peugeot TotalEnergies #93' },
-            { position: 3, drivers: ['Estre', 'Vanthoor'], team: 'Porsche Penske Motorsport #6' },
+            { position: 1, driverIds: ['chatin', 'habsburg', 'milesi'], teamId: 'alpine' },
+            { position: 2, driverIds: ['di-resta', 'jensen', 'vergne'], teamId: 'peugeot' },
+            { position: 3, driverIds: ['estre', 'vanthoor'], teamId: 'porsche-penske' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Van Rompuy', 'Andrade', 'Eastwood'], team: 'TF Sport Corvette #81' },
-            { position: 2, drivers: ['Heriau', 'Mann', 'Rovera'], team: 'Vista AF Corse Ferrari #21' },
-            { position: 3, drivers: ['Shahin', 'Boguslavskiy', 'Farfus'], team: 'Team WRT BMW #31' },
+            { position: 1, driverIds: ['van-rompuy', 'andrade', 'eastwood'], teamId: 'tf-sport' },
+            { position: 2, driverIds: ['heriau', 'mann', 'rovera'], teamId: 'vista-af-corse' },
+            { position: 3, driverIds: ['shahin', 'boguslavskiy', 'farfus'], teamId: 'team-wrt' },
           ],
         },
       ],
@@ -282,37 +282,37 @@ export const wecResults2025: Record<string, EventResults> = {
   },
   'wec-2025-bahrain': {
     qualifying: {
-      overall: { drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing' }] }],
+      overall: { driverIds: ['kobayashi', 'conway', 'de-vries'], teamId: 'toyota-gazoo-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['kobayashi', 'conway', 'de-vries'], teamId: 'toyota-gazoo-racing' }] }],
     },
     hyperpole: {
-      overall: { drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing' },
+      overall: { driverIds: ['kobayashi', 'conway', 'de-vries'], teamId: 'toyota-gazoo-racing' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing #7' },
+            { position: 1, driverIds: ['kobayashi', 'conway', 'de-vries'], teamId: 'toyota-gazoo-racing' },
           ],
         },
       ],
     },
     race: {
-      overall: { drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing #7' },
+      overall: { driverIds: ['kobayashi', 'conway', 'de-vries'], teamId: 'toyota-gazoo-racing' },
       classes: [
         {
           className: 'Hypercar',
           podium: [
-            { position: 1, drivers: ['Kobayashi', 'Conway', 'de Vries'], team: 'Toyota Gazoo Racing #7' },
-            { position: 2, drivers: ['Buemi', 'Hartley', 'Hirakawa'], team: 'Toyota Gazoo Racing #8' },
-            { position: 3, drivers: ['Fuoco', 'Molina', 'Nielsen'], team: 'Ferrari AF Corse #50' },
+            { position: 1, driverIds: ['kobayashi', 'conway', 'de-vries'], teamId: 'toyota-gazoo-racing' },
+            { position: 2, driverIds: ['buemi', 'hartley', 'hirakawa'], teamId: 'toyota-gazoo-racing' },
+            { position: 3, driverIds: ['fuoco', 'molina', 'nielsen'], teamId: 'ferrari-af-corse' },
           ],
         },
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, drivers: ['Lopez', 'Schmid', 'Umbrarescu'], team: 'Akkodis ASP Lexus #87' },
-            { position: 2, drivers: ['Martin', 'Hodenius', 'Berry'], team: 'Iron Lynx Mercedes-AMG #61' },
-            { position: 3, drivers: ['Drudi', 'James', 'Robichon'], team: 'Heart of Racing Aston Martin #27' },
+            { position: 1, driverIds: ['lopez', 'schmid', 'umbrarescu'], teamId: 'akkodis-asp' },
+            { position: 2, driverIds: ['martin', 'hodenius', 'berry'], teamId: 'iron-lynx' },
+            { position: 3, driverIds: ['drudi', 'james', 'robichon'], teamId: 'heart-of-racing' },
           ],
         },
       ],

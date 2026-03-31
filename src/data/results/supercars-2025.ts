@@ -1,222 +1,222 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // Supercars 2025 results — verified from supercars.com, v8sleuth.com.au, speedcafe.com, motorsport.com
 // Multiple races per event — overall shows the main/last race winner
 export const supercarsResults2025: Record<string, EventResults> = {
   'sc-2025-sydney': {
     qualifying: {
-      overall: { drivers: ['Waters'], team: 'Monster Castrol Racing' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Waters'], team: 'Monster Castrol Racing' }] }],
+      overall: { driverIds: ['waters'], teamId: 'monster-castrol-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['waters'], teamId: 'monster-castrol-racing' }] }],
     },
     // Race 1, 2, 3: All won by Cam Waters (clean sweep)
     race: {
-      overall: { drivers: ['Waters'], team: 'Monster Castrol Racing' },
+      overall: { driverIds: ['waters'], teamId: 'monster-castrol-racing' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Waters'], team: 'Monster Castrol Racing' },
+          { position: 1, driverIds: ['waters'], teamId: 'monster-castrol-racing' },
         ],
       }],
     },
   },
   'sc-2025-melbourne': {
     qualifying: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' }] }],
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['feeney'], teamId: 'triple-eight' }] }],
     },
     // Race 4: Feeney, Race 5: Hill, Race 6: Brown, Race 7: Abandoned (rain)
     race: {
-      overall: { drivers: ['Brown'], team: 'Red Bull Ampol Racing' },
+      overall: { driverIds: ['brown'], teamId: 'red-bull-ampol-racing' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-          { position: 2, drivers: ['Hill'], team: 'Matt Stone Racing' },
-          { position: 3, drivers: ['Brown'], team: 'Red Bull Ampol Racing' },
+          { position: 1, driverIds: ['feeney'], teamId: 'triple-eight' },
+          { position: 2, driverIds: ['hill'], teamId: 'matt-stone-racing' },
+          { position: 3, driverIds: ['brown'], teamId: 'red-bull-ampol-racing' },
         ],
       }],
     },
   },
   'sc-2025-taupo': {
     qualifying: {
-      overall: { drivers: ['Payne'], team: 'Grove Racing' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Payne'], team: 'Grove Racing' }] }],
+      overall: { driverIds: ['payne'], teamId: 'grove-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['payne'], teamId: 'grove-racing' }] }],
     },
     // Matt Payne won the event (Jason Richards Trophy)
     race: {
-      overall: { drivers: ['Payne'], team: 'Grove Racing' },
+      overall: { driverIds: ['payne'], teamId: 'grove-racing' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Payne'], team: 'Grove Racing' },
+          { position: 1, driverIds: ['payne'], teamId: 'grove-racing' },
         ],
       }],
     },
   },
   'sc-2025-tasmania': {
     qualifying: {
-      overall: { drivers: ['Randle'], team: 'Tickford Racing' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Randle'], team: 'Tickford Racing' }] }],
+      overall: { driverIds: ['randle'], teamId: 'tickford-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['randle'], teamId: 'tickford-racing' }] }],
     },
     // Race 11: Feeney, Race 12: Feeney, Race 13: Payne
     race: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-          { position: 2, drivers: ['Payne'], team: 'Grove Racing' },
+          { position: 1, driverIds: ['feeney'], teamId: 'triple-eight' },
+          { position: 2, driverIds: ['payne'], teamId: 'grove-racing' },
         ],
       }],
     },
   },
   'sc-2025-perth': {
     qualifying: {
-      overall: { drivers: ['Mostert'], team: 'Mobil 1 Optus Racing' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Mostert'], team: 'Mobil 1 Optus Racing' }] }],
+      overall: { driverIds: ['mostert'], teamId: 'mobil-1-optus-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['mostert'], teamId: 'mobil-1-optus-racing' }] }],
     },
     // Race 14: Wood (maiden win), Race 15/16: Feeney
     race: {
-      overall: { drivers: ['Wood'], team: 'Walkinshaw Andretti United' },
+      overall: { driverIds: ['wood'], teamId: 'walkinshaw-andretti-united' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Wood'], team: 'Walkinshaw Andretti United' },
-          { position: 2, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+          { position: 1, driverIds: ['wood'], teamId: 'walkinshaw-andretti-united' },
+          { position: 2, driverIds: ['feeney'], teamId: 'triple-eight' },
         ],
       }],
     },
   },
   'sc-2025-darwin': {
     qualifying: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' }] }],
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['feeney'], teamId: 'triple-eight' }] }],
     },
     // Feeney won all three races — Darwin Triple Crown
     race: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+          { position: 1, driverIds: ['feeney'], teamId: 'triple-eight' },
         ],
       }],
     },
   },
   'sc-2025-townsville': {
     qualifying: {
-      overall: { drivers: ['Kostecki'], team: 'Dick Johnson Racing' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kostecki'], team: 'Dick Johnson Racing' }] }],
+      overall: { driverIds: ['kostecki'], teamId: 'dick-johnson-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['kostecki'], teamId: 'dick-johnson-racing' }] }],
     },
     // Race 1 (Fri): Kostecki, Race 2 (Sat): Feeney, Race 3 (Sun): Feeney
     race: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Kostecki'], team: 'Dick Johnson Racing' },
-          { position: 2, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+          { position: 1, driverIds: ['kostecki'], teamId: 'dick-johnson-racing' },
+          { position: 2, driverIds: ['feeney'], teamId: 'triple-eight' },
         ],
       }],
     },
   },
   'sc-2025-ipswich': {
     qualifying: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' }] }],
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['feeney'], teamId: 'triple-eight' }] }],
     },
     // Race 23: Feeney, Race 24: Brown, Race 25: Feeney
     race: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-          { position: 2, drivers: ['Brown'], team: 'Red Bull Ampol Racing' },
+          { position: 1, driverIds: ['feeney'], teamId: 'triple-eight' },
+          { position: 2, driverIds: ['brown'], teamId: 'red-bull-ampol-racing' },
         ],
       }],
     },
   },
   'sc-2025-the-bend': {
     qualifying: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' }] }],
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['feeney'], teamId: 'triple-eight' }] }],
     },
     // Endurance: Kostecki/Hazelwood won The Bend 500
     endurance: {
-      overall: { drivers: ['Kostecki', 'Hazelwood'], team: 'Dick Johnson Racing' },
+      overall: { driverIds: ['kostecki', 'hazelwood'], teamId: 'dick-johnson-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Kostecki', 'Hazelwood'], team: 'Dick Johnson Racing' },
+          { position: 1, driverIds: ['kostecki', 'hazelwood'], teamId: 'dick-johnson-racing' },
         ],
       }],
     },
   },
   'sc-2025-bathurst': {
     qualifying: {
-      overall: { drivers: ['Kostecki'], team: 'Dick Johnson Racing' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kostecki'], team: 'Dick Johnson Racing' }] }],
+      overall: { driverIds: ['kostecki'], teamId: 'dick-johnson-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['kostecki'], teamId: 'dick-johnson-racing' }] }],
     },
     // Bathurst 1000: Payne/Tander won
     endurance: {
-      overall: { drivers: ['Payne', 'Tander'], team: 'Grove Racing' },
+      overall: { driverIds: ['payne', 'tander'], teamId: 'grove-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Payne', 'Tander'], team: 'Grove Racing' },
-          { position: 2, drivers: ['Reynolds', 'Holdsworth'], team: 'Erebus Motorsport' },
-          { position: 3, drivers: ['Golding', 'Russell'], team: 'PremiAir Racing' },
+          { position: 1, driverIds: ['payne', 'tander'], teamId: 'grove-racing' },
+          { position: 2, driverIds: ['reynolds', 'holdsworth'], teamId: 'erebus-motorsport' },
+          { position: 3, driverIds: ['golding', 'russell'], teamId: 'premiair-racing' },
         ],
       }],
     },
   },
   'sc-2025-gold-coast': {
     qualifying: {
-      overall: { drivers: ['Wood'], team: 'Walkinshaw Andretti United' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Wood'], team: 'Walkinshaw Andretti United' }] }],
+      overall: { driverIds: ['wood'], teamId: 'walkinshaw-andretti-united' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['wood'], teamId: 'walkinshaw-andretti-united' }] }],
     },
     // Race 28: Mostert, Race 29: Mostert (sweep)
     race: {
-      overall: { drivers: ['Mostert'], team: 'Mobil 1 Optus Racing' },
+      overall: { driverIds: ['mostert'], teamId: 'mobil-1-optus-racing' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Mostert'], team: 'Mobil 1 Optus Racing' },
+          { position: 1, driverIds: ['mostert'], teamId: 'mobil-1-optus-racing' },
         ],
       }],
     },
   },
   'sc-2025-sandown': {
     qualifying: {
-      overall: { drivers: ['Wood'], team: 'Walkinshaw Andretti United' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Wood'], team: 'Walkinshaw Andretti United' }] }],
+      overall: { driverIds: ['wood'], teamId: 'walkinshaw-andretti-united' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['wood'], teamId: 'walkinshaw-andretti-united' }] }],
     },
     // Saturday: Mostert, Sunday: Feeney
     endurance: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Mostert'], team: 'Mobil 1 Optus Racing' },
-          { position: 2, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+          { position: 1, driverIds: ['mostert'], teamId: 'mobil-1-optus-racing' },
+          { position: 2, driverIds: ['feeney'], teamId: 'triple-eight' },
         ],
       }],
     },
   },
   'sc-2025-adelaide': {
     qualifying: {
-      overall: { drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' }] }],
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['feeney'], teamId: 'triple-eight' }] }],
     },
     // Finals Grand Final — Champion: Mostert
     race: {
-      overall: { drivers: ['Mostert'], team: 'Mobil 1 Optus Racing' },
+      overall: { driverIds: ['mostert'], teamId: 'mobil-1-optus-racing' },
       classes: [{
         className: 'Race Winners',
         podium: [
-          { position: 1, drivers: ['Mostert'], team: 'Mobil 1 Optus Racing' },
-          { position: 2, drivers: ['Feeney'], team: 'Triple Eight Race Engineering' },
+          { position: 1, driverIds: ['mostert'], teamId: 'mobil-1-optus-racing' },
+          { position: 2, driverIds: ['feeney'], teamId: 'triple-eight' },
         ],
       }],
     },

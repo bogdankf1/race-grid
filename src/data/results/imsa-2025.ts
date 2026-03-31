@@ -1,21 +1,21 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // IMSA 2025 results — verified from imsa.com, motorsport.com, nbcsports.com, racer.com
 export const imsaResults2025: Record<string, EventResults> = {
   'imsa-2025-daytona': {
     qualifying: {
-      overall: { drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' }] }],
+      overall: { driverIds: ['vanthoor'], teamId: 'bmw-rahal' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['vanthoor'], teamId: 'bmw-rahal' }] }],
     },
     endurance: {
-      overall: { drivers: ['Nasr', 'Tandy', 'Vanthoor'], team: 'Porsche Penske Motorsport' },
+      overall: { driverIds: ['nasr', 'tandy', 'vanthoor'], teamId: 'porsche-penske' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Nasr', 'Tandy', 'Vanthoor'], team: 'Porsche Penske Motorsport' },
-            { position: 2, drivers: ['Blomqvist'], team: 'Meyer Shank Racing Acura' },
-            { position: 3, drivers: ['Estre'], team: 'Porsche Penske Motorsport' },
+            { position: 1, driverIds: ['nasr', 'tandy', 'vanthoor'], teamId: 'porsche-penske' },
+            { position: 2, driverIds: ['blomqvist'], teamId: 'meyer-shank-racing' },
+            { position: 3, driverIds: ['estre'], teamId: 'porsche-penske' },
           ],
         },
       ],
@@ -23,23 +23,23 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-sebring': {
     qualifying: {
-      overall: { drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' }] }],
+      overall: { driverIds: ['vanthoor'], teamId: 'bmw-rahal' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['vanthoor'], teamId: 'bmw-rahal' }] }],
     },
     endurance: {
-      overall: { drivers: ['Nasr', 'Tandy', 'Vanthoor'], team: 'Porsche Penske Motorsport' },
+      overall: { driverIds: ['nasr', 'tandy', 'vanthoor'], teamId: 'porsche-penske' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Nasr', 'Tandy', 'Vanthoor'], team: 'Porsche Penske Motorsport' },
-            { position: 2, drivers: ['Jaminet', 'Campbell', 'Estre'], team: 'Porsche Penske Motorsport' },
+            { position: 1, driverIds: ['nasr', 'tandy', 'vanthoor'], teamId: 'porsche-penske' },
+            { position: 2, driverIds: ['jaminet', 'campbell', 'estre'], teamId: 'porsche-penske' },
           ],
         },
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Di Resta'], team: 'Inter Europol Competition' },
+            { position: 1, driverIds: ['Di Resta'], teamId: 'inter-europol' },
           ],
         },
       ],
@@ -47,24 +47,24 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-long-beach': {
     qualifying: {
-      overall: { drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' }] }],
+      overall: { driverIds: ['vanthoor'], teamId: 'bmw-rahal' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['vanthoor'], teamId: 'bmw-rahal' }] }],
     },
     race: {
-      overall: { drivers: ['Nasr', 'Tandy'], team: 'Porsche Penske Motorsport' },
+      overall: { driverIds: ['nasr', 'tandy'], teamId: 'porsche-penske' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Nasr', 'Tandy'], team: 'Porsche Penske Motorsport' },
-            { position: 2, drivers: ['Campbell', 'Jaminet'], team: 'Porsche Penske Motorsport' },
-            { position: 3, drivers: ['Eng', 'D. Vanthoor'], team: 'BMW M Team RLL' },
+            { position: 1, driverIds: ['nasr', 'tandy'], teamId: 'porsche-penske' },
+            { position: 2, driverIds: ['campbell', 'jaminet'], teamId: 'porsche-penske' },
+            { position: 3, driverIds: ['eng', 'D. Vanthoor'], teamId: 'bmw-rahal' },
           ],
         },
         {
           className: 'GTD',
           podium: [
-            { position: 1, drivers: ['Edgar', 'L. Vanthoor'], team: 'Proton Competition Porsche' },
+            { position: 1, driverIds: ['edgar', 'l-vanthoor'], teamId: 'proton-competition' },
           ],
         },
       ],
@@ -72,23 +72,23 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-laguna-seca': {
     qualifying: {
-      overall: { drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Vanthoor'], team: 'BMW M Team RLL #24' }] }],
+      overall: { driverIds: ['vanthoor'], teamId: 'bmw-rahal' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['vanthoor'], teamId: 'bmw-rahal' }] }],
     },
     race: {
-      overall: { drivers: ['Jaminet', 'Campbell'], team: 'Porsche Penske Motorsport' },
+      overall: { driverIds: ['jaminet', 'campbell'], teamId: 'porsche-penske' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Jaminet', 'Campbell'], team: 'Porsche Penske Motorsport' },
-            { position: 2, drivers: ['Nasr', 'Tandy'], team: 'Porsche Penske Motorsport' },
+            { position: 1, driverIds: ['jaminet', 'campbell'], teamId: 'porsche-penske' },
+            { position: 2, driverIds: ['nasr', 'tandy'], teamId: 'porsche-penske' },
           ],
         },
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Heinrich', 'Bachler'], team: 'AO Racing Porsche' },
+            { position: 1, driverIds: ['heinrich', 'bachler'], teamId: 'ao-racing' },
           ],
         },
       ],
@@ -96,22 +96,22 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-detroit': {
     qualifying: {
-      overall: { drivers: ['Tandy'], team: 'Porsche Penske Motorsport #6' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Tandy'], team: 'Porsche Penske Motorsport #6' }] }],
+      overall: { driverIds: ['tandy'], teamId: 'porsche-penske' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['tandy'], teamId: 'porsche-penske' }] }],
     },
     race: {
-      overall: { drivers: ['van der Zande', 'Yelloly'], team: 'Meyer Shank Racing Acura' },
+      overall: { driverIds: ['van-der-zande', 'yelloly'], teamId: 'meyer-shank-racing' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['van der Zande', 'Yelloly'], team: 'Meyer Shank Racing Acura' },
+            { position: 1, driverIds: ['van-der-zande', 'yelloly'], teamId: 'meyer-shank-racing' },
           ],
         },
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Priaulx', 'Rockenfeller'], team: 'Ford Multimatic Motorsports' },
+            { position: 1, driverIds: ['priaulx', 'rockenfeller'], teamId: 'ford-multimatic' },
           ],
         },
       ],
@@ -119,28 +119,28 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-watkins-glen': {
     qualifying: {
-      overall: { drivers: ['van der Zande'], team: 'Meyer Shank Racing Acura #93' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['van der Zande'], team: 'Meyer Shank Racing Acura #93' }] }],
+      overall: { driverIds: ['van-der-zande'], teamId: 'meyer-shank-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['van-der-zande'], teamId: 'meyer-shank-racing' }] }],
     },
     endurance: {
-      overall: { drivers: ['Blomqvist', 'Braun'], team: 'Meyer Shank Racing Acura' },
+      overall: { driverIds: ['blomqvist', 'braun'], teamId: 'meyer-shank-racing' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Blomqvist', 'Braun'], team: 'Meyer Shank Racing Acura' },
+            { position: 1, driverIds: ['blomqvist', 'braun'], teamId: 'meyer-shank-racing' },
           ],
         },
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Di Resta', 'Goldburg', 'Lindh'], team: 'United Autosports USA' },
+            { position: 1, driverIds: ['Di Resta', 'goldburg', 'lindh'], teamId: 'united-autosports' },
           ],
         },
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Harper', 'Hesse'], team: 'Paul Miller Racing BMW' },
+            { position: 1, driverIds: ['harper', 'hesse'], teamId: 'paul-miller-racing' },
           ],
         },
       ],
@@ -148,16 +148,16 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-ctmp': {
     qualifying: {
-      overall: { drivers: ['AO Racing'], team: 'AO Racing #99' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['AO Racing'], team: 'AO Racing #99' }] }],
+      overall: { driverIds: ['AO Racing'], teamId: 'ao-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['AO Racing'], teamId: 'ao-racing' }] }],
     },
     race: {
-      overall: { drivers: ['Hyett', 'Cameron'], team: 'AO Racing' },
+      overall: { driverIds: ['hyett', 'cameron'], teamId: 'ao-racing' },
       classes: [
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Costa', 'Altoe'], team: 'DragonSpeed Ferrari' },
+            { position: 1, driverIds: ['costa', 'Altoe'], teamId: 'dragonspeed' },
           ],
         },
       ],
@@ -165,29 +165,29 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-road-america': {
     qualifying: {
-      overall: { drivers: ['Yelloly'], team: 'Meyer Shank Racing Acura #93' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Yelloly'], team: 'Meyer Shank Racing Acura #93' }] }],
+      overall: { driverIds: ['yelloly'], teamId: 'meyer-shank-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['yelloly'], teamId: 'meyer-shank-racing' }] }],
     },
     race: {
-      overall: { drivers: ['Eng', 'D. Vanthoor'], team: 'BMW M Team RLL' },
+      overall: { driverIds: ['eng', 'D. Vanthoor'], teamId: 'bmw-rahal' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Eng', 'D. Vanthoor'], team: 'BMW M Team RLL' },
-            { position: 2, drivers: ['Wittmann', 'S. van der Linde'], team: 'BMW M Team RLL' },
+            { position: 1, driverIds: ['eng', 'D. Vanthoor'], teamId: 'bmw-rahal' },
+            { position: 2, driverIds: ['wittmann', 's-van-der-linde'], teamId: 'bmw-rahal' },
           ],
         },
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Cameron', 'Hyett'], team: 'AO Racing' },
+            { position: 1, driverIds: ['cameron', 'hyett'], teamId: 'ao-racing' },
           ],
         },
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Snow', 'Verhagen'], team: 'Paul Miller Racing BMW' },
+            { position: 1, driverIds: ['snow', 'verhagen'], teamId: 'paul-miller-racing' },
           ],
         },
       ],
@@ -195,23 +195,23 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-vir': {
     qualifying: {
-      overall: { drivers: ['Altoè'], team: 'DragonSpeed Ferrari #81' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Altoè'], team: 'DragonSpeed Ferrari #81' }] }],
+      overall: { driverIds: ['altoe'], teamId: 'dragonspeed' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['altoe'], teamId: 'dragonspeed' }] }],
     },
     race: {
       // VIR is GTD-only (no GTP), so overall is GTD Pro winner
-      overall: { drivers: ['Garcia', 'Sims'], team: 'Corvette Racing by Pratt Miller' },
+      overall: { driverIds: ['garcia', 'sims'], teamId: 'corvette-racing' },
       classes: [
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Garcia', 'Sims'], team: 'Corvette Racing by Pratt Miller' },
+            { position: 1, driverIds: ['garcia', 'sims'], teamId: 'corvette-racing' },
           ],
         },
         {
           className: 'GTD',
           podium: [
-            { position: 1, drivers: ['Ward', 'Ellis'], team: 'Winward Racing Mercedes' },
+            { position: 1, driverIds: ['ward', 'ellis'], teamId: 'winward-racing' },
           ],
         },
       ],
@@ -219,22 +219,22 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-indianapolis': {
     qualifying: {
-      overall: { drivers: ['Aitken'], team: 'Whelen Cadillac Racing #31' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Aitken'], team: 'Whelen Cadillac Racing #31' }] }],
+      overall: { driverIds: ['aitken'], teamId: 'whelen-engineering' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['aitken'], teamId: 'whelen-engineering' }] }],
     },
     endurance: {
-      overall: { drivers: ['Aitken', 'Bamber', 'Vesti'], team: 'Whelen Cadillac' },
+      overall: { driverIds: ['aitken', 'bamber', 'vesti'], teamId: 'whelen-engineering' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Aitken', 'Bamber', 'Vesti'], team: 'Whelen Cadillac' },
+            { position: 1, driverIds: ['aitken', 'bamber', 'vesti'], teamId: 'whelen-engineering' },
           ],
         },
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Rockenfeller', 'Priaulx'], team: 'Ford Multimatic Motorsports' },
+            { position: 1, driverIds: ['rockenfeller', 'priaulx'], teamId: 'ford-multimatic' },
           ],
         },
       ],
@@ -242,34 +242,34 @@ export const imsaResults2025: Record<string, EventResults> = {
   },
   'imsa-2025-petit-le-mans': {
     qualifying: {
-      overall: { drivers: ['Blomqvist'], team: 'Meyer Shank Racing Acura #60' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Blomqvist'], team: 'Meyer Shank Racing Acura #60' }] }],
+      overall: { driverIds: ['blomqvist'], teamId: 'meyer-shank-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['blomqvist'], teamId: 'meyer-shank-racing' }] }],
     },
     endurance: {
-      overall: { drivers: ['Aitken', 'Bamber', 'Vesti'], team: 'Whelen Cadillac' },
+      overall: { driverIds: ['aitken', 'bamber', 'vesti'], teamId: 'whelen-engineering' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, drivers: ['Aitken', 'Bamber', 'Vesti'], team: 'Whelen Cadillac' },
+            { position: 1, driverIds: ['aitken', 'bamber', 'vesti'], teamId: 'whelen-engineering' },
           ],
         },
         {
           className: 'LMP2',
           podium: [
-            { position: 1, drivers: ['Thomas', 'Jensen', 'McElrea'], team: 'TDS Racing' },
+            { position: 1, driverIds: ['thomas', 'jensen', 'mcelrea'], teamId: 'tds-racing' },
           ],
         },
         {
           className: 'GTD Pro',
           podium: [
-            { position: 1, drivers: ['Harper'], team: 'Paul Miller Racing BMW' },
+            { position: 1, driverIds: ['harper'], teamId: 'paul-miller-racing' },
           ],
         },
         {
           className: 'GTD',
           podium: [
-            { position: 1, drivers: ['Mann', 'Pier Guidi', 'Wadoux'], team: 'AF Corse Ferrari' },
+            { position: 1, driverIds: ['mann', 'pier-guidi', 'wadoux'], teamId: 'ferrari-af-corse' },
           ],
         },
       ],

@@ -7,7 +7,7 @@ import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
 import { SeriesChip } from './SeriesChip'
 import { SeriesLogo } from './SeriesLogo'
 import { getBroadcasts, detectCountry } from '@/data/broadcasts'
-import { getCircuitInfo, getCircuitTypeLabel } from '@/data/circuits'
+import { getCircuit, getCircuitTypeLabel } from '@/data/circuits'
 import { CalendarExport } from './CalendarExport'
 import { Countdown } from './Countdown'
 import { RaceResult } from './RaceResult'
@@ -149,7 +149,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                     padding: '3px 10px', borderRadius: 6,
                     background: 'var(--rg-elevated)', border: '1px solid var(--rg-border)',
                   }}>
-                    {t('progress.roundFull', locale)} {event.round}/{series.events.length}
+                    {t('progress.roundFull', locale)} {event.round}/{Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))}
                   </span>
                 )}
                 <div
@@ -169,13 +169,18 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
               <h3 className="font-display rg-event-name" style={{ color: 'var(--rg-text)', marginBottom: 4, letterSpacing: 0.5 }}>
                 {event.name}
               </h3>
-              <p style={{ fontSize: 14, color: 'var(--rg-text3)' }}>
-                {countryFlag(event.countryCode)} {event.circuit}, {event.country}
-              </p>
+              {(() => {
+                const circuit = getCircuit(event.circuitId)
+                return circuit ? (
+                  <p style={{ fontSize: 14, color: 'var(--rg-text3)' }}>
+                    {countryFlag(circuit.countryCode)} {circuit.name}, {circuit.country}
+                  </p>
+                ) : null
+              })()}
 
               {/* Circuit info */}
               {(() => {
-                const circuit = getCircuitInfo(event.circuit)
+                const circuit = getCircuit(event.circuitId)
                 if (!circuit) return null
                 return (
                   <div

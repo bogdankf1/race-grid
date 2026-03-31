@@ -1,0 +1,27 @@
+import type { EntryItem } from './types'
+
+export const nlsEntries2025: EntryItem[] = [
+  { driverId: 'stippler', teamId: 'juta-racing' },
+  { driverId: 'muller', teamId: 'falken-motorsports' },
+  { driverId: 'schuring', teamId: 'falken-motorsports' },
+  { driverId: 'bachler', teamId: 'falken-motorsports' },
+  { driverId: 'andlauer', teamId: 'falken-motorsports' },
+  { driverId: 'sturm', teamId: 'falken-motorsports' },
+  { driverId: 'menzel', teamId: 'falken-motorsports' },
+  { driverId: 'boccolacci', teamId: 'falken-motorsports' },
+  { driverId: 'verstappen', teamId: 'winward-racing' },
+  { driverId: 'harper', teamId: 'rowe-racing' },
+  { driverId: 'pepper', teamId: 'rowe-racing' },
+  { driverId: 'guven', teamId: 'manthey' },
+  { driverId: 'preining', teamId: 'manthey' },
+  { driverId: 'estre', teamId: 'manthey' },
+  { driverId: 'niederhauser', teamId: 'scherer-sport-phx' },
+  { driverId: 'vanthoor', teamId: 'scherer-sport-phx' },
+  { driverId: 'fontana', teamId: 'car-collection' },
+  { driverId: 'kolb', teamId: 'haupt-racing' },
+  { driverId: 'scherer', teamId: 'haupt-racing' },
+  { driverId: 'krognes', teamId: 'walkenhorst' },
+  { driverId: 'lulham', teamId: 'emil-frey-racing' },
+  { driverId: 'juncadella', teamId: 'winward-racing' },
+  { driverId: 'gounon', teamId: 'winward-racing' },
+]

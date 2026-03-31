@@ -1,88 +1,88 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // IndyCar 2026 results — verified from indycar.com, motorsport.com
 export const indycarResults2026: Record<string, EventResults> = {
   'indycar-2026-st-petersburg': {
     qualifying: {
-      overall: { drivers: ['McLaughlin'], team: 'Team Penske' },
+      overall: { driverIds: ['mclaughlin'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['McLaughlin'], team: 'Team Penske' },
-          { position: 2, drivers: ['Ericsson'], team: 'Andretti Global' },
-          { position: 3, drivers: ['Hauger'], team: 'A.J. Foyt Enterprises' },
+          { position: 1, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['ericsson'], teamId: 'andretti-global' },
+          { position: 3, driverIds: ['hauger'], teamId: 'a-j-foyt-enterprises' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['McLaughlin'], team: 'Team Penske' },
-          { position: 3, drivers: ['Lundgaard'], team: 'Rahal Letterman Lanigan Racing' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['lundgaard'], teamId: 'rahal-letterman-lanigan' },
         ],
       }],
     },
   },
   'indycar-2026-phoenix': {
     qualifying: {
-      overall: { drivers: ['Malukas'], team: 'Team Penske' },
+      overall: { driverIds: ['malukas'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Malukas'], team: 'Team Penske' },
-          { position: 2, drivers: ['Newgarden'], team: 'Team Penske' },
-          { position: 3, drivers: ['Rahal'], team: 'Rahal Letterman Lanigan Racing' },
+          { position: 1, driverIds: ['malukas'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['newgarden'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['rahal'], teamId: 'rahal-letterman-lanigan' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Newgarden'], team: 'Team Penske' },
+      overall: { driverIds: ['newgarden'], teamId: 'team-penske' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Newgarden'], team: 'Team Penske' },
-          { position: 2, drivers: ['Kirkwood'], team: 'Andretti Global' },
-          { position: 3, drivers: ['Malukas'], team: 'Meyer Shank Racing' },
+          { position: 1, driverIds: ['newgarden'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 3, driverIds: ['malukas'], teamId: 'meyer-shank-racing' },
         ],
       }],
     },
   },
   'indycar-2026-barber': {
     qualifying: {
-      overall: { drivers: ['Palou'], team: 'Chip Ganassi Racing' },
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 2, drivers: ['Malukas'], team: 'Team Penske' },
-          { position: 3, drivers: ['Rahal'], team: 'Rahal Letterman Lanigan Racing' },
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['malukas'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['rahal'], teamId: 'rahal-letterman-lanigan' },
         ],
       }],
     },
   },
   'indycar-2026-arlington': {
     qualifying: {
-      overall: { drivers: ['Ericsson'], team: 'Andretti Global' },
+      overall: { driverIds: ['ericsson'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Ericsson'], team: 'Andretti Global' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ["O'Ward"], team: 'Arrow McLaren' },
+          { position: 1, driverIds: ['ericsson'], teamId: 'andretti-global' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: [], teamId: 'arrow-mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Kirkwood'], team: 'Andretti Global' },
+      overall: { driverIds: ['kirkwood'], teamId: 'andretti-global' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Kirkwood'], team: 'Andretti Global' },
-          { position: 2, drivers: ['Palou'], team: 'Chip Ganassi Racing' },
-          { position: 3, drivers: ['Power'], team: 'Team Penske' },
+          { position: 1, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 3, driverIds: ['power'], teamId: 'team-penske' },
         ],
       }],
     },

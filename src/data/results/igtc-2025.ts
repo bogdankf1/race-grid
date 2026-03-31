@@ -1,82 +1,82 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // IGTC 2025 results — verified from intercontinentalgtchallenge.com, sportscar365.com, motorsport.com
 export const igtcResults2025: Record<string, EventResults> = {
   'igtc-2025-bathurst': {
     qualifying: {
-      overall: { drivers: ['Auer', 'Goetz', 'Ojeda'], team: 'Craft-Bamboo Racing Mercedes-AMG #77' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Auer', 'Goetz', 'Ojeda'], team: 'Craft-Bamboo Racing Mercedes-AMG #77' }] }],
+      overall: { driverIds: ['auer', 'goetz', 'ojeda'], teamId: 'craft-bamboo' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['auer', 'goetz', 'ojeda'], teamId: 'craft-bamboo' }] }],
     },
     endurance: {
-      overall: { drivers: ['K. van der Linde', 'S. van der Linde', 'Farfus'], team: 'Team WRT BMW' },
+      overall: { driverIds: ['k-van-der-linde', 's-van-der-linde', 'farfus'], teamId: 'team-wrt' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['K. van der Linde', 'S. van der Linde', 'Farfus'], team: 'Team WRT BMW' },
-          { position: 2, drivers: ['Marciello'], team: 'Team WRT BMW' },
-          { position: 3, drivers: ['Gounon'], team: 'SunEnergy1 Racing Mercedes-AMG' },
+          { position: 1, driverIds: ['k-van-der-linde', 's-van-der-linde', 'farfus'], teamId: 'team-wrt' },
+          { position: 2, driverIds: ['marciello'], teamId: 'team-wrt' },
+          { position: 3, driverIds: ['gounon'], teamId: 'sunenergy1-racing' },
         ],
       }],
     },
   },
   'igtc-2025-nurburgring': {
     qualifying: {
-      overall: { drivers: ['Estre', 'Preining', 'Güven'], team: 'Manthey EMA Porsche #911' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Estre', 'Preining', 'Güven'], team: 'Manthey EMA Porsche #911' }] }],
+      overall: { driverIds: ['estre', 'preining', 'guven'], teamId: 'manthey' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['estre', 'preining', 'guven'], teamId: 'manthey' }] }],
     },
     // N24 — ROWE Racing BMW won after Manthey Porsche post-race penalty
     endurance: {
-      overall: { drivers: ['Farfus', 'Krohn', 'Marciello', 'K. van der Linde'], team: 'ROWE Racing BMW' },
+      overall: { driverIds: ['farfus', 'krohn', 'marciello', 'k-van-der-linde'], teamId: 'rowe-racing' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Farfus', 'Krohn', 'Marciello', 'K. van der Linde'], team: 'ROWE Racing BMW' },
+          { position: 1, driverIds: ['farfus', 'krohn', 'marciello', 'k-van-der-linde'], teamId: 'rowe-racing' },
         ],
       }],
     },
   },
   'igtc-2025-spa': {
     qualifying: {
-      overall: { drivers: ['Kirchhöfer'], team: 'Garage 59 McLaren #59' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kirchhöfer'], team: 'Garage 59 McLaren #59' }] }],
+      overall: { driverIds: ['kirchhofer'], teamId: 'garage-59' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['kirchhofer'], teamId: 'garage-59' }] }],
     },
     // 24 Hours of Spa — also counts as GTWC Endurance
     endurance: {
-      overall: { drivers: ['Bortolotti', 'Pepper', 'Engstler'], team: 'Grasser Racing Lamborghini' },
+      overall: { driverIds: ['bortolotti', 'pepper', 'engstler'], teamId: 'grasser-racing' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Bortolotti', 'Pepper', 'Engstler'], team: 'Grasser Racing Lamborghini' },
+          { position: 1, driverIds: ['bortolotti', 'pepper', 'engstler'], teamId: 'grasser-racing' },
         ],
       }],
     },
   },
   'igtc-2025-suzuka': {
     qualifying: {
-      overall: { drivers: ['K. van der Linde', 'Marciello', 'Weerts'], team: 'Team WRT BMW #32' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['K. van der Linde', 'Marciello', 'Weerts'], team: 'Team WRT BMW #32' }] }],
+      overall: { driverIds: ['k-van-der-linde', 'marciello', 'weerts'], teamId: 'team-wrt' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['k-van-der-linde', 'marciello', 'weerts'], teamId: 'team-wrt' }] }],
     },
     endurance: {
-      overall: { drivers: ['K. van der Linde', 'Marciello', 'Weerts'], team: 'Team WRT BMW' },
+      overall: { driverIds: ['k-van-der-linde', 'marciello', 'weerts'], teamId: 'team-wrt' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['K. van der Linde', 'Marciello', 'Weerts'], team: 'Team WRT BMW' },
+          { position: 1, driverIds: ['k-van-der-linde', 'marciello', 'weerts'], teamId: 'team-wrt' },
         ],
       }],
     },
   },
   'igtc-2025-indianapolis': {
     qualifying: {
-      overall: { drivers: ['Gounon', 'Martin', 'Hodenius'], team: 'Lone Star Racing Mercedes-AMG #80' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Gounon', 'Martin', 'Hodenius'], team: 'Lone Star Racing Mercedes-AMG #80' }] }],
+      overall: { driverIds: ['gounon', 'martin', 'hodenius'], teamId: 'lone-star-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['gounon', 'martin', 'hodenius'], teamId: 'lone-star-racing' }] }],
     },
     endurance: {
-      overall: { drivers: ['K. van der Linde', 'Rossi', 'Weerts'], team: 'Team WRT BMW' },
+      overall: { driverIds: ['k-van-der-linde', 'rossi', 'weerts'], teamId: 'team-wrt' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['K. van der Linde', 'Rossi', 'Weerts'], team: 'Team WRT BMW' },
+          { position: 1, driverIds: ['k-van-der-linde', 'rossi', 'weerts'], teamId: 'team-wrt' },
         ],
       }],
     },

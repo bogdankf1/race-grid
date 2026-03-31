@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { Search, X } from 'lucide-react'
 import { ALL_SERIES } from '@/data/series-registry'
+import { getCircuit } from '@/data/circuits'
 import { getLocalDate } from '@/lib/timezone'
 import { t, type Locale } from '@/lib/i18n'
 
@@ -47,8 +48,8 @@ function buildFullIndex(timezone: string): SearchResult[] {
         seriesTextColor: series.textColor,
         eventId: event.id,
         eventName: event.name,
-        circuit: event.circuit,
-        country: event.country,
+        circuit: getCircuit(event.circuitId)?.name ?? event.circuitId,
+        country: getCircuit(event.circuitId)?.country ?? '',
         date: primaryDate,
       })
     }

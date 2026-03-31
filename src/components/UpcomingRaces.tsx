@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { CalendarClock, ChevronDown } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { ALL_SERIES } from '@/data/series-registry'
+import { getCircuit } from '@/data/circuits'
 import { getLocalDate } from '@/lib/timezone'
 import { t, type Locale } from '@/lib/i18n'
 
@@ -54,7 +55,7 @@ export function UpcomingRaces({ selectedSeriesIds, timezone, locale }: UpcomingR
             seriesTextColor: series.textColor,
             eventId: event.id,
             eventName: event.name,
-            circuit: event.circuit,
+            circuit: getCircuit(event.circuitId)?.name ?? event.circuitId,
             date: getLocalDate(session.startUtc, timezone),
             startUtc: session.startUtc,
             sessionType: session.type,

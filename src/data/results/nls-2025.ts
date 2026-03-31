@@ -1,19 +1,19 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // NLS 2025 results — verified from nuerburgring-langstrecken-serie.de, 51gt3.com, motorsport.com
 export const nlsResults2025: Record<string, EventResults> = {
   // NLS 1 — 70th ADAC Westfalenfahrt (22 Mar 2025)
   'nls-2025-1': {
     qualifying: {
-      overall: { drivers: ['Stippler'], team: 'JUTA Racing Audi #8' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Stippler'], team: 'JUTA Racing Audi #8' }] }],
+      overall: { driverIds: ['stippler'], teamId: 'juta-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['stippler'], teamId: 'juta-racing' }] }],
     },
     endurance: {
-      overall: { drivers: ['Müller', 'Schuring'], team: 'Falken Motorsports Porsche #3' },
+      overall: { driverIds: ['muller', 'schuring'], teamId: 'falken-motorsports' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Müller', 'Schuring'], team: 'Falken Motorsports Porsche #3' },
+          { position: 1, driverIds: ['muller', 'schuring'], teamId: 'falken-motorsports' },
         ],
       }],
     },
@@ -21,16 +21,16 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 2 — ADAC Barbarossapreis (29 Mar 2025)
   'nls-2025-2': {
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Winward Racing Mercedes-AMG' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Verstappen'], team: 'Winward Racing Mercedes-AMG' }] }],
+      overall: { driverIds: ['verstappen'], teamId: 'winward-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['verstappen'], teamId: 'winward-racing' }] }],
     },
     endurance: {
       // Verstappen/Juncadella/Gounon crossed first but DQ'd — victory to ROWE Racing
-      overall: { drivers: ['Harper', 'Pepper'], team: 'ROWE Racing BMW' },
+      overall: { driverIds: ['harper', 'pepper'], teamId: 'rowe-racing' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Harper', 'Pepper'], team: 'ROWE Racing BMW' },
+          { position: 1, driverIds: ['harper', 'pepper'], teamId: 'rowe-racing' },
         ],
       }],
     },
@@ -38,15 +38,15 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 3 — 56th Adenauer ADAC Rundstrecken-Trophy (10 May 2025)
   'nls-2025-3': {
     qualifying: {
-      overall: { drivers: ['Güven'], team: 'Manthey EMA Porsche #911' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Güven'], team: 'Manthey EMA Porsche #911' }] }],
+      overall: { driverIds: ['guven'], teamId: 'manthey' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['guven'], teamId: 'manthey' }] }],
     },
     endurance: {
-      overall: { drivers: ['Preining', 'Güven'], team: 'Manthey EMA Porsche #911' },
+      overall: { driverIds: ['preining', 'guven'], teamId: 'manthey' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Preining', 'Güven'], team: 'Manthey EMA Porsche #911' },
+          { position: 1, driverIds: ['preining', 'guven'], teamId: 'manthey' },
         ],
       }],
     },
@@ -54,15 +54,15 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 4 — ADAC 24h Qualifiers Race 1 (24 May 2025)
   'nls-2025-24h-quali-1': {
     qualifying: {
-      overall: { drivers: ['Estre'], team: 'Manthey EMA Porsche' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Estre'], team: 'Manthey EMA Porsche' }] }],
+      overall: { driverIds: ['estre'], teamId: 'manthey' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['estre'], teamId: 'manthey' }] }],
     },
     endurance: {
-      overall: { drivers: ['Niederhauser', 'Vanthoor'], team: 'Scherer Sport PHX Porsche #16' },
+      overall: { driverIds: ['niederhauser', 'vanthoor'], teamId: 'scherer-sport-phx' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Niederhauser', 'Vanthoor'], team: 'Scherer Sport PHX Porsche #16' },
+          { position: 1, driverIds: ['niederhauser', 'vanthoor'], teamId: 'scherer-sport-phx' },
         ],
       }],
     },
@@ -70,11 +70,11 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 5 — ADAC 24h Qualifiers Race 2 (25 May 2025)
   'nls-2025-24h-quali-2': {
     endurance: {
-      overall: { drivers: ['Niederhauser', 'Vanthoor'], team: 'Scherer Sport PHX Porsche #16' },
+      overall: { driverIds: ['niederhauser', 'vanthoor'], teamId: 'scherer-sport-phx' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Niederhauser', 'Vanthoor'], team: 'Scherer Sport PHX Porsche #16' },
+          { position: 1, driverIds: ['niederhauser', 'vanthoor'], teamId: 'scherer-sport-phx' },
         ],
       }],
     },
@@ -82,15 +82,15 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 6 — 49th KW 6h ADAC Ruhr-Pokal-Rennen (16 Aug 2025)
   'nls-2025-6': {
     qualifying: {
-      overall: { drivers: ['Menzel'], team: 'Falken Motorsports Porsche #3' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Menzel'], team: 'Falken Motorsports Porsche #3' }] }],
+      overall: { driverIds: ['menzel'], teamId: 'falken-motorsports' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['menzel'], teamId: 'falken-motorsports' }] }],
     },
     endurance: {
-      overall: { drivers: ['Bachler', 'Müller'], team: 'Falken Motorsports Porsche #3' },
+      overall: { driverIds: ['bachler', 'muller'], teamId: 'falken-motorsports' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Bachler', 'Müller'], team: 'Falken Motorsports Porsche #3' },
+          { position: 1, driverIds: ['bachler', 'muller'], teamId: 'falken-motorsports' },
         ],
       }],
     },
@@ -98,15 +98,15 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 7 — ADAC ACAS Cup (13 Sep 2025, Race 1)
   'nls-2025-7': {
     qualifying: {
-      overall: { drivers: ['Andlauer'], team: 'Falken Motorsports Porsche #3' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Andlauer'], team: 'Falken Motorsports Porsche #3' }] }],
+      overall: { driverIds: ['andlauer'], teamId: 'falken-motorsports' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['andlauer'], teamId: 'falken-motorsports' }] }],
     },
     endurance: {
-      overall: { drivers: ['Andlauer', 'Sturm'], team: 'Falken Motorsports Porsche #3' },
+      overall: { driverIds: ['andlauer', 'sturm'], teamId: 'falken-motorsports' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Andlauer', 'Sturm'], team: 'Falken Motorsports Porsche #3' },
+          { position: 1, driverIds: ['andlauer', 'sturm'], teamId: 'falken-motorsports' },
         ],
       }],
     },
@@ -114,15 +114,15 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 8 — 64th ADAC Reinoldus-Langstreckenrennen (13 Sep 2025, Race 2)
   'nls-2025-8': {
     qualifying: {
-      overall: { drivers: ['Fontana'], team: 'Car Collection Motorsport Porsche #44' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Fontana'], team: 'Car Collection Motorsport Porsche #44' }] }],
+      overall: { driverIds: ['fontana'], teamId: 'car-collection' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['fontana'], teamId: 'car-collection' }] }],
     },
     endurance: {
-      overall: { drivers: ['Kolb', 'Stippler'], team: 'Haupt Racing Team Ford Mustang GT3 #6' },
+      overall: { driverIds: ['kolb', 'stippler'], teamId: 'haupt-racing' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Kolb', 'Stippler'], team: 'Haupt Racing Team Ford Mustang GT3 #6' },
+          { position: 1, driverIds: ['kolb', 'stippler'], teamId: 'haupt-racing' },
         ],
       }],
     },
@@ -130,15 +130,15 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 9 — 57th ADAC Barbarossapreis (27 Sep 2025)
   'nls-2025-9': {
     qualifying: {
-      overall: { drivers: ['Krognes'], team: 'Walkenhorst Motorsport Aston Martin #34' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Krognes'], team: 'Walkenhorst Motorsport Aston Martin #34' }] }],
+      overall: { driverIds: ['krognes'], teamId: 'walkenhorst' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['krognes'], teamId: 'walkenhorst' }] }],
     },
     endurance: {
-      overall: { drivers: ['Verstappen', 'Lulham'], team: 'Emil Frey Racing Ferrari #14' },
+      overall: { driverIds: ['verstappen', 'lulham'], teamId: 'emil-frey-racing' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Verstappen', 'Lulham'], team: 'Emil Frey Racing Ferrari #14' },
+          { position: 1, driverIds: ['verstappen', 'lulham'], teamId: 'emil-frey-racing' },
         ],
       }],
     },
@@ -146,15 +146,15 @@ export const nlsResults2025: Record<string, EventResults> = {
   // NLS 10 — 1st NLS Sportwarte-Trophy (11 Oct 2025)
   'nls-2025-10': {
     qualifying: {
-      overall: { drivers: ['Scherer'], team: 'Haupt Racing Team Ford Mustang GT3 #9' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Scherer'], team: 'Haupt Racing Team Ford Mustang GT3 #9' }] }],
+      overall: { driverIds: ['scherer'], teamId: 'haupt-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['scherer'], teamId: 'haupt-racing' }] }],
     },
     endurance: {
-      overall: { drivers: ['Boccolacci', 'Menzel'], team: 'Falken Motorsports Porsche #4' },
+      overall: { driverIds: ['boccolacci', 'menzel'], teamId: 'falken-motorsports' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, drivers: ['Boccolacci', 'Menzel'], team: 'Falken Motorsports Porsche #4' },
+          { position: 1, driverIds: ['boccolacci', 'menzel'], teamId: 'falken-motorsports' },
         ],
       }],
     },

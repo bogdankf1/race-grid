@@ -1,134 +1,134 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // Super GT 2025 results — verified from supergt.net, motorsport.com, dailysportscar.com
 // GT500 class winners only (primary class)
 export const supergtResults2025: Record<string, EventResults> = {
   'supergt-2025-okayama': {
     qualifying: {
-      overall: { drivers: ['Fukuzumi'], team: 'TGR Team ENEOS ROOKIE #14' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Fukuzumi'], team: 'TGR Team ENEOS ROOKIE #14' }] }],
+      overall: { driverIds: ['fukuzumi'], teamId: 'tgr-eneos-rookie' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['fukuzumi'], teamId: 'tgr-eneos-rookie' }] }],
     },
     race: {
-      overall: { drivers: ['Tsuboi', 'Yamashita'], team: 'TGR Team au TOM\'S' },
+      overall: { driverIds: ['tsuboi', 'yamashita'], teamId: 'tgr-au-toms' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Tsuboi', 'Yamashita'], team: 'TGR Team au TOM\'S' },
+          { position: 1, driverIds: ['tsuboi', 'yamashita'], teamId: 'tgr-au-toms' },
         ],
       }],
     },
   },
   'supergt-2025-fuji-1': {
     qualifying: {
-      overall: { drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO #38' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO #38' }] }],
+      overall: { driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' }] }],
     },
     race: {
-      overall: { drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO' },
+      overall: { driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO' },
+          { position: 1, driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' },
         ],
       }],
     },
   },
   'supergt-2025-sepang': {
     qualifying: {
-      overall: { drivers: ['Kunimoto'], team: 'TGR Team WedsSport Bandoh #19' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Kunimoto'], team: 'TGR Team WedsSport Bandoh #19' }] }],
+      overall: { driverIds: ['kunimoto'], teamId: 'tgr-wedssport-bandoh' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['kunimoto'], teamId: 'tgr-wedssport-bandoh' }] }],
     },
     race: {
-      overall: { drivers: ['Alesi', 'Sasahara'], team: 'TGR Team Deloitte TOM\'S' },
+      overall: { driverIds: ['alesi', 'sasahara'], teamId: 'tgr-deloitte-toms' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Alesi', 'Sasahara'], team: 'TGR Team Deloitte TOM\'S' },
+          { position: 1, driverIds: ['alesi', 'sasahara'], teamId: 'tgr-deloitte-toms' },
         ],
       }],
     },
   },
   'supergt-2025-fuji-2': {
     qualifying: {
-      overall: { drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO #38' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO #38' }] }],
+      overall: { driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' }] }],
     },
     // Sprint format — Race 2 GT500 winner: Fukuzumi
     race: {
-      overall: { drivers: ['Fukuzumi'], team: 'ENEOS X PRIME' },
+      overall: { driverIds: ['fukuzumi'], teamId: 'eneos-x-prime' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Fukuzumi'], team: 'ENEOS X PRIME' },
-          { position: 2, drivers: ['Yamashita'], team: 'TGR Team au TOM\'S' },
-          { position: 3, drivers: ['Ishiura'], team: 'KeePer CERUMO' },
+          { position: 1, driverIds: ['fukuzumi'], teamId: 'eneos-x-prime' },
+          { position: 2, driverIds: ['yamashita'], teamId: 'tgr-au-toms' },
+          { position: 3, driverIds: ['ishiura'], teamId: 'keeper-cerumo' },
         ],
       }],
     },
   },
   'supergt-2025-suzuka': {
     qualifying: {
-      overall: { drivers: ['Otsu', 'Sato'], team: 'ARTA MUGEN Honda #16' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Otsu', 'Sato'], team: 'ARTA MUGEN Honda #16' }] }],
+      overall: { driverIds: ['otsu', 'sato'], teamId: 'arta-mugen' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['otsu', 'sato'], teamId: 'arta-mugen' }] }],
     },
     race: {
       // #23 NISMO Z won
-      overall: { drivers: ['Matsuda', 'Quintarelli'], team: 'NISMO' },
+      overall: { driverIds: ['matsuda', 'quintarelli'], teamId: 'nismo' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Matsuda', 'Quintarelli'], team: 'NISMO' },
+          { position: 1, driverIds: ['matsuda', 'quintarelli'], teamId: 'nismo' },
         ],
       }],
     },
   },
   'supergt-2025-sugo': {
     qualifying: {
-      overall: { drivers: ['Otsu', 'Sato'], team: 'ARTA MUGEN Honda #16' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Otsu', 'Sato'], team: 'ARTA MUGEN Honda #16' }] }],
+      overall: { driverIds: ['otsu', 'sato'], teamId: 'arta-mugen' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['otsu', 'sato'], teamId: 'arta-mugen' }] }],
     },
     race: {
-      overall: { drivers: ['Matsuda', 'Natori'], team: 'Kondo Racing Nissan' },
+      overall: { driverIds: ['matsuda', 'natori'], teamId: 'kondo-racing-nissan' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Matsuda', 'Natori'], team: 'Kondo Racing Nissan' },
-          { position: 2, drivers: ['Sekiguchi', 'Fenestraz'], team: 'DENSO KOBELCO SARD' },
-          { position: 3, drivers: ['Tsukakoshi', 'Koide'], team: 'Astemo Honda' },
+          { position: 1, driverIds: ['matsuda', 'natori'], teamId: 'kondo-racing-nissan' },
+          { position: 2, driverIds: ['sekiguchi', 'fenestraz'], teamId: 'denso-kobelco-sard' },
+          { position: 3, driverIds: ['tsukakoshi', 'koide'], teamId: 'astemo-honda' },
         ],
       }],
     },
   },
   'supergt-2025-autopolis': {
     qualifying: {
-      overall: { drivers: ['Sasaki', 'Miyake'], team: 'NDDP Racing Nissan #3' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Sasaki', 'Miyake'], team: 'NDDP Racing Nissan #3' }] }],
+      overall: { driverIds: ['sasaki', 'miyake'], teamId: 'nddp-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['sasaki', 'miyake'], teamId: 'nddp-racing' }] }],
     },
     race: {
       // Stanley Team Kunimitsu Honda Civic won
-      overall: { drivers: ['Yamamoto', 'Makino'], team: 'Stanley Team Kunimitsu Honda' },
+      overall: { driverIds: ['yamamoto', 'makino'], teamId: 'stanley-kunimitsu' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Yamamoto', 'Makino'], team: 'Stanley Team Kunimitsu Honda' },
+          { position: 1, driverIds: ['yamamoto', 'makino'], teamId: 'stanley-kunimitsu' },
         ],
       }],
     },
   },
   'supergt-2025-motegi': {
     qualifying: {
-      overall: { drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO #38' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, drivers: ['Ishiura', 'Oyu'], team: 'KeePer CERUMO #38' }] }],
+      overall: { driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['ishiura', 'oyu'], teamId: 'keeper-cerumo' }] }],
     },
     race: {
       // #100 STANLEY CIVIC TYPE R-GT won again, Honda 1-2-3
-      overall: { drivers: ['Yamamoto', 'Makino'], team: 'Stanley Team Kunimitsu Honda' },
+      overall: { driverIds: ['yamamoto', 'makino'], teamId: 'stanley-kunimitsu' },
       classes: [{
         className: 'GT500',
         podium: [
-          { position: 1, drivers: ['Yamamoto', 'Makino'], team: 'Stanley Team Kunimitsu Honda' },
-          { position: 2, drivers: ['Izawa', 'Okusa'], team: 'Modulo Honda' },
-          { position: 3, drivers: ['Otsu', 'Sato'], team: 'ARTA MUGEN Honda' },
+          { position: 1, driverIds: ['yamamoto', 'makino'], teamId: 'stanley-kunimitsu' },
+          { position: 2, driverIds: ['izawa', 'okusa'], teamId: 'modulo-honda' },
+          { position: 3, driverIds: ['otsu', 'sato'], teamId: 'arta-mugen' },
         ],
       }],
     },

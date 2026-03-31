@@ -1,784 +1,784 @@
-import { EventResults } from './types'
+import type { EventResults } from './types'
 
 // F1 2025 results — verified from formula1.com, skysports.com, motorsport.com
 export const f1Results2025: Record<string, EventResults> = {
   // Round 1 — Australian Grand Prix (16 Mar 2025)
   'f1-2025-australia': {
     qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Verstappen'], team: 'Red Bull Racing' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['russell'], teamId: 'mercedes' },
         ],
       }],
-      fastestLap: 'Norris',
+      fastestLapDriverId: 'norris',
     },
   },
 
   // Round 2 — Chinese Grand Prix (23 Mar 2025) — Sprint weekend
   'f1-2025-china': {
     sprint_qualifying: {
-      overall: { drivers: ['Hamilton'], team: 'Ferrari' },
+      overall: { driverIds: ['hamilton'], teamId: 'ferrari' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Hamilton'], team: 'Ferrari' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['hamilton'], teamId: 'ferrari' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     sprint: {
-      overall: { drivers: ['Hamilton'], team: 'Ferrari' },
+      overall: { driverIds: ['hamilton'], teamId: 'ferrari' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Hamilton'], team: 'Ferrari' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Verstappen'], team: 'Red Bull Racing' },
+          { position: 1, driverIds: ['hamilton'], teamId: 'ferrari' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
         ],
       }],
     },
     qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['russell'], teamId: 'mercedes' },
         ],
       }],
-      fastestLap: 'Norris',
+      fastestLapDriverId: 'norris',
     },
   },
 
   // Round 3 — Japanese Grand Prix (6 Apr 2025)
   'f1-2025-japan': {
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
-      fastestLap: 'Antonelli',
+      fastestLapDriverId: 'antonelli',
     },
   },
 
   // Round 4 — Bahrain Grand Prix (13 Apr 2025)
   'f1-2025-bahrain': {
     qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
-      fastestLap: 'Piastri',
+      fastestLapDriverId: 'piastri',
     },
   },
 
   // Round 5 — Saudi Arabian Grand Prix (20 Apr 2025)
   'f1-2025-saudi-arabia': {
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['russell'], teamId: 'mercedes' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
-      fastestLap: 'Norris',
+      fastestLapDriverId: 'norris',
     },
   },
 
   // Round 6 — Miami Grand Prix (4 May 2025) — Sprint weekend
   'f1-2025-miami': {
     sprint_qualifying: {
-      overall: { drivers: ['Antonelli'], team: 'Mercedes' },
+      overall: { driverIds: ['antonelli'], teamId: 'mercedes' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Antonelli'], team: 'Mercedes' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     sprint: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Hamilton'], team: 'Ferrari' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['hamilton'], teamId: 'ferrari' },
         ],
       }],
     },
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Antonelli'], team: 'Mercedes' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['antonelli'], teamId: 'mercedes' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['russell'], teamId: 'mercedes' },
         ],
       }],
-      fastestLap: 'Norris',
+      fastestLapDriverId: 'norris',
     },
   },
 
   // Round 7 — Emilia Romagna Grand Prix (18 May 2025)
   'f1-2025-emilia-romagna': {
     qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['russell'], teamId: 'mercedes' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
-      fastestLap: 'Verstappen',
+      fastestLapDriverId: 'verstappen',
     },
   },
 
   // Round 8 — Monaco Grand Prix (25 May 2025)
   'f1-2025-monaco': {
     qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Leclerc'], team: 'Ferrari' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['leclerc'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Leclerc'], team: 'Ferrari' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['leclerc'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
-      fastestLap: 'Norris',
+      fastestLapDriverId: 'norris',
     },
   },
 
   // Round 9 — Spanish Grand Prix (1 Jun 2025)
   'f1-2025-spain': {
     qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Verstappen'], team: 'Red Bull Racing' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
-      fastestLap: 'Piastri',
+      fastestLapDriverId: 'piastri',
     },
   },
 
   // Round 10 — Canadian Grand Prix (15 Jun 2025)
   'f1-2025-canada': {
     qualifying: {
-      overall: { drivers: ['Russell'], team: 'Mercedes' },
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Russell'], team: 'Mercedes' },
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Antonelli'], team: 'Mercedes' },
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['antonelli'], teamId: 'mercedes' },
         ],
       }],
-      fastestLap: 'Russell',
+      fastestLapDriverId: 'russell',
     },
   },
 
   // Round 11 — Austrian Grand Prix (29 Jun 2025)
   'f1-2025-austria': {
     qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Leclerc'], team: 'Ferrari' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['leclerc'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
-      fastestLap: 'Piastri',
+      fastestLapDriverId: 'piastri',
     },
   },
 
   // Round 12 — British Grand Prix (6 Jul 2025)
   'f1-2025-great-britain': {
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Hülkenberg'], team: 'Sauber' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['hulkenberg'], teamId: 'sauber' },
         ],
       }],
-      fastestLap: 'Piastri',
+      fastestLapDriverId: 'piastri',
     },
   },
 
   // Round 13 — Belgian Grand Prix (27 Jul 2025) — Sprint weekend
   'f1-2025-belgium': {
     sprint_qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     sprint: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
-      fastestLap: 'Antonelli',
+      fastestLapDriverId: 'antonelli',
     },
   },
 
   // Round 14 — Hungarian Grand Prix (3 Aug 2025)
   'f1-2025-hungary': {
     qualifying: {
-      overall: { drivers: ['Leclerc'], team: 'Ferrari' },
+      overall: { driverIds: ['leclerc'], teamId: 'ferrari' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Leclerc'], team: 'Ferrari' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['leclerc'], teamId: 'ferrari' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['russell'], teamId: 'mercedes' },
         ],
       }],
-      fastestLap: 'Russell',
+      fastestLapDriverId: 'russell',
     },
   },
 
   // Round 15 — Dutch Grand Prix (31 Aug 2025)
   'f1-2025-netherlands': {
     qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Verstappen'], team: 'Red Bull Racing' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Hadjar'], team: 'Racing Bulls' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['hadjar'], teamId: 'racing-bulls' },
         ],
       }],
-      fastestLap: 'Piastri',
+      fastestLapDriverId: 'piastri',
     },
   },
 
   // Round 16 — Italian Grand Prix (7 Sep 2025)
   'f1-2025-italy': {
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
-      fastestLap: 'Norris',
+      fastestLapDriverId: 'norris',
     },
   },
 
   // Round 17 — Azerbaijan Grand Prix (21 Sep 2025)
   'f1-2025-azerbaijan': {
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Sainz'], team: 'Williams' },
-          { position: 3, drivers: ['Lawson'], team: 'Racing Bulls' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['sainz'], teamId: 'williams' },
+          { position: 3, driverIds: ['lawson'], teamId: 'racing-bulls' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Sainz'], team: 'Williams' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['sainz'], teamId: 'williams' },
         ],
       }],
-      fastestLap: 'Verstappen',
+      fastestLapDriverId: 'verstappen',
     },
   },
 
   // Round 18 — Singapore Grand Prix (5 Oct 2025)
   'f1-2025-singapore': {
     qualifying: {
-      overall: { drivers: ['Russell'], team: 'Mercedes' },
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Russell'], team: 'Mercedes' },
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
-      fastestLap: 'Hamilton',
+      fastestLapDriverId: 'hamilton',
     },
   },
 
   // Round 19 — United States Grand Prix (19 Oct 2025) — Sprint weekend
   'f1-2025-united-states': {
     sprint_qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     sprint: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Sainz'], team: 'Williams' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['sainz'], teamId: 'williams' },
         ],
       }],
     },
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
-      fastestLap: 'Antonelli',
+      fastestLapDriverId: 'antonelli',
     },
   },
 
   // Round 20 — Mexico City Grand Prix (26 Oct 2025)
   'f1-2025-mexico': {
     qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Leclerc'], team: 'Ferrari' },
-          { position: 3, drivers: ['Hamilton'], team: 'Ferrari' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['leclerc'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['hamilton'], teamId: 'ferrari' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Leclerc'], team: 'Ferrari' },
-          { position: 3, drivers: ['Verstappen'], team: 'Red Bull Racing' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['leclerc'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
         ],
       }],
-      fastestLap: 'Russell',
+      fastestLapDriverId: 'russell',
     },
   },
 
   // Round 21 — Brazilian Grand Prix (9 Nov 2025) — Sprint weekend
   'f1-2025-brazil': {
     sprint_qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Antonelli'], team: 'Mercedes' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     sprint: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Antonelli'], team: 'Mercedes' },
-          { position: 3, drivers: ['Russell'], team: 'Mercedes' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['russell'], teamId: 'mercedes' },
         ],
       }],
     },
     qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Antonelli'], team: 'Mercedes' },
-          { position: 3, drivers: ['Leclerc'], team: 'Ferrari' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Antonelli'], team: 'Mercedes' },
-          { position: 3, drivers: ['Verstappen'], team: 'Red Bull Racing' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
         ],
       }],
-      fastestLap: 'Albon',
+      fastestLapDriverId: 'albon',
     },
   },
 
   // Round 22 — Las Vegas Grand Prix (23 Nov 2025)
   'f1-2025-las-vegas': {
     qualifying: {
-      overall: { drivers: ['Norris'], team: 'McLaren' },
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Norris'], team: 'McLaren' },
-          { position: 2, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 3, drivers: ['Sainz'], team: 'Williams' },
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['sainz'], teamId: 'williams' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Antonelli'], team: 'Mercedes' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['antonelli'], teamId: 'mercedes' },
         ],
       }],
-      fastestLap: 'Verstappen',
+      fastestLapDriverId: 'verstappen',
     },
   },
 
   // Round 23 — Qatar Grand Prix (30 Nov 2025) — Sprint weekend
   'f1-2025-qatar': {
     sprint_qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     sprint: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Russell'], team: 'Mercedes' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
     },
     qualifying: {
-      overall: { drivers: ['Piastri'], team: 'McLaren' },
+      overall: { driverIds: ['piastri'], teamId: 'mclaren' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Verstappen'], team: 'Red Bull Racing' },
+          { position: 1, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Sainz'], team: 'Williams' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['sainz'], teamId: 'williams' },
         ],
       }],
-      fastestLap: 'Piastri',
+      fastestLapDriverId: 'piastri',
     },
   },
 
   // Round 24 — Abu Dhabi Grand Prix (7 Dec 2025)
   'f1-2025-abu-dhabi': {
     qualifying: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Norris'], team: 'McLaren' },
-          { position: 3, drivers: ['Piastri'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
         ],
       }],
     },
     race: {
-      overall: { drivers: ['Verstappen'], team: 'Red Bull Racing' },
+      overall: { driverIds: ['verstappen'], teamId: 'red-bull-racing' },
       classes: [{
         className: 'Classification',
         podium: [
-          { position: 1, drivers: ['Verstappen'], team: 'Red Bull Racing' },
-          { position: 2, drivers: ['Piastri'], team: 'McLaren' },
-          { position: 3, drivers: ['Norris'], team: 'McLaren' },
+          { position: 1, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
         ],
       }],
-      fastestLap: 'Leclerc',
+      fastestLapDriverId: 'leclerc',
     },
   },
 }
