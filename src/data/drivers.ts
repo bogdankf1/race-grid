@@ -305,6 +305,21 @@ const DRIVERS: Record<string, Driver> = {
   'yamashita': { id: 'yamashita', name: 'Kenta Yamashita', shortName: 'Yamashita', nationality: 'JP' },
   'ye': { id: 'ye', name: 'Yifei Ye', shortName: 'Ye', nationality: 'CN' },
   'yelloly': { id: 'yelloly', name: 'Nick Yelloly', shortName: 'Yelloly', nationality: 'GB' },
+  'alonso': { id: 'alonso', name: 'Fernando Alonso', shortName: 'Alonso', nationality: 'ES' },
+  'bearman': { id: 'bearman', name: 'Oliver Bearman', shortName: 'Bearman', nationality: 'GB' },
+  'ocon': { id: 'ocon', name: 'Esteban Ocon', shortName: 'Ocon', nationality: 'FR' },
+  'stroll': { id: 'stroll', name: 'Lance Stroll', shortName: 'Stroll', nationality: 'CA' },
+  'tsunoda': { id: 'tsunoda', name: 'Yuki Tsunoda', shortName: 'Tsunoda', nationality: 'JP' },
+  'gasly': { id: 'gasly', name: 'Pierre Gasly', shortName: 'Gasly', nationality: 'FR' },
+  'bortoleto': { id: 'bortoleto', name: 'Gabriel Bortoleto', shortName: 'Bortoleto', nationality: 'BR' },
+  'colapinto': { id: 'colapinto', name: 'Franco Colapinto', shortName: 'Colapinto', nationality: 'AR' },
+  'doohan': { id: 'doohan', name: 'Jack Doohan', shortName: 'Doohan', nationality: 'AU' },
+  'lindblad': { id: 'lindblad', name: 'Arvid Lindblad', shortName: 'Lindblad', nationality: 'GB' },
+  'bottas': { id: 'bottas', name: 'Valtteri Bottas', shortName: 'Bottas', nationality: 'FI' },
+  'perez': { id: 'perez', name: 'Sergio Perez', shortName: 'Perez', nationality: 'MX' },
+  'daly': { id: 'daly', name: 'Conor Daly', shortName: 'Daly', nationality: 'US' },
+  'grosjean': { id: 'grosjean', name: 'Romain Grosjean', shortName: 'Grosjean', nationality: 'FR' },
+  'collet': { id: 'collet', name: 'Caio Collet', shortName: 'Collet', nationality: 'BR' },
 }
 
 export function getDriver(id: string): Driver | null {

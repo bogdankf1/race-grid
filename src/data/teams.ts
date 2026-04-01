@@ -129,6 +129,14 @@ const TEAMS: Record<string, Team> = {
   'williams': { id: 'williams', name: 'Williams', country: 'GB' },
   'winward-racing': { id: 'winward-racing', name: 'Winward Racing', country: 'US' },
   'wood-brothers-racing': { id: 'wood-brothers-racing', name: 'Wood Brothers Racing', country: 'US' },
+  'aston-martin': { id: 'aston-martin', name: 'Aston Martin', country: 'GB' },
+  'haas': { id: 'haas', name: 'Haas F1 Team', country: 'US' },
+  'kick-sauber': { id: 'kick-sauber', name: 'Kick Sauber', country: 'CH' },
+  'audi': { id: 'audi', name: 'Audi', country: 'DE' },
+  'cadillac': { id: 'cadillac', name: 'Cadillac', country: 'US' },
+  'aj-foyt': { id: 'aj-foyt', name: 'A.J. Foyt Enterprises', country: 'US' },
+  'juncos-hollinger': { id: 'juncos-hollinger', name: 'Juncos Hollinger Racing', country: 'US' },
+  'm-sport-ford': { id: 'm-sport-ford', name: 'M-Sport Ford WRT', country: 'GB' },
 }
 
 export function getTeam(id: string): Team | null {

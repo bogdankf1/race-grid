@@ -1,0 +1,50 @@
+import type { SeasonStandings } from './types'
+import { f1Standings2025 } from './f1-2025'
+import { f1Standings2026 } from './f1-2026'
+import { indycarStandings2025 } from './indycar-2025'
+import { indycarStandings2026 } from './indycar-2026'
+import { nascarStandings2025 } from './nascar-2025'
+import { nascarStandings2026 } from './nascar-2026'
+import { wecStandings2025 } from './wec-2025'
+import { wrcStandings2025 } from './wrc-2025'
+import { wrcStandings2026 } from './wrc-2026'
+import { imsaStandings2025 } from './imsa-2025'
+import { imsaStandings2026 } from './imsa-2026'
+import { gtwcStandings2025 } from './gtwc-2025'
+import { igtcStandings2025 } from './igtc-2025'
+import { dtmStandings2025 } from './dtm-2025'
+import { superformulaStandings2025 } from './superformula-2025'
+import { supergtStandings2025 } from './supergt-2025'
+import { supercarsStandings2025 } from './supercars-2025'
+import { supercarsStandings2026 } from './supercars-2026'
+import { elmsStandings2025 } from './elms-2025'
+
+const ALL_STANDINGS: Record<string, SeasonStandings> = {
+  'f1-2025': f1Standings2025,
+  'f1-2026': f1Standings2026,
+  'indycar-2025': indycarStandings2025,
+  'indycar-2026': indycarStandings2026,
+  'nascar-2025': nascarStandings2025,
+  'nascar-2026': nascarStandings2026,
+  'wec-2025': wecStandings2025,
+  'wrc-2025': wrcStandings2025,
+  'wrc-2026': wrcStandings2026,
+  'imsa-2025': imsaStandings2025,
+  'imsa-2026': imsaStandings2026,
+  'gtwc-2025': gtwcStandings2025,
+  'igtc-2025': igtcStandings2025,
+  'dtm-2025': dtmStandings2025,
+  'superformula-2025': superformulaStandings2025,
+  'supergt-2025': supergtStandings2025,
+  'supercars-2025': supercarsStandings2025,
+  'supercars-2026': supercarsStandings2026,
+  'elms-2025': elmsStandings2025,
+}
+
+export function getStandings(seriesId: string, year: number): SeasonStandings | null {
+  return ALL_STANDINGS[`${seriesId}-${year}`] ?? null
+}
+
+export function hasStandings(seriesId: string, year: number): boolean {
+  return `${seriesId}-${year}` in ALL_STANDINGS
+}
