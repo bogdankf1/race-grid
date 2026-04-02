@@ -3,6 +3,10 @@ import type { EventResults } from './types'
 // NASCAR 2026 results — verified from nascar.com, motorsport.com
 export const nascarResults2026: Record<string, EventResults> = {
   'nascar-2026-daytona-500': {
+    qualifying: {
+      overall: { driverIds: ['busch'], teamId: 'richard-childress-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['busch'], teamId: 'richard-childress-racing' }] }],
+    },
     race: {
       overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
       classes: [{
@@ -16,6 +20,10 @@ export const nascarResults2026: Record<string, EventResults> = {
     },
   },
   'nascar-2026-atlanta': {
+    qualifying: {
+      overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['reddick'], teamId: '23xi-racing' }] }],
+    },
     race: {
       overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
       classes: [{
@@ -29,6 +37,10 @@ export const nascarResults2026: Record<string, EventResults> = {
     },
   },
   'nascar-2026-cota': {
+    qualifying: {
+      overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['reddick'], teamId: '23xi-racing' }] }],
+    },
     race: {
       overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
       classes: [{
@@ -42,6 +54,10 @@ export const nascarResults2026: Record<string, EventResults> = {
     },
   },
   'nascar-2026-phoenix': {
+    qualifying: {
+      overall: { driverIds: ['logano'], teamId: 'team-penske' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['logano'], teamId: 'team-penske' }] }],
+    },
     race: {
       overall: { driverIds: ['blaney'], teamId: 'team-penske' },
       classes: [{
@@ -55,6 +71,10 @@ export const nascarResults2026: Record<string, EventResults> = {
     },
   },
   'nascar-2026-las-vegas': {
+    qualifying: {
+      overall: { driverIds: ['bell'], teamId: 'joe-gibbs-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['bell'], teamId: 'joe-gibbs-racing' }] }],
+    },
     race: {
       overall: { driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
       classes: [{
@@ -68,6 +88,10 @@ export const nascarResults2026: Record<string, EventResults> = {
     },
   },
   'nascar-2026-darlington': {
+    qualifying: {
+      overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['reddick'], teamId: '23xi-racing' }] }],
+    },
     race: {
       overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
       classes: [{
@@ -89,6 +113,17 @@ export const nascarResults2026: Record<string, EventResults> = {
           { position: 1, driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
           { position: 2, driverIds: ['byron'], teamId: 'hendrick-motorsports' },
           { position: 3, driverIds: ['berry'], teamId: 'stewart-haas-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['elliott'], teamId: 'hendrick-motorsports' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['elliott'], teamId: 'hendrick-motorsports' },
+          { position: 2, driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+          { position: 3, driverIds: ['logano'], teamId: 'team-penske' },
         ],
       }],
     },

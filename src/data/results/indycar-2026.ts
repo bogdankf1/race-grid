@@ -62,6 +62,17 @@ export const indycarResults2026: Record<string, EventResults> = {
         ],
       }],
     },
+    race: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['rahal'], teamId: 'rahal-letterman-lanigan' },
+        ],
+      }],
+    },
   },
   'indycar-2026-arlington': {
     qualifying: {

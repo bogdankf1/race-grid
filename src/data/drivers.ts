@@ -320,6 +320,7 @@ const DRIVERS: Record<string, Driver> = {
   'daly': { id: 'daly', name: 'Conor Daly', shortName: 'Daly', nationality: 'US' },
   'grosjean': { id: 'grosjean', name: 'Romain Grosjean', shortName: 'Grosjean', nationality: 'FR' },
   'collet': { id: 'collet', name: 'Caio Collet', shortName: 'Collet', nationality: 'BR' },
+  'busch': { id: 'busch', name: 'Kyle Busch', shortName: 'Busch', nationality: 'US' },
 }
 
 export function getDriver(id: string): Driver | null {

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
+import Link from 'next/link'
 import { Search, Trophy, Users } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
@@ -256,13 +257,13 @@ function DriverRow({ entry, seriesColor }: { entry: DriverStandingEntry; seriesC
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           {driver?.nationality && <span style={{ fontSize: 14 }}>{countryFlag(driver.nationality)}</span>}
-          <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)' }}>
+          <Link href={`/drivers/${entry.driverId}`} style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)', textDecoration: 'none' }}>
             {driver?.name ?? entry.driverId}
-          </span>
+          </Link>
         </div>
-        <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
+        <Link href={`/teams/${entry.teamId}`} style={{ display: 'block', fontSize: 12, color: 'var(--rg-text3)', marginTop: 2, textDecoration: 'none' }}>
           {team?.name ?? entry.teamId}
-        </div>
+        </Link>
       </div>
 
       {/* Wins */}
@@ -299,9 +300,9 @@ function ConstructorRow({ entry, seriesColor }: { entry: TeamStandingEntry; seri
 
       {/* Team name */}
       <div style={{ flex: 1, minWidth: 0 }}>
-        <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)' }}>
+        <Link href={`/teams/${entry.teamId}`} style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)', textDecoration: 'none' }}>
           {team?.name ?? entry.teamId}
-        </span>
+        </Link>
       </div>
 
       {/* Wins */}

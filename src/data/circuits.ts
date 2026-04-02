@@ -135,133 +135,6 @@ const CIRCUITS: Record<string, Circuit> = {
   'jeddah-corniche-circuit': { id: 'jeddah-corniche-circuit', name: 'Jeddah Corniche Circuit', country: 'Saudi Arabia', countryCode: 'SA', length: '6.174 km', turns: 27, type: 'street' },
 }
 
-// Name-to-slug mapping for backward compatibility during migration
-const NAME_TO_SLUG: Record<string, string> = {
-  'Albert Park Circuit': 'albert-park-circuit',
-  'Shanghai International Circuit': 'shanghai-international-circuit',
-  'Suzuka International Racing Course': 'suzuka-international-racing-course',
-  'Miami International Autodrome': 'miami-international-autodrome',
-  'Circuit Gilles Villeneuve': 'circuit-gilles-villeneuve',
-  'Circuit de Monaco': 'circuit-de-monaco',
-  'Circuit de Barcelona-Catalunya': 'circuit-de-barcelona-catalunya',
-  'Red Bull Ring': 'red-bull-ring',
-  'Silverstone Circuit': 'silverstone-circuit',
-  'Circuit de Spa-Francorchamps': 'circuit-de-spa-francorchamps',
-  'Hungaroring': 'hungaroring',
-  'Circuit Zandvoort': 'circuit-zandvoort',
-  'Autodromo Nazionale Monza': 'autodromo-nazionale-monza',
-  'Circuito de Madrid': 'circuito-de-madrid',
-  'Baku City Circuit': 'baku-city-circuit',
-  'Marina Bay Street Circuit': 'marina-bay-street-circuit',
-  'Circuit of the Americas': 'circuit-of-the-americas',
-  'Autodromo Hermanos Rodriguez': 'autodromo-hermanos-rodriguez',
-  'Autodromo Jose Carlos Pace': 'autodromo-jose-carlos-pace',
-  'Las Vegas Strip Circuit': 'las-vegas-strip-circuit',
-  'Lusail International Circuit': 'lusail-international-circuit',
-  'Yas Marina Circuit': 'yas-marina-circuit',
-  'Autodromo Enzo e Dino Ferrari': 'autodromo-enzo-e-dino-ferrari',
-  'Circuit de la Sarthe': 'circuit-de-la-sarthe',
-  'Fuji Speedway': 'fuji-speedway',
-  'Bahrain International Circuit': 'bahrain-international-circuit',
-  'Streets of St. Petersburg': 'streets-of-st-petersburg',
-  'Phoenix Raceway': 'phoenix-raceway',
-  'Streets of Arlington': 'streets-of-arlington',
-  'Barber Motorsports Park': 'barber-motorsports-park',
-  'Streets of Long Beach': 'streets-of-long-beach',
-  'Indianapolis Motor Speedway (Road Course)': 'indianapolis-motor-speedway-road-course',
-  'Indianapolis Motor Speedway (Oval)': 'indianapolis-motor-speedway-oval',
-  'Streets of Detroit': 'streets-of-detroit',
-  'World Wide Technology Raceway': 'world-wide-technology-raceway',
-  'Road America': 'road-america',
-  'Mid-Ohio Sports Car Course': 'mid-ohio-sports-car-course',
-  'Nashville Superspeedway': 'nashville-superspeedway',
-  'Portland International Raceway': 'portland-international-raceway',
-  'Streets of Markham': 'streets-of-markham',
-  'Streets of Washington, D.C.': 'streets-of-washington-dc',
-  'Milwaukee Mile': 'milwaukee-mile',
-  'WeatherTech Raceway Laguna Seca': 'weathertech-raceway-laguna-seca',
-  'Daytona International Speedway': 'daytona-international-speedway',
-  'Atlanta Motor Speedway': 'atlanta-motor-speedway',
-  'Las Vegas Motor Speedway': 'las-vegas-motor-speedway',
-  'Darlington Raceway': 'darlington-raceway',
-  'Martinsville Speedway': 'martinsville-speedway',
-  'Bristol Motor Speedway': 'bristol-motor-speedway',
-  'Kansas Speedway': 'kansas-speedway',
-  'Talladega Superspeedway': 'talladega-superspeedway',
-  'Texas Motor Speedway': 'texas-motor-speedway',
-  'Watkins Glen International': 'watkins-glen-international',
-  'Charlotte Motor Speedway': 'charlotte-motor-speedway',
-  'Charlotte Motor Speedway (ROVAL)': 'charlotte-motor-speedway-roval',
-  'Michigan International Speedway': 'michigan-international-speedway',
-  'Pocono Raceway': 'pocono-raceway',
-  'San Diego Street Course': 'san-diego-street-course',
-  'Sonoma Raceway': 'sonoma-raceway',
-  'Chicagoland Speedway': 'chicagoland-speedway',
-  'North Wilkesboro Speedway': 'north-wilkesboro-speedway',
-  'Indianapolis Motor Speedway': 'indianapolis-motor-speedway',
-  'Iowa Speedway': 'iowa-speedway',
-  'Richmond Raceway': 'richmond-raceway',
-  'New Hampshire Motor Speedway': 'new-hampshire-motor-speedway',
-  'Homestead-Miami Speedway': 'homestead-miami-speedway',
-  'Nurburgring Nordschleife': 'nurburgring-nordschleife',
-  'Nurburgring': 'nurburgring',
-  'Hockenheimring': 'hockenheimring',
-  'Lausitzring': 'lausitzring',
-  'Norisring': 'norisring',
-  'Motorsport Arena Oschersleben': 'motorsport-arena-oschersleben',
-  'Sachsenring': 'sachsenring',
-  'Circuit Paul Ricard': 'circuit-paul-ricard',
-  'Brands Hatch': 'brands-hatch',
-  'Misano World Circuit': 'misano-world-circuit',
-  'Circuit de Nevers Magny-Cours': 'circuit-de-nevers-magny-cours',
-  'Algarve International Circuit': 'algarve-international-circuit',
-  'Sebring International Raceway': 'sebring-international-raceway',
-  'Canadian Tire Motorsport Park': 'canadian-tire-motorsport-park',
-  'VIRginia International Raceway': 'virginia-international-raceway',
-  'Michelin Raceway Road Atlanta': 'michelin-raceway-road-atlanta',
-  'Sepang International Circuit': 'sepang-international-circuit',
-  'Okayama International Circuit': 'okayama-international-circuit',
-  'Sportsland Sugo': 'sportsland-sugo',
-  'Autopolis': 'autopolis',
-  'Twin Ring Motegi': 'twin-ring-motegi',
-  'Mount Panorama Circuit': 'mount-panorama-circuit',
-  'Sydney Motorsport Park': 'sydney-motorsport-park',
-  'Taupo Motorsport Park': 'taupo-motorsport-park',
-  'Symmons Plains Raceway': 'symmons-plains-raceway',
-  'Townsville Street Circuit': 'townsville-street-circuit',
-  'Hidden Valley Raceway': 'hidden-valley-raceway',
-  'Sandown Raceway': 'sandown-raceway',
-  'Surfers Paradise Street Circuit': 'surfers-paradise-street-circuit',
-  'Adelaide Street Circuit': 'adelaide-street-circuit',
-  'Wanneroo Raceway': 'wanneroo-raceway',
-  'Queensland Raceway': 'queensland-raceway',
-  'The Bend Motorsport Park': 'the-bend-motorsport-park',
-  'Mike Pero Motorsport Park': 'mike-pero-motorsport-park',
-  'Monaco / French Alps': 'monaco-french-alps',
-  'Umea': 'umea',
-  'Naivasha': 'naivasha',
-  'Zagreb': 'zagreb',
-  'Las Palmas de Gran Canaria': 'las-palmas-de-gran-canaria',
-  'Matosinhos': 'matosinhos',
-  'Toyota City': 'toyota-city',
-  'Lamia': 'lamia',
-  'Tartu': 'tartu',
-  'Jyvaskyla': 'jyvaskyla',
-  'Asuncion': 'asuncion',
-  'Concepcion': 'concepcion',
-  'Sardinia / Various': 'sardinia-various',
-  'Jeddah / NEOM': 'jeddah-neom',
-  'Circuit Ricardo Tormo': 'circuit-ricardo-tormo',
-  'The Thermal Club': 'the-thermal-club',
-  'Exhibition Place': 'exhibition-place',
-  'Autódromo Hermanos Rodríguez': 'autodromo-hermanos-rodriguez',
-  'Chicago Street Course': 'chicago-street-course',
-  'Dover Motor Speedway': 'dover-motor-speedway',
-  'Olbia / Sardinia': 'olbia-sardinia',
-  'Prague / Various': 'prague-various',
-  'Jeddah Corniche Circuit': 'jeddah-corniche-circuit',
-}
-
 const TYPE_LABELS: Record<string, Record<string, string>> = {
   en: { permanent: 'Race track', street: 'Street circuit', oval: 'Oval', mixed: 'Mixed layout' },
   uk: { permanent: 'Гоночна траса', street: 'Міська траса', oval: 'Овал', mixed: 'Змішана траса' },
@@ -271,22 +144,8 @@ export function getCircuit(id: string): Circuit | null {
   return CIRCUITS[id] ?? null
 }
 
-export function getCircuitByName(name: string): Circuit | null {
-  const slug = NAME_TO_SLUG[name]
-  return slug ? CIRCUITS[slug] : null
-}
-
-/** @deprecated Use getCircuit(id) or getCircuitByName(name) instead */
-export function getCircuitInfo(circuitName: string): Circuit | null {
-  return getCircuitByName(circuitName)
-}
-
 export function getAllCircuits(): Circuit[] {
   return Object.values(CIRCUITS)
-}
-
-export function getCircuitSlug(name: string): string | null {
-  return NAME_TO_SLUG[name] ?? null
 }
 
 export function getCircuitTypeLabel(type: string, locale: string): string {
