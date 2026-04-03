@@ -12,6 +12,10 @@ export const wrcStandings2025: SeasonStandings = {
     { position: 7, driverId: 'fourmaux', teamId: 'hyundai-wrt', points: 115, wins: 0 },
     { position: 8, driverId: 'pajari', teamId: 'toyota-wrt', points: 107, wins: 0 },
     { position: 9, driverId: 'solberg', teamId: 'toyota-wrt', points: 71, wins: 1 },
+    { position: 10, driverId: 'munster', teamId: 'm-sport-ford', points: 40, wins: 0 },
+    { position: 11, driverId: 'mcerlean', teamId: 'm-sport-ford', points: 28, wins: 0 },
+    { position: 12, driverId: 'sesks', teamId: 'm-sport-ford', points: 16, wins: 0 },
+    { position: 13, driverId: 'serderidis', teamId: 'm-sport-ford', points: 4, wins: 0 },
   ],
   constructors: [
     { position: 1, teamId: 'toyota-wrt', points: 735, wins: 12 },

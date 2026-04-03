@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { MapPin, Gauge, RotateCcw, Trophy } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
@@ -53,22 +53,13 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
     )
   }
 
-  // Group events by year, sorted newest first
-  const eventsByYear = useMemo(() => {
-    const grouped = new Map<number, CircuitEventInfo[]>()
-    for (const event of circuit.events) {
-      if (!grouped.has(event.year)) grouped.set(event.year, [])
-      grouped.get(event.year)!.push(event)
-    }
-    // Sort years descending, events within year by date
-    const sorted = [...grouped.entries()]
-      .sort((a, b) => b[0] - a[0])
-      .map(([year, events]) => ({
-        year,
-        events: events.sort((a, b) => a.raceDate.localeCompare(b.raceDate)),
-      }))
-    return sorted
-  }, [circuit.events])
+  const years = useMemo(() => [...new Set(circuit.events.map(e => e.year))].sort((a, b) => b - a), [circuit.events])
+  const [year, setYear] = useState(() => years[0] ?? 2026)
+
+  const filteredEvents = useMemo(() =>
+    circuit.events.filter(e => e.year === year).sort((a, b) => a.raceDate.localeCompare(b.raceDate)),
+    [circuit.events, year]
+  )
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--rg-bg)', color: 'var(--rg-text)' }}>
@@ -136,18 +127,33 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
           })}
         </div>
 
-        {/* Event history */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          {eventsByYear.map(({ year, events }) => (
-            <div key={year}>
-              <h2 style={{ fontSize: 18, fontWeight: 700, color: 'var(--rg-text)', margin: '0 0 12px' }}>{year}</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                {events.map(event => (
-                  <EventRow key={event.eventId} event={event} spoilerFree={spoilerFree} />
-                ))}
-              </div>
-            </div>
+        {/* Year selector */}
+        <div style={{ display: 'flex', gap: 6, marginBottom: 20 }}>
+          {years.map(y => (
+            <button
+              key={y}
+              onClick={() => setYear(y)}
+              style={{
+                padding: '6px 16px', borderRadius: 8, fontSize: 14, fontWeight: 600,
+                border: '1px solid var(--rg-border)',
+                background: year === y ? 'var(--rg-link)' : 'transparent',
+                color: year === y ? '#fff' : 'var(--rg-text2)',
+                cursor: 'pointer', transition: 'all 0.15s',
+              }}
+            >
+              {y}
+            </button>
           ))}
+        </div>
+
+        {/* Events for selected year */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+          {filteredEvents.map(event => (
+            <EventRow key={event.eventId} event={event} spoilerFree={spoilerFree} />
+          ))}
+          {filteredEvents.length === 0 && (
+            <p style={{ color: 'var(--rg-text3)', textAlign: 'center', padding: '16px 0' }}>No events at this circuit in {year}.</p>
+          )}
         </div>
       </div>
 

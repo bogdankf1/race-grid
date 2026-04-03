@@ -137,6 +137,20 @@ const TEAMS: Record<string, Team> = {
   'aj-foyt': { id: 'aj-foyt', name: 'A.J. Foyt Enterprises', country: 'US' },
   'juncos-hollinger': { id: 'juncos-hollinger', name: 'Juncos Hollinger Racing', country: 'US' },
   'm-sport-ford': { id: 'm-sport-ford', name: 'M-Sport Ford WRT', country: 'GB' },
+  // DTM 2025 additions
+  'abt-sportsline': { id: 'abt-sportsline', name: 'Abt Sportsline', country: 'DE' },
+  'paul-motorsport': { id: 'paul-motorsport', name: 'Paul Motorsport', country: 'DE' },
+  'manthey-junior': { id: 'manthey-junior', name: 'Manthey Junior', country: 'DE' },
+  // Super Formula 2025 additions
+  'inging': { id: 'inging', name: 'Inging Motorsport', country: 'JP' },
+  'rookie-racing': { id: 'rookie-racing', name: 'Rookie Racing', country: 'JP' },
+  'kcmg': { id: 'kcmg', name: 'KCMG', country: 'HK' },
+  // Supercars additions
+  'brad-jones-racing': { id: 'brad-jones-racing', name: 'Brad Jones Racing', country: 'AU' },
+  'blanchard-racing': { id: 'blanchard-racing', name: 'Blanchard Racing Team', country: 'AU' },
+  'team-18': { id: 'team-18', name: 'Team 18', country: 'AU' },
+  'walkinshaw-twg': { id: 'walkinshaw-twg', name: 'Walkinshaw TWG Racing', country: 'AU' },
+  'penrite-racing': { id: 'penrite-racing', name: 'Penrite Racing', country: 'AU' },
 }
 
 export function getTeam(id: string): Team | null {

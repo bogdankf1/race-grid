@@ -106,7 +106,7 @@ export function StandingsPageClient() {
               type="text"
               value={query}
               onChange={e => setQuery(e.target.value)}
-              placeholder={t('search.placeholder', locale)}
+              placeholder={t('search.standings', locale)}
               style={{
                 flex: 1, background: 'transparent', border: 'none', outline: 'none',
                 color: 'var(--rg-text)', fontSize: 13, minWidth: 0,

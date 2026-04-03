@@ -109,7 +109,7 @@ export function CircuitsPageClient() {
               type="text"
               value={query}
               onChange={e => setQuery(e.target.value)}
-              placeholder={t('search.placeholder', locale)}
+              placeholder={t('search.circuits', locale)}
               style={{
                 flex: 1,
                 background: 'transparent',
