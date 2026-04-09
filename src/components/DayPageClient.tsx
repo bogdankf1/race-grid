@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { format, parse, addDays, subDays } from 'date-fns'
 import { ChevronLeft, ChevronRight, Share2, Check } from 'lucide-react'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getSeriesForYear } from '@/data/series-registry'
@@ -98,6 +99,11 @@ export function DayPageClient({ date }: DayPageClientProps) {
       />
 
       <div className="rg-day-wrap">
+        <Breadcrumbs items={[
+          { label: 'Calendar', href: `/?month=${format(parsed, 'yyyy-MM')}` },
+          { label: formatDateShort(parsed, locale) },
+        ]} />
+
         <div
           style={{
             display: 'flex',

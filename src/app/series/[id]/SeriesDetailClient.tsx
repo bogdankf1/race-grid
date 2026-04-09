@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { Trophy, MapPin, Search, Calendar, Users, Flag } from 'lucide-react'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
@@ -120,6 +121,11 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
       />
 
       <div className="rg-calendar-wrap">
+        <Breadcrumbs items={[
+          { label: t('nav.series', locale), href: '/series' },
+          { label: meta.name },
+        ]} />
+
         {/* Series header */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 8 }}>
           <div style={{ width: 72, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>

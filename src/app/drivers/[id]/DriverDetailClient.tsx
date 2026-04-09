@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { Trophy } from 'lucide-react'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
@@ -71,6 +72,11 @@ export function DriverDetailClient({ driverId }: { driverId: string }) {
       <Header {...headerProps} />
 
       <div className="rg-calendar-wrap">
+        <Breadcrumbs items={[
+          { label: 'Series', href: '/series' },
+          { label: driver.name },
+        ]} />
+
         {/* Driver header */}
         <div style={{ marginBottom: 24 }}>
           <h1 className="font-display" style={{ fontSize: 32, letterSpacing: 1, color: 'var(--rg-text)', margin: '0 0 6px' }}>

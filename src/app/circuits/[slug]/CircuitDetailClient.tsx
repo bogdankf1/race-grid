@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { MapPin, Gauge, RotateCcw, Trophy } from 'lucide-react'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
@@ -73,6 +74,11 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
       />
 
       <div className="rg-calendar-wrap">
+        <Breadcrumbs items={[
+          { label: 'Circuits', href: '/circuits' },
+          { label: circuit.name },
+        ]} />
+
         {/* Circuit header */}
         <div style={{ marginBottom: 24 }}>
           <h1 className="font-display" style={{ fontSize: 32, letterSpacing: 1, color: 'var(--rg-text)', margin: '0 0 8px' }}>
