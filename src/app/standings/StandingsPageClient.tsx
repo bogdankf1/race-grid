@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
-import { Search, Trophy, Users } from 'lucide-react'
+import { Search, Trophy, Users, ChevronDown } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
@@ -115,32 +115,38 @@ export function StandingsPageClient() {
           </div>
         </div>
 
-        {/* Series selector chips */}
-        <div style={{ display: 'flex', gap: 6, marginBottom: 16, flexWrap: 'wrap' }}>
-          {availableSeries.map(({ id }) => {
-            const meta = SERIES_META.find(m => m.id === id)
-            if (!meta) return null
-            const active = seriesId === id
-            return (
-              <button
-                key={id}
-                onClick={() => setSeriesId(id)}
-                style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  padding: '5px 12px', borderRadius: 8, fontSize: 12, fontWeight: 700, letterSpacing: 0.5,
-                  border: active ? 'none' : `1.5px solid ${meta.color}`,
-                  backgroundColor: active ? meta.color : 'transparent',
-                  color: active ? meta.textColor : meta.color,
-                  cursor: 'pointer', transition: 'all 0.15s', lineHeight: 1,
-                }}
-              >
-                {meta.shortName}
-              </button>
-            )
-          })}
-          {availableSeries.length === 0 && (
-            <p style={{ color: 'var(--rg-text3)', fontSize: 13 }}>No standings data available yet.</p>
-          )}
+        {/* Series selector dropdown */}
+        <div style={{ position: 'relative', marginBottom: 16, maxWidth: 480 }}>
+          <select
+            value={seriesId}
+            onChange={e => setSeriesId(e.target.value)}
+            style={{
+              width: '100%',
+              height: 'var(--rg-control-h)',
+              padding: '0 36px 0 14px',
+              borderRadius: 10,
+              border: '1px solid var(--rg-border)',
+              background: 'var(--rg-btn-bg)',
+              color: 'var(--rg-text)',
+              fontSize: 14,
+              fontWeight: 500,
+              cursor: 'pointer',
+              appearance: 'none',
+              outline: 'none',
+            }}
+          >
+            {availableSeries.map(({ id }) => {
+              const meta = SERIES_META.find(m => m.id === id)
+              if (!meta) return null
+              return (
+                <option key={id} value={id}>{meta.name}</option>
+              )
+            })}
+          </select>
+          <ChevronDown style={{
+            position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)',
+            width: 16, height: 16, color: 'var(--rg-text3)', pointerEvents: 'none',
+          }} />
         </div>
 
         {/* Year selector */}
@@ -166,6 +172,18 @@ export function StandingsPageClient() {
 
         {standings ? (
           <>
+            {/* Class label for multi-class series */}
+            {standings.className && (
+              <div style={{ marginBottom: 12 }}>
+                <span style={{
+                  fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase',
+                  color: 'var(--rg-text3)',
+                }}>
+                  {standings.className}
+                </span>
+              </div>
+            )}
+
             {/* Tabs: Drivers / Constructors — hide tab bar if no constructors */}
             {standings.constructors.length > 0 ? (
               <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content' }}>
@@ -235,7 +253,7 @@ export function StandingsPageClient() {
   )
 }
 
-function DriverRow({ entry, seriesColor }: { entry: DriverStandingEntry; seriesColor?: string }) {
+function DriverRow({ entry }: { entry: DriverStandingEntry; seriesColor?: string }) {
   const driver = getDriver(entry.driverId)
   const team = getTeam(entry.teamId)
   const posColor = POSITION_STYLE[entry.position]
@@ -268,7 +286,7 @@ function DriverRow({ entry, seriesColor }: { entry: DriverStandingEntry; seriesC
 
       {/* Wins */}
       {entry.wins > 0 && (
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 12, color: seriesColor ?? 'var(--rg-link)', fontWeight: 600, flexShrink: 0 }}>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 12, color: 'var(--rg-success)', fontWeight: 600, flexShrink: 0 }}>
           <Trophy style={{ width: 11, height: 11 }} /> {entry.wins}
         </span>
       )}
@@ -281,7 +299,7 @@ function DriverRow({ entry, seriesColor }: { entry: DriverStandingEntry; seriesC
   )
 }
 
-function ConstructorRow({ entry, seriesColor }: { entry: TeamStandingEntry; seriesColor?: string }) {
+function ConstructorRow({ entry }: { entry: TeamStandingEntry; seriesColor?: string }) {
   const team = getTeam(entry.teamId)
   const posColor = POSITION_STYLE[entry.position]
 
@@ -307,7 +325,7 @@ function ConstructorRow({ entry, seriesColor }: { entry: TeamStandingEntry; seri
 
       {/* Wins */}
       {entry.wins > 0 && (
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 12, color: seriesColor ?? 'var(--rg-link)', fontWeight: 600, flexShrink: 0 }}>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 12, color: 'var(--rg-success)', fontWeight: 600, flexShrink: 0 }}>
           <Trophy style={{ width: 11, height: 11 }} /> {entry.wins}
         </span>
       )}

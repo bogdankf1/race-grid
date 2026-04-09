@@ -3,6 +3,7 @@ import type { SeasonStandings } from './types'
 // IGTC 2025 final standings — verified from intercontinentalgtchallenge.com, press.bmwgroup.com
 // Champion: Kelvin van der Linde (BMW / Team WRT)
 export const igtcStandings2025: SeasonStandings = {
+  className: 'Overall',
   drivers: [
     { position: 1, driverId: 'k-van-der-linde', teamId: 'team-wrt', points: 109, wins: 4 },
     { position: 2, driverId: 'marciello', teamId: 'team-wrt', points: 80, wins: 2 },

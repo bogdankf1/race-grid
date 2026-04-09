@@ -2,6 +2,7 @@ import type { SeasonStandings } from './types'
 
 // IMSA WeatherTech GTP 2026 standings — verified from autohebdof1.com (after Round 2 Sebring)
 export const imsaStandings2026: SeasonStandings = {
+  className: 'GTP',
   drivers: [
     { position: 1, driverId: 'nasr', teamId: 'porsche-penske', points: 755, wins: 2 },
     { position: 1, driverId: 'andlauer', teamId: 'porsche-penske', points: 755, wins: 2 },

@@ -3,6 +3,7 @@ import type { SeasonStandings } from './types'
 // IMSA WeatherTech GTP 2025 final standings — verified from autohebdof1.com, indymotorspeedway.com, imsa.com
 // Points are cumulative IMSA-style (not F1-style)
 export const imsaStandings2025: SeasonStandings = {
+  className: 'GTP',
   drivers: [
     { position: 1, driverId: 'jaminet', teamId: 'porsche-penske', points: 2907, wins: 3 },
     { position: 1, driverId: 'campbell', teamId: 'porsche-penske', points: 2907, wins: 3 },

@@ -16,4 +16,6 @@ export interface TeamStandingEntry {
 export interface SeasonStandings {
   drivers: DriverStandingEntry[]
   constructors: TeamStandingEntry[]
+  /** Class name displayed for multi-class series (e.g., "Hypercar", "GTP", "GT500") */
+  className?: string
 }

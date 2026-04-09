@@ -3,6 +3,7 @@ import type { SeasonStandings } from './types'
 // GTWC Europe 2025 overall standings — verified from gt-world-challenge-europe.com, press.bmwgroup.com
 // Champions: K. van der Linde & Weerts (Team WRT BMW)
 export const gtwcStandings2025: SeasonStandings = {
+  className: 'Overall (Pro)',
   drivers: [
     { position: 1, driverId: 'k-van-der-linde', teamId: 'team-wrt', points: 134, wins: 3 },
     { position: 2, driverId: 'engstler', teamId: 'grasser-racing', points: 115, wins: 4 },

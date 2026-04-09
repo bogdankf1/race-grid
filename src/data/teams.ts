@@ -151,6 +151,16 @@ const TEAMS: Record<string, Team> = {
   'team-18': { id: 'team-18', name: 'Team 18', country: 'AU' },
   'walkinshaw-twg': { id: 'walkinshaw-twg', name: 'Walkinshaw TWG Racing', country: 'AU' },
   'penrite-racing': { id: 'penrite-racing', name: 'Penrite Racing', country: 'AU' },
+  // WEC/IMSA/WRC standings additions
+  'bmw': { id: 'bmw', name: 'BMW M Team WRT', country: 'BE' },
+  'bmw-wrt': { id: 'bmw-wrt', name: 'BMW M Team WRT', country: 'BE' },
+  'jdc-miller': { id: 'jdc-miller', name: 'JDC-Miller MotorSports', country: 'US' },
+  'lamborghini': { id: 'lamborghini', name: 'Iron Lynx Lamborghini', country: 'IT' },
+  'skoda': { id: 'skoda', name: 'Škoda Motorsport', country: 'CZ' },
+  'citroen': { id: 'citroen', name: 'Citroën Racing', country: 'FR' },
+  'lancia': { id: 'lancia', name: 'Lancia Corse HF', country: 'IT' },
+  'toyota-wrt-2': { id: 'toyota-wrt-2', name: 'Toyota Gazoo Racing WRT 2', country: 'FI' },
+  'tgr-au-toms': { id: 'tgr-au-toms', name: 'TGR Team au TOM\'S', country: 'JP' },
 }
 
 export function getTeam(id: string): Team | null {

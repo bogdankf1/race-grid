@@ -50,17 +50,17 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
   const [query, setQuery] = useState('')
   const [tab, setTab] = useState<'calendar' | 'circuits' | 'drivers' | 'teams'>('calendar')
 
+  const standingsData = useMemo(() => getStandings(seriesId, year), [seriesId, year])
   const entries = useMemo(() => {
     // Prefer standings data (has full grid) over entries (only podium finishers)
-    const standings = getStandings(seriesId, year)
-    if (standings && standings.drivers.length > 0) {
+    if (standingsData && standingsData.drivers.length > 0) {
       const seen = new Set<string>()
-      return standings.drivers
+      return standingsData.drivers
         .filter(d => { if (seen.has(d.driverId)) return false; seen.add(d.driverId); return true })
         .map(d => ({ driverId: d.driverId, teamId: d.teamId, carNumber: undefined as number | undefined }))
     }
     return getEntries(seriesId, year)
-  }, [seriesId, year])
+  }, [standingsData, seriesId, year])
 
   // Unique teams for this series+year
   const teams = useMemo(() => {
@@ -268,6 +268,13 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
         {/* Drivers tab */}
         {tab === 'drivers' && entries.length > 0 && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {standingsData?.className && (
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--rg-text3)' }}>
+                  {standingsData.className}
+                </span>
+              </div>
+            )}
             {entries.map(entry => {
               const driver = getDriver(entry.driverId)
               const team = getTeam(entry.teamId)

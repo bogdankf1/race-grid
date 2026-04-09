@@ -183,7 +183,7 @@ export function TeamDetailClient({ teamId }: { teamId: string }) {
                 }}
               >
                 <Trophy style={{ width: 13, height: 13 }} />
-                Results
+                Podiums
                 <span style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({allResults.length})</span>
               </button>
             )}

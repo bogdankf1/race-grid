@@ -4,6 +4,7 @@ import type { SeasonStandings } from './types'
 // Champions: Sho Tsuboi / Kenta Yamashita (TGR Team au TOM'S)
 // Note: GT500 has driver pairs per car; standings list individual drivers
 export const supergtStandings2025: SeasonStandings = {
+  className: 'GT500',
   drivers: [
     { position: 1, driverId: 'tsuboi', teamId: 'tgr-au-toms', points: 80.5, wins: 3 },
     { position: 2, driverId: 'yamashita', teamId: 'tgr-au-toms', points: 80.5, wins: 3 },

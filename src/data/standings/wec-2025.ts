@@ -3,6 +3,7 @@ import type { SeasonStandings } from './types'
 // WEC 2025 final Hypercar standings — verified from autohebdof1.com, fiawec.com
 // Drivers entry uses first driver of crew as driverId; full crew in results data
 export const wecStandings2025: SeasonStandings = {
+  className: 'Hypercar',
   drivers: [
     { position: 1, driverId: 'pier-guidi', teamId: 'ferrari-af-corse', points: 133, wins: 3 },
     { position: 2, driverId: 'kubica', teamId: 'ferrari-af-corse', points: 117, wins: 1 },
