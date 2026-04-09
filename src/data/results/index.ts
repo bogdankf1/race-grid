@@ -23,6 +23,12 @@ import { nlsResults2026 } from './nls-2026'
 import { imsaResults2026 } from './imsa-2026'
 import { igtcResults2026 } from './igtc-2026'
 import { supercarsResults2026 } from './supercars-2026'
+import { dtmResults2026 } from './dtm-2026'
+import { elmsResults2026 } from './elms-2026'
+import { gtwcResults2026 } from './gtwc-2026'
+import { superformulaResults2026 } from './superformula-2026'
+import { supergtResults2026 } from './supergt-2026'
+import { wecResults2026 } from './wec-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
   ...f1Results2025,
@@ -47,6 +53,12 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...imsaResults2026,
   ...igtcResults2026,
   ...supercarsResults2026,
+  ...dtmResults2026,
+  ...elmsResults2026,
+  ...gtwcResults2026,
+  ...superformulaResults2026,
+  ...supergtResults2026,
+  ...wecResults2026,
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {

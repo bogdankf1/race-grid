@@ -106,6 +106,9 @@ const translations: Record<Locale, Record<string, string>> = {
     'nav.series': 'Series',
     'nav.circuits': 'Circuits',
     'nav.standings': 'Standings',
+    'day.nextUp': 'Next up',
+    'error.notFound': 'Not found',
+    'error.noData': 'No data available',
   },
   uk: {
     'app.title': 'RACE GRID',
@@ -212,6 +215,9 @@ const translations: Record<Locale, Record<string, string>> = {
     'nav.series': 'Серії',
     'nav.circuits': 'Траси',
     'nav.standings': 'Таблиця',
+    'day.nextUp': 'Далі',
+    'error.notFound': 'Не знайдено',
+    'error.noData': 'Дані відсутні',
   },
 }
 

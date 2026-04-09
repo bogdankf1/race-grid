@@ -13,6 +13,7 @@ interface DayCellProps {
   isHighlighted?: boolean
   seriesInfos: DaySeriesInfo[]
   moreLabel?: string
+  nextUpLabel?: string
 }
 
 function cleanEventName(name: string): string {
@@ -22,7 +23,7 @@ function cleanEventName(name: string): string {
     .replace(/^NLS\s*\d+\s*[—–-]\s*/i, '')
 }
 
-export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, isHighlighted, seriesInfos, moreLabel = 'more' }: DayCellProps) {
+export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, isHighlighted, seriesInfos, moreLabel = 'more', nextUpLabel = 'Next up' }: DayCellProps) {
   const isPast = !isToday && date < new Date().toISOString().slice(0, 10)
   const [expanded, setExpanded] = useState(false)
   const MAX_CHIPS = 3
@@ -84,7 +85,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
                 letterSpacing: 1,
               }}
             >
-              NEXT UP
+              {nextUpLabel.toUpperCase()}
             </span>
             <span
               className="rg-next-up-dot"
