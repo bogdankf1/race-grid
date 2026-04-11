@@ -31,8 +31,8 @@ export const nls2026: RaceEvent[] = [
     name: 'ADAC 24h Qualifier — Race 1',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-18T07:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Qualifying Race 1', startUtc: '2026-04-18T11:00:00Z', durationMinutes: 240 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-18T06:30:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4h Qualifying Race 1', startUtc: '2026-04-18T15:30:00Z', durationMinutes: 240 },
     ],
   },
   {
@@ -41,7 +41,7 @@ export const nls2026: RaceEvent[] = [
     name: 'ADAC 24h Qualifier — Race 2',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-19T07:30:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-19T06:15:00Z', durationMinutes: 90 },
       { type: 'endurance', label: '4h Qualifying Race 2', startUtc: '2026-04-19T11:00:00Z', durationMinutes: 240 },
     ],
   },
@@ -51,8 +51,8 @@ export const nls2026: RaceEvent[] = [
     name: 'NLS 6 — 1. ADAC Eifel Trophy',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-20T07:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Race', startUtc: '2026-06-20T11:00:00Z', durationMinutes: 240 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-20T06:30:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4h Race', startUtc: '2026-06-20T10:00:00Z', durationMinutes: 240 },
     ],
   },
   {
@@ -61,7 +61,7 @@ export const nls2026: RaceEvent[] = [
     name: 'NLS 7 — KW 6h ADAC Ruhr-Pokal-Rennen',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-01T07:30:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-01T06:30:00Z', durationMinutes: 90 },
       { type: 'endurance', label: '6h Race', startUtc: '2026-08-01T10:00:00Z', durationMinutes: 360 },
     ],
   },
@@ -71,8 +71,8 @@ export const nls2026: RaceEvent[] = [
     name: 'NLS 8 — 65. ADAC Reinoldus-Langstreckenrennen',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T07:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Race', startUtc: '2026-09-12T11:00:00Z', durationMinutes: 240 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T06:30:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4h Race', startUtc: '2026-09-12T10:00:00Z', durationMinutes: 240 },
     ],
   },
   {
@@ -81,8 +81,8 @@ export const nls2026: RaceEvent[] = [
     name: 'NLS 9 — 58. ADAC Barbarossapreis',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-13T07:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Race', startUtc: '2026-09-13T11:00:00Z', durationMinutes: 240 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-13T06:30:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4h Race', startUtc: '2026-09-13T10:00:00Z', durationMinutes: 240 },
     ],
   },
   {
@@ -91,8 +91,8 @@ export const nls2026: RaceEvent[] = [
     name: 'NLS 10 — 2. NLS Sportwarte-Trophy',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-10T07:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Race', startUtc: '2026-10-10T11:00:00Z', durationMinutes: 240 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-10T06:30:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4h Race', startUtc: '2026-10-10T10:00:00Z', durationMinutes: 240 },
     ],
   },
 ]

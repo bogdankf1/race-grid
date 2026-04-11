@@ -49,7 +49,7 @@ export const wrc2026: RaceEvent[] = [
     circuitId: 'rijeka',
     sessions: [
       { type: 'shakedown', label: 'Shakedown', startUtc: '2026-04-09T08:01:00Z', durationMinutes: 180 },
-      { type: 'stage', label: 'SS1–SS8', startUtc: '2026-04-10T07:13:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS1–SS8', startUtc: '2026-04-10T07:03:00Z', durationMinutes: 540 },
       { type: 'stage', label: 'SS9–SS16', startUtc: '2026-04-11T06:43:00Z', durationMinutes: 540 },
       { type: 'stage', label: 'SS17–SS20 (Power Stage)', startUtc: '2026-04-12T06:05:00Z', durationMinutes: 320 },
     ],

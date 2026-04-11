@@ -9,10 +9,14 @@ export const dtm2026: RaceEvent[] = [
     name: 'Red Bull Ring',
     circuitId: 'red-bull-ring',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-24T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-04-25T08:30:00Z', durationMinutes: 20 },
+      // Source: redbullring.com official DTM 2026 programme. Local CEST (UTC+2).
+      // FP1 11:30 → 09:30Z, FP2 16:00 → 14:00Z, Q1 Sat 09:40 → 07:40Z,
+      // Race 1 13:30 → 11:30Z, Q2 Sun 09:50 → 07:50Z, Race 2 13:30 → 11:30Z.
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-24T09:30:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-04-24T14:00:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-04-25T07:40:00Z', durationMinutes: 20 },
       { type: 'race', label: 'Race 1', startUtc: '2026-04-25T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-04-26T08:30:00Z', durationMinutes: 20 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-04-26T07:50:00Z', durationMinutes: 20 },
       { type: 'race', label: 'Race 2', startUtc: '2026-04-26T11:30:00Z', durationMinutes: 60 },
     ],
   },

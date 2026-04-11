@@ -12,7 +12,7 @@ export const nascar2026: RaceEvent[] = [
     circuitId: 'daytona-international-speedway',
     sessions: [
       { type: 'qualifying', label: 'Duels', startUtc: '2026-02-13T00:00:00Z', durationMinutes: 120 },
-      { type: 'race', label: 'Daytona 500', startUtc: '2026-02-15T19:30:00Z', durationMinutes: 210 },
+      { type: 'race', label: 'Daytona 500', startUtc: '2026-02-15T18:30:00Z', durationMinutes: 210 },
     ],
   },
   {
@@ -327,13 +327,13 @@ export const nascar2026: RaceEvent[] = [
     ],
   },
   {
-    id: 'nascar-2026-phoenix',
+    id: 'nascar-2026-phoenix-2',
     round: 33,
-    name: 'Phoenix Raceway',
+    name: 'Phoenix Playoff Race',
     circuitId: 'phoenix-raceway',
     sessions: [
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-17T20:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-10-18T20:00:00Z', durationMinutes: 180 },
+      { type: 'race', label: 'Race', startUtc: '2026-10-18T19:00:00Z', durationMinutes: 180 },
     ],
   },
   {

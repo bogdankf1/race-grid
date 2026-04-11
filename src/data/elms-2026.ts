@@ -1,7 +1,8 @@
 import { RaceEvent } from '@/lib/types'
 
 // European Le Mans Series 2026 season calendar — 6 rounds
-// Source: europeanlemansseries.com — verified March 2026
+// Source: europeanlemansseries.com — verified April 2026
+// Note: ELMS official site displays all session times in CEST (UTC+2) regardless of venue.
 export const elms2026: RaceEvent[] = [
   {
     id: 'elms-2026-barcelona',
@@ -21,9 +22,9 @@ export const elms2026: RaceEvent[] = [
     name: '4 Hours of Le Castellet',
     circuitId: 'circuit-paul-ricard',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-01T08:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-01T13:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-02T09:30:00Z', durationMinutes: 20 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-01T09:50:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-02T08:10:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-02T13:10:00Z', durationMinutes: 90 },
       { type: 'endurance', label: '4 Hours of Le Castellet', startUtc: '2026-05-03T10:00:00Z', durationMinutes: 240 },
     ],
   },
@@ -33,9 +34,9 @@ export const elms2026: RaceEvent[] = [
     name: '4 Hours of Imola',
     circuitId: 'autodromo-enzo-e-dino-ferrari',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-03T08:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-07-03T13:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-04T09:00:00Z', durationMinutes: 20 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-03T08:40:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-07-04T08:40:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-04T12:55:00Z', durationMinutes: 90 },
       { type: 'endurance', label: '4 Hours of Imola', startUtc: '2026-07-05T10:00:00Z', durationMinutes: 240 },
     ],
   },
@@ -45,10 +46,10 @@ export const elms2026: RaceEvent[] = [
     name: '4 Hours of Spa',
     circuitId: 'circuit-de-spa-francorchamps',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-21T08:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-21T13:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T09:30:00Z', durationMinutes: 20 },
-      { type: 'endurance', label: '4 Hours of Spa', startUtc: '2026-08-23T10:00:00Z', durationMinutes: 240 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-21T09:00:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-22T07:00:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T10:30:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4 Hours of Spa', startUtc: '2026-08-23T11:00:00Z', durationMinutes: 240 },
     ],
   },
   {
@@ -57,9 +58,9 @@ export const elms2026: RaceEvent[] = [
     name: 'Goodyear 4 Hours of Silverstone',
     circuitId: 'silverstone-circuit',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-11T08:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-09-11T13:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T09:30:00Z', durationMinutes: 20 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-11T10:10:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-09-12T08:10:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T13:25:00Z', durationMinutes: 90 },
       { type: 'endurance', label: '4 Hours of Silverstone', startUtc: '2026-09-13T10:00:00Z', durationMinutes: 240 },
     ],
   },
@@ -69,10 +70,10 @@ export const elms2026: RaceEvent[] = [
     name: '4 Hours of Portimão',
     circuitId: 'algarve-international-circuit',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-08T08:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-10-08T13:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-09T09:30:00Z', durationMinutes: 20 },
-      { type: 'endurance', label: '4 Hours of Portimão', startUtc: '2026-10-10T10:00:00Z', durationMinutes: 240 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-08T09:00:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-10-09T08:10:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-09T13:15:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4 Hours of Portimão', startUtc: '2026-10-10T12:30:00Z', durationMinutes: 240 },
     ],
   },
 ]

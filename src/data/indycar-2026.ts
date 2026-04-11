@@ -76,9 +76,9 @@ export const indycar2026: RaceEvent[] = [
     name: '110th Indianapolis 500',
     circuitId: 'indianapolis-motor-speedway-oval',
     sessions: [
-      { type: 'practice', label: 'Practice - Opening Day', startUtc: '2026-05-18T15:00:00Z', durationMinutes: 360 },
-      { type: 'qualifying', label: 'Qualifying - Day 1', startUtc: '2026-05-23T15:00:00Z', durationMinutes: 360 },
-      { type: 'qualifying', label: 'Qualifying - Day 2', startUtc: '2026-05-24T15:00:00Z', durationMinutes: 300 },
+      { type: 'practice', label: 'Practice - Opening Day', startUtc: '2026-05-12T16:00:00Z', durationMinutes: 360 },
+      { type: 'qualifying', label: 'Qualifying - Day 1', startUtc: '2026-05-16T15:00:00Z', durationMinutes: 360 },
+      { type: 'qualifying', label: 'Qualifying - Day 2', startUtc: '2026-05-17T15:00:00Z', durationMinutes: 300 },
       { type: 'race', label: 'Indianapolis 500', startUtc: '2026-05-24T14:00:00Z', durationMinutes: 200 },
     ],
   },

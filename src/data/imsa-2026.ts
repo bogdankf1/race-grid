@@ -9,8 +9,8 @@ export const imsa2026: RaceEvent[] = [
     name: 'Rolex 24 At Daytona',
     circuitId: 'daytona-international-speedway',
     sessions: [
-      { type: 'practice', label: 'Roar Test', startUtc: '2026-01-15T14:00:00Z', durationMinutes: 480 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-01-22T21:15:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Roar Test', startUtc: '2026-01-16T16:00:00Z', durationMinutes: 480 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-01-22T19:10:00Z', durationMinutes: 75 },
       { type: 'endurance', label: 'Rolex 24 At Daytona', startUtc: '2026-01-24T18:40:00Z', durationMinutes: 1440 },
     ],
   },
@@ -20,9 +20,9 @@ export const imsa2026: RaceEvent[] = [
     name: '12 Hours of Sebring',
     circuitId: 'sebring-international-raceway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-03-19T15:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-20T16:00:00Z', durationMinutes: 60 },
-      { type: 'endurance', label: '12 Hours of Sebring', startUtc: '2026-03-21T14:40:00Z', durationMinutes: 720 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-03-19T14:05:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-20T15:25:00Z', durationMinutes: 75 },
+      { type: 'endurance', label: '12 Hours of Sebring', startUtc: '2026-03-21T14:10:00Z', durationMinutes: 720 },
     ],
   },
   {
@@ -31,9 +31,9 @@ export const imsa2026: RaceEvent[] = [
     name: 'Grand Prix of Long Beach',
     circuitId: 'streets-of-long-beach',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-04-17T19:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-18T17:30:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-04-18T22:10:00Z', durationMinutes: 100 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-04-17T20:10:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-18T00:25:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race', startUtc: '2026-04-18T20:00:00Z', durationMinutes: 100 },
     ],
   },
   {
@@ -42,9 +42,9 @@ export const imsa2026: RaceEvent[] = [
     name: 'WeatherTech Raceway Laguna Seca',
     circuitId: 'weathertech-raceway-laguna-seca',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-02T18:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-02T22:30:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-05-03T19:10:00Z', durationMinutes: 160 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-05-01T22:20:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-02T22:15:00Z', durationMinutes: 55 },
+      { type: 'race', label: 'Race', startUtc: '2026-05-03T20:10:00Z', durationMinutes: 160 },
     ],
   },
   {
@@ -55,7 +55,7 @@ export const imsa2026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-05-29T15:00:00Z', durationMinutes: 60 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-29T21:00:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-05-30T18:10:00Z', durationMinutes: 100 },
+      { type: 'race', label: 'Race', startUtc: '2026-05-30T20:10:00Z', durationMinutes: 100 },
     ],
   },
   {
@@ -66,7 +66,7 @@ export const imsa2026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-06-26T14:00:00Z', durationMinutes: 90 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-27T16:00:00Z', durationMinutes: 30 },
-      { type: 'endurance', label: '6 Hours at The Glen', startUtc: '2026-06-28T14:40:00Z', durationMinutes: 360 },
+      { type: 'endurance', label: '6 Hours at The Glen', startUtc: '2026-06-28T16:05:00Z', durationMinutes: 360 },
     ],
   },
   {
@@ -77,7 +77,7 @@ export const imsa2026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-07-11T14:00:00Z', durationMinutes: 60 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-11T20:00:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-07-12T16:10:00Z', durationMinutes: 160 },
+      { type: 'race', label: 'Race', startUtc: '2026-07-12T16:05:00Z', durationMinutes: 160 },
     ],
   },
   {
@@ -86,9 +86,9 @@ export const imsa2026: RaceEvent[] = [
     name: 'Motul SportsCar Grand Prix',
     circuitId: 'road-america',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-29T15:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-29T20:30:00Z', durationMinutes: 30 },
-      { type: 'endurance', label: '6 Hours of Road America', startUtc: '2026-07-30T15:40:00Z', durationMinutes: 360 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-31T15:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-31T20:30:00Z', durationMinutes: 30 },
+      { type: 'endurance', label: '6 Hours of Road America', startUtc: '2026-08-02T15:40:00Z', durationMinutes: 360 },
     ],
   },
   {
@@ -97,9 +97,9 @@ export const imsa2026: RaceEvent[] = [
     name: 'VIRginia International Raceway',
     circuitId: 'virginia-international-raceway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-19T14:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-19T19:30:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-08-20T15:10:00Z', durationMinutes: 160 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-08-22T14:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T19:30:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race', startUtc: '2026-08-23T15:10:00Z', durationMinutes: 160 },
     ],
   },
   {
@@ -108,9 +108,9 @@ export const imsa2026: RaceEvent[] = [
     name: 'Indianapolis Motor Speedway',
     circuitId: 'indianapolis-motor-speedway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-09-17T15:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-17T20:00:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race', startUtc: '2026-09-18T16:10:00Z', durationMinutes: 160 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-09-19T15:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-19T20:00:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race', startUtc: '2026-09-20T16:10:00Z', durationMinutes: 160 },
     ],
   },
   {
@@ -121,7 +121,7 @@ export const imsa2026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-10-01T14:00:00Z', durationMinutes: 90 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-02T16:00:00Z', durationMinutes: 30 },
-      { type: 'endurance', label: 'Petit Le Mans 10h', startUtc: '2026-10-03T15:10:00Z', durationMinutes: 600 },
+      { type: 'endurance', label: 'Petit Le Mans 10h', startUtc: '2026-10-03T16:05:00Z', durationMinutes: 600 },
     ],
   },
 ]
