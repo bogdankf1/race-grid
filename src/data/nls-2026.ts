@@ -21,8 +21,8 @@ export const nls2026: RaceEvent[] = [
     name: 'NLS 3 — 57. Adenauer ADAC Rundstrecken-Trophy',
     circuitId: 'nurburgring-nordschleife',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T07:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Race', startUtc: '2026-04-11T11:00:00Z', durationMinutes: 240 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T06:30:00Z', durationMinutes: 90 },
+      { type: 'endurance', label: '4h Race', startUtc: '2026-04-11T10:00:00Z', durationMinutes: 240 },
     ],
   },
   {

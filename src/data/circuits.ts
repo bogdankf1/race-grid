@@ -114,7 +114,7 @@ const CIRCUITS: Record<string, Circuit> = {
   'monaco-french-alps': { id: 'monaco-french-alps', name: 'Monaco / French Alps', country: 'Monaco', countryCode: 'MC', length: '~300 km', turns: 20, type: 'mixed' },
   'umea': { id: 'umea', name: 'Umea', country: 'Sweden', countryCode: 'SE', length: '~280 km', turns: 18, type: 'mixed' },
   'naivasha': { id: 'naivasha', name: 'Naivasha', country: 'Kenya', countryCode: 'KE', length: '~320 km', turns: 18, type: 'mixed' },
-  'zagreb': { id: 'zagreb', name: 'Zagreb', country: 'Croatia', countryCode: 'HR', length: '~300 km', turns: 20, type: 'mixed' },
+  'rijeka': { id: 'rijeka', name: 'Rijeka', country: 'Croatia', countryCode: 'HR', length: '~300 km', turns: 20, type: 'mixed' },
   'las-palmas-de-gran-canaria': { id: 'las-palmas-de-gran-canaria', name: 'Las Palmas de Gran Canaria', country: 'Spain', countryCode: 'ES', length: '~280 km', turns: 20, type: 'mixed' },
   'matosinhos': { id: 'matosinhos', name: 'Matosinhos', country: 'Portugal', countryCode: 'PT', length: '~310 km', turns: 20, type: 'mixed' },
   'toyota-city': { id: 'toyota-city', name: 'Toyota City', country: 'Japan', countryCode: 'JP', length: '~290 km', turns: 21, type: 'mixed' },

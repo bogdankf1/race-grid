@@ -10,8 +10,8 @@ export const supergt2026: RaceEvent[] = [
     circuitId: 'okayama-international-circuit',
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-04-11T01:00:00Z', durationMinutes: 105 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T05:30:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-04-12T04:00:00Z', durationMinutes: 120 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T05:00:00Z', durationMinutes: 81 },
+      { type: 'race', label: 'Race', startUtc: '2026-04-12T04:20:00Z', durationMinutes: 120 },
     ],
   },
   {

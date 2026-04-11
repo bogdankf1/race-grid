@@ -81,7 +81,8 @@ export const nascar2026: RaceEvent[] = [
     name: 'Food City 500',
     circuitId: 'bristol-motor-speedway',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T17:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-04-11T20:30:00Z', durationMinutes: 50 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T21:40:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Food City 500', startUtc: '2026-04-12T19:00:00Z', durationMinutes: 180 },
     ],
   },

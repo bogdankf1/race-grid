@@ -9,9 +9,9 @@ export const elms2026: RaceEvent[] = [
     name: '4 Hours of Barcelona',
     circuitId: 'circuit-de-barcelona-catalunya',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-10T08:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-04-10T13:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T09:30:00Z', durationMinutes: 20 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-10T09:50:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-04-11T08:10:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T13:05:00Z', durationMinutes: 90 },
       { type: 'endurance', label: '4 Hours of Barcelona', startUtc: '2026-04-12T10:00:00Z', durationMinutes: 240 },
     ],
   },

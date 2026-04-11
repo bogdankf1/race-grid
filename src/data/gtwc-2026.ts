@@ -9,10 +9,11 @@ export const gtwc2026: RaceEvent[] = [
     name: '6 Hours of Paul Ricard',
     circuitId: 'circuit-paul-ricard',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-04-10T08:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Pre-Qualifying', startUtc: '2026-04-11T08:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T12:00:00Z', durationMinutes: 30 },
-      { type: 'endurance', label: '6 Hours of Paul Ricard', startUtc: '2026-04-12T09:00:00Z', durationMinutes: 360 },
+      { type: 'practice', label: 'Bronze Test', startUtc: '2026-04-10T07:00:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-04-10T12:25:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-04-10T17:25:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-11T10:05:00Z', durationMinutes: 60 },
+      { type: 'endurance', label: '6 Hours of Paul Ricard', startUtc: '2026-04-11T16:00:00Z', durationMinutes: 360 },
     ],
   },
   {
