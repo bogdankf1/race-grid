@@ -159,6 +159,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
+                gap: 3,
                 padding: '3px 8px',
                 borderRadius: 6,
                 fontSize: 11,
@@ -169,7 +170,7 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
                 border: 'none',
               }}
             >
-              +{overflow}<span className="rg-overflow-more"> {moreLabel}</span>
+              <span>+{overflow}</span><span className="rg-overflow-more">{moreLabel}</span>
             </button>
           )}
         </div>

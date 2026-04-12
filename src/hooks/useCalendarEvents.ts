@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
-import { SeriesConfig } from '@/lib/types'
+import { SeriesConfig, SessionType } from '@/lib/types'
 import { getLocalDate } from '@/lib/timezone'
 import { ALL_SERIES } from '@/data/series-registry'
 
@@ -14,7 +14,8 @@ export function buildEventMap(
   selectedSeriesIds: string[],
   timezone: string,
   dateFilter: (date: string) => boolean,
-  seriesList: SeriesConfig[] = ALL_SERIES
+  seriesList: SeriesConfig[] = ALL_SERIES,
+  visibleSessionTypes?: SessionType[]
 ): Map<string, DaySeriesInfo[]> {
   const map = new Map<string, DaySeriesInfo[]>()
   const selectedSeries = seriesList.filter(s => selectedSeriesIds.includes(s.id))
@@ -24,6 +25,7 @@ export function buildEventMap(
       const seriesDateEvents = new Map<string, string>()
 
       for (const session of event.sessions) {
+        if (visibleSessionTypes && !visibleSessionTypes.includes(session.type)) continue
         const localDate = getLocalDate(session.startUtc, timezone)
         if (dateFilter(localDate)) {
           if (!seriesDateEvents.has(localDate)) {
@@ -59,7 +61,8 @@ export function useViewEvents(
   viewMode: 'month' | 'week',
   month: string,
   weekStart: string,
-  seriesList: SeriesConfig[] = ALL_SERIES
+  seriesList: SeriesConfig[] = ALL_SERIES,
+  visibleSessionTypes?: SessionType[]
 ): Map<string, DaySeriesInfo[]> {
   return useMemo(() => {
     if (viewMode === 'week') {
@@ -68,9 +71,12 @@ export function useViewEvents(
       for (let i = 0; i < 7; i++) {
         const d = new Date(start)
         d.setDate(d.getDate() + i)
-        dates.add(d.toISOString().slice(0, 10))
+        const yyyy = d.getFullYear()
+        const mm = String(d.getMonth() + 1).padStart(2, '0')
+        const dd = String(d.getDate()).padStart(2, '0')
+        dates.add(`${yyyy}-${mm}-${dd}`)
       }
-      return buildEventMap(selectedSeriesIds, timezone, (date) => dates.has(date), seriesList)
+      return buildEventMap(selectedSeriesIds, timezone, (date) => dates.has(date), seriesList, visibleSessionTypes)
     }
 
     const [yearStr, monthStr] = month.split('-')
@@ -79,6 +85,6 @@ export function useViewEvents(
     return buildEventMap(selectedSeriesIds, timezone, (date) => {
       const [y, m] = date.split('-').map(Number)
       return y === year && m === monthNum
-    }, seriesList)
-  }, [selectedSeriesIds, timezone, viewMode, month, weekStart, seriesList])
+    }, seriesList, visibleSessionTypes)
+  }, [selectedSeriesIds, timezone, viewMode, month, weekStart, seriesList, visibleSessionTypes])
 }

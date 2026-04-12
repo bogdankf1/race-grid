@@ -11,9 +11,15 @@ import { AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
 import { getStandings, hasStandings } from '@/data/standings'
 import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
+import type { SessionType } from '@/lib/types'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import type { DriverStandingEntry, TeamStandingEntry } from '@/data/standings/types'
+
+const ALL_SESSION_TYPES: SessionType[] = [
+  'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+  'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+]
 
 function countryFlag(countryCode: string): string {
   if (!countryCode) return ''
@@ -27,6 +33,7 @@ export function StandingsPageClient() {
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
+  const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
   const [seriesId, setSeriesId] = useLocalStorage<string>('race-grid:standings-series', 'f1')
   const [year, setYear] = useLocalStorage<number>('race-grid:standings-year', 2025)
@@ -79,6 +86,13 @@ export function StandingsPageClient() {
     setSelectedSeries(updated)
   }
 
+  const toggleSessionType = (type: SessionType) => {
+    const updated = visibleSessionTypes.includes(type)
+      ? visibleSessionTypes.filter(t => t !== type)
+      : [...visibleSessionTypes, type]
+    if (updated.length > 0) setVisibleSessionTypes(updated)
+  }
+
   return (
     <div style={{ minHeight: '100vh', background: 'var(--rg-bg)', color: 'var(--rg-text)' }}>
       <Header
@@ -87,6 +101,8 @@ export function StandingsPageClient() {
         theme={theme} onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         locale={locale} onToggleLocale={() => setLocale(locale === 'en' ? 'uk' : 'en')}
         spoilerFree={spoilerFree} onToggleSpoilerFree={() => setSpoilerFree(!spoilerFree)}
+        visibleSessionTypes={visibleSessionTypes} onToggleSessionType={toggleSessionType}
+        onSetSessionTypes={setVisibleSessionTypes}
         showSeriesFilter={false}
       />
 

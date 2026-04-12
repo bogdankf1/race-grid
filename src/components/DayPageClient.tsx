@@ -10,6 +10,12 @@ import { getDefaultTimezone } from '@/lib/timezone'
 import { getSeriesForYear } from '@/data/series-registry'
 import { t, getDefaultLocale, formatDateLocale, formatDateShort, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
+import type { SessionType } from '@/lib/types'
+
+const ALL_SESSION_TYPES: SessionType[] = [
+  'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+  'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+]
 import { Header } from '@/components/Header'
 import { DayDetail } from '@/components/DayDetail'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
@@ -33,6 +39,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
+  const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
@@ -56,6 +63,12 @@ export function DayPageClient({ date }: DayPageClientProps) {
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   const toggleLocale = () => setLocale(locale === 'en' ? 'uk' : 'en')
   const toggleSpoilerFree = () => setSpoilerFree(!spoilerFree)
+  const toggleSessionType = (type: SessionType) => {
+    const updated = visibleSessionTypes.includes(type)
+      ? visibleSessionTypes.filter(t => t !== type)
+      : [...visibleSessionTypes, type]
+    if (updated.length > 0) setVisibleSessionTypes(updated)
+  }
 
   const shareDay = async () => {
     const url = `${window.location.origin}/day/${date}`
@@ -97,6 +110,9 @@ export function DayPageClient({ date }: DayPageClientProps) {
         onToggleLocale={toggleLocale}
         spoilerFree={spoilerFree}
         onToggleSpoilerFree={toggleSpoilerFree}
+        visibleSessionTypes={visibleSessionTypes}
+        onToggleSessionType={toggleSessionType}
+        onSetSessionTypes={setVisibleSessionTypes}
         showSeriesFilter={true}
       />
 
@@ -182,6 +198,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
             locale={locale}
             highlightEventId={highlightEventId}
             spoilerFree={spoilerFree}
+            visibleSessionTypes={visibleSessionTypes}
           />
           </ErrorBoundary>
         </SwipeContainer>

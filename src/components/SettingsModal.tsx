@@ -2,10 +2,16 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { X, Sun, Moon, Globe, Search } from 'lucide-react'
+import { X, Sun, Moon, Globe, Search, Check, ChevronDown } from 'lucide-react'
 import { TIMEZONE_GROUPS, getTimezoneLabel } from '@/lib/timezone'
 import { t, type Locale } from '@/lib/i18n'
 import type { Theme } from '@/lib/theme'
+import type { SessionType } from '@/lib/types'
+
+const ALL_SESSION_TYPES: SessionType[] = [
+  'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+  'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+]
 
 interface SettingsModalProps {
   open: boolean
@@ -18,6 +24,9 @@ interface SettingsModalProps {
   onToggleLocale: () => void
   spoilerFree: boolean
   onToggleSpoilerFree: () => void
+  visibleSessionTypes: SessionType[]
+  onToggleSessionType: (type: SessionType) => void
+  onSetSessionTypes: (types: SessionType[]) => void
 }
 
 function SettingRow({ label, children }: { label: string; children: React.ReactNode }) {
@@ -72,7 +81,11 @@ export function SettingsModal({
   onToggleLocale,
   spoilerFree,
   onToggleSpoilerFree,
+  visibleSessionTypes,
+  onToggleSessionType,
+  onSetSessionTypes,
 }: SettingsModalProps) {
+  const [sessionsOpen, setSessionsOpen] = useState(false)
   const [tzOpen, setTzOpen] = useState(false)
   const [tzSearch, setTzSearch] = useState('')
   const searchRef = useRef<HTMLInputElement>(null)
@@ -228,6 +241,97 @@ export function SettingsModal({
         <SettingRow label={t('spoiler.title', locale)}>
           <ToggleSwitch active={spoilerFree} onClick={onToggleSpoilerFree} />
         </SettingRow>
+
+        {/* Session types */}
+        <div style={{ paddingTop: 14, borderBottom: '1px solid var(--rg-border)', paddingBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: sessionsOpen ? 12 : 0 }}>
+            <span style={{ fontSize: 14, color: 'var(--rg-text)' }}>{t('settings.sessions', locale)}</span>
+            <button
+              onClick={() => setSessionsOpen(!sessionsOpen)}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 8,
+                padding: '6px 14px', borderRadius: 8,
+                background: 'var(--rg-elevated)', border: '1px solid var(--rg-border)',
+                color: 'var(--rg-text)', fontSize: 13, cursor: 'pointer',
+              }}
+            >
+              {visibleSessionTypes.length === ALL_SESSION_TYPES.length
+                ? (locale === 'uk' ? 'Усі' : 'All')
+                : `${visibleSessionTypes.length}/${ALL_SESSION_TYPES.length}`
+              }
+              <ChevronDown style={{ width: 13, height: 13, transition: 'transform 0.2s', transform: sessionsOpen ? 'rotate(180deg)' : 'none' }} />
+            </button>
+          </div>
+
+          {sessionsOpen && (
+            <div style={{
+              borderRadius: 12,
+              background: 'var(--rg-elevated)',
+              border: '1px solid var(--rg-border)',
+              padding: 6,
+            }}>
+              {/* Select / Deselect all */}
+              <button
+                onClick={() => {
+                  if (visibleSessionTypes.length === ALL_SESSION_TYPES.length) {
+                    onSetSessionTypes([ALL_SESSION_TYPES[0]])
+                  } else {
+                    onSetSessionTypes([...ALL_SESSION_TYPES])
+                  }
+                }}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 12,
+                  width: '100%', textAlign: 'left',
+                  padding: '10px 14px', borderRadius: 8,
+                  fontSize: 13, fontWeight: 600, color: 'var(--rg-text2)',
+                  background: 'transparent', border: 'none', cursor: 'pointer',
+                  borderBottom: '1px solid var(--rg-border)', marginBottom: 4,
+                }}
+              >
+                <span style={{
+                  width: 18, height: 18, borderRadius: 4,
+                  border: `2px solid ${visibleSessionTypes.length === ALL_SESSION_TYPES.length ? 'var(--rg-link)' : 'var(--rg-border)'}`,
+                  background: visibleSessionTypes.length === ALL_SESSION_TYPES.length ? 'var(--rg-link)' : 'transparent',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                }}>
+                  {visibleSessionTypes.length === ALL_SESSION_TYPES.length && <Check style={{ width: 12, height: 12, color: '#fff' }} />}
+                </span>
+                <span>{visibleSessionTypes.length === ALL_SESSION_TYPES.length
+                  ? (locale === 'uk' ? 'Зняти все' : 'Deselect all')
+                  : (locale === 'uk' ? 'Вибрати все' : 'Select all')
+                }</span>
+              </button>
+
+              {ALL_SESSION_TYPES.map(type => {
+                const active = visibleSessionTypes.includes(type)
+                return (
+                  <button
+                    key={type}
+                    onClick={() => onToggleSessionType(type)}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: 12,
+                      width: '100%', textAlign: 'left',
+                      padding: '9px 14px', borderRadius: 8,
+                      fontSize: 13, color: active ? 'var(--rg-text)' : 'var(--rg-text3)',
+                      background: active ? 'var(--rg-surface)' : 'transparent',
+                      border: 'none', cursor: 'pointer',
+                    }}
+                  >
+                    <span style={{
+                      width: 18, height: 18, borderRadius: 4,
+                      border: `2px solid ${active ? 'var(--rg-link)' : 'var(--rg-border)'}`,
+                      background: active ? 'var(--rg-link)' : 'transparent',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                    }}>
+                      {active && <Check style={{ width: 12, height: 12, color: '#fff' }} />}
+                    </span>
+                    <span>{t(`session.${type}`, locale)}</span>
+                  </button>
+                )
+              })}
+            </div>
+          )}
+        </div>
 
         {/* Timezone */}
         <div style={{ paddingTop: 14 }}>

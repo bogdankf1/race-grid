@@ -7,10 +7,16 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
+import type { SessionType } from '@/lib/types'
 import { getAllCircuitsWithEvents, type CircuitWithEvents } from '@/data/circuit-events'
 import { getCircuitTypeLabel } from '@/data/circuits'
 import { SERIES_META } from '@/data/series-registry'
 import { Header } from '@/components/Header'
+
+const ALL_SESSION_TYPES: SessionType[] = [
+  'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+  'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+]
 import { SeriesFilterDropdown } from '@/components/SeriesFilterDropdown'
 import { Footer } from '@/components/Footer'
 
@@ -28,6 +34,7 @@ export function CircuitsPageClient() {
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
+  const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
 
   useEffect(() => { applyTheme(theme) }, [theme])
@@ -69,6 +76,13 @@ export function CircuitsPageClient() {
     setSelectedSeries(updated)
   }
 
+  const toggleSessionType = (type: SessionType) => {
+    const updated = visibleSessionTypes.includes(type)
+      ? visibleSessionTypes.filter(t => t !== type)
+      : [...visibleSessionTypes, type]
+    if (updated.length > 0) setVisibleSessionTypes(updated)
+  }
+
   return (
     <div style={{ minHeight: '100vh', background: 'var(--rg-bg)', color: 'var(--rg-text)' }}>
       <Header
@@ -83,6 +97,9 @@ export function CircuitsPageClient() {
         onToggleLocale={toggleLocale}
         spoilerFree={spoilerFree}
         onToggleSpoilerFree={() => setSpoilerFree(!spoilerFree)}
+        visibleSessionTypes={visibleSessionTypes}
+        onToggleSessionType={toggleSessionType}
+        onSetSessionTypes={setVisibleSessionTypes}
         showSeriesFilter={false}
       />
 

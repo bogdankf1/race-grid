@@ -8,6 +8,12 @@ import { getDefaultTimezone } from '@/lib/timezone'
 import { getSeriesForYear } from '@/data/series-registry'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
+import type { SessionType } from '@/lib/types'
+
+const ALL_SESSION_TYPES: SessionType[] = [
+  'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+  'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+]
 import { Header } from '@/components/Header'
 import { CalendarGrid } from '@/components/CalendarGrid'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
@@ -27,6 +33,7 @@ export default function HomePage() {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [viewMode, setViewMode] = useLocalStorage<'month' | 'week'>('race-grid:view', 'month')
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
+  const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
   const [weekStart, setWeekStart] = useLocalStorage<string>(
     'race-grid:week',
     format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy-MM-dd')
@@ -48,7 +55,7 @@ export default function HomePage() {
     }
   }, [])
 
-  const events = useViewEvents(selectedSeries, timezone, viewMode, month, weekStart, allSeriesForYear)
+  const events = useViewEvents(selectedSeries, timezone, viewMode, month, weekStart, allSeriesForYear, visibleSessionTypes)
 
   const toggleSeries = (id: string) => {
     const updated = selectedSeries.includes(id)
@@ -60,6 +67,12 @@ export default function HomePage() {
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   const toggleLocale = () => setLocale(locale === 'en' ? 'uk' : 'en')
   const toggleSpoilerFree = () => setSpoilerFree(!spoilerFree)
+  const toggleSessionType = (type: SessionType) => {
+    const updated = visibleSessionTypes.includes(type)
+      ? visibleSessionTypes.filter(t => t !== type)
+      : [...visibleSessionTypes, type]
+    if (updated.length > 0) setVisibleSessionTypes(updated)
+  }
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--rg-bg)', color: 'var(--rg-text)' }}>
@@ -75,6 +88,9 @@ export default function HomePage() {
         onToggleLocale={toggleLocale}
         spoilerFree={spoilerFree}
         onToggleSpoilerFree={toggleSpoilerFree}
+        visibleSessionTypes={visibleSessionTypes}
+        onToggleSessionType={toggleSessionType}
+        onSetSessionTypes={setVisibleSessionTypes}
       />
       <div className="rg-calendar-wrap" style={{ paddingBottom: 0 }}>
         <UpcomingRaces

@@ -57,7 +57,7 @@ function countryFlag(countryCode: string): string {
 }
 
 interface DayEventInfo { series: SeriesConfig; event: RaceEvent; sessions: Session[] }
-interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string; locale: Locale; highlightEventId?: string; spoilerFree?: boolean }
+interface DayDetailProps { date: string; selectedSeriesIds: string[]; timezone: string; locale: Locale; highlightEventId?: string; spoilerFree?: boolean; visibleSessionTypes?: SessionType[] }
 
 interface EventCardProps {
   series: SeriesConfig; event: RaceEvent; sessions: Session[]
@@ -250,7 +250,7 @@ function EventCard({ series, event, sessions, now, timezone, locale, spoilerFree
   )
 }
 
-export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlightEventId, spoilerFree }: DayDetailProps) {
+export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlightEventId, spoilerFree, visibleSessionTypes }: DayDetailProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -293,7 +293,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
     for (const series of selectedSeries) {
       for (const event of series.events) {
         const daySessions = event.sessions
-          .filter(s => getLocalDate(s.startUtc, timezone) === date)
+          .filter(s => getLocalDate(s.startUtc, timezone) === date && (!visibleSessionTypes || visibleSessionTypes.includes(s.type)))
           .sort((a, b) => new Date(a.startUtc).getTime() - new Date(b.startUtc).getTime())
         if (daySessions.length === 0) continue
 
@@ -316,7 +316,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
       }
     }
     return results.sort((a, b) => new Date(a.sessions[0].startUtc).getTime() - new Date(b.sessions[0].startUtc).getTime())
-  }, [date, selectedSeriesIds, timezone])
+  }, [date, selectedSeriesIds, timezone, visibleSessionTypes])
 
   if (dayEvents.length === 0) {
     return (

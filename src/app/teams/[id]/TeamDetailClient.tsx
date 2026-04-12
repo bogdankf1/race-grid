@@ -11,9 +11,15 @@ import { getDefaultTimezone } from '@/lib/timezone'
 import { AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
 import { getTeam } from '@/data/teams'
 import { getDriver } from '@/data/drivers'
+import type { SessionType } from '@/lib/types'
 import { getTeamResults } from '@/data/driver-results'
 import { getStandings } from '@/data/standings'
 import { Header } from '@/components/Header'
+
+const ALL_SESSION_TYPES: SessionType[] = [
+  'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+  'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+]
 import { Footer } from '@/components/Footer'
 
 function countryFlag(countryCode: string): string {
@@ -31,6 +37,7 @@ export function TeamDetailClient({ teamId }: { teamId: string }) {
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
+  const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
   const [tab, setTab] = useState<'drivers' | 'results'>('drivers')
 
@@ -72,12 +79,21 @@ export function TeamDetailClient({ teamId }: { teamId: string }) {
     setSelectedSeries(updated)
   }
 
+  const toggleSessionType = (type: SessionType) => {
+    const updated = visibleSessionTypes.includes(type)
+      ? visibleSessionTypes.filter(t => t !== type)
+      : [...visibleSessionTypes, type]
+    if (updated.length > 0) setVisibleSessionTypes(updated)
+  }
+
   const headerProps = {
     selectedSeriesIds: selectedSeries, onToggleSeries: toggleSeries, onSetSeries: setSelectedSeries,
     timezone, onTimezoneChange: setTimezone,
     theme, onToggleTheme: () => setTheme(theme === 'dark' ? 'light' : 'dark'),
     locale, onToggleLocale: () => setLocale(locale === 'en' ? 'uk' : 'en'),
     spoilerFree, onToggleSpoilerFree: () => setSpoilerFree(!spoilerFree),
+    visibleSessionTypes, onToggleSessionType: toggleSessionType,
+    onSetSessionTypes: setVisibleSessionTypes,
     showSeriesFilter: false as const,
   }
 

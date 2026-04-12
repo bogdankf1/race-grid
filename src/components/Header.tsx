@@ -9,6 +9,7 @@ import { SettingsModal } from './SettingsModal'
 import { DesktopNav, BottomNav } from './Navigation'
 import { t, type Locale } from '@/lib/i18n'
 import type { Theme } from '@/lib/theme'
+import type { SessionType } from '@/lib/types'
 
 interface HeaderProps {
   selectedSeriesIds: string[]
@@ -22,6 +23,9 @@ interface HeaderProps {
   onToggleLocale: () => void
   spoilerFree: boolean
   onToggleSpoilerFree: () => void
+  visibleSessionTypes: SessionType[]
+  onToggleSessionType: (type: SessionType) => void
+  onSetSessionTypes: (types: SessionType[]) => void
   showSeriesFilter?: boolean
 }
 
@@ -37,6 +41,9 @@ export function Header({
   onToggleLocale,
   spoilerFree,
   onToggleSpoilerFree,
+  visibleSessionTypes,
+  onToggleSessionType,
+  onSetSessionTypes,
   showSeriesFilter = true,
 }: HeaderProps) {
   const [settingsOpen, setSettingsOpen] = useState(false)
@@ -108,6 +115,9 @@ export function Header({
         onToggleLocale={onToggleLocale}
         spoilerFree={spoilerFree}
         onToggleSpoilerFree={onToggleSpoilerFree}
+        visibleSessionTypes={visibleSessionTypes}
+        onToggleSessionType={onToggleSessionType}
+        onSetSessionTypes={onSetSessionTypes}
       />
     </>
   )
