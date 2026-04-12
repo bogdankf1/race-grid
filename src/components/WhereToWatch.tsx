@@ -8,19 +8,22 @@ import type { BroadcastInfo } from '@/data/broadcasts'
 interface WhereToWatchProps {
   broadcasts: BroadcastInfo[]
   locale: Locale
+  seriesName?: string
+  seriesColor?: string
 }
 
-export function WhereToWatch({ broadcasts, locale }: WhereToWatchProps) {
+export function WhereToWatch({ broadcasts, locale, seriesName, seriesColor }: WhereToWatchProps) {
   const [expanded, setExpanded] = useState(false)
 
   return (
     <div
       style={{
-        marginTop: 12,
+        marginTop: 4,
         padding: '14px 16px',
         borderRadius: 12,
         background: 'var(--rg-surface)',
         border: '1px solid var(--rg-card-border)',
+        borderLeft: seriesColor ? `3px solid ${seriesColor}` : undefined,
       }}
     >
       <button
@@ -39,7 +42,7 @@ export function WhereToWatch({ broadcasts, locale }: WhereToWatchProps) {
       >
         <Tv style={{ width: 14, height: 14, color: 'var(--rg-text3)', flexShrink: 0 }} />
         <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--rg-text3)', textTransform: 'uppercase', letterSpacing: 1, flex: 1, textAlign: 'left' }}>
-          {t('watch.title', locale)}
+          {t('watch.title', locale)}{seriesName && ` — ${seriesName}`}
         </span>
         <ChevronDown
           style={{

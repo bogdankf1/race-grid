@@ -6,15 +6,13 @@ import { SeriesConfig, RaceEvent, Session, SessionType } from '@/lib/types'
 import { getSeriesForYear } from '@/data/series-registry'
 import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
 import { SeriesChip } from './SeriesChip'
-import { SeriesLogo } from './SeriesLogo'
 import { getBroadcasts, detectCountry } from '@/data/broadcasts'
 import { getCircuit, getCircuitTypeLabel } from '@/data/circuits'
 import { CalendarExport } from './CalendarExport'
 import { Countdown } from './Countdown'
 import { RaceResult } from './RaceResult'
 import { getResult } from '@/data/results'
-import { WhereToWatch } from './WhereToWatch'
-import { MapPin, Ruler, CornerDownRight } from 'lucide-react'
+import { WhereToWatchPopover } from './WhereToWatchPopover'
 import { EyeOff } from 'lucide-react'
 import { t, type Locale } from '@/lib/i18n'
 
@@ -67,12 +65,10 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
   useEffect(() => {
     if (!highlightEventId || !containerRef.current) return
 
-    // Wait for render
     const timer = setTimeout(() => {
       const el = containerRef.current?.querySelector(`[data-event-id="${highlightEventId}"]`) as HTMLElement | null
       if (!el) return
 
-      // Dim all other cards, keep the target fully visible
       const allCards = containerRef.current?.children
       if (allCards) {
         for (const card of Array.from(allCards) as HTMLElement[]) {
@@ -91,7 +87,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
 
     return () => clearTimeout(timer)
   }, [highlightEventId])
-  // Tick every 30s for LIVE/Finished status
+
   const [now, setNow] = useState(Date.now())
   useEffect(() => {
     const id = setInterval(() => setNow(Date.now()), 30_000)
@@ -99,17 +95,32 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
   }, [])
 
   const dayEvents = useMemo(() => {
+    const GAP_MS = 2 * 60 * 60 * 1000 // 2 hours — sessions farther apart get split into separate cards
     const results: DayEventInfo[] = []
     const yearSeries = getSeriesForYear(parseInt(date.slice(0, 4)))
     const selectedSeries = yearSeries.filter(s => selectedSeriesIds.includes(s.id))
     for (const series of selectedSeries) {
       for (const event of series.events) {
-        const daySessions = event.sessions.filter(s => getLocalDate(s.startUtc, timezone) === date)
-        if (daySessions.length > 0) {
-          results.push({
-            series, event,
-            sessions: daySessions.sort((a, b) => new Date(a.startUtc).getTime() - new Date(b.startUtc).getTime()),
-          })
+        const daySessions = event.sessions
+          .filter(s => getLocalDate(s.startUtc, timezone) === date)
+          .sort((a, b) => new Date(a.startUtc).getTime() - new Date(b.startUtc).getTime())
+        if (daySessions.length === 0) continue
+
+        // Split into groups of consecutive sessions (gap < 2h between end of one and start of next)
+        const groups: Session[][] = [[daySessions[0]]]
+        for (let j = 1; j < daySessions.length; j++) {
+          const prev = daySessions[j - 1]
+          const prevEnd = new Date(prev.startUtc).getTime() + (prev.durationMinutes || 120) * 60000
+          const currStart = new Date(daySessions[j].startUtc).getTime()
+          if (currStart - prevEnd > GAP_MS) {
+            groups.push([daySessions[j]])
+          } else {
+            groups[groups.length - 1].push(daySessions[j])
+          }
+        }
+
+        for (const group of groups) {
+          results.push({ series, event, sessions: group })
         }
       }
     }
@@ -128,16 +139,16 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
 
   return (
     <div ref={containerRef} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      {dayEvents.map(({ series, event, sessions }) => (
+      {dayEvents.map(({ series, event, sessions }, idx) => (
         <div
-          key={`${series.id}-${event.id}`}
+          key={`${series.id}-${event.id}-${idx}`}
           data-event-id={event.id}
           style={{
             borderRadius: 16,
             background: 'var(--rg-surface)',
             border: '1px solid var(--rg-card-border)',
             borderLeft: `4px solid ${series.color}`,
-            overflow: 'hidden',
+            overflow: 'visible',
           }}
         >
           <div className="rg-event-card-header" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 }}>
@@ -155,62 +166,40 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                     {t('progress.roundFull', locale)} {event.round}/{Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))}
                   </span>
                 )}
-                <div
-                  style={{
-                    height: 28,
-                    display: 'flex',
-                    alignItems: 'center',
-                    borderRadius: 6,
-                    overflow: 'hidden',
-                    padding: series.logoBgWhite ? '2px 8px' : 0,
-                    background: series.logoBgWhite ? '#fff' : 'transparent',
-                  }}
-                >
-                  <SeriesLogo seriesId={series.id} className="" />
-                </div>
               </div>
-              <h3 className="font-display rg-event-name" style={{ color: 'var(--rg-text)', marginBottom: 4, letterSpacing: 0.5 }}>
+              <h3 className="font-display rg-event-name" style={{ color: 'var(--rg-text)', margin: 0, marginBottom: 4, letterSpacing: 0.5 }}>
                 {event.name}
               </h3>
               {(() => {
                 const circuit = getCircuit(event.circuitId)
-                return circuit ? (
-                  <Link href={`/circuits/${circuit.id}`} style={{ display: 'block', fontSize: 14, color: 'var(--rg-text3)', textDecoration: 'none' }}>
-                    {countryFlag(circuit.countryCode)} {circuit.name}, {circuit.country}
-                  </Link>
-                ) : null
-              })()}
-
-              {/* Circuit info */}
-              {(() => {
-                const circuit = getCircuit(event.circuitId)
                 if (!circuit) return null
                 return (
-                  <div
-                    style={{
-                      display: 'flex',
-                      gap: 16,
-                      marginTop: 8,
-                      flexWrap: 'wrap',
-                    }}
-                  >
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--rg-text3)' }}>
-                      <Ruler style={{ width: 13, height: 13 }} />
-                      {circuit.length}
-                    </span>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--rg-text3)' }}>
-                      <CornerDownRight style={{ width: 13, height: 13 }} />
-                      {circuit.turns} {locale === 'uk' ? 'поворотів' : 'turns'}
-                    </span>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--rg-text3)' }}>
-                      <MapPin style={{ width: 13, height: 13 }} />
-                      {getCircuitTypeLabel(circuit.type, locale)}
+                  <div className="rg-circuit-info" style={{ fontSize: 13, color: 'var(--rg-text3)' }}>
+                    <Link href={`/circuits/${circuit.id}`} style={{ color: 'var(--rg-text3)', textDecoration: 'none' }}>
+                      {countryFlag(circuit.countryCode)} {circuit.name}, {circuit.country}
+                    </Link>
+                    <span className="rg-circuit-sep" style={{ color: 'var(--rg-border)', margin: '0 6px' }}>·</span>
+                    <span className="rg-circuit-details">
+                      <span>{circuit.length}</span>
+                      <span style={{ color: 'var(--rg-border)', margin: '0 6px' }}>·</span>
+                      <span>{circuit.turns} {locale === 'uk' ? 'поворотів' : 'turns'}</span>
+                      <span style={{ color: 'var(--rg-border)', margin: '0 6px' }}>·</span>
+                      <span>{getCircuitTypeLabel(circuit.type, locale)}</span>
                     </span>
                   </div>
                 )
               })()}
             </div>
-            <CalendarExport event={event} sessions={sessions} seriesName={series.name} seriesId={series.id} seriesEvents={series.events} locale={locale} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+              <WhereToWatchPopover
+                broadcasts={(() => {
+                  const country = detectCountry(timezone)
+                  return country ? getBroadcasts(series.id, country) : []
+                })()}
+                locale={locale}
+              />
+              <CalendarExport event={event} sessions={sessions} seriesName={series.name} seriesId={series.id} seriesEvents={series.events} locale={locale} />
+            </div>
           </div>
 
           <div className="rg-event-card-sessions">
@@ -292,14 +281,6 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
               return <RaceResult results={sessionResults} locale={locale} />
             })()}
 
-            {/* Where to watch */}
-            <WhereToWatch
-              broadcasts={(() => {
-                const country = detectCountry(timezone)
-                return country ? getBroadcasts(series.id, country) : []
-              })()}
-              locale={locale}
-            />
           </div>
         </div>
       ))}

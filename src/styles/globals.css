@@ -203,6 +203,10 @@ button:disabled:active {
   display: none;
 }
 
+.rg-cal-export-label {
+  display: none;
+}
+
 /* ── Session time row fixed widths ── */
 .rg-session-time {
   font-size: 13px;
@@ -357,9 +361,6 @@ button:disabled:active {
   .rg-event-card-header {
     padding: 16px 16px 12px;
   }
-  .rg-cal-export-label {
-    display: none;
-  }
   .rg-cal-export-btn {
     padding: 9px !important;
   }
@@ -370,9 +371,24 @@ button:disabled:active {
   .rg-event-name {
     font-size: 16px;
   }
+  .rg-circuit-sep {
+    display: none !important;
+  }
+  .rg-circuit-details {
+    display: block;
+    margin-top: 4px;
+  }
   .rg-session-row {
     padding: 10px 12px !important;
-    gap: 10px !important;
+    gap: 8px !important;
+  }
+  .rg-timeline-event {
+    display: none;
+  }
+  .rg-timeline-label {
+    font-size: 13px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .rg-session-time-start {
     width: 68px;
