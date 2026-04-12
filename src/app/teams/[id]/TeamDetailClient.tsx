@@ -178,35 +178,37 @@ export function TeamDetailClient({ teamId }: { teamId: string }) {
 
         {/* Tabs */}
         {seasons.length > 0 && (
-          <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content' }}>
+          <div className="rg-series-tabs" style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content', maxWidth: '100%' }}>
             <button
               onClick={() => setTab('drivers')}
+              className="rg-series-tab"
               style={{
                 padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600,
                 background: tab === 'drivers' ? 'var(--rg-elevated)' : 'transparent',
                 border: tab === 'drivers' ? '1px solid var(--rg-border)' : '1px solid transparent',
                 color: tab === 'drivers' ? 'var(--rg-text)' : 'var(--rg-text3)',
-                cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6,
+                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, whiteSpace: 'nowrap', flexShrink: 0,
               }}
             >
-              <Users style={{ width: 13, height: 13 }} />
-              Drivers
-              <span style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({allDrivers.length})</span>
+              <Users style={{ width: 14, height: 14 }} />
+              <span className="rg-series-tab-label">Drivers</span>
+              <span className="rg-series-tab-label" style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({allDrivers.length})</span>
             </button>
             {allResults.length > 0 && (
               <button
                 onClick={() => setTab('results')}
+                className="rg-series-tab"
                 style={{
                   padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600,
                   background: tab === 'results' ? 'var(--rg-elevated)' : 'transparent',
                   border: tab === 'results' ? '1px solid var(--rg-border)' : '1px solid transparent',
                   color: tab === 'results' ? 'var(--rg-text)' : 'var(--rg-text3)',
-                  cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6,
+                  cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, whiteSpace: 'nowrap', flexShrink: 0,
                 }}
               >
-                <Trophy style={{ width: 13, height: 13 }} />
-                Podiums
-                <span style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({allResults.length})</span>
+                <Trophy style={{ width: 14, height: 14 }} />
+                <span className="rg-series-tab-label">Podiums</span>
+                <span className="rg-series-tab-label" style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({allResults.length})</span>
               </button>
             )}
           </div>
@@ -254,8 +256,8 @@ export function TeamDetailClient({ teamId }: { teamId: string }) {
                   P{r.position}
                 </span>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--rg-text)' }}>{r.eventName}</span>
-                  <span style={{ fontSize: 12, color: 'var(--rg-text3)', marginLeft: 6 }}>{r.winnerDrivers}</span>
+                  <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--rg-text)' }}>{r.eventName}</div>
+                  <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>{r.winnerDrivers}</div>
                 </div>
                 <span style={{ fontSize: 12, color: 'var(--rg-text3)', flexShrink: 0 }}>
                   {new Date(r.raceDate + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}

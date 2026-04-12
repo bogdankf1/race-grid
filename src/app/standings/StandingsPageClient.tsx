@@ -202,32 +202,34 @@ export function StandingsPageClient() {
 
             {/* Tabs: Drivers / Constructors — hide tab bar if no constructors */}
             {standings.constructors.length > 0 ? (
-              <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content' }}>
+              <div className="rg-series-tabs" style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content', maxWidth: '100%' }}>
                 <button
                   onClick={() => setTab('drivers')}
+                  className="rg-series-tab"
                   style={{
                     padding: '8px 20px', borderRadius: 8, fontSize: 13, fontWeight: 600,
                     background: tab === 'drivers' ? 'var(--rg-elevated)' : 'transparent',
                     border: tab === 'drivers' ? '1px solid var(--rg-border)' : '1px solid transparent',
                     color: tab === 'drivers' ? 'var(--rg-text)' : 'var(--rg-text3)',
-                    cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6,
+                    cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, whiteSpace: 'nowrap', flexShrink: 0,
                   }}
                 >
-                  <Trophy style={{ width: 13, height: 13 }} />
-                  Drivers
+                  <Trophy style={{ width: 14, height: 14 }} />
+                  <span className="rg-series-tab-label">Drivers</span>
                 </button>
                 <button
                   onClick={() => setTab('constructors')}
+                  className="rg-series-tab"
                   style={{
                     padding: '8px 20px', borderRadius: 8, fontSize: 13, fontWeight: 600,
                     background: tab === 'constructors' ? 'var(--rg-elevated)' : 'transparent',
                     border: tab === 'constructors' ? '1px solid var(--rg-border)' : '1px solid transparent',
                     color: tab === 'constructors' ? 'var(--rg-text)' : 'var(--rg-text3)',
-                    cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6,
+                    cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, whiteSpace: 'nowrap', flexShrink: 0,
                   }}
                 >
-                  <Users style={{ width: 13, height: 13 }} />
-                  Constructors
+                  <Users style={{ width: 14, height: 14 }} />
+                  <span className="rg-series-tab-label">Constructors</span>
                 </button>
               </div>
             ) : null}

@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
-import { Search, MapPin, RotateCcw, Gauge } from 'lucide-react'
+import { Search, MapPin, RotateCcw, Gauge, ChevronDown } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
@@ -152,27 +152,36 @@ export function CircuitsPageClient() {
           />
         </div>
 
-        {/* Type filter chips */}
-        <div style={{ display: 'flex', gap: 6, marginBottom: 24, flexWrap: 'wrap' }}>
-          {TYPE_FILTERS.map(tf => (
-            <button
-              key={tf}
-              onClick={() => setTypeFilter(tf)}
-              style={{
-                padding: '6px 14px',
-                borderRadius: 8,
-                fontSize: 13,
-                fontWeight: 500,
-                border: '1px solid var(--rg-border)',
-                background: typeFilter === tf ? 'var(--rg-link)' : 'transparent',
-                color: typeFilter === tf ? '#fff' : 'var(--rg-text2)',
-                cursor: 'pointer',
-                transition: 'all 0.15s',
-              }}
-            >
-              {tf === 'all' ? 'All' : getCircuitTypeLabel(tf, locale)}
-            </button>
-          ))}
+        {/* Track type dropdown */}
+        <div className="rg-type-filter" style={{ position: 'relative', marginBottom: 24, maxWidth: 480 }}>
+          <select
+            value={typeFilter}
+            onChange={e => setTypeFilter(e.target.value as TypeFilter)}
+            className="rg-control"
+            style={{
+              width: '100%',
+              height: 'var(--rg-control-h)',
+              padding: '0 32px 0 12px',
+              borderRadius: 10,
+              border: '1px solid var(--rg-border)',
+              background: 'var(--rg-btn-bg)',
+              color: 'var(--rg-text)',
+              fontSize: 13,
+              fontWeight: 500,
+              cursor: 'pointer',
+              appearance: 'none',
+              outline: 'none',
+            }}
+          >
+            <option value="all">{locale === 'uk' ? 'Усі типи' : 'All types'}</option>
+            {TYPE_FILTERS.filter(tf => tf !== 'all').map(tf => (
+              <option key={tf} value={tf}>{getCircuitTypeLabel(tf, locale)}</option>
+            ))}
+          </select>
+          <ChevronDown style={{
+            position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
+            width: 14, height: 14, color: 'var(--rg-text3)', pointerEvents: 'none',
+          }} />
         </div>
 
         {/* Circuit list */}

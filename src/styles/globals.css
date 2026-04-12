@@ -399,7 +399,11 @@ button:disabled:active {
   }
   .rg-session-row {
     padding: 10px 12px !important;
-    gap: 8px !important;
+    gap: 4px !important;
+    flex-wrap: wrap !important;
+  }
+  .rg-session-time {
+    width: 100%;
   }
   .rg-timeline-event {
     display: none;
@@ -427,10 +431,16 @@ button:disabled:active {
   }
   .rg-dropdown-panel {
     position: fixed !important;
-    left: 12px !important;
-    right: 12px !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     width: auto !important;
     max-height: 70vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    margin-top: 0 !important;
+    z-index: 100 !important;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.4) !important;
   }
   .rg-nav-btn {
     padding: 6px !important;
