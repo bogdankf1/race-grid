@@ -17,6 +17,10 @@ import { superformulaStandings2025 } from './superformula-2025'
 import { supergtStandings2025 } from './supergt-2025'
 import { supercarsStandings2025 } from './supercars-2025'
 import { supercarsStandings2026 } from './supercars-2026'
+import { superformulaStandings2026 } from './superformula-2026'
+import { gtwcStandings2026 } from './gtwc-2026'
+import { supergtStandings2026 } from './supergt-2026'
+import { igtcStandings2026 } from './igtc-2026'
 import { elmsStandings2025 } from './elms-2025'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
@@ -38,6 +42,10 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'supergt-2025': supergtStandings2025,
   'supercars-2025': supercarsStandings2025,
   'supercars-2026': supercarsStandings2026,
+  'superformula-2026': superformulaStandings2026,
+  'gtwc-2026': gtwcStandings2026,
+  'supergt-2026': supergtStandings2026,
+  'igtc-2026': igtcStandings2026,
   'elms-2025': elmsStandings2025,
 }
 

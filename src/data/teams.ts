@@ -161,8 +161,12 @@ const TEAMS: Record<string, Team> = {
   'lancia': { id: 'lancia', name: 'Lancia Corse HF', country: 'IT' },
   'toyota-wrt-2': { id: 'toyota-wrt-2', name: 'Toyota Gazoo Racing WRT 2', country: 'FI' },
   'tgr-au-toms': { id: 'tgr-au-toms', name: 'TGR Team au TOM\'S', country: 'JP' },
+  // Super Formula 2026 additions
+  'cerumo-inging': { id: 'cerumo-inging', name: 'Cerumo-Inging', country: 'JP' },
   // Super GT 2026 additions
   'apr': { id: 'apr', name: 'apr', country: 'JP' },
+  // IGTC 2026 additions
+  'mercedes-amg': { id: 'mercedes-amg', name: 'Mercedes-AMG', country: 'DE' },
 }
 
 export function getTeam(id: string): Team | null {

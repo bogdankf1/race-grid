@@ -1,11 +1,11 @@
 import type { SeasonStandings } from './types'
 
-// NASCAR Cup 2026 standings — verified from espn.com (after Round 7 Martinsville)
+// NASCAR Cup 2026 standings — verified from espn.com (after Round 8 Bristol)
 export const nascarStandings2026: SeasonStandings = {
   drivers: [
     { position: 1, driverId: 'reddick', teamId: '23xi-racing', points: 353, wins: 4 },
     { position: 2, driverId: 'blaney', teamId: 'team-penske', points: 271, wins: 1 },
-    { position: 3, driverId: 'hamlin', teamId: 'joe-gibbs-racing', points: 259, wins: 1 },
+    { position: 3, driverId: 'hamlin', teamId: 'joe-gibbs-racing', points: 259, wins: 2 },
     { position: 4, driverId: 'elliott', teamId: 'hendrick-motorsports', points: 249, wins: 1 },
     { position: 5, driverId: 'byron', teamId: 'hendrick-motorsports', points: 238, wins: 0 },
     { position: 6, driverId: 'gibbs', teamId: 'joe-gibbs-racing', points: 222, wins: 0 },

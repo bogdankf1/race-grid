@@ -99,7 +99,7 @@ const DRIVERS: Record<string, Driver> = {
   'gibbs': { id: 'gibbs', name: 'Ty Gibbs', shortName: 'Gibbs', nationality: 'US' },
   'gilliland': { id: 'gilliland', name: 'Todd Gilliland', shortName: 'Gilliland', nationality: 'US' },
   'giovinazzi': { id: 'giovinazzi', name: 'Antonio Giovinazzi', shortName: 'Giovinazzi', nationality: 'IT' },
-  'goethe': { id: 'goethe', name: 'Alexander Goethe', shortName: 'Goethe', nationality: 'DE' },
+  'goethe': { id: 'goethe', name: 'Benjamin Goethe', shortName: 'Goethe', nationality: 'DE' },
   'goetz': { id: 'goetz', name: 'Maximilian Götz', shortName: 'Goetz', nationality: 'DE' },
   'goldburg': { id: 'goldburg', name: 'Goldburg', shortName: 'Goldburg', nationality: 'US' },
   'golding': { id: 'golding', name: 'James Golding', shortName: 'Golding', nationality: 'AU' },
@@ -365,6 +365,8 @@ const DRIVERS: Record<string, Driver> = {
   'vervisch': { id: 'vervisch', name: 'Frederic Vervisch', shortName: 'Vervisch', nationality: 'BE' },
   'pittard': { id: 'pittard', name: 'David Pittard', shortName: 'Pittard', nationality: 'GB' },
   'p-kolb': { id: 'p-kolb', name: 'Patrick Kolb', shortName: 'P. Kolb', nationality: 'DE' },
+  // Super Formula 2026 additions
+  'browning': { id: 'browning', name: 'Luke Browning', shortName: 'Browning', nationality: 'GB' },
   // Super GT 2026 additions
   'r-kobayashi': { id: 'r-kobayashi', name: 'Rikuto Kobayashi', shortName: 'R. Kobayashi', nationality: 'JP' },
   'koyama': { id: 'koyama', name: 'Miki Koyama', shortName: 'Koyama', nationality: 'JP' },
