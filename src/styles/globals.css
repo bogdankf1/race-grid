@@ -203,6 +203,14 @@ button:disabled:active {
   display: none;
 }
 
+.rg-hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.rg-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .rg-cal-export-label {
   display: none;
 }
@@ -370,6 +378,17 @@ button:disabled:active {
   }
   .rg-event-name {
     font-size: 16px;
+  }
+  .rg-series-tabs {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .rg-series-tab {
+    flex: 1 !important;
+    padding: 8px 0 !important;
+  }
+  .rg-series-tab-label {
+    display: none;
   }
   .rg-circuit-sep {
     display: none !important;

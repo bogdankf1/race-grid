@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import { Trophy, MapPin, Search, Calendar, Users, Flag } from 'lucide-react'
+import { MapPin, Search, Calendar, Users, Flag } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
@@ -214,7 +214,7 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
 
         {/* Tab bar */}
         {series && (
-          <div style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content' }}>
+          <div className="rg-series-tabs" style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content', maxWidth: '100%' }}>
             {([
               { key: 'calendar' as const, icon: Calendar, label: t('nav.calendar', locale), count: series.events.length },
               { key: 'circuits' as const, icon: MapPin, label: t('nav.circuits', locale), count: circuits.length },
@@ -224,17 +224,18 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
               <button
                 key={item.key}
                 onClick={() => setTab(item.key)}
+                className="rg-series-tab"
                 style={{
                   padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600,
                   background: tab === item.key ? 'var(--rg-elevated)' : 'transparent',
                   border: tab === item.key ? '1px solid var(--rg-border)' : '1px solid transparent',
                   color: tab === item.key ? 'var(--rg-text)' : 'var(--rg-text3)',
-                  cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6,
+                  cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, whiteSpace: 'nowrap', flexShrink: 0,
                 }}
               >
-                <item.icon style={{ width: 13, height: 13 }} />
-                {item.label}
-                <span style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({item.count})</span>
+                <item.icon style={{ width: 14, height: 14 }} />
+                <span className="rg-series-tab-label">{item.label}</span>
+                <span className="rg-series-tab-label" style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({item.count})</span>
               </button>
             ))}
           </div>
@@ -342,6 +343,7 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
                 <Link
                   key={team.id}
                   href={`/teams/${team.id}`}
+                  className="rg-team-row"
                   style={{
                     display: 'flex', alignItems: 'center', gap: 12, padding: '10px 16px',
                     borderRadius: 8, background: 'var(--rg-surface)', border: '1px solid var(--rg-card-border)',
@@ -351,12 +353,16 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
                   {team.country && (
                     <span style={{ fontSize: 14, flexShrink: 0 }}>{countryFlag(team.country)}</span>
                   )}
-                  <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--rg-text)', flex: 1 }}>
-                    {team.name}
-                  </span>
-                  <span style={{ fontSize: 12, color: 'var(--rg-text3)' }}>
-                    {teamDrivers.map(e => getDriver(e.driverId)?.shortName).filter(Boolean).join(', ')}
-                  </span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--rg-text)' }}>
+                      {team.name}
+                    </div>
+                    {teamDrivers.length > 0 && (
+                      <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
+                        {teamDrivers.map(e => getDriver(e.driverId)?.shortName).filter(Boolean).join(', ')}
+                      </div>
+                    )}
+                  </div>
                 </Link>
               )
             })}
@@ -435,12 +441,6 @@ function EventRow({ event, series, spoilerFree, locale }: { event: RaceEvent; se
         {raceDate && new Date(raceDate + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
       </span>
 
-      {/* Winner */}
-      {winnerDisplay && (
-        <span style={{ fontSize: 12, color: 'var(--rg-text3)', flexShrink: 0, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-          <Trophy style={{ width: 11, height: 11 }} /> {winnerDisplay}
-        </span>
-      )}
     </Link>
   )
 }

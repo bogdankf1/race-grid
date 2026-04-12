@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import { MapPin, Gauge, RotateCcw, Trophy } from 'lucide-react'
+import { MapPin, Gauge, RotateCcw } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
@@ -186,10 +186,8 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
   )
 }
 
-function EventRow({ event, spoilerFree }: { event: CircuitEventInfo; spoilerFree: boolean }) {
+function EventRow({ event }: { event: CircuitEventInfo; spoilerFree: boolean }) {
   const meta = SERIES_META.find(m => m.id === event.seriesId)
-  const now = Date.now()
-  const isPast = new Date(event.raceDate).getTime() < now
 
   return (
     <Link
@@ -251,12 +249,6 @@ function EventRow({ event, spoilerFree }: { event: CircuitEventInfo; spoilerFree
         {new Date(event.raceDate + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
       </span>
 
-      {/* Winner (if past and not spoiler-free) */}
-      {isPast && event.winnerDisplay && !spoilerFree && (
-        <span style={{ fontSize: 12, color: 'var(--rg-text3)', flexShrink: 0, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-          <Trophy style={{ width: 11, height: 11 }} /> {event.winnerDisplay}
-        </span>
-      )}
     </Link>
   )
 }

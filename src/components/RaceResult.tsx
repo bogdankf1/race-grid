@@ -104,7 +104,7 @@ export function RaceResult({ results, locale }: RaceResultProps) {
                       )}
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                         {cls.podium.map((entry) => (
-                          <div key={entry.position} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                          <div key={entry.position} style={{ display: 'flex', alignItems: 'baseline', gap: 6, fontSize: 13, flexWrap: 'wrap' }}>
                             <span style={{ width: 20, textAlign: 'center', flexShrink: 0 }}>
                               {MEDAL[entry.position - 1] ?? `${entry.position}.`}
                             </span>
@@ -121,7 +121,7 @@ export function RaceResult({ results, locale }: RaceResultProps) {
                   ))}
                 </div>
               ) : (
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, fontSize: 13, flexWrap: 'wrap' }}>
                   <span style={{ width: 20, textAlign: 'center', flexShrink: 0 }}>🏆</span>
                   <span style={{ fontWeight: 600, color: 'var(--rg-text)' }}>
                     <DriversDisplay drivers={result.overall.drivers} />
