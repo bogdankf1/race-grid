@@ -39,4 +39,21 @@ export const supercarsResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'sc-2026-taupo': {
+    qualifying: {
+      overall: { driverIds: ['kostecki'], teamId: 'dick-johnson-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['kostecki'], teamId: 'dick-johnson-racing' }] }],
+    },
+    race: {
+      overall: { driverIds: ['kostecki'], teamId: 'dick-johnson-racing' },
+      classes: [{
+        className: 'Race Winners',
+        podium: [
+          { position: 1, driverIds: ['kostecki'], teamId: 'dick-johnson-racing' },
+          { position: 2, driverIds: ['brown'], teamId: 'triple-eight' },
+          { position: 3, driverIds: ['wood'], teamId: 'toyota-gazoo-racing' },
+        ],
+      }],
+    },
+  },
 }

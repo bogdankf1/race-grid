@@ -128,4 +128,17 @@ export const nascarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'nascar-2026-bristol': {
+    qualifying: {
+      overall: { driverIds: ['blaney'], teamId: 'team-penske' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['blaney'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['reddick'], teamId: '23xi-racing' },
+          { position: 3, driverIds: ['briscoe'], teamId: 'joe-gibbs-racing' },
+        ],
+      }],
+    },
+  },
 }

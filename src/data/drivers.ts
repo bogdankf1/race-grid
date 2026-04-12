@@ -358,6 +358,16 @@ const DRIVERS: Record<string, Driver> = {
   'jackson-walls': { id: 'jackson-walls', name: 'Jackson Walls', shortName: 'Walls', nationality: 'AU' },
   'zach-bates': { id: 'zach-bates', name: 'Zach Bates', shortName: 'Bates', nationality: 'AU' },
   'jobe-stewart': { id: 'jobe-stewart', name: 'Jobe Stewart', shortName: 'Stewart', nationality: 'AU' },
+  // GTWC / NLS 2026 additions
+  'sorensen': { id: 'sorensen', name: 'Marco Sørensen', shortName: 'Sørensen', nationality: 'DK' },
+  'loake': { id: 'loake', name: 'Joseph Loake', shortName: 'Loake', nationality: 'GB' },
+  'fleming': { id: 'fleming', name: 'Thomas Fleming', shortName: 'Fleming', nationality: 'GB' },
+  'vervisch': { id: 'vervisch', name: 'Frederic Vervisch', shortName: 'Vervisch', nationality: 'BE' },
+  'pittard': { id: 'pittard', name: 'David Pittard', shortName: 'Pittard', nationality: 'GB' },
+  'p-kolb': { id: 'p-kolb', name: 'Patrick Kolb', shortName: 'P. Kolb', nationality: 'DE' },
+  // Super GT 2026 additions
+  'r-kobayashi': { id: 'r-kobayashi', name: 'Rikuto Kobayashi', shortName: 'R. Kobayashi', nationality: 'JP' },
+  'koyama': { id: 'koyama', name: 'Miki Koyama', shortName: 'Koyama', nationality: 'JP' },
 }
 
 export function getDriver(id: string): Driver | null {

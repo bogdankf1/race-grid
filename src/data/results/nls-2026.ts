@@ -20,4 +20,21 @@ export const nlsResults2026: Record<string, EventResults> = {
       overall: { driverIds: ['verstappen', 'gounon', 'juncadella'], teamId: 'mercedes-amg-team-verstappen' },
     },
   },
+  'nls-2026-3': {
+    qualifying: {
+      overall: { driverIds: ['pittard'], teamId: 'kcmg' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['pittard'], teamId: 'kcmg' }] }],
+    },
+    endurance: {
+      overall: { driverIds: ['frijns', 'eng', 'wittmann'], teamId: 'schubert-motorsport' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['frijns', 'eng', 'wittmann'], teamId: 'schubert-motorsport' },
+          { position: 2, driverIds: ['guven', 'campbell'], teamId: 'manthey' },
+          { position: 3, driverIds: ['p-kolb', 'olsen', 'vervisch'], teamId: 'haupt-racing' },
+        ],
+      }],
+    },
+  },
 }
