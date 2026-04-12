@@ -127,7 +127,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
   }
 
   return (
-    <div ref={containerRef} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+    <div ref={containerRef} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       {dayEvents.map(({ series, event, sessions }) => (
         <div
           key={`${series.id}-${event.id}`}
@@ -142,7 +142,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
         >
           <div className="rg-event-card-header" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 }}>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
                 <Link href={`/series/${series.id}`} style={{ textDecoration: 'none' }}>
                   <SeriesChip series={series} size="md" />
                 </Link>
@@ -190,7 +190,7 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                     style={{
                       display: 'flex',
                       gap: 16,
-                      marginTop: 12,
+                      marginTop: 8,
                       flexWrap: 'wrap',
                     }}
                   >
@@ -228,14 +228,14 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                     display: 'flex',
                     alignItems: 'center',
                     gap: 14,
-                    padding: '12px 16px',
+                    padding: '8px 14px',
                     borderRadius: 12,
                     background: isLive ? 'var(--rg-surface)' : 'var(--rg-elevated)',
                     opacity: isFinished ? 0.5 : 1,
                     borderLeft: isLive ? '3px solid #dc2626' : undefined,
                   }}
                 >
-                  <span style={{ fontSize: 18, width: 28, textAlign: 'center', flexShrink: 0 }}>
+                  <span style={{ fontSize: 16, width: 24, textAlign: 'center', flexShrink: 0 }}>
                     {SESSION_ICONS[session.type]}
                   </span>
                   <div style={{ flex: 1, minWidth: 0 }}>
@@ -243,25 +243,32 @@ export function DayDetail({ date, selectedSeriesIds, timezone, locale, highlight
                       <span style={{ fontWeight: 600, fontSize: 14, color: 'var(--rg-text)' }}>
                         {session.label}
                       </span>
-                      {isLive && <span className="rg-live-badge">{t('session.live', locale)}</span>}
                     </div>
                   </div>
-                  <div className="rg-session-time" style={{ textAlign: 'right', flexShrink: 0 }}>
-                    <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--rg-text)' }}>
+                  <div className="rg-session-time" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+                    <span className="rg-session-time-start" style={{ fontWeight: 600, color: 'var(--rg-text)', textAlign: 'right' }}>
                       {formatInTimezone(session.startUtc, timezone, 'time', locale)}
-                    </div>
+                    </span>
                     {session.durationMinutes && (
-                      <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
-                        {formatDuration(session.durationMinutes)}
-                      </div>
+                      <>
+                        <span className="rg-session-time-sep" style={{ color: 'var(--rg-border)' }}>|</span>
+                        <span className="rg-session-time-dur" style={{ color: 'var(--rg-text3)', textAlign: 'center' }}>
+                          {formatDuration(session.durationMinutes)}
+                        </span>
+                      </>
                     )}
-                    {isFinished ? (
-                      <div style={{ fontSize: 11, color: 'var(--rg-text3)', marginTop: 2, fontWeight: 600 }}>
-                        {t('session.finished', locale)}
-                      </div>
-                    ) : (
-                      <Countdown targetUtc={session.startUtc} locale={locale} />
-                    )}
+                    <span className="rg-session-time-sep" style={{ color: 'var(--rg-border)' }}>|</span>
+                    <span className="rg-session-time-status" style={{ textAlign: 'center' }}>
+                      {isLive ? (
+                        <span className="rg-live-badge">{t('session.live', locale)}</span>
+                      ) : isFinished ? (
+                        <span style={{ color: 'var(--rg-text3)', fontWeight: 600 }}>
+                          {t('session.finished', locale)}
+                        </span>
+                      ) : (
+                        <Countdown targetUtc={session.startUtc} locale={locale} />
+                      )}
+                    </span>
                   </div>
                 </div>
                 </div>

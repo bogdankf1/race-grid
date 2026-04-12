@@ -65,8 +65,8 @@ export function Countdown({ targetUtc, locale }: CountdownProps) {
   if (!remaining) return null
 
   return (
-    <div style={{ fontSize: 11, color: 'var(--rg-link)', marginTop: 2, fontWeight: 600 }}>
+    <span className="rg-countdown" style={{ fontSize: 'inherit', color: 'var(--rg-link)', fontWeight: 600 }}>
       {remaining}
-    </div>
+    </span>
   )
 }

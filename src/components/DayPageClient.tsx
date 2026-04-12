@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { format, parse, addDays, subDays } from 'date-fns'
-import { ChevronLeft, ChevronRight, Share2, Check } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Share2, Check, CalendarDays } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getSeriesForYear } from '@/data/series-registry'
-import { getDefaultLocale, formatDateLocale, formatDateShort, type Locale } from '@/lib/i18n'
+import { t, getDefaultLocale, formatDateLocale, formatDateShort, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { Header } from '@/components/Header'
 import { DayDetail } from '@/components/DayDetail'
@@ -37,6 +37,8 @@ export function DayPageClient({ date }: DayPageClientProps) {
   useEffect(() => { applyTheme(theme) }, [theme])
 
   const parsed = parse(date, 'yyyy-MM-dd', new Date())
+  const today = format(new Date(), 'yyyy-MM-dd')
+  const isToday = date === today
   const dateLabel = formatDateLocale(parsed, locale)
   const dateLabelShort = formatDateShort(parsed, locale)
   const prevDate = format(subDays(parsed, 1), 'yyyy-MM-dd')
@@ -136,24 +138,35 @@ export function DayPageClient({ date }: DayPageClientProps) {
             </button>
           </div>
 
-          {/* Share button */}
-          <button
-            className="rg-control"
-            onClick={shareDay}
-            style={{
-              ...navBtnStyle,
-              marginLeft: 'auto',
-              width: 'auto',
-              gap: 6,
-              padding: '0 14px',
-              fontSize: 13,
-              fontWeight: 500,
-              color: copied ? 'var(--rg-success)' : 'var(--rg-text2)',
-            }}
-          >
-            {copied ? <Check style={{ width: 15, height: 15 }} /> : <Share2 style={{ width: 15, height: 15 }} />}
-            <span>{copied ? (locale === 'uk' ? 'Скопійовано' : 'Copied!') : (locale === 'uk' ? 'Поділитись' : 'Share')}</span>
-          </button>
+          <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
+            {!isToday && (
+              <button
+                className="rg-control"
+                onClick={() => router.push(`/day/${today}`)}
+                style={{
+                  ...navBtnStyle,
+                  width: 'auto',
+                  gap: 6,
+                  padding: '0 14px',
+                  fontSize: 13,
+                  fontWeight: 500,
+                }}
+              >
+                <CalendarDays style={{ width: 15, height: 15 }} />
+                <span>{t('nav.today', locale)}</span>
+              </button>
+            )}
+            <button
+              className="rg-control"
+              onClick={shareDay}
+              style={{
+                ...navBtnStyle,
+                color: copied ? 'var(--rg-success)' : 'var(--rg-text2)',
+              }}
+            >
+              {copied ? <Check style={{ width: 15, height: 15 }} /> : <Share2 style={{ width: 15, height: 15 }} />}
+            </button>
+          </div>
         </div>
 
         <SwipeContainer

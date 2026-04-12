@@ -65,6 +65,7 @@ export function CalendarExport({ event, sessions, seriesName, seriesId, seriesEv
   return (
     <div ref={ref} style={{ position: 'relative', flexShrink: 0 }}>
       <button
+        className="rg-cal-export-btn"
         onClick={() => setOpen(!open)}
         style={{
           display: 'inline-flex',
@@ -81,7 +82,7 @@ export function CalendarExport({ event, sessions, seriesName, seriesId, seriesEv
         }}
       >
         <CalendarPlus style={{ width: 14, height: 14 }} />
-        {t('cal.export', locale)}
+        <span className="rg-cal-export-label">{t('cal.export', locale)}</span>
       </button>
 
       {open && (

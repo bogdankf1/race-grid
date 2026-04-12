@@ -203,15 +203,35 @@ button:disabled:active {
   display: none;
 }
 
+/* ── Session time row fixed widths ── */
+.rg-session-time {
+  font-size: 13px;
+}
+.rg-session-time-start {
+  width: 76px;
+  font-size: 14px;
+}
+.rg-session-time-sep {
+  margin: 0 8px;
+  font-size: 12px;
+}
+.rg-session-time-dur {
+  width: 48px;
+}
+.rg-session-time-status {
+  width: 80px;
+  font-size: 12px;
+}
+
 .rg-event-card-header {
-  padding: 24px 28px 20px;
+  padding: 20px 24px 16px;
 }
 
 .rg-event-card-sessions {
-  padding: 0 28px 24px;
+  padding: 0 24px 20px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .rg-event-name {
@@ -336,7 +356,12 @@ button:disabled:active {
   }
   .rg-event-card-header {
     padding: 16px 16px 12px;
-    flex-direction: column !important;
+  }
+  .rg-cal-export-label {
+    display: none;
+  }
+  .rg-cal-export-btn {
+    padding: 9px !important;
   }
   .rg-event-card-sessions {
     padding: 0 16px 16px;
@@ -349,8 +374,21 @@ button:disabled:active {
     padding: 10px 12px !important;
     gap: 10px !important;
   }
-  .rg-session-time {
+  .rg-session-time-start {
+    width: 68px;
     font-size: 12px !important;
+  }
+  .rg-session-time-sep {
+    margin: 0 4px;
+    font-size: 11px;
+  }
+  .rg-session-time-dur {
+    width: 40px;
+    font-size: 11px;
+  }
+  .rg-session-time-status {
+    width: 70px;
+    font-size: 11px;
   }
   .rg-dropdown-panel {
     position: fixed !important;
