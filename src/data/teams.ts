@@ -40,6 +40,7 @@ const TEAMS: Record<string, Team> = {
   'ferrari-af-corse': { id: 'ferrari-af-corse', name: 'Ferrari AF Corse', country: 'IT' },
   'ford-multimatic': { id: 'ford-multimatic', name: 'Ford Multimatic Motorsports', country: 'US' },
   'front-row-motorsports': { id: 'front-row-motorsports', name: 'Front Row Motorsports', country: 'US' },
+  'forestier-racing-panis': { id: 'forestier-racing-panis', name: 'Forestier Racing by Panis', country: 'FR' },
   'garage-59': { id: 'garage-59', name: 'Garage 59', country: 'GB' },
   'getspeed': { id: 'getspeed', name: 'Mercedes-AMG Team GetSpeed', country: 'DE' },
   'grasser-racing': { id: 'grasser-racing', name: 'Grasser Racing', country: 'AT' },

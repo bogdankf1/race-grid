@@ -140,5 +140,16 @@ export const nascarResults2026: Record<string, EventResults> = {
         ],
       }],
     },
+    race: {
+      overall: { driverIds: ['gibbs'], teamId: 'joe-gibbs-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['gibbs'], teamId: 'joe-gibbs-racing' },
+          { position: 2, driverIds: ['blaney'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['larson'], teamId: 'hendrick-motorsports' },
+        ],
+      }],
+    },
   },
 }
