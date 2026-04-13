@@ -29,6 +29,16 @@ import { gtwcResults2026 } from './gtwc-2026'
 import { superformulaResults2026 } from './superformula-2026'
 import { supergtResults2026 } from './supergt-2026'
 import { wecResults2026 } from './wec-2026'
+import { f2Results2025 } from './f2-2025'
+import { f2Results2026 } from './f2-2026'
+import { f3Results2025 } from './f3-2025'
+import { f3Results2026 } from './f3-2026'
+import { dakarResults2025 } from './dakar-2025'
+import { dakarResults2026 } from './dakar-2026'
+import { motogpResults2025 } from './motogp-2025'
+import { motogpResults2026 } from './motogp-2026'
+import { feResults2025 } from './fe-2025'
+import { feResults2026 } from './fe-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
   ...f1Results2025,
@@ -59,6 +69,16 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...superformulaResults2026,
   ...supergtResults2026,
   ...wecResults2026,
+  ...f2Results2025,
+  ...f2Results2026,
+  ...f3Results2025,
+  ...f3Results2026,
+  ...dakarResults2025,
+  ...dakarResults2026,
+  ...motogpResults2025,
+  ...motogpResults2026,
+  ...feResults2025,
+  ...feResults2026,
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {

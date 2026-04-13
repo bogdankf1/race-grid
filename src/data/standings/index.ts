@@ -22,6 +22,16 @@ import { gtwcStandings2026 } from './gtwc-2026'
 import { supergtStandings2026 } from './supergt-2026'
 import { igtcStandings2026 } from './igtc-2026'
 import { elmsStandings2025 } from './elms-2025'
+import { f2Standings2025 } from './f2-2025'
+import { f2Standings2026 } from './f2-2026'
+import { f3Standings2025 } from './f3-2025'
+import { f3Standings2026 } from './f3-2026'
+import { dakarStandings2025 } from './dakar-2025'
+import { dakarStandings2026 } from './dakar-2026'
+import { motogpStandings2025 } from './motogp-2025'
+import { motogpStandings2026 } from './motogp-2026'
+import { feStandings2025 } from './fe-2025'
+import { feStandings2026 } from './fe-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2025': f1Standings2025,
@@ -47,6 +57,16 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'supergt-2026': supergtStandings2026,
   'igtc-2026': igtcStandings2026,
   'elms-2025': elmsStandings2025,
+  'f2-2025': f2Standings2025,
+  'f2-2026': f2Standings2026,
+  'f3-2025': f3Standings2025,
+  'f3-2026': f3Standings2026,
+  'dakar-2025': dakarStandings2025,
+  'dakar-2026': dakarStandings2026,
+  'motogp-2025': motogpStandings2025,
+  'motogp-2026': motogpStandings2026,
+  'fe-2025': feStandings2025,
+  'fe-2026': feStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {

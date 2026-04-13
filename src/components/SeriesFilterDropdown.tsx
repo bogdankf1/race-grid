@@ -33,11 +33,12 @@ interface SeriesGroup {
 }
 
 const GROUPS: SeriesGroup[] = [
-  { labelKey: 'group.openwheel', ids: ['f1', 'indycar', 'superformula'] },
+  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula'] },
   { labelKey: 'group.endurance', ids: ['wec', 'elms', 'imsa', 'igtc'] },
   { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'supergt', 'nls', 'supercars'] },
   { labelKey: 'group.stock', ids: ['nascar'] },
-  { labelKey: 'group.rally', ids: ['wrc'] },
+  { labelKey: 'group.rally', ids: ['wrc', 'dakar'] },
+  { labelKey: 'group.motorcycle', ids: ['motogp'] },
 ]
 
 function useIsMobile() {

@@ -1,0 +1,27 @@
+import type { EntryItem } from './types'
+
+export const motogpEntries2026: EntryItem[] = [
+  { driverId: 'bezzecchi', teamId: 'aprilia-racing', carNumber: 72 },
+  { driverId: 'martin-j', teamId: 'aprilia-racing', carNumber: 89 },
+  { driverId: 'fernandez-r', teamId: 'trackhouse-motogp', carNumber: 25 },
+  { driverId: 'ogura', teamId: 'trackhouse-motogp', carNumber: 79 },
+  { driverId: 'bagnaia', teamId: 'ducati-lenovo', carNumber: 63 },
+  { driverId: 'marquez-m', teamId: 'ducati-lenovo', carNumber: 93 },
+  { driverId: 'marquez-a', teamId: 'gresini-racing', carNumber: 73 },
+  { driverId: 'aldeguer', teamId: 'gresini-racing', carNumber: 54 },
+  { driverId: 'pirro', teamId: 'gresini-racing', carNumber: 51 },
+  { driverId: 'morbidelli', teamId: 'vr46-racing', carNumber: 21 },
+  { driverId: 'di-giannantonio', teamId: 'vr46-racing', carNumber: 49 },
+  { driverId: 'zarco', teamId: 'lcr-honda', carNumber: 5 },
+  { driverId: 'moreira', teamId: 'lcr-honda', carNumber: 11 },
+  { driverId: 'marini', teamId: 'honda-hrc', carNumber: 10 },
+  { driverId: 'mir', teamId: 'honda-hrc', carNumber: 36 },
+  { driverId: 'binder-b', teamId: 'red-bull-ktm', carNumber: 33 },
+  { driverId: 'acosta', teamId: 'red-bull-ktm', carNumber: 37 },
+  { driverId: 'vinales', teamId: 'ktm-tech3', carNumber: 12 },
+  { driverId: 'bastianini', teamId: 'ktm-tech3', carNumber: 23 },
+  { driverId: 'quartararo', teamId: 'yamaha-motogp', carNumber: 20 },
+  { driverId: 'rins', teamId: 'yamaha-motogp', carNumber: 42 },
+  { driverId: 'razgatlioglu', teamId: 'pramac-yamaha', carNumber: 7 },
+  { driverId: 'miller', teamId: 'pramac-yamaha', carNumber: 43 },
+]

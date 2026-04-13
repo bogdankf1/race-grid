@@ -21,6 +21,16 @@ import { igtcEntries2026 } from './igtc-2026'
 import { superformulaEntries2025 } from './superformula-2025'
 import { supercarsEntries2025 } from './supercars-2025'
 import { supercarsEntries2026 } from './supercars-2026'
+import { f2Entries2025 } from './f2-2025'
+import { f2Entries2026 } from './f2-2026'
+import { f3Entries2025 } from './f3-2025'
+import { f3Entries2026 } from './f3-2026'
+import { dakarEntries2025 } from './dakar-2025'
+import { dakarEntries2026 } from './dakar-2026'
+import { motogpEntries2025 } from './motogp-2025'
+import { motogpEntries2026 } from './motogp-2026'
+import { feEntries2025 } from './fe-2025'
+import { feEntries2026 } from './fe-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2025': f1Entries2025,
@@ -45,6 +55,16 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'superformula-2025': superformulaEntries2025,
   'supercars-2025': supercarsEntries2025,
   'supercars-2026': supercarsEntries2026,
+  'f2-2025': f2Entries2025,
+  'f2-2026': f2Entries2026,
+  'f3-2025': f3Entries2025,
+  'f3-2026': f3Entries2026,
+  'dakar-2025': dakarEntries2025,
+  'dakar-2026': dakarEntries2026,
+  'motogp-2025': motogpEntries2025,
+  'motogp-2026': motogpEntries2026,
+  'fe-2025': feEntries2025,
+  'fe-2026': feEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

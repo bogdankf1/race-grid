@@ -27,6 +27,16 @@ import { superformula2025 } from './superformula-2025'
 import { superformula2026 } from './superformula-2026'
 import { supercars2025 } from './supercars-2025'
 import { supercars2026 } from './supercars-2026'
+import { f22025 } from './f2-2025'
+import { f22026 } from './f2-2026'
+import { f32025 } from './f3-2025'
+import { f32026 } from './f3-2026'
+import { dakar2025 } from './dakar-2025'
+import { dakar2026 } from './dakar-2026'
+import { motogp2025 } from './motogp-2025'
+import { motogp2026 } from './motogp-2026'
+import { fe2025 } from './fe-2025'
+import { fe2026 } from './fe-2026'
 
 interface SeriesMeta {
   id: string
@@ -52,6 +62,11 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'igtc', name: 'Intercontinental GT Challenge', shortName: 'IGTC', color: '#C8102E', textColor: '#fff' },
   { id: 'superformula', name: 'Super Formula', shortName: 'SF', color: '#1A1A6E', textColor: '#fff' },
   { id: 'supercars', name: 'Supercars Championship', shortName: 'SC', color: '#E31937', textColor: '#fff' },
+  { id: 'f2', name: 'FIA Formula 2', shortName: 'F2', color: '#0090D0', textColor: '#fff' },
+  { id: 'f3', name: 'FIA Formula 3', shortName: 'F3', color: '#00B050', textColor: '#fff' },
+  { id: 'dakar', name: 'Dakar Rally', shortName: 'DAKAR', color: '#D7263D', textColor: '#fff' },
+  { id: 'motogp', name: 'MotoGP', shortName: 'MGP', color: '#BE0F34', textColor: '#fff' },
+  { id: 'fe', name: 'Formula E', shortName: 'FE', color: '#1E90FF', textColor: '#fff' },
 ]
 
 // Per-series, per-year event data
@@ -70,6 +85,11 @@ const SERIES_EVENTS: Record<string, Record<number, RaceEvent[]>> = {
   igtc: { 2025: igtc2025, 2026: igtc2026 },
   superformula: { 2025: superformula2025, 2026: superformula2026 },
   supercars: { 2025: supercars2025, 2026: supercars2026 },
+  f2: { 2025: f22025, 2026: f22026 },
+  f3: { 2025: f32025, 2026: f32026 },
+  dakar: { 2025: dakar2025, 2026: dakar2026 },
+  motogp: { 2025: motogp2025, 2026: motogp2026 },
+  fe: { 2025: fe2025, 2026: fe2026 },
 }
 
 export const AVAILABLE_YEARS = [2026, 2025]

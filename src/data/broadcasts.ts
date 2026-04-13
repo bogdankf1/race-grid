@@ -488,6 +488,86 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'Supercars Play', url: 'https://www.supercars.com/supercarsplay', note: 'Official streaming' },
     ],
   },
+  f2: {
+    US: [
+      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Via F1 package' },
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+    ],
+    UA: [
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+    ],
+    GB: [
+      { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'All sessions live' },
+      { name: 'NOW', url: 'https://www.nowtv.com', note: 'Sky Sports streaming' },
+    ],
+    DE: [
+      { name: 'Sky Deutschland', url: 'https://www.sky.de' },
+    ],
+    PL: [
+      { name: 'Viaplay', url: 'https://viaplay.pl' },
+    ],
+    AU: [
+      { name: 'Fox Sports', url: 'https://www.foxsports.com.au' },
+      { name: 'Kayo Sports', url: 'https://kayosports.com.au' },
+    ],
+    BR: [
+      { name: 'BandSports', url: 'https://www.band.uol.com.br' },
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com' },
+    ],
+    JP: [
+      { name: 'DAZN', url: 'https://www.dazn.com/ja-JP' },
+    ],
+    CO: [
+      { name: 'ESPN Deportes', note: 'Via cable provider' },
+    ],
+  },
+  f3: {
+    US: [
+      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Via F1 package' },
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+    ],
+    UA: [{ name: 'F1 TV Pro', url: 'https://f1tv.formula1.com' }],
+    GB: [{ name: 'Sky Sports F1', url: 'https://www.skysports.com/f1' }],
+    DE: [{ name: 'Sky Deutschland', url: 'https://www.sky.de' }],
+    PL: [{ name: 'Viaplay', url: 'https://viaplay.pl' }],
+    AU: [{ name: 'Fox Sports', url: 'https://www.foxsports.com.au' }],
+    BR: [{ name: 'BandSports' }, { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com' }],
+    JP: [{ name: 'DAZN', url: 'https://www.dazn.com/ja-JP' }],
+    CO: [{ name: 'ESPN Deportes' }],
+  },
+  motogp: {
+    US: [{ name: 'TNT Sports', note: 'All sessions live' }],
+    UA: [{ name: 'Setanta Sports', url: 'https://setantasports.com' }],
+    GB: [{ name: 'TNT Sports', url: 'https://www.tntsports.co.uk', note: 'All sessions live' }],
+    DE: [{ name: 'ServusTV', url: 'https://www.servustv.com' }, { name: 'DAZN', url: 'https://www.dazn.com/de-DE' }],
+    PL: [{ name: 'Polsat Sport' }],
+    AU: [{ name: 'Fox Sports', url: 'https://www.foxsports.com.au' }, { name: 'Kayo Sports', url: 'https://kayosports.com.au' }],
+    BR: [{ name: 'ESPN Brasil' }],
+    JP: [{ name: 'Hulu Japan' }],
+    CO: [{ name: 'ESPN Deportes' }],
+  },
+  dakar: {
+    US: [{ name: 'FloRacing', url: 'https://www.floracing.com', note: 'Daily highlights' }],
+    UA: [],
+    GB: [{ name: 'Eurosport', url: 'https://www.eurosport.co.uk', note: 'Daily highlights' }],
+    DE: [{ name: 'Eurosport', url: 'https://www.eurosport.de' }],
+    PL: [{ name: 'Eurosport', url: 'https://www.eurosport.pl' }],
+    AU: [{ name: 'SBS', note: 'Highlights' }],
+    BR: [{ name: 'ESPN Brasil' }],
+    JP: [],
+    CO: [{ name: 'ESPN Deportes' }],
+  },
+  fe: {
+    US: [{ name: 'CBS Sports', note: 'Select races live + highlights' }],
+    UA: [{ name: 'Setanta Sports', url: 'https://setantasports.com' }],
+    GB: [{ name: 'TNT Sports', url: 'https://www.tntsports.co.uk', note: 'All races live' }],
+    DE: [{ name: 'ProSieben', note: 'Free-to-air' }, { name: 'ran.de', url: 'https://www.ran.de' }],
+    PL: [{ name: 'Eurosport', url: 'https://www.eurosport.pl' }],
+    AU: [{ name: 'Stan Sport', url: 'https://www.stan.com.au/sport' }],
+    BR: [{ name: 'Band', url: 'https://www.band.uol.com.br' }],
+    JP: [{ name: 'J Sports', url: 'https://www.jsports.co.jp' }],
+    CO: [{ name: 'ESPN Deportes' }],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {
