@@ -78,7 +78,8 @@ export function Header({
               />
             )}
 
-            <InstallOrNotify locale={locale} />
+            {/* TODO: Notification icon hidden — needs backend push infrastructure to work properly */}
+            {/* <InstallOrNotify locale={locale} /> */}
 
             {/* Settings */}
             <button
