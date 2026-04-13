@@ -18,7 +18,8 @@ Before starting, gather:
 - **Series branding** — official name, abbreviation, brand color
 - **Logo** — SVG preferred (can be PNG as fallback)
 - **Which filter group** it belongs to: Open Wheel, Endurance, GT / Touring, Stock Car, Rally (or a new group)
-- **Season year(s)** to add (usually current year)
+
+**Note:** This runbook adds the series for the **current year only** (2026). To backfill older years (e.g., 2025), use the `/support-year` skill afterward. The year switcher in the app lets users browse any supported year — a missing year will simply show the series with zero events, which is fine until backfilled.
 
 ---
 
@@ -103,7 +104,7 @@ Rules:
 
 ### 5. Create calendar data file
 
-Create `src/data/<series-id>-<year>.ts`:
+Create `src/data/<series-id>-2026.ts`:
 
 ```typescript
 import { RaceEvent } from '@/lib/types'
@@ -157,7 +158,7 @@ import { <seriesId><year> } from './<series-id>-<year>'
 
 **c) Add to `SERIES_EVENTS` object:**
 ```typescript
-'<series-id>': { <year>: <seriesId><year> },
+'<series-id>': { 2026: <seriesId>2026 },
 ```
 
 ---
@@ -211,7 +212,7 @@ Use `WebSearch` to find official broadcast partners for each country. If no broa
 
 ### 9. Create entries file
 
-Create `src/data/entries/<series-id>-<year>.ts`:
+Create `src/data/entries/<series-id>-2026.ts`:
 
 ```typescript
 import type { EntryItem } from './types'
@@ -231,7 +232,7 @@ Register in `src/data/entries/index.ts`:
 
 ### 10. Create results file
 
-Create `src/data/results/<series-id>-<year>.ts`:
+Create `src/data/results/<series-id>-2026.ts`:
 
 ```typescript
 import type { EventResults } from './types'
@@ -250,7 +251,7 @@ Register in `src/data/results/index.ts`:
 
 ### 11. Create standings file
 
-Create `src/data/standings/<series-id>-<year>.ts`:
+Create `src/data/standings/<series-id>-2026.ts`:
 
 ```typescript
 import type { SeasonStandings } from './types'
@@ -335,7 +336,7 @@ Phase 1: Core data
 - [ ] New circuits added to circuits.ts (if any)
 - [ ] Drivers added to drivers.ts
 - [ ] Teams added to teams.ts
-- [ ] Calendar file created: <series-id>-<year>.ts
+- [ ] Calendar file created: <series-id>-2026.ts
 - [ ] Registered in series-registry.ts (SERIES_META + SERIES_EVENTS + imports)
 - [ ] Added to SeriesFilterDropdown.tsx GROUPS
 
@@ -344,6 +345,8 @@ Phase 2: Supplementary data
 - [ ] Entries file created + registered in entries/index.ts
 - [ ] Results file created + registered in results/index.ts
 - [ ] Standings file created + registered in standings/index.ts
+
+Phase 3 (later): Backfill older years with /support-year
 
 Phase 3: Documentation
 - [ ] CLAUDE.md updated (series count, filter groups, sources)
