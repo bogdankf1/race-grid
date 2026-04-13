@@ -1,4 +1,7 @@
 import type { EntryItem } from './types'
+import { f1Entries2022 } from './f1-2022'
+import { f1Entries2023 } from './f1-2023'
+import { f1Entries2024 } from './f1-2024'
 import { f1Entries2025 } from './f1-2025'
 import { f1Entries2026 } from './f1-2026'
 import { nascarEntries2025 } from './nascar-2025'
@@ -33,6 +36,9 @@ import { feEntries2025 } from './fe-2025'
 import { feEntries2026 } from './fe-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
+  'f1-2022': f1Entries2022,
+  'f1-2023': f1Entries2023,
+  'f1-2024': f1Entries2024,
   'f1-2025': f1Entries2025,
   'f1-2026': f1Entries2026,
   'nascar-2025': nascarEntries2025,

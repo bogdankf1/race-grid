@@ -497,6 +497,9 @@ const DRIVERS: Record<string, Driver> = {
   'rins': { id: 'rins', name: 'Álex Rins', shortName: 'Rins', nationality: 'ES' },
   'vinales': { id: 'vinales', name: 'Maverick Viñales', shortName: 'Viñales', nationality: 'ES' },
   'zarco': { id: 'zarco', name: 'Johann Zarco', shortName: 'Zarco', nationality: 'FR' },
+  // F1 2022 additions
+  'vettel': { id: 'vettel', name: 'Sebastian Vettel', shortName: 'Vettel', nationality: 'DE' },
+  'latifi': { id: 'latifi', name: 'Nicholas Latifi', shortName: 'Latifi', nationality: 'CA' },
   // Formula E Season 11 additions
   'vandoorne': { id: 'vandoorne', name: 'Stoffel Vandoorne', shortName: 'Vandoorne', nationality: 'BE' },
   'jake-hughes': { id: 'jake-hughes', name: 'Jake Hughes', shortName: 'Hughes', nationality: 'GB' },
@@ -512,6 +515,11 @@ const DRIVERS: Record<string, Driver> = {
   'cordeel': { id: 'cordeel', name: 'Amaury Cordeel', shortName: 'Cordeel', nationality: 'BE' },
   'esterson': { id: 'esterson', name: 'Max Esterson', shortName: 'Esterson', nationality: 'US' },
   'meguetounif': { id: 'meguetounif', name: 'Sami Meguetounif', shortName: 'Meguetounif', nationality: 'FR' },
+  // F1 2024 additions
+  'ricciardo': { id: 'ricciardo', name: 'Daniel Ricciardo', shortName: 'Ricciardo', nationality: 'AU' },
+  'sargeant': { id: 'sargeant', name: 'Logan Sargeant', shortName: 'Sargeant', nationality: 'US' },
+  'zhou': { id: 'zhou', name: 'Zhou Guanyu', shortName: 'Zhou', nationality: 'CN' },
+  'magnussen': { id: 'magnussen', name: 'Kevin Magnussen', shortName: 'Magnussen', nationality: 'DK' },
 }
 
 export function getDriver(id: string): Driver | null {

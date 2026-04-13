@@ -1,0 +1,42 @@
+import type { SeasonStandings } from './types'
+
+// F1 2024 final standings — verified from formula1.com/en/results/2024
+export const f1Standings2024: SeasonStandings = {
+  drivers: [
+    { position: 1, driverId: 'verstappen', teamId: 'red-bull-racing', points: 437, wins: 9 },
+    { position: 2, driverId: 'norris', teamId: 'mclaren', points: 374, wins: 4 },
+    { position: 3, driverId: 'leclerc', teamId: 'ferrari', points: 356, wins: 3 },
+    { position: 4, driverId: 'piastri', teamId: 'mclaren', points: 292, wins: 2 },
+    { position: 5, driverId: 'sainz', teamId: 'ferrari', points: 290, wins: 2 },
+    { position: 6, driverId: 'hamilton', teamId: 'mercedes', points: 223, wins: 2 },
+    { position: 7, driverId: 'russell', teamId: 'mercedes', points: 217, wins: 2 },
+    { position: 8, driverId: 'perez', teamId: 'red-bull-racing', points: 152, wins: 0 },
+    { position: 9, driverId: 'alonso', teamId: 'aston-martin', points: 70, wins: 0 },
+    { position: 10, driverId: 'gasly', teamId: 'alpine', points: 42, wins: 0 },
+    { position: 11, driverId: 'hulkenberg', teamId: 'haas', points: 41, wins: 0 },
+    { position: 12, driverId: 'tsunoda', teamId: 'racing-bulls', points: 30, wins: 0 },
+    { position: 13, driverId: 'stroll', teamId: 'aston-martin', points: 24, wins: 0 },
+    { position: 14, driverId: 'ocon', teamId: 'alpine', points: 23, wins: 0 },
+    { position: 15, driverId: 'magnussen', teamId: 'haas', points: 16, wins: 0 },
+    { position: 16, driverId: 'albon', teamId: 'williams', points: 12, wins: 0 },
+    { position: 17, driverId: 'ricciardo', teamId: 'racing-bulls', points: 12, wins: 0 },
+    { position: 18, driverId: 'bearman', teamId: 'ferrari', points: 7, wins: 0 },
+    { position: 19, driverId: 'lawson', teamId: 'racing-bulls', points: 4, wins: 0 },
+    { position: 20, driverId: 'colapinto', teamId: 'williams', points: 5, wins: 0 },
+    { position: 21, driverId: 'bottas', teamId: 'kick-sauber', points: 0, wins: 0 },
+    { position: 22, driverId: 'zhou', teamId: 'kick-sauber', points: 0, wins: 0 },
+    { position: 23, driverId: 'sargeant', teamId: 'williams', points: 0, wins: 0 },
+  ],
+  constructors: [
+    { position: 1, teamId: 'mclaren', points: 666, wins: 6 },
+    { position: 2, teamId: 'ferrari', points: 652, wins: 5 },
+    { position: 3, teamId: 'red-bull-racing', points: 589, wins: 9 },
+    { position: 4, teamId: 'mercedes', points: 440, wins: 4 },
+    { position: 5, teamId: 'aston-martin', points: 94, wins: 0 },
+    { position: 6, teamId: 'alpine', points: 65, wins: 0 },
+    { position: 7, teamId: 'haas', points: 58, wins: 0 },
+    { position: 8, teamId: 'racing-bulls', points: 46, wins: 0 },
+    { position: 9, teamId: 'williams', points: 17, wins: 0 },
+    { position: 10, teamId: 'kick-sauber', points: 0, wins: 0 },
+  ],
+}

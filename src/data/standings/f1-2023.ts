@@ -1,0 +1,41 @@
+import type { SeasonStandings } from './types'
+
+// F1 2023 final standings — verified from formula1.com/en/results/2023
+export const f1Standings2023: SeasonStandings = {
+  drivers: [
+    { position: 1, driverId: 'verstappen', teamId: 'red-bull-racing', points: 575, wins: 19 },
+    { position: 2, driverId: 'perez', teamId: 'red-bull-racing', points: 285, wins: 2 },
+    { position: 3, driverId: 'hamilton', teamId: 'mercedes', points: 234, wins: 0 },
+    { position: 4, driverId: 'alonso', teamId: 'aston-martin', points: 206, wins: 0 },
+    { position: 5, driverId: 'leclerc', teamId: 'ferrari', points: 206, wins: 0 },
+    { position: 6, driverId: 'norris', teamId: 'mclaren', points: 205, wins: 0 },
+    { position: 7, driverId: 'sainz', teamId: 'ferrari', points: 200, wins: 1 },
+    { position: 8, driverId: 'russell', teamId: 'mercedes', points: 175, wins: 0 },
+    { position: 9, driverId: 'piastri', teamId: 'mclaren', points: 97, wins: 0 },
+    { position: 10, driverId: 'stroll', teamId: 'aston-martin', points: 74, wins: 0 },
+    { position: 11, driverId: 'gasly', teamId: 'alpine', points: 62, wins: 0 },
+    { position: 12, driverId: 'ocon', teamId: 'alpine', points: 58, wins: 0 },
+    { position: 13, driverId: 'albon', teamId: 'williams', points: 27, wins: 0 },
+    { position: 14, driverId: 'tsunoda', teamId: 'alphatauri', points: 17, wins: 0 },
+    { position: 15, driverId: 'bottas', teamId: 'alfa-romeo', points: 10, wins: 0 },
+    { position: 16, driverId: 'hulkenberg', teamId: 'haas', points: 9, wins: 0 },
+    { position: 17, driverId: 'ricciardo', teamId: 'alphatauri', points: 6, wins: 0 },
+    { position: 18, driverId: 'zhou', teamId: 'alfa-romeo', points: 6, wins: 0 },
+    { position: 19, driverId: 'magnussen', teamId: 'haas', points: 3, wins: 0 },
+    { position: 20, driverId: 'lawson', teamId: 'alphatauri', points: 2, wins: 0 },
+    { position: 21, driverId: 'sargeant', teamId: 'williams', points: 1, wins: 0 },
+    { position: 22, driverId: 'de-vries', teamId: 'alphatauri', points: 0, wins: 0 },
+  ],
+  constructors: [
+    { position: 1, teamId: 'red-bull-racing', points: 860, wins: 21 },
+    { position: 2, teamId: 'mercedes', points: 409, wins: 0 },
+    { position: 3, teamId: 'ferrari', points: 406, wins: 1 },
+    { position: 4, teamId: 'mclaren', points: 302, wins: 0 },
+    { position: 5, teamId: 'aston-martin', points: 280, wins: 0 },
+    { position: 6, teamId: 'alpine', points: 120, wins: 0 },
+    { position: 7, teamId: 'williams', points: 28, wins: 0 },
+    { position: 8, teamId: 'alphatauri', points: 25, wins: 0 },
+    { position: 9, teamId: 'alfa-romeo', points: 16, wins: 0 },
+    { position: 10, teamId: 'haas', points: 12, wins: 0 },
+  ],
+}

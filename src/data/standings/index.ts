@@ -1,4 +1,7 @@
 import type { SeasonStandings } from './types'
+import { f1Standings2022 } from './f1-2022'
+import { f1Standings2023 } from './f1-2023'
+import { f1Standings2024 } from './f1-2024'
 import { f1Standings2025 } from './f1-2025'
 import { f1Standings2026 } from './f1-2026'
 import { indycarStandings2025 } from './indycar-2025'
@@ -34,6 +37,9 @@ import { feStandings2025 } from './fe-2025'
 import { feStandings2026 } from './fe-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
+  'f1-2022': f1Standings2022,
+  'f1-2023': f1Standings2023,
+  'f1-2024': f1Standings2024,
   'f1-2025': f1Standings2025,
   'f1-2026': f1Standings2026,
   'indycar-2025': indycarStandings2025,

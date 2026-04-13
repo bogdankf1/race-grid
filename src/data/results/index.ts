@@ -1,6 +1,9 @@
 import type { RaceResult, SessionType } from '@/lib/types'
 import type { EventResults } from './types'
 import { resolveResult } from './resolve'
+import { f1Results2022 } from './f1-2022'
+import { f1Results2023 } from './f1-2023'
+import { f1Results2024 } from './f1-2024'
 import { f1Results2025 } from './f1-2025'
 import { f1Results2026 } from './f1-2026'
 import { nascarResults2025 } from './nascar-2025'
@@ -41,6 +44,9 @@ import { feResults2025 } from './fe-2025'
 import { feResults2026 } from './fe-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
+  ...f1Results2022,
+  ...f1Results2023,
+  ...f1Results2024,
   ...f1Results2025,
   ...f1Results2026,
   ...nascarResults2025,

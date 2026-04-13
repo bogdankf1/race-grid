@@ -214,6 +214,9 @@ const TEAMS: Record<string, Team> = {
   // Formula E Season 11 teams
   'maserati-msg': { id: 'maserati-msg', name: 'Maserati MSG Racing', country: 'MC' },
   'neom-mclaren-fe': { id: 'neom-mclaren-fe', name: 'NEOM McLaren Formula E Team', country: 'GB' },
+  // F1 2023 additions
+  'alphatauri': { id: 'alphatauri', name: 'AlphaTauri', country: 'IT' },
+  'alfa-romeo': { id: 'alfa-romeo', name: 'Alfa Romeo', country: 'CH' },
 }
 
 export function getTeam(id: string): Team | null {

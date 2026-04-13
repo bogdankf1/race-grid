@@ -1,0 +1,27 @@
+import type { EntryItem } from './types'
+
+export const f1Entries2024: EntryItem[] = [
+  { driverId: 'verstappen', teamId: 'red-bull-racing', carNumber: 1 },
+  { driverId: 'perez', teamId: 'red-bull-racing', carNumber: 11 },
+  { driverId: 'leclerc', teamId: 'ferrari', carNumber: 16 },
+  { driverId: 'sainz', teamId: 'ferrari', carNumber: 55 },
+  { driverId: 'norris', teamId: 'mclaren', carNumber: 4 },
+  { driverId: 'piastri', teamId: 'mclaren', carNumber: 81 },
+  { driverId: 'hamilton', teamId: 'mercedes', carNumber: 44 },
+  { driverId: 'russell', teamId: 'mercedes', carNumber: 63 },
+  { driverId: 'alonso', teamId: 'aston-martin', carNumber: 14 },
+  { driverId: 'stroll', teamId: 'aston-martin', carNumber: 18 },
+  { driverId: 'gasly', teamId: 'alpine', carNumber: 10 },
+  { driverId: 'ocon', teamId: 'alpine', carNumber: 31 },
+  { driverId: 'albon', teamId: 'williams', carNumber: 23 },
+  { driverId: 'sargeant', teamId: 'williams', carNumber: 2 },
+  { driverId: 'colapinto', teamId: 'williams', carNumber: 43 },
+  { driverId: 'tsunoda', teamId: 'racing-bulls', carNumber: 22 },
+  { driverId: 'ricciardo', teamId: 'racing-bulls', carNumber: 3 },
+  { driverId: 'lawson', teamId: 'racing-bulls', carNumber: 30 },
+  { driverId: 'magnussen', teamId: 'haas', carNumber: 20 },
+  { driverId: 'hulkenberg', teamId: 'haas', carNumber: 27 },
+  { driverId: 'bearman', teamId: 'haas', carNumber: 38 },
+  { driverId: 'bottas', teamId: 'kick-sauber', carNumber: 77 },
+  { driverId: 'zhou', teamId: 'kick-sauber', carNumber: 24 },
+]
