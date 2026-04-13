@@ -404,6 +404,7 @@ button:disabled:active {
   }
   .rg-session-time {
     width: 100%;
+    justify-content: space-evenly;
   }
   .rg-timeline-event {
     display: none;
