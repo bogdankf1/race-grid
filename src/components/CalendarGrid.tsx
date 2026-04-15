@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState, useRef, useCallback } from 'react'
+import { useMemo, useState, useRef, useCallback, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, ChevronDown, Calendar, CalendarDays } from 'lucide-react'
 import {
   startOfMonth, endOfMonth, startOfWeek, endOfWeek,
@@ -118,13 +118,19 @@ export function CalendarGrid({
       onMonthChange(format(addMonths(currentDate, 1), 'yyyy-MM'))
     }
   }
-  const scrollMobileToToday = useCallback(() => {
+  const [mobileReady, setMobileReady] = useState(false)
+
+  const scrollMobileToToday = useCallback((instant?: boolean) => {
     setTimeout(() => {
       const todayStr = format(new Date(), 'yyyy-MM-dd')
       const el = mobileListRef.current?.querySelector(`[data-mobile-date="${todayStr}"]`) as HTMLElement | null
-      el?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }, 50)
-  }, [])
+      el?.scrollIntoView({ behavior: instant ? 'instant' : 'smooth', block: 'center' })
+      if (!mobileReady) setMobileReady(true)
+    }, 10)
+  }, [mobileReady])
+
+  // Auto-scroll to today on mount — list stays invisible until positioned
+  useEffect(() => { scrollMobileToToday(true) }, [scrollMobileToToday])
 
   const goToToday = () => {
     if (viewMode === 'week') {
@@ -361,8 +367,8 @@ export function CalendarGrid({
         </SwipeContainer>
       </div>
 
-      {/* Mobile: vertical event list */}
-      <div className="rg-calendar-mobile" ref={mobileListRef}>
+      {/* Mobile: vertical event list — hidden until scrolled to today */}
+      <div className="rg-calendar-mobile" ref={mobileListRef} style={{ opacity: mobileReady ? 1 : 0 }}>
         <SwipeContainer
           onSwipeLeft={goToNext}
           onSwipeRight={goToPrev}
