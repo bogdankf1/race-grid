@@ -182,6 +182,7 @@ export function CalendarGrid({
 
   return (
     <div className="rg-calendar-wrap">
+      <div className="rg-calendar-controls">
       {/* Nav — top row: prev/label/next */}
       <div
         className="rg-month-nav"
@@ -288,6 +289,7 @@ export function CalendarGrid({
           </button>
         </div>
       </div>
+      </div>{/* end rg-calendar-controls */}
 
       {/* Desktop/tablet: weekday headers + day grid */}
       <div className="rg-calendar-desktop">

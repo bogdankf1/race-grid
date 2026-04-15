@@ -21,6 +21,7 @@
 /* Theme CSS variables — defaults to dark, overridden by JS */
 :root {
   --rg-control-h: 36px;
+  --rg-header-h: 46px;
   --rg-bg: #13131d;
   --rg-surface: #1c1c30;
   --rg-elevated: #232340;
@@ -279,6 +280,14 @@ button:disabled:active {
 @media (max-width: 640px) {
   .rg-calendar-desktop { display: none !important; }
   .rg-calendar-mobile { display: block !important; }
+  .rg-calendar-controls {
+    position: sticky;
+    top: var(--rg-header-h, 46px);
+    z-index: 20;
+    background: var(--rg-bg);
+    padding-top: 8px;
+    padding-bottom: 4px;
+  }
   :root {
     --rg-control-h: 32px;
   }

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Settings } from 'lucide-react'
 import { SeriesFilterDropdown } from './SeriesFilterDropdown'
 import { InstallOrNotify } from './InstallOrNotify'
@@ -47,10 +47,22 @@ export function Header({
   showSeriesFilter = true,
 }: HeaderProps) {
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const el = headerRef.current
+    if (!el) return
+    const update = () => document.documentElement.style.setProperty('--rg-header-h', `${el.offsetHeight}px`)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   return (
     <>
       <header
+        ref={headerRef}
         style={{
           position: 'sticky',
           top: 0,
