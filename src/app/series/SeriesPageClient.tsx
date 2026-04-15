@@ -7,7 +7,7 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { getSeriesForYear, AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
+import { getSeriesForYear, AVAILABLE_YEARS, SERIES_META, SERIES_GROUPS } from '@/data/series-registry'
 import type { SeriesConfig, SessionType } from '@/lib/types'
 import { SeriesLogo } from '@/components/SeriesLogo'
 
@@ -56,7 +56,7 @@ export function SeriesPageClient() {
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
-  const seriesList = useMemo(() => {
+  const groupedSeries = useMemo(() => {
     const all = getSeriesForYear(year)
     const seriesSet = new Set(filterSeriesIds)
     let filtered = all.filter(s => seriesSet.has(s.id))
@@ -66,7 +66,13 @@ export function SeriesPageClient() {
         s.name.toLowerCase().includes(q) || s.shortName.toLowerCase().includes(q)
       )
     }
-    return filtered
+    const byId = new Map(filtered.map(s => [s.id, s]))
+    return SERIES_GROUPS
+      .map(group => ({
+        labelKey: group.labelKey,
+        series: group.ids.map(id => byId.get(id)).filter((s): s is SeriesConfig => !!s),
+      }))
+      .filter(g => g.series.length > 0)
   }, [year, filterSeriesIds, query])
 
   const toggleSeries = (id: string) => {
@@ -154,12 +160,29 @@ export function SeriesPageClient() {
           ))}
         </div>
 
-        {/* Series list */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {seriesList.map(series => (
-            <SeriesCard key={series.id} series={series} locale={locale} />
+        {/* Series list grouped */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+          {groupedSeries.map(group => (
+            <div key={group.labelKey}>
+              <div style={{
+                fontSize: 12,
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: 'var(--rg-text3)',
+                marginBottom: 10,
+                paddingLeft: 2,
+              }}>
+                {t(group.labelKey, locale)}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {group.series.map(series => (
+                  <SeriesCard key={series.id} series={series} locale={locale} />
+                ))}
+              </div>
+            </div>
           ))}
-          {seriesList.length === 0 && (
+          {groupedSeries.length === 0 && (
             <p style={{ color: 'var(--rg-text3)', textAlign: 'center', padding: '32px 0' }}>
               {t('search.noResults', locale)}
             </p>

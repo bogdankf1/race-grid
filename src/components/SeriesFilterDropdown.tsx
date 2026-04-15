@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { Filter, ChevronDown, Check } from 'lucide-react'
-import { ALL_SERIES } from '@/data/series-registry'
+import { ALL_SERIES, SERIES_GROUPS, type SeriesGroup } from '@/data/series-registry'
 import { t, type Locale } from '@/lib/i18n'
 import type { SeriesConfig } from '@/lib/types'
 
@@ -27,19 +27,7 @@ interface SeriesFilterDropdownProps {
   showProgress?: boolean
 }
 
-interface SeriesGroup {
-  labelKey: string
-  ids: string[]
-}
-
-const GROUPS: SeriesGroup[] = [
-  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula'] },
-  { labelKey: 'group.endurance', ids: ['wec', 'elms', 'imsa', 'igtc'] },
-  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'supergt', 'nls', 'supercars'] },
-  { labelKey: 'group.stock', ids: ['nascar'] },
-  { labelKey: 'group.rally', ids: ['wrc', 'dakar'] },
-  { labelKey: 'group.motorcycle', ids: ['motogp'] },
-]
+const GROUPS = SERIES_GROUPS
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(false)

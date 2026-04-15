@@ -97,6 +97,20 @@ const SERIES_EVENTS: Record<string, Record<number, RaceEvent[]>> = {
 
 export const AVAILABLE_YEARS = [2026, 2025, 2024, 2023, 2022]
 
+export interface SeriesGroup {
+  labelKey: string
+  ids: string[]
+}
+
+export const SERIES_GROUPS: SeriesGroup[] = [
+  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula'] },
+  { labelKey: 'group.endurance', ids: ['wec', 'elms', 'imsa', 'igtc'] },
+  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'supergt', 'nls', 'supercars'] },
+  { labelKey: 'group.stock', ids: ['nascar'] },
+  { labelKey: 'group.rally', ids: ['wrc', 'dakar'] },
+  { labelKey: 'group.motorcycle', ids: ['motogp'] },
+]
+
 export function getSeriesForYear(year: number): SeriesConfig[] {
   return SERIES_META.map(meta => ({
     ...meta,
