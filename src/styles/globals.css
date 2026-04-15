@@ -272,8 +272,13 @@ button:disabled:active {
   .rg-event-name { font-size: 18px; }
 }
 
+/* Mobile event list — hidden by default, shown on mobile */
+.rg-calendar-mobile { display: none; }
+
 /* ── Mobile (≤640) ── */
 @media (max-width: 640px) {
+  .rg-calendar-desktop { display: none !important; }
+  .rg-calendar-mobile { display: block !important; }
   :root {
     --rg-control-h: 32px;
   }

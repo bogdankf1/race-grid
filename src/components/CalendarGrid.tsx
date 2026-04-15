@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState, useRef } from 'react'
+import { useMemo, useState, useRef, useCallback } from 'react'
 import { ChevronLeft, ChevronRight, ChevronDown, Calendar, CalendarDays } from 'lucide-react'
 import {
   startOfMonth, endOfMonth, startOfWeek, endOfWeek,
@@ -9,6 +9,7 @@ import {
   isSameMonth, isToday as isDateToday,
 } from 'date-fns'
 import { DayCell } from './DayCell'
+import { MobileEventList } from './MobileEventList'
 import { CalendarSearch } from './CalendarSearch'
 import { SwipeContainer } from './SwipeContainer'
 import { MonthYearPicker } from './MonthYearPicker'
@@ -64,6 +65,7 @@ export function CalendarGrid({
 }: CalendarGridProps) {
   const [pickerOpen, setPickerOpen] = useState(false)
   const monthLabelRef = useRef<HTMLButtonElement>(null)
+  const mobileListRef = useRef<HTMLDivElement>(null)
 
   const currentDate = useMemo(() => {
     const [year, m] = month.split('-').map(Number)
@@ -89,6 +91,18 @@ export function CalendarGrid({
   const days = viewMode === 'week' ? weekDays : monthDays
   const nextRaceDay = useMemo(() => findNextRaceDay(events), [events])
 
+  const mobileDays = useMemo(() => days.map(day => {
+    const dateStr = format(day, 'yyyy-MM-dd')
+    return {
+      dateStr,
+      day,
+      isCurrentMonth: viewMode === 'week' ? true : isSameMonth(day, currentDate),
+      isToday: isDateToday(day),
+      isNextRaceDay: dateStr === nextRaceDay,
+      isHighlighted: dateStr === highlightDate,
+    }
+  }), [days, viewMode, currentDate, nextRaceDay, highlightDate])
+
   // Navigation
   const goToPrev = () => {
     if (viewMode === 'week') {
@@ -104,12 +118,21 @@ export function CalendarGrid({
       onMonthChange(format(addMonths(currentDate, 1), 'yyyy-MM'))
     }
   }
+  const scrollMobileToToday = useCallback(() => {
+    setTimeout(() => {
+      const todayStr = format(new Date(), 'yyyy-MM-dd')
+      const el = mobileListRef.current?.querySelector(`[data-mobile-date="${todayStr}"]`) as HTMLElement | null
+      el?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 50)
+  }, [])
+
   const goToToday = () => {
     if (viewMode === 'week') {
       onWeekStartChange(format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy-MM-dd'))
     } else {
       onMonthChange(format(new Date(), 'yyyy-MM'))
     }
+    scrollMobileToToday()
   }
 
   // When switching modes, sync the date context
@@ -266,74 +289,86 @@ export function CalendarGrid({
         </div>
       </div>
 
-      {/* Weekday headers */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(7, minmax(0, 1fr))',
-          gap: 6,
-          marginBottom: 6,
-        }}
-      >
-        {WEEKDAY_KEYS.map(key => (
-          <div
-            key={key}
-            className="rg-weekday-header"
-            style={{
-              textAlign: 'center',
-              fontSize: 12,
-              fontWeight: 600,
-              color: 'var(--rg-text3)',
-              textTransform: 'uppercase',
-              letterSpacing: 2,
-              padding: '8px 0',
-            }}
-          >
-            {t(key, locale)}
-          </div>
-        ))}
-      </div>
-
-      {/* Day grid — swipeable */}
-      <SwipeContainer
-        onSwipeLeft={goToNext}
-        onSwipeRight={goToPrev}
-        contentKey={viewMode === 'week' ? weekStart : month}
-      >
+      {/* Desktop/tablet: weekday headers + day grid */}
+      <div className="rg-calendar-desktop">
         <div
-          className="rg-day-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(7, minmax(0, 1fr))',
             gap: 6,
+            marginBottom: 6,
           }}
         >
-          {days.map(day => {
-            const dateStr = format(day, 'yyyy-MM-dd')
-            return (
-              <DayCell
-                key={dateStr}
-                date={dateStr}
-                dayNumber={day.getDate()}
-                isCurrentMonth={viewMode === 'week' ? true : isSameMonth(day, currentDate)}
-                isToday={isDateToday(day)}
-                isNextRaceDay={dateStr === nextRaceDay}
-                isHighlighted={dateStr === highlightDate}
-                seriesInfos={events.get(dateStr) || []}
-                moreLabel={t('day.more', locale)}
-                nextUpLabel={t('day.nextUp', locale)}
-              />
-            )
-          })}
+          {WEEKDAY_KEYS.map(key => (
+            <div
+              key={key}
+              className="rg-weekday-header"
+              style={{
+                textAlign: 'center',
+                fontSize: 12,
+                fontWeight: 600,
+                color: 'var(--rg-text3)',
+                textTransform: 'uppercase',
+                letterSpacing: 2,
+                padding: '8px 0',
+              }}
+            >
+              {t(key, locale)}
+            </div>
+          ))}
         </div>
 
-        {/* Empty week message */}
-        {viewMode === 'week' && weekDays.every(d => (events.get(format(d, 'yyyy-MM-dd')) || []).length === 0) && (
-          <div style={{ textAlign: 'center', padding: '32px 0 16px', color: 'var(--rg-text3)', fontSize: 15 }}>
-            {t('week.noRaces', locale)}
+        <SwipeContainer
+          onSwipeLeft={goToNext}
+          onSwipeRight={goToPrev}
+          contentKey={viewMode === 'week' ? weekStart : month}
+        >
+          <div
+            className="rg-day-grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(7, minmax(0, 1fr))',
+              gap: 6,
+            }}
+          >
+            {days.map(day => {
+              const dateStr = format(day, 'yyyy-MM-dd')
+              return (
+                <DayCell
+                  key={dateStr}
+                  date={dateStr}
+                  dayNumber={day.getDate()}
+                  isCurrentMonth={viewMode === 'week' ? true : isSameMonth(day, currentDate)}
+                  isToday={isDateToday(day)}
+                  isNextRaceDay={dateStr === nextRaceDay}
+                  isHighlighted={dateStr === highlightDate}
+                  seriesInfos={events.get(dateStr) || []}
+                  moreLabel={t('day.more', locale)}
+                  nextUpLabel={t('day.nextUp', locale)}
+                />
+              )
+            })}
           </div>
-        )}
-      </SwipeContainer>
+
+          {/* Empty week message */}
+          {viewMode === 'week' && weekDays.every(d => (events.get(format(d, 'yyyy-MM-dd')) || []).length === 0) && (
+            <div style={{ textAlign: 'center', padding: '32px 0 16px', color: 'var(--rg-text3)', fontSize: 15 }}>
+              {t('week.noRaces', locale)}
+            </div>
+          )}
+        </SwipeContainer>
+      </div>
+
+      {/* Mobile: vertical event list */}
+      <div className="rg-calendar-mobile" ref={mobileListRef}>
+        <SwipeContainer
+          onSwipeLeft={goToNext}
+          onSwipeRight={goToPrev}
+          contentKey={viewMode === 'week' ? weekStart : month}
+        >
+          <MobileEventList days={mobileDays} events={events} locale={locale} />
+        </SwipeContainer>
+      </div>
     </div>
   )
 }

@@ -8,6 +8,7 @@ import { ALL_SERIES } from '@/data/series-registry'
 export interface DaySeriesInfo {
   series: SeriesConfig
   eventNames: string[]
+  eventIds: string[]
 }
 
 export function buildEventMap(
@@ -22,27 +23,28 @@ export function buildEventMap(
 
   for (const series of selectedSeries) {
     for (const event of series.events) {
-      const seriesDateEvents = new Map<string, string>()
+      const seriesDateEvents = new Map<string, { name: string; id: string }>()
 
       for (const session of event.sessions) {
         if (visibleSessionTypes && !visibleSessionTypes.includes(session.type)) continue
         const localDate = getLocalDate(session.startUtc, timezone)
         if (dateFilter(localDate)) {
           if (!seriesDateEvents.has(localDate)) {
-            seriesDateEvents.set(localDate, event.name)
+            seriesDateEvents.set(localDate, { name: event.name, id: event.id })
           }
         }
       }
 
-      for (const [date, eventName] of seriesDateEvents) {
+      for (const [date, { name: eventName, id: eventId }] of seriesDateEvents) {
         const existing = map.get(date) || []
         const seriesEntry = existing.find(e => e.series.id === series.id)
         if (seriesEntry) {
           if (!seriesEntry.eventNames.includes(eventName)) {
             seriesEntry.eventNames.push(eventName)
+            seriesEntry.eventIds.push(eventId)
           }
         } else {
-          existing.push({ series, eventNames: [eventName] })
+          existing.push({ series, eventNames: [eventName], eventIds: [eventId] })
           map.set(date, existing)
         }
       }
