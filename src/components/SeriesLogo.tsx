@@ -26,6 +26,7 @@ const LOGO_MAP: Record<string, string> = {
   motogp: '/logos/motogp.svg',
   dakar: '/logos/dakar.svg',
   fe: '/logos/fe.svg',
+  mlmc: '/logos/mlmc.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {

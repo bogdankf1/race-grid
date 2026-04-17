@@ -568,6 +568,37 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
     JP: [{ name: 'J Sports', url: 'https://www.jsports.co.jp' }],
     CO: [{ name: 'ESPN Deportes' }],
   },
+  mlmc: {
+    US: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream — all races' },
+      { name: 'Le Mans Cup Official', url: 'https://www.lemanscup.com', note: 'Live timing & stream' },
+    ],
+    UA: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream — worldwide, no geo-block' },
+      { name: 'Le Mans Cup Official', url: 'https://www.lemanscup.com', note: 'Live stream' },
+    ],
+    GB: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
+    ],
+    DE: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
+    ],
+    PL: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
+    ],
+    AU: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
+    ],
+    BR: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
+    ],
+    JP: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
+    ],
+    CO: [
+      { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

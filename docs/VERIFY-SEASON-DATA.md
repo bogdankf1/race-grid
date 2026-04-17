@@ -37,6 +37,7 @@ Read `src/data/series-registry.ts` to get the full list of active series. As of 
 | `igtc` | IGTC | `igtc-2026.ts` | https://www.intercontinentalgtchallenge.com/calendar |
 | `superformula` | Super Formula | `superformula-2026.ts` | https://racingcalendar.net/championship/super-formula/2026 |
 | `supercars` | Supercars | `supercars-2026.ts` | https://www.supercars.com/2026/supercars-calendar |
+| `mlmc` | Michelin Le Mans Cup | `mlmc-2026.ts` | https://www.lemanscup.com/en/season/2026 |
 
 ### 2. For EACH series, do the following
 

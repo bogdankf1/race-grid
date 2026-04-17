@@ -53,7 +53,7 @@ Race Grid is a motorsport calendar web app (Next.js 15, static export) showing r
 ## Series groups (for filter dropdown)
 
 - **Open Wheel:** F1, IndyCar, Super Formula
-- **Endurance:** WEC, ELMS, IMSA, IGTC
+- **Endurance:** WEC, ELMS, MLMC, IMSA, IGTC
 - **GT / Touring:** DTM, GTWC, Super GT, NLS, Supercars
 - **Stock Car:** NASCAR
 - **Rally:** WRC

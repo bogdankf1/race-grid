@@ -35,6 +35,7 @@ import { motogpStandings2025 } from './motogp-2025'
 import { motogpStandings2026 } from './motogp-2026'
 import { feStandings2025 } from './fe-2025'
 import { feStandings2026 } from './fe-2026'
+import { mlmcStandings2026 } from './mlmc-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2022': f1Standings2022,
@@ -73,6 +74,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'motogp-2026': motogpStandings2026,
   'fe-2025': feStandings2025,
   'fe-2026': feStandings2026,
+  'mlmc-2026': mlmcStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {

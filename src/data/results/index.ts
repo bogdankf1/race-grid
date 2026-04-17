@@ -42,6 +42,7 @@ import { motogpResults2025 } from './motogp-2025'
 import { motogpResults2026 } from './motogp-2026'
 import { feResults2025 } from './fe-2025'
 import { feResults2026 } from './fe-2026'
+import { mlmcResults2026 } from './mlmc-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
   ...f1Results2022,
@@ -85,6 +86,7 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...motogpResults2026,
   ...feResults2025,
   ...feResults2026,
+  ...mlmcResults2026,
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {

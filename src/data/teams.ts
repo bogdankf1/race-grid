@@ -217,6 +217,33 @@ const TEAMS: Record<string, Team> = {
   // F1 2023 additions
   'alphatauri': { id: 'alphatauri', name: 'AlphaTauri', country: 'IT' },
   'alfa-romeo': { id: 'alfa-romeo', name: 'Alfa Romeo', country: 'CH' },
+  // MLMC 2026
+  '23events-racing': { id: '23events-racing', name: '23Events Racing', country: 'AE' },
+  'ans-motorsport': { id: 'ans-motorsport', name: 'ANS Motorsport', country: 'FR' },
+  'bwt-muecke': { id: 'bwt-muecke', name: 'BWT Muecke Motorsport', country: 'DE' },
+  'brutal-fish-campos': { id: 'brutal-fish-campos', name: 'Brutal Fish Campos Racing', country: 'ES' },
+  'vector-sport-rlr': { id: 'vector-sport-rlr', name: 'Vector Sport RLR', country: 'GB' },
+  'trajectus-motorsport': { id: 'trajectus-motorsport', name: 'Trajectus Motorsport', country: 'PT' },
+  'bretton-racing': { id: 'bretton-racing', name: 'Bretton Racing', country: 'FR' },
+  'forestier-racing-vps': { id: 'forestier-racing-vps', name: 'Forestier Racing by VPS', country: 'FR' },
+  'ajith-redant-racing': { id: 'ajith-redant-racing', name: 'Ajith Redant Racing', country: 'IN' },
+  'steller-motorsport': { id: 'steller-motorsport', name: 'Steller Motorsport', country: 'GB' },
+  'm-racing': { id: 'm-racing', name: 'M Racing', country: 'FR' },
+  'team-virage': { id: 'team-virage', name: 'Team Virage', country: 'FR' },
+  'r-ace-gp': { id: 'r-ace-gp', name: 'R-ace GP', country: 'FR' },
+  'clx-motorsport': { id: 'clx-motorsport', name: 'CLX Motorsport', country: 'LU' },
+  'more-motorsport': { id: 'more-motorsport', name: 'More Motorsport', country: 'NL' },
+  'ajith-redant-virage': { id: 'ajith-redant-virage', name: 'Ajith Redant by Virage', country: 'IN' },
+  'racing-spirit-leman': { id: 'racing-spirit-leman', name: 'Racing Spirit of Leman', country: 'CH' },
+  'p4-racing': { id: 'p4-racing', name: 'P4 Racing', country: 'GB' },
+  'gg-classics': { id: 'gg-classics', name: 'GG Classics', country: 'GR' },
+  'rinaldi-racing': { id: 'rinaldi-racing', name: 'Rinaldi Racing', country: 'DE' },
+  'motorsport98': { id: 'motorsport98', name: 'Motorsport98', country: 'BE' },
+  'code-racing': { id: 'code-racing', name: 'Code Racing Development', country: 'CO' },
+  'biogas-motorsport': { id: 'biogas-motorsport', name: 'Biogas Motorsport', country: 'ES' },
+  'dinamic-gt': { id: 'dinamic-gt', name: 'Dinamic GT', country: 'IT' },
+  'smc-motorsport': { id: 'smc-motorsport', name: 'SMC Motorsport', country: 'ES' },
+  'blackthorn': { id: 'blackthorn', name: 'Blackthorn', country: 'GB' },
 }
 
 export function getTeam(id: string): Team | null {

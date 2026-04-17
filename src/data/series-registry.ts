@@ -40,6 +40,7 @@ import { motogp2025 } from './motogp-2025'
 import { motogp2026 } from './motogp-2026'
 import { fe2025 } from './fe-2025'
 import { fe2026 } from './fe-2026'
+import { mlmc2026 } from './mlmc-2026'
 
 interface SeriesMeta {
   id: string
@@ -70,6 +71,7 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'dakar', name: 'Dakar Rally', shortName: 'DAKAR', color: '#D7263D', textColor: '#fff' },
   { id: 'motogp', name: 'MotoGP', shortName: 'MGP', color: '#BE0F34', textColor: '#fff' },
   { id: 'fe', name: 'Formula E', shortName: 'FE', color: '#1E90FF', textColor: '#fff' },
+  { id: 'mlmc', name: 'Michelin Le Mans Cup', shortName: 'MLMC', color: '#234B8A', textColor: '#fff' },
 ]
 
 // Per-series, per-year event data
@@ -93,6 +95,7 @@ const SERIES_EVENTS: Record<string, Record<number, RaceEvent[]>> = {
   dakar: { 2025: dakar2025, 2026: dakar2026 },
   motogp: { 2025: motogp2025, 2026: motogp2026 },
   fe: { 2025: fe2025, 2026: fe2026 },
+  mlmc: { 2026: mlmc2026 },
 }
 
 export const AVAILABLE_YEARS = [2026, 2025, 2024, 2023, 2022]
@@ -104,7 +107,7 @@ export interface SeriesGroup {
 
 export const SERIES_GROUPS: SeriesGroup[] = [
   { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula'] },
-  { labelKey: 'group.endurance', ids: ['wec', 'elms', 'imsa', 'igtc'] },
+  { labelKey: 'group.endurance', ids: ['wec', 'elms', 'mlmc', 'imsa', 'igtc'] },
   { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'supergt', 'nls', 'supercars'] },
   { labelKey: 'group.stock', ids: ['nascar'] },
   { labelKey: 'group.rally', ids: ['wrc', 'dakar'] },
