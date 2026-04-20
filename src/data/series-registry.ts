@@ -1,4 +1,5 @@
 import { SeriesConfig, RaceEvent } from '@/lib/types'
+import { f12021 } from './f1-2021'
 import { f12022 } from './f1-2022'
 import { f12023 } from './f1-2023'
 import { f12024 } from './f1-2024'
@@ -153,7 +154,7 @@ export const SERIES_META: SeriesMeta[] = [
 
 // Per-series, per-year event data
 const SERIES_EVENTS: Record<string, Record<number, RaceEvent[]>> = {
-  f1: { 2022: f12022, 2023: f12023, 2024: f12024, 2025: f12025, 2026: f12026 },
+  f1: { 2021: f12021, 2022: f12022, 2023: f12023, 2024: f12024, 2025: f12025, 2026: f12026 },
   indycar: { 2021: indycar2021, 2022: indycar2022, 2023: indycar2023, 2024: indycar2024, 2025: indycar2025, 2026: indycar2026 },
   nascar: { 2021: nascar2021, 2022: nascar2022, 2023: nascar2023, 2024: nascar2024, 2025: nascar2025, 2026: nascar2026 },
   wec: { 2021: wec2021, 2022: wec2022, 2023: wec2023, 2024: wec2024, 2025: wec2025, 2026: wec2026 },

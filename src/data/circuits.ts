@@ -175,6 +175,7 @@ const CIRCUITS: Record<string, Circuit> = {
   'pukekohe-park-raceway': { id: 'pukekohe-park-raceway', name: 'Pukekohe Park Raceway', country: 'New Zealand', countryCode: 'NZ', length: '2.910 km', turns: 9, type: 'permanent' },
   'newcastle-street-circuit': { id: 'newcastle-street-circuit', name: 'Newcastle Street Circuit', country: 'Australia', countryCode: 'AU', length: '2.600 km', turns: 12, type: 'street' },
   'sochi-autodrom': { id: 'sochi-autodrom', name: 'Sochi Autodrom', country: 'Russia', countryCode: 'RU', length: '5.848 km', turns: 18, type: 'permanent' },
+  'istanbul-park': { id: 'istanbul-park', name: 'Istanbul Park', country: 'Turkey', countryCode: 'TR', length: '5.338 km', turns: 14, type: 'permanent' },
   'zagreb': { id: 'zagreb', name: 'Zagreb', country: 'Croatia', countryCode: 'HR', length: '~300 km', turns: 20, type: 'mixed' },
   'alghero-sardinia': { id: 'alghero-sardinia', name: 'Alghero / Sardinia', country: 'Italy', countryCode: 'IT', length: '~300 km', turns: 20, type: 'mixed' },
   'mikolajki': { id: 'mikolajki', name: 'Mikolajki', country: 'Poland', countryCode: 'PL', length: '~300 km', turns: 18, type: 'mixed' },
