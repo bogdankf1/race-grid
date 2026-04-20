@@ -3,6 +3,15 @@ import type { EventResults } from './types'
 // Formula E Season 12 (2025-26) results — verified from fiaformulae.com
 export const feResults2026: Record<string, EventResults> = {
   'fe-2026-sao-paulo': {
+    qualifying: {
+      overall: { driverIds: ['wehrlein'], teamId: 'porsche-fe' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['wehrlein'], teamId: 'porsche-fe' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['j-dennis'], teamId: 'andretti-fe' },
       classes: [{
@@ -16,6 +25,15 @@ export const feResults2026: Record<string, EventResults> = {
     },
   },
   'fe-2026-mexico-city': {
+    qualifying: {
+      overall: { driverIds: ['buemi'], teamId: 'envision-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['buemi'], teamId: 'envision-racing' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['n-cassidy'], teamId: 'citroen-racing-fe' },
       classes: [{
@@ -29,6 +47,15 @@ export const feResults2026: Record<string, EventResults> = {
     },
   },
   'fe-2026-miami': {
+    qualifying: {
+      overall: { driverIds: ['n-muller'], teamId: 'porsche-fe' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['n-muller'], teamId: 'porsche-fe' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['m-evans'], teamId: 'jaguar-racing' },
       classes: [{
@@ -42,6 +69,15 @@ export const feResults2026: Record<string, EventResults> = {
     },
   },
   'fe-2026-jeddah-1': {
+    qualifying: {
+      overall: { driverIds: ['mortara'], teamId: 'mahindra-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['mortara'], teamId: 'mahindra-racing' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['wehrlein'], teamId: 'porsche-fe' },
       classes: [{
@@ -55,6 +91,15 @@ export const feResults2026: Record<string, EventResults> = {
     },
   },
   'fe-2026-jeddah-2': {
+    qualifying: {
+      overall: { driverIds: ['mortara'], teamId: 'mahindra-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['mortara'], teamId: 'mahindra-racing' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['da-costa'], teamId: 'jaguar-racing' },
       classes: [{
@@ -68,6 +113,15 @@ export const feResults2026: Record<string, EventResults> = {
     },
   },
   'fe-2026-madrid': {
+    qualifying: {
+      overall: { driverIds: ['n-cassidy'], teamId: 'citroen-racing-fe' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['n-cassidy'], teamId: 'citroen-racing-fe' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['da-costa'], teamId: 'jaguar-racing' },
       classes: [{

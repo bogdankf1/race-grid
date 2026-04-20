@@ -37,4 +37,38 @@ export const nlsResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // NLS4 (24h Qualifier Race 1) cancelled after fatal multi-car crash — qualifying completed
+  'nls-2026-24h-quali-1': {
+    qualifying: {
+      overall: { driverIds: ['jahn'], teamId: 'gamota' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['jahn'], teamId: 'gamota' },
+        ],
+      }],
+    },
+  },
+  'nls-2026-24h-quali-2': {
+    qualifying: {
+      overall: { driverIds: ['vermeulen'], teamId: 'kondo-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['vermeulen'], teamId: 'kondo-racing' },
+        ],
+      }],
+    },
+    endurance: {
+      overall: { driverIds: ['haase', 'b-green', 'sims'], teamId: 'scherer-sport-phx' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['haase', 'b-green', 'sims'], teamId: 'scherer-sport-phx' },
+          { position: 2, driverIds: ['engstler', 'bortolotti', 'niederhauser'], teamId: 'abt-sportsline' },
+          { position: 3, driverIds: ['preining'], teamId: 'manthey' },
+        ],
+      }],
+    },
+  },
 }

@@ -9,6 +9,7 @@ import { indycarStandings2026 } from './indycar-2026'
 import { nascarStandings2025 } from './nascar-2025'
 import { nascarStandings2026 } from './nascar-2026'
 import { wecStandings2025 } from './wec-2025'
+import { wecStandings2026 } from './wec-2026'
 import { wrcStandings2025 } from './wrc-2025'
 import { wrcStandings2026 } from './wrc-2026'
 import { imsaStandings2025 } from './imsa-2025'
@@ -25,6 +26,7 @@ import { gtwcStandings2026 } from './gtwc-2026'
 import { supergtStandings2026 } from './supergt-2026'
 import { igtcStandings2026 } from './igtc-2026'
 import { elmsStandings2025 } from './elms-2025'
+import { elmsStandings2026 } from './elms-2026'
 import { f2Standings2025 } from './f2-2025'
 import { f2Standings2026 } from './f2-2026'
 import { f3Standings2025 } from './f3-2025'
@@ -48,6 +50,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'nascar-2025': nascarStandings2025,
   'nascar-2026': nascarStandings2026,
   'wec-2025': wecStandings2025,
+  'wec-2026': wecStandings2026,
   'wrc-2025': wrcStandings2025,
   'wrc-2026': wrcStandings2026,
   'imsa-2025': imsaStandings2025,
@@ -64,6 +67,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'supergt-2026': supergtStandings2026,
   'igtc-2026': igtcStandings2026,
   'elms-2025': elmsStandings2025,
+  'elms-2026': elmsStandings2026,
   'f2-2025': f2Standings2025,
   'f2-2026': f2Standings2026,
   'f3-2025': f3Standings2025,

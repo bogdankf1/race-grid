@@ -30,9 +30,9 @@ export const nls2026: RaceEvent[] = [
     round: 4,
     name: 'ADAC 24h Qualifier — Race 1',
     circuitId: 'nurburgring-nordschleife',
+    // Race cancelled after fatal multi-car crash — only qualifying completed
     sessions: [
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-18T06:30:00Z', durationMinutes: 90 },
-      { type: 'endurance', label: '4h Qualifying Race 1', startUtc: '2026-04-18T15:30:00Z', durationMinutes: 240 },
     ],
   },
   {

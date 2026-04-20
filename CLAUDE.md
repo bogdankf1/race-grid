@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 14 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
+Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 20 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
 
 ## Architecture
 
@@ -29,7 +29,7 @@ Race Grid is a motorsport calendar web app (Next.js 15, static export) showing r
 
 ### Mid-season data verification
 **When:** A race is canceled/rescheduled, geopolitical event affects a host country, monthly routine check, or user reports an error.
-**How:** Follow `docs/VERIFY-SEASON-DATA.md` — it walks through checking all 14 series against official sources and fixing discrepancies.
+**How:** Follow `docs/VERIFY-SEASON-DATA.md` — it walks through checking all 20 series against official sources and fixing discrepancies.
 **Command:** "Verify all race data" or "Check if calendar data is up to date"
 
 ### Race results update

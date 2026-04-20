@@ -74,6 +74,30 @@ export const indycarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'indycar-2026-long-beach': {
+    qualifying: {
+      overall: { driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+          { position: 2, driverIds: ['oward'], teamId: 'arrow-mclaren' },
+          { position: 3, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+          { position: 3, driverIds: ['dixon'], teamId: 'chip-ganassi-racing' },
+        ],
+      }],
+    },
+  },
   'indycar-2026-arlington': {
     qualifying: {
       overall: { driverIds: ['ericsson'], teamId: 'andretti-global' },

@@ -28,25 +28,34 @@ For each finished session without a result, search **official sources first**:
 | Series | Primary source |
 |--------|---------------|
 | F1 | formula1.com/en/results |
+| F2 | fiaformula2.com/Results |
+| F3 | fiaformula3.com/Results |
 | IndyCar | indycar.com/Results |
 | NASCAR | nascar.com/results |
 | WEC | fiawec.com/en/results |
 | IMSA | imsa.com/results |
+| ELMS | europeanlemansseries.com results |
+| MLMC | lemanscup.com results |
+| IGTC | intercontinentalgtchallenge.com/results |
 | WRC | wrc.com/en/results |
+| Dakar | dakar.com/en/rankings |
 | DTM | dtm.com/en/results |
 | GTWC | gt-world-challenge-europe.com/results |
 | NLS | nuerburgring-langstrecken-serie.de results page |
 | Super GT | supergt.net/en/results |
-| ELMS | europeanlemansseries.com results |
-| IGTC | intercontinentalgtchallenge.com/results |
 | Super Formula | superformula.net/en/results |
 | Supercars | supercars.com/results |
+| MotoGP | motogp.com/en/results |
+| Formula E | fiaformulae.com/en/results |
 
 Fallback: `WebSearch` for `"<event name> <year> official results"`
 
 Extract: winner driver(s), winner team, podium (P1-P3), fastest lap (F1 only)
-- For endurance races (WEC, IMSA, ELMS, IGTC, NLS): find overall winner and class winners if available
+- For endurance races (WEC, IMSA, ELMS, MLMC, IGTC, NLS): find overall winner and class winners if available
 - For WRC: find overall rally winner (driver + co-driver + team)
+- For Dakar: find overall car category winner (driver + co-driver + team)
+- For MotoGP: find race winner + podium (sprint and main race)
+- For Formula E: find race winner + podium
 - For qualifying/hyperpole: find pole position and top 3
 
 ### 3. Update result files

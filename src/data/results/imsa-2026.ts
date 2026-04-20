@@ -71,4 +71,36 @@ export const imsaResults2026: Record<string, EventResults> = {
       ],
     },
   },
+  'imsa-2026-long-beach': {
+    qualifying: {
+      overall: { driverIds: ['yelloly'], teamId: 'meyer-shank-racing' },
+      classes: [{
+        className: 'GTP',
+        podium: [
+          { position: 1, driverIds: ['yelloly'], teamId: 'meyer-shank-racing' },
+          { position: 2, driverIds: ['wittmann'], teamId: 'team-wrt' },
+          { position: 3, driverIds: ['deletraz'], teamId: 'wayne-taylor-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['van-der-zande', 'yelloly'], teamId: 'meyer-shank-racing' },
+      classes: [
+        {
+          className: 'GTP',
+          podium: [
+            { position: 1, driverIds: ['van-der-zande', 'yelloly'], teamId: 'meyer-shank-racing' },
+            { position: 2, driverIds: ['aitken', 'vesti'], teamId: 'action-express-racing' },
+            { position: 3, driverIds: ['vanthoor', 'estre'], teamId: 'porsche-penske' },
+          ],
+        },
+        {
+          className: 'GTD',
+          podium: [
+            { position: 1, driverIds: ['telitz', 'pedersen'], teamId: 'vasser-sullivan' },
+          ],
+        },
+      ],
+    },
+  },
 }

@@ -152,4 +152,28 @@ export const nascarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'nascar-2026-kansas': {
+    qualifying: {
+      overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['reddick'], teamId: '23xi-racing' },
+          { position: 2, driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+          { position: 3, driverIds: ['gibbs'], teamId: 'joe-gibbs-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['reddick'], teamId: '23xi-racing' },
+          { position: 2, driverIds: ['larson'], teamId: 'hendrick-motorsports' },
+          { position: 3, driverIds: ['briscoe'], teamId: 'joe-gibbs-racing' },
+        ],
+      }],
+    },
+  },
 }
