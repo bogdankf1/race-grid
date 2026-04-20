@@ -1,0 +1,158 @@
+import { RaceEvent } from '@/lib/types'
+
+// WRC 2021 calendar — 12 rounds
+// Source: en.wikipedia.org/wiki/2021_World_Rally_Championship
+export const wrc2021: RaceEvent[] = [
+  {
+    id: 'wrc-2021-monte-carlo',
+    round: 1,
+    name: 'Rallye Monte-Carlo',
+    circuitId: 'monaco-french-alps',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-01-21T08:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS4', startUtc: '2021-01-21T16:08:00Z', durationMinutes: 240 },
+      { type: 'stage', label: 'SS5–SS10', startUtc: '2021-01-22T07:18:00Z', durationMinutes: 480 },
+      { type: 'stage', label: 'SS11–SS16', startUtc: '2021-01-23T07:38:00Z', durationMinutes: 480 },
+      { type: 'stage', label: 'SS17–SS20 (Power Stage)', startUtc: '2021-01-24T07:08:00Z', durationMinutes: 300 },
+    ],
+  },
+  {
+    id: 'wrc-2021-arctic-finland',
+    round: 2,
+    name: 'Arctic Rally Finland',
+    circuitId: 'rovaniemi',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-02-26T07:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS4', startUtc: '2021-02-26T14:01:00Z', durationMinutes: 240 },
+      { type: 'stage', label: 'SS5–SS8', startUtc: '2021-02-27T06:30:00Z', durationMinutes: 480 },
+      { type: 'stage', label: 'SS9–SS10 (Power Stage)', startUtc: '2021-02-28T07:00:00Z', durationMinutes: 180 },
+    ],
+  },
+  {
+    id: 'wrc-2021-croatia',
+    round: 3,
+    name: 'Croatia Rally',
+    circuitId: 'zagreb',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-04-22T08:01:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS8', startUtc: '2021-04-23T07:03:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS9–SS16', startUtc: '2021-04-24T06:43:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS17–SS20 (Power Stage)', startUtc: '2021-04-25T06:05:00Z', durationMinutes: 320 },
+    ],
+  },
+  {
+    id: 'wrc-2021-portugal',
+    round: 4,
+    name: 'Rally de Portugal',
+    circuitId: 'matosinhos',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-05-20T07:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS2', startUtc: '2021-05-20T18:01:00Z', durationMinutes: 120 },
+      { type: 'stage', label: 'SS3–SS10', startUtc: '2021-05-21T06:35:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS11–SS18', startUtc: '2021-05-22T06:48:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS19–SS20 (Power Stage)', startUtc: '2021-05-23T07:00:00Z', durationMinutes: 240 },
+    ],
+  },
+  {
+    id: 'wrc-2021-italy',
+    round: 5,
+    name: 'Rally Italia Sardegna',
+    circuitId: 'alghero-sardinia',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-06-03T06:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS3', startUtc: '2021-06-03T13:01:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS4–SS11', startUtc: '2021-06-04T05:28:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS12–SS17', startUtc: '2021-06-05T05:38:00Z', durationMinutes: 480 },
+      { type: 'stage', label: 'SS18–SS20 (Power Stage)', startUtc: '2021-06-06T06:00:00Z', durationMinutes: 300 },
+    ],
+  },
+  {
+    id: 'wrc-2021-kenya',
+    round: 6,
+    name: 'Safari Rally Kenya',
+    circuitId: 'naivasha',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-06-24T06:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS3', startUtc: '2021-06-24T14:08:00Z', durationMinutes: 240 },
+      { type: 'stage', label: 'SS4–SS9', startUtc: '2021-06-25T05:38:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS10–SS15', startUtc: '2021-06-26T05:38:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS16–SS18 (Power Stage)', startUtc: '2021-06-27T05:38:00Z', durationMinutes: 300 },
+    ],
+  },
+  {
+    id: 'wrc-2021-estonia',
+    round: 7,
+    name: 'Rally Estonia',
+    circuitId: 'tartu',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-07-15T06:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS4', startUtc: '2021-07-15T15:01:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS5–SS12', startUtc: '2021-07-16T05:30:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS13–SS18', startUtc: '2021-07-17T05:30:00Z', durationMinutes: 480 },
+      { type: 'stage', label: 'SS19–SS22 (Power Stage)', startUtc: '2021-07-18T06:00:00Z', durationMinutes: 300 },
+    ],
+  },
+  {
+    id: 'wrc-2021-belgium',
+    round: 8,
+    name: 'Ypres Rally Belgium',
+    circuitId: 'ypres',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-08-13T07:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS8', startUtc: '2021-08-13T15:01:00Z', durationMinutes: 300 },
+      { type: 'stage', label: 'SS9–SS16', startUtc: '2021-08-14T05:30:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS17–SS20 (Power Stage)', startUtc: '2021-08-15T06:00:00Z', durationMinutes: 300 },
+    ],
+  },
+  {
+    id: 'wrc-2021-greece',
+    round: 9,
+    name: 'Acropolis Rally Greece',
+    circuitId: 'lamia',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-09-09T06:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS4', startUtc: '2021-09-09T14:01:00Z', durationMinutes: 240 },
+      { type: 'stage', label: 'SS5–SS10', startUtc: '2021-09-10T05:08:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS11–SS16', startUtc: '2021-09-11T05:08:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS17–SS18 (Power Stage)', startUtc: '2021-09-12T06:00:00Z', durationMinutes: 240 },
+    ],
+  },
+  {
+    id: 'wrc-2021-finland',
+    round: 10,
+    name: 'Rally Finland',
+    circuitId: 'jyvaskyla',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-10-01T06:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS8', startUtc: '2021-10-01T15:01:00Z', durationMinutes: 300 },
+      { type: 'stage', label: 'SS9–SS16', startUtc: '2021-10-02T05:30:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS17–SS19 (Power Stage)', startUtc: '2021-10-03T06:00:00Z', durationMinutes: 300 },
+    ],
+  },
+  {
+    id: 'wrc-2021-spain',
+    round: 11,
+    name: 'RACC Rally Catalunya de Espana',
+    circuitId: 'salou',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-10-14T07:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS4', startUtc: '2021-10-14T15:01:00Z', durationMinutes: 240 },
+      { type: 'stage', label: 'SS5–SS10', startUtc: '2021-10-15T06:08:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS11–SS16', startUtc: '2021-10-16T06:08:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS17–SS18 (Power Stage)', startUtc: '2021-10-17T07:00:00Z', durationMinutes: 240 },
+    ],
+  },
+  {
+    id: 'wrc-2021-monza',
+    round: 12,
+    name: 'ACI Rally Monza',
+    circuitId: 'monza-rally',
+    sessions: [
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2021-11-18T07:00:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS4', startUtc: '2021-11-18T15:01:00Z', durationMinutes: 240 },
+      { type: 'stage', label: 'SS5–SS10', startUtc: '2021-11-19T06:08:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS11–SS14', startUtc: '2021-11-20T06:08:00Z', durationMinutes: 480 },
+      { type: 'stage', label: 'SS15–SS16 (Power Stage)', startUtc: '2021-11-21T07:00:00Z', durationMinutes: 240 },
+    ],
+  },
+]
