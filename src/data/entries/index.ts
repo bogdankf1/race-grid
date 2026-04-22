@@ -35,6 +35,10 @@ import { motogpEntries2026 } from './motogp-2026'
 import { feEntries2025 } from './fe-2025'
 import { feEntries2026 } from './fe-2026'
 import { mlmcEntries2026 } from './mlmc-2026'
+import { gtwcamEntries2026 } from './gtwcam-2026'
+import { gtwcasiaEntries2026 } from './gtwcasia-2026'
+import { britgtEntries2026 } from './britgt-2026'
+import { gtwcauEntries2026 } from './gtwcau-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -73,6 +77,10 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'fe-2025': feEntries2025,
   'fe-2026': feEntries2026,
   'mlmc-2026': mlmcEntries2026,
+  'gtwcam-2026': gtwcamEntries2026,
+  'gtwcasia-2026': gtwcasiaEntries2026,
+  'britgt-2026': britgtEntries2026,
+  'gtwcau-2026': gtwcauEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

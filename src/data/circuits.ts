@@ -190,6 +190,12 @@ const CIRCUITS: Record<string, Circuit> = {
   'passau': { id: 'passau', name: 'Passau', country: 'Germany', countryCode: 'DE', length: '~300 km', turns: 18, type: 'mixed' },
   'gap-french-alps': { id: 'gap-french-alps', name: 'Gap / French Alps', country: 'France', countryCode: 'FR', length: '~300 km', turns: 20, type: 'mixed' },
   'nairobi': { id: 'nairobi', name: 'Nairobi', country: 'Kenya', countryCode: 'KE', length: '~320 km', turns: 18, type: 'mixed' },
+  'oulton-park': { id: 'oulton-park', name: 'Oulton Park', country: 'United Kingdom', countryCode: 'GB', length: '4.307 km', turns: 17, type: 'permanent' },
+  'snetterton-circuit': { id: 'snetterton-circuit', name: 'Snetterton Circuit', country: 'United Kingdom', countryCode: 'GB', length: '4.779 km', turns: 12, type: 'permanent' },
+  'donington-park': { id: 'donington-park', name: 'Donington Park', country: 'United Kingdom', countryCode: 'GB', length: '4.020 km', turns: 12, type: 'permanent' },
+  'beijing-street-circuit': { id: 'beijing-street-circuit', name: 'Beijing Street Circuit', country: 'China', countryCode: 'CN', length: '3.400 km', turns: 12, type: 'street' },
+  'nola-motorsports-park': { id: 'nola-motorsports-park', name: 'NOLA Motorsports Park', country: 'United States', countryCode: 'US', length: '4.430 km', turns: 16, type: 'permanent' },
+  'hampton-downs-motorsport-park': { id: 'hampton-downs-motorsport-park', name: 'Hampton Downs Motorsport Park', country: 'New Zealand', countryCode: 'NZ', length: '4.030 km', turns: 14, type: 'permanent' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

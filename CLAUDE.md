@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 20 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
+Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 24 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
 
 ## Architecture
 
@@ -54,6 +54,6 @@ Race Grid is a motorsport calendar web app (Next.js 15, static export) showing r
 
 - **Open Wheel:** F1, IndyCar, Super Formula
 - **Endurance:** WEC, ELMS, MLMC, IMSA, IGTC
-- **GT / Touring:** DTM, GTWC, Super GT, NLS, Supercars
+- **GT / Touring:** DTM, GTWC, GTWC America, GTWC Asia, GTWC Australia, British GT, Super GT, NLS, Supercars
 - **Stock Car:** NASCAR
 - **Rally:** WRC

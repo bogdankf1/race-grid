@@ -121,6 +121,29 @@ import { mlmcResults2023 } from './mlmc-2023'
 import { mlmcResults2024 } from './mlmc-2024'
 import { mlmcResults2025 } from './mlmc-2025'
 import { mlmcResults2026 } from './mlmc-2026'
+import { gtwcamResults2021 } from './gtwcam-2021'
+import { gtwcamResults2022 } from './gtwcam-2022'
+import { gtwcamResults2023 } from './gtwcam-2023'
+import { gtwcamResults2024 } from './gtwcam-2024'
+import { gtwcamResults2025 } from './gtwcam-2025'
+import { gtwcamResults2026 } from './gtwcam-2026'
+import { gtwcasiaResults2022 } from './gtwcasia-2022'
+import { gtwcasiaResults2023 } from './gtwcasia-2023'
+import { gtwcasiaResults2024 } from './gtwcasia-2024'
+import { gtwcasiaResults2025 } from './gtwcasia-2025'
+import { gtwcasiaResults2026 } from './gtwcasia-2026'
+import { britgtResults2021 } from './britgt-2021'
+import { britgtResults2022 } from './britgt-2022'
+import { britgtResults2023 } from './britgt-2023'
+import { britgtResults2024 } from './britgt-2024'
+import { britgtResults2025 } from './britgt-2025'
+import { britgtResults2026 } from './britgt-2026'
+import { gtwcauResults2021 } from './gtwcau-2021'
+import { gtwcauResults2022 } from './gtwcau-2022'
+import { gtwcauResults2023 } from './gtwcau-2023'
+import { gtwcauResults2024 } from './gtwcau-2024'
+import { gtwcauResults2025 } from './gtwcau-2025'
+import { gtwcauResults2026 } from './gtwcau-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
   ...f1Results2021,
@@ -243,6 +266,29 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...mlmcResults2024,
   ...mlmcResults2025,
   ...mlmcResults2026,
+  ...gtwcamResults2021,
+  ...gtwcamResults2022,
+  ...gtwcamResults2023,
+  ...gtwcamResults2024,
+  ...gtwcamResults2025,
+  ...gtwcamResults2026,
+  ...gtwcasiaResults2022,
+  ...gtwcasiaResults2023,
+  ...gtwcasiaResults2024,
+  ...gtwcasiaResults2025,
+  ...gtwcasiaResults2026,
+  ...britgtResults2021,
+  ...britgtResults2022,
+  ...britgtResults2023,
+  ...britgtResults2024,
+  ...britgtResults2025,
+  ...britgtResults2026,
+  ...gtwcauResults2021,
+  ...gtwcauResults2022,
+  ...gtwcauResults2023,
+  ...gtwcauResults2024,
+  ...gtwcauResults2025,
+  ...gtwcauResults2026,
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {

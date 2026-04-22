@@ -119,6 +119,29 @@ import { mlmc2023 } from './mlmc-2023'
 import { mlmc2024 } from './mlmc-2024'
 import { mlmc2025 } from './mlmc-2025'
 import { mlmc2026 } from './mlmc-2026'
+import { gtwcam2021 } from './gtwcam-2021'
+import { gtwcam2022 } from './gtwcam-2022'
+import { gtwcam2023 } from './gtwcam-2023'
+import { gtwcam2024 } from './gtwcam-2024'
+import { gtwcam2025 } from './gtwcam-2025'
+import { gtwcam2026 } from './gtwcam-2026'
+import { gtwcasia2022 } from './gtwcasia-2022'
+import { gtwcasia2023 } from './gtwcasia-2023'
+import { gtwcasia2024 } from './gtwcasia-2024'
+import { gtwcasia2025 } from './gtwcasia-2025'
+import { gtwcasia2026 } from './gtwcasia-2026'
+import { britgt2021 } from './britgt-2021'
+import { britgt2022 } from './britgt-2022'
+import { britgt2023 } from './britgt-2023'
+import { britgt2024 } from './britgt-2024'
+import { britgt2025 } from './britgt-2025'
+import { britgt2026 } from './britgt-2026'
+import { gtwcau2021 } from './gtwcau-2021'
+import { gtwcau2022 } from './gtwcau-2022'
+import { gtwcau2023 } from './gtwcau-2023'
+import { gtwcau2024 } from './gtwcau-2024'
+import { gtwcau2025 } from './gtwcau-2025'
+import { gtwcau2026 } from './gtwcau-2026'
 
 interface SeriesMeta {
   id: string
@@ -150,6 +173,10 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'motogp', name: 'MotoGP', shortName: 'MGP', color: '#BE0F34', textColor: '#fff' },
   { id: 'fe', name: 'Formula E', shortName: 'FE', color: '#1E90FF', textColor: '#fff' },
   { id: 'mlmc', name: 'Michelin Le Mans Cup', shortName: 'MLMC', color: '#234B8A', textColor: '#fff' },
+  { id: 'gtwcam', name: 'GT World Challenge America', shortName: 'GTWCA', color: '#D4A843', textColor: '#000' },
+  { id: 'gtwcasia', name: 'GT World Challenge Asia', shortName: 'GTWCAS', color: '#C73E3A', textColor: '#fff' },
+  { id: 'britgt', name: 'British GT Championship', shortName: 'BGT', color: '#1B3C6D', textColor: '#fff' },
+  { id: 'gtwcau', name: 'GT World Challenge Australia', shortName: 'GTWCAU', color: '#00843D', textColor: '#fff' },
 ]
 
 // Per-series, per-year event data
@@ -174,6 +201,10 @@ const SERIES_EVENTS: Record<string, Record<number, RaceEvent[]>> = {
   motogp: { 2021: motogp2021, 2022: motogp2022, 2023: motogp2023, 2024: motogp2024, 2025: motogp2025, 2026: motogp2026 },
   fe: { 2021: fe2021, 2022: fe2022, 2023: fe2023, 2024: fe2024, 2025: fe2025, 2026: fe2026 },
   mlmc: { 2021: mlmc2021, 2022: mlmc2022, 2023: mlmc2023, 2024: mlmc2024, 2025: mlmc2025, 2026: mlmc2026 },
+  gtwcam: { 2021: gtwcam2021, 2022: gtwcam2022, 2023: gtwcam2023, 2024: gtwcam2024, 2025: gtwcam2025, 2026: gtwcam2026 },
+  gtwcasia: { 2022: gtwcasia2022, 2023: gtwcasia2023, 2024: gtwcasia2024, 2025: gtwcasia2025, 2026: gtwcasia2026 },
+  britgt: { 2021: britgt2021, 2022: britgt2022, 2023: britgt2023, 2024: britgt2024, 2025: britgt2025, 2026: britgt2026 },
+  gtwcau: { 2021: gtwcau2021, 2022: gtwcau2022, 2023: gtwcau2023, 2024: gtwcau2024, 2025: gtwcau2025, 2026: gtwcau2026 },
 }
 
 export const AVAILABLE_YEARS = [2026, 2025, 2024, 2023, 2022, 2021]
@@ -186,7 +217,7 @@ export interface SeriesGroup {
 export const SERIES_GROUPS: SeriesGroup[] = [
   { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula'] },
   { labelKey: 'group.endurance', ids: ['wec', 'elms', 'mlmc', 'imsa', 'igtc'] },
-  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'supergt', 'nls', 'supercars'] },
+  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'gtwcam', 'gtwcasia', 'gtwcau', 'britgt', 'supergt', 'nls', 'supercars'] },
   { labelKey: 'group.stock', ids: ['nascar'] },
   { labelKey: 'group.rally', ids: ['wrc', 'dakar'] },
   { labelKey: 'group.motorcycle', ids: ['motogp'] },

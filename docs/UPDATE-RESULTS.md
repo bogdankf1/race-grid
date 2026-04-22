@@ -41,6 +41,10 @@ For each finished session without a result, search **official sources first**:
 | Dakar | dakar.com/en/rankings |
 | DTM | dtm.com/en/results |
 | GTWC | gt-world-challenge-europe.com/results |
+| GTWC America | gt-world-challenge-america.com/results |
+| GTWC Asia | gt-world-challenge-asia.com/results |
+| British GT | britishgt.com/results |
+| GTWC Australia | gt-world-challenge-australia.com/results |
 | NLS | nuerburgring-langstrecken-serie.de results page |
 | Super GT | supergt.net/en/results |
 | Super Formula | superformula.net/en/results |
@@ -135,6 +139,6 @@ Update race results: <list of events updated>
 - **Driver names:** Use the common English spelling (e.g., "Verstappen" not "Max Emilian Verstappen").
 - **For F1 sprint weekends:** Add results for `sprint_qualifying`, `qualifying`, `sprint`, and `race` — all four session types.
 - **For WRC:** Results go under the `stage` session type (the overall rally result, not individual stage results). Only one result per rally, keyed to the `stage` type — the dedup logic ensures it only shows once.
-- **For endurance series with classes:** Include class results in the `classes` array. Use official class names (e.g., "Hypercar", "LMGT3", "LMP2", "GT3", "GTP", "GTD Pro", "GTD").
+- **For endurance series with classes:** Include class results in the `classes` array. Use official class names (e.g., "Hypercar", "LMGT3", "LMP2", "GT3", "GT4", "GTP", "GTD Pro", "GTD", "Pro-Am", "Am", "Silver").
 - **For qualifying:** Use `className: 'Top 3'` for the podium. The UI shows "Pole position" label for qualifying results automatically.
 - **Cancelled events:** If a race/session was cancelled (e.g., weather), remove the session from the calendar data file rather than leaving it without a result.

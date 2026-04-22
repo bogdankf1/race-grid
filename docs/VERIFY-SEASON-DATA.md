@@ -38,6 +38,10 @@ Read `src/data/series-registry.ts` to get the full list of active series. As of 
 | `superformula` | Super Formula | `superformula-2026.ts` | https://racingcalendar.net/championship/super-formula/2026 |
 | `supercars` | Supercars | `supercars-2026.ts` | https://www.supercars.com/2026/supercars-calendar |
 | `mlmc` | Michelin Le Mans Cup | `mlmc-2026.ts` | https://www.lemanscup.com/en/season/2026 |
+| `gtwcam` | GTWC America | `gtwcam-2026.ts` | https://www.gt-world-challenge-america.com/calendar |
+| `gtwcasia` | GTWC Asia | `gtwcasia-2026.ts` | https://www.gt-world-challenge-asia.com/calendar |
+| `britgt` | British GT | `britgt-2026.ts` | https://www.britishgt.com/calendar |
+| `gtwcau` | GTWC Australia | `gtwcau-2026.ts` | https://www.gt-world-challenge-australia.com/calendar |
 
 ### 2. For EACH series, do the following
 

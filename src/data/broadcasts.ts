@@ -599,6 +599,126 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'FIAWEC+', url: 'https://plus.fiawec.com', note: 'Free live stream' },
     ],
   },
+  gtwcam: {
+    US: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream — all races' },
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    UA: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    GB: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    DE: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    PL: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    AU: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    BR: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    JP: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    CO: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+  },
+  gtwcasia: {
+    US: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream — all races' },
+    ],
+    UA: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    GB: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    DE: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    PL: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    AU: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    BR: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    JP: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    CO: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+  },
+  britgt: {
+    US: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream — all races' },
+    ],
+    UA: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    GB: [
+      { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'Selected rounds live' },
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    DE: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    PL: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    AU: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    BR: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    JP: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    CO: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+  },
+  gtwcau: {
+    US: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    UA: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    GB: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    DE: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    PL: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    AU: [
+      { name: 'Fox Sports', note: 'All races live (via Shannons SpeedSeries)' },
+      { name: 'Kayo Sports', url: 'https://kayosports.com.au', note: 'Streaming — all races' },
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    BR: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    JP: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+    CO: [
+      { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

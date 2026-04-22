@@ -32,6 +32,10 @@ Not all series publish their next-season calendar at the same time. Typical time
 | IGTC | June–July | SRO announces alongside GTWC |
 | Super Formula | Late in current year | |
 | Supercars | October | |
+| GTWC America | August–September | SRO announces |
+| GTWC Asia | August–September | SRO announces |
+| British GT | June–July | SRO announces |
+| GTWC Australia | August–September | SRO announces |
 
 **If a calendar is not yet available**, skip that series, add a `// TODO: <year> calendar not yet published` comment to the existing file, and inform the user which series are pending.
 
@@ -167,6 +171,10 @@ Copy and fill this for each new season setup:
 - [ ] IGTC — calendar available? ___ | file created? ___
 - [ ] Super Formula — calendar available? ___ | file created? ___
 - [ ] Supercars — calendar available? ___ | file created? ___
+- [ ] GTWC America — calendar available? ___ | file created? ___
+- [ ] GTWC Asia — calendar available? ___ | file created? ___
+- [ ] British GT — calendar available? ___ | file created? ___
+- [ ] GTWC Australia — calendar available? ___ | file created? ___
 - [ ] Series registry updated? ___
 - [ ] New circuits added? ___
 - [ ] Broadcasts updated? ___

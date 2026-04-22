@@ -36,6 +36,10 @@ For each series needing an update, search **official sources first**:
 | Dakar | dakar.com/en/rankings | Wikipedia "20XX Dakar Rally" |
 | DTM | dtm.com/en/standings | Wikipedia "20XX Deutsche Tourenwagen Masters" |
 | GTWC | gt-world-challenge-europe.com/standings | Wikipedia "20XX GT World Challenge Europe" |
+| GTWC America | gt-world-challenge-america.com/standings | Wikipedia "20XX GT World Challenge America" |
+| GTWC Asia | gt-world-challenge-asia.com/standings | Wikipedia "20XX GT World Challenge Asia" |
+| British GT | britishgt.com/standings | Wikipedia "20XX British GT Championship" |
+| GTWC Australia | gt-world-challenge-australia.com/standings | Wikipedia "20XX GT World Challenge Australia" |
 | NLS | nuerburgring-langstrecken-serie.de | N/A — NLS uses class-based standings, skip if no consolidated table available |
 | Super GT | supergt.net/en/team_ranking | Wikipedia "20XX Super GT Series" |
 | Super Formula | superformula.net/en | Wikipedia "20XX Super Formula Championship" |
@@ -111,6 +115,10 @@ Verify the standings page displays correctly for the updated series.
 - **WEC** — "Manufacturers" championship (Ferrari, Toyota, Porsche, etc.)
 - **WRC** — "Manufacturers" championship (Toyota, Hyundai, M-Sport Ford)
 - **GTWC** — "Teams" championship
+- **GTWC America** — "Teams" championship
+- **GTWC Asia** — "Teams" championship
+- **British GT** — "Teams" championship
+- **GTWC Australia** — "Teams" championship
 - **IGTC** — "Manufacturers" championship
 - **MotoGP** — "Constructors" championship
 

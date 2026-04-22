@@ -112,6 +112,29 @@ import { mlmcStandings2023 } from './mlmc-2023'
 import { mlmcStandings2024 } from './mlmc-2024'
 import { mlmcStandings2025 } from './mlmc-2025'
 import { mlmcStandings2026 } from './mlmc-2026'
+import { gtwcamStandings2021 } from './gtwcam-2021'
+import { gtwcamStandings2022 } from './gtwcam-2022'
+import { gtwcamStandings2023 } from './gtwcam-2023'
+import { gtwcamStandings2024 } from './gtwcam-2024'
+import { gtwcamStandings2025 } from './gtwcam-2025'
+import { gtwcamStandings2026 } from './gtwcam-2026'
+import { gtwcasiaStandings2022 } from './gtwcasia-2022'
+import { gtwcasiaStandings2023 } from './gtwcasia-2023'
+import { gtwcasiaStandings2024 } from './gtwcasia-2024'
+import { gtwcasiaStandings2025 } from './gtwcasia-2025'
+import { gtwcasiaStandings2026 } from './gtwcasia-2026'
+import { britgtStandings2021 } from './britgt-2021'
+import { britgtStandings2022 } from './britgt-2022'
+import { britgtStandings2023 } from './britgt-2023'
+import { britgtStandings2024 } from './britgt-2024'
+import { britgtStandings2025 } from './britgt-2025'
+import { britgtStandings2026 } from './britgt-2026'
+import { gtwcauStandings2021 } from './gtwcau-2021'
+import { gtwcauStandings2022 } from './gtwcau-2022'
+import { gtwcauStandings2023 } from './gtwcau-2023'
+import { gtwcauStandings2024 } from './gtwcau-2024'
+import { gtwcauStandings2025 } from './gtwcau-2025'
+import { gtwcauStandings2026 } from './gtwcau-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -227,6 +250,29 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'mlmc-2024': mlmcStandings2024,
   'mlmc-2025': mlmcStandings2025,
   'mlmc-2026': mlmcStandings2026,
+  'gtwcam-2021': gtwcamStandings2021,
+  'gtwcam-2022': gtwcamStandings2022,
+  'gtwcam-2023': gtwcamStandings2023,
+  'gtwcam-2024': gtwcamStandings2024,
+  'gtwcam-2025': gtwcamStandings2025,
+  'gtwcam-2026': gtwcamStandings2026,
+  'gtwcasia-2022': gtwcasiaStandings2022,
+  'gtwcasia-2023': gtwcasiaStandings2023,
+  'gtwcasia-2024': gtwcasiaStandings2024,
+  'gtwcasia-2025': gtwcasiaStandings2025,
+  'gtwcasia-2026': gtwcasiaStandings2026,
+  'britgt-2021': britgtStandings2021,
+  'britgt-2022': britgtStandings2022,
+  'britgt-2023': britgtStandings2023,
+  'britgt-2024': britgtStandings2024,
+  'britgt-2025': britgtStandings2025,
+  'britgt-2026': britgtStandings2026,
+  'gtwcau-2021': gtwcauStandings2021,
+  'gtwcau-2022': gtwcauStandings2022,
+  'gtwcau-2023': gtwcauStandings2023,
+  'gtwcau-2024': gtwcauStandings2024,
+  'gtwcau-2025': gtwcauStandings2025,
+  'gtwcau-2026': gtwcauStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {
