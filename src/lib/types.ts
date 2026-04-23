@@ -15,6 +15,7 @@ export interface Session {
   label: string
   startUtc: string
   durationMinutes?: number
+  tba?: boolean
 }
 
 export interface RaceEvent {

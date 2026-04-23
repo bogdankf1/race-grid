@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, useLayoutEffect, useCallback } from 'react'
+import { useState, useLayoutEffect, useCallback, useRef } from 'react'
 
 export function useLocalStorage<T>(key: string, initial: T): [T, (val: T) => void] {
   const [value, setValue] = useState<T>(initial)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   // Read from localStorage synchronously before paint (avoids flash)
   useLayoutEffect(() => {
@@ -20,11 +21,15 @@ export function useLocalStorage<T>(key: string, initial: T): [T, (val: T) => voi
   const set = useCallback(
     (val: T) => {
       setValue(val)
-      try {
-        localStorage.setItem(key, JSON.stringify(val))
-      } catch {
-        // ignore storage errors
-      }
+      // Debounce writes to avoid thrashing on rapid state changes
+      if (timerRef.current) clearTimeout(timerRef.current)
+      timerRef.current = setTimeout(() => {
+        try {
+          localStorage.setItem(key, JSON.stringify(val))
+        } catch {
+          // ignore storage errors (private browsing, quota exceeded)
+        }
+      }, 300)
     },
     [key]
   )

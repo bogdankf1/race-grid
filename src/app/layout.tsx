@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, DM_Sans } from 'next/font/google'
+import { OfflineIndicator } from '@/components/OfflineIndicator'
 import '@/styles/globals.css'
 
 const bebasNeue = Bebas_Neue({
@@ -58,12 +59,16 @@ export default function RootLayout({
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')};window.__deferredInstallPrompt=null;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__deferredInstallPrompt=e})`,
+            __html: `if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js',{updateViaCache:'none'})};window.__deferredInstallPrompt=null;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__deferredInstallPrompt=e})`,
           }}
         />
       </head>
       <body className="min-h-screen">
-        {children}
+        <a href="#main-content" className="rg-skip-link">Skip to content</a>
+        <OfflineIndicator />
+        <main id="main-content">
+          {children}
+        </main>
       </body>
     </html>
   )

@@ -319,6 +319,11 @@ The app is genuinely useful and well-built. Here's what stands out:
 - [x] ~~Add focus trap + aria-modal to SettingsModal (Escape to close, Tab cycles within)~~
 - [x] ~~Expand PWA manifest (orientation, categories, shortcuts for Today/Series/Standings, split maskable icon)~~
 
-### Week 4 — Performance
+### Week 4 — Performance & polish
 - [ ] Split data files by year (lazy-load 2021-2025)
 - [ ] Add `next/dynamic` for detail pages
+- [x] ~~TBA session indicator — sessions with `00:00:00Z` or `tba: true` now show "TBA" instead of fake midnight time~~
+- [x] ~~Offline indicator — amber banner at top when `navigator.onLine === false`, auto-hides on reconnect~~
+- [x] ~~SW cache versioning — bumped to v2, added `updateViaCache: 'none'` to registration for reliable updates~~
+- [x] ~~Debounce localStorage writes — 300ms debounce prevents thrashing on rapid toggles~~
+- [x] ~~Skip-to-content link — hidden `<a>` appears on Tab focus, jumps to `#main-content`~~

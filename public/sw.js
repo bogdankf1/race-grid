@@ -2,7 +2,8 @@
 
 // Race Grid Service Worker — offline caching + notification scheduling
 
-const CACHE_NAME = 'race-grid-v1'
+// Cache version based on SW file content hash — update this comment to bust cache: 2026-04-23
+const CACHE_NAME = 'race-grid-v2'
 
 // App shell files to pre-cache on install
 const SHELL_FILES = [
@@ -73,7 +74,6 @@ self.addEventListener('fetch', (e) => {
         })
       })
     )
-    return
   }
 })
 

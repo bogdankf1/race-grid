@@ -115,22 +115,6 @@ export function SettingsModal({
     }
   }, [open])
 
-  if (!open) return null
-
-  const cityLabel = timezone.split('/').pop()?.replace(/_/g, ' ') ?? timezone
-
-  const filtered = Object.entries(TIMEZONE_GROUPS).reduce<Record<string, string[]>>(
-    (acc, [group, zones]) => {
-      const matches = zones.filter(tz =>
-        tz.toLowerCase().includes(tzSearch.toLowerCase()) ||
-        getTimezoneLabel(tz).toLowerCase().includes(tzSearch.toLowerCase())
-      )
-      if (matches.length > 0) acc[group] = matches
-      return acc
-    },
-    {}
-  )
-
   // Focus trap: keep Tab cycling within the modal
   useEffect(() => {
     if (!open) return
@@ -155,6 +139,22 @@ export function SettingsModal({
     first.focus()
     return () => panel.removeEventListener('keydown', handleKeyDown)
   }, [open, onClose])
+
+  if (!open) return null
+
+  const cityLabel = timezone.split('/').pop()?.replace(/_/g, ' ') ?? timezone
+
+  const filtered = Object.entries(TIMEZONE_GROUPS).reduce<Record<string, string[]>>(
+    (acc, [group, zones]) => {
+      const matches = zones.filter(tz =>
+        tz.toLowerCase().includes(tzSearch.toLowerCase()) ||
+        getTimezoneLabel(tz).toLowerCase().includes(tzSearch.toLowerCase())
+      )
+      if (matches.length > 0) acc[group] = matches
+      return acc
+    },
+    {}
+  )
 
   const modal = (
     <div

@@ -199,29 +199,37 @@ function EventCard({ series, event, sessions, now, timezone, locale, spoilerFree
                   </div>
                 </div>
                 <div className="rg-session-time" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-                  <span className="rg-session-time-start" style={{ fontWeight: 600, color: 'var(--rg-text)', textAlign: 'right' }}>
-                    {formatInTimezone(session.startUtc, timezone, 'time', locale)}
-                  </span>
-                  {session.durationMinutes && (
+                  {session.tba || session.startUtc.endsWith('T00:00:00Z') ? (
+                    <span style={{ fontWeight: 600, color: 'var(--rg-text3)', fontSize: 13, fontStyle: 'italic' }}>
+                      TBA
+                    </span>
+                  ) : (
                     <>
+                      <span className="rg-session-time-start" style={{ fontWeight: 600, color: 'var(--rg-text)', textAlign: 'right' }}>
+                        {formatInTimezone(session.startUtc, timezone, 'time', locale)}
+                      </span>
+                      {session.durationMinutes && (
+                        <>
+                          <span className="rg-session-time-sep" style={{ color: 'var(--rg-border)' }}>|</span>
+                          <span className="rg-session-time-dur" style={{ color: 'var(--rg-text3)', textAlign: 'center' }}>
+                            {formatDuration(session.durationMinutes)}
+                          </span>
+                        </>
+                      )}
                       <span className="rg-session-time-sep" style={{ color: 'var(--rg-border)' }}>|</span>
-                      <span className="rg-session-time-dur" style={{ color: 'var(--rg-text3)', textAlign: 'center' }}>
-                        {formatDuration(session.durationMinutes)}
+                      <span className="rg-session-time-status" style={{ textAlign: 'center' }}>
+                        {isLive ? (
+                          <span className="rg-live-badge">{t('session.live', locale)}</span>
+                        ) : isFinished ? (
+                          <span style={{ color: 'var(--rg-text3)', fontWeight: 600 }}>
+                            {t('session.finished', locale)}
+                          </span>
+                        ) : (
+                          <Countdown targetUtc={session.startUtc} locale={locale} />
+                        )}
                       </span>
                     </>
                   )}
-                  <span className="rg-session-time-sep" style={{ color: 'var(--rg-border)' }}>|</span>
-                  <span className="rg-session-time-status" style={{ textAlign: 'center' }}>
-                    {isLive ? (
-                      <span className="rg-live-badge">{t('session.live', locale)}</span>
-                    ) : isFinished ? (
-                      <span style={{ color: 'var(--rg-text3)', fontWeight: 600 }}>
-                        {t('session.finished', locale)}
-                      </span>
-                    ) : (
-                      <Countdown targetUtc={session.startUtc} locale={locale} />
-                    )}
-                  </span>
                 </div>
               </div>
               </div>
