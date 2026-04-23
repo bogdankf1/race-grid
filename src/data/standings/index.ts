@@ -50,6 +50,7 @@ import { dtmStandings2022 } from './dtm-2022'
 import { dtmStandings2023 } from './dtm-2023'
 import { dtmStandings2024 } from './dtm-2024'
 import { dtmStandings2025 } from './dtm-2025'
+import { dtmStandings2026 } from './dtm-2026'
 import { superformulaStandings2021 } from './superformula-2021'
 import { superformulaStandings2022 } from './superformula-2022'
 import { superformulaStandings2023 } from './superformula-2023'
@@ -188,6 +189,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'dtm-2023': dtmStandings2023,
   'dtm-2024': dtmStandings2024,
   'dtm-2025': dtmStandings2025,
+  'dtm-2026': dtmStandings2026,
   'superformula-2021': superformulaStandings2021,
   'superformula-2022': superformulaStandings2022,
   'superformula-2023': superformulaStandings2023,

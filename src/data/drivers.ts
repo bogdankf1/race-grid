@@ -634,6 +634,9 @@ const DRIVERS: Record<string, Driver> = {
   'pittard': { id: 'pittard', name: 'David Pittard', shortName: 'Pittard', nationality: 'GB' },
   'p-kolb': { id: 'p-kolb', name: 'Patrick Kolb', shortName: 'P. Kolb', nationality: 'DE' },
   'p-marti': { id: 'p-marti', name: 'Pepe Martí', shortName: 'Martí', nationality: 'ES' },
+  // Super Formula 2025 additions
+  'taira': { id: 'taira', name: 'Hibiki Taira', shortName: 'Taira', nationality: 'JP' },
+  'o-rasmussen': { id: 'o-rasmussen', name: 'Oliver Rasmussen', shortName: 'O. Rasmussen', nationality: 'DK' },
   // Super Formula 2026 additions
   'browning': { id: 'browning', name: 'Luke Browning', shortName: 'Browning', nationality: 'GB' },
   'nomura': { id: 'nomura', name: 'Yuto Nomura', shortName: 'Nomura', nationality: 'JP' },

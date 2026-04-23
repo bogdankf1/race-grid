@@ -490,50 +490,61 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
   },
   f2: {
     US: [
-      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Via F1 package' },
+      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Included in F1 package' },
       { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
     ],
     UA: [
-      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live + on-demand' },
     ],
     GB: [
       { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'All sessions live' },
       { name: 'NOW', url: 'https://www.nowtv.com', note: 'Sky Sports streaming' },
     ],
     DE: [
-      { name: 'Sky Deutschland', url: 'https://www.sky.de' },
+      { name: 'Sky Sport F1', url: 'https://www.sky.de', note: 'All sessions live' },
     ],
     PL: [
-      { name: 'Viaplay', url: 'https://viaplay.pl' },
+      { name: 'Eleven Sports', url: 'https://elevensports.pl', note: 'All sessions live' },
     ],
     AU: [
-      { name: 'Fox Sports', url: 'https://www.foxsports.com.au' },
-      { name: 'Kayo Sports', url: 'https://kayosports.com.au' },
+      { name: 'Fox Sports', note: 'All sessions live' },
+      { name: 'Kayo Sports', url: 'https://kayosports.com.au', note: 'Streaming' },
     ],
     BR: [
-      { name: 'BandSports', url: 'https://www.band.uol.com.br' },
-      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com' },
+      { name: 'sportv', note: 'Selected rounds live (pay TV)' },
+      { name: 'GloboPlay', url: 'https://globoplay.globo.com', note: 'Streaming' },
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions' },
     ],
     JP: [
-      { name: 'DAZN', url: 'https://www.dazn.com/ja-JP' },
+      { name: 'FOD', url: 'https://fod.fujitv.co.jp', note: 'Pro/Champion tier — includes F1 TV' },
     ],
     CO: [
-      { name: 'ESPN Deportes', note: 'Via cable provider' },
+      { name: 'ESPN', note: 'All sessions live' },
+      { name: 'Disney+', url: 'https://www.disneyplus.com', note: 'Streaming via ESPN' },
     ],
   },
   f3: {
     US: [
-      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Via F1 package' },
+      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Included in F1 package' },
       { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
     ],
-    UA: [{ name: 'F1 TV Pro', url: 'https://f1tv.formula1.com' }],
-    GB: [{ name: 'Sky Sports F1', url: 'https://www.skysports.com/f1' }],
-    DE: [{ name: 'Sky Deutschland', url: 'https://www.sky.de' }],
-    PL: [{ name: 'Viaplay', url: 'https://viaplay.pl' }],
-    AU: [{ name: 'Fox Sports', url: 'https://www.foxsports.com.au' }],
-    BR: [{ name: 'BandSports' }, { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com' }],
-    JP: [{ name: 'DAZN', url: 'https://www.dazn.com/ja-JP' }],
-    CO: [{ name: 'ESPN Deportes' }],
+    UA: [{ name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' }],
+    GB: [
+      { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'All sessions live' },
+      { name: 'NOW', url: 'https://www.nowtv.com', note: 'Streaming' },
+    ],
+    DE: [{ name: 'Sky Sport F1', url: 'https://www.sky.de', note: 'All sessions live' }],
+    PL: [{ name: 'Eleven Sports', url: 'https://elevensports.pl', note: 'All sessions live' }],
+    AU: [
+      { name: 'Fox Sports', note: 'All sessions live' },
+      { name: 'Kayo Sports', url: 'https://kayosports.com.au', note: 'Streaming' },
+    ],
+    BR: [{ name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'Exclusive — not on Globo' }],
+    JP: [{ name: 'FOD', url: 'https://fod.fujitv.co.jp', note: 'Pro/Champion tier — includes F1 TV' }],
+    CO: [
+      { name: 'ESPN', note: 'All sessions live' },
+      { name: 'Disney+', url: 'https://www.disneyplus.com', note: 'Streaming via ESPN' },
+    ],
   },
   motogp: {
     US: [{ name: 'TNT Sports', note: 'All sessions live' }],

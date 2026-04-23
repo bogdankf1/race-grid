@@ -299,15 +299,18 @@ The app is genuinely useful and well-built. Here's what stands out:
 - [x] ~~Add error page (`error.tsx`)~~
 
 ### Week 2 — SEO & data
-- [ ] Add JSON-LD structured data (BreadcrumbList + Event)
-- [ ] Create OG image (even static)
-- [ ] Add F1/F2/F3 broadcast data
-- [ ] Fix F1 2025 entries (add 8 missing drivers)
-- [ ] Add DTM 2026 standings
+- [x] ~~Add JSON-LD structured data (BreadcrumbList in Breadcrumbs component)~~
+- [x] ~~Create OG image (static SVG at /og.svg, added to metadata)~~
+- [x] ~~Update F2/F3 broadcast data (fixed outdated Viaplay/DAZN/BandSports references)~~
+- [x] ~~Fix F1 2025 entries (added 8 missing drivers: all 10 teams now complete)~~
+- [x] ~~Fix F2 2025 entries (rewritten: 10 → 22 drivers, corrected team assignments)~~
+- [x] ~~Fix Super Formula 2025 entries (rewritten: 8 → 22 drivers, all 11 teams)~~
+- [x] ~~Add DTM 2026 standings (placeholder — season in progress)~~
+- [ ] Hydration mismatch on homepage — reviewed, acceptable with static export + useLayoutEffect
+- [ ] Week view timezone date calculation — reviewed, correct behavior (filter set is calendar dates)
 
 ### Week 3 — UX polish
 - [ ] Add loading skeletons
-- [ ] Add error page (`error.tsx`)
 - [ ] Add system theme detection (`prefers-color-scheme`)
 - [ ] Add series favorites/pinning
 - [ ] Add ARIA labels to icon-only buttons
@@ -315,5 +318,3 @@ The app is genuinely useful and well-built. Here's what stands out:
 ### Week 4 — Performance
 - [ ] Split data files by year (lazy-load 2021-2025)
 - [ ] Add `next/dynamic` for detail pages
-- [ ] Fix hydration mismatch on homepage
-- [ ] Fix week view timezone date calculation

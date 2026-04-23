@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#13131d"/>
+  <!-- Grid pattern -->
+  <g opacity="0.15">
+    <line x1="200" y1="0" x2="200" y2="630" stroke="#fff" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke="#fff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#fff" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke="#fff" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="126" x2="1200" y2="126" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="252" x2="1200" y2="252" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="378" x2="1200" y2="378" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="504" x2="1200" y2="504" stroke="#fff" stroke-width="1"/>
+  </g>
+  <!-- Series color dots -->
+  <circle cx="280" cy="190" r="18" fill="#FF1801" opacity="0.9"/>
+  <circle cx="440" cy="190" r="18" fill="#007AC2" opacity="0.9"/>
+  <circle cx="600" cy="190" r="18" fill="#0066CC" opacity="0.9"/>
+  <circle cx="760" cy="190" r="18" fill="#FFD100" opacity="0.9"/>
+  <circle cx="920" cy="190" r="18" fill="#009B3A" opacity="0.9"/>
+  <circle cx="360" cy="320" r="14" fill="#E8A520" opacity="0.7"/>
+  <circle cx="520" cy="320" r="14" fill="#CF171F" opacity="0.7"/>
+  <circle cx="680" cy="320" r="14" fill="#1E1E50" opacity="0.7"/>
+  <circle cx="840" cy="320" r="14" fill="#E60012" opacity="0.7"/>
+  <!-- Title -->
+  <text x="600" y="440" text-anchor="middle" fill="#fff" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" letter-spacing="4">RACE GRID</text>
+  <!-- Subtitle -->
+  <text x="600" y="500" text-anchor="middle" fill="#9ca3af" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400">Motorsport Calendar</text>
+  <!-- Bottom accent line -->
+  <rect x="460" y="540" width="280" height="3" rx="1.5" fill="#FF1801"/>
+</svg>
