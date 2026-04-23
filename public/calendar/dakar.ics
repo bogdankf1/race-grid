@@ -1,0 +1,135 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — Dakar Rally
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:dakar-2026-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260103T060000Z
+DTEND:20260103T080000Z
+SUMMARY:Dakar Rally: Prologue: Yanbu – Yanbu (23 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Prologue: Yanbu – Yanbu (23 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260104T060000Z
+DTEND:20260104T140000Z
+SUMMARY:Dakar Rally: Stage 1: Yanbu – Yanbu (305 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 1: Yanbu – Yanbu (305 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260105T060000Z
+DTEND:20260105T140000Z
+SUMMARY:Dakar Rally: Stage 2: Yanbu – AlUla (400 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 2: Yanbu – AlUla (400 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260106T060000Z
+DTEND:20260106T140000Z
+SUMMARY:Dakar Rally: Stage 3: AlUla – AlUla (422 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 3: AlUla – AlUla (422 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260107T060000Z
+DTEND:20260107T140000Z
+SUMMARY:Dakar Rally: Stage 4: AlUla – AlUla (451 km SS) [Marathon] — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 4: AlUla – AlUla (451 km SS) [Marathon] — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260108T060000Z
+DTEND:20260108T130000Z
+SUMMARY:Dakar Rally: Stage 5: AlUla – Hail (356 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 5: AlUla – Hail (356 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260109T060000Z
+DTEND:20260109T140000Z
+SUMMARY:Dakar Rally: Stage 6: Hail – Riyadh (331 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 6: Hail – Riyadh (331 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s7@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260111T060000Z
+DTEND:20260111T140000Z
+SUMMARY:Dakar Rally: Stage 7: Riyadh – Wadi Ad Dawasir (462 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 7: Riyadh – Wadi Ad Dawasir (462 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s8@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260112T060000Z
+DTEND:20260112T140000Z
+SUMMARY:Dakar Rally: Stage 8: Wadi Ad Dawasir – Wadi Ad Dawasir (481 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 8: Wadi Ad Dawasir – Wadi Ad Dawasir (481 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s9@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260113T060000Z
+DTEND:20260113T140000Z
+SUMMARY:Dakar Rally: Stage 9: Wadi Ad Dawasir – Bisha (418 km SS) [Marathon] — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 9: Wadi Ad Dawasir – Bisha (418 km SS) [Marathon] — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s10@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260114T060000Z
+DTEND:20260114T130000Z
+SUMMARY:Dakar Rally: Stage 10: Bisha – Bisha (371 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 10: Bisha – Bisha (371 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s11@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260115T060000Z
+DTEND:20260115T140000Z
+SUMMARY:Dakar Rally: Stage 11: Bisha – Al Henakiyah (347 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 11: Bisha – Al Henakiyah (347 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s12@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260116T060000Z
+DTEND:20260116T130000Z
+SUMMARY:Dakar Rally: Stage 12: Al Henakiyah – Yanbu (310 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 12: Al Henakiyah – Yanbu (310 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+BEGIN:VEVENT
+UID:dakar-2026-s13@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260117T060000Z
+DTEND:20260117T090000Z
+SUMMARY:Dakar Rally: Stage 13: Yanbu – Yanbu (105 km SS) — 2026 Dakar Rally
+LOCATION:Saudi Arabia (Dakar Route)\, Saudi Arabia
+DESCRIPTION:Stage 13: Yanbu – Yanbu (105 km SS) — 2026 Dakar Rally\\nSaudi Arabia (Dakar Route)\\nDakar Rally
+END:VEVENT
+END:VCALENDAR

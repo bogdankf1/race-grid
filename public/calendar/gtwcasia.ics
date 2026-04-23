@@ -1,0 +1,360 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — GT World Challenge Asia
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:gtwcasia-2026-sepang-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260403T030000Z
+DTEND:20260403T040000Z
+SUMMARY:GT World Challenge Asia: Official Practice — Sepang
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Official Practice — Sepang\\nSepang International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-sepang-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260403T041000Z
+DTEND:20260403T051000Z
+SUMMARY:GT World Challenge Asia: Bronze Session — Sepang
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Bronze Session — Sepang\\nSepang International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-sepang-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260403T074000Z
+DTEND:20260403T084000Z
+SUMMARY:GT World Challenge Asia: Pre-Qualifying — Sepang
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Pre-Qualifying — Sepang\\nSepang International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-sepang-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260404T022500Z
+DTEND:20260404T024000Z
+SUMMARY:GT World Challenge Asia: Qualifying 1 — Sepang
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Qualifying 1 — Sepang\\nSepang International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-sepang-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260404T024700Z
+DTEND:20260404T030200Z
+SUMMARY:GT World Challenge Asia: Qualifying 2 — Sepang
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Qualifying 2 — Sepang\\nSepang International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-sepang-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260404T061500Z
+DTEND:20260404T071500Z
+SUMMARY:GT World Challenge Asia: Race 1 — Sepang
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Race 1 — Sepang\\nSepang International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-sepang-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260405T033000Z
+DTEND:20260405T043000Z
+SUMMARY:GT World Challenge Asia: Race 2 — Sepang
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Race 2 — Sepang\\nSepang International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-mandalika-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260501T024000Z
+DTEND:20260501T034000Z
+SUMMARY:GT World Challenge Asia: Official Practice — Mandalika
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Official Practice — Mandalika\\nMandalika Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-mandalika-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260501T035000Z
+DTEND:20260501T045000Z
+SUMMARY:GT World Challenge Asia: Bronze Session — Mandalika
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Bronze Session — Mandalika\\nMandalika Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-mandalika-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260501T064500Z
+DTEND:20260501T074500Z
+SUMMARY:GT World Challenge Asia: Pre-Qualifying — Mandalika
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Pre-Qualifying — Mandalika\\nMandalika Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-mandalika-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T011500Z
+DTEND:20260502T013000Z
+SUMMARY:GT World Challenge Asia: Qualifying 1 — Mandalika
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Qualifying 1 — Mandalika\\nMandalika Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-mandalika-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T013700Z
+DTEND:20260502T015200Z
+SUMMARY:GT World Challenge Asia: Qualifying 2 — Mandalika
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Qualifying 2 — Mandalika\\nMandalika Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-mandalika-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T053000Z
+DTEND:20260502T063000Z
+SUMMARY:GT World Challenge Asia: Race 1 — Mandalika
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Race 1 — Mandalika\\nMandalika Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-mandalika-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260503T033000Z
+DTEND:20260503T043000Z
+SUMMARY:GT World Challenge Asia: Race 2 — Mandalika
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Race 2 — Mandalika\\nMandalika Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-shanghai-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260604T012000Z
+DTEND:20260604T022000Z
+SUMMARY:GT World Challenge Asia: Official Practice — Shanghai
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Official Practice — Shanghai\\nShanghai International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-shanghai-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260604T022500Z
+DTEND:20260604T032500Z
+SUMMARY:GT World Challenge Asia: Bronze Session — Shanghai
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Bronze Session — Shanghai\\nShanghai International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-shanghai-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260604T065500Z
+DTEND:20260604T075500Z
+SUMMARY:GT World Challenge Asia: Pre-Qualifying — Shanghai
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Pre-Qualifying — Shanghai\\nShanghai International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-shanghai-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T003000Z
+DTEND:20260605T004500Z
+SUMMARY:GT World Challenge Asia: Qualifying 1 — Shanghai
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Qualifying 1 — Shanghai\\nShanghai International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-shanghai-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T005200Z
+DTEND:20260605T010700Z
+SUMMARY:GT World Challenge Asia: Qualifying 2 — Shanghai
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Qualifying 2 — Shanghai\\nShanghai International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-shanghai-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T063500Z
+DTEND:20260605T073500Z
+SUMMARY:GT World Challenge Asia: Race 1 — Shanghai
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Race 1 — Shanghai\\nShanghai International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-shanghai-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260606T025000Z
+DTEND:20260606T035000Z
+SUMMARY:GT World Challenge Asia: Race 2 — Shanghai
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Race 2 — Shanghai\\nShanghai International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-fuji-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260710T010000Z
+DTEND:20260710T020000Z
+SUMMARY:GT World Challenge Asia: Official Practice — Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Official Practice — Fuji\\nFuji Speedway\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-fuji-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260710T050000Z
+DTEND:20260710T060000Z
+SUMMARY:GT World Challenge Asia: Pre-Qualifying — Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Pre-Qualifying — Fuji\\nFuji Speedway\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-fuji-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260711T000000Z
+DTEND:20260711T001500Z
+SUMMARY:GT World Challenge Asia: Qualifying 1 — Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Qualifying 1 — Fuji\\nFuji Speedway\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-fuji-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260711T002200Z
+DTEND:20260711T003700Z
+SUMMARY:GT World Challenge Asia: Qualifying 2 — Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Qualifying 2 — Fuji\\nFuji Speedway\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-fuji-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260711T050000Z
+DTEND:20260711T060000Z
+SUMMARY:GT World Challenge Asia: Race 1 — Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Race 1 — Fuji\\nFuji Speedway\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-fuji-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260712T020000Z
+DTEND:20260712T030000Z
+SUMMARY:GT World Challenge Asia: Race 2 — Fuji
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Race 2 — Fuji\\nFuji Speedway\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-okayama-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260828T010000Z
+DTEND:20260828T020000Z
+SUMMARY:GT World Challenge Asia: Official Practice — Okayama
+LOCATION:Okayama International Circuit\, Japan
+DESCRIPTION:Official Practice — Okayama\\nOkayama International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-okayama-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260828T050000Z
+DTEND:20260828T060000Z
+SUMMARY:GT World Challenge Asia: Pre-Qualifying — Okayama
+LOCATION:Okayama International Circuit\, Japan
+DESCRIPTION:Pre-Qualifying — Okayama\\nOkayama International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-okayama-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T000000Z
+DTEND:20260829T001500Z
+SUMMARY:GT World Challenge Asia: Qualifying 1 — Okayama
+LOCATION:Okayama International Circuit\, Japan
+DESCRIPTION:Qualifying 1 — Okayama\\nOkayama International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-okayama-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T002200Z
+DTEND:20260829T003700Z
+SUMMARY:GT World Challenge Asia: Qualifying 2 — Okayama
+LOCATION:Okayama International Circuit\, Japan
+DESCRIPTION:Qualifying 2 — Okayama\\nOkayama International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-okayama-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T050000Z
+DTEND:20260829T060000Z
+SUMMARY:GT World Challenge Asia: Race 1 — Okayama
+LOCATION:Okayama International Circuit\, Japan
+DESCRIPTION:Race 1 — Okayama\\nOkayama International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-okayama-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260830T020000Z
+DTEND:20260830T030000Z
+SUMMARY:GT World Challenge Asia: Race 2 — Okayama
+LOCATION:Okayama International Circuit\, Japan
+DESCRIPTION:Race 2 — Okayama\\nOkayama International Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-beijing-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261002T010000Z
+DTEND:20261002T020000Z
+SUMMARY:GT World Challenge Asia: Official Practice — Beijing
+LOCATION:Beijing Street Circuit\, China
+DESCRIPTION:Official Practice — Beijing\\nBeijing Street Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-beijing-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261002T050000Z
+DTEND:20261002T060000Z
+SUMMARY:GT World Challenge Asia: Pre-Qualifying — Beijing
+LOCATION:Beijing Street Circuit\, China
+DESCRIPTION:Pre-Qualifying — Beijing\\nBeijing Street Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-beijing-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261003T000000Z
+DTEND:20261003T001500Z
+SUMMARY:GT World Challenge Asia: Qualifying 1 — Beijing
+LOCATION:Beijing Street Circuit\, China
+DESCRIPTION:Qualifying 1 — Beijing\\nBeijing Street Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-beijing-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261003T002200Z
+DTEND:20261003T003700Z
+SUMMARY:GT World Challenge Asia: Qualifying 2 — Beijing
+LOCATION:Beijing Street Circuit\, China
+DESCRIPTION:Qualifying 2 — Beijing\\nBeijing Street Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-beijing-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261003T050000Z
+DTEND:20261003T060000Z
+SUMMARY:GT World Challenge Asia: Race 1 — Beijing
+LOCATION:Beijing Street Circuit\, China
+DESCRIPTION:Race 1 — Beijing\\nBeijing Street Circuit\\nGT World Challenge Asia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcasia-2026-beijing-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261004T020000Z
+DTEND:20261004T030000Z
+SUMMARY:GT World Challenge Asia: Race 2 — Beijing
+LOCATION:Beijing Street Circuit\, China
+DESCRIPTION:Race 2 — Beijing\\nBeijing Street Circuit\\nGT World Challenge Asia
+END:VEVENT
+END:VCALENDAR

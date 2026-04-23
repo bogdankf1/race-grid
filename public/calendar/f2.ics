@@ -1,0 +1,513 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — FIA Formula 2
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:f2-2026-melbourne-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260305T230000Z
+DTEND:20260305T234500Z
+SUMMARY:FIA Formula 2: Practice — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Practice — Melbourne\\nAlbert Park Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-melbourne-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260306T035500Z
+DTEND:20260306T042500Z
+SUMMARY:FIA Formula 2: Qualifying — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Qualifying — Melbourne\\nAlbert Park Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-melbourne-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260307T033000Z
+DTEND:20260307T041500Z
+SUMMARY:FIA Formula 2: Sprint Race — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Sprint Race — Melbourne\\nAlbert Park Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-melbourne-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260308T002500Z
+DTEND:20260308T012500Z
+SUMMARY:FIA Formula 2: Feature Race — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Feature Race — Melbourne\\nAlbert Park Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-miami-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260501T145500Z
+DTEND:20260501T154000Z
+SUMMARY:FIA Formula 2: Practice — Miami
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Practice — Miami\\nMiami International Autodrome\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-miami-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260501T185500Z
+DTEND:20260501T192500Z
+SUMMARY:FIA Formula 2: Qualifying — Miami
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Qualifying — Miami\\nMiami International Autodrome\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-miami-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T143500Z
+DTEND:20260502T152000Z
+SUMMARY:FIA Formula 2: Sprint Race — Miami
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Sprint Race — Miami\\nMiami International Autodrome\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-miami-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260503T174000Z
+DTEND:20260503T184000Z
+SUMMARY:FIA Formula 2: Feature Race — Miami
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Feature Race — Miami\\nMiami International Autodrome\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-montreal-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260522T145500Z
+DTEND:20260522T154000Z
+SUMMARY:FIA Formula 2: Practice — Montréal
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Practice — Montréal\\nCircuit Gilles Villeneuve\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-montreal-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260522T185500Z
+DTEND:20260522T192500Z
+SUMMARY:FIA Formula 2: Qualifying — Montréal
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Qualifying — Montréal\\nCircuit Gilles Villeneuve\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-montreal-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T143500Z
+DTEND:20260523T152000Z
+SUMMARY:FIA Formula 2: Sprint Race — Montréal
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Sprint Race — Montréal\\nCircuit Gilles Villeneuve\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-montreal-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260524T174000Z
+DTEND:20260524T184000Z
+SUMMARY:FIA Formula 2: Feature Race — Montréal
+LOCATION:Circuit Gilles Villeneuve\, Canada
+DESCRIPTION:Feature Race — Montréal\\nCircuit Gilles Villeneuve\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monaco-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260604T095500Z
+DTEND:20260604T104000Z
+SUMMARY:FIA Formula 2: Practice — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Practice — Monaco\\nCircuit de Monaco\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monaco-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T135500Z
+DTEND:20260605T142500Z
+SUMMARY:FIA Formula 2: Qualifying — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Qualifying — Monaco\\nCircuit de Monaco\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monaco-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260606T083500Z
+DTEND:20260606T092000Z
+SUMMARY:FIA Formula 2: Sprint Race — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Sprint Race — Monaco\\nCircuit de Monaco\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monaco-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260607T084000Z
+DTEND:20260607T094000Z
+SUMMARY:FIA Formula 2: Feature Race — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Feature Race — Monaco\\nCircuit de Monaco\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-barcelona-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260612T095500Z
+DTEND:20260612T104000Z
+SUMMARY:FIA Formula 2: Practice — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-barcelona-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260612T135500Z
+DTEND:20260612T142500Z
+SUMMARY:FIA Formula 2: Qualifying — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Qualifying — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-barcelona-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260613T083500Z
+DTEND:20260613T092000Z
+SUMMARY:FIA Formula 2: Sprint Race — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Sprint Race — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-barcelona-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260614T084000Z
+DTEND:20260614T094000Z
+SUMMARY:FIA Formula 2: Feature Race — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Feature Race — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spielberg-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260626T095500Z
+DTEND:20260626T104000Z
+SUMMARY:FIA Formula 2: Practice — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Practice — Spielberg\\nRed Bull Ring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spielberg-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260626T135500Z
+DTEND:20260626T142500Z
+SUMMARY:FIA Formula 2: Qualifying — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Qualifying — Spielberg\\nRed Bull Ring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spielberg-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260627T083500Z
+DTEND:20260627T092000Z
+SUMMARY:FIA Formula 2: Sprint Race — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Sprint Race — Spielberg\\nRed Bull Ring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spielberg-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260628T084000Z
+DTEND:20260628T094000Z
+SUMMARY:FIA Formula 2: Feature Race — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Feature Race — Spielberg\\nRed Bull Ring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-silverstone-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260703T105500Z
+DTEND:20260703T114000Z
+SUMMARY:FIA Formula 2: Practice — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Practice — Silverstone\\nSilverstone Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-silverstone-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260703T145500Z
+DTEND:20260703T152500Z
+SUMMARY:FIA Formula 2: Qualifying — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Qualifying — Silverstone\\nSilverstone Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-silverstone-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260704T093500Z
+DTEND:20260704T102000Z
+SUMMARY:FIA Formula 2: Sprint Race — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Sprint Race — Silverstone\\nSilverstone Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-silverstone-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260705T094000Z
+DTEND:20260705T104000Z
+SUMMARY:FIA Formula 2: Feature Race — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Feature Race — Silverstone\\nSilverstone Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spa-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260717T095500Z
+DTEND:20260717T104000Z
+SUMMARY:FIA Formula 2: Practice — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spa-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260717T135500Z
+DTEND:20260717T142500Z
+SUMMARY:FIA Formula 2: Qualifying — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Qualifying — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spa-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260718T083500Z
+DTEND:20260718T092000Z
+SUMMARY:FIA Formula 2: Sprint Race — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Sprint Race — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-spa-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260719T084000Z
+DTEND:20260719T094000Z
+SUMMARY:FIA Formula 2: Feature Race — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Feature Race — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-budapest-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260724T095500Z
+DTEND:20260724T104000Z
+SUMMARY:FIA Formula 2: Practice — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Practice — Budapest\\nHungaroring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-budapest-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260724T135500Z
+DTEND:20260724T142500Z
+SUMMARY:FIA Formula 2: Qualifying — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Qualifying — Budapest\\nHungaroring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-budapest-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T083500Z
+DTEND:20260725T092000Z
+SUMMARY:FIA Formula 2: Sprint Race — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Sprint Race — Budapest\\nHungaroring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-budapest-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260726T084000Z
+DTEND:20260726T094000Z
+SUMMARY:FIA Formula 2: Feature Race — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Feature Race — Budapest\\nHungaroring\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monza-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260904T095500Z
+DTEND:20260904T104000Z
+SUMMARY:FIA Formula 2: Practice — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Practice — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monza-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260904T135500Z
+DTEND:20260904T142500Z
+SUMMARY:FIA Formula 2: Qualifying — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Qualifying — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monza-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T083500Z
+DTEND:20260905T092000Z
+SUMMARY:FIA Formula 2: Sprint Race — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Sprint Race — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-monza-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260906T084000Z
+DTEND:20260906T094000Z
+SUMMARY:FIA Formula 2: Feature Race — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Feature Race — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-madrid-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T095500Z
+DTEND:20260911T104000Z
+SUMMARY:FIA Formula 2: Practice — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Practice — Madrid\\nCircuito de Madrid\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-madrid-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T135500Z
+DTEND:20260911T142500Z
+SUMMARY:FIA Formula 2: Qualifying — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Qualifying — Madrid\\nCircuito de Madrid\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-madrid-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260912T083500Z
+DTEND:20260912T092000Z
+SUMMARY:FIA Formula 2: Sprint Race — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Sprint Race — Madrid\\nCircuito de Madrid\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-madrid-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260913T084000Z
+DTEND:20260913T094000Z
+SUMMARY:FIA Formula 2: Feature Race — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Feature Race — Madrid\\nCircuito de Madrid\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-baku-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260924T075500Z
+DTEND:20260924T084000Z
+SUMMARY:FIA Formula 2: Practice — Baku
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Practice — Baku\\nBaku City Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-baku-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260924T115500Z
+DTEND:20260924T122500Z
+SUMMARY:FIA Formula 2: Qualifying — Baku
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Qualifying — Baku\\nBaku City Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-baku-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260925T063500Z
+DTEND:20260925T072000Z
+SUMMARY:FIA Formula 2: Sprint Race — Baku
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Sprint Race — Baku\\nBaku City Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-baku-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T064000Z
+DTEND:20260926T074000Z
+SUMMARY:FIA Formula 2: Feature Race — Baku
+LOCATION:Baku City Circuit\, Azerbaijan
+DESCRIPTION:Feature Race — Baku\\nBaku City Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-lusail-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261127T085500Z
+DTEND:20261127T094000Z
+SUMMARY:FIA Formula 2: Practice — Lusail
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice — Lusail\\nLusail International Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-lusail-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261127T125500Z
+DTEND:20261127T132500Z
+SUMMARY:FIA Formula 2: Qualifying — Lusail
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Qualifying — Lusail\\nLusail International Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-lusail-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261128T073500Z
+DTEND:20261128T082000Z
+SUMMARY:FIA Formula 2: Sprint Race — Lusail
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Sprint Race — Lusail\\nLusail International Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-lusail-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261129T074000Z
+DTEND:20261129T084000Z
+SUMMARY:FIA Formula 2: Feature Race — Lusail
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Feature Race — Lusail\\nLusail International Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-abu-dhabi-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261204T075500Z
+DTEND:20261204T084000Z
+SUMMARY:FIA Formula 2: Practice — Abu Dhabi
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Practice — Abu Dhabi\\nYas Marina Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-abu-dhabi-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261204T115500Z
+DTEND:20261204T122500Z
+SUMMARY:FIA Formula 2: Qualifying — Abu Dhabi
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Qualifying — Abu Dhabi\\nYas Marina Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-abu-dhabi-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261205T063500Z
+DTEND:20261205T072000Z
+SUMMARY:FIA Formula 2: Sprint Race — Abu Dhabi
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Sprint Race — Abu Dhabi\\nYas Marina Circuit\\nFIA Formula 2
+END:VEVENT
+BEGIN:VEVENT
+UID:f2-2026-abu-dhabi-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261206T064000Z
+DTEND:20261206T074000Z
+SUMMARY:FIA Formula 2: Feature Race — Abu Dhabi
+LOCATION:Yas Marina Circuit\, United Arab Emirates
+DESCRIPTION:Feature Race — Abu Dhabi\\nYas Marina Circuit\\nFIA Formula 2
+END:VEVENT
+END:VCALENDAR

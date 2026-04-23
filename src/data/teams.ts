@@ -239,6 +239,7 @@ const TEAMS: Record<string, Team> = {
   'team-5zigen': { id: 'team-5zigen', name: 'Team 5ZIGEN', country: 'JP' },
   'team-brm': { id: 'team-brm', name: 'Team BRM', country: 'AU' },
   'walkinshaw-twg': { id: 'walkinshaw-twg', name: 'Walkinshaw TWG Racing', country: 'AU' },
+
   'penrite-racing': { id: 'penrite-racing', name: 'Penrite Racing', country: 'AU' },
   // WEC/IMSA/WRC standings additions
   'bmw': { id: 'bmw', name: 'BMW M Team WRT', country: 'BE' },
@@ -335,6 +336,74 @@ const TEAMS: Record<string, Team> = {
   'black-wolf-motorsport': { id: 'black-wolf-motorsport', name: 'Black Wolf Motorsport', country: 'AU' },
   'blackthorn': { id: 'blackthorn', name: 'Blackthorn', country: 'GB' },
   'blackthorn-racing': { id: 'blackthorn-racing', name: 'Blackthorn Racing', country: 'GB' },
+  // Super Formula 2026 additions
+  'delightworks-racing': { id: 'delightworks-racing', name: 'Delightworks Racing', country: 'JP' },
+  'threebond-racing': { id: 'threebond-racing', name: 'ThreeBond Racing', country: 'JP' },
+  'san-ei-gen-bmax': { id: 'san-ei-gen-bmax', name: 'San-Ei Gen with B-Max', country: 'JP' },
+  'hazama-ando-triple-tree': { id: 'hazama-ando-triple-tree', name: 'Hazama Ando Triple Tree Racing', country: 'JP' },
+  'navikuru-buzz-mk': { id: 'navikuru-buzz-mk', name: 'Navikuru Buzz MK Racing', country: 'JP' },
+  'tgr-dc': { id: 'tgr-dc', name: 'KDDI TGMGP TGR-DC', country: 'JP' },
+  'team-goh': { id: 'team-goh', name: 'Team Goh', country: 'JP' },
+  'ponos-nakajima': { id: 'ponos-nakajima', name: 'Ponos Nakajima Racing', country: 'JP' },
+  'ntt-docomo-rookie': { id: 'ntt-docomo-rookie', name: 'NTT Docomo Business ROOKIE', country: 'JP' },
+  // Super GT 2026 additions
+  'team-hrc-arta': { id: 'team-hrc-arta', name: 'Team HRC ARTA Mugen', country: 'JP' },
+  'astemo-real-racing': { id: 'astemo-real-racing', name: 'Astemo Real Racing', country: 'JP' },
+  'modulo-nakajima': { id: 'modulo-nakajima', name: 'Modulo Nakajima Racing', country: 'JP' },
+  'tgr-sard': { id: 'tgr-sard', name: 'TGR Team SARD', country: 'JP' },
+  // WEC 2026 additions
+  'aston-martin-thor': { id: 'aston-martin-thor', name: 'Aston Martin THOR Team', country: 'GB' },
+  'genesis-magma': { id: 'genesis-magma', name: 'Genesis Magma Racing', country: 'KR' },
+  'manthey-dk': { id: 'manthey-dk', name: 'Manthey DK Engineering', country: 'DE' },
+  'the-bend-manthey': { id: 'the-bend-manthey', name: 'The Bend Manthey', country: 'AU' },
+  'racing-team-turkey-tf': { id: 'racing-team-turkey-tf', name: 'Racing Team Turkey by TF', country: 'TR' },
+  // ELMS 2026 additions
+  'dkr-engineering': { id: 'dkr-engineering', name: 'DKR Engineering', country: 'LU' },
+  'vector-sport': { id: 'vector-sport', name: 'Vector Sport', country: 'GB' },
+  'eurointernational': { id: 'eurointernational', name: 'EuroInternational', country: 'IT' },
+  'ultimate': { id: 'ultimate', name: 'Ultimate', country: 'FR' },
+  'rossa-racing-virage': { id: 'rossa-racing-virage', name: 'Rossa Racing by Virage', country: 'PT' },
+  'gr-racing': { id: 'gr-racing', name: 'GR Racing', country: 'GB' },
+  'team-qatar-iron-lynx': { id: 'team-qatar-iron-lynx', name: 'Team Qatar by Iron Lynx', country: 'QAT' },
+  // British GT 2026 additions
+  'toro-verde-gt': { id: 'toro-verde-gt', name: 'Toro Verde GT', country: 'GB' },
+  'grange-racing-fsr': { id: 'grange-racing-fsr', name: 'Grange Racing by FSR', country: 'GB' },
+  'wsr-flexifly': { id: 'wsr-flexifly', name: 'WSR FlexiFly', country: 'GB' },
+  'innovation-racing': { id: 'innovation-racing', name: 'Innovation Racing', country: 'GB' },
+  'gbr-stratton': { id: 'gbr-stratton', name: 'GBR Stratton Motorsport', country: 'GB' },
+  'townsend-fox': { id: 'townsend-fox', name: 'Townsend Racing / Fox Motorsport', country: 'GB' },
+  'mk-racing': { id: 'mk-racing', name: 'MK Racing', country: 'GB' },
+  // GTWC America 2026 additions
+  'tr3-racing': { id: 'tr3-racing', name: 'TR3 Racing', country: 'US' },
+  'triarsi-competizione': { id: 'triarsi-competizione', name: 'Triarsi Competizione', country: 'US' },
+  'rebel-rock-racing': { id: 'rebel-rock-racing', name: 'Rebel Rock Racing', country: 'US' },
+  // GTWC Asia 2026 additions
+  'bmw-team-studie': { id: 'bmw-team-studie', name: 'PLUS with BMW M Team Studie', country: 'JP' },
+  '33r-harmony-racing': { id: '33r-harmony-racing', name: '33R Harmony Racing', country: 'HK' },
+  'porsche-okazaki': { id: 'porsche-okazaki', name: 'Porsche Centre Okazaki', country: 'JP' },
+  'garage-75': { id: 'garage-75', name: 'Garage 75', country: 'ID' },
+  'amac-motorsport': { id: 'amac-motorsport', name: 'AMAC Motorsport', country: 'AU' },
+  // GTWC Australia 2026 additions
+  'zagame-autosport': { id: 'zagame-autosport', name: 'Zagame Autosport', country: 'AU' },
+  'argt': { id: 'argt', name: 'ARGT', country: 'AU' },
+  'geyer-valmont-tigani': { id: 'geyer-valmont-tigani', name: 'Geyer Valmont Racing / Tigani', country: 'AU' },
+  'wall-racing': { id: 'wall-racing', name: 'Wall Racing', country: 'AU' },
+  'onlyfans-racing': { id: 'onlyfans-racing', name: 'OnlyFans Racing', country: 'AU' },
+  'kfc-team-mpc': { id: 'kfc-team-mpc', name: 'KFC Team MPC', country: 'AU' },
+  'aed-tigani': { id: 'aed-tigani', name: 'AED Consulting / Tigani', country: 'AU' },
+  'supabarn-tigani': { id: 'supabarn-tigani', name: 'Supabarn / Tigani', country: 'AU' },
+  // NASCAR 2026 additions
+  'haas-factory-team': { id: 'haas-factory-team', name: 'Haas Factory Team', country: 'US' },
+  'hyak-motorsports': { id: 'hyak-motorsports', name: 'Hyak Motorsports', country: 'US' },
+  'rick-ware-racing': { id: 'rick-ware-racing', name: 'Rick Ware Racing', country: 'US' },
+  // DTM 2026 additions
+  'red-bull-abt': { id: 'red-bull-abt', name: 'Red Bull Team Abt', country: 'DE' },
+  'tgi-grt': { id: 'tgi-grt', name: 'TGI Team by GRT', country: 'AT' },
+  'hrt-ford': { id: 'hrt-ford', name: 'HRT Ford Racing', country: 'DE' },
+  'team-landgraf': { id: 'team-landgraf', name: 'Team Landgraf', country: 'DE' },
+  // GTWC Europe 2026 additions
+  'boutsen-vds': { id: 'boutsen-vds', name: 'Boutsen VDS', country: 'BE' },
+  'eastalent-racing': { id: 'eastalent-racing', name: 'Eastalent Racing', country: 'DE' },
 }
 
 export function getTeam(id: string): Team | null {

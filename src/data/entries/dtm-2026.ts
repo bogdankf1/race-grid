@@ -1,0 +1,25 @@
+import type { EntryItem } from './types'
+
+export const dtmEntries2026: EntryItem[] = [
+  { driverId: 'k-van-der-linde', teamId: 'schubert-motorsport', carNumber: 3 },
+  { driverId: 'wittmann', teamId: 'schubert-motorsport', carNumber: 11 },
+  { driverId: 'thiim', teamId: 'comtoyou-racing', carNumber: 7 },
+  { driverId: 'baert', teamId: 'comtoyou-racing', carNumber: 8 },
+  { driverId: 'mapelli', teamId: 'red-bull-abt', carNumber: 10 },
+  { driverId: 'engstler', teamId: 'red-bull-abt', carNumber: 130 },
+  { driverId: 'cairoli', teamId: 'emil-frey-racing', carNumber: 14 },
+  { driverId: 'vermeulen', teamId: 'emil-frey-racing', carNumber: 69 },
+  { driverId: 'glock', teamId: 'dorr-motorsport', carNumber: 16 },
+  { driverId: 'dorr', teamId: 'dorr-motorsport', carNumber: 25 },
+  { driverId: 'bortolotti', teamId: 'tgi-grt', carNumber: 19 },
+  { driverId: 'maximilian-paul', teamId: 'tgi-grt', carNumber: 63 },
+  { driverId: 'auer', teamId: 'team-landgraf', carNumber: 22 },
+  { driverId: 'kalender', teamId: 'team-landgraf', carNumber: 84 },
+  { driverId: 'buus', teamId: 'land-motorsport', carNumber: 29 },
+  { driverId: 'maini', teamId: 'hrt-ford', carNumber: 36 },
+  { driverId: 'wiebelhaus', teamId: 'hrt-ford', carNumber: 64 },
+  { driverId: 'gounon', teamId: 'winward-racing', carNumber: 48 },
+  { driverId: 'engel', teamId: 'winward-racing', carNumber: 80 },
+  { driverId: 'feller', teamId: 'manthey', carNumber: 90 },
+  { driverId: 'preining', teamId: 'manthey', carNumber: 91 },
+]

@@ -8,227 +8,290 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:sf-2026-motegi-s0@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260404T010000Z
-DTEND:20260404T020000Z
-SUMMARY:Super Formula: Practice — Motegi — Rd. 1
+DTSTAMP:20260423T110148Z
+DTSTART:20260403T011000Z
+DTEND:20260403T024000Z
+SUMMARY:Super Formula: Practice 1 — Motegi — Rds. 1 & 2
 LOCATION:Twin Ring Motegi\, Japan
-DESCRIPTION:Practice — Motegi — Rd. 1\\nTwin Ring Motegi\\nSuper Formula
+DESCRIPTION:Practice 1 — Motegi — Rds. 1 & 2\\nTwin Ring Motegi\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-motegi-s1@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260404T040000Z
-DTEND:20260404T043000Z
-SUMMARY:Super Formula: Qualifying — Motegi — Rd. 1
+DTSTAMP:20260423T110148Z
+DTSTART:20260403T053000Z
+DTEND:20260403T072500Z
+SUMMARY:Super Formula: Practice 2 — Motegi — Rds. 1 & 2
 LOCATION:Twin Ring Motegi\, Japan
-DESCRIPTION:Qualifying — Motegi — Rd. 1\\nTwin Ring Motegi\\nSuper Formula
+DESCRIPTION:Practice 2 — Motegi — Rds. 1 & 2\\nTwin Ring Motegi\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-motegi-s2@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260405T040000Z
-DTEND:20260405T051500Z
-SUMMARY:Super Formula: Race — Motegi — Rd. 1
+DTSTAMP:20260423T110148Z
+DTSTART:20260404T003000Z
+DTEND:20260404T011500Z
+SUMMARY:Super Formula: Qualifying 1 — Motegi — Rds. 1 & 2
 LOCATION:Twin Ring Motegi\, Japan
-DESCRIPTION:Race — Motegi — Rd. 1\\nTwin Ring Motegi\\nSuper Formula
+DESCRIPTION:Qualifying 1 — Motegi — Rds. 1 & 2\\nTwin Ring Motegi\\nSuper Formula
+END:VEVENT
+BEGIN:VEVENT
+UID:sf-2026-motegi-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260404T054500Z
+DTEND:20260404T070000Z
+SUMMARY:Super Formula: Race 1 — Motegi — Rds. 1 & 2
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Race 1 — Motegi — Rds. 1 & 2\\nTwin Ring Motegi\\nSuper Formula
+END:VEVENT
+BEGIN:VEVENT
+UID:sf-2026-motegi-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260405T011000Z
+DTEND:20260405T015500Z
+SUMMARY:Super Formula: Qualifying 2 — Motegi — Rds. 1 & 2
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Qualifying 2 — Motegi — Rds. 1 & 2\\nTwin Ring Motegi\\nSuper Formula
+END:VEVENT
+BEGIN:VEVENT
+UID:sf-2026-motegi-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260405T054500Z
+DTEND:20260405T070000Z
+SUMMARY:Super Formula: Race 2 — Motegi — Rds. 1 & 2
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Race 2 — Motegi — Rds. 1 & 2\\nTwin Ring Motegi\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-autopolis-s0@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20260425T010000Z
 DTEND:20260425T020000Z
-SUMMARY:Super Formula: Practice — Autopolis — Rd. 2
+SUMMARY:Super Formula: Practice — Autopolis — Rd. 3
 LOCATION:Autopolis\, Japan
-DESCRIPTION:Practice — Autopolis — Rd. 2\\nAutopolis\\nSuper Formula
+DESCRIPTION:Practice — Autopolis — Rd. 3\\nAutopolis\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-autopolis-s1@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20260425T040000Z
-DTEND:20260425T043000Z
-SUMMARY:Super Formula: Qualifying — Autopolis — Rd. 2
+DTEND:20260425T050000Z
+SUMMARY:Super Formula: Qualifying — Autopolis — Rd. 3
 LOCATION:Autopolis\, Japan
-DESCRIPTION:Qualifying — Autopolis — Rd. 2\\nAutopolis\\nSuper Formula
+DESCRIPTION:Qualifying — Autopolis — Rd. 3\\nAutopolis\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-autopolis-s2@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260426T040000Z
-DTEND:20260426T051500Z
-SUMMARY:Super Formula: Race — Autopolis — Rd. 2
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T054500Z
+DTEND:20260426T070000Z
+SUMMARY:Super Formula: Race — Autopolis — Rd. 3
 LOCATION:Autopolis\, Japan
-DESCRIPTION:Race — Autopolis — Rd. 2\\nAutopolis\\nSuper Formula
+DESCRIPTION:Race — Autopolis — Rd. 3\\nAutopolis\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-1-s0@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20260522T010000Z
-DTEND:20260522T020000Z
-SUMMARY:Super Formula: Practice — Suzuka — Rds. 3 & 4
+DTEND:20260522T023000Z
+SUMMARY:Super Formula: Practice — Suzuka — Rds. 4 & 5
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Practice — Suzuka — Rds. 3 & 4\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Practice — Suzuka — Rds. 4 & 5\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-1-s1@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260523T010000Z
-DTEND:20260523T013000Z
-SUMMARY:Super Formula: Qualifying — Suzuka — Rds. 3 & 4
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T003000Z
+DTEND:20260523T011500Z
+SUMMARY:Super Formula: Qualifying 1 — Suzuka — Rds. 4 & 5
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Qualifying — Suzuka — Rds. 3 & 4\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Qualifying 1 — Suzuka — Rds. 4 & 5\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-1-s2@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260523T040000Z
-DTEND:20260523T051500Z
-SUMMARY:Super Formula: Race 1 — Suzuka — Rds. 3 & 4
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T054500Z
+DTEND:20260523T070000Z
+SUMMARY:Super Formula: Race 1 — Suzuka — Rds. 4 & 5
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Race 1 — Suzuka — Rds. 3 & 4\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Race 1 — Suzuka — Rds. 4 & 5\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-1-s3@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260524T040000Z
-DTEND:20260524T051500Z
-SUMMARY:Super Formula: Race 2 — Suzuka — Rds. 3 & 4
+DTSTAMP:20260423T110148Z
+DTSTART:20260524T011000Z
+DTEND:20260524T015500Z
+SUMMARY:Super Formula: Qualifying 2 — Suzuka — Rds. 4 & 5
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Race 2 — Suzuka — Rds. 3 & 4\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Qualifying 2 — Suzuka — Rds. 4 & 5\\nSuzuka International Racing Course\\nSuper Formula
+END:VEVENT
+BEGIN:VEVENT
+UID:sf-2026-suzuka-1-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260524T054500Z
+DTEND:20260524T070000Z
+SUMMARY:Super Formula: Race 2 — Suzuka — Rds. 4 & 5
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Race 2 — Suzuka — Rds. 4 & 5\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-1-s0@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20260717T010000Z
-DTEND:20260717T020000Z
-SUMMARY:Super Formula: Practice — Fuji — Rds. 5 & 6
+DTEND:20260717T023000Z
+SUMMARY:Super Formula: Practice — Fuji — Rds. 6 & 7
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Practice — Fuji — Rds. 5 & 6\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Practice — Fuji — Rds. 6 & 7\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-1-s1@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260718T010000Z
-DTEND:20260718T013000Z
-SUMMARY:Super Formula: Qualifying — Fuji — Rds. 5 & 6
+DTSTAMP:20260423T110148Z
+DTSTART:20260718T003000Z
+DTEND:20260718T011500Z
+SUMMARY:Super Formula: Qualifying 1 — Fuji — Rds. 6 & 7
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Qualifying — Fuji — Rds. 5 & 6\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Qualifying 1 — Fuji — Rds. 6 & 7\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-1-s2@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260718T040000Z
-DTEND:20260718T051500Z
-SUMMARY:Super Formula: Race 1 — Fuji — Rds. 5 & 6
+DTSTAMP:20260423T110148Z
+DTSTART:20260718T054500Z
+DTEND:20260718T070000Z
+SUMMARY:Super Formula: Race 1 — Fuji — Rds. 6 & 7
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Race 1 — Fuji — Rds. 5 & 6\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Race 1 — Fuji — Rds. 6 & 7\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-1-s3@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260719T040000Z
-DTEND:20260719T051500Z
-SUMMARY:Super Formula: Race 2 — Fuji — Rds. 5 & 6
+DTSTAMP:20260423T110148Z
+DTSTART:20260719T011000Z
+DTEND:20260719T015500Z
+SUMMARY:Super Formula: Qualifying 2 — Fuji — Rds. 6 & 7
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Race 2 — Fuji — Rds. 5 & 6\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Qualifying 2 — Fuji — Rds. 6 & 7\\nFuji Speedway\\nSuper Formula
+END:VEVENT
+BEGIN:VEVENT
+UID:sf-2026-fuji-1-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260719T054500Z
+DTEND:20260719T070000Z
+SUMMARY:Super Formula: Race 2 — Fuji — Rds. 6 & 7
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Race 2 — Fuji — Rds. 6 & 7\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-sugo-s0@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20260808T010000Z
 DTEND:20260808T020000Z
-SUMMARY:Super Formula: Practice — Sugo — Rd. 7
+SUMMARY:Super Formula: Practice — Sugo — Rd. 8
 LOCATION:Sportsland Sugo\, Japan
-DESCRIPTION:Practice — Sugo — Rd. 7\\nSportsland Sugo\\nSuper Formula
+DESCRIPTION:Practice — Sugo — Rd. 8\\nSportsland Sugo\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-sugo-s1@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20260808T040000Z
-DTEND:20260808T043000Z
-SUMMARY:Super Formula: Qualifying — Sugo — Rd. 7
+DTEND:20260808T050000Z
+SUMMARY:Super Formula: Qualifying — Sugo — Rd. 8
 LOCATION:Sportsland Sugo\, Japan
-DESCRIPTION:Qualifying — Sugo — Rd. 7\\nSportsland Sugo\\nSuper Formula
+DESCRIPTION:Qualifying — Sugo — Rd. 8\\nSportsland Sugo\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-sugo-s2@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20260809T040000Z
-DTEND:20260809T051500Z
-SUMMARY:Super Formula: Race — Sugo — Rd. 7
+DTSTAMP:20260423T110148Z
+DTSTART:20260809T054500Z
+DTEND:20260809T070000Z
+SUMMARY:Super Formula: Race — Sugo — Rd. 8
 LOCATION:Sportsland Sugo\, Japan
-DESCRIPTION:Race — Sugo — Rd. 7\\nSportsland Sugo\\nSuper Formula
+DESCRIPTION:Race — Sugo — Rd. 8\\nSportsland Sugo\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-2-s0@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20261009T010000Z
-DTEND:20261009T020000Z
-SUMMARY:Super Formula: Practice — Fuji — Rds. 8 & 9
+DTEND:20261009T023000Z
+SUMMARY:Super Formula: Practice — Fuji — Rds. 9 & 10
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Practice — Fuji — Rds. 8 & 9\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Practice — Fuji — Rds. 9 & 10\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-2-s1@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20261010T010000Z
-DTEND:20261010T013000Z
-SUMMARY:Super Formula: Qualifying — Fuji — Rds. 8 & 9
+DTSTAMP:20260423T110148Z
+DTSTART:20261010T003000Z
+DTEND:20261010T011500Z
+SUMMARY:Super Formula: Qualifying 1 — Fuji — Rds. 9 & 10
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Qualifying — Fuji — Rds. 8 & 9\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Qualifying 1 — Fuji — Rds. 9 & 10\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-2-s2@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20261010T040000Z
-DTEND:20261010T051500Z
-SUMMARY:Super Formula: Race 1 — Fuji — Rds. 8 & 9
+DTSTAMP:20260423T110148Z
+DTSTART:20261010T054500Z
+DTEND:20261010T070000Z
+SUMMARY:Super Formula: Race 1 — Fuji — Rds. 9 & 10
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Race 1 — Fuji — Rds. 8 & 9\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Race 1 — Fuji — Rds. 9 & 10\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-fuji-2-s3@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20261011T040000Z
-DTEND:20261011T051500Z
-SUMMARY:Super Formula: Race 2 — Fuji — Rds. 8 & 9
+DTSTAMP:20260423T110148Z
+DTSTART:20261011T011000Z
+DTEND:20261011T015500Z
+SUMMARY:Super Formula: Qualifying 2 — Fuji — Rds. 9 & 10
 LOCATION:Fuji Speedway\, Japan
-DESCRIPTION:Race 2 — Fuji — Rds. 8 & 9\\nFuji Speedway\\nSuper Formula
+DESCRIPTION:Qualifying 2 — Fuji — Rds. 9 & 10\\nFuji Speedway\\nSuper Formula
+END:VEVENT
+BEGIN:VEVENT
+UID:sf-2026-fuji-2-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261011T054500Z
+DTEND:20261011T070000Z
+SUMMARY:Super Formula: Race 2 — Fuji — Rds. 9 & 10
+LOCATION:Fuji Speedway\, Japan
+DESCRIPTION:Race 2 — Fuji — Rds. 9 & 10\\nFuji Speedway\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-2-s0@racegrid
-DTSTAMP:20260329T103853Z
+DTSTAMP:20260423T110148Z
 DTSTART:20261120T010000Z
-DTEND:20261120T020000Z
-SUMMARY:Super Formula: Practice — Suzuka Finale — Rds. 10 & 11
+DTEND:20261120T023000Z
+SUMMARY:Super Formula: Practice — Suzuka Finale — Rds. 11 & 12
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Practice — Suzuka Finale — Rds. 10 & 11\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Practice — Suzuka Finale — Rds. 11 & 12\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-2-s1@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20261121T010000Z
-DTEND:20261121T013000Z
-SUMMARY:Super Formula: Qualifying — Suzuka Finale — Rds. 10 & 11
+DTSTAMP:20260423T110148Z
+DTSTART:20261121T003000Z
+DTEND:20261121T011500Z
+SUMMARY:Super Formula: Qualifying 1 — Suzuka Finale — Rds. 11 & 12
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Qualifying — Suzuka Finale — Rds. 10 & 11\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Qualifying 1 — Suzuka Finale — Rds. 11 & 12\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-2-s2@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20261121T040000Z
-DTEND:20261121T051500Z
-SUMMARY:Super Formula: Race 1 — Suzuka Finale — Rds. 10 & 11
+DTSTAMP:20260423T110148Z
+DTSTART:20261121T054500Z
+DTEND:20261121T070000Z
+SUMMARY:Super Formula: Race 1 — Suzuka Finale — Rds. 11 & 12
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Race 1 — Suzuka Finale — Rds. 10 & 11\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Race 1 — Suzuka Finale — Rds. 11 & 12\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 BEGIN:VEVENT
 UID:sf-2026-suzuka-2-s3@racegrid
-DTSTAMP:20260329T103853Z
-DTSTART:20261122T040000Z
-DTEND:20261122T051500Z
-SUMMARY:Super Formula: Race 2 — Suzuka Finale — Rds. 10 & 11
+DTSTAMP:20260423T110148Z
+DTSTART:20261122T011000Z
+DTEND:20261122T015500Z
+SUMMARY:Super Formula: Qualifying 2 — Suzuka Finale — Rds. 11 & 12
 LOCATION:Suzuka International Racing Course\, Japan
-DESCRIPTION:Race 2 — Suzuka Finale — Rds. 10 & 11\\nSuzuka International Racing Course\\nSuper Formula
+DESCRIPTION:Qualifying 2 — Suzuka Finale — Rds. 11 & 12\\nSuzuka International Racing Course\\nSuper Formula
+END:VEVENT
+BEGIN:VEVENT
+UID:sf-2026-suzuka-2-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261122T054500Z
+DTEND:20261122T070000Z
+SUMMARY:Super Formula: Race 2 — Suzuka Finale — Rds. 11 & 12
+LOCATION:Suzuka International Racing Course\, Japan
+DESCRIPTION:Race 2 — Suzuka Finale — Rds. 11 & 12\\nSuzuka International Racing Course\\nSuper Formula
 END:VEVENT
 END:VCALENDAR

@@ -1,0 +1,1395 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — MotoGP
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:motogp-2026-thailand-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260227T030000Z
+DTEND:20260227T034500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Thailand
+LOCATION:Chang International Circuit\, Thailand
+DESCRIPTION:Practice 1 — Grand Prix of Thailand\\nChang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-thailand-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260227T070000Z
+DTEND:20260227T080000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Thailand
+LOCATION:Chang International Circuit\, Thailand
+DESCRIPTION:Practice 2 — Grand Prix of Thailand\\nChang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-thailand-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260228T030000Z
+DTEND:20260228T033000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Thailand
+LOCATION:Chang International Circuit\, Thailand
+DESCRIPTION:Free Practice — Grand Prix of Thailand\\nChang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-thailand-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260228T035000Z
+DTEND:20260228T042000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Thailand
+LOCATION:Chang International Circuit\, Thailand
+DESCRIPTION:Qualifying — Grand Prix of Thailand\\nChang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-thailand-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260228T080000Z
+DTEND:20260228T082000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Thailand
+LOCATION:Chang International Circuit\, Thailand
+DESCRIPTION:Sprint Race — Grand Prix of Thailand\\nChang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-thailand-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260301T024000Z
+DTEND:20260301T025000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Thailand
+LOCATION:Chang International Circuit\, Thailand
+DESCRIPTION:Warm Up — Grand Prix of Thailand\\nChang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-thailand-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260301T070000Z
+DTEND:20260301T074500Z
+SUMMARY:MotoGP: Race — Grand Prix of Thailand
+LOCATION:Chang International Circuit\, Thailand
+DESCRIPTION:Race — Grand Prix of Thailand\\nChang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-brazil-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260320T140000Z
+DTEND:20260320T144500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Brazil
+LOCATION:Autódromo Internacional Ayrton Senna\, Brazil
+DESCRIPTION:Practice 1 — Grand Prix of Brazil\\nAutódromo Internacional Ayrton Senna\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-brazil-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260320T180000Z
+DTEND:20260320T190000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Brazil
+LOCATION:Autódromo Internacional Ayrton Senna\, Brazil
+DESCRIPTION:Practice 2 — Grand Prix of Brazil\\nAutódromo Internacional Ayrton Senna\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-brazil-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260321T140000Z
+DTEND:20260321T143000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Brazil
+LOCATION:Autódromo Internacional Ayrton Senna\, Brazil
+DESCRIPTION:Free Practice — Grand Prix of Brazil\\nAutódromo Internacional Ayrton Senna\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-brazil-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260321T145000Z
+DTEND:20260321T152000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Brazil
+LOCATION:Autódromo Internacional Ayrton Senna\, Brazil
+DESCRIPTION:Qualifying — Grand Prix of Brazil\\nAutódromo Internacional Ayrton Senna\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-brazil-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260321T190000Z
+DTEND:20260321T192000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Brazil
+LOCATION:Autódromo Internacional Ayrton Senna\, Brazil
+DESCRIPTION:Sprint Race — Grand Prix of Brazil\\nAutódromo Internacional Ayrton Senna\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-brazil-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260322T134000Z
+DTEND:20260322T135000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Brazil
+LOCATION:Autódromo Internacional Ayrton Senna\, Brazil
+DESCRIPTION:Warm Up — Grand Prix of Brazil\\nAutódromo Internacional Ayrton Senna\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-brazil-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260322T180000Z
+DTEND:20260322T184500Z
+SUMMARY:MotoGP: Race — Grand Prix of Brazil
+LOCATION:Autódromo Internacional Ayrton Senna\, Brazil
+DESCRIPTION:Race — Grand Prix of Brazil\\nAutódromo Internacional Ayrton Senna\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-usa-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260327T150000Z
+DTEND:20260327T154500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of the Americas
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 1 — Grand Prix of the Americas\\nCircuit of the Americas\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-usa-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260327T190000Z
+DTEND:20260327T200000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of the Americas
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 2 — Grand Prix of the Americas\\nCircuit of the Americas\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-usa-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T150000Z
+DTEND:20260328T153000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of the Americas
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Free Practice — Grand Prix of the Americas\\nCircuit of the Americas\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-usa-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T155000Z
+DTEND:20260328T162000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of the Americas
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Qualifying — Grand Prix of the Americas\\nCircuit of the Americas\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-usa-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T200000Z
+DTEND:20260328T202000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of the Americas
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Sprint Race — Grand Prix of the Americas\\nCircuit of the Americas\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-usa-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260329T144000Z
+DTEND:20260329T145000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of the Americas
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Warm Up — Grand Prix of the Americas\\nCircuit of the Americas\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-usa-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260329T190000Z
+DTEND:20260329T194500Z
+SUMMARY:MotoGP: Race — Grand Prix of the Americas
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Race — Grand Prix of the Americas\\nCircuit of the Americas\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-spain-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260424T070000Z
+DTEND:20260424T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Spain
+LOCATION:Circuito de Jerez – Ángel Nieto\, Spain
+DESCRIPTION:Practice 1 — Grand Prix of Spain\\nCircuito de Jerez – Ángel Nieto\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-spain-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260424T110000Z
+DTEND:20260424T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Spain
+LOCATION:Circuito de Jerez – Ángel Nieto\, Spain
+DESCRIPTION:Practice 2 — Grand Prix of Spain\\nCircuito de Jerez – Ángel Nieto\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-spain-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T070000Z
+DTEND:20260425T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Spain
+LOCATION:Circuito de Jerez – Ángel Nieto\, Spain
+DESCRIPTION:Free Practice — Grand Prix of Spain\\nCircuito de Jerez – Ángel Nieto\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-spain-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T075000Z
+DTEND:20260425T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Spain
+LOCATION:Circuito de Jerez – Ángel Nieto\, Spain
+DESCRIPTION:Qualifying — Grand Prix of Spain\\nCircuito de Jerez – Ángel Nieto\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-spain-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T130000Z
+DTEND:20260425T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Spain
+LOCATION:Circuito de Jerez – Ángel Nieto\, Spain
+DESCRIPTION:Sprint Race — Grand Prix of Spain\\nCircuito de Jerez – Ángel Nieto\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-spain-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T074000Z
+DTEND:20260426T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Spain
+LOCATION:Circuito de Jerez – Ángel Nieto\, Spain
+DESCRIPTION:Warm Up — Grand Prix of Spain\\nCircuito de Jerez – Ángel Nieto\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-spain-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T120000Z
+DTEND:20260426T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of Spain
+LOCATION:Circuito de Jerez – Ángel Nieto\, Spain
+DESCRIPTION:Race — Grand Prix of Spain\\nCircuito de Jerez – Ángel Nieto\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-france-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260508T070000Z
+DTEND:20260508T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of France
+LOCATION:Bugatti Circuit\, France
+DESCRIPTION:Practice 1 — Grand Prix of France\\nBugatti Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-france-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260508T110000Z
+DTEND:20260508T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of France
+LOCATION:Bugatti Circuit\, France
+DESCRIPTION:Practice 2 — Grand Prix of France\\nBugatti Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-france-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T070000Z
+DTEND:20260509T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of France
+LOCATION:Bugatti Circuit\, France
+DESCRIPTION:Free Practice — Grand Prix of France\\nBugatti Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-france-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T075000Z
+DTEND:20260509T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of France
+LOCATION:Bugatti Circuit\, France
+DESCRIPTION:Qualifying — Grand Prix of France\\nBugatti Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-france-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T130000Z
+DTEND:20260509T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of France
+LOCATION:Bugatti Circuit\, France
+DESCRIPTION:Sprint Race — Grand Prix of France\\nBugatti Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-france-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260510T074000Z
+DTEND:20260510T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of France
+LOCATION:Bugatti Circuit\, France
+DESCRIPTION:Warm Up — Grand Prix of France\\nBugatti Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-france-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260510T120000Z
+DTEND:20260510T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of France
+LOCATION:Bugatti Circuit\, France
+DESCRIPTION:Race — Grand Prix of France\\nBugatti Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-catalunya-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260515T070000Z
+DTEND:20260515T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Catalunya
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice 1 — Grand Prix of Catalunya\\nCircuit de Barcelona-Catalunya\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-catalunya-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260515T110000Z
+DTEND:20260515T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Catalunya
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice 2 — Grand Prix of Catalunya\\nCircuit de Barcelona-Catalunya\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-catalunya-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260516T070000Z
+DTEND:20260516T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Catalunya
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Free Practice — Grand Prix of Catalunya\\nCircuit de Barcelona-Catalunya\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-catalunya-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260516T075000Z
+DTEND:20260516T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Catalunya
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Qualifying — Grand Prix of Catalunya\\nCircuit de Barcelona-Catalunya\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-catalunya-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260516T130000Z
+DTEND:20260516T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Catalunya
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Sprint Race — Grand Prix of Catalunya\\nCircuit de Barcelona-Catalunya\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-catalunya-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260517T074000Z
+DTEND:20260517T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Catalunya
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Warm Up — Grand Prix of Catalunya\\nCircuit de Barcelona-Catalunya\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-catalunya-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260517T120000Z
+DTEND:20260517T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of Catalunya
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Race — Grand Prix of Catalunya\\nCircuit de Barcelona-Catalunya\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-italy-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260529T070000Z
+DTEND:20260529T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Italy
+LOCATION:Autodromo del Mugello\, Italy
+DESCRIPTION:Practice 1 — Grand Prix of Italy\\nAutodromo del Mugello\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-italy-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260529T110000Z
+DTEND:20260529T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Italy
+LOCATION:Autodromo del Mugello\, Italy
+DESCRIPTION:Practice 2 — Grand Prix of Italy\\nAutodromo del Mugello\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-italy-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260530T070000Z
+DTEND:20260530T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Italy
+LOCATION:Autodromo del Mugello\, Italy
+DESCRIPTION:Free Practice — Grand Prix of Italy\\nAutodromo del Mugello\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-italy-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260530T075000Z
+DTEND:20260530T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Italy
+LOCATION:Autodromo del Mugello\, Italy
+DESCRIPTION:Qualifying — Grand Prix of Italy\\nAutodromo del Mugello\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-italy-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260530T130000Z
+DTEND:20260530T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Italy
+LOCATION:Autodromo del Mugello\, Italy
+DESCRIPTION:Sprint Race — Grand Prix of Italy\\nAutodromo del Mugello\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-italy-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260531T074000Z
+DTEND:20260531T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Italy
+LOCATION:Autodromo del Mugello\, Italy
+DESCRIPTION:Warm Up — Grand Prix of Italy\\nAutodromo del Mugello\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-italy-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260531T120000Z
+DTEND:20260531T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of Italy
+LOCATION:Autodromo del Mugello\, Italy
+DESCRIPTION:Race — Grand Prix of Italy\\nAutodromo del Mugello\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-hungary-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T070000Z
+DTEND:20260605T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Hungary
+LOCATION:Balaton Park Circuit\, Hungary
+DESCRIPTION:Practice 1 — Grand Prix of Hungary\\nBalaton Park Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-hungary-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T110000Z
+DTEND:20260605T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Hungary
+LOCATION:Balaton Park Circuit\, Hungary
+DESCRIPTION:Practice 2 — Grand Prix of Hungary\\nBalaton Park Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-hungary-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260606T070000Z
+DTEND:20260606T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Hungary
+LOCATION:Balaton Park Circuit\, Hungary
+DESCRIPTION:Free Practice — Grand Prix of Hungary\\nBalaton Park Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-hungary-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260606T075000Z
+DTEND:20260606T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Hungary
+LOCATION:Balaton Park Circuit\, Hungary
+DESCRIPTION:Qualifying — Grand Prix of Hungary\\nBalaton Park Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-hungary-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260606T130000Z
+DTEND:20260606T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Hungary
+LOCATION:Balaton Park Circuit\, Hungary
+DESCRIPTION:Sprint Race — Grand Prix of Hungary\\nBalaton Park Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-hungary-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260607T074000Z
+DTEND:20260607T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Hungary
+LOCATION:Balaton Park Circuit\, Hungary
+DESCRIPTION:Warm Up — Grand Prix of Hungary\\nBalaton Park Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-hungary-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260607T120000Z
+DTEND:20260607T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of Hungary
+LOCATION:Balaton Park Circuit\, Hungary
+DESCRIPTION:Race — Grand Prix of Hungary\\nBalaton Park Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-czechia-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260619T070000Z
+DTEND:20260619T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of the Czech Republic
+LOCATION:Brno Circuit\, Czech Republic
+DESCRIPTION:Practice 1 — Grand Prix of the Czech Republic\\nBrno Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-czechia-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260619T110000Z
+DTEND:20260619T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of the Czech Republic
+LOCATION:Brno Circuit\, Czech Republic
+DESCRIPTION:Practice 2 — Grand Prix of the Czech Republic\\nBrno Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-czechia-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T070000Z
+DTEND:20260620T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of the Czech Republic
+LOCATION:Brno Circuit\, Czech Republic
+DESCRIPTION:Free Practice — Grand Prix of the Czech Republic\\nBrno Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-czechia-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T075000Z
+DTEND:20260620T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of the Czech Republic
+LOCATION:Brno Circuit\, Czech Republic
+DESCRIPTION:Qualifying — Grand Prix of the Czech Republic\\nBrno Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-czechia-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T130000Z
+DTEND:20260620T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of the Czech Republic
+LOCATION:Brno Circuit\, Czech Republic
+DESCRIPTION:Sprint Race — Grand Prix of the Czech Republic\\nBrno Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-czechia-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260621T074000Z
+DTEND:20260621T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of the Czech Republic
+LOCATION:Brno Circuit\, Czech Republic
+DESCRIPTION:Warm Up — Grand Prix of the Czech Republic\\nBrno Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-czechia-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260621T120000Z
+DTEND:20260621T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of the Czech Republic
+LOCATION:Brno Circuit\, Czech Republic
+DESCRIPTION:Race — Grand Prix of the Czech Republic\\nBrno Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-netherlands-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260626T070000Z
+DTEND:20260626T074500Z
+SUMMARY:MotoGP: Practice 1 — Dutch TT
+LOCATION:TT Circuit Assen\, Netherlands
+DESCRIPTION:Practice 1 — Dutch TT\\nTT Circuit Assen\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-netherlands-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260626T110000Z
+DTEND:20260626T120000Z
+SUMMARY:MotoGP: Practice 2 — Dutch TT
+LOCATION:TT Circuit Assen\, Netherlands
+DESCRIPTION:Practice 2 — Dutch TT\\nTT Circuit Assen\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-netherlands-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260627T070000Z
+DTEND:20260627T073000Z
+SUMMARY:MotoGP: Free Practice — Dutch TT
+LOCATION:TT Circuit Assen\, Netherlands
+DESCRIPTION:Free Practice — Dutch TT\\nTT Circuit Assen\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-netherlands-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260627T075000Z
+DTEND:20260627T082000Z
+SUMMARY:MotoGP: Qualifying — Dutch TT
+LOCATION:TT Circuit Assen\, Netherlands
+DESCRIPTION:Qualifying — Dutch TT\\nTT Circuit Assen\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-netherlands-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260627T130000Z
+DTEND:20260627T132000Z
+SUMMARY:MotoGP: Sprint Race — Dutch TT
+LOCATION:TT Circuit Assen\, Netherlands
+DESCRIPTION:Sprint Race — Dutch TT\\nTT Circuit Assen\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-netherlands-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260628T074000Z
+DTEND:20260628T075000Z
+SUMMARY:MotoGP: Warm Up — Dutch TT
+LOCATION:TT Circuit Assen\, Netherlands
+DESCRIPTION:Warm Up — Dutch TT\\nTT Circuit Assen\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-netherlands-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260628T120000Z
+DTEND:20260628T124500Z
+SUMMARY:MotoGP: Race — Dutch TT
+LOCATION:TT Circuit Assen\, Netherlands
+DESCRIPTION:Race — Dutch TT\\nTT Circuit Assen\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-germany-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260710T070000Z
+DTEND:20260710T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Germany
+LOCATION:Sachsenring\, Germany
+DESCRIPTION:Practice 1 — Grand Prix of Germany\\nSachsenring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-germany-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260710T110000Z
+DTEND:20260710T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Germany
+LOCATION:Sachsenring\, Germany
+DESCRIPTION:Practice 2 — Grand Prix of Germany\\nSachsenring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-germany-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260711T070000Z
+DTEND:20260711T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Germany
+LOCATION:Sachsenring\, Germany
+DESCRIPTION:Free Practice — Grand Prix of Germany\\nSachsenring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-germany-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260711T075000Z
+DTEND:20260711T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Germany
+LOCATION:Sachsenring\, Germany
+DESCRIPTION:Qualifying — Grand Prix of Germany\\nSachsenring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-germany-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260711T130000Z
+DTEND:20260711T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Germany
+LOCATION:Sachsenring\, Germany
+DESCRIPTION:Sprint Race — Grand Prix of Germany\\nSachsenring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-germany-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260712T074000Z
+DTEND:20260712T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Germany
+LOCATION:Sachsenring\, Germany
+DESCRIPTION:Warm Up — Grand Prix of Germany\\nSachsenring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-germany-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260712T120000Z
+DTEND:20260712T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of Germany
+LOCATION:Sachsenring\, Germany
+DESCRIPTION:Race — Grand Prix of Germany\\nSachsenring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-great-britain-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260807T080000Z
+DTEND:20260807T084500Z
+SUMMARY:MotoGP: Practice 1 — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Practice 1 — British Grand Prix\\nSilverstone Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-great-britain-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260807T120000Z
+DTEND:20260807T130000Z
+SUMMARY:MotoGP: Practice 2 — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Practice 2 — British Grand Prix\\nSilverstone Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-great-britain-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260808T080000Z
+DTEND:20260808T083000Z
+SUMMARY:MotoGP: Free Practice — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Free Practice — British Grand Prix\\nSilverstone Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-great-britain-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260808T085000Z
+DTEND:20260808T092000Z
+SUMMARY:MotoGP: Qualifying — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Qualifying — British Grand Prix\\nSilverstone Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-great-britain-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260808T140000Z
+DTEND:20260808T142000Z
+SUMMARY:MotoGP: Sprint Race — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Sprint Race — British Grand Prix\\nSilverstone Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-great-britain-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260809T084000Z
+DTEND:20260809T085000Z
+SUMMARY:MotoGP: Warm Up — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Warm Up — British Grand Prix\\nSilverstone Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-great-britain-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260809T130000Z
+DTEND:20260809T134500Z
+SUMMARY:MotoGP: Race — British Grand Prix
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Race — British Grand Prix\\nSilverstone Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-aragon-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260828T070000Z
+DTEND:20260828T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Aragon
+LOCATION:MotorLand Aragón\, Spain
+DESCRIPTION:Practice 1 — Grand Prix of Aragon\\nMotorLand Aragón\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-aragon-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260828T110000Z
+DTEND:20260828T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Aragon
+LOCATION:MotorLand Aragón\, Spain
+DESCRIPTION:Practice 2 — Grand Prix of Aragon\\nMotorLand Aragón\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-aragon-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T070000Z
+DTEND:20260829T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Aragon
+LOCATION:MotorLand Aragón\, Spain
+DESCRIPTION:Free Practice — Grand Prix of Aragon\\nMotorLand Aragón\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-aragon-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T075000Z
+DTEND:20260829T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Aragon
+LOCATION:MotorLand Aragón\, Spain
+DESCRIPTION:Qualifying — Grand Prix of Aragon\\nMotorLand Aragón\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-aragon-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T130000Z
+DTEND:20260829T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Aragon
+LOCATION:MotorLand Aragón\, Spain
+DESCRIPTION:Sprint Race — Grand Prix of Aragon\\nMotorLand Aragón\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-aragon-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260830T074000Z
+DTEND:20260830T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Aragon
+LOCATION:MotorLand Aragón\, Spain
+DESCRIPTION:Warm Up — Grand Prix of Aragon\\nMotorLand Aragón\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-aragon-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260830T120000Z
+DTEND:20260830T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of Aragon
+LOCATION:MotorLand Aragón\, Spain
+DESCRIPTION:Race — Grand Prix of Aragon\\nMotorLand Aragón\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-san-marino-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T070000Z
+DTEND:20260911T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of San Marino
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Practice 1 — Grand Prix of San Marino\\nMisano World Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-san-marino-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T110000Z
+DTEND:20260911T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of San Marino
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Practice 2 — Grand Prix of San Marino\\nMisano World Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-san-marino-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260912T070000Z
+DTEND:20260912T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of San Marino
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Free Practice — Grand Prix of San Marino\\nMisano World Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-san-marino-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260912T075000Z
+DTEND:20260912T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of San Marino
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Qualifying — Grand Prix of San Marino\\nMisano World Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-san-marino-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260912T130000Z
+DTEND:20260912T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of San Marino
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Sprint Race — Grand Prix of San Marino\\nMisano World Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-san-marino-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260913T074000Z
+DTEND:20260913T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of San Marino
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Warm Up — Grand Prix of San Marino\\nMisano World Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-san-marino-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260913T120000Z
+DTEND:20260913T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of San Marino
+LOCATION:Misano World Circuit\, Italy
+DESCRIPTION:Race — Grand Prix of San Marino\\nMisano World Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-austria-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260918T070000Z
+DTEND:20260918T074500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Austria
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Practice 1 — Grand Prix of Austria\\nRed Bull Ring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-austria-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260918T110000Z
+DTEND:20260918T120000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Austria
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Practice 2 — Grand Prix of Austria\\nRed Bull Ring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-austria-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260919T070000Z
+DTEND:20260919T073000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Austria
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Free Practice — Grand Prix of Austria\\nRed Bull Ring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-austria-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260919T075000Z
+DTEND:20260919T082000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Austria
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Qualifying — Grand Prix of Austria\\nRed Bull Ring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-austria-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260919T130000Z
+DTEND:20260919T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Austria
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Sprint Race — Grand Prix of Austria\\nRed Bull Ring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-austria-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260920T074000Z
+DTEND:20260920T075000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Austria
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Warm Up — Grand Prix of Austria\\nRed Bull Ring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-austria-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260920T120000Z
+DTEND:20260920T124500Z
+SUMMARY:MotoGP: Race — Grand Prix of Austria
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Race — Grand Prix of Austria\\nRed Bull Ring\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-japan-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261002T000000Z
+DTEND:20261002T004500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Japan
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Practice 1 — Grand Prix of Japan\\nTwin Ring Motegi\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-japan-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261002T040000Z
+DTEND:20261002T050000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Japan
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Practice 2 — Grand Prix of Japan\\nTwin Ring Motegi\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-japan-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261003T000000Z
+DTEND:20261003T003000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Japan
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Free Practice — Grand Prix of Japan\\nTwin Ring Motegi\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-japan-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261003T005000Z
+DTEND:20261003T012000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Japan
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Qualifying — Grand Prix of Japan\\nTwin Ring Motegi\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-japan-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261003T050000Z
+DTEND:20261003T052000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Japan
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Sprint Race — Grand Prix of Japan\\nTwin Ring Motegi\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-japan-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261003T234000Z
+DTEND:20261003T235000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Japan
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Warm Up — Grand Prix of Japan\\nTwin Ring Motegi\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-japan-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261004T050000Z
+DTEND:20261004T054500Z
+SUMMARY:MotoGP: Race — Grand Prix of Japan
+LOCATION:Twin Ring Motegi\, Japan
+DESCRIPTION:Race — Grand Prix of Japan\\nTwin Ring Motegi\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-indonesia-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261009T010000Z
+DTEND:20261009T014500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Indonesia
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Practice 1 — Grand Prix of Indonesia\\nMandalika Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-indonesia-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261009T050000Z
+DTEND:20261009T060000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Indonesia
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Practice 2 — Grand Prix of Indonesia\\nMandalika Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-indonesia-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261010T010000Z
+DTEND:20261010T013000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Indonesia
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Free Practice — Grand Prix of Indonesia\\nMandalika Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-indonesia-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261010T015000Z
+DTEND:20261010T022000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Indonesia
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Qualifying — Grand Prix of Indonesia\\nMandalika Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-indonesia-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261010T070000Z
+DTEND:20261010T072000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Indonesia
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Sprint Race — Grand Prix of Indonesia\\nMandalika Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-indonesia-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261011T004000Z
+DTEND:20261011T005000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Indonesia
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Warm Up — Grand Prix of Indonesia\\nMandalika Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-indonesia-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261011T060000Z
+DTEND:20261011T064500Z
+SUMMARY:MotoGP: Race — Grand Prix of Indonesia
+LOCATION:Mandalika Circuit\, Indonesia
+DESCRIPTION:Race — Grand Prix of Indonesia\\nMandalika Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-australia-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261022T230000Z
+DTEND:20261022T234500Z
+SUMMARY:MotoGP: Practice 1 — Australian Grand Prix
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Practice 1 — Australian Grand Prix\\nPhillip Island Grand Prix Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-australia-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261023T030000Z
+DTEND:20261023T040000Z
+SUMMARY:MotoGP: Practice 2 — Australian Grand Prix
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Practice 2 — Australian Grand Prix\\nPhillip Island Grand Prix Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-australia-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261023T230000Z
+DTEND:20261023T233000Z
+SUMMARY:MotoGP: Free Practice — Australian Grand Prix
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Free Practice — Australian Grand Prix\\nPhillip Island Grand Prix Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-australia-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261023T235000Z
+DTEND:20261024T002000Z
+SUMMARY:MotoGP: Qualifying — Australian Grand Prix
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Qualifying — Australian Grand Prix\\nPhillip Island Grand Prix Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-australia-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261024T040000Z
+DTEND:20261024T042000Z
+SUMMARY:MotoGP: Sprint Race — Australian Grand Prix
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Sprint Race — Australian Grand Prix\\nPhillip Island Grand Prix Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-australia-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261024T224000Z
+DTEND:20261024T225000Z
+SUMMARY:MotoGP: Warm Up — Australian Grand Prix
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Warm Up — Australian Grand Prix\\nPhillip Island Grand Prix Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-australia-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261025T030000Z
+DTEND:20261025T034500Z
+SUMMARY:MotoGP: Race — Australian Grand Prix
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Race — Australian Grand Prix\\nPhillip Island Grand Prix Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-malaysia-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261030T010000Z
+DTEND:20261030T014500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Malaysia
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Practice 1 — Grand Prix of Malaysia\\nSepang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-malaysia-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261030T050000Z
+DTEND:20261030T060000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Malaysia
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Practice 2 — Grand Prix of Malaysia\\nSepang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-malaysia-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261031T010000Z
+DTEND:20261031T013000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Malaysia
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Free Practice — Grand Prix of Malaysia\\nSepang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-malaysia-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261031T015000Z
+DTEND:20261031T022000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Malaysia
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Qualifying — Grand Prix of Malaysia\\nSepang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-malaysia-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261031T070000Z
+DTEND:20261031T072000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Malaysia
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Sprint Race — Grand Prix of Malaysia\\nSepang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-malaysia-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261101T004000Z
+DTEND:20261101T005000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Malaysia
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Warm Up — Grand Prix of Malaysia\\nSepang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-malaysia-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261101T060000Z
+DTEND:20261101T064500Z
+SUMMARY:MotoGP: Race — Grand Prix of Malaysia
+LOCATION:Sepang International Circuit\, Malaysia
+DESCRIPTION:Race — Grand Prix of Malaysia\\nSepang International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-qatar-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261106T110000Z
+DTEND:20261106T114500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice 1 — Grand Prix of Qatar\\nLusail International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-qatar-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261106T150000Z
+DTEND:20261106T160000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Practice 2 — Grand Prix of Qatar\\nLusail International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-qatar-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261107T110000Z
+DTEND:20261107T113000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Free Practice — Grand Prix of Qatar\\nLusail International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-qatar-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261107T115000Z
+DTEND:20261107T122000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Qualifying — Grand Prix of Qatar\\nLusail International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-qatar-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261107T170000Z
+DTEND:20261107T172000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Sprint Race — Grand Prix of Qatar\\nLusail International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-qatar-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261108T124000Z
+DTEND:20261108T125000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Warm Up — Grand Prix of Qatar\\nLusail International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-qatar-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261108T170000Z
+DTEND:20261108T174500Z
+SUMMARY:MotoGP: Race — Grand Prix of Qatar
+LOCATION:Lusail International Circuit\, Qatar
+DESCRIPTION:Race — Grand Prix of Qatar\\nLusail International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-portugal-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261120T090000Z
+DTEND:20261120T094500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Portugal
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Practice 1 — Grand Prix of Portugal\\nAlgarve International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-portugal-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261120T130000Z
+DTEND:20261120T140000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Portugal
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Practice 2 — Grand Prix of Portugal\\nAlgarve International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-portugal-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261121T090000Z
+DTEND:20261121T093000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Portugal
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Free Practice — Grand Prix of Portugal\\nAlgarve International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-portugal-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261121T095000Z
+DTEND:20261121T102000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Portugal
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Qualifying — Grand Prix of Portugal\\nAlgarve International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-portugal-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261121T140000Z
+DTEND:20261121T142000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Portugal
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Sprint Race — Grand Prix of Portugal\\nAlgarve International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-portugal-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261122T094000Z
+DTEND:20261122T095000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Portugal
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Warm Up — Grand Prix of Portugal\\nAlgarve International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-portugal-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261122T140000Z
+DTEND:20261122T144500Z
+SUMMARY:MotoGP: Race — Grand Prix of Portugal
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Race — Grand Prix of Portugal\\nAlgarve International Circuit\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-valencia-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261127T080000Z
+DTEND:20261127T084500Z
+SUMMARY:MotoGP: Practice 1 — Grand Prix of Valencia
+LOCATION:Circuit Ricardo Tormo\, Spain
+DESCRIPTION:Practice 1 — Grand Prix of Valencia\\nCircuit Ricardo Tormo\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-valencia-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261127T120000Z
+DTEND:20261127T130000Z
+SUMMARY:MotoGP: Practice 2 — Grand Prix of Valencia
+LOCATION:Circuit Ricardo Tormo\, Spain
+DESCRIPTION:Practice 2 — Grand Prix of Valencia\\nCircuit Ricardo Tormo\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-valencia-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261128T080000Z
+DTEND:20261128T083000Z
+SUMMARY:MotoGP: Free Practice — Grand Prix of Valencia
+LOCATION:Circuit Ricardo Tormo\, Spain
+DESCRIPTION:Free Practice — Grand Prix of Valencia\\nCircuit Ricardo Tormo\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-valencia-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261128T085000Z
+DTEND:20261128T092000Z
+SUMMARY:MotoGP: Qualifying — Grand Prix of Valencia
+LOCATION:Circuit Ricardo Tormo\, Spain
+DESCRIPTION:Qualifying — Grand Prix of Valencia\\nCircuit Ricardo Tormo\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-valencia-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261128T130000Z
+DTEND:20261128T132000Z
+SUMMARY:MotoGP: Sprint Race — Grand Prix of Valencia
+LOCATION:Circuit Ricardo Tormo\, Spain
+DESCRIPTION:Sprint Race — Grand Prix of Valencia\\nCircuit Ricardo Tormo\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-valencia-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261129T084000Z
+DTEND:20261129T085000Z
+SUMMARY:MotoGP: Warm Up — Grand Prix of Valencia
+LOCATION:Circuit Ricardo Tormo\, Spain
+DESCRIPTION:Warm Up — Grand Prix of Valencia\\nCircuit Ricardo Tormo\\nMotoGP
+END:VEVENT
+BEGIN:VEVENT
+UID:motogp-2026-valencia-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261129T130000Z
+DTEND:20261129T134500Z
+SUMMARY:MotoGP: Race — Grand Prix of Valencia
+LOCATION:Circuit Ricardo Tormo\, Spain
+DESCRIPTION:Race — Grand Prix of Valencia\\nCircuit Ricardo Tormo\\nMotoGP
+END:VEVENT
+END:VCALENDAR

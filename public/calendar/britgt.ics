@@ -1,0 +1,450 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — British GT Championship
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T083000Z
+DTEND:20260425T093000Z
+SUMMARY:British GT Championship: Free Practice 1 — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Free Practice 1 — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T111500Z
+DTEND:20260425T121500Z
+SUMMARY:British GT Championship: Pre-Qualifying — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Pre-Qualifying — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T144500Z
+DTEND:20260425T145900Z
+SUMMARY:British GT Championship: GT3 Qualifying 1 — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:GT3 Qualifying 1 — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T145900Z
+DTEND:20260425T151300Z
+SUMMARY:British GT Championship: GT3 Qualifying 2 — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:GT3 Qualifying 2 — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T151300Z
+DTEND:20260425T152700Z
+SUMMARY:British GT Championship: GT4 Qualifying 1 — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:GT4 Qualifying 1 — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T152800Z
+DTEND:20260425T154200Z
+SUMMARY:British GT Championship: GT4 Qualifying 2 — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:GT4 Qualifying 2 — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T084000Z
+DTEND:20260426T090000Z
+SUMMARY:British GT Championship: Warm Up — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Warm Up — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-silverstone-s7@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T120000Z
+DTEND:20260426T150000Z
+SUMMARY:British GT Championship: Silverstone 500 — Silverstone 500
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Silverstone 500 — Silverstone 500\\nSilverstone Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T083000Z
+DTEND:20260523T093000Z
+SUMMARY:British GT Championship: Free Practice 1 — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:Free Practice 1 — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T105500Z
+DTEND:20260523T115500Z
+SUMMARY:British GT Championship: Pre-Qualifying — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:Pre-Qualifying — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T143000Z
+DTEND:20260523T144400Z
+SUMMARY:British GT Championship: GT3 Qualifying 1 — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:GT3 Qualifying 1 — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T144400Z
+DTEND:20260523T145800Z
+SUMMARY:British GT Championship: GT3 Qualifying 2 — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:GT3 Qualifying 2 — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T145800Z
+DTEND:20260523T151200Z
+SUMMARY:British GT Championship: GT4 Qualifying 1 — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:GT4 Qualifying 1 — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260523T151300Z
+DTEND:20260523T152700Z
+SUMMARY:British GT Championship: GT4 Qualifying 2 — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:GT4 Qualifying 2 — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260525T081000Z
+DTEND:20260525T083000Z
+SUMMARY:British GT Championship: Warm Up — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:Warm Up — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s7@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260525T095000Z
+DTEND:20260525T105000Z
+SUMMARY:British GT Championship: Race 1 — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:Race 1 — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-oulton-park-s8@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260525T143000Z
+DTEND:20260525T153000Z
+SUMMARY:British GT Championship: Race 2 — Oulton Park
+LOCATION:Oulton Park\, United Kingdom
+DESCRIPTION:Race 2 — Oulton Park\\nOulton Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T073000Z
+DTEND:20260620T083000Z
+SUMMARY:British GT Championship: Free Practice 1 — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Free Practice 1 — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T100000Z
+DTEND:20260620T110000Z
+SUMMARY:British GT Championship: Pre-Qualifying — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Pre-Qualifying — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T133000Z
+DTEND:20260620T134400Z
+SUMMARY:British GT Championship: GT3 Qualifying 1 — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:GT3 Qualifying 1 — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T134400Z
+DTEND:20260620T135800Z
+SUMMARY:British GT Championship: GT3 Qualifying 2 — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:GT3 Qualifying 2 — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T135800Z
+DTEND:20260620T141200Z
+SUMMARY:British GT Championship: GT4 Qualifying 1 — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:GT4 Qualifying 1 — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T141300Z
+DTEND:20260620T142700Z
+SUMMARY:British GT Championship: GT4 Qualifying 2 — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:GT4 Qualifying 2 — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260621T073000Z
+DTEND:20260621T075000Z
+SUMMARY:British GT Championship: Warm Up — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Warm Up — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-spa-s7@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260621T110000Z
+DTEND:20260621T130000Z
+SUMMARY:British GT Championship: 2 Hours of Spa — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:2 Hours of Spa — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T083000Z
+DTEND:20260815T093000Z
+SUMMARY:British GT Championship: Free Practice 1 — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:Free Practice 1 — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T105500Z
+DTEND:20260815T115500Z
+SUMMARY:British GT Championship: Pre-Qualifying — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:Pre-Qualifying — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T143000Z
+DTEND:20260815T144400Z
+SUMMARY:British GT Championship: GT3 Qualifying 1 — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:GT3 Qualifying 1 — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T144400Z
+DTEND:20260815T145800Z
+SUMMARY:British GT Championship: GT3 Qualifying 2 — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:GT3 Qualifying 2 — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T145800Z
+DTEND:20260815T151200Z
+SUMMARY:British GT Championship: GT4 Qualifying 1 — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:GT4 Qualifying 1 — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T151300Z
+DTEND:20260815T152700Z
+SUMMARY:British GT Championship: GT4 Qualifying 2 — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:GT4 Qualifying 2 — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T163000Z
+DTEND:20260815T173000Z
+SUMMARY:British GT Championship: Race 1 — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:Race 1 — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-snetterton-s7@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260816T120000Z
+DTEND:20260816T130000Z
+SUMMARY:British GT Championship: Race 2 — Snetterton
+LOCATION:Snetterton Circuit\, United Kingdom
+DESCRIPTION:Race 2 — Snetterton\\nSnetterton Circuit\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T083000Z
+DTEND:20260905T093000Z
+SUMMARY:British GT Championship: Free Practice 1 — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:Free Practice 1 — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T105500Z
+DTEND:20260905T115500Z
+SUMMARY:British GT Championship: Pre-Qualifying — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:Pre-Qualifying — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T143000Z
+DTEND:20260905T144400Z
+SUMMARY:British GT Championship: GT3 Qualifying 1 — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:GT3 Qualifying 1 — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T144400Z
+DTEND:20260905T145800Z
+SUMMARY:British GT Championship: GT3 Qualifying 2 — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:GT3 Qualifying 2 — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T145800Z
+DTEND:20260905T151200Z
+SUMMARY:British GT Championship: GT4 Qualifying 1 — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:GT4 Qualifying 1 — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T151300Z
+DTEND:20260905T152700Z
+SUMMARY:British GT Championship: GT4 Qualifying 2 — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:GT4 Qualifying 2 — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260906T080000Z
+DTEND:20260906T082000Z
+SUMMARY:British GT Championship: Warm Up — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:Warm Up — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-donington-s7@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260906T110000Z
+DTEND:20260906T130000Z
+SUMMARY:British GT Championship: 2 Hours of Donington — Donington Park
+LOCATION:Donington Park\, United Kingdom
+DESCRIPTION:2 Hours of Donington — Donington Park\\nDonington Park\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T083000Z
+DTEND:20260926T093000Z
+SUMMARY:British GT Championship: Free Practice 1 — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:Free Practice 1 — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T105500Z
+DTEND:20260926T115500Z
+SUMMARY:British GT Championship: Pre-Qualifying — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:Pre-Qualifying — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T143000Z
+DTEND:20260926T144400Z
+SUMMARY:British GT Championship: GT3 Qualifying 1 — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:GT3 Qualifying 1 — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T144400Z
+DTEND:20260926T145800Z
+SUMMARY:British GT Championship: GT3 Qualifying 2 — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:GT3 Qualifying 2 — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T145800Z
+DTEND:20260926T151200Z
+SUMMARY:British GT Championship: GT4 Qualifying 1 — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:GT4 Qualifying 1 — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T151300Z
+DTEND:20260926T152700Z
+SUMMARY:British GT Championship: GT4 Qualifying 2 — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:GT4 Qualifying 2 — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260927T080000Z
+DTEND:20260927T082000Z
+SUMMARY:British GT Championship: Warm Up — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:Warm Up — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+BEGIN:VEVENT
+UID:britgt-2026-brands-hatch-s7@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260927T110000Z
+DTEND:20260927T130000Z
+SUMMARY:British GT Championship: 2 Hours of Brands Hatch — Brands Hatch
+LOCATION:Brands Hatch\, United Kingdom
+DESCRIPTION:2 Hours of Brands Hatch — Brands Hatch\\nBrands Hatch\\nBritish GT Championship
+END:VEVENT
+END:VCALENDAR

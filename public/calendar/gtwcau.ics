@@ -1,0 +1,342 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — GT World Challenge Australia
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:gtwcau-2026-phillip-island-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260326T231000Z
+DTEND:20260327T001000Z
+SUMMARY:GT World Challenge Australia: Free Practice 1 — GT Festival Phillip Island
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Free Practice 1 — GT Festival Phillip Island\\nPhillip Island Grand Prix Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-phillip-island-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260327T025000Z
+DTEND:20260327T035000Z
+SUMMARY:GT World Challenge Australia: Free Practice 2 — GT Festival Phillip Island
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Free Practice 2 — GT Festival Phillip Island\\nPhillip Island Grand Prix Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-phillip-island-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T001500Z
+DTEND:20260328T003000Z
+SUMMARY:GT World Challenge Australia: Qualifying 1 — GT Festival Phillip Island
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Qualifying 1 — GT Festival Phillip Island\\nPhillip Island Grand Prix Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-phillip-island-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T003500Z
+DTEND:20260328T005000Z
+SUMMARY:GT World Challenge Australia: Qualifying 2 — GT Festival Phillip Island
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Qualifying 2 — GT Festival Phillip Island\\nPhillip Island Grand Prix Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-phillip-island-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T045500Z
+DTEND:20260328T055500Z
+SUMMARY:GT World Challenge Australia: Race 1 — GT Festival Phillip Island
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Race 1 — GT Festival Phillip Island\\nPhillip Island Grand Prix Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-phillip-island-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260329T024000Z
+DTEND:20260329T034000Z
+SUMMARY:GT World Challenge Australia: Race 2 — GT Festival Phillip Island
+LOCATION:Phillip Island Grand Prix Circuit\, Australia
+DESCRIPTION:Race 2 — GT Festival Phillip Island\\nPhillip Island Grand Prix Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-the-bend-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260507T235000Z
+DTEND:20260508T005000Z
+SUMMARY:GT World Challenge Australia: Free Practice 1 — GT Festival The Bend
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Free Practice 1 — GT Festival The Bend\\nThe Bend Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-the-bend-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260508T033000Z
+DTEND:20260508T043000Z
+SUMMARY:GT World Challenge Australia: Bronze Practice — GT Festival The Bend
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Bronze Practice — GT Festival The Bend\\nThe Bend Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-the-bend-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260508T070000Z
+DTEND:20260508T080000Z
+SUMMARY:GT World Challenge Australia: Free Practice 2 — GT Festival The Bend
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Free Practice 2 — GT Festival The Bend\\nThe Bend Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-the-bend-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T004500Z
+DTEND:20260509T010000Z
+SUMMARY:GT World Challenge Australia: Qualifying 1 — GT Festival The Bend
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Qualifying 1 — GT Festival The Bend\\nThe Bend Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-the-bend-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T011000Z
+DTEND:20260509T012500Z
+SUMMARY:GT World Challenge Australia: Qualifying 2 — GT Festival The Bend
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Qualifying 2 — GT Festival The Bend\\nThe Bend Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-the-bend-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T065000Z
+DTEND:20260509T075000Z
+SUMMARY:GT World Challenge Australia: Race 1 — GT Festival The Bend
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Race 1 — GT Festival The Bend\\nThe Bend Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-the-bend-s6@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260510T044000Z
+DTEND:20260510T054000Z
+SUMMARY:GT World Challenge Australia: Race 2 — GT Festival The Bend
+LOCATION:The Bend Motorsport Park\, Australia
+DESCRIPTION:Race 2 — GT Festival The Bend\\nThe Bend Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-queensland-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260611T233000Z
+DTEND:20260612T003000Z
+SUMMARY:GT World Challenge Australia: Free Practice 1 — GT Festival Queensland
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Free Practice 1 — GT Festival Queensland\\nQueensland Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-queensland-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260612T030000Z
+DTEND:20260612T040000Z
+SUMMARY:GT World Challenge Australia: Free Practice 2 — GT Festival Queensland
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Free Practice 2 — GT Festival Queensland\\nQueensland Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-queensland-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260613T000000Z
+DTEND:20260613T001500Z
+SUMMARY:GT World Challenge Australia: Qualifying 1 — GT Festival Queensland
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Qualifying 1 — GT Festival Queensland\\nQueensland Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-queensland-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260613T002000Z
+DTEND:20260613T003500Z
+SUMMARY:GT World Challenge Australia: Qualifying 2 — GT Festival Queensland
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Qualifying 2 — GT Festival Queensland\\nQueensland Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-queensland-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260613T050000Z
+DTEND:20260613T060000Z
+SUMMARY:GT World Challenge Australia: Race 1 — GT Festival Queensland
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Race 1 — GT Festival Queensland\\nQueensland Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-queensland-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260614T030000Z
+DTEND:20260614T040000Z
+SUMMARY:GT World Challenge Australia: Race 2 — GT Festival Queensland
+LOCATION:Queensland Raceway\, Australia
+DESCRIPTION:Race 2 — GT Festival Queensland\\nQueensland Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-darwin-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260724T000000Z
+DTEND:20260724T010000Z
+SUMMARY:GT World Challenge Australia: Free Practice 1 — GT Festival Darwin
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Free Practice 1 — GT Festival Darwin\\nHidden Valley Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-darwin-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260724T033000Z
+DTEND:20260724T043000Z
+SUMMARY:GT World Challenge Australia: Free Practice 2 — GT Festival Darwin
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Free Practice 2 — GT Festival Darwin\\nHidden Valley Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-darwin-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T003000Z
+DTEND:20260725T004500Z
+SUMMARY:GT World Challenge Australia: Qualifying 1 — GT Festival Darwin
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Qualifying 1 — GT Festival Darwin\\nHidden Valley Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-darwin-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T005000Z
+DTEND:20260725T010500Z
+SUMMARY:GT World Challenge Australia: Qualifying 2 — GT Festival Darwin
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Qualifying 2 — GT Festival Darwin\\nHidden Valley Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-darwin-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T053000Z
+DTEND:20260725T063000Z
+SUMMARY:GT World Challenge Australia: Race 1 — GT Festival Darwin
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Race 1 — GT Festival Darwin\\nHidden Valley Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-darwin-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260726T033000Z
+DTEND:20260726T043000Z
+SUMMARY:GT World Challenge Australia: Race 2 — GT Festival Darwin
+LOCATION:Hidden Valley Raceway\, Australia
+DESCRIPTION:Race 2 — GT Festival Darwin\\nHidden Valley Raceway\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-sydney-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260917T233000Z
+DTEND:20260918T003000Z
+SUMMARY:GT World Challenge Australia: Free Practice 1 — GT Festival Sydney
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Free Practice 1 — GT Festival Sydney\\nSydney Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-sydney-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260918T030000Z
+DTEND:20260918T040000Z
+SUMMARY:GT World Challenge Australia: Free Practice 2 — GT Festival Sydney
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Free Practice 2 — GT Festival Sydney\\nSydney Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-sydney-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260919T000000Z
+DTEND:20260919T001500Z
+SUMMARY:GT World Challenge Australia: Qualifying 1 — GT Festival Sydney
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Qualifying 1 — GT Festival Sydney\\nSydney Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-sydney-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260919T002000Z
+DTEND:20260919T003500Z
+SUMMARY:GT World Challenge Australia: Qualifying 2 — GT Festival Sydney
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Qualifying 2 — GT Festival Sydney\\nSydney Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-sydney-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260919T050000Z
+DTEND:20260919T060000Z
+SUMMARY:GT World Challenge Australia: Race 1 — GT Festival Sydney
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Race 1 — GT Festival Sydney\\nSydney Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-sydney-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260920T030000Z
+DTEND:20260920T040000Z
+SUMMARY:GT World Challenge Australia: Race 2 — GT Festival Sydney
+LOCATION:Sydney Motorsport Park\, Australia
+DESCRIPTION:Race 2 — GT Festival Sydney\\nSydney Motorsport Park\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-adelaide-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261126T230000Z
+DTEND:20261127T000000Z
+SUMMARY:GT World Challenge Australia: Free Practice 1 — Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Free Practice 1 — Adelaide Grand Final\\nAdelaide Street Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-adelaide-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261127T023000Z
+DTEND:20261127T033000Z
+SUMMARY:GT World Challenge Australia: Free Practice 2 — Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Free Practice 2 — Adelaide Grand Final\\nAdelaide Street Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-adelaide-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261127T233000Z
+DTEND:20261127T234500Z
+SUMMARY:GT World Challenge Australia: Qualifying 1 — Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Qualifying 1 — Adelaide Grand Final\\nAdelaide Street Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-adelaide-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261127T235000Z
+DTEND:20261128T000500Z
+SUMMARY:GT World Challenge Australia: Qualifying 2 — Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Qualifying 2 — Adelaide Grand Final\\nAdelaide Street Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-adelaide-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261128T043000Z
+DTEND:20261128T053000Z
+SUMMARY:GT World Challenge Australia: Race 1 — Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Race 1 — Adelaide Grand Final\\nAdelaide Street Circuit\\nGT World Challenge Australia
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcau-2026-adelaide-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261129T023000Z
+DTEND:20261129T033000Z
+SUMMARY:GT World Challenge Australia: Race 2 — Adelaide Grand Final
+LOCATION:Adelaide Street Circuit\, Australia
+DESCRIPTION:Race 2 — Adelaide Grand Final\\nAdelaide Street Circuit\\nGT World Challenge Australia
+END:VEVENT
+END:VCALENDAR

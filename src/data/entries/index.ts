@@ -39,6 +39,12 @@ import { gtwcamEntries2026 } from './gtwcam-2026'
 import { gtwcasiaEntries2026 } from './gtwcasia-2026'
 import { britgtEntries2026 } from './britgt-2026'
 import { gtwcauEntries2026 } from './gtwcau-2026'
+import { wecEntries2026 } from './wec-2026'
+import { dtmEntries2026 } from './dtm-2026'
+import { gtwcEntries2026 } from './gtwc-2026'
+import { supergtEntries2026 } from './supergt-2026'
+import { elmsEntries2026 } from './elms-2026'
+import { superformulaEntries2026 } from './superformula-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -81,6 +87,12 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'gtwcasia-2026': gtwcasiaEntries2026,
   'britgt-2026': britgtEntries2026,
   'gtwcau-2026': gtwcauEntries2026,
+  'wec-2026': wecEntries2026,
+  'dtm-2026': dtmEntries2026,
+  'gtwc-2026': gtwcEntries2026,
+  'supergt-2026': supergtEntries2026,
+  'elms-2026': elmsEntries2026,
+  'superformula-2026': superformulaEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

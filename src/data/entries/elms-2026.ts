@@ -1,0 +1,48 @@
+import type { EntryItem } from './types'
+
+// European Le Mans Series 2026 — key entries (LMP2 + LMGT3)
+export const elmsEntries2026: EntryItem[] = [
+  // LMP2
+  { driverId: 'priaulx', teamId: 'proton-competition' },
+  { driverId: 'rockenfeller', teamId: 'proton-competition' },
+  { driverId: 'chadwick', teamId: 'idec-sport' },
+  { driverId: 'chatin', teamId: 'idec-sport' },
+  { driverId: 'van-uitert', teamId: 'idec-sport' },
+  { driverId: 'de-gerus', teamId: 'inter-europol' },
+  { driverId: 'dillmann', teamId: 'inter-europol' },
+  { driverId: 'smiechowski', teamId: 'inter-europol' },
+  { driverId: 'yelloly', teamId: 'inter-europol' },
+  { driverId: 'gray', teamId: 'forestier-racing-panis' },
+  { driverId: 'masson', teamId: 'forestier-racing-panis' },
+  { driverId: 'rousset', teamId: 'forestier-racing-panis' },
+  { driverId: 'closmenil', teamId: 'clx-motorsport' },
+  { driverId: 'milesi', teamId: 'clx-motorsport' },
+  { driverId: 'meguetounif', teamId: 'tds-racing' },
+  // LMP2 Pro-Am
+  { driverId: 'p-fittipaldi', teamId: 'vector-sport' },
+  { driverId: 'jarvis', teamId: 'united-autosports' },
+  { driverId: 'verschoor', teamId: 'duqueine' },
+  { driverId: 'roda', teamId: 'duqueine' },
+  { driverId: 'jake-hughes', teamId: 'algarve-pro' },
+  { driverId: 'perrodo', teamId: 'af-corse' },
+  { driverId: 'vaxiviere', teamId: 'af-corse' },
+  { driverId: 'fuoco', teamId: 'af-corse' },
+  { driverId: 'cameron', teamId: 'ao-by-tf' },
+  { driverId: 'hyett', teamId: 'ao-by-tf' },
+  { driverId: 'deletraz', teamId: 'ao-by-tf' },
+  // LMGT3
+  { driverId: 'eastwood', teamId: 'tf-sport' },
+  { driverId: 'mcdonald-b', teamId: 'tf-sport' },
+  { driverId: 'udell', teamId: 'tf-sport' },
+  { driverId: 'rovera', teamId: 'af-corse' },
+  { driverId: 'rigon', teamId: 'af-corse' },
+  { driverId: 'fjordbach', teamId: 'high-class-racing' },
+  { driverId: 'heinrich', teamId: 'high-class-racing' },
+  { driverId: 'cameron-d', teamId: 'spirit-of-race' },
+  { driverId: 'griffin-m', teamId: 'spirit-of-race' },
+  { driverId: 'andrade', teamId: 'iron-lynx' },
+  { driverId: 'sette-camara', teamId: 'iron-lynx' },
+  { driverId: 'lietz', teamId: 'proton-competition' },
+  { driverId: 'sargent-t', teamId: 'proton-competition' },
+  { driverId: 'hanafin', teamId: 'gr-racing' },
+]

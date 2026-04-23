@@ -1,0 +1,468 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — Formula E
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:fe-2026-sao-paulo-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20251206T120500Z
+DTEND:20251206T125000Z
+SUMMARY:Formula E: Free Practice — São Paulo E-Prix
+LOCATION:Sambódromo do Anhembi\, Brazil
+DESCRIPTION:Free Practice — São Paulo E-Prix\\nSambódromo do Anhembi\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-sao-paulo-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20251206T150500Z
+DTEND:20251206T160500Z
+SUMMARY:Formula E: Qualifying — São Paulo E-Prix
+LOCATION:Sambódromo do Anhembi\, Brazil
+DESCRIPTION:Qualifying — São Paulo E-Prix\\nSambódromo do Anhembi\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-sao-paulo-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20251206T170500Z
+DTEND:20251206T175000Z
+SUMMARY:Formula E: Race — São Paulo E-Prix
+LOCATION:Sambódromo do Anhembi\, Brazil
+DESCRIPTION:Race — São Paulo E-Prix\\nSambódromo do Anhembi\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-mexico-city-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260110T150500Z
+DTEND:20260110T155000Z
+SUMMARY:Formula E: Free Practice — Mexico City E-Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Free Practice — Mexico City E-Prix\\nAutodromo Hermanos Rodriguez\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-mexico-city-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260110T180500Z
+DTEND:20260110T190500Z
+SUMMARY:Formula E: Qualifying — Mexico City E-Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Qualifying — Mexico City E-Prix\\nAutodromo Hermanos Rodriguez\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-mexico-city-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260110T200500Z
+DTEND:20260110T205000Z
+SUMMARY:Formula E: Race — Mexico City E-Prix
+LOCATION:Autodromo Hermanos Rodriguez\, Mexico
+DESCRIPTION:Race — Mexico City E-Prix\\nAutodromo Hermanos Rodriguez\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-miami-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260131T140500Z
+DTEND:20260131T145000Z
+SUMMARY:Formula E: Free Practice — Miami E-Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Free Practice — Miami E-Prix\\nMiami International Autodrome\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-miami-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260131T170500Z
+DTEND:20260131T180500Z
+SUMMARY:Formula E: Qualifying — Miami E-Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Qualifying — Miami E-Prix\\nMiami International Autodrome\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-miami-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260131T190500Z
+DTEND:20260131T195000Z
+SUMMARY:Formula E: Race — Miami E-Prix
+LOCATION:Miami International Autodrome\, United States
+DESCRIPTION:Race — Miami E-Prix\\nMiami International Autodrome\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-jeddah-1-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260213T120500Z
+DTEND:20260213T125000Z
+SUMMARY:Formula E: Free Practice — Jeddah E-Prix Race 1
+LOCATION:Jeddah Corniche Circuit (FE)\, Saudi Arabia
+DESCRIPTION:Free Practice — Jeddah E-Prix Race 1\\nJeddah Corniche Circuit (FE)\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-jeddah-1-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260213T150500Z
+DTEND:20260213T160500Z
+SUMMARY:Formula E: Qualifying — Jeddah E-Prix Race 1
+LOCATION:Jeddah Corniche Circuit (FE)\, Saudi Arabia
+DESCRIPTION:Qualifying — Jeddah E-Prix Race 1\\nJeddah Corniche Circuit (FE)\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-jeddah-1-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260213T170500Z
+DTEND:20260213T175000Z
+SUMMARY:Formula E: Race — Jeddah E-Prix Race 1
+LOCATION:Jeddah Corniche Circuit (FE)\, Saudi Arabia
+DESCRIPTION:Race — Jeddah E-Prix Race 1\\nJeddah Corniche Circuit (FE)\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-jeddah-2-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260214T120500Z
+DTEND:20260214T125000Z
+SUMMARY:Formula E: Free Practice — Jeddah E-Prix Race 2
+LOCATION:Jeddah Corniche Circuit (FE)\, Saudi Arabia
+DESCRIPTION:Free Practice — Jeddah E-Prix Race 2\\nJeddah Corniche Circuit (FE)\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-jeddah-2-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260214T150500Z
+DTEND:20260214T160500Z
+SUMMARY:Formula E: Qualifying — Jeddah E-Prix Race 2
+LOCATION:Jeddah Corniche Circuit (FE)\, Saudi Arabia
+DESCRIPTION:Qualifying — Jeddah E-Prix Race 2\\nJeddah Corniche Circuit (FE)\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-jeddah-2-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260214T170500Z
+DTEND:20260214T175000Z
+SUMMARY:Formula E: Race — Jeddah E-Prix Race 2
+LOCATION:Jeddah Corniche Circuit (FE)\, Saudi Arabia
+DESCRIPTION:Race — Jeddah E-Prix Race 2\\nJeddah Corniche Circuit (FE)\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-madrid-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260321T090500Z
+DTEND:20260321T095000Z
+SUMMARY:Formula E: Free Practice — Madrid E-Prix
+LOCATION:Circuit de Jarama\, Spain
+DESCRIPTION:Free Practice — Madrid E-Prix\\nCircuit de Jarama\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-madrid-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260321T120500Z
+DTEND:20260321T130500Z
+SUMMARY:Formula E: Qualifying — Madrid E-Prix
+LOCATION:Circuit de Jarama\, Spain
+DESCRIPTION:Qualifying — Madrid E-Prix\\nCircuit de Jarama\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-madrid-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260321T140500Z
+DTEND:20260321T145000Z
+SUMMARY:Formula E: Race — Madrid E-Prix
+LOCATION:Circuit de Jarama\, Spain
+DESCRIPTION:Race — Madrid E-Prix\\nCircuit de Jarama\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-berlin-1-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T090500Z
+DTEND:20260502T095000Z
+SUMMARY:Formula E: Free Practice — Berlin E-Prix Race 1
+LOCATION:Tempelhof Airport Street Circuit\, Germany
+DESCRIPTION:Free Practice — Berlin E-Prix Race 1\\nTempelhof Airport Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-berlin-1-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T120500Z
+DTEND:20260502T130500Z
+SUMMARY:Formula E: Qualifying — Berlin E-Prix Race 1
+LOCATION:Tempelhof Airport Street Circuit\, Germany
+DESCRIPTION:Qualifying — Berlin E-Prix Race 1\\nTempelhof Airport Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-berlin-1-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T140500Z
+DTEND:20260502T145000Z
+SUMMARY:Formula E: Race — Berlin E-Prix Race 1
+LOCATION:Tempelhof Airport Street Circuit\, Germany
+DESCRIPTION:Race — Berlin E-Prix Race 1\\nTempelhof Airport Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-berlin-2-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260503T090500Z
+DTEND:20260503T095000Z
+SUMMARY:Formula E: Free Practice — Berlin E-Prix Race 2
+LOCATION:Tempelhof Airport Street Circuit\, Germany
+DESCRIPTION:Free Practice — Berlin E-Prix Race 2\\nTempelhof Airport Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-berlin-2-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260503T120500Z
+DTEND:20260503T130500Z
+SUMMARY:Formula E: Qualifying — Berlin E-Prix Race 2
+LOCATION:Tempelhof Airport Street Circuit\, Germany
+DESCRIPTION:Qualifying — Berlin E-Prix Race 2\\nTempelhof Airport Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-berlin-2-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260503T140500Z
+DTEND:20260503T145000Z
+SUMMARY:Formula E: Race — Berlin E-Prix Race 2
+LOCATION:Tempelhof Airport Street Circuit\, Germany
+DESCRIPTION:Race — Berlin E-Prix Race 2\\nTempelhof Airport Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-monaco-1-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260516T080500Z
+DTEND:20260516T085000Z
+SUMMARY:Formula E: Free Practice — Monaco E-Prix Race 1
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Free Practice — Monaco E-Prix Race 1\\nCircuit de Monaco\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-monaco-1-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260516T110500Z
+DTEND:20260516T120500Z
+SUMMARY:Formula E: Qualifying — Monaco E-Prix Race 1
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Qualifying — Monaco E-Prix Race 1\\nCircuit de Monaco\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-monaco-1-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260516T130500Z
+DTEND:20260516T135000Z
+SUMMARY:Formula E: Race — Monaco E-Prix Race 1
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Race — Monaco E-Prix Race 1\\nCircuit de Monaco\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-monaco-2-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260517T080500Z
+DTEND:20260517T085000Z
+SUMMARY:Formula E: Free Practice — Monaco E-Prix Race 2
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Free Practice — Monaco E-Prix Race 2\\nCircuit de Monaco\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-monaco-2-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260517T110500Z
+DTEND:20260517T120500Z
+SUMMARY:Formula E: Qualifying — Monaco E-Prix Race 2
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Qualifying — Monaco E-Prix Race 2\\nCircuit de Monaco\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-monaco-2-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260517T130500Z
+DTEND:20260517T135000Z
+SUMMARY:Formula E: Race — Monaco E-Prix Race 2
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Race — Monaco E-Prix Race 2\\nCircuit de Monaco\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-sanya-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T020500Z
+DTEND:20260620T025000Z
+SUMMARY:Formula E: Free Practice — Sanya E-Prix
+LOCATION:Sanya Street Circuit\, China
+DESCRIPTION:Free Practice — Sanya E-Prix\\nSanya Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-sanya-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T050500Z
+DTEND:20260620T060500Z
+SUMMARY:Formula E: Qualifying — Sanya E-Prix
+LOCATION:Sanya Street Circuit\, China
+DESCRIPTION:Qualifying — Sanya E-Prix\\nSanya Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-sanya-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260620T070500Z
+DTEND:20260620T075000Z
+SUMMARY:Formula E: Race — Sanya E-Prix
+LOCATION:Sanya Street Circuit\, China
+DESCRIPTION:Race — Sanya E-Prix\\nSanya Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-shanghai-1-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260704T020500Z
+DTEND:20260704T025000Z
+SUMMARY:Formula E: Free Practice — Shanghai E-Prix Race 1
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Free Practice — Shanghai E-Prix Race 1\\nShanghai International Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-shanghai-1-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260704T050500Z
+DTEND:20260704T060500Z
+SUMMARY:Formula E: Qualifying — Shanghai E-Prix Race 1
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Qualifying — Shanghai E-Prix Race 1\\nShanghai International Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-shanghai-1-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260704T070500Z
+DTEND:20260704T075000Z
+SUMMARY:Formula E: Race — Shanghai E-Prix Race 1
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Race — Shanghai E-Prix Race 1\\nShanghai International Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-shanghai-2-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260705T020500Z
+DTEND:20260705T025000Z
+SUMMARY:Formula E: Free Practice — Shanghai E-Prix Race 2
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Free Practice — Shanghai E-Prix Race 2\\nShanghai International Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-shanghai-2-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260705T050500Z
+DTEND:20260705T060500Z
+SUMMARY:Formula E: Qualifying — Shanghai E-Prix Race 2
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Qualifying — Shanghai E-Prix Race 2\\nShanghai International Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-shanghai-2-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260705T070500Z
+DTEND:20260705T075000Z
+SUMMARY:Formula E: Race — Shanghai E-Prix Race 2
+LOCATION:Shanghai International Circuit\, China
+DESCRIPTION:Race — Shanghai E-Prix Race 2\\nShanghai International Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-tokyo-1-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T060500Z
+DTEND:20260725T065000Z
+SUMMARY:Formula E: Free Practice — Tokyo E-Prix Race 1
+LOCATION:Tokyo Street Circuit\, Japan
+DESCRIPTION:Free Practice — Tokyo E-Prix Race 1\\nTokyo Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-tokyo-1-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T090500Z
+DTEND:20260725T100500Z
+SUMMARY:Formula E: Qualifying — Tokyo E-Prix Race 1
+LOCATION:Tokyo Street Circuit\, Japan
+DESCRIPTION:Qualifying — Tokyo E-Prix Race 1\\nTokyo Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-tokyo-1-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T110500Z
+DTEND:20260725T115000Z
+SUMMARY:Formula E: Race — Tokyo E-Prix Race 1
+LOCATION:Tokyo Street Circuit\, Japan
+DESCRIPTION:Race — Tokyo E-Prix Race 1\\nTokyo Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-tokyo-2-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260726T060500Z
+DTEND:20260726T065000Z
+SUMMARY:Formula E: Free Practice — Tokyo E-Prix Race 2
+LOCATION:Tokyo Street Circuit\, Japan
+DESCRIPTION:Free Practice — Tokyo E-Prix Race 2\\nTokyo Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-tokyo-2-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260726T090500Z
+DTEND:20260726T100500Z
+SUMMARY:Formula E: Qualifying — Tokyo E-Prix Race 2
+LOCATION:Tokyo Street Circuit\, Japan
+DESCRIPTION:Qualifying — Tokyo E-Prix Race 2\\nTokyo Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-tokyo-2-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260726T110500Z
+DTEND:20260726T115000Z
+SUMMARY:Formula E: Race — Tokyo E-Prix Race 2
+LOCATION:Tokyo Street Circuit\, Japan
+DESCRIPTION:Race — Tokyo E-Prix Race 2\\nTokyo Street Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-london-1-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T090500Z
+DTEND:20260815T095000Z
+SUMMARY:Formula E: Free Practice — London E-Prix Race 1
+LOCATION:ExCeL London Circuit\, United Kingdom
+DESCRIPTION:Free Practice — London E-Prix Race 1\\nExCeL London Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-london-1-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T120500Z
+DTEND:20260815T130500Z
+SUMMARY:Formula E: Qualifying — London E-Prix Race 1
+LOCATION:ExCeL London Circuit\, United Kingdom
+DESCRIPTION:Qualifying — London E-Prix Race 1\\nExCeL London Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-london-1-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260815T140500Z
+DTEND:20260815T145000Z
+SUMMARY:Formula E: Race — London E-Prix Race 1
+LOCATION:ExCeL London Circuit\, United Kingdom
+DESCRIPTION:Race — London E-Prix Race 1\\nExCeL London Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-london-2-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260816T090500Z
+DTEND:20260816T095000Z
+SUMMARY:Formula E: Free Practice — London E-Prix Race 2
+LOCATION:ExCeL London Circuit\, United Kingdom
+DESCRIPTION:Free Practice — London E-Prix Race 2\\nExCeL London Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-london-2-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260816T120500Z
+DTEND:20260816T130500Z
+SUMMARY:Formula E: Qualifying — London E-Prix Race 2
+LOCATION:ExCeL London Circuit\, United Kingdom
+DESCRIPTION:Qualifying — London E-Prix Race 2\\nExCeL London Circuit\\nFormula E
+END:VEVENT
+BEGIN:VEVENT
+UID:fe-2026-london-2-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260816T140500Z
+DTEND:20260816T145000Z
+SUMMARY:Formula E: Race — London E-Prix Race 2
+LOCATION:ExCeL London Circuit\, United Kingdom
+DESCRIPTION:Race — London E-Prix Race 2\\nExCeL London Circuit\\nFormula E
+END:VEVENT
+END:VCALENDAR

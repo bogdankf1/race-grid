@@ -1,0 +1,288 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — GT World Challenge America
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:gtwcam-2026-sonoma-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260327T230000Z
+DTEND:20260328T000000Z
+SUMMARY:GT World Challenge America: Practice 1 — Sonoma 3 Hours
+LOCATION:Sonoma Raceway\, United States
+DESCRIPTION:Practice 1 — Sonoma 3 Hours\\nSonoma Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sonoma-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T180000Z
+DTEND:20260328T190000Z
+SUMMARY:GT World Challenge America: Practice 2 — Sonoma 3 Hours
+LOCATION:Sonoma Raceway\, United States
+DESCRIPTION:Practice 2 — Sonoma 3 Hours\\nSonoma Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sonoma-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260328T211500Z
+DTEND:20260328T221500Z
+SUMMARY:GT World Challenge America: Practice 3 — Sonoma 3 Hours
+LOCATION:Sonoma Raceway\, United States
+DESCRIPTION:Practice 3 — Sonoma 3 Hours\\nSonoma Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sonoma-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260329T155000Z
+DTEND:20260329T162000Z
+SUMMARY:GT World Challenge America: Qualifying — Sonoma 3 Hours
+LOCATION:Sonoma Raceway\, United States
+DESCRIPTION:Qualifying — Sonoma 3 Hours\\nSonoma Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sonoma-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260329T204500Z
+DTEND:20260329T234500Z
+SUMMARY:GT World Challenge America: 3 Hours of Sonoma — Sonoma 3 Hours
+LOCATION:Sonoma Raceway\, United States
+DESCRIPTION:3 Hours of Sonoma — Sonoma 3 Hours\\nSonoma Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-cota-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260424T190000Z
+DTEND:20260424T200000Z
+SUMMARY:GT World Challenge America: Practice 1 — COTA 3 Hours
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 1 — COTA 3 Hours\\nCircuit of the Americas\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-cota-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T152500Z
+DTEND:20260425T162500Z
+SUMMARY:GT World Challenge America: Practice 2 — COTA 3 Hours
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 2 — COTA 3 Hours\\nCircuit of the Americas\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-cota-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260425T191500Z
+DTEND:20260425T201500Z
+SUMMARY:GT World Challenge America: Practice 3 — COTA 3 Hours
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Practice 3 — COTA 3 Hours\\nCircuit of the Americas\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-cota-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T135000Z
+DTEND:20260426T140500Z
+SUMMARY:GT World Challenge America: Qualifying 1 — COTA 3 Hours
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Qualifying 1 — COTA 3 Hours\\nCircuit of the Americas\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-cota-s4@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T141000Z
+DTEND:20260426T142500Z
+SUMMARY:GT World Challenge America: Qualifying 2 — COTA 3 Hours
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:Qualifying 2 — COTA 3 Hours\\nCircuit of the Americas\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-cota-s5@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260426T173000Z
+DTEND:20260426T203000Z
+SUMMARY:GT World Challenge America: 3 Hours of COTA — COTA 3 Hours
+LOCATION:Circuit of the Americas\, United States
+DESCRIPTION:3 Hours of COTA — COTA 3 Hours\\nCircuit of the Americas\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sebring-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260508T230000Z
+DTEND:20260509T000000Z
+SUMMARY:GT World Challenge America: Practice 1 — Sebring 3 Hours
+LOCATION:Sebring International Raceway\, United States
+DESCRIPTION:Practice 1 — Sebring 3 Hours\\nSebring International Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sebring-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T125500Z
+DTEND:20260509T135500Z
+SUMMARY:GT World Challenge America: Practice 2 — Sebring 3 Hours
+LOCATION:Sebring International Raceway\, United States
+DESCRIPTION:Practice 2 — Sebring 3 Hours\\nSebring International Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sebring-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T181000Z
+DTEND:20260509T184000Z
+SUMMARY:GT World Challenge America: Qualifying — Sebring 3 Hours
+LOCATION:Sebring International Raceway\, United States
+DESCRIPTION:Qualifying — Sebring 3 Hours\\nSebring International Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-sebring-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260509T210000Z
+DTEND:20260510T000000Z
+SUMMARY:GT World Challenge America: 3 Hours of Sebring — Sebring 3 Hours
+LOCATION:Sebring International Raceway\, United States
+DESCRIPTION:3 Hours of Sebring — Sebring 3 Hours\\nSebring International Raceway\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-atlanta-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260612T180000Z
+DTEND:20260612T190000Z
+SUMMARY:GT World Challenge America: Practice 1 — Road Atlanta 3 Hours
+LOCATION:Michelin Raceway Road Atlanta\, United States
+DESCRIPTION:Practice 1 — Road Atlanta 3 Hours\\nMichelin Raceway Road Atlanta\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-atlanta-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260613T143000Z
+DTEND:20260613T153000Z
+SUMMARY:GT World Challenge America: Practice 2 — Road Atlanta 3 Hours
+LOCATION:Michelin Raceway Road Atlanta\, United States
+DESCRIPTION:Practice 2 — Road Atlanta 3 Hours\\nMichelin Raceway Road Atlanta\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-atlanta-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260613T180000Z
+DTEND:20260613T183000Z
+SUMMARY:GT World Challenge America: Qualifying — Road Atlanta 3 Hours
+LOCATION:Michelin Raceway Road Atlanta\, United States
+DESCRIPTION:Qualifying — Road Atlanta 3 Hours\\nMichelin Raceway Road Atlanta\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-atlanta-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260614T173000Z
+DTEND:20260614T203000Z
+SUMMARY:GT World Challenge America: 3 Hours of Road Atlanta — Road Atlanta 3 Hours
+LOCATION:Michelin Raceway Road Atlanta\, United States
+DESCRIPTION:3 Hours of Road Atlanta — Road Atlanta 3 Hours\\nMichelin Raceway Road Atlanta\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-america-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260828T180000Z
+DTEND:20260828T190000Z
+SUMMARY:GT World Challenge America: Practice 1 — Road America 3 Hours
+LOCATION:Road America\, United States
+DESCRIPTION:Practice 1 — Road America 3 Hours\\nRoad America\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-america-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T143000Z
+DTEND:20260829T153000Z
+SUMMARY:GT World Challenge America: Practice 2 — Road America 3 Hours
+LOCATION:Road America\, United States
+DESCRIPTION:Practice 2 — Road America 3 Hours\\nRoad America\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-america-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260829T180000Z
+DTEND:20260829T183000Z
+SUMMARY:GT World Challenge America: Qualifying — Road America 3 Hours
+LOCATION:Road America\, United States
+DESCRIPTION:Qualifying — Road America 3 Hours\\nRoad America\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-road-america-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260830T173000Z
+DTEND:20260830T203000Z
+SUMMARY:GT World Challenge America: 3 Hours of Road America — Road America 3 Hours
+LOCATION:Road America\, United States
+DESCRIPTION:3 Hours of Road America — Road America 3 Hours\\nRoad America\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-barber-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260925T180000Z
+DTEND:20260925T190000Z
+SUMMARY:GT World Challenge America: Practice 1 — Barber 3 Hours
+LOCATION:Barber Motorsports Park\, United States
+DESCRIPTION:Practice 1 — Barber 3 Hours\\nBarber Motorsports Park\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-barber-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T143000Z
+DTEND:20260926T153000Z
+SUMMARY:GT World Challenge America: Practice 2 — Barber 3 Hours
+LOCATION:Barber Motorsports Park\, United States
+DESCRIPTION:Practice 2 — Barber 3 Hours\\nBarber Motorsports Park\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-barber-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260926T180000Z
+DTEND:20260926T183000Z
+SUMMARY:GT World Challenge America: Qualifying — Barber 3 Hours
+LOCATION:Barber Motorsports Park\, United States
+DESCRIPTION:Qualifying — Barber 3 Hours\\nBarber Motorsports Park\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-barber-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260927T173000Z
+DTEND:20260927T203000Z
+SUMMARY:GT World Challenge America: 3 Hours of Barber — Barber 3 Hours
+LOCATION:Barber Motorsports Park\, United States
+DESCRIPTION:3 Hours of Barber — Barber 3 Hours\\nBarber Motorsports Park\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-indianapolis-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261008T160000Z
+DTEND:20261008T173000Z
+SUMMARY:GT World Challenge America: Practice 1 — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Practice 1 — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-indianapolis-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261009T140000Z
+DTEND:20261009T153000Z
+SUMMARY:GT World Challenge America: Practice 2 — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Practice 2 — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-indianapolis-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261010T140000Z
+DTEND:20261010T143000Z
+SUMMARY:GT World Challenge America: Qualifying — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Qualifying — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nGT World Challenge America
+END:VEVENT
+BEGIN:VEVENT
+UID:gtwcam-2026-indianapolis-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261011T150000Z
+DTEND:20261011T230000Z
+SUMMARY:GT World Challenge America: Indianapolis 8 Hour — Indianapolis 8 Hour
+LOCATION:Indianapolis Motor Speedway (Road Course)\, United States
+DESCRIPTION:Indianapolis 8 Hour — Indianapolis 8 Hour\\nIndianapolis Motor Speedway (Road Course)\\nGT World Challenge America
+END:VEVENT
+END:VCALENDAR

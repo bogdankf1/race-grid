@@ -1,0 +1,333 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — FIA Formula 3
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:f3-2026-melbourne-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260305T213000Z
+DTEND:20260305T221500Z
+SUMMARY:FIA Formula 3: Practice — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Practice — Melbourne\\nAlbert Park Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-melbourne-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260306T020500Z
+DTEND:20260306T023500Z
+SUMMARY:FIA Formula 3: Qualifying — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Qualifying — Melbourne\\nAlbert Park Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-melbourne-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260307T015000Z
+DTEND:20260307T023000Z
+SUMMARY:FIA Formula 3: Sprint Race — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Sprint Race — Melbourne\\nAlbert Park Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-melbourne-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260307T225500Z
+DTEND:20260307T234000Z
+SUMMARY:FIA Formula 3: Feature Race — Melbourne
+LOCATION:Albert Park Circuit\, Australia
+DESCRIPTION:Feature Race — Melbourne\\nAlbert Park Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monaco-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T080500Z
+DTEND:20260605T085000Z
+SUMMARY:FIA Formula 3: Practice — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Practice — Monaco\\nCircuit de Monaco\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monaco-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260605T121500Z
+DTEND:20260605T124500Z
+SUMMARY:FIA Formula 3: Qualifying — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Qualifying — Monaco\\nCircuit de Monaco\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monaco-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260606T070000Z
+DTEND:20260606T074000Z
+SUMMARY:FIA Formula 3: Sprint Race — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Sprint Race — Monaco\\nCircuit de Monaco\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monaco-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260607T072500Z
+DTEND:20260607T081000Z
+SUMMARY:FIA Formula 3: Feature Race — Monaco
+LOCATION:Circuit de Monaco\, Monaco
+DESCRIPTION:Feature Race — Monaco\\nCircuit de Monaco\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-barcelona-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260612T080500Z
+DTEND:20260612T085000Z
+SUMMARY:FIA Formula 3: Practice — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Practice — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-barcelona-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260612T121500Z
+DTEND:20260612T124500Z
+SUMMARY:FIA Formula 3: Qualifying — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Qualifying — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-barcelona-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260613T070000Z
+DTEND:20260613T074000Z
+SUMMARY:FIA Formula 3: Sprint Race — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Sprint Race — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-barcelona-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260614T072500Z
+DTEND:20260614T081000Z
+SUMMARY:FIA Formula 3: Feature Race — Barcelona
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Feature Race — Barcelona\\nCircuit de Barcelona-Catalunya\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spielberg-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260626T080500Z
+DTEND:20260626T085000Z
+SUMMARY:FIA Formula 3: Practice — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Practice — Spielberg\\nRed Bull Ring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spielberg-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260626T121500Z
+DTEND:20260626T124500Z
+SUMMARY:FIA Formula 3: Qualifying — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Qualifying — Spielberg\\nRed Bull Ring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spielberg-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260627T070000Z
+DTEND:20260627T074000Z
+SUMMARY:FIA Formula 3: Sprint Race — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Sprint Race — Spielberg\\nRed Bull Ring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spielberg-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260628T072500Z
+DTEND:20260628T081000Z
+SUMMARY:FIA Formula 3: Feature Race — Spielberg
+LOCATION:Red Bull Ring\, Austria
+DESCRIPTION:Feature Race — Spielberg\\nRed Bull Ring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-silverstone-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260703T090500Z
+DTEND:20260703T095000Z
+SUMMARY:FIA Formula 3: Practice — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Practice — Silverstone\\nSilverstone Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-silverstone-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260703T131500Z
+DTEND:20260703T134500Z
+SUMMARY:FIA Formula 3: Qualifying — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Qualifying — Silverstone\\nSilverstone Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-silverstone-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260704T080000Z
+DTEND:20260704T084000Z
+SUMMARY:FIA Formula 3: Sprint Race — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Sprint Race — Silverstone\\nSilverstone Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-silverstone-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260705T082500Z
+DTEND:20260705T091000Z
+SUMMARY:FIA Formula 3: Feature Race — Silverstone
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Feature Race — Silverstone\\nSilverstone Circuit\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spa-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260717T080500Z
+DTEND:20260717T085000Z
+SUMMARY:FIA Formula 3: Practice — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Practice — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spa-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260717T121500Z
+DTEND:20260717T124500Z
+SUMMARY:FIA Formula 3: Qualifying — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Qualifying — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spa-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260718T070000Z
+DTEND:20260718T074000Z
+SUMMARY:FIA Formula 3: Sprint Race — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Sprint Race — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-spa-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260719T072500Z
+DTEND:20260719T081000Z
+SUMMARY:FIA Formula 3: Feature Race — Spa-Francorchamps
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Feature Race — Spa-Francorchamps\\nCircuit de Spa-Francorchamps\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-budapest-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260724T080500Z
+DTEND:20260724T085000Z
+SUMMARY:FIA Formula 3: Practice — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Practice — Budapest\\nHungaroring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-budapest-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260724T121500Z
+DTEND:20260724T124500Z
+SUMMARY:FIA Formula 3: Qualifying — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Qualifying — Budapest\\nHungaroring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-budapest-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260725T070000Z
+DTEND:20260725T074000Z
+SUMMARY:FIA Formula 3: Sprint Race — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Sprint Race — Budapest\\nHungaroring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-budapest-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260726T072500Z
+DTEND:20260726T081000Z
+SUMMARY:FIA Formula 3: Feature Race — Budapest
+LOCATION:Hungaroring\, Hungary
+DESCRIPTION:Feature Race — Budapest\\nHungaroring\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monza-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260904T080500Z
+DTEND:20260904T085000Z
+SUMMARY:FIA Formula 3: Practice — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Practice — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monza-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260904T121500Z
+DTEND:20260904T124500Z
+SUMMARY:FIA Formula 3: Qualifying — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Qualifying — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monza-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260905T070000Z
+DTEND:20260905T074000Z
+SUMMARY:FIA Formula 3: Sprint Race — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Sprint Race — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-monza-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260906T072500Z
+DTEND:20260906T081000Z
+SUMMARY:FIA Formula 3: Feature Race — Monza
+LOCATION:Autodromo Nazionale Monza\, Italy
+DESCRIPTION:Feature Race — Monza\\nAutodromo Nazionale Monza\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-madrid-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T080500Z
+DTEND:20260911T085000Z
+SUMMARY:FIA Formula 3: Practice — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Practice — Madrid\\nCircuito de Madrid\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-madrid-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T121500Z
+DTEND:20260911T124500Z
+SUMMARY:FIA Formula 3: Qualifying — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Qualifying — Madrid\\nCircuito de Madrid\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-madrid-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260912T070000Z
+DTEND:20260912T074000Z
+SUMMARY:FIA Formula 3: Sprint Race — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Sprint Race — Madrid\\nCircuito de Madrid\\nFIA Formula 3
+END:VEVENT
+BEGIN:VEVENT
+UID:f3-2026-madrid-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260913T072500Z
+DTEND:20260913T081000Z
+SUMMARY:FIA Formula 3: Feature Race — Madrid
+LOCATION:Circuito de Madrid\, Spain
+DESCRIPTION:Feature Race — Madrid\\nCircuito de Madrid\\nFIA Formula 3
+END:VEVENT
+END:VCALENDAR

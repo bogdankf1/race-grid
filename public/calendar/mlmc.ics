@@ -1,0 +1,225 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Race Grid//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Race Grid — Michelin Le Mans Cup
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:mlmc-2026-barcelona-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260410T075000Z
+DTEND:20260410T085000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 1 — Barcelona Round
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Free Practice 1 — Barcelona Round\\nCircuit de Barcelona-Catalunya\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-barcelona-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260410T153500Z
+DTEND:20260410T163500Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 2 — Barcelona Round
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Free Practice 2 — Barcelona Round\\nCircuit de Barcelona-Catalunya\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-barcelona-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260411T103000Z
+DTEND:20260411T111500Z
+SUMMARY:Michelin Le Mans Cup: Qualifying — Barcelona Round
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Qualifying — Barcelona Round\\nCircuit de Barcelona-Catalunya\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-barcelona-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260411T162000Z
+DTEND:20260411T182000Z
+SUMMARY:Michelin Le Mans Cup: Race — Barcelona Round
+LOCATION:Circuit de Barcelona-Catalunya\, Spain
+DESCRIPTION:Race — Barcelona Round\\nCircuit de Barcelona-Catalunya\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-castellet-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260501T075000Z
+DTEND:20260501T085000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 1 — Le Castellet Round
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:Free Practice 1 — Le Castellet Round\\nCircuit Paul Ricard\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-castellet-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260501T142500Z
+DTEND:20260501T152500Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 2 — Le Castellet Round
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:Free Practice 2 — Le Castellet Round\\nCircuit Paul Ricard\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-castellet-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T095000Z
+DTEND:20260502T103500Z
+SUMMARY:Michelin Le Mans Cup: Qualifying — Le Castellet Round
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:Qualifying — Le Castellet Round\\nCircuit Paul Ricard\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-castellet-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260502T144500Z
+DTEND:20260502T164500Z
+SUMMARY:Michelin Le Mans Cup: Race — Le Castellet Round
+LOCATION:Circuit Paul Ricard\, France
+DESCRIPTION:Race — Le Castellet Round\\nCircuit Paul Ricard\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-mans-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260610T094500Z
+DTEND:20260610T104500Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 1 — Road to Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Free Practice 1 — Road to Le Mans\\nCircuit de la Sarthe\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-mans-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260610T183000Z
+DTEND:20260610T193000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 2 — Road to Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Free Practice 2 — Road to Le Mans\\nCircuit de la Sarthe\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-mans-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260611T081500Z
+DTEND:20260611T091500Z
+SUMMARY:Michelin Le Mans Cup: Qualifying — Road to Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Qualifying — Road to Le Mans\\nCircuit de la Sarthe\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-le-mans-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260612T080000Z
+DTEND:20260612T110000Z
+SUMMARY:Michelin Le Mans Cup: Road to Le Mans — Road to Le Mans
+LOCATION:Circuit de la Sarthe\, France
+DESCRIPTION:Road to Le Mans — Road to Le Mans\\nCircuit de la Sarthe\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-spa-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260821T075000Z
+DTEND:20260821T085000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 1 — Spa Round
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Free Practice 1 — Spa Round\\nCircuit de Spa-Francorchamps\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-spa-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260821T143000Z
+DTEND:20260821T153000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 2 — Spa Round
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Free Practice 2 — Spa Round\\nCircuit de Spa-Francorchamps\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-spa-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260822T083000Z
+DTEND:20260822T091500Z
+SUMMARY:Michelin Le Mans Cup: Qualifying — Spa Round
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Qualifying — Spa Round\\nCircuit de Spa-Francorchamps\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-spa-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260822T140000Z
+DTEND:20260822T160000Z
+SUMMARY:Michelin Le Mans Cup: Race — Spa Round
+LOCATION:Circuit de Spa-Francorchamps\, Belgium
+DESCRIPTION:Race — Spa Round\\nCircuit de Spa-Francorchamps\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-silverstone-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T085000Z
+DTEND:20260911T095000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 1 — Silverstone Round
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Free Practice 1 — Silverstone Round\\nSilverstone Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-silverstone-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260911T143000Z
+DTEND:20260911T153000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 2 — Silverstone Round
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Free Practice 2 — Silverstone Round\\nSilverstone Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-silverstone-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260912T090000Z
+DTEND:20260912T094500Z
+SUMMARY:Michelin Le Mans Cup: Qualifying — Silverstone Round
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Qualifying — Silverstone Round\\nSilverstone Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-silverstone-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20260912T140000Z
+DTEND:20260912T155000Z
+SUMMARY:Michelin Le Mans Cup: Race — Silverstone Round
+LOCATION:Silverstone Circuit\, United Kingdom
+DESCRIPTION:Race — Silverstone Round\\nSilverstone Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-portimao-s0@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261008T080000Z
+DTEND:20261008T090000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 1 — Portimão Round
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Free Practice 1 — Portimão Round\\nAlgarve International Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-portimao-s1@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261008T143000Z
+DTEND:20261008T153000Z
+SUMMARY:Michelin Le Mans Cup: Free Practice 2 — Portimão Round
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Free Practice 2 — Portimão Round\\nAlgarve International Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-portimao-s2@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261009T090000Z
+DTEND:20261009T094500Z
+SUMMARY:Michelin Le Mans Cup: Qualifying — Portimão Round
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Qualifying — Portimão Round\\nAlgarve International Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:mlmc-2026-portimao-s3@racegrid
+DTSTAMP:20260423T110148Z
+DTSTART:20261010T113000Z
+DTEND:20261010T133000Z
+SUMMARY:Michelin Le Mans Cup: Race — Portimão Round
+LOCATION:Algarve International Circuit\, Portugal
+DESCRIPTION:Race — Portimão Round\\nAlgarve International Circuit\\nMichelin Le Mans Cup
+END:VEVENT
+END:VCALENDAR
