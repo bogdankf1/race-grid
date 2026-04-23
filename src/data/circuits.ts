@@ -196,6 +196,7 @@ const CIRCUITS: Record<string, Circuit> = {
   'beijing-street-circuit': { id: 'beijing-street-circuit', name: 'Beijing Street Circuit', country: 'China', countryCode: 'CN', length: '3.400 km', turns: 12, type: 'street' },
   'nola-motorsports-park': { id: 'nola-motorsports-park', name: 'NOLA Motorsports Park', country: 'United States', countryCode: 'US', length: '4.430 km', turns: 16, type: 'permanent' },
   'hampton-downs-motorsport-park': { id: 'hampton-downs-motorsport-park', name: 'Hampton Downs Motorsport Park', country: 'New Zealand', countryCode: 'NZ', length: '4.030 km', turns: 14, type: 'permanent' },
+  'termas-de-rio-hondo': { id: 'termas-de-rio-hondo', name: 'Termas de Río Hondo', country: 'Argentina', countryCode: 'AR', length: '4.806 km', turns: 14, type: 'permanent' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

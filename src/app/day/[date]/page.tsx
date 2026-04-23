@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
+import type { Metadata } from 'next'
 import { DayPageClient } from '@/components/DayPageClient'
-import { eachDayOfInterval, format, subDays, addDays } from 'date-fns'
+import { eachDayOfInterval, format, subDays, addDays, parseISO } from 'date-fns'
 import { getSeriesForYear, AVAILABLE_YEARS } from '@/data/series-registry'
 
 export function generateStaticParams() {
@@ -26,6 +27,20 @@ export function generateStaticParams() {
   const days = eachDayOfInterval({ start, end })
 
   return days.map(day => ({ date: format(day, 'yyyy-MM-dd') }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ date: string }> }): Promise<Metadata> {
+  const { date } = await params
+  const d = parseISO(date)
+  const formatted = format(d, 'EEEE, MMMM d, yyyy')
+  return {
+    title: `${formatted} — Race Grid`,
+    description: `Motorsport schedule for ${formatted}. Session times in your local timezone.`,
+    openGraph: {
+      title: `${formatted} — Race Grid`,
+      description: `Motorsport schedule for ${formatted}. Session times in your local timezone.`,
+    },
+  }
 }
 
 export default async function DayPage({ params }: { params: Promise<{ date: string }> }) {

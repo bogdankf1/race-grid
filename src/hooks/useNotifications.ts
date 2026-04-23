@@ -93,7 +93,7 @@ export function useNotifications() {
           if (triggerAt <= now) continue
 
           sessions.push({
-            key: `${event.id}-${session.label}`,
+            key: `${event.id}-${session.label}-${session.startUtc}`,
             title: `${series.shortName}: ${session.label}`,
             body: `${event.name} — starts in ${prefs.leadMinutes} min`,
             triggerAt,

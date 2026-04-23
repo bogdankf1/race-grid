@@ -22,12 +22,12 @@ Generated: 2026-04-23
 
 ### P0 — Fix Immediately
 
-| Bug | File | Line | Impact |
-|-----|------|------|--------|
-| Non-unique notification keys — if event has two sessions with same label (e.g. "Practice"), one overwrites the other | `src/hooks/useNotifications.ts` | 96 | Missed notifications |
-| Notifications sent for hidden session types — session type filter not respected | `src/hooks/useNotifications.ts` | 88-92 | Unwanted notifications for Practice etc. |
-| Circuit null crash — `getCircuit()` returns null for `termas-de-rio-hondo` (missing from circuits.ts), renders "undefined, undefined" | `src/components/DayDetail.tsx` | 132 | Visible UI bug for MotoGP users |
-| Missing circuit definition: `termas-de-rio-hondo` referenced in MotoGP 2022/2023/2025 | `src/data/circuits.ts` | — | Data gap |
+| Bug | File | Line | Impact | Status |
+|-----|------|------|--------|--------|
+| ~~Non-unique notification keys~~ | `src/hooks/useNotifications.ts` | 96 | ~~Missed notifications~~ | FIXED |
+| Notifications sent for hidden session types — session type filter not respected | `src/hooks/useNotifications.ts` | 88-92 | Unwanted notifications for Practice etc. | By design — notification prefs are independent of view filter |
+| ~~Circuit null crash — `getCircuit()` returns null for `termas-de-rio-hondo`~~ | `src/components/DayDetail.tsx` | 132 | ~~Visible UI bug for MotoGP users~~ | FIXED (circuit added + null guard existed) |
+| ~~Missing circuit definition: `termas-de-rio-hondo`~~ | `src/data/circuits.ts` | — | ~~Data gap~~ | FIXED |
 
 ### P1 — Fix Soon
 
@@ -47,8 +47,8 @@ Generated: 2026-04-23
 
 | Issue | Impact | Pages Affected |
 |-------|--------|----------------|
-| **Dynamic routes have no unique metadata** — /series/[id], /drivers/[id], /teams/[id], /circuits/[slug], /day/[date] all serve the generic "Race Grid — Motorsport Calendar" title | Google shows same title for 3,669 pages | 3,669 |
-| **Sitemap is incomplete** — only includes homepage and /day/* pages. Missing /series/*, /drivers/*, /teams/*, /circuits/*, /standings | 3,669 pages invisible to Google | 3,669 |
+| ~~**Dynamic routes have no unique metadata**~~ | ~~Google shows same title for 3,669 pages~~ | ~~3,669~~ | FIXED — `generateMetadata` added to all 5 dynamic routes |
+| ~~**Sitemap is incomplete**~~ | ~~3,669 pages invisible to Google~~ | ~~3,669~~ | FIXED — sitemap now includes /series/*, /drivers/*, /teams/*, /circuits/*, /standings |
 | **No structured data (JSON-LD)** — no schema.org markup for events, drivers, teams, circuits, breadcrumbs | No rich snippets in Google results | All |
 | **No OG images** — no `og:image` on any page. Social shares show blank preview | Poor social click-through | All |
 
@@ -291,11 +291,12 @@ The app is genuinely useful and well-built. Here's what stands out:
 ## Priority Action Plan
 
 ### Week 1 — Critical fixes
-- [ ] Fix notification bugs (P0 bugs: unique keys, session filter)
-- [ ] Add missing circuit `termas-de-rio-hondo`
-- [ ] Add `generateMetadata()` to all 5 dynamic routes
-- [ ] Extend sitemap to include all pages
-- [ ] Add 404 page (`not-found.tsx`)
+- [x] ~~Fix notification unique keys bug~~
+- [x] ~~Add missing circuit `termas-de-rio-hondo`~~
+- [x] ~~Add `generateMetadata()` to all 5 dynamic routes~~
+- [x] ~~Extend sitemap to include all pages (series, drivers, teams, circuits, standings)~~
+- [x] ~~Add 404 page (`not-found.tsx`)~~
+- [x] ~~Add error page (`error.tsx`)~~
 
 ### Week 2 — SEO & data
 - [ ] Add JSON-LD structured data (BreadcrumbList + Event)
