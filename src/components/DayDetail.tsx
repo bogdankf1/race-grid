@@ -167,14 +167,14 @@ function EventCard({ series, event, sessions, now, timezone, locale, spoilerFree
       {/* Sessions + results — hidden when collapsed */}
       {!collapsed && (
         <div className="rg-event-card-sessions">
-          {sessions.map((session, i) => {
+          {sessions.map((session) => {
             const startMs = new Date(session.startUtc).getTime()
             const endMs = startMs + (session.durationMinutes || 120) * 60000
             const isLive = now >= startMs && now < endMs
             const isFinished = now >= endMs
 
             return (
-              <div key={`${session.label}-${i}`}>
+              <div key={session.startUtc}>
               <div
                 className="rg-session-row"
                 style={{

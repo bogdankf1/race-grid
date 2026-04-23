@@ -131,6 +131,31 @@ export function SettingsModal({
     {}
   )
 
+  // Focus trap: keep Tab cycling within the modal
+  useEffect(() => {
+    if (!open) return
+    const panel = panelRef.current
+    if (!panel) return
+    const focusable = panel.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
+    if (focusable.length === 0) return
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') { onClose(); return }
+      if (e.key !== 'Tab') return
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus() }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus() }
+      }
+    }
+    panel.addEventListener('keydown', handleKeyDown)
+    first.focus()
+    return () => panel.removeEventListener('keydown', handleKeyDown)
+  }, [open, onClose])
+
   const modal = (
     <div
       onClick={onClose}
@@ -146,6 +171,9 @@ export function SettingsModal({
     >
       <div
         ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('settings.title', locale)}
         onClick={e => e.stopPropagation()}
         onTouchStart={e => {
           touchStartY.current = e.touches[0].clientY
@@ -195,6 +223,7 @@ export function SettingsModal({
           </h2>
           <button
             onClick={onClose}
+            aria-label="Close"
             style={{
               width: 32, height: 32, borderRadius: 8,
               background: 'var(--rg-elevated)', border: 'none',

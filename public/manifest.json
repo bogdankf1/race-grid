@@ -6,12 +6,38 @@
   "display": "standalone",
   "background_color": "#13131d",
   "theme_color": "#13131d",
+  "orientation": "any",
+  "categories": ["sports", "entertainment"],
   "icons": [
     {
       "src": "/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today's Races",
+      "short_name": "Today",
+      "url": "/",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "All Series",
+      "short_name": "Series",
+      "url": "/series"
+    },
+    {
+      "name": "Standings",
+      "short_name": "Standings",
+      "url": "/standings"
     }
   ]
 }

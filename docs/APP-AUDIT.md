@@ -310,10 +310,14 @@ The app is genuinely useful and well-built. Here's what stands out:
 - [ ] Week view timezone date calculation — reviewed, correct behavior (filter set is calendar dates)
 
 ### Week 3 — UX polish
-- [ ] Add loading skeletons
-- [ ] Add system theme detection (`prefers-color-scheme`)
+- [x] ~~Add loading skeletons (Skeleton.tsx + shimmer animation, added to all Suspense fallbacks)~~
+- [x] ~~Add system theme detection (respects `prefers-color-scheme: light`)~~
 - [ ] Add series favorites/pinning
-- [ ] Add ARIA labels to icon-only buttons
+- [x] ~~Add ARIA labels to icon-only buttons (Settings, Bell, Share, Nav prev/next, Close)~~
+- [x] ~~Fix ErrorBoundary — "Try again" resets state, "Refresh" as secondary option~~
+- [x] ~~Fix array index React keys (DayDetail sessions use startUtc, Breadcrumbs use href/label)~~
+- [x] ~~Add focus trap + aria-modal to SettingsModal (Escape to close, Tab cycles within)~~
+- [x] ~~Expand PWA manifest (orientation, categories, shortcuts for Today/Series/Standings, split maskable icon)~~
 
 ### Week 4 — Performance
 - [ ] Split data files by year (lazy-load 2021-2025)

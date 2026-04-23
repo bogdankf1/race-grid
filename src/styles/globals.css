@@ -86,6 +86,16 @@ body {
   50% { opacity: 0.4; }
 }
 
+/* Skeleton shimmer */
+.rg-skeleton {
+  animation: rg-shimmer 1.5s ease-in-out infinite;
+}
+@keyframes rg-shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.4; }
+}
+
 @keyframes rg-slide-up {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }

@@ -167,6 +167,8 @@ export function NotificationSettings({ locale }: NotificationSettingsProps) {
       <button
         onClick={() => setOpen(!open)}
         title={t(prefs.enabled ? 'notify.disable' : 'notify.enable', locale)}
+        aria-label={t(prefs.enabled ? 'notify.disable' : 'notify.enable', locale)}
+        aria-expanded={open}
         className="rg-control"
         style={{
           width: 36,

@@ -97,6 +97,7 @@ export function Header({
               className="rg-control"
               onClick={() => setSettingsOpen(true)}
               title={t('settings.title', locale)}
+              aria-label={t('settings.title', locale)}
               style={{
                 width: 36,
                 borderRadius: 10,

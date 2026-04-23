@@ -52,5 +52,9 @@ export function getDefaultTheme(): Theme {
     const stored = localStorage.getItem('race-grid:theme')
     if (stored === 'light' || stored === 'dark') return stored
   } catch {}
+  // Respect system preference
+  if (typeof window.matchMedia === 'function' && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    return 'light'
+  }
   return 'dark'
 }

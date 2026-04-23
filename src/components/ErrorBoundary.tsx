@@ -29,23 +29,39 @@ export class ErrorBoundary extends Component<Props, State> {
             Something went wrong
           </p>
           <p style={{ color: 'var(--rg-text3)', fontSize: 14 }}>
-            Try refreshing the page
+            Try again or refresh the page
           </p>
-          <button
-            onClick={() => window.location.reload()}
-            style={{
-              marginTop: 16,
-              padding: '8px 20px',
-              borderRadius: 10,
-              background: 'var(--rg-btn-bg)',
-              border: '1px solid var(--rg-border)',
-              color: 'var(--rg-text2)',
-              fontSize: 14,
-              cursor: 'pointer',
-            }}
-          >
-            Refresh
-          </button>
+          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', marginTop: 16 }}>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              style={{
+                padding: '8px 20px',
+                borderRadius: 10,
+                background: 'var(--rg-accent, #7ab3ff)',
+                border: 'none',
+                color: '#fff',
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: 'pointer',
+              }}
+            >
+              Try again
+            </button>
+            <button
+              onClick={() => window.location.reload()}
+              style={{
+                padding: '8px 20px',
+                borderRadius: 10,
+                background: 'var(--rg-btn-bg)',
+                border: '1px solid var(--rg-border)',
+                color: 'var(--rg-text2)',
+                fontSize: 14,
+                cursor: 'pointer',
+              }}
+            >
+              Refresh
+            </button>
+          </div>
         </div>
       )
     }

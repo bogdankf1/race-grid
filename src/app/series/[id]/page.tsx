@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { SeriesDetailClient } from './SeriesDetailClient'
+import { DetailPageSkeleton } from '@/components/Skeleton'
 import { SERIES_META } from '@/data/series-registry'
 
 export function generateStaticParams() {
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function SeriesDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   return (
-    <Suspense>
+    <Suspense fallback={<DetailPageSkeleton />}>
       <SeriesDetailClient seriesId={id} />
     </Suspense>
   )

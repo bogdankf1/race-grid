@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { TeamDetailClient } from './TeamDetailClient'
+import { DetailPageSkeleton } from '@/components/Skeleton'
 import { getAllTeams, getTeam } from '@/data/teams'
 
 export function generateStaticParams() {
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function TeamPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   return (
-    <Suspense>
+    <Suspense fallback={<DetailPageSkeleton />}>
       <TeamDetailClient teamId={id} />
     </Suspense>
   )

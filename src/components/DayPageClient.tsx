@@ -134,6 +134,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
             <button
               className="rg-nav-btn rg-control"
               onClick={() => router.push(`/day/${prevDate}`)}
+              aria-label={t('nav.prev', locale)}
               style={navBtnStyle}
             >
               <ChevronLeft style={{ width: 20, height: 20 }} />
@@ -148,6 +149,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
             <button
               className="rg-nav-btn rg-control"
               onClick={() => router.push(`/day/${nextDate}`)}
+              aria-label={t('nav.next', locale)}
               style={navBtnStyle}
             >
               <ChevronRight style={{ width: 20, height: 20 }} />
@@ -175,6 +177,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
             <button
               className="rg-control"
               onClick={shareDay}
+              aria-label="Share"
               style={{
                 ...navBtnStyle,
                 color: copied ? 'var(--rg-success)' : 'var(--rg-text2)',

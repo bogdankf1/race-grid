@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { DriverDetailClient } from './DriverDetailClient'
+import { DetailPageSkeleton } from '@/components/Skeleton'
 import { getAllDrivers, getDriver } from '@/data/drivers'
 
 export function generateStaticParams() {
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function DriverPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   return (
-    <Suspense>
+    <Suspense fallback={<DetailPageSkeleton />}>
       <DriverDetailClient driverId={id} />
     </Suspense>
   )

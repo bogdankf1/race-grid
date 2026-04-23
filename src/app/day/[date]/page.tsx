@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { DayPageClient } from '@/components/DayPageClient'
+import { DayDetailSkeleton } from '@/components/Skeleton'
 import { eachDayOfInterval, format, subDays, addDays, parseISO } from 'date-fns'
 import { getSeriesForYear, AVAILABLE_YEARS } from '@/data/series-registry'
 
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ date: str
 export default async function DayPage({ params }: { params: Promise<{ date: string }> }) {
   const { date } = await params
   return (
-    <Suspense>
+    <Suspense fallback={<DayDetailSkeleton />}>
       <DayPageClient date={date} />
     </Suspense>
   )

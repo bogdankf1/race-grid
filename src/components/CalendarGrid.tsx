@@ -200,7 +200,7 @@ export function CalendarGrid({
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, position: 'relative' }}>
-          <button onClick={goToPrev} className="rg-nav-btn rg-control" style={navBtnStyle}>
+          <button onClick={goToPrev} className="rg-nav-btn rg-control" aria-label={t('nav.prev', locale)} style={navBtnStyle}>
             <ChevronLeft style={{ width: 20, height: 20 }} />
           </button>
           <button
@@ -224,7 +224,7 @@ export function CalendarGrid({
               <ChevronDown style={{ width: 16, height: 16, color: 'var(--rg-text3)', transition: 'transform 0.2s', transform: pickerOpen ? 'rotate(180deg)' : 'none' }} />
             )}
           </button>
-          <button onClick={goToNext} className="rg-nav-btn rg-control" style={navBtnStyle}>
+          <button onClick={goToNext} className="rg-nav-btn rg-control" aria-label={t('nav.next', locale)} style={navBtnStyle}>
             <ChevronRight style={{ width: 20, height: 20 }} />
           </button>
           <MonthYearPicker
