@@ -52,7 +52,7 @@ export function SeriesPageClient() {
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
   const [year, setYear] = useLocalStorage<number>('race-grid:series-year', AVAILABLE_YEARS[0])
-  const [filterSeriesIds, setFilterSeriesIds] = useLocalStorage<string[]>('race-grid:series-filter', SERIES_META.map(s => s.id))
+  const filterSeriesIds = selectedSeries
   const [query, setQuery] = useState('')
 
   useEffect(() => { applyTheme(theme) }, [theme])
@@ -131,9 +131,9 @@ export function SeriesPageClient() {
               const updated = filterSeriesIds.includes(id)
                 ? filterSeriesIds.filter(s => s !== id)
                 : [...filterSeriesIds, id]
-              setFilterSeriesIds(updated)
+              setSelectedSeries(updated)
             }}
-            onSetAll={setFilterSeriesIds}
+            onSetAll={setSelectedSeries}
             locale={locale}
             showProgress={false}
           />

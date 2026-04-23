@@ -1,0 +1,25 @@
+import type { EntryItem } from './types'
+
+export const superformulaEntries2022: EntryItem[] = [
+  { driverId: 'nojiri', teamId: 'team-mugen', carNumber: 1 },
+  { driverId: 'sasahara', teamId: 'team-mugen', carNumber: 15 },
+  { driverId: 'yamashita', teamId: 'kondo-racing', carNumber: 3 },
+  { driverId: 'fenestraz', teamId: 'kondo-racing', carNumber: 4 },
+  { driverId: 'makino', teamId: 'docomo-dandelion', carNumber: 5 },
+  { driverId: 'otsu', teamId: 'docomo-dandelion', carNumber: 6 },
+  { driverId: 'kobayashi', teamId: 'kcmg', carNumber: 7 },
+  { driverId: 'kunimoto', teamId: 'kcmg', carNumber: 18 },
+  { driverId: 'fukuzumi', teamId: 'threebond-racing', carNumber: 12 },
+  { driverId: 'oshima', teamId: 'ntt-docomo-rookie', carNumber: 14 },
+  { driverId: 'sekiguchi', teamId: 'team-impul', carNumber: 19 },
+  { driverId: 'hirakawa', teamId: 'team-impul', carNumber: 20 },
+  { driverId: 'alesi', teamId: 'vantelin-toms', carNumber: 36 },
+  { driverId: 'miyata', teamId: 'vantelin-toms', carNumber: 37 },
+  { driverId: 'tsuboi', teamId: 'cerumo-inging', carNumber: 38 },
+  { driverId: 'sakaguchi', teamId: 'cerumo-inging', carNumber: 39 },
+  { driverId: 'matsushita', teamId: 'san-ei-gen-bmax', carNumber: 50 },
+  { driverId: 'sato', teamId: 'ponos-nakajima', carNumber: 53 },
+  { driverId: 'miyake', teamId: 'ponos-nakajima', carNumber: 55 },
+  { driverId: 'yamamoto', teamId: 'ponos-nakajima', carNumber: 64 },
+  { driverId: 'oyu', teamId: 'ponos-nakajima', carNumber: 65 },
+]

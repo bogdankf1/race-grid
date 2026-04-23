@@ -1,0 +1,31 @@
+import type { EntryItem } from './types'
+
+// IndyCar 2023 entries — verified from Wikipedia
+export const indycarEntries2023: EntryItem[] = [
+  { driverId: 'newgarden', teamId: 'team-penske', carNumber: 2 },
+  { driverId: 'mclaughlin', teamId: 'team-penske', carNumber: 3 },
+  { driverId: 'power', teamId: 'team-penske', carNumber: 12 },
+  { driverId: 'oward', teamId: 'arrow-mclaren', carNumber: 5 },
+  { driverId: 'rosenqvist', teamId: 'arrow-mclaren', carNumber: 6 },
+  { driverId: 'a-rossi', teamId: 'arrow-mclaren', carNumber: 7 },
+  { driverId: 'ericsson', teamId: 'chip-ganassi-racing', carNumber: 8 },
+  { driverId: 'dixon', teamId: 'chip-ganassi-racing', carNumber: 9 },
+  { driverId: 'palou', teamId: 'chip-ganassi-racing', carNumber: 10 },
+  { driverId: 'ferrucci', teamId: 'a-j-foyt-enterprises', carNumber: 14 },
+  { driverId: 'pedersen-b', teamId: 'a-j-foyt-enterprises', carNumber: 55 },
+  { driverId: 'rahal', teamId: 'rahal-letterman-lanigan', carNumber: 15 },
+  { driverId: 'harvey', teamId: 'rahal-letterman-lanigan', carNumber: 30 },
+  { driverId: 'lundgaard', teamId: 'rahal-letterman-lanigan', carNumber: 45 },
+  { driverId: 'malukas', teamId: 'dale-coyne-racing', carNumber: 18 },
+  { driverId: 'robb', teamId: 'dale-coyne-racing', carNumber: 51 },
+  { driverId: 'daly', teamId: 'ed-carpenter-racing', carNumber: 20 },
+  { driverId: 'veekay', teamId: 'ed-carpenter-racing', carNumber: 21 },
+  { driverId: 'herta', teamId: 'andretti-autosport', carNumber: 26 },
+  { driverId: 'kirkwood', teamId: 'andretti-autosport', carNumber: 27 },
+  { driverId: 'grosjean', teamId: 'andretti-autosport', carNumber: 28 },
+  { driverId: 'defrancesco', teamId: 'andretti-autosport', carNumber: 29 },
+  { driverId: 'castroneves', teamId: 'meyer-shank-racing', carNumber: 6 },
+  { driverId: 'pagenaud', teamId: 'meyer-shank-racing', carNumber: 60 },
+  { driverId: 'ilott', teamId: 'juncos-hollinger', carNumber: 77 },
+  { driverId: 'canapino', teamId: 'juncos-hollinger', carNumber: 78 },
+]

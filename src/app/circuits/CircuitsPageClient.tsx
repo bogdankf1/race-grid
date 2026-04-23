@@ -41,10 +41,7 @@ export function CircuitsPageClient() {
 
   const [query, setQuery] = useState('')
   const [typeFilter, setTypeFilter] = useState<TypeFilter>('all')
-  const [filterSeriesIds, setFilterSeriesIds] = useLocalStorage<string[]>(
-    'race-grid:circuits-series',
-    SERIES_META.map(s => s.id)
-  )
+  const filterSeriesIds = selectedSeries
 
   const allCircuits = useMemo(() => getAllCircuitsWithEvents(), [])
 
@@ -144,9 +141,9 @@ export function CircuitsPageClient() {
               const updated = filterSeriesIds.includes(id)
                 ? filterSeriesIds.filter(s => s !== id)
                 : [...filterSeriesIds, id]
-              setFilterSeriesIds(updated)
+              setSelectedSeries(updated)
             }}
-            onSetAll={setFilterSeriesIds}
+            onSetAll={setSelectedSeries}
             locale={locale}
             showProgress={false}
           />

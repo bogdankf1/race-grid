@@ -1,0 +1,40 @@
+import type { EntryItem } from './types'
+
+// European Le Mans Series 2024 — key entries
+export const elmsEntries2024: EntryItem[] = [
+  // LMP2
+  { driverId: 'deletraz', teamId: 'ao-by-tf' },
+  { driverId: 'edgar', teamId: 'ao-by-tf' },
+  { driverId: 'kubica', teamId: 'ao-by-tf' },
+  { driverId: 'de-gerus', teamId: 'idec-sport' },
+  { driverId: 'van-uitert', teamId: 'idec-sport' },
+  { driverId: 'dillmann', teamId: 'inter-europol' },
+  { driverId: 'gray', teamId: 'inter-europol' },
+  { driverId: 'di-resta', teamId: 'united-autosports' },
+  { driverId: 'garg', teamId: 'united-autosports' },
+  { driverId: 'jarvis', teamId: 'united-autosports' },
+  { driverId: 'hanley', teamId: 'nielsen-racing' },
+  { driverId: 'stevens', teamId: 'nielsen-racing' },
+  { driverId: 'milesi', teamId: 'panis-racing' },
+  { driverId: 'a-leclerc', teamId: 'panis-racing' },
+  { driverId: 'perrodo', teamId: 'af-corse' },
+  { driverId: 'rovera', teamId: 'af-corse' },
+  { driverId: 'vaxiviere', teamId: 'af-corse' },
+  { driverId: 'binder', teamId: 'algarve-pro' },
+  { driverId: 'habsburg', teamId: 'cool-racing' },
+  { driverId: 'vesti', teamId: 'cool-racing' },
+  // LMGT3
+  { driverId: 'eastwood', teamId: 'tf-sport' },
+  { driverId: 'cameron-d', teamId: 'spirit-of-race' },
+  { driverId: 'griffin-m', teamId: 'spirit-of-race' },
+  { driverId: 'bovy', teamId: 'iron-dames' },
+  { driverId: 'gatting', teamId: 'iron-dames' },
+  { driverId: 'frey', teamId: 'iron-dames' },
+  { driverId: 'rigon', teamId: 'gr-racing' },
+  { driverId: 'pera', teamId: 'gr-racing' },
+  { driverId: 'hanafin', teamId: 'gr-racing' },
+  { driverId: 'cressoni', teamId: 'iron-lynx' },
+  { driverId: 'caldarelli', teamId: 'iron-lynx' },
+  { driverId: 'olsen', teamId: 'proton-competition' },
+  { driverId: 'andlauer', teamId: 'proton-competition' },
+]

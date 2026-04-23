@@ -1,0 +1,30 @@
+import type { EntryItem } from './types'
+
+// Supercars Championship 2023 entries — verified from Wikipedia
+export const supercarsEntries2023: EntryItem[] = [
+  { driverId: 'percat', teamId: 'walkinshaw-andretti-united', carNumber: 2 },
+  { driverId: 'hazelwood', teamId: 'blanchard-racing', carNumber: 3 },
+  { driverId: 'jack-smith', teamId: 'brad-jones-racing', carNumber: 4 },
+  { driverId: 'courtney', teamId: 'tickford-racing', carNumber: 5 },
+  { driverId: 'waters', teamId: 'tickford-racing', carNumber: 6 },
+  { driverId: 'heimgartner', teamId: 'brad-jones-racing', carNumber: 8 },
+  { driverId: 'brown', teamId: 'erebus-motorsport', carNumber: 9 },
+  { driverId: 'de-pasquale', teamId: 'dick-johnson-racing', carNumber: 11 },
+  { driverId: 'fullwood', teamId: 'brad-jones-racing', carNumber: 14 },
+  { driverId: 'davison', teamId: 'dick-johnson-racing', carNumber: 17 },
+  { driverId: 'winterbottom', teamId: 'team-18', carNumber: 18 },
+  { driverId: 'payne', teamId: 'grove-racing', carNumber: 19 },
+  { driverId: 'pye', teamId: 'team-18', carNumber: 20 },
+  { driverId: 'slade', teamId: 'premiair-racing', carNumber: 23 },
+  { driverId: 'mostert', teamId: 'walkinshaw-andretti-united', carNumber: 25 },
+  { driverId: 'reynolds', teamId: 'grove-racing', carNumber: 26 },
+  { driverId: 'golding', teamId: 'premiair-racing', carNumber: 31 },
+  { driverId: 'le-brocq', teamId: 'matt-stone-racing', carNumber: 34 },
+  { driverId: 'hill', teamId: 'matt-stone-racing', carNumber: 35 },
+  { driverId: 'randle', teamId: 'tickford-racing', carNumber: 55 },
+  { driverId: 'declan-fraser', teamId: 'tickford-racing', carNumber: 56 },
+  { driverId: 'feeney', teamId: 'triple-eight', carNumber: 88 },
+  { driverId: 'macauley-jones', teamId: 'brad-jones-racing', carNumber: 96 },
+  { driverId: 'van-gisbergen', teamId: 'triple-eight', carNumber: 97 },
+  { driverId: 'kostecki', teamId: 'erebus-motorsport', carNumber: 99 },
+]

@@ -1,0 +1,26 @@
+import type { EntryItem } from './types'
+
+export const motogpEntries2022: EntryItem[] = [
+  { driverId: 'bagnaia', teamId: 'ducati-lenovo', carNumber: 63 },
+  { driverId: 'miller', teamId: 'ducati-lenovo', carNumber: 43 },
+  { driverId: 'martin-j', teamId: 'pramac-ducati', carNumber: 89 },
+  { driverId: 'zarco', teamId: 'pramac-ducati', carNumber: 5 },
+  { driverId: 'bezzecchi', teamId: 'vr46-racing', carNumber: 72 },
+  { driverId: 'marini', teamId: 'vr46-racing', carNumber: 10 },
+  { driverId: 'bastianini', teamId: 'gresini-racing', carNumber: 23 },
+  { driverId: 'di-giannantonio', teamId: 'gresini-racing', carNumber: 49 },
+  { driverId: 'espargaro', teamId: 'aprilia-racing', carNumber: 41 },
+  { driverId: 'vinales', teamId: 'aprilia-racing', carNumber: 12 },
+  { driverId: 'binder-b', teamId: 'red-bull-ktm', carNumber: 33 },
+  { driverId: 'oliveira', teamId: 'red-bull-ktm', carNumber: 88 },
+  { driverId: 'gardner-r', teamId: 'ktm-tech3', carNumber: 87 },
+  { driverId: 'fernandez-r', teamId: 'ktm-tech3', carNumber: 25 },
+  { driverId: 'quartararo', teamId: 'yamaha-motogp', carNumber: 20 },
+  { driverId: 'morbidelli', teamId: 'yamaha-motogp', carNumber: 21 },
+  { driverId: 'marquez-m', teamId: 'honda-hrc', carNumber: 93 },
+  { driverId: 'pol-espargaro', teamId: 'honda-hrc', carNumber: 44 },
+  { driverId: 'nakagami', teamId: 'lcr-honda', carNumber: 30 },
+  { driverId: 'marquez-a', teamId: 'lcr-honda', carNumber: 73 },
+  { driverId: 'binder-d', teamId: 'trackhouse-motogp', carNumber: 40 },
+  { driverId: 'dovizioso', teamId: 'trackhouse-motogp', carNumber: 4 },
+]
