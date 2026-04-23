@@ -2,7 +2,7 @@ import type { EntryItem } from './types'
 
 export const igtcEntries2025: EntryItem[] = [
   { driverId: 'auer', teamId: 'craft-bamboo' },
-  { driverId: 'goetz', teamId: 'craft-bamboo' },
+  { driverId: 'gotz', teamId: 'craft-bamboo' },
   { driverId: 'ojeda', teamId: 'craft-bamboo' },
   { driverId: 'k-van-der-linde', teamId: 'team-wrt' },
   { driverId: 's-van-der-linde', teamId: 'team-wrt' },

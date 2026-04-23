@@ -26,11 +26,11 @@ export const gtwcasiaResults2023: Record<string, EventResults> = {
   },
   'gtwcasia-2023-suzuka': {
     race: {
-      overall: { driverIds: ['juncadella', 'xu-liu'], teamId: 'craft-bamboo-racing' },
+      overall: { driverIds: ['juncadella', 'xu-liu'], teamId: 'craft-bamboo' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, driverIds: ['juncadella', 'xu-liu'], teamId: 'craft-bamboo-racing' },
+          { position: 1, driverIds: ['juncadella', 'xu-liu'], teamId: 'craft-bamboo' },
         ],
       }],
     },

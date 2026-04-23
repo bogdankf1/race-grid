@@ -4,8 +4,8 @@ import type { EventResults } from './types'
 export const igtcResults2025: Record<string, EventResults> = {
   'igtc-2025-bathurst': {
     qualifying: {
-      overall: { driverIds: ['auer', 'goetz', 'ojeda'], teamId: 'craft-bamboo' },
-      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['auer', 'goetz', 'ojeda'], teamId: 'craft-bamboo' }] }],
+      overall: { driverIds: ['auer', 'gotz', 'ojeda'], teamId: 'craft-bamboo' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['auer', 'gotz', 'ojeda'], teamId: 'craft-bamboo' }] }],
     },
     endurance: {
       overall: { driverIds: ['k-van-der-linde', 's-van-der-linde', 'farfus'], teamId: 'team-wrt' },

@@ -27,7 +27,7 @@ export const supercarsStandings2025: SeasonStandings = {
     { position: 20, driverId: 'davison', teamId: 'premiair-racing', points: 1171, wins: 0 },
     { position: 21, driverId: 'macauley-jones', teamId: 'brad-jones-racing', points: 1052, wins: 0 },
     { position: 22, driverId: 'aaron-cameron', teamId: 'brad-jones-racing', points: 874, wins: 0 },
-    { position: 23, driverId: 'jaxon-evans', teamId: 'erebus-motorsport', points: 855, wins: 0 },
+    { position: 23, driverId: 'evans-j', teamId: 'erebus-motorsport', points: 855, wins: 0 },
     { position: 24, driverId: 'stanaway', teamId: 'tickford-racing', points: 793, wins: 0 },
     { position: 25, driverId: 'tander', teamId: 'grove-racing', points: 554, wins: 0 },
   ],

@@ -11,7 +11,7 @@ export const gtwcauEntries2026: EntryItem[] = [
   { driverId: 'hunt-j', teamId: 'volante-rosso', carNumber: 15 },
   { driverId: 'buchan', teamId: 'zagame-autosport', carNumber: 23 },
   { driverId: 'c-campbell', teamId: 'zagame-autosport', carNumber: 23 },
-  { driverId: 'jaxon-evans', teamId: 'argt', carNumber: 26 },
+  { driverId: 'evans-j', teamId: 'argt', carNumber: 26 },
   { driverId: 'schutte', teamId: 'argt', carNumber: 26 },
   { driverId: 'leitch', teamId: 'geyer-valmont-tigani', carNumber: 44 },
   { driverId: 'pires-s', teamId: 'geyer-valmont-tigani', carNumber: 44 },

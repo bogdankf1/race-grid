@@ -82,12 +82,12 @@ export const gtwcamResults2025: Record<string, EventResults> = {
   },
   'gtwcam-2025-indianapolis': {
     endurance: {
-      overall: { driverIds: ['van-der-linde-k', 'weerts', 'rossi'], teamId: 'team-wrt' },
+      overall: { driverIds: ['k-van-der-linde', 'weerts', 'rossi'], teamId: 'team-wrt' },
       classes: [{
         className: 'Overall',
         podium: [
-          { position: 1, driverIds: ['van-der-linde-k', 'weerts', 'rossi'], teamId: 'team-wrt' },
-          { position: 2, driverIds: ['engel', 'martin-m', 'kalender'], teamId: 'gruppem-racing' },
+          { position: 1, driverIds: ['k-van-der-linde', 'weerts', 'rossi'], teamId: 'team-wrt' },
+          { position: 2, driverIds: ['engel', 'k-van-der-linde', 'kalender'], teamId: 'gruppem-racing' },
           { position: 3, driverIds: ['marciello', 'farfus', 'al-zubair'], teamId: 'team-wrt' },
         ],
       }],

@@ -2,8 +2,8 @@ import type { EntryItem } from './types'
 
 export const supergtEntries2025: EntryItem[] = [
   { driverId: 'fukuzumi', teamId: 'eneos-x-prime' },
-  { driverId: 'tsuboi', teamId: 'tgr-toms' },
-  { driverId: 'yamashita', teamId: 'tgr-toms' },
+  { driverId: 'tsuboi', teamId: 'tgr-au-toms' },
+  { driverId: 'yamashita', teamId: 'tgr-au-toms' },
   { driverId: 'ishiura', teamId: 'keeper-cerumo' },
   { driverId: 'oyu', teamId: 'keeper-cerumo' },
   { driverId: 'kunimoto', teamId: 'tgr-wedssport-bandoh' },

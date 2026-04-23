@@ -22,7 +22,7 @@ export const gtwcasiaResults2025: Record<string, EventResults> = {
         className: 'Overall',
         podium: [
           { position: 1, driverIds: ['lu-wei', 'picariello'], teamId: 'origine-motorsport' },
-          { position: 2, driverIds: ['frost', 'liang-jiatong'], teamId: 'craft-bamboo-racing' },
+          { position: 2, driverIds: ['frost', 'liang-jiatong'], teamId: 'craft-bamboo' },
           { position: 3, driverIds: ['oosten', 'ruan-cunfan'], teamId: 'team-krc' },
         ],
       }],
@@ -74,7 +74,7 @@ export const gtwcasiaResults2025: Record<string, EventResults> = {
         className: 'Overall',
         podium: [
           { position: 1, driverIds: ['ye-yifei', 'zhang-yaqi'], teamId: 'winhere-harmony-racing' },
-          { position: 2, driverIds: ['liang-jiatong', 'o-young'], teamId: 'craft-bamboo-racing' },
+          { position: 2, driverIds: ['liang-jiatong', 'o-young'], teamId: 'craft-bamboo' },
           { position: 3, driverIds: ['huang-ruohan', 'nandy'], teamId: 'absolute-racing' },
         ],
       }],

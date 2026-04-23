@@ -29,7 +29,7 @@ export const igtcEntries2026: EntryItem[] = [
   { driverId: 'schiller', teamId: 'getspeed' },
   { driverId: 'stolz', teamId: 'getspeed' },
   // Ferrari — Arise Racing GT
-  { driverId: 'jaxon-evans', teamId: 'arise-racing-gt' },
+  { driverId: 'evans-j', teamId: 'arise-racing-gt' },
   { driverId: 'rigon', teamId: 'arise-racing-gt' },
   // Porsche — Absolute Racing
   { driverId: 'buus', teamId: 'absolute-racing' },

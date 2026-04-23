@@ -8,5 +8,5 @@ export const gtwcamResults2024: Record<string, EventResults> = {
   'gtwcam-2024-vir': { race: { overall: { driverIds: ['milner', 'udell'], teamId: 'dxdt-racing' }, classes: [{ className: 'Overall', podium: [{ position: 1, driverIds: ['milner', 'udell'], teamId: 'dxdt-racing' }] }] } },
   'gtwcam-2024-road-america': { race: { overall: { driverIds: ['milner', 'udell'], teamId: 'dxdt-racing' }, classes: [{ className: 'Overall', podium: [{ position: 1, driverIds: ['milner', 'udell'], teamId: 'dxdt-racing' }] }] } },
   'gtwcam-2024-barber': { race: { overall: { driverIds: ['milner', 'udell'], teamId: 'dxdt-racing' }, classes: [{ className: 'Overall', podium: [{ position: 1, driverIds: ['milner', 'udell'], teamId: 'dxdt-racing' }] }] } },
-  'gtwcam-2024-indianapolis': { endurance: { overall: { driverIds: ['van-der-linde-k', 'vanthoor', 'weerts'], teamId: 'team-wrt' }, classes: [{ className: 'Overall', podium: [{ position: 1, driverIds: ['van-der-linde-k', 'vanthoor', 'weerts'], teamId: 'team-wrt' }] }] } },
+  'gtwcam-2024-indianapolis': { endurance: { overall: { driverIds: ['k-van-der-linde', 'vanthoor', 'weerts'], teamId: 'team-wrt' }, classes: [{ className: 'Overall', podium: [{ position: 1, driverIds: ['k-van-der-linde', 'vanthoor', 'weerts'], teamId: 'team-wrt' }] }] } },
 }

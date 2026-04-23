@@ -13,7 +13,7 @@ export const gtwcasiaStandings2025: SeasonStandings = {
     { position: 7, driverId: 'buus', teamId: 'origine-motorsport', points: 82, wins: 0 },
     { position: 8, driverId: 'cheng-congfu', teamId: 'faw-audi-phantom', points: 80, wins: 0 },
     { position: 9, driverId: 'sims', teamId: 'jmr-motorsports', points: 77, wins: 0 },
-    { position: 10, driverId: 'cao-qi', teamId: 'craft-bamboo-racing', points: 72, wins: 0 },
+    { position: 10, driverId: 'cao-qi', teamId: 'craft-bamboo', points: 72, wins: 0 },
   ],
   constructors: [
     { position: 1, teamId: 'origine-motorsport', points: 0, wins: 5 },

@@ -16,6 +16,7 @@ const TEAMS: Record<string, Team> = {
   'algarve-pro': { id: 'algarve-pro', name: 'Algarve Pro Racing', country: 'PT' },
   'alpine': { id: 'alpine', name: 'Alpine Endurance Team', country: 'FR' },
   'andretti-global': { id: 'andretti-global', name: 'Andretti Global', country: 'US' },
+  'andretti-autosport': { id: 'andretti-autosport', name: 'Andretti Autosport', country: 'US' },
   'ao-racing': { id: 'ao-racing', name: 'AO Racing', country: 'US' },
   'archangel-motorsports': { id: 'archangel-motorsports', name: 'Archangel Motorsports', country: 'US' },
   'arrow-mclaren': { id: 'arrow-mclaren', name: 'Arrow McLaren', country: 'US' },
@@ -39,7 +40,6 @@ const TEAMS: Record<string, Team> = {
   'conquest-racing': { id: 'conquest-racing', name: 'Conquest Racing', country: 'US' },
   'corvette-racing': { id: 'corvette-racing', name: 'Corvette Racing by Pratt Miller', country: 'US' },
   'craft-bamboo': { id: 'craft-bamboo', name: 'Craft-Bamboo Racing', country: 'HK' },
-  'craft-bamboo-racing': { id: 'craft-bamboo-racing', name: 'Craft-Bamboo Racing', country: 'HK' },
   'crowdstrike-racing': { id: 'crowdstrike-racing', name: 'CrowdStrike Racing', country: 'US' },
   'crowdstrike-riley': { id: 'crowdstrike-riley', name: 'CrowdStrike Racing by Riley Motorsports', country: 'US' },
   'crp-racing': { id: 'crp-racing', name: 'CRP Racing', country: 'US' },
@@ -83,7 +83,7 @@ const TEAMS: Record<string, Team> = {
   'hitech': { id: 'hitech', name: 'Hitech Pulse-Eight', country: 'GB' },
   'hendrick-motorsports': { id: 'hendrick-motorsports', name: 'Hendrick Motorsports', country: 'US' },
   'high-class-racing': { id: 'high-class-racing', name: 'High Class Racing', country: 'DK' },
-  'haupt-racing-team': { id: 'haupt-racing-team', name: 'Haupt Racing Team', country: 'DE' },
+  // haupt-racing-team consolidated to 'haupt-racing'
   'hyundai-wrt': { id: 'hyundai-wrt', name: 'Hyundai Shell Mobis WRT', country: 'DE' },
   'idec-sport': { id: 'idec-sport', name: 'IDEC Sport', country: 'FR' },
   'inter-europol': { id: 'inter-europol', name: 'Inter Europol Competition', country: 'PL' },
@@ -180,7 +180,7 @@ const TEAMS: Record<string, Team> = {
   'the-bend-msp': { id: 'the-bend-msp', name: 'The Bend Motorsport Park', country: 'AU' },
   'tgr-deloitte-toms': { id: 'tgr-deloitte-toms', name: "TGR Team Deloitte TOM'S", country: 'JP' },
   'tgr-eneos-rookie': { id: 'tgr-eneos-rookie', name: 'TGR Team ENEOS ROOKIE', country: 'JP' },
-  'tgr-toms': { id: 'tgr-toms', name: "TGR Team au TOM'S", country: 'JP' },
+  // tgr-toms consolidated to 'tgr-au-toms'
   'tgr-wedssport-bandoh': { id: 'tgr-wedssport-bandoh', name: 'TGR Team WedsSport Bandoh', country: 'JP' },
   'tickford-racing': { id: 'tickford-racing', name: 'Tickford Racing', country: 'AU' },
   'tigani-motorsport': { id: 'tigani-motorsport', name: 'Tigani Motorsport', country: 'AU' },

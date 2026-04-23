@@ -64,7 +64,7 @@ export const gtwcEntries2026: EntryItem[] = [
   { driverId: 'mapelli', teamId: 'rutronik-racing' },
   { driverId: 'niederhauser', teamId: 'rutronik-racing' },
   // ROWE Racing
-  { driverId: 'jake-dennis', teamId: 'rowe-racing' },
+  { driverId: 'j-dennis', teamId: 'rowe-racing' },
   { driverId: 'farfus', teamId: 'rowe-racing' },
   { driverId: 'marciello', teamId: 'rowe-racing' },
   // Walkenhorst Motorsport
