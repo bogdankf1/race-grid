@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight, Share2, Check, CalendarDays } from 'lucide-r
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { getSeriesForYear } from '@/data/series-registry'
+import { useYearData } from '@/hooks/useYearData'
 import { t, getDefaultLocale, formatDateLocale, formatDateShort, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import type { SessionType } from '@/lib/types'
@@ -30,7 +30,7 @@ export function DayPageClient({ date }: DayPageClientProps) {
   const searchParams = useSearchParams()
   const highlightEventId = searchParams.get('event') ?? undefined
   const pageYear = parseInt(date.slice(0, 4))
-  const allSeriesForYear = getSeriesForYear(pageYear)
+  const allSeriesForYear = useYearData(pageYear)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>(
     'race-grid:series',
     allSeriesForYear.map(s => s.id)

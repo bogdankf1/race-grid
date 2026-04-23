@@ -5,7 +5,7 @@ import { format, startOfWeek } from 'date-fns'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useViewEvents } from '@/hooks/useCalendarEvents'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { getSeriesForYear } from '@/data/series-registry'
+import { useYearData } from '@/hooks/useYearData'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import type { SessionType } from '@/lib/types'
@@ -23,7 +23,7 @@ import { Footer } from '@/components/Footer'
 export default function HomePage() {
   const [month, setMonth] = useLocalStorage<string>('race-grid:month', format(new Date(), 'yyyy-MM'))
   const year = parseInt(month.slice(0, 4))
-  const allSeriesForYear = getSeriesForYear(year)
+  const allSeriesForYear = useYearData(year)
   const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>(
     'race-grid:series',
     allSeriesForYear.map(s => s.id)

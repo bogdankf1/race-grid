@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useMemo } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { AVAILABLE_YEARS, getSeriesForYear } from '@/data/series-registry'
+import { AVAILABLE_YEARS } from '@/data/series-registry'
+import { useYearData } from '@/hooks/useYearData'
 import type { Locale } from '@/lib/i18n'
 
 interface MonthYearPickerProps {
@@ -17,8 +18,7 @@ interface MonthYearPickerProps {
 const MONTH_KEYS_EN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const MONTH_KEYS_UK = ['Січ', 'Лют', 'Бер', 'Кві', 'Тра', 'Чер', 'Лип', 'Сер', 'Вер', 'Жов', 'Лис', 'Гру']
 
-function getMonthsWithEvents(year: number): Set<number> {
-  const series = getSeriesForYear(year)
+function getMonthsWithEvents(series: { events: { sessions: { startUtc: string }[] }[] }[]): Set<number> {
   const months = new Set<number>()
   for (const s of series) {
     for (const event of s.events) {
@@ -43,7 +43,8 @@ export function MonthYearPicker({ open, onClose, currentMonth, onSelect, locale,
   const todayYear = now.getFullYear()
   const todayMonth = now.getMonth()
 
-  const activeMonths = useMemo(() => getMonthsWithEvents(selectedYear), [selectedYear])
+  const yearSeries = useYearData(selectedYear)
+  const activeMonths = useMemo(() => getMonthsWithEvents(yearSeries), [yearSeries])
   const monthLabels = locale === 'uk' ? MONTH_KEYS_UK : MONTH_KEYS_EN
 
   // Close on Escape

@@ -320,8 +320,8 @@ The app is genuinely useful and well-built. Here's what stands out:
 - [x] ~~Expand PWA manifest (orientation, categories, shortcuts for Today/Series/Standings, split maskable icon)~~
 
 ### Week 4 — Performance & polish
-- [ ] Split data files by year (lazy-load 2021-2025)
-- [ ] Add `next/dynamic` for detail pages
+- [x] ~~Split data files by year — 2026 eagerly loaded, 2021-2025 lazy via dynamic import(). Main data chunk: 753KB → 172KB (77% reduction)~~
+- [ ] Add `next/dynamic` for detail pages (skipped — minimal benefit for static export)
 - [x] ~~TBA session indicator — sessions with `00:00:00Z` or `tba: true` now show "TBA" instead of fake midnight time~~
 - [x] ~~Offline indicator — amber banner at top when `navigator.onLine === false`, auto-hides on reconnect~~
 - [x] ~~SW cache versioning — bumped to v2, added `updateViaCache: 'none'` to registration for reliable updates~~

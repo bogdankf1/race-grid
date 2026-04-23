@@ -1,146 +1,29 @@
 import { SeriesConfig, RaceEvent } from '@/lib/types'
-import { f12021 } from './f1-2021'
-import { f12022 } from './f1-2022'
-import { f12023 } from './f1-2023'
-import { f12024 } from './f1-2024'
-import { f12025 } from './f1-2025'
+
+// Only 2026 is eagerly loaded — historical years are lazy-loaded on demand
 import { f12026 } from './f1-2026'
-import { indycar2021 } from './indycar-2021'
-import { indycar2022 } from './indycar-2022'
-import { indycar2023 } from './indycar-2023'
-import { indycar2024 } from './indycar-2024'
-import { indycar2025 } from './indycar-2025'
 import { indycar2026 } from './indycar-2026'
-import { nascar2021 } from './nascar-2021'
-import { nascar2022 } from './nascar-2022'
-import { nascar2023 } from './nascar-2023'
-import { nascar2024 } from './nascar-2024'
-import { nascar2025 } from './nascar-2025'
 import { nascar2026 } from './nascar-2026'
-import { wec2021 } from './wec-2021'
-import { wec2022 } from './wec-2022'
-import { wec2023 } from './wec-2023'
-import { wec2024 } from './wec-2024'
-import { wec2025 } from './wec-2025'
 import { wec2026 } from './wec-2026'
-import { imsa2021 } from './imsa-2021'
-import { imsa2022 } from './imsa-2022'
-import { imsa2023 } from './imsa-2023'
-import { imsa2024 } from './imsa-2024'
-import { imsa2025 } from './imsa-2025'
 import { imsa2026 } from './imsa-2026'
-import { wrc2021 } from './wrc-2021'
-import { wrc2022 } from './wrc-2022'
-import { wrc2023 } from './wrc-2023'
-import { wrc2024 } from './wrc-2024'
-import { wrc2025 } from './wrc-2025'
 import { wrc2026 } from './wrc-2026'
-import { dtm2021 } from './dtm-2021'
-import { dtm2022 } from './dtm-2022'
-import { dtm2023 } from './dtm-2023'
-import { dtm2024 } from './dtm-2024'
-import { dtm2025 } from './dtm-2025'
 import { dtm2026 } from './dtm-2026'
-import { gtwc2021 } from './gtwc-2021'
-import { gtwc2022 } from './gtwc-2022'
-import { gtwc2023 } from './gtwc-2023'
-import { gtwc2024 } from './gtwc-2024'
-import { gtwc2025 } from './gtwc-2025'
 import { gtwc2026 } from './gtwc-2026'
-import { nls2021 } from './nls-2021'
-import { nls2022 } from './nls-2022'
-import { nls2023 } from './nls-2023'
-import { nls2024 } from './nls-2024'
-import { nls2025 } from './nls-2025'
 import { nls2026 } from './nls-2026'
-import { supergt2021 } from './supergt-2021'
-import { supergt2022 } from './supergt-2022'
-import { supergt2023 } from './supergt-2023'
-import { supergt2024 } from './supergt-2024'
-import { supergt2025 } from './supergt-2025'
 import { supergt2026 } from './supergt-2026'
-import { elms2021 } from './elms-2021'
-import { elms2022 } from './elms-2022'
-import { elms2023 } from './elms-2023'
-import { elms2024 } from './elms-2024'
-import { elms2025 } from './elms-2025'
 import { elms2026 } from './elms-2026'
-import { igtc2021 } from './igtc-2021'
-import { igtc2022 } from './igtc-2022'
-import { igtc2023 } from './igtc-2023'
-import { igtc2024 } from './igtc-2024'
-import { igtc2025 } from './igtc-2025'
 import { igtc2026 } from './igtc-2026'
-import { superformula2021 } from './superformula-2021'
-import { superformula2022 } from './superformula-2022'
-import { superformula2023 } from './superformula-2023'
-import { superformula2024 } from './superformula-2024'
-import { superformula2025 } from './superformula-2025'
 import { superformula2026 } from './superformula-2026'
-import { supercars2021 } from './supercars-2021'
-import { supercars2022 } from './supercars-2022'
-import { supercars2023 } from './supercars-2023'
-import { supercars2024 } from './supercars-2024'
-import { supercars2025 } from './supercars-2025'
 import { supercars2026 } from './supercars-2026'
-import { f22021 } from './f2-2021'
-import { f22022 } from './f2-2022'
-import { f22023 } from './f2-2023'
-import { f22024 } from './f2-2024'
-import { f22025 } from './f2-2025'
 import { f22026 } from './f2-2026'
-import { f32021 } from './f3-2021'
-import { f32022 } from './f3-2022'
-import { f32023 } from './f3-2023'
-import { f32024 } from './f3-2024'
-import { f32025 } from './f3-2025'
 import { f32026 } from './f3-2026'
-import { dakar2021 } from './dakar-2021'
-import { dakar2022 } from './dakar-2022'
-import { dakar2023 } from './dakar-2023'
-import { dakar2024 } from './dakar-2024'
-import { dakar2025 } from './dakar-2025'
 import { dakar2026 } from './dakar-2026'
-import { motogp2021 } from './motogp-2021'
-import { motogp2022 } from './motogp-2022'
-import { motogp2023 } from './motogp-2023'
-import { motogp2024 } from './motogp-2024'
-import { motogp2025 } from './motogp-2025'
 import { motogp2026 } from './motogp-2026'
-import { fe2021 } from './fe-2021'
-import { fe2022 } from './fe-2022'
-import { fe2023 } from './fe-2023'
-import { fe2024 } from './fe-2024'
-import { fe2025 } from './fe-2025'
 import { fe2026 } from './fe-2026'
-import { mlmc2021 } from './mlmc-2021'
-import { mlmc2022 } from './mlmc-2022'
-import { mlmc2023 } from './mlmc-2023'
-import { mlmc2024 } from './mlmc-2024'
-import { mlmc2025 } from './mlmc-2025'
 import { mlmc2026 } from './mlmc-2026'
-import { gtwcam2021 } from './gtwcam-2021'
-import { gtwcam2022 } from './gtwcam-2022'
-import { gtwcam2023 } from './gtwcam-2023'
-import { gtwcam2024 } from './gtwcam-2024'
-import { gtwcam2025 } from './gtwcam-2025'
 import { gtwcam2026 } from './gtwcam-2026'
-import { gtwcasia2022 } from './gtwcasia-2022'
-import { gtwcasia2023 } from './gtwcasia-2023'
-import { gtwcasia2024 } from './gtwcasia-2024'
-import { gtwcasia2025 } from './gtwcasia-2025'
 import { gtwcasia2026 } from './gtwcasia-2026'
-import { britgt2021 } from './britgt-2021'
-import { britgt2022 } from './britgt-2022'
-import { britgt2023 } from './britgt-2023'
-import { britgt2024 } from './britgt-2024'
-import { britgt2025 } from './britgt-2025'
 import { britgt2026 } from './britgt-2026'
-import { gtwcau2021 } from './gtwcau-2021'
-import { gtwcau2022 } from './gtwcau-2022'
-import { gtwcau2023 } from './gtwcau-2023'
-import { gtwcau2024 } from './gtwcau-2024'
-import { gtwcau2025 } from './gtwcau-2025'
 import { gtwcau2026 } from './gtwcau-2026'
 
 interface SeriesMeta {
@@ -179,33 +62,20 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'gtwcau', name: 'GT World Challenge Australia', shortName: 'GTWCAU', color: '#00843D', textColor: '#fff' },
 ]
 
-// Per-series, per-year event data
-const SERIES_EVENTS: Record<string, Record<number, RaceEvent[]>> = {
-  f1: { 2021: f12021, 2022: f12022, 2023: f12023, 2024: f12024, 2025: f12025, 2026: f12026 },
-  indycar: { 2021: indycar2021, 2022: indycar2022, 2023: indycar2023, 2024: indycar2024, 2025: indycar2025, 2026: indycar2026 },
-  nascar: { 2021: nascar2021, 2022: nascar2022, 2023: nascar2023, 2024: nascar2024, 2025: nascar2025, 2026: nascar2026 },
-  wec: { 2021: wec2021, 2022: wec2022, 2023: wec2023, 2024: wec2024, 2025: wec2025, 2026: wec2026 },
-  imsa: { 2021: imsa2021, 2022: imsa2022, 2023: imsa2023, 2024: imsa2024, 2025: imsa2025, 2026: imsa2026 },
-  wrc: { 2021: wrc2021, 2022: wrc2022, 2023: wrc2023, 2024: wrc2024, 2025: wrc2025, 2026: wrc2026 },
-  dtm: { 2021: dtm2021, 2022: dtm2022, 2023: dtm2023, 2024: dtm2024, 2025: dtm2025, 2026: dtm2026 },
-  gtwc: { 2021: gtwc2021, 2022: gtwc2022, 2023: gtwc2023, 2024: gtwc2024, 2025: gtwc2025, 2026: gtwc2026 },
-  nls: { 2021: nls2021, 2022: nls2022, 2023: nls2023, 2024: nls2024, 2025: nls2025, 2026: nls2026 },
-  supergt: { 2021: supergt2021, 2022: supergt2022, 2023: supergt2023, 2024: supergt2024, 2025: supergt2025, 2026: supergt2026 },
-  elms: { 2021: elms2021, 2022: elms2022, 2023: elms2023, 2024: elms2024, 2025: elms2025, 2026: elms2026 },
-  igtc: { 2021: igtc2021, 2022: igtc2022, 2023: igtc2023, 2024: igtc2024, 2025: igtc2025, 2026: igtc2026 },
-  superformula: { 2021: superformula2021, 2022: superformula2022, 2023: superformula2023, 2024: superformula2024, 2025: superformula2025, 2026: superformula2026 },
-  supercars: { 2021: supercars2021, 2022: supercars2022, 2023: supercars2023, 2024: supercars2024, 2025: supercars2025, 2026: supercars2026 },
-  f2: { 2021: f22021, 2022: f22022, 2023: f22023, 2024: f22024, 2025: f22025, 2026: f22026 },
-  f3: { 2021: f32021, 2022: f32022, 2023: f32023, 2024: f32024, 2025: f32025, 2026: f32026 },
-  dakar: { 2021: dakar2021, 2022: dakar2022, 2023: dakar2023, 2024: dakar2024, 2025: dakar2025, 2026: dakar2026 },
-  motogp: { 2021: motogp2021, 2022: motogp2022, 2023: motogp2023, 2024: motogp2024, 2025: motogp2025, 2026: motogp2026 },
-  fe: { 2021: fe2021, 2022: fe2022, 2023: fe2023, 2024: fe2024, 2025: fe2025, 2026: fe2026 },
-  mlmc: { 2021: mlmc2021, 2022: mlmc2022, 2023: mlmc2023, 2024: mlmc2024, 2025: mlmc2025, 2026: mlmc2026 },
-  gtwcam: { 2021: gtwcam2021, 2022: gtwcam2022, 2023: gtwcam2023, 2024: gtwcam2024, 2025: gtwcam2025, 2026: gtwcam2026 },
-  gtwcasia: { 2022: gtwcasia2022, 2023: gtwcasia2023, 2024: gtwcasia2024, 2025: gtwcasia2025, 2026: gtwcasia2026 },
-  britgt: { 2021: britgt2021, 2022: britgt2022, 2023: britgt2023, 2024: britgt2024, 2025: britgt2025, 2026: britgt2026 },
-  gtwcau: { 2021: gtwcau2021, 2022: gtwcau2022, 2023: gtwcau2023, 2024: gtwcau2024, 2025: gtwcau2025, 2026: gtwcau2026 },
+// 2026 events — eagerly loaded (current year, used by 95%+ of users)
+const EVENTS_2026: Record<string, RaceEvent[]> = {
+  f1: f12026, indycar: indycar2026, nascar: nascar2026, wec: wec2026,
+  imsa: imsa2026, wrc: wrc2026, dtm: dtm2026, gtwc: gtwc2026,
+  nls: nls2026, supergt: supergt2026, elms: elms2026, igtc: igtc2026,
+  superformula: superformula2026, supercars: supercars2026,
+  f2: f22026, f3: f32026, dakar: dakar2026, motogp: motogp2026,
+  fe: fe2026, mlmc: mlmc2026, gtwcam: gtwcam2026, gtwcasia: gtwcasia2026,
+  britgt: britgt2026, gtwcau: gtwcau2026,
 }
+
+// Cache for lazily loaded historical years
+const yearCache = new Map<number, Record<string, RaceEvent[]>>()
+yearCache.set(2026, EVENTS_2026)
 
 export const AVAILABLE_YEARS = [2026, 2025, 2024, 2023, 2022, 2021]
 
@@ -223,12 +93,44 @@ export const SERIES_GROUPS: SeriesGroup[] = [
   { labelKey: 'group.motorcycle', ids: ['motogp'] },
 ]
 
+/**
+ * Load a historical year's event data into the cache.
+ * Returns immediately if already loaded. No-op for 2026.
+ */
+export async function loadYear(year: number): Promise<void> {
+  if (yearCache.has(year)) return
+
+  let data: Record<string, RaceEvent[]>
+  switch (year) {
+    case 2025: data = (await import('./events/year-2025')).events2025; break
+    case 2024: data = (await import('./events/year-2024')).events2024; break
+    case 2023: data = (await import('./events/year-2023')).events2023; break
+    case 2022: data = (await import('./events/year-2022')).events2022; break
+    case 2021: data = (await import('./events/year-2021')).events2021; break
+    default: return
+  }
+  yearCache.set(year, data)
+}
+
+/**
+ * Get series configs for a given year. Returns data from cache.
+ * For 2026, always available. For other years, call loadYear() first.
+ */
 export function getSeriesForYear(year: number): SeriesConfig[] {
+  const events = yearCache.get(year)
+  if (!events) return []
   return SERIES_META.map(meta => ({
     ...meta,
-    events: SERIES_EVENTS[meta.id]?.[year] ?? [],
+    events: events[meta.id] ?? [],
   })).filter(s => s.events.length > 0)
 }
 
-// Backward-compatible default — used by all existing consumers
+/**
+ * Check if a year's data has been loaded.
+ */
+export function isYearLoaded(year: number): boolean {
+  return yearCache.has(year)
+}
+
+// Backward-compatible default — 2026 is always available
 export const ALL_SERIES: SeriesConfig[] = getSeriesForYear(2026)

@@ -3,16 +3,29 @@ import type { Metadata } from 'next'
 import { DayPageClient } from '@/components/DayPageClient'
 import { DayDetailSkeleton } from '@/components/Skeleton'
 import { eachDayOfInterval, format, subDays, addDays, parseISO } from 'date-fns'
-import { getSeriesForYear, AVAILABLE_YEARS } from '@/data/series-registry'
+import { getSeriesForYear } from '@/data/series-registry'
+import { ALL_HISTORICAL_EVENTS } from '@/data/events/all-years'
 
 export function generateStaticParams() {
   // Derive date range from actual session data across all series and years
   let earliest = Infinity
   let latest = -Infinity
 
-  for (const year of AVAILABLE_YEARS) {
-    for (const series of getSeriesForYear(year)) {
-      for (const event of series.events) {
+  // 2026 (eagerly loaded)
+  for (const series of getSeriesForYear(2026)) {
+    for (const event of series.events) {
+      for (const session of event.sessions) {
+        const ms = new Date(session.startUtc).getTime()
+        if (ms < earliest) earliest = ms
+        if (ms > latest) latest = ms
+      }
+    }
+  }
+
+  // Historical years (from build-time import)
+  for (const yearEvents of Object.values(ALL_HISTORICAL_EVENTS)) {
+    for (const events of Object.values(yearEvents)) {
+      for (const event of events) {
         for (const session of event.sessions) {
           const ms = new Date(session.startUtc).getTime()
           if (ms < earliest) earliest = ms

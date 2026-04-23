@@ -8,7 +8,8 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { getSeriesForYear, AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
+import { AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
+import { useYearData } from '@/hooks/useYearData'
 import { getCircuit } from '@/data/circuits'
 import { getResult } from '@/data/results'
 import { getEntries } from '@/data/entries'
@@ -41,10 +42,10 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
+  const allSeries = useYearData(year)
   const series = useMemo(() => {
-    const all = getSeriesForYear(year)
-    return all.find(s => s.id === seriesId) ?? null
-  }, [seriesId, year])
+    return allSeries.find(s => s.id === seriesId) ?? null
+  }, [seriesId, allSeries])
 
   const meta = SERIES_META.find(s => s.id === seriesId)
   const totalRounds = series ? Math.max(series.events.length, ...series.events.map(e => e.round ?? 0)) : 0

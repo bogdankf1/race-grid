@@ -7,7 +7,8 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { getSeriesForYear, AVAILABLE_YEARS, SERIES_META, SERIES_GROUPS } from '@/data/series-registry'
+import { AVAILABLE_YEARS, SERIES_META, SERIES_GROUPS } from '@/data/series-registry'
+import { useYearData } from '@/hooks/useYearData'
 import type { SeriesConfig, SessionType } from '@/lib/types'
 import { SeriesLogo } from '@/components/SeriesLogo'
 
@@ -56,8 +57,9 @@ export function SeriesPageClient() {
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
+  const allSeries = useYearData(year)
   const groupedSeries = useMemo(() => {
-    const all = getSeriesForYear(year)
+    const all = allSeries
     const seriesSet = new Set(filterSeriesIds)
     let filtered = all.filter(s => seriesSet.has(s.id))
     if (query.trim()) {
