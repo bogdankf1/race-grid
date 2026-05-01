@@ -2,6 +2,40 @@ import type { EventResults } from './types'
 
 // GT World Challenge America 2026 results
 export const gtwcamResults2026: Record<string, EventResults> = {
+  'gtwcam-2026-cota': {
+    qualifying: {
+      overall: { driverIds: ['stephens', 'grenier'], teamId: 'jmf-motorsports' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['stephens', 'grenier'], teamId: 'jmf-motorsports' },
+        ],
+      }],
+    },
+    endurance: {
+      overall: { driverIds: ['musial-jr', 'yardley'], teamId: 'wright-motorsports' },
+      classes: [{
+        className: 'Pro',
+        podium: [
+          { position: 1, driverIds: ['stephens', 'grenier'], teamId: 'jmf-motorsports' },
+          { position: 2, driverIds: ['foley', 'rothberg'], teamId: 'turner-motorsport' },
+          { position: 3, driverIds: ['vanier', 'mccann-jr'], teamId: 'mccann-racing' },
+        ],
+      }, {
+        className: 'Pro-Am',
+        podium: [
+          { position: 1, driverIds: ['musial-jr', 'yardley'], teamId: 'wright-motorsports' },
+          { position: 2, driverIds: ['merrill', 'lahlouh'], teamId: 'wright-motorsports' },
+          { position: 3, driverIds: ['martinez-j', 'heylen'], teamId: 'rs1' },
+        ],
+      }, {
+        className: 'Am',
+        podium: [
+          { position: 1, driverIds: ['negri-jr', 'schreibman'], teamId: 'af-corse-usa' },
+        ],
+      }],
+    },
+  },
   'gtwcam-2026-sonoma': {
     qualifying: {
       overall: { driverIds: ['stephens', 'grenier'], teamId: 'jmf-motorsports' },

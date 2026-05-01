@@ -2,6 +2,18 @@ import type { EventResults } from './types'
 
 // Super Formula Motegi has two rounds (Rd 1 & Rd 2) — storing Rd 2 results (latest)
 export const superformulaResults2026: Record<string, EventResults> = {
+  'sf-2026-autopolis': {
+    // Race cancelled due to wet conditions — qualifying result only (Iwasa on pole)
+    qualifying: {
+      overall: { driverIds: ['iwasa'], teamId: 'team-mugen' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['iwasa'], teamId: 'team-mugen' },
+        ],
+      }],
+    },
+  },
   'sf-2026-motegi': {
     qualifying: {
       overall: { driverIds: ['ohta'], teamId: 'docomo-dandelion' },

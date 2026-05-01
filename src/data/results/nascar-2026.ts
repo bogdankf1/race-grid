@@ -152,6 +152,28 @@ export const nascarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'nascar-2026-talladega': {
+    qualifying: {
+      overall: { driverIds: ['reddick'], teamId: '23xi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['reddick'], teamId: '23xi-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['hocevar'], teamId: 'spire-motorsports' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['hocevar'], teamId: 'spire-motorsports' },
+          { position: 2, driverIds: ['buescher'], teamId: 'rfk-racing' },
+          { position: 3, driverIds: ['bowman'], teamId: 'hendrick-motorsports' },
+        ],
+      }],
+    },
+  },
   'nascar-2026-kansas': {
     qualifying: {
       overall: { driverIds: ['reddick'], teamId: '23xi-racing' },

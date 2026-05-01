@@ -28,6 +28,8 @@ const TEAMS: Record<string, Team> = {
   'bmw-rahal': { id: 'bmw-rahal', name: 'BMW M Team RLL', country: 'US' },
   'bostik-racing': { id: 'bostik-racing', name: 'Bostik Racing', country: 'AU' },
   'campos-racing': { id: 'campos-racing', name: 'Campos Racing', country: 'ES' },
+  'carlin': { id: 'carlin', name: 'Carlin', country: 'GB' },
+  'charouz-racing': { id: 'charouz-racing', name: 'Charouz Racing System', country: 'CZ' },
   'century-motorsport': { id: 'century-motorsport', name: 'Century Motorsport', country: 'GB' },
   'castrol-team-brm': { id: 'castrol-team-brm', name: 'Castrol Team BRM', country: 'AU' },
   'car-collection': { id: 'car-collection', name: 'Car Collection Motorsport', country: 'DE' },
@@ -81,6 +83,7 @@ const TEAMS: Record<string, Team> = {
   'haupt-racing': { id: 'haupt-racing', name: 'Haupt Racing Team', country: 'DE' },
   'heart-of-racing': { id: 'heart-of-racing', name: 'Heart of Racing', country: 'US' },
   'hitech': { id: 'hitech', name: 'Hitech Pulse-Eight', country: 'GB' },
+  'hwa-racelab': { id: 'hwa-racelab', name: 'HWA Racelab', country: 'DE' },
   'hendrick-motorsports': { id: 'hendrick-motorsports', name: 'Hendrick Motorsports', country: 'US' },
   'high-class-racing': { id: 'high-class-racing', name: 'High Class Racing', country: 'DK' },
   // haupt-racing-team consolidated to 'haupt-racing'
@@ -90,6 +93,7 @@ const TEAMS: Record<string, Team> = {
   'invicta-racing': { id: 'invicta-racing', name: 'Invicta Racing', country: 'GB' },
   'iron-dames': { id: 'iron-dames', name: 'Iron Dames', country: 'IT' },
   'iron-lynx': { id: 'iron-lynx', name: 'Iron Lynx', country: 'IT' },
+  'jenzer-motorsport': { id: 'jenzer-motorsport', name: 'Jenzer Motorsport', country: 'CH' },
   'jmf-motorsports': { id: 'jmf-motorsports', name: 'JMF Motorsports', country: 'US' },
   'jmr-motorsports': { id: 'jmr-motorsports', name: 'Johor Motorsports Racing JMR', country: 'MY' },
   'joe-gibbs-racing': { id: 'joe-gibbs-racing', name: 'Joe Gibbs Racing', country: 'US' },
@@ -99,6 +103,7 @@ const TEAMS: Record<string, Team> = {
   'kaulig-racing': { id: 'kaulig-racing', name: 'Kaulig Racing', country: 'US' },
   'keeper-cerumo': { id: 'keeper-cerumo', name: 'KeePer CERUMO', country: 'JP' },
   'k-pax-racing': { id: 'k-pax-racing', name: 'K-PAX Racing', country: 'US' },
+  'kelly-grove-racing': { id: 'kelly-grove-racing', name: 'Kelly Grove Racing', country: 'AU' },
   'kellymoss': { id: 'kellymoss', name: 'Kellymoss', country: 'US' },
   'kessel-racing': { id: 'kessel-racing', name: 'Kessel Racing', country: 'CH' },
   'kollosche-tigani': { id: 'kollosche-tigani', name: 'Kollosche AMG by Tigani', country: 'AU' },
@@ -404,6 +409,24 @@ const TEAMS: Record<string, Team> = {
   // GTWC Europe 2026 additions
   'boutsen-vds': { id: 'boutsen-vds', name: 'Boutsen VDS', country: 'BE' },
   'eastalent-racing': { id: 'eastalent-racing', name: 'Eastalent Racing', country: 'DE' },
+  // DTM backfill additions
+  'team-rosberg': { id: 'team-rosberg', name: 'Team Rosberg', country: 'DE' },
+  // MLMC backfill additions
+  'pzoberer-tft': { id: 'pzoberer-tft', name: 'Pzoberer Zürichsee by TFT', country: 'CH' },
+  'phoenix-racing': { id: 'phoenix-racing', name: 'Phoenix Racing', country: 'DE' },
+  'muhlner-motorsport': { id: 'muhlner-motorsport', name: 'Mühlner Motorsport', country: 'DE' },
+  'graff-racing': { id: 'graff-racing', name: 'Graff Racing', country: 'FR' },
+  'reiter-engineering': { id: 'reiter-engineering', name: 'Reiter Engineering', country: 'AT' },
+  'gmb-motorsport': { id: 'gmb-motorsport', name: 'GMB Motorsport', country: 'DK' },
+  'ebimotors': { id: 'ebimotors', name: 'Ebimotors', country: 'IT' },
+  'bullitt-racing': { id: 'bullitt-racing', name: 'Bullitt Racing', country: 'GB' },
+  'mv2s-racing': { id: 'mv2s-racing', name: 'MV2S Forestier Racing', country: 'FR' },
+  'frikadelli-racing': { id: 'frikadelli-racing', name: 'Frikadelli Racing Team', country: 'DE' },
+  'at-racing': { id: 'at-racing', name: 'AT Racing Team', country: 'BY' },
+  'leipert-motorsport': { id: 'leipert-motorsport', name: 'Leipert Motorsport', country: 'DE' },
+  'wtm-rinaldi': { id: 'wtm-rinaldi', name: 'WTM by Rinaldi Racing', country: 'DE' },
+  'team-thor': { id: 'team-thor', name: 'Team Thor', country: 'IS' },
+  'team-motopark': { id: 'team-motopark', name: 'Team Motopark', country: 'DE' },
 }
 
 export function getTeam(id: string): Team | null {

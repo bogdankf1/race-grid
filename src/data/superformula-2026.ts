@@ -42,10 +42,9 @@ export const superformula2026: RaceEvent[] = [
     name: 'Autopolis — Rd. 3',
     circuitId: 'autopolis',
     sessions: [
-      // Placeholder times — Autopolis has not published official 2026 schedule
+      // Race cancelled due to wet conditions — qualifying result carried over to rescheduled race
       { type: 'practice', label: 'Practice', startUtc: '2026-04-25T01:00:00Z', durationMinutes: 60 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-25T04:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-04-26T05:45:00Z', durationMinutes: 75 },
     ],
   },
   {
