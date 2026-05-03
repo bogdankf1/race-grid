@@ -53,7 +53,7 @@ export const f12026: RaceEvent[] = [
       { type: 'sprint_qualifying', label: 'Sprint Qualifying', startUtc: '2026-05-01T20:30:00Z', durationMinutes: 45 },
       { type: 'sprint', label: 'Sprint', startUtc: '2026-05-02T16:00:00Z', durationMinutes: 30 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-02T20:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-05-03T20:00:00Z', durationMinutes: 120 },
+      { type: 'race', label: 'Race', startUtc: '2026-05-03T17:00:00Z', durationMinutes: 120 },
     ],
   },
   {

@@ -112,6 +112,28 @@ export const feResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'fe-2026-berlin-1': {
+    qualifying: {
+      overall: { driverIds: ['mortara'], teamId: 'mahindra-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['mortara'], teamId: 'mahindra-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['n-muller'], teamId: 'porsche-fe' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['n-muller'], teamId: 'porsche-fe' },
+          { position: 2, driverIds: ['n-cassidy'], teamId: 'citroen-racing-fe' },
+          { position: 3, driverIds: ['rowland'], teamId: 'nissan-fe' },
+        ],
+      }],
+    },
+  },
   'fe-2026-madrid': {
     qualifying: {
       overall: { driverIds: ['n-cassidy'], teamId: 'citroen-racing-fe' },

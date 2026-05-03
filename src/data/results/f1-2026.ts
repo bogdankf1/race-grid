@@ -98,4 +98,39 @@ export const f1Results2026: Record<string, EventResults> = {
       fastestLapDriverId: 'antonelli',
     },
   },
+  'f1-2026-miami': {
+    sprint_qualifying: {
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['norris'], teamId: 'mclaren' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 2, driverIds: ['piastri'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
+        ],
+      }],
+    },
+    qualifying: {
+      overall: { driverIds: ['antonelli'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['leclerc'], teamId: 'ferrari' },
+        ],
+      }],
+    },
+  },
 }

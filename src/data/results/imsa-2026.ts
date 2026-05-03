@@ -103,4 +103,15 @@ export const imsaResults2026: Record<string, EventResults> = {
       ],
     },
   },
+  'imsa-2026-laguna-seca': {
+    qualifying: {
+      overall: { driverIds: ['deletraz'], teamId: 'wayne-taylor-racing' },
+      classes: [{
+        className: 'GTP',
+        podium: [
+          { position: 1, driverIds: ['deletraz'], teamId: 'wayne-taylor-racing' },
+        ],
+      }],
+    },
+  },
 }
