@@ -113,6 +113,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'day.nextUp': 'Next up',
     'error.notFound': 'Not found',
     'error.noData': 'No data available',
+    'circuit.wikipedia': 'Wikipedia article',
+    'series.wikipedia': 'Wikipedia article',
   },
   uk: {
     'app.title': 'RACE GRID',
@@ -226,6 +228,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'day.nextUp': 'Далі',
     'error.notFound': 'Не знайдено',
     'error.noData': 'Дані відсутні',
+    'circuit.wikipedia': 'Стаття у Вікіпедії',
+    'series.wikipedia': 'Стаття у Вікіпедії',
   },
 }
 

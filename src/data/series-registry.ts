@@ -33,33 +33,34 @@ interface SeriesMeta {
   color: string
   textColor: string
   logoBgWhite?: boolean
+  wikipedia?: string
 }
 
 export const SERIES_META: SeriesMeta[] = [
-  { id: 'f1', name: 'Formula 1', shortName: 'F1', color: '#FF1801', textColor: '#fff' },
-  { id: 'indycar', name: 'IndyCar Series', shortName: 'INDY', color: '#002F6C', textColor: '#fff' },
-  { id: 'nascar', name: 'NASCAR Cup Series', shortName: 'NASCAR', color: '#007AC2', textColor: '#fff' },
-  { id: 'wec', name: 'FIA World Endurance Championship', shortName: 'WEC', color: '#0066CC', textColor: '#fff', logoBgWhite: true },
-  { id: 'imsa', name: 'IMSA WeatherTech SportsCar', shortName: 'IMSA', color: '#CF171F', textColor: '#fff', logoBgWhite: true },
-  { id: 'wrc', name: 'FIA World Rally Championship', shortName: 'WRC', color: '#FFD100', textColor: '#000', logoBgWhite: true },
-  { id: 'dtm', name: 'DTM', shortName: 'DTM', color: '#1E1E50', textColor: '#fff', logoBgWhite: true },
-  { id: 'gtwc', name: 'GT World Challenge Europe', shortName: 'GTWC', color: '#E8A520', textColor: '#000' },
-  { id: 'nls', name: 'Nurburgring Langstrecken-Serie', shortName: 'NLS', color: '#009B3A', textColor: '#fff', logoBgWhite: true },
-  { id: 'supergt', name: 'Super GT', shortName: 'SGT', color: '#E60012', textColor: '#fff' },
-  { id: 'elms', name: 'European Le Mans Series', shortName: 'ELMS', color: '#00529B', textColor: '#fff' },
-  { id: 'igtc', name: 'Intercontinental GT Challenge', shortName: 'IGTC', color: '#C8102E', textColor: '#fff' },
-  { id: 'superformula', name: 'Super Formula', shortName: 'SF', color: '#1A1A6E', textColor: '#fff' },
-  { id: 'supercars', name: 'Supercars Championship', shortName: 'SC', color: '#E31937', textColor: '#fff' },
-  { id: 'f2', name: 'FIA Formula 2', shortName: 'F2', color: '#0090D0', textColor: '#fff' },
-  { id: 'f3', name: 'FIA Formula 3', shortName: 'F3', color: '#00B050', textColor: '#fff' },
-  { id: 'dakar', name: 'Dakar Rally', shortName: 'DAKAR', color: '#D7263D', textColor: '#fff' },
-  { id: 'motogp', name: 'MotoGP', shortName: 'MGP', color: '#BE0F34', textColor: '#fff' },
-  { id: 'fe', name: 'Formula E', shortName: 'FE', color: '#1E90FF', textColor: '#fff' },
-  { id: 'mlmc', name: 'Michelin Le Mans Cup', shortName: 'MLMC', color: '#234B8A', textColor: '#fff' },
-  { id: 'gtwcam', name: 'GT World Challenge America', shortName: 'GTWCA', color: '#D4A843', textColor: '#000' },
-  { id: 'gtwcasia', name: 'GT World Challenge Asia', shortName: 'GTWCAS', color: '#C73E3A', textColor: '#fff' },
-  { id: 'britgt', name: 'British GT Championship', shortName: 'BGT', color: '#1B3C6D', textColor: '#fff' },
-  { id: 'gtwcau', name: 'GT World Challenge Australia', shortName: 'GTWCAU', color: '#00843D', textColor: '#fff' },
+  { id: 'f1', name: 'Formula 1', shortName: 'F1', color: '#FF1801', textColor: '#fff', wikipedia: 'Formula_One' },
+  { id: 'indycar', name: 'IndyCar Series', shortName: 'INDY', color: '#002F6C', textColor: '#fff', wikipedia: 'IndyCar_Series' },
+  { id: 'nascar', name: 'NASCAR Cup Series', shortName: 'NASCAR', color: '#007AC2', textColor: '#fff', wikipedia: 'NASCAR_Cup_Series' },
+  { id: 'wec', name: 'FIA World Endurance Championship', shortName: 'WEC', color: '#0066CC', textColor: '#fff', logoBgWhite: true, wikipedia: 'FIA_World_Endurance_Championship' },
+  { id: 'imsa', name: 'IMSA WeatherTech SportsCar', shortName: 'IMSA', color: '#CF171F', textColor: '#fff', logoBgWhite: true, wikipedia: 'IMSA_SportsCar_Championship' },
+  { id: 'wrc', name: 'FIA World Rally Championship', shortName: 'WRC', color: '#FFD100', textColor: '#000', logoBgWhite: true, wikipedia: 'World_Rally_Championship' },
+  { id: 'dtm', name: 'DTM', shortName: 'DTM', color: '#1E1E50', textColor: '#fff', logoBgWhite: true, wikipedia: 'Deutsche_Tourenwagen_Masters' },
+  { id: 'gtwc', name: 'GT World Challenge Europe', shortName: 'GTWC', color: '#E8A520', textColor: '#000', wikipedia: 'GT_World_Challenge_Europe' },
+  { id: 'nls', name: 'Nurburgring Langstrecken-Serie', shortName: 'NLS', color: '#009B3A', textColor: '#fff', logoBgWhite: true, wikipedia: 'Nürburgring_Endurance_Series' },
+  { id: 'supergt', name: 'Super GT', shortName: 'SGT', color: '#E60012', textColor: '#fff', wikipedia: 'Super_GT' },
+  { id: 'elms', name: 'European Le Mans Series', shortName: 'ELMS', color: '#00529B', textColor: '#fff', wikipedia: 'European_Le_Mans_Series' },
+  { id: 'igtc', name: 'Intercontinental GT Challenge', shortName: 'IGTC', color: '#C8102E', textColor: '#fff', wikipedia: 'Intercontinental_GT_Challenge' },
+  { id: 'superformula', name: 'Super Formula', shortName: 'SF', color: '#1A1A6E', textColor: '#fff', wikipedia: 'Super_Formula' },
+  { id: 'supercars', name: 'Supercars Championship', shortName: 'SC', color: '#E31937', textColor: '#fff', wikipedia: 'Supercars_Championship' },
+  { id: 'f2', name: 'FIA Formula 2', shortName: 'F2', color: '#0090D0', textColor: '#fff', wikipedia: 'FIA_Formula_2_Championship' },
+  { id: 'f3', name: 'FIA Formula 3', shortName: 'F3', color: '#00B050', textColor: '#fff', wikipedia: 'FIA_Formula_3_Championship' },
+  { id: 'dakar', name: 'Dakar Rally', shortName: 'DAKAR', color: '#D7263D', textColor: '#fff', wikipedia: 'Dakar_Rally' },
+  { id: 'motogp', name: 'MotoGP', shortName: 'MGP', color: '#BE0F34', textColor: '#fff', wikipedia: 'MotoGP' },
+  { id: 'fe', name: 'Formula E', shortName: 'FE', color: '#1E90FF', textColor: '#fff', wikipedia: 'Formula_E' },
+  { id: 'mlmc', name: 'Michelin Le Mans Cup', shortName: 'MLMC', color: '#234B8A', textColor: '#fff', wikipedia: 'Michelin_Le_Mans_Cup' },
+  { id: 'gtwcam', name: 'GT World Challenge America', shortName: 'GTWCA', color: '#D4A843', textColor: '#000', wikipedia: 'GT_World_Challenge_America' },
+  { id: 'gtwcasia', name: 'GT World Challenge Asia', shortName: 'GTWCAS', color: '#C73E3A', textColor: '#fff', wikipedia: 'GT_World_Challenge_Asia' },
+  { id: 'britgt', name: 'British GT Championship', shortName: 'BGT', color: '#1B3C6D', textColor: '#fff', wikipedia: 'British_GT_Championship' },
+  { id: 'gtwcau', name: 'GT World Challenge Australia', shortName: 'GTWCAU', color: '#00843D', textColor: '#fff', wikipedia: 'GT_World_Challenge_Australia' },
 ]
 
 // 2026 events — eagerly loaded (current year, used by 95%+ of users)

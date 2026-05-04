@@ -2,11 +2,11 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import { MapPin, Gauge, RotateCcw } from 'lucide-react'
+import { MapPin, Gauge, RotateCcw, ExternalLink } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { getDefaultLocale, type Locale } from '@/lib/i18n'
+import { getDefaultLocale, type Locale, t } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import type { SessionType } from '@/lib/types'
 import { getCircuitWithEvents, type CircuitEventInfo } from '@/data/circuit-events'
@@ -99,8 +99,21 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
 
         {/* Circuit header */}
         <div style={{ marginBottom: 24 }}>
-          <h1 className="font-display" style={{ fontSize: 32, letterSpacing: 1, color: 'var(--rg-text)', margin: '0 0 8px' }}>
+          <h1 className="font-display" style={{ fontSize: 32, letterSpacing: 1, color: 'var(--rg-text)', margin: '0 0 8px', display: 'flex', alignItems: 'center', gap: 10 }}>
             {circuit.name}
+            {circuit.wikipedia && (
+              <a
+                href={`https://en.wikipedia.org/wiki/${circuit.wikipedia}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={t('circuit.wikipedia', locale)}
+                style={{ color: 'var(--rg-text3)', display: 'inline-flex', alignItems: 'center', transition: 'color 0.15s' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--rg-link)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--rg-text3)')}
+              >
+                <ExternalLink style={{ width: 18, height: 18 }} />
+              </a>
+            )}
           </h1>
           {circuit.countryCode && (
             <p style={{ fontSize: 16, color: 'var(--rg-text2)', margin: '0 0 16px' }}>

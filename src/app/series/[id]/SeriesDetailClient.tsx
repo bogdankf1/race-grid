@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import { MapPin, Search, Calendar, Users, Flag } from 'lucide-react'
+import { MapPin, Search, Calendar, Users, Flag, ExternalLink } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
@@ -150,8 +150,21 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
             <SeriesLogo seriesId={seriesId} height={36} />
           </div>
           <div>
-            <h1 className="font-display" style={{ fontSize: 32, letterSpacing: 1, color: 'var(--rg-text)', margin: 0 }}>
+            <h1 className="font-display" style={{ fontSize: 32, letterSpacing: 1, color: 'var(--rg-text)', margin: 0, display: 'flex', alignItems: 'center', gap: 10 }}>
               {meta.name}
+              {meta.wikipedia && (
+                <a
+                  href={`https://en.wikipedia.org/wiki/${meta.wikipedia}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={t('series.wikipedia', locale)}
+                  style={{ color: 'var(--rg-text3)', display: 'inline-flex', alignItems: 'center', transition: 'color 0.15s' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--rg-link)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--rg-text3)')}
+                >
+                  <ExternalLink style={{ width: 18, height: 18 }} />
+                </a>
+              )}
             </h1>
           </div>
         </div>
