@@ -121,6 +121,12 @@ import { superformulaEntries2021 } from './superformula-2021'
 import { supergtEntries2021 } from './supergt-2021'
 import { wecEntries2021 } from './wec-2021'
 import { wrcEntries2021 } from './wrc-2021'
+import { twentyfourhEntries2021 } from './24h-2021'
+import { twentyfourhEntries2022 } from './24h-2022'
+import { twentyfourhEntries2023 } from './24h-2023'
+import { twentyfourhEntries2024 } from './24h-2024'
+import { twentyfourhEntries2025 } from './24h-2025'
+import { twentyfourhEntries2026 } from './24h-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -245,6 +251,12 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'supergt-2021': supergtEntries2021,
   'wec-2021': wecEntries2021,
   'wrc-2021': wrcEntries2021,
+  '24h-2021': twentyfourhEntries2021,
+  '24h-2022': twentyfourhEntries2022,
+  '24h-2023': twentyfourhEntries2023,
+  '24h-2024': twentyfourhEntries2024,
+  '24h-2025': twentyfourhEntries2025,
+  '24h-2026': twentyfourhEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

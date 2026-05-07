@@ -23,6 +23,7 @@ import { mlmc2021 } from '../mlmc-2021'
 import { gtwcam2021 } from '../gtwcam-2021'
 import { britgt2021 } from '../britgt-2021'
 import { gtwcau2021 } from '../gtwcau-2021'
+import { twentyfourh2021 } from '../24h-2021'
 
 export const events2021: Record<string, RaceEvent[]> = {
   'f1': f12021,
@@ -48,4 +49,5 @@ export const events2021: Record<string, RaceEvent[]> = {
   'gtwcam': gtwcam2021,
   'britgt': britgt2021,
   'gtwcau': gtwcau2021,
+  '24h': twentyfourh2021,
 }

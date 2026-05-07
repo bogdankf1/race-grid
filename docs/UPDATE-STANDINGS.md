@@ -45,6 +45,7 @@ For each series needing an update, search **official sources first**:
 | Super Formula | superformula.net/en | Wikipedia "20XX Super Formula Championship" |
 | Supercars | supercars.com/standings | speedsport-magazine.com |
 | MotoGP | motogp.com/en/standings | Wikipedia "20XX MotoGP World Championship" |
+| 24H Series | 24hseries.com standings | Wikipedia "20XX 24H Series" |
 
 Extract for each driver entry: **position, driver name, team, points, wins**.
 Extract for each constructor/manufacturer entry (if applicable): **position, team/manufacturer, points, wins**.
@@ -140,7 +141,10 @@ The NLS (Nurburgring Langstrecken-Serie) uses a class-based points system across
 ### Dakar special case
 The Dakar Rally is a single multi-stage event. Standings reflect the final overall classification (driver + co-driver). Use `className: 'Cars'` for the car category standings.
 
-### Multi-driver entries (WEC, IMSA, ELMS, MLMC, GTWC, IGTC, Super GT)
+### 24H Series
+The 24H Series uses GT3 overall standings. Use `className: 'GT3'`. Has both driver and team championships.
+
+### Multi-driver entries (WEC, IMSA, ELMS, MLMC, GTWC, IGTC, Super GT, 24H Series)
 Endurance series have multi-driver crews sharing one car. For standings:
 - Use the **first listed driver** of the crew as the `driverId`
 - The full crew details are available through the `entries/` data and race results

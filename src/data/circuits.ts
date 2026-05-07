@@ -171,6 +171,7 @@ const CIRCUITS: Record<string, Circuit> = {
   'nashville-street-circuit': { id: 'nashville-street-circuit', name: 'Nashville Street Circuit', country: 'United States', countryCode: 'US', length: '3.530 km', turns: 11, type: 'street', wikipedia: 'Nashville_Street_Circuit' },
   'belle-isle-street-circuit': { id: 'belle-isle-street-circuit', name: 'Belle Isle Street Circuit', country: 'United States', countryCode: 'US', length: '3.331 km', turns: 10, type: 'street', wikipedia: 'Belle_Isle_Street_Circuit' },
   'circuit-zolder': { id: 'circuit-zolder', name: 'Circuit Zolder', country: 'Belgium', countryCode: 'BE', length: '4.011 km', turns: 10, type: 'permanent', wikipedia: 'Circuit_Zolder' },
+  'circuito-do-estoril': { id: 'circuito-do-estoril', name: 'Circuito do Estoril', country: 'Portugal', countryCode: 'PT', length: '4.182 km', turns: 13, type: 'permanent', wikipedia: 'Circuito_do_Estoril' },
   'kyalami-grand-prix-circuit': { id: 'kyalami-grand-prix-circuit', name: 'Kyalami Grand Prix Circuit', country: 'South Africa', countryCode: 'ZA', length: '4.522 km', turns: 16, type: 'permanent', wikipedia: 'Kyalami' },
   'winton-motor-raceway': { id: 'winton-motor-raceway', name: 'Winton Motor Raceway', country: 'Australia', countryCode: 'AU', length: '3.000 km', turns: 12, type: 'permanent', wikipedia: 'Winton_Motor_Raceway' },
   'pukekohe-park-raceway': { id: 'pukekohe-park-raceway', name: 'Pukekohe Park Raceway', country: 'New Zealand', countryCode: 'NZ', length: '2.910 km', turns: 9, type: 'permanent', wikipedia: 'Pukekohe_Park_Raceway' },

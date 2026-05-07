@@ -427,6 +427,20 @@ const TEAMS: Record<string, Team> = {
   'wtm-rinaldi': { id: 'wtm-rinaldi', name: 'WTM by Rinaldi Racing', country: 'DE' },
   'team-thor': { id: 'team-thor', name: 'Team Thor', country: 'IS' },
   'team-motopark': { id: 'team-motopark', name: 'Team Motopark', country: 'DE' },
+  // 24H Series additions
+  'arc-bratislava': { id: 'arc-bratislava', name: 'ARC Bratislava', country: 'SK' },
+  'cp-racing': { id: 'cp-racing', name: 'CP Racing', country: 'GB' },
+  'era-motorsport': { id: 'era-motorsport', name: 'Era Motorsport', country: 'US' },
+  'gp-elite': { id: 'gp-elite', name: 'Team GP Elite', country: 'NL' },
+  'haas-rt': { id: 'haas-rt', name: 'HAAS RT', country: 'DE' },
+  'herberth-motorsport': { id: 'herberth-motorsport', name: 'Herberth Motorsport', country: 'DE' },
+  'hofor-racing': { id: 'hofor-racing', name: 'HOFOR Racing', country: 'DE' },
+  'not-only-motorsport': { id: 'not-only-motorsport', name: 'Not Only Motorsport', country: 'IT' },
+  'red-camel-jordans': { id: 'red-camel-jordans', name: 'Red Camel-Jordans.nl', country: 'NL' },
+  'racing-one': { id: 'racing-one', name: 'Racing One', country: 'DE' },
+  'rpm-racing': { id: 'rpm-racing', name: 'RPM Racing', country: 'ES' },
+  'sainteloc-junior-team': { id: 'sainteloc-junior-team', name: 'Sainteloc Junior Team', country: 'FR' },
+  'ziggo-tempesta': { id: 'ziggo-tempesta', name: 'Ziggo Sport Tempesta Racing', country: 'GB' },
 }
 
 export function getTeam(id: string): Team | null {

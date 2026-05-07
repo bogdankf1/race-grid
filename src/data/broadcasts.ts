@@ -730,6 +730,35 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'YouTube — GT World', url: 'https://www.youtube.com/@GTWorld', note: 'Free live stream' },
     ],
   },
+  '24h': {
+    US: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream — all races' },
+    ],
+    UA: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
+    ],
+    GB: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream — all races' },
+    ],
+    DE: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
+    ],
+    PL: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
+    ],
+    AU: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
+    ],
+    BR: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
+    ],
+    JP: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
+    ],
+    CO: [
+      { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

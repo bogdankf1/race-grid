@@ -42,6 +42,7 @@ Read `src/data/series-registry.ts` to get the full list of active series. As of 
 | `gtwcasia` | GTWC Asia | `gtwcasia-2026.ts` | https://www.gt-world-challenge-asia.com/calendar |
 | `britgt` | British GT | `britgt-2026.ts` | https://www.britishgt.com/calendar |
 | `gtwcau` | GTWC Australia | `gtwcau-2026.ts` | https://www.gt-world-challenge-australia.com/calendar |
+| `24h` | 24H Series | `24h-2026.ts` | https://www.24hseries.com/races |
 
 ### 2. For EACH series, do the following
 

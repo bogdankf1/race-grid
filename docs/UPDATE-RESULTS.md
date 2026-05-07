@@ -51,11 +51,12 @@ For each finished session without a result, search **official sources first**:
 | Supercars | supercars.com/results |
 | MotoGP | motogp.com/en/results |
 | Formula E | fiaformulae.com/en/results |
+| 24H Series | 24hseries.com/race-results |
 
 Fallback: `WebSearch` for `"<event name> <year> official results"`
 
 Extract: winner driver(s), winner team, podium (P1-P3), fastest lap (F1 only)
-- For endurance races (WEC, IMSA, ELMS, MLMC, IGTC, NLS): find overall winner and class winners if available
+- For endurance races (WEC, IMSA, ELMS, MLMC, IGTC, NLS, 24H Series): find overall winner and class winners if available
 - For WRC: find overall rally winner (driver + co-driver + team)
 - For Dakar: find overall car category winner (driver + co-driver + team)
 - For MotoGP: find race winner + podium (sprint and main race)

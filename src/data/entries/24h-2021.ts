@@ -1,0 +1,36 @@
+import type { EntryItem } from './types'
+
+// 24H Series 2021 entries
+export const twentyfourhEntries2021: EntryItem[] = [
+  // GT3
+  { driverId: 'ralf-bohn', teamId: 'herberth-motorsport', carNumber: 91 },
+  { driverId: 'alfred-renauer', teamId: 'herberth-motorsport', carNumber: 91 },
+  { driverId: 'robert-renauer', teamId: 'herberth-motorsport', carNumber: 91 },
+  { driverId: 'daniel-allemann', teamId: 'herberth-motorsport', carNumber: 91 },
+  { driverId: 'pierre-kaffer', teamId: 'sainteloc-junior-team', carNumber: 26 },
+  { driverId: 'elia-erhart', teamId: 'sainteloc-junior-team', carNumber: 26 },
+  { driverId: 'stephane-tribaudini', teamId: 'sainteloc-junior-team', carNumber: 26 },
+  { driverId: 'ernst-inderbitzin', teamId: 'sainteloc-junior-team', carNumber: 26 },
+  { driverId: 'charles-sheridan', teamId: 'cp-racing', carNumber: 24 },
+  { driverId: 'joe-sheridan', teamId: 'cp-racing', carNumber: 24 },
+  { driverId: 'mick-sheridan', teamId: 'cp-racing', carNumber: 24 },
+  { driverId: 'declan-sheridan', teamId: 'cp-racing', carNumber: 24 },
+  { driverId: 'jaap-van-lagen', teamId: 'gp-elite', carNumber: 20 },
+  { driverId: 'michael-kroll', teamId: 'hofor-racing', carNumber: 4 },
+  { driverId: 'chantal-prinz', teamId: 'hofor-racing', carNumber: 4 },
+  { driverId: 'alexander-prinz', teamId: 'hofor-racing', carNumber: 4 },
+  { driverId: 'david-perel', teamId: 'kessel-racing', carNumber: 8 },
+  { driverId: 'stephen-earle', teamId: 'kessel-racing', carNumber: 8 },
+  { driverId: 'fabrizio-broggi', teamId: 'ebimotors', carNumber: 77 },
+  { driverId: 'sabino-de-castro', teamId: 'ebimotors', carNumber: 77 },
+  { driverId: 'ivo-breukers', teamId: 'red-camel-jordans', carNumber: 10 },
+  { driverId: 'luc-breukers', teamId: 'red-camel-jordans', carNumber: 10 },
+  { driverId: 'rik-breukers', teamId: 'red-camel-jordans', carNumber: 10 },
+  { driverId: 'miroslav-konopka', teamId: 'arc-bratislava', carNumber: 7 },
+  { driverId: 'adam-konopka', teamId: 'arc-bratislava', carNumber: 7 },
+  { driverId: 'leonard-weiss', teamId: 'wtm-rinaldi', carNumber: 33 },
+  { driverId: 'joerg-dreisow', teamId: 'wtm-rinaldi', carNumber: 33 },
+  { driverId: 'chris-froggatt', teamId: 'ziggo-tempesta', carNumber: 48 },
+  { driverId: 'loek-hartog', teamId: 'ziggo-tempesta', carNumber: 48 },
+  { driverId: 'jonathan-hui', teamId: 'ziggo-tempesta', carNumber: 48 },
+]
