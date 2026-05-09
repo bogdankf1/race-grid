@@ -759,6 +759,54 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'YouTube — 24H Series', url: 'https://www.youtube.com/@24HSERIES', note: 'Free live stream' },
     ],
   },
+  special: {
+    US: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood FoS, Revival, Members\' Meeting' },
+      { name: 'RACER Network / RACER+', url: 'https://ppihc.org/', note: 'Pikes Peak Hill Climb — 8 hours live coverage' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+    ],
+    UA: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood events' },
+      { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+    ],
+    GB: [
+      { name: 'ITV4 / ITVX', url: 'https://www.itv.com/itvx', note: 'Live coverage — Goodwood Festival of Speed, Revival' },
+      { name: 'Sky Sports', note: 'Goodwood Festival of Speed simulcast' },
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — all Goodwood events' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+    ],
+    DE: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood events' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+      { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
+    ],
+    PL: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood events' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+      { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
+    ],
+    AU: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood events' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+      { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
+    ],
+    BR: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood events' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+      { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
+    ],
+    JP: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood events' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+      { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
+    ],
+    CO: [
+      { name: 'Goodwood Road & Racing (YouTube)', url: 'https://www.youtube.com/@GoodwoodRR', note: 'Free live stream — Goodwood events' },
+      { name: 'lemansclassic.com', url: 'https://www.lemansclassic.com/en/media-home/watch-the-live/', note: 'Le Mans Classic — free livestream' },
+      { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

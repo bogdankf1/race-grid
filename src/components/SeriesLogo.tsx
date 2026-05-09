@@ -32,6 +32,7 @@ const LOGO_MAP: Record<string, string> = {
   britgt: '/logos/britgt.svg',
   gtwcau: '/logos/gtwcau.svg',
   '24h': '/logos/24h.svg',
+  special: '/logos/special.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {

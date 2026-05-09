@@ -199,6 +199,11 @@ const CIRCUITS: Record<string, Circuit> = {
   'nola-motorsports-park': { id: 'nola-motorsports-park', name: 'NOLA Motorsports Park', country: 'United States', countryCode: 'US', length: '4.430 km', turns: 16, type: 'permanent', wikipedia: 'NOLA_Motorsports_Park' },
   'hampton-downs-motorsport-park': { id: 'hampton-downs-motorsport-park', name: 'Hampton Downs Motorsport Park', country: 'New Zealand', countryCode: 'NZ', length: '4.030 km', turns: 14, type: 'permanent', wikipedia: 'Hampton_Downs_Motorsport_Park' },
   'termas-de-rio-hondo': { id: 'termas-de-rio-hondo', name: 'Termas de Río Hondo', country: 'Argentina', countryCode: 'AR', length: '4.806 km', turns: 14, type: 'permanent', wikipedia: 'Termas_de_Río_Hondo' },
+  'goodwood-hillclimb': { id: 'goodwood-hillclimb', name: 'Goodwood Hillclimb', country: 'United Kingdom', countryCode: 'GB', length: '1.86 km', turns: 9, type: 'mixed', wikipedia: 'Goodwood_Festival_of_Speed' },
+  'goodwood-motor-circuit': { id: 'goodwood-motor-circuit', name: 'Goodwood Motor Circuit', country: 'United Kingdom', countryCode: 'GB', length: '3.81 km', turns: 9, type: 'permanent', wikipedia: 'Goodwood_Circuit' },
+  'pikes-peak-highway': { id: 'pikes-peak-highway', name: 'Pikes Peak Highway', country: 'United States', countryCode: 'US', length: '19.99 km', turns: 156, type: 'mixed', wikipedia: 'Pikes_Peak_International_Hill_Climb' },
+  'pite-havsbad': { id: 'pite-havsbad', name: 'Pite Havsbad', country: 'Sweden', countryCode: 'SE', length: '1.05 km', turns: 8, type: 'mixed', wikipedia: 'Pite_Havsbad' },
+  'accor-stadium': { id: 'accor-stadium', name: 'Accor Stadium', country: 'Australia', countryCode: 'AU', length: '0.4 km', turns: 6, type: 'mixed', wikipedia: 'Stadium_Australia' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {
