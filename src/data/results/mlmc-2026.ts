@@ -37,4 +37,40 @@ export const mlmcResults2026: Record<string, EventResults> = {
       ],
     },
   },
+  'mlmc-2026-le-castellet': {
+    qualifying: {
+      overall: { driverIds: ['favre'], teamId: 'dkr-engineering' },
+      classes: [
+        {
+          className: 'LMP3',
+          podium: [
+            { position: 1, driverIds: ['favre'], teamId: 'dkr-engineering' },
+          ],
+        },
+        {
+          className: 'GT3',
+          podium: [
+            { position: 1, driverIds: ['al-khelaifi'], teamId: 'team-qatar-iron-lynx' },
+          ],
+        },
+      ],
+    },
+    endurance: {
+      overall: { driverIds: ['maschio', 'queen'], teamId: '23events-racing' },
+      classes: [
+        {
+          className: 'LMP3',
+          podium: [
+            { position: 1, driverIds: ['maschio', 'queen'], teamId: '23events-racing' },
+          ],
+        },
+        {
+          className: 'GT3',
+          podium: [
+            { position: 1, driverIds: ['fumanelli', 'innocenti'], teamId: 'kessel-racing' },
+          ],
+        },
+      ],
+    },
+  },
 }

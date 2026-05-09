@@ -113,5 +113,30 @@ export const imsaResults2026: Record<string, EventResults> = {
         ],
       }],
     },
+    race: {
+      overall: { driverIds: ['heinrich', 'van-der-helm'], teamId: 'jdc-miller' },
+      classes: [
+        {
+          className: 'GTP',
+          podium: [
+            { position: 1, driverIds: ['heinrich', 'van-der-helm'], teamId: 'jdc-miller' },
+            { position: 2, driverIds: ['bamber', 'aitken'], teamId: 'whelen-engineering' },
+            { position: 3, driverIds: ['wittmann'], teamId: 'team-wrt' },
+          ],
+        },
+        {
+          className: 'GTD Pro',
+          podium: [
+            { position: 1, driverIds: ['vervisch', 'mies'], teamId: 'ford-multimatic' },
+          ],
+        },
+        {
+          className: 'GTD',
+          podium: [
+            { position: 1, driverIds: ['hindman', 'formal'], teamId: 'wayne-taylor-racing' },
+          ],
+        },
+      ],
+    },
   },
 }

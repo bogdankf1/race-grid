@@ -56,4 +56,22 @@ export const supercarsResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'sc-2026-christchurch': {
+    qualifying: {
+      overall: { driverIds: ['payne'], teamId: 'grove-racing' },
+      classes: [{ className: 'Top 3', podium: [{ position: 1, driverIds: ['payne'], teamId: 'grove-racing' }] }],
+    },
+    race: {
+      // Race 10: Allen, Race 11: Kostecki, Race 12: Payne, Race 13: Payne (final race)
+      overall: { driverIds: ['payne'], teamId: 'grove-racing' },
+      classes: [{
+        className: 'Race Winners',
+        podium: [
+          { position: 1, driverIds: ['payne'], teamId: 'grove-racing' },
+          { position: 2, driverIds: ['kostecki'], teamId: 'dick-johnson-racing' },
+          { position: 3, driverIds: ['allen'], teamId: 'grove-racing' },
+        ],
+      }],
+    },
+  },
 }

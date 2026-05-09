@@ -156,6 +156,7 @@ const DRIVERS: Record<string, Driver> = {
   'fittipaldi-jr': { id: 'fittipaldi-jr', name: 'Emerson Fittipaldi Jr.', shortName: 'Fittipaldi Jr.', nationality: 'BR' },
   'fjordbach': { id: 'fjordbach', name: 'Anders Fjordbach', shortName: 'Fjordbach', nationality: 'DK' },
   'foley': { id: 'foley', name: 'Robby Foley', shortName: 'Foley', nationality: 'US' },
+  'formal': { id: 'formal', name: 'Danny Formal', shortName: 'Formal', nationality: 'CR' },
   'p-fittipaldi': { id: 'p-fittipaldi', name: 'Pietro Fittipaldi', shortName: 'P. Fittipaldi', nationality: 'BR' },
   'fontana': { id: 'fontana', name: 'Giancarlo Fontana', shortName: 'Fontana', nationality: 'CH' },
   'foster': { id: 'foster', name: 'Louis Foster', shortName: 'Foster', nationality: 'GB' },
@@ -1134,8 +1135,8 @@ const DRIVERS: Record<string, Driver> = {
   'hill-j': { id: 'hill-j', name: 'Josh Hill', shortName: 'Hill', nationality: 'GB' },
   'dannemand-jorgensen': { id: 'dannemand-jorgensen', name: 'Christopher Dannemand Jorgensen', shortName: 'Dannemand Jorgensen', nationality: 'DK' },
   'karlsson': { id: 'karlsson', name: 'William Karlsson', shortName: 'Karlsson', nationality: 'SE' },
-  'maschio': { id: 'maschio', name: 'Giancarlo Maschio', shortName: 'Maschio', nationality: 'IT' },
-  'queen': { id: 'queen', name: 'Cody Queen', shortName: 'Queen', nationality: 'US' },
+  'maschio': { id: 'maschio', name: 'Giovanni Maschio', shortName: 'Maschio', nationality: 'IT' },
+  'queen': { id: 'queen', name: 'Colin Queen', shortName: 'Queen', nationality: 'US' },
   'chance': { id: 'chance', name: 'Hugo Chance', shortName: 'Chance', nationality: 'FR' },
   'lopez-cesaratto': { id: 'lopez-cesaratto', name: 'Nicolas Lopez Cesaratto', shortName: 'Lopez Cesaratto', nationality: 'AR' },
   'stevens-v': { id: 'stevens-v', name: 'Vincent Stevens', shortName: 'Stevens', nationality: 'BE' },
@@ -1347,6 +1348,12 @@ const DRIVERS: Record<string, Driver> = {
   'muller-j': { id: 'muller-j', name: 'Jürgen Müller', shortName: 'Müller', nationality: 'DE' },
   'nicolai-m': { id: 'nicolai-m', name: 'Matteo Nicolai', shortName: 'Nicolai', nationality: 'IT' },
   'van-splunteren-j': { id: 'van-splunteren-j', name: 'Jim van Splunteren', shortName: 'Van Splunteren', nationality: 'NL' },
+  'chou': { id: 'chou', name: 'Chun Ting Chou', shortName: 'Chou', nationality: 'TW' },
+  'cubides-olarte': { id: 'cubides-olarte', name: 'Henry Cubides Olarte', shortName: 'Cubides', nationality: 'CO' },
+  'serra': { id: 'serra', name: 'Daniel Serra', shortName: 'Serra', nationality: 'BR' },
+  't-kimura': { id: 't-kimura', name: 'Takeshi Kimura', shortName: 'T. Kimura', nationality: 'JP' },
+  'al-khelaifi': { id: 'al-khelaifi', name: 'Abdulla Ali Al-Khelaifi', shortName: 'Al-Khelaifi', nationality: 'QA' },
+  'favre': { id: 'favre', name: 'Romain Favre', shortName: 'Favre', nationality: 'FR' },
 }
 
 export function getDriver(id: string): Driver | null {

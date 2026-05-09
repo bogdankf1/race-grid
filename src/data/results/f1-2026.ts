@@ -132,5 +132,17 @@ export const f1Results2026: Record<string, EventResults> = {
         ],
       }],
     },
+    race: {
+      overall: { driverIds: ['antonelli'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['piastri'], teamId: 'mclaren' },
+        ],
+      }],
+      fastestLapDriverId: 'norris',
+    },
   },
 }

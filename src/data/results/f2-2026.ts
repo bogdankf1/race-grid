@@ -25,6 +25,17 @@ export const f2Results2026: Record<string, EventResults> = {
         ],
       }],
     },
+    race: {
+      overall: { driverIds: ['mini'], teamId: 'mp-motorsport' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['mini'], teamId: 'mp-motorsport' },
+          { position: 2, driverIds: ['beganovic'], teamId: 'dams' },
+          { position: 3, driverIds: ['camara'], teamId: 'invicta-racing' },
+        ],
+      }],
+    },
   },
   'f2-2026-melbourne': {
     qualifying: {
