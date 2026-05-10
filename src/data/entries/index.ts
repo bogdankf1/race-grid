@@ -127,6 +127,12 @@ import { twentyfourhEntries2023 } from './24h-2023'
 import { twentyfourhEntries2024 } from './24h-2024'
 import { twentyfourhEntries2025 } from './24h-2025'
 import { twentyfourhEntries2026 } from './24h-2026'
+// WRX entries
+import { wrxEntries2021 } from './wrx-2021'
+import { wrxEntries2022 } from './wrx-2022'
+import { wrxEntries2023 } from './wrx-2023'
+import { wrxEntries2024 } from './wrx-2024'
+import { wrxEntries2025 } from './wrx-2025'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -257,6 +263,12 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   '24h-2024': twentyfourhEntries2024,
   '24h-2025': twentyfourhEntries2025,
   '24h-2026': twentyfourhEntries2026,
+  // WRX
+  'wrx-2021': wrxEntries2021,
+  'wrx-2022': wrxEntries2022,
+  'wrx-2023': wrxEntries2023,
+  'wrx-2024': wrxEntries2024,
+  'wrx-2025': wrxEntries2025,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

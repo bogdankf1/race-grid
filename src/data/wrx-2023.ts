@@ -4,6 +4,7 @@ import { RaceEvent } from '@/lib/types'
 // Source: Wikipedia 2023 FIA World Rallycross Championship — verified May 2026
 // Note: 3 European rounds (Lydden Hill, Mettet, Estering) cancelled after a
 // garage fire incident — they are not listed here.
+// The South Africa weekend was a doubleheader, split below into two events.
 export const wrx2023: RaceEvent[] = [
   {
     id: 'wrx-2023-portugal',
@@ -36,14 +37,22 @@ export const wrx2023: RaceEvent[] = [
     ],
   },
   {
-    id: 'wrx-2023-south-africa',
+    id: 'wrx-2023-south-africa-r4',
     round: 4,
-    name: 'World RX of South Africa (Double-Header)',
+    name: 'World RX of South Africa — Round 4',
     circuitId: 'killarney-cape-town',
     sessions: [
       { type: 'qualifying', label: 'Free Practice & Qualifying', startUtc: '2023-10-07T06:00:00Z', durationMinutes: 360 },
-      { type: 'race', label: 'Round 1 — Semifinals & Final', startUtc: '2023-10-07T12:00:00Z', durationMinutes: 240 },
-      { type: 'race', label: 'Round 2 — Semifinals & Final', startUtc: '2023-10-08T10:00:00Z', durationMinutes: 360 },
+      { type: 'race', label: 'Semifinals & Final', startUtc: '2023-10-07T12:00:00Z', durationMinutes: 240 },
+    ],
+  },
+  {
+    id: 'wrx-2023-south-africa-r5',
+    round: 5,
+    name: 'World RX of South Africa — Round 5',
+    circuitId: 'killarney-cape-town',
+    sessions: [
+      { type: 'race', label: 'Semifinals & Final', startUtc: '2023-10-08T10:00:00Z', durationMinutes: 360 },
     ],
   },
   {

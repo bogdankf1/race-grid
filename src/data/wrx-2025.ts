@@ -2,6 +2,7 @@ import { RaceEvent } from '@/lib/types'
 
 // FIA World Rallycross Championship 2025 — final World RX season
 // Source: Wikipedia 2025 FIA World Rallycross Championship — verified May 2026
+// The Turkey finale was a doubleheader, split into two events below.
 export const wrx2025: RaceEvent[] = [
   {
     id: 'wrx-2025-portugal',
@@ -44,14 +45,22 @@ export const wrx2025: RaceEvent[] = [
     ],
   },
   {
-    id: 'wrx-2025-turkey-double',
+    id: 'wrx-2025-turkey-r5',
     round: 5,
-    name: 'World RX of Turkey (Double-Header, Rounds 5 & 6)',
+    name: 'World RX of Turkey — Round 5',
     circuitId: 'istanbul-park',
     sessions: [
       { type: 'qualifying', label: 'Free Practice & Qualifying', startUtc: '2025-09-20T06:00:00Z', durationMinutes: 360 },
-      { type: 'race', label: 'Round 5 — Semifinals & Final', startUtc: '2025-09-20T12:00:00Z', durationMinutes: 240 },
-      { type: 'race', label: 'Round 6 — Semifinals & Final', startUtc: '2025-09-21T10:00:00Z', durationMinutes: 360 },
+      { type: 'race', label: 'Semifinals & Final', startUtc: '2025-09-20T12:00:00Z', durationMinutes: 240 },
+    ],
+  },
+  {
+    id: 'wrx-2025-turkey-r6',
+    round: 6,
+    name: 'World RX of Turkey — Round 6',
+    circuitId: 'istanbul-park',
+    sessions: [
+      { type: 'race', label: 'Semifinals & Final', startUtc: '2025-09-21T10:00:00Z', durationMinutes: 360 },
     ],
   },
 ]
