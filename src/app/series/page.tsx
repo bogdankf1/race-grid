@@ -3,7 +3,7 @@ import { SeriesPageClient } from './SeriesPageClient'
 
 export const metadata = {
   title: 'Series — Race Grid',
-  description: 'Browse all 26 racing series. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GTWC and more.',
+  description: 'Browse all 27 racing series. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GTWC and more.',
 }
 
 export default function SeriesPage() {

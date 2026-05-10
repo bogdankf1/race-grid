@@ -33,6 +33,7 @@ const LOGO_MAP: Record<string, string> = {
   gtwcau: '/logos/gtwcau.svg',
   '24h': '/logos/24h.svg',
   special: '/logos/special.svg',
+  wrx: '/logos/wrx.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {

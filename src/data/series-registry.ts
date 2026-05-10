@@ -27,6 +27,7 @@ import { britgt2026 } from './britgt-2026'
 import { gtwcau2026 } from './gtwcau-2026'
 import { twentyfourh2026 } from './24h-2026'
 import { special2026 } from './special-2026'
+import { wrx2026 } from './wrx-2026'
 
 interface SeriesMeta {
   id: string
@@ -65,6 +66,7 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'gtwcau', name: 'GT World Challenge Australia', shortName: 'GTWCAU', color: '#00843D', textColor: '#fff', wikipedia: 'GT_World_Challenge_Australia' },
   { id: '24h', name: 'Michelin 24H Series', shortName: '24H', color: '#1A2B4A', textColor: '#fff', wikipedia: '24H_Series' },
   { id: 'special', name: 'Special Events', shortName: 'SPEC', color: '#6B2C91', textColor: '#fff' },
+  { id: 'wrx', name: 'FIA Rallycross', shortName: 'WRX', color: '#0E5BA8', textColor: '#fff', wikipedia: 'World_Rallycross_Championship' },
 ]
 
 // 2026 events — eagerly loaded (current year, used by 95%+ of users)
@@ -78,6 +80,7 @@ const EVENTS_2026: Record<string, RaceEvent[]> = {
   britgt: britgt2026, gtwcau: gtwcau2026,
   '24h': twentyfourh2026,
   special: special2026,
+  wrx: wrx2026,
 }
 
 // Cache for lazily loaded historical years
@@ -96,7 +99,7 @@ export const SERIES_GROUPS: SeriesGroup[] = [
   { labelKey: 'group.endurance', ids: ['wec', 'elms', 'mlmc', 'imsa', 'igtc', '24h'] },
   { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'gtwcam', 'gtwcasia', 'gtwcau', 'britgt', 'supergt', 'nls', 'supercars'] },
   { labelKey: 'group.stock', ids: ['nascar'] },
-  { labelKey: 'group.rally', ids: ['wrc', 'dakar'] },
+  { labelKey: 'group.rally', ids: ['wrc', 'dakar', 'wrx'] },
   { labelKey: 'group.motorcycle', ids: ['motogp'] },
   { labelKey: 'group.special', ids: ['special'] },
 ]

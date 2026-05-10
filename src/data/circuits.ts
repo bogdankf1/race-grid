@@ -204,6 +204,19 @@ const CIRCUITS: Record<string, Circuit> = {
   'pikes-peak-highway': { id: 'pikes-peak-highway', name: 'Pikes Peak Highway', country: 'United States', countryCode: 'US', length: '19.99 km', turns: 156, type: 'mixed', wikipedia: 'Pikes_Peak_International_Hill_Climb' },
   'pite-havsbad': { id: 'pite-havsbad', name: 'Pite Havsbad', country: 'Sweden', countryCode: 'SE', length: '1.05 km', turns: 8, type: 'mixed', wikipedia: 'Pite_Havsbad' },
   'accor-stadium': { id: 'accor-stadium', name: 'Accor Stadium', country: 'Australia', countryCode: 'AU', length: '0.4 km', turns: 6, type: 'mixed', wikipedia: 'Stadium_Australia' },
+  'holjesbanan': { id: 'holjesbanan', name: 'Höljesbanan', country: 'Sweden', countryCode: 'SE', length: '1.207 km', turns: 8, type: 'mixed', wikipedia: 'Höljes_Motorstadion' },
+  'lankebanen': { id: 'lankebanen', name: 'Lånkebanen', country: 'Norway', countryCode: 'NO', length: '1.020 km', turns: 7, type: 'mixed', wikipedia: 'Lånkebanen' },
+  'nyirad-racing-center': { id: 'nyirad-racing-center', name: 'Nyirád Racing Center', country: 'Hungary', countryCode: 'HU', length: '1.132 km', turns: 8, type: 'mixed' },
+  'kymiring': { id: 'kymiring', name: 'KymiRing', country: 'Finland', countryCode: 'FI', length: '4.621 km', turns: 18, type: 'permanent', wikipedia: 'KymiRing' },
+  'mondello-park': { id: 'mondello-park', name: 'Mondello Park', country: 'Ireland', countryCode: 'IE', length: '2.430 km', turns: 8, type: 'permanent', wikipedia: 'Mondello_Park' },
+  'circuit-de-loheac': { id: 'circuit-de-loheac', name: 'Circuit de Lohéac', country: 'France', countryCode: 'FR', length: '1.430 km', turns: 8, type: 'mixed', wikipedia: 'Circuit_de_Lohéac' },
+  'circuit-jules-tacheny-mettet': { id: 'circuit-jules-tacheny-mettet', name: 'Circuit Jules Tacheny', country: 'Belgium', countryCode: 'BE', length: '2.280 km', turns: 11, type: 'permanent', wikipedia: 'Circuit_Jules_Tacheny_Mettet' },
+  'pista-automovel-de-montalegre': { id: 'pista-automovel-de-montalegre', name: 'Pista Automóvel de Montalegre', country: 'Portugal', countryCode: 'PT', length: '1.131 km', turns: 8, type: 'mixed' },
+  'bikernieki': { id: 'bikernieki', name: 'Biķernieku Sporta Komplekss', country: 'Latvia', countryCode: 'LV', length: '1.460 km', turns: 9, type: 'mixed', wikipedia: 'Biķernieki_Complex_Sports_Base' },
+  'circuito-automovel-de-lousada': { id: 'circuito-automovel-de-lousada', name: 'Circuito Automóvel de Lousada', country: 'Portugal', countryCode: 'PT', length: '1.700 km', turns: 8, type: 'mixed', wikipedia: 'Circuito_Automóvel_de_Lousada' },
+  'killarney-cape-town': { id: 'killarney-cape-town', name: 'Killarney International Raceway', country: 'South Africa', countryCode: 'ZA', length: '3.270 km', turns: 12, type: 'permanent', wikipedia: 'Killarney_International_Raceway' },
+  'estering': { id: 'estering', name: 'Estering', country: 'Germany', countryCode: 'DE', length: '0.954 km', turns: 8, type: 'mixed', wikipedia: 'Estering' },
+  'central-harbourfront-circuit': { id: 'central-harbourfront-circuit', name: 'Central Harbourfront Circuit', country: 'Hong Kong', countryCode: 'HK', length: '0.990 km', turns: 9, type: 'street' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

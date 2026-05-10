@@ -26,6 +26,7 @@ import { gtwcau2022 } from '../gtwcau-2022'
 import { gtwcasia2022 } from '../gtwcasia-2022'
 import { twentyfourh2022 } from '../24h-2022'
 import { special2022 } from '../special-2022'
+import { wrx2022 } from '../wrx-2022'
 
 export const events2022: Record<string, RaceEvent[]> = {
   'f1': f12022,
@@ -54,4 +55,5 @@ export const events2022: Record<string, RaceEvent[]> = {
   'gtwcasia': gtwcasia2022,
   '24h': twentyfourh2022,
   'special': special2022,
+  'wrx': wrx2022,
 }
