@@ -147,6 +147,12 @@ import { wrxStandings2022 } from './wrx-2022'
 import { wrxStandings2023 } from './wrx-2023'
 import { wrxStandings2024 } from './wrx-2024'
 import { wrxStandings2025 } from './wrx-2025'
+import { nlsStandings2021 } from './nls-2021'
+import { nlsStandings2022 } from './nls-2022'
+import { nlsStandings2023 } from './nls-2023'
+import { nlsStandings2024 } from './nls-2024'
+import { nlsStandings2025 } from './nls-2025'
+import { nlsStandings2026 } from './nls-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -297,6 +303,12 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'wrx-2023': wrxStandings2023,
   'wrx-2024': wrxStandings2024,
   'wrx-2025': wrxStandings2025,
+  'nls-2021': nlsStandings2021,
+  'nls-2022': nlsStandings2022,
+  'nls-2023': nlsStandings2023,
+  'nls-2024': nlsStandings2024,
+  'nls-2025': nlsStandings2025,
+  'nls-2026': nlsStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {
