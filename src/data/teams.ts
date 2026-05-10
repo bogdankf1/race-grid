@@ -44,7 +44,6 @@ const TEAMS: Record<string, Team> = {
   'craft-bamboo': { id: 'craft-bamboo', name: 'Craft-Bamboo Racing', country: 'HK' },
   'crowdstrike-racing': { id: 'crowdstrike-racing', name: 'CrowdStrike Racing', country: 'US' },
   'crowdstrike-riley': { id: 'crowdstrike-riley', name: 'CrowdStrike Racing by Riley Motorsports', country: 'US' },
-  'crp-racing': { id: 'crp-racing', name: 'CRP Racing', country: 'US' },
   'd-station-racing': { id: 'd-station-racing', name: "D'station Racing", country: 'JP' },
   'dale-coyne-racing': { id: 'dale-coyne-racing', name: 'Dale Coyne Racing', country: 'US' },
   'dams': { id: 'dams', name: 'DAMS Lucas Oil', country: 'FR' },
@@ -113,7 +112,6 @@ const TEAMS: Record<string, Team> = {
   'legacy-motor-club': { id: 'legacy-motor-club', name: 'Legacy Motor Club', country: 'US' },
   'lionspeed': { id: 'lionspeed', name: 'Lionspeed GP', country: 'DE' },
   'lone-star-racing': { id: 'lone-star-racing', name: 'Lone Star Racing', country: 'US' },
-  'team-abba-racing': { id: 'team-abba-racing', name: 'Team Abba Racing', country: 'GB' },
   'team-impul': { id: 'team-impul', name: 'Team IMPUL', country: 'JP' },
   'team-krc': { id: 'team-krc', name: 'Team KRC', country: 'KR' },
   'x-raid-mini': { id: 'x-raid-mini', name: 'X-raid MINI JCW Team', country: 'DE' },
@@ -158,7 +156,6 @@ const TEAMS: Record<string, Team> = {
   'rennsport1': { id: 'rennsport1', name: 'RennSport1', country: 'US' },
   'rfk-racing': { id: 'rfk-racing', name: 'RFK Racing', country: 'US' },
   'richard-childress-racing': { id: 'richard-childress-racing', name: 'Richard Childress Racing', country: 'US' },
-  'rob-boston-racing': { id: 'rob-boston-racing', name: 'Rob Boston Racing', country: 'GB' },
   'rodin-motorsport': { id: 'rodin-motorsport', name: 'Rodin Motorsport', country: 'NZ' },
   'rowe-racing': { id: 'rowe-racing', name: 'ROWE Racing', country: 'DE' },
   'rs1': { id: 'rs1', name: 'RS1', country: 'US' },
@@ -176,7 +173,6 @@ const TEAMS: Record<string, Team> = {
   'sunenergy1-racing': { id: 'sunenergy1-racing', name: 'SunEnergy1 Racing', country: 'US' },
   'tds-racing': { id: 'tds-racing', name: 'TDS Racing', country: 'FR' },
   'team-mpc': { id: 'team-mpc', name: 'Team MPC', country: 'AU' },
-  'team-parker-racing': { id: 'team-parker-racing', name: 'Team Parker Racing', country: 'GB' },
   'team-rjn': { id: 'team-rjn', name: 'Team RJN', country: 'GB' },
   'team-mugen': { id: 'team-mugen', name: 'Team MUGEN', country: 'JP' },
   'team-penske': { id: 'team-penske', name: 'Team Penske', country: 'US' },
@@ -245,9 +241,7 @@ const TEAMS: Record<string, Team> = {
   'team-brm': { id: 'team-brm', name: 'Team BRM', country: 'AU' },
   'walkinshaw-twg': { id: 'walkinshaw-twg', name: 'Walkinshaw TWG Racing', country: 'AU' },
 
-  'penrite-racing': { id: 'penrite-racing', name: 'Penrite Racing', country: 'AU' },
   // WEC/IMSA/WRC standings additions
-  'bmw': { id: 'bmw', name: 'BMW M Team WRT', country: 'BE' },
   'bmw-wrt': { id: 'bmw-wrt', name: 'BMW M Team WRT', country: 'BE' },
   'jdc-miller': { id: 'jdc-miller', name: 'JDC-Miller MotorSports', country: 'US' },
   'lamborghini': { id: 'lamborghini', name: 'Iron Lynx Lamborghini', country: 'IT' },
@@ -297,7 +291,6 @@ const TEAMS: Record<string, Team> = {
   'jaguar-racing': { id: 'jaguar-racing', name: 'Jaguar TCS Racing', country: 'GB' },
   'lola-yamaha-abt': { id: 'lola-yamaha-abt', name: 'Lola Yamaha ABT', country: 'DE' },
   'envision-racing': { id: 'envision-racing', name: 'Envision Racing', country: 'GB' },
-  'mach-1-engineering': { id: 'mach-1-engineering', name: 'Mach 1 Engineering', country: 'AU' },
   'mahiki-racing': { id: 'mahiki-racing', name: 'Mahiki Racing', country: 'GB' },
   'mahindra-racing': { id: 'mahindra-racing', name: 'Mahindra Racing', country: 'IN' },
   'citroen-racing-fe': { id: 'citroen-racing-fe', name: 'Citroën Racing (FE)', country: 'FR' },
@@ -365,9 +358,6 @@ const TEAMS: Record<string, Team> = {
   // ELMS 2026 additions
   'dkr-engineering': { id: 'dkr-engineering', name: 'DKR Engineering', country: 'LU' },
   'vector-sport': { id: 'vector-sport', name: 'Vector Sport', country: 'GB' },
-  'eurointernational': { id: 'eurointernational', name: 'EuroInternational', country: 'IT' },
-  'ultimate': { id: 'ultimate', name: 'Ultimate', country: 'FR' },
-  'rossa-racing-virage': { id: 'rossa-racing-virage', name: 'Rossa Racing by Virage', country: 'PT' },
   'gr-racing': { id: 'gr-racing', name: 'GR Racing', country: 'GB' },
   'team-qatar-iron-lynx': { id: 'team-qatar-iron-lynx', name: 'Team Qatar by Iron Lynx', country: 'QAT' },
   // British GT 2026 additions
@@ -414,7 +404,6 @@ const TEAMS: Record<string, Team> = {
   // MLMC backfill additions
   'pzoberer-tft': { id: 'pzoberer-tft', name: 'Pzoberer Zürichsee by TFT', country: 'CH' },
   'phoenix-racing': { id: 'phoenix-racing', name: 'Phoenix Racing', country: 'DE' },
-  'muhlner-motorsport': { id: 'muhlner-motorsport', name: 'Mühlner Motorsport', country: 'DE' },
   'graff-racing': { id: 'graff-racing', name: 'Graff Racing', country: 'FR' },
   'reiter-engineering': { id: 'reiter-engineering', name: 'Reiter Engineering', country: 'AT' },
   'gmb-motorsport': { id: 'gmb-motorsport', name: 'GMB Motorsport', country: 'DK' },
@@ -426,7 +415,6 @@ const TEAMS: Record<string, Team> = {
   'leipert-motorsport': { id: 'leipert-motorsport', name: 'Leipert Motorsport', country: 'DE' },
   'wtm-rinaldi': { id: 'wtm-rinaldi', name: 'WTM by Rinaldi Racing', country: 'DE' },
   'team-thor': { id: 'team-thor', name: 'Team Thor', country: 'IS' },
-  'team-motopark': { id: 'team-motopark', name: 'Team Motopark', country: 'DE' },
   // 24H Series additions
   'arc-bratislava': { id: 'arc-bratislava', name: 'ARC Bratislava', country: 'SK' },
   'cp-racing': { id: 'cp-racing', name: 'CP Racing', country: 'GB' },
@@ -435,10 +423,8 @@ const TEAMS: Record<string, Team> = {
   'haas-rt': { id: 'haas-rt', name: 'HAAS RT', country: 'DE' },
   'herberth-motorsport': { id: 'herberth-motorsport', name: 'Herberth Motorsport', country: 'DE' },
   'hofor-racing': { id: 'hofor-racing', name: 'HOFOR Racing', country: 'DE' },
-  'not-only-motorsport': { id: 'not-only-motorsport', name: 'Not Only Motorsport', country: 'IT' },
   'red-camel-jordans': { id: 'red-camel-jordans', name: 'Red Camel-Jordans.nl', country: 'NL' },
   'racing-one': { id: 'racing-one', name: 'Racing One', country: 'DE' },
-  'rpm-racing': { id: 'rpm-racing', name: 'RPM Racing', country: 'ES' },
   'sainteloc-junior-team': { id: 'sainteloc-junior-team', name: 'Sainteloc Junior Team', country: 'FR' },
   'ziggo-tempesta': { id: 'ziggo-tempesta', name: 'Ziggo Sport Tempesta Racing', country: 'GB' },
   // FIA World Rallycross teams (2021–2025)
