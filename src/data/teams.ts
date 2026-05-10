@@ -454,6 +454,10 @@ const TEAMS: Record<string, Team> = {
   'unkorrupted': { id: 'unkorrupted', name: 'Unkorrupted', country: 'FR' },
   'volland-racing': { id: 'volland-racing', name: 'Volland Racing KFT', country: 'HU' },
   'vw-dealerteam-bauhaus': { id: 'vw-dealerteam-bauhaus', name: 'Volkswagen Dealerteam BAUHAUS', country: 'SE' },
+  'ian-lacy-racing-with-g3-racing': { id: 'ian-lacy-racing-with-g3-racing', name: 'Ian Lacy Racing with G3 Racing', country: '' },
+  'iron-lynx-proton': { id: 'iron-lynx-proton', name: 'Iron Lynx – Proton', country: '' },
+  'racers-edge-motorsports-with-wtr-andretti': { id: 'racers-edge-motorsports-with-wtr-andretti', name: 'Racers Edge Motorsports with WTR-Andretti', country: '' },
+  'the-spirit-of-fff-racing': { id: 'the-spirit-of-fff-racing', name: 'The Spirit of FFF Racing', country: '' },
 }
 
 export function getTeam(id: string): Team | null {

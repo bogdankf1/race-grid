@@ -27,6 +27,9 @@ import { twentyfourh2021 } from '../24h-2021'
 import { special2021 } from '../special-2021'
 import { wrx2021 } from '../wrx-2021'
 
+// Note: GTWC Asia 2021 is intentionally absent — the entire season was cancelled
+// by SRO due to COVID-19 travel restrictions (no events took place that year).
+
 export const events2021: Record<string, RaceEvent[]> = {
   'f1': f12021,
   'indycar': indycar2021,

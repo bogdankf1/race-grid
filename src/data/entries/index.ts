@@ -134,6 +134,35 @@ import { wrxEntries2022 } from './wrx-2022'
 import { wrxEntries2023 } from './wrx-2023'
 import { wrxEntries2024 } from './wrx-2024'
 import { wrxEntries2025 } from './wrx-2025'
+// MLMC 2021-2025
+import { mlmcEntries2021 } from './mlmc-2021'
+import { mlmcEntries2022 } from './mlmc-2022'
+import { mlmcEntries2023 } from './mlmc-2023'
+import { mlmcEntries2024 } from './mlmc-2024'
+import { mlmcEntries2025 } from './mlmc-2025'
+// GTWC America 2021-2025
+import { gtwcamEntries2021 } from './gtwcam-2021'
+import { gtwcamEntries2022 } from './gtwcam-2022'
+import { gtwcamEntries2023 } from './gtwcam-2023'
+import { gtwcamEntries2024 } from './gtwcam-2024'
+import { gtwcamEntries2025 } from './gtwcam-2025'
+// GTWC Asia 2022-2025 (2021 cancelled)
+import { gtwcasiaEntries2022 } from './gtwcasia-2022'
+import { gtwcasiaEntries2023 } from './gtwcasia-2023'
+import { gtwcasiaEntries2024 } from './gtwcasia-2024'
+import { gtwcasiaEntries2025 } from './gtwcasia-2025'
+// British GT 2021-2025
+import { britgtEntries2021 } from './britgt-2021'
+import { britgtEntries2022 } from './britgt-2022'
+import { britgtEntries2023 } from './britgt-2023'
+import { britgtEntries2024 } from './britgt-2024'
+import { britgtEntries2025 } from './britgt-2025'
+// GTWC Australia 2021-2025
+import { gtwcauEntries2021 } from './gtwcau-2021'
+import { gtwcauEntries2022 } from './gtwcau-2022'
+import { gtwcauEntries2023 } from './gtwcau-2023'
+import { gtwcauEntries2024 } from './gtwcau-2024'
+import { gtwcauEntries2025 } from './gtwcau-2025'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -271,6 +300,35 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'wrx-2023': wrxEntries2023,
   'wrx-2024': wrxEntries2024,
   'wrx-2025': wrxEntries2025,
+  // MLMC 2021-2025
+  'mlmc-2021': mlmcEntries2021,
+  'mlmc-2022': mlmcEntries2022,
+  'mlmc-2023': mlmcEntries2023,
+  'mlmc-2024': mlmcEntries2024,
+  'mlmc-2025': mlmcEntries2025,
+  // GTWC America 2021-2025
+  'gtwcam-2021': gtwcamEntries2021,
+  'gtwcam-2022': gtwcamEntries2022,
+  'gtwcam-2023': gtwcamEntries2023,
+  'gtwcam-2024': gtwcamEntries2024,
+  'gtwcam-2025': gtwcamEntries2025,
+  // GTWC Asia 2022-2025
+  'gtwcasia-2022': gtwcasiaEntries2022,
+  'gtwcasia-2023': gtwcasiaEntries2023,
+  'gtwcasia-2024': gtwcasiaEntries2024,
+  'gtwcasia-2025': gtwcasiaEntries2025,
+  // British GT 2021-2025
+  'britgt-2021': britgtEntries2021,
+  'britgt-2022': britgtEntries2022,
+  'britgt-2023': britgtEntries2023,
+  'britgt-2024': britgtEntries2024,
+  'britgt-2025': britgtEntries2025,
+  // GTWC Australia 2021-2025
+  'gtwcau-2021': gtwcauEntries2021,
+  'gtwcau-2022': gtwcauEntries2022,
+  'gtwcau-2023': gtwcauEntries2023,
+  'gtwcau-2024': gtwcauEntries2024,
+  'gtwcau-2025': gtwcauEntries2025,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {
