@@ -60,11 +60,11 @@ export const nlsResults2026: Record<string, EventResults> = {
       }],
     },
     endurance: {
-      overall: { driverIds: ['haase', 'b-green', 'sims'], teamId: 'scherer-sport-phx' },
+      overall: { driverIds: ['haase', 'green-b', 'sims'], teamId: 'scherer-sport-phx' },
       classes: [{
         className: 'Top 3',
         podium: [
-          { position: 1, driverIds: ['haase', 'b-green', 'sims'], teamId: 'scherer-sport-phx' },
+          { position: 1, driverIds: ['haase', 'green-b', 'sims'], teamId: 'scherer-sport-phx' },
           { position: 2, driverIds: ['engstler', 'bortolotti', 'niederhauser'], teamId: 'abt-sportsline' },
           { position: 3, driverIds: ['preining'], teamId: 'manthey' },
         ],
