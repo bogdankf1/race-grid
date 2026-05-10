@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, DM_Sans } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import { OfflineIndicator } from '@/components/OfflineIndicator'
 import '@/styles/globals.css'
 
@@ -69,6 +70,7 @@ export default function RootLayout({
         <main id="main-content">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   )
