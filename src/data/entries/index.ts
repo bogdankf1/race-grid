@@ -88,6 +88,7 @@ import { dakarEntries2022 } from './dakar-2022'
 import { dtmEntries2022 } from './dtm-2022'
 import { elmsEntries2022 } from './elms-2022'
 import { f2Entries2022 } from './f2-2022'
+import { f3Entries2022 } from './f3-2022'
 import { feEntries2022 } from './fe-2022'
 import { gtwcEntries2022 } from './gtwc-2022'
 import { igtcEntries2022 } from './igtc-2022'
@@ -224,6 +225,7 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'dtm-2022': dtmEntries2022,
   'elms-2022': elmsEntries2022,
   'f2-2022': f2Entries2022,
+  'f3-2022': f3Entries2022,
   'fe-2022': feEntries2022,
   'gtwc-2022': gtwcEntries2022,
   'igtc-2022': igtcEntries2022,
