@@ -254,6 +254,7 @@ const DRIVERS: Record<string, Driver> = {
   'jakobsen': { id: 'jakobsen', name: 'Malthe Jakobsen', shortName: 'Jakobsen', nationality: 'DK' },
   'j-dennis': { id: 'j-dennis', name: 'Jake Dennis', shortName: 'Dennis', nationality: 'GB' },
   'james': { id: 'james', name: 'Daniel James', shortName: 'James', nationality: 'GB' },
+  'james-i': { id: 'james-i', name: 'Ian James', shortName: 'I. James', nationality: 'US' },
   'jaminet': { id: 'jaminet', name: 'Mathieu Jaminet', shortName: 'Jaminet', nationality: 'FR' },
   'jefri-ibrahim': { id: 'jefri-ibrahim', name: 'Prince Jefri Ibrahim', shortName: 'Jefri Ibrahim', nationality: 'MY' },
   'jefri-ibrahim-2': { id: 'jefri-ibrahim-2', name: 'Prince Abu Bakar Ibrahim', shortName: 'Abu Bakar Ibrahim', nationality: 'MY' },

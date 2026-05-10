@@ -146,4 +146,28 @@ export const motogpResults2026: Record<string, EventResults> = {
       fastestLapDriverId: 'acosta',
     },
   },
+  'motogp-2026-france': {
+    qualifying: {
+      overall: { driverIds: ['bagnaia'], teamId: 'ducati-lenovo' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['bagnaia'], teamId: 'ducati-lenovo' },
+          { position: 2, driverIds: ['marquez-m'], teamId: 'ducati-lenovo' },
+          { position: 3, driverIds: ['bezzecchi'], teamId: 'aprilia-racing' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['martin-j'], teamId: 'aprilia-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['martin-j'], teamId: 'aprilia-racing' },
+          { position: 2, driverIds: ['bagnaia'], teamId: 'ducati-lenovo' },
+          { position: 3, driverIds: ['bezzecchi'], teamId: 'aprilia-racing' },
+        ],
+      }],
+    },
+  },
 }

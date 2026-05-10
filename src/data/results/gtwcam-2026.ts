@@ -58,4 +58,17 @@ export const gtwcamResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'gtwcam-2026-sebring': {
+    qualifying: {
+      overall: { driverIds: ['grenier', 'stephens'], teamId: 'jmf-motorsports' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['grenier', 'stephens'], teamId: 'jmf-motorsports' },
+          { position: 2, driverIds: ['schandorff', 'perez-companc'], teamId: 'af-corse-usa' },
+          { position: 3, driverIds: [], teamId: 'turner-motorsport' },
+        ],
+      }],
+    },
+  },
 }

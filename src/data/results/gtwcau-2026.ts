@@ -15,4 +15,26 @@ export const gtwcauResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'gtwcau-2026-the-bend': {
+    qualifying: {
+      overall: { driverIds: ['pires-s', 'leitch'], teamId: 'geyer-valmont-tigani' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['pires-s', 'leitch'], teamId: 'geyer-valmont-tigani' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['leitch', 'pires-s'], teamId: 'geyer-valmont-tigani' },
+      classes: [{
+        className: 'Overall',
+        podium: [
+          { position: 1, driverIds: ['leitch', 'pires-s'], teamId: 'geyer-valmont-tigani' },
+          { position: 2, driverIds: ['randle', 'rosser'], teamId: 'castrol-team-brm' },
+          { position: 3, driverIds: ['evans-j', 'schutte'], teamId: 'argt' },
+        ],
+      }],
+    },
+  },
 }

@@ -220,4 +220,17 @@ export const nascarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'nascar-2026-watkins-glen': {
+    qualifying: {
+      overall: { driverIds: ['van-gisbergen'], teamId: 'trackhouse-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['van-gisbergen'], teamId: 'trackhouse-racing' },
+          { position: 2, driverIds: ['mcdowell'], teamId: 'spire-motorsports' },
+          { position: 3, driverIds: ['cindric'], teamId: 'team-penske' },
+        ],
+      }],
+    },
+  },
 }
