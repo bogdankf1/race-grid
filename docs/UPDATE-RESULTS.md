@@ -52,6 +52,8 @@ For each finished session without a result, search **official sources first**:
 | MotoGP | motogp.com/en/results |
 | Formula E | fiaformulae.com/en/results |
 | 24H Series | 24hseries.com/race-results |
+| FIA Rallycross (`wrx`) | fiaworldrallycross.com (2021–2025 World RX) / fia-rallycross.com (Euro RX from 2026) |
+| Special Events (`special`) | N/A — calendar-only series (Goodwood, Pikes Peak, Le Mans Classic, etc.); no championship results to track |
 
 Fallback: `WebSearch` for `"<event name> <year> official results"`
 

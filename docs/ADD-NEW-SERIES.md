@@ -29,7 +29,7 @@ Before starting, gather:
 
 Pick a short, kebab-case identifier. This ID is used everywhere — files, URLs, data keys.
 
-Examples: `f1`, `indycar`, `nascar`, `wec`, `imsa`, `wrc`, `dtm`, `gtwc`, `nls`, `supergt`, `elms`, `igtc`, `superformula`, `supercars`
+Examples: `f1`, `f2`, `f3`, `indycar`, `nascar`, `wec`, `imsa`, `wrc`, `dakar`, `dtm`, `gtwc`, `gtwcam`, `gtwcasia`, `gtwcau`, `britgt`, `nls`, `supergt`, `elms`, `mlmc`, `igtc`, `superformula`, `supercars`, `motogp`, `fe`, `24h`, `wrx`, `special`
 
 Rules:
 - Lowercase, kebab-case (no spaces, underscores, or capitals)

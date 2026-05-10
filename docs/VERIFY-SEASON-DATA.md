@@ -43,6 +43,13 @@ Read `src/data/series-registry.ts` to get the full list of active series. As of 
 | `britgt` | British GT | `britgt-2026.ts` | https://www.britishgt.com/calendar |
 | `gtwcau` | GTWC Australia | `gtwcau-2026.ts` | https://www.gt-world-challenge-australia.com/calendar |
 | `24h` | 24H Series | `24h-2026.ts` | https://www.24hseries.com/races |
+| `f2` | FIA Formula 2 | `f2-2026.ts` | https://www.fiaformula2.com/Schedule |
+| `f3` | FIA Formula 3 | `f3-2026.ts` | https://www.fiaformula3.com/Schedule |
+| `dakar` | Dakar Rally | `dakar-2026.ts` | https://www.dakar.com/en |
+| `motogp` | MotoGP | `motogp-2026.ts` | https://www.motogp.com/en/calendar |
+| `fe` | Formula E | `fe-2026.ts` | https://www.fiaformulae.com/en/championship/race-calendar |
+| `wrx` | FIA Rallycross | `wrx-2026.ts` | https://www.fia-rallycross.com/calendar (Euro RX top tier from 2026) |
+| `special` | Special Events | `special-2026.ts` | Goodwood (goodwood.com), Pikes Peak (ppihc.org), Le Mans Classic (lemansclassic.com), Monaco Historique (monacograndprixhistoric.com), ROC (raceofchampions.com) — calendar-only |
 
 ### 2. For EACH series, do the following
 

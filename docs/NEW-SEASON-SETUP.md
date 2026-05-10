@@ -36,6 +36,15 @@ Not all series publish their next-season calendar at the same time. Typical time
 | GTWC Asia | August–September | SRO announces |
 | British GT | June–July | SRO announces |
 | GTWC Australia | August–September | SRO announces |
+| F2 | November (year before) | Co-announced with F1 weekends |
+| F3 | November (year before) | Co-announced with F1 weekends |
+| Dakar | June–July (year before) | Single-event series |
+| MotoGP | September (year before) | Dorna confirms early |
+| Formula E | June (year before) | FIA confirms early |
+| MLMC | August–September | Co-runs with ELMS |
+| 24H Series | September–October | Creventic announces |
+| FIA Rallycross (`wrx`) | November–December | World RX cancelled after 2025; from 2026 the FIA top tier is **Euro RX** (fia-rallycross.com) |
+| Special Events (`special`) | Rolling | Each event (Goodwood, Pikes Peak, Le Mans Classic, etc.) announces independently. Not a championship. |
 
 **If a calendar is not yet available**, skip that series, add a `// TODO: <year> calendar not yet published` comment to the existing file, and inform the user which series are pending.
 

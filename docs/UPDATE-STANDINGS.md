@@ -46,6 +46,8 @@ For each series needing an update, search **official sources first**:
 | Supercars | supercars.com/standings | speedsport-magazine.com |
 | MotoGP | motogp.com/en/standings | Wikipedia "20XX MotoGP World Championship" |
 | 24H Series | 24hseries.com standings | Wikipedia "20XX 24H Series" |
+| FIA Rallycross (`wrx`) | fiaworldrallycross.com (2021–2025) / fia-rallycross.com (Euro RX 2026+) | Wikipedia "20XX FIA World Rallycross Championship" / "20XX FIA European Rallycross Championship" |
+| Special Events (`special`) | N/A — calendar-only; no championship standings | — |
 
 Extract for each driver entry: **position, driver name, team, points, wins**.
 Extract for each constructor/manufacturer entry (if applicable): **position, team/manufacturer, points, wins**.
