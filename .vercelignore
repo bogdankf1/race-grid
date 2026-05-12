@@ -1,3 +1,0 @@
-# The mcp/ subdirectory is deployed as a separate Vercel project.
-# Exclude it from the main race-grid (static export) build.
-mcp/
