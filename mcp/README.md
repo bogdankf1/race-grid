@@ -18,10 +18,10 @@ The server speaks two transports. Pick whichever your client supports.
 
 | Transport | Endpoint |
 |---|---|
-| Streamable HTTP | `https://<deployment>/mcp` |
-| Server-Sent Events (SSE) | `https://<deployment>/sse` |
+| Streamable HTTP | `https://race-grid-mcp.vercel.app/mcp` |
+| Server-Sent Events (SSE) | `https://race-grid-mcp.vercel.app/sse` |
 
-Replace `<deployment>` with your Vercel URL once deployed (e.g. `race-grid-mcp.vercel.app`).
+Live at [`race-grid-mcp.vercel.app`](https://race-grid-mcp.vercel.app).
 
 ### Claude Desktop
 
@@ -31,7 +31,7 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) o
 {
   "mcpServers": {
     "race-grid": {
-      "url": "https://<deployment>/mcp"
+      "url": "https://race-grid-mcp.vercel.app/mcp"
     }
   }
 }
@@ -45,7 +45,7 @@ Restart Claude Desktop. The tools appear in the slash-command palette.
 
 - **Name:** `race-grid`
 - **Transport:** `Streamable HTTP`
-- **URL:** `https://<deployment>/mcp`
+- **URL:** `https://race-grid-mcp.vercel.app/mcp`
 
 ### Claude Code
 
@@ -55,7 +55,7 @@ Add to `.claude/settings.json` in any project:
 {
   "mcpServers": {
     "race-grid": {
-      "url": "https://<deployment>/mcp"
+      "url": "https://race-grid-mcp.vercel.app/mcp"
     }
   }
 }
@@ -161,7 +161,7 @@ Easiest: go to **[smithery.ai/new](https://smithery.ai/new)** and paste your dep
 
 ### Official MCP Registry — [registry.modelcontextprotocol.io](https://registry.modelcontextprotocol.io)
 
-Driven by the [`mcp-publisher`](https://github.com/modelcontextprotocol/registry) CLI and a `server.json` manifest. This repo already has [`mcp/server.json`](./server.json) checked in — update the two `remotes[].url` placeholders to your real deployment URL, then publish:
+Driven by the [`mcp-publisher`](https://github.com/modelcontextprotocol/registry) CLI and a `server.json` manifest. This repo has [`mcp/server.json`](./server.json) ready to publish — both `remotes[].url` entries already point at `race-grid-mcp.vercel.app`:
 
 ```bash
 # One-time: install the publisher CLI

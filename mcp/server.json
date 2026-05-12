@@ -13,11 +13,11 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://REPLACE-AFTER-DEPLOY.vercel.app/mcp"
+      "url": "https://race-grid-mcp.vercel.app/mcp"
     },
     {
       "type": "sse",
-      "url": "https://REPLACE-AFTER-DEPLOY.vercel.app/sse"
+      "url": "https://race-grid-mcp.vercel.app/sse"
     }
   ]
 }
