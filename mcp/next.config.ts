@@ -1,14 +1,17 @@
-import path from 'node:path'
 import type { NextConfig } from 'next'
 
 // The MCP project lives in `mcp/` but imports race-grid data from `../src/`.
-// outputFileTracingRoot tells Vercel/Next.js where the import root sits so
-// parent-directory imports get traced and bundled into the deployed function.
+// `experimental.externalDir` permits TypeScript path aliases that resolve
+// outside this Next.js project root. Vercel's "Include files outside the
+// root directory" setting must also be enabled for the parent files to be
+// uploaded into the build.
+//
+// Explicitly setting `output` to `undefined` defends against any tooling that
+// might otherwise inherit `output: "export"` from the parent race-grid config
+// (the parent uses static export; this MCP project must remain server-side).
 const nextConfig: NextConfig = {
-  outputFileTracingRoot: path.join(__dirname, '..'),
+  output: undefined,
   experimental: {
-    // The race-grid data modules are plain TS but live outside the mcp/ root.
-    // externalDir lets Next.js bundle them via path aliases.
     externalDir: true,
   },
 }
