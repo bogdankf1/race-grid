@@ -1,0 +1,28 @@
+{
+  "name": "race-grid-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public MCP server exposing Race Grid motorsport data (27 series, 6 seasons) — calendars, results, standings, circuits.",
+  "scripts": {
+    "dev": "next dev -p 3030",
+    "build": "next build",
+    "start": "next start -p 3030",
+    "stdio": "tsx src/stdio.ts",
+    "inspector": "npx @modelcontextprotocol/inspector tsx src/stdio.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "mcp-handler": "^1.1.0",
+    "next": "15",
+    "react": "^19",
+    "react-dom": "^19",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tsx": "^4.19.0",
+    "typescript": "^5"
+  }
+}

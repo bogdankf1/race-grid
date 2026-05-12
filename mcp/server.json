@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.bogdankf1/race-grid",
+  "title": "Race Grid",
+  "description": "Public motorsport calendar MCP — 27 racing series (F1, NASCAR, WEC, MotoGP, IndyCar, WRC, IMSA, and more), 2021–2026 seasons. Tools for calendars, next-race lookups, race results, championship standings, circuit metadata, and date-range search.",
+  "websiteUrl": "https://race-grid.app",
+  "repository": {
+    "url": "https://github.com/bogdankf1/race-grid",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://REPLACE-AFTER-DEPLOY.vercel.app/mcp"
+    },
+    {
+      "type": "sse",
+      "url": "https://REPLACE-AFTER-DEPLOY.vercel.app/sse"
+    }
+  ]
+}
