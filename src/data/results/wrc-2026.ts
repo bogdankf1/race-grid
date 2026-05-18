@@ -67,4 +67,17 @@ export const wrcResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'wrc-2026-portugal': {
+    stage: {
+      overall: { driverIds: ['neuville', 'wydaeghe'], teamId: 'hyundai-wrt' },
+      classes: [{
+        className: 'Overall',
+        podium: [
+          { position: 1, driverIds: ['neuville', 'wydaeghe'], teamId: 'hyundai-wrt' },
+          { position: 2, driverIds: ['solberg', 'edmondson'], teamId: 'toyota-gazoo-racing' },
+          { position: 3, driverIds: ['evans', 'scott-martin'], teamId: 'toyota-gazoo-racing' },
+        ],
+      }],
+    },
+  },
 }

@@ -147,6 +147,7 @@ import { wrxStandings2022 } from './wrx-2022'
 import { wrxStandings2023 } from './wrx-2023'
 import { wrxStandings2024 } from './wrx-2024'
 import { wrxStandings2025 } from './wrx-2025'
+import { wrxStandings2026 } from './wrx-2026'
 import { nlsStandings2021 } from './nls-2021'
 import { nlsStandings2022 } from './nls-2022'
 import { nlsStandings2023 } from './nls-2023'
@@ -303,6 +304,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'wrx-2023': wrxStandings2023,
   'wrx-2024': wrxStandings2024,
   'wrx-2025': wrxStandings2025,
+  'wrx-2026': wrxStandings2026,
   'nls-2021': nlsStandings2021,
   'nls-2022': nlsStandings2022,
   'nls-2023': nlsStandings2023,

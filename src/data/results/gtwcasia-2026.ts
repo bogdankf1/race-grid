@@ -3,6 +3,16 @@ import type { EventResults } from './types'
 // GT World Challenge Asia 2026 results
 export const gtwcasiaResults2026: Record<string, EventResults> = {
   'gtwcasia-2026-mandalika': {
+    qualifying: {
+      // Race 1 pole — Sean Gelael (Garage 75) on debut
+      overall: { driverIds: ['gelael'], teamId: 'garage-75' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['gelael'], teamId: 'garage-75' },
+        ],
+      }],
+    },
     // Race 1: Gelael (Garage 75), Race 2: Hartog/Xu Liu (Phantom Global)
     race: {
       overall: { driverIds: ['gelael'], teamId: 'garage-75' },
@@ -16,6 +26,16 @@ export const gtwcasiaResults2026: Record<string, EventResults> = {
     },
   },
   'gtwcasia-2026-sepang': {
+    qualifying: {
+      // Race 1 pole — Akash Nandy, Absolute Racing
+      overall: { driverIds: ['nandy'], teamId: 'absolute-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['nandy'], teamId: 'absolute-racing' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['lu-wei', 'picariello'], teamId: 'origine-motorsport' },
       classes: [{

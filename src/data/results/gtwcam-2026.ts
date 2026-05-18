@@ -70,5 +70,26 @@ export const gtwcamResults2026: Record<string, EventResults> = {
         ],
       }],
     },
+    endurance: {
+      overall: { driverIds: ['foley', 'rothberg'], teamId: 'turner-motorsport' },
+      classes: [{
+        className: 'Pro',
+        podium: [
+          { position: 1, driverIds: ['foley', 'rothberg'], teamId: 'turner-motorsport' },
+          { position: 2, driverIds: ['lawrence-c', 'sedgwick'], teamId: 'dollahite-racing' },
+          { position: 3, driverIds: ['schandorff', 'perez-companc'], teamId: 'af-corse-usa' },
+        ],
+      }, {
+        className: 'Pro-Am',
+        podium: [
+          { position: 1, driverIds: ['washington-k', 'sargent-t'], teamId: 'gmg-racing' },
+        ],
+      }, {
+        className: 'Am',
+        podium: [
+          { position: 1, driverIds: ['negri-jr', 'schreibman'], teamId: 'af-corse-usa' },
+        ],
+      }],
+    },
   },
 }

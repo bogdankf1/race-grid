@@ -146,4 +146,17 @@ export const indycarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'indycar-2026-indy500': {
+    qualifying: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['a-rossi'], teamId: 'ed-carpenter-racing' },
+          { position: 3, driverIds: ['malukas'], teamId: 'team-penske' },
+        ],
+      }],
+    },
+  },
 }

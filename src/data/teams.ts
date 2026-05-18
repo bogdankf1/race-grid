@@ -256,6 +256,8 @@ const TEAMS: Record<string, Team> = {
   'apr': { id: 'apr', name: 'apr', country: 'JP' },
   // IGTC 2026 additions
   'mercedes-amg': { id: 'mercedes-amg', name: 'Mercedes-AMG', country: 'DE' },
+  'bmw-m': { id: 'bmw-m', name: 'BMW M Motorsport', country: 'DE' },
+  'porsche-motorsport': { id: 'porsche-motorsport', name: 'Porsche Motorsport', country: 'DE' },
   // Dakar 2025 additions
   'one-eleven-racing': { id: 'one-eleven-racing', name: '111 Racing', country: 'AU' },
   'optimum-motorsport': { id: 'optimum-motorsport', name: 'Optimum Motorsport', country: 'GB' },
@@ -448,6 +450,8 @@ const TEAMS: Record<string, Team> = {
   'ollie-odonovan': { id: 'ollie-odonovan', name: "Ollie O'Donovan", country: 'IE' },
   'patrick-guillerme': { id: 'patrick-guillerme', name: 'Patrick Guillerme', country: 'FR' },
   'pgrx': { id: 'pgrx', name: 'PGRX', country: 'FI' },
+  'bergen-motorsport-evolution': { id: 'bergen-motorsport-evolution', name: 'Bergen Motorsport Evolution', country: 'NO' },
+  'set-promotion': { id: 'set-promotion', name: 'SET Promotion', country: 'FI' },
   'special-one-racing': { id: 'special-one-racing', name: 'Special ONE Racing', country: 'IT' },
   'team-rx-racing': { id: 'team-rx-racing', name: 'Team RX Racing', country: 'IE' },
   'team-skaab': { id: 'team-skaab', name: 'Team SKÅAB', country: 'SE' },

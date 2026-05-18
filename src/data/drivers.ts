@@ -1301,6 +1301,7 @@ const DRIVERS: Record<string, Driver> = {
   'favre': { id: 'favre', name: 'Romain Favre', shortName: 'Favre', nationality: 'FR' },
   // FIA World Rallycross drivers (2021–2025)
   'abbring': { id: 'abbring', name: 'Kevin Abbring', shortName: 'Abbring', nationality: 'NL' },
+  'bakkerud': { id: 'bakkerud', name: 'Andreas Bakkerud', shortName: 'Bakkerud', nationality: 'NO' },
   'august': { id: 'august', name: 'Mandie August', shortName: 'August', nationality: 'DE' },
   'belevskiy': { id: 'belevskiy', name: 'Yury Belevskiy', shortName: 'Belevskiy', nationality: 'CH' },
   'bossard': { id: 'bossard', name: 'Steven Bossard', shortName: 'Bossard', nationality: 'FR' },
@@ -1330,6 +1331,7 @@ const DRIVERS: Record<string, Driver> = {
   's-kristensson': { id: 's-kristensson', name: 'Stefan Kristensson', shortName: 'Kristensson', nationality: 'SE' },
   't-scheider': { id: 't-scheider', name: 'Timo Scheider', shortName: 'Scheider', nationality: 'DE' },
   'timmy-hansen': { id: 'timmy-hansen', name: 'Timmy Hansen', shortName: 'T. Hansen', nationality: 'SE' },
+  'turpeinen': { id: 'turpeinen', name: 'Joni Turpeinen', shortName: 'Turpeinen', nationality: 'FI' },
   'veiby': { id: 'veiby', name: 'Ole Christian Veiby', shortName: 'Veiby', nationality: 'NO' },
   'wieszt': { id: 'wieszt', name: 'Jankó Wieszt', shortName: 'Wieszt', nationality: 'HU' },
   'abbelen': { id: 'abbelen', name: 'Klaus Abbelen', shortName: 'Abbelen', nationality: 'DE' },

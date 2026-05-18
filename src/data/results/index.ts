@@ -155,6 +155,7 @@ import { wrxResults2022 } from './wrx-2022'
 import { wrxResults2023 } from './wrx-2023'
 import { wrxResults2024 } from './wrx-2024'
 import { wrxResults2025 } from './wrx-2025'
+import { wrxResults2026 } from './wrx-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
   ...f1Results2021,
@@ -311,6 +312,7 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...wrxResults2023,
   ...wrxResults2024,
   ...wrxResults2025,
+  ...wrxResults2026,
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {

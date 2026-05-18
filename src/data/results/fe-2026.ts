@@ -180,4 +180,48 @@ export const feResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'fe-2026-monaco-1': {
+    qualifying: {
+      overall: { driverIds: ['ticktum'], teamId: 'cupra-kiro' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['ticktum'], teamId: 'cupra-kiro' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['de-vries'], teamId: 'mahindra-racing' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['de-vries'], teamId: 'mahindra-racing' },
+          { position: 2, driverIds: ['m-evans'], teamId: 'jaguar-racing' },
+          { position: 3, driverIds: ['p-marti'], teamId: 'cupra-kiro' },
+        ],
+      }],
+    },
+  },
+  'fe-2026-monaco-2': {
+    qualifying: {
+      overall: { driverIds: ['ticktum'], teamId: 'cupra-kiro' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['ticktum'], teamId: 'cupra-kiro' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['rowland'], teamId: 'nissan-fe' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['rowland'], teamId: 'nissan-fe' },
+          { position: 2, driverIds: ['drugovich'], teamId: 'andretti-fe' },
+          { position: 3, driverIds: ['da-costa'], teamId: 'jaguar-racing' },
+        ],
+      }],
+    },
+  },
 }
