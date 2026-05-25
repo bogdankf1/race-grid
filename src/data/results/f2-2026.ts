@@ -72,4 +72,37 @@ export const f2Results2026: Record<string, EventResults> = {
       }],
     },
   },
+  'f2-2026-montreal': {
+    qualifying: {
+      overall: { driverIds: ['van-hoepen'], teamId: 'trident' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['van-hoepen'], teamId: 'trident' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['leon-n'], teamId: 'campos-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['leon-n'], teamId: 'campos-racing' },
+          { position: 2, driverIds: ['mini'], teamId: 'mp-motorsport' },
+          { position: 3, driverIds: ['stenshorne'], teamId: 'rodin-motorsport' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['stenshorne'], teamId: 'rodin-motorsport' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['stenshorne'], teamId: 'rodin-motorsport' },
+          { position: 2, driverIds: ['dunne'], teamId: 'rodin-motorsport' },
+          { position: 3, driverIds: ['mini'], teamId: 'mp-motorsport' },
+        ],
+      }],
+    },
+  },
 }

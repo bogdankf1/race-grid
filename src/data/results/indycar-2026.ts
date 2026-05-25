@@ -158,5 +158,16 @@ export const indycarResults2026: Record<string, EventResults> = {
         ],
       }],
     },
+    race: {
+      overall: { driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+          { position: 2, driverIds: ['malukas'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+        ],
+      }],
+    },
   },
 }

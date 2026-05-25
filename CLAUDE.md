@@ -25,6 +25,17 @@ Race Grid is a motorsport calendar web app (Next.js 15, static export) showing r
 - **Circuit names must match** between calendar data files and `circuits.ts`.
 - After any data change, run `npx next build` to verify.
 
+## Skills (use proactively)
+
+Always invoke the matching project skill when the task fits its trigger — do not improvise an equivalent workflow when a skill already encodes it. One skill per task type:
+
+- **`/update-results`** — whenever the user asks to add/refresh race results, catch up on a weekend, or backfill a series/year. Runs the `docs/UPDATE-RESULTS.md` runbook.
+- **`/update-standings`** — whenever championship/driver/constructor standings need updating (typically alongside `/update-results`). Runs `docs/UPDATE-STANDINGS.md`.
+- **`/support-year`** — when adding a brand-new season year with full calendar data for all series.
+- **`/add-series`** — when adding a new racing series end-to-end (calendar, entries, results, standings, broadcasts, pages).
+
+Invoke via the Skill tool. If the user describes a task that matches a skill but doesn't name it, still use the skill rather than ad-hoc steps.
+
 ## Runbooks
 
 ### Mid-season data verification

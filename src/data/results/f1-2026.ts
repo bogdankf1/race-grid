@@ -145,4 +145,51 @@ export const f1Results2026: Record<string, EventResults> = {
       fastestLapDriverId: 'norris',
     },
   },
+  'f1-2026-canada': {
+    sprint_qualifying: {
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['norris'], teamId: 'mclaren' },
+          { position: 3, driverIds: ['antonelli'], teamId: 'mercedes' },
+        ],
+      }],
+    },
+    qualifying: {
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['antonelli'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['hamilton'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+        ],
+      }],
+      fastestLapDriverId: 'antonelli',
+    },
+  },
 }

@@ -14,6 +14,21 @@ export const superformulaResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Suzuka Rd 4-5 doubleheader. Race 1 (Sat): Fenestraz (TOM'S), Matsushita, Tsuboi.
+  // Race 2 (Sun): Fukuzumi (Rookie), Iwasa (Mugen), Ohta (Dandelion). Storing final race result.
+  'sf-2026-suzuka-1': {
+    race: {
+      overall: { driverIds: ['fukuzumi'], teamId: 'ntt-docomo-rookie' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['fukuzumi'], teamId: 'ntt-docomo-rookie' },
+          { position: 2, driverIds: ['iwasa'], teamId: 'team-mugen' },
+          { position: 3, driverIds: ['ohta'], teamId: 'docomo-dandelion' },
+        ],
+      }],
+    },
+  },
   'sf-2026-motegi': {
     qualifying: {
       overall: { driverIds: ['ohta'], teamId: 'docomo-dandelion' },

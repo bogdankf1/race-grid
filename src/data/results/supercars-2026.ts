@@ -56,6 +56,30 @@ export const supercarsResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Tasmania (Symmons Plains): Race 1 pole Mostert (Walkinshaw TWG Toyota).
+  // Race 1: Mostert; Race 2: Heimgartner (Toyota); Race 3 (200km): Feeney (Triple Eight Ford), Payne, Allen.
+  'sc-2026-tasmania': {
+    qualifying: {
+      overall: { driverIds: ['mostert'], teamId: 'walkinshaw-twg' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['mostert'], teamId: 'walkinshaw-twg' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['feeney'], teamId: 'triple-eight' },
+      classes: [{
+        className: 'Race Winners',
+        podium: [
+          { position: 1, driverIds: ['feeney'], teamId: 'triple-eight' },
+          { position: 2, driverIds: ['payne'], teamId: 'grove-racing' },
+          { position: 3, driverIds: ['allen'], teamId: 'grove-racing' },
+        ],
+      }],
+    },
+  },
   'sc-2026-christchurch': {
     qualifying: {
       overall: { driverIds: ['payne'], teamId: 'grove-racing' },

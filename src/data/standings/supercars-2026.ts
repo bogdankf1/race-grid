@@ -1,6 +1,6 @@
 import type { SeasonStandings } from './types'
 
-// Supercars 2026 standings — verified from supercars.com, Wikipedia (after Round 4 Christchurch Super 440)
+// Supercars 2026 standings — verified from supercars.com, Wikipedia (after Round 5 Tasmania Super 440)
 export const supercarsStandings2026: SeasonStandings = {
   drivers: [
     { position: 1, driverId: 'feeney', teamId: 'triple-eight', points: 925, wins: 4 },
