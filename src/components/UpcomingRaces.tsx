@@ -68,7 +68,7 @@ export function UpcomingRaces({ selectedSeriesIds, timezone, locale }: UpcomingR
     return results
       .sort((a, b) => new Date(a.startUtc).getTime() - new Date(b.startUtc).getTime())
       .slice(0, 7)
-  }, [selectedSeriesIds, timezone])
+  }, [selectedSeriesIds, timezone, locale])
 
   const formatDate = (dateStr: string) => {
     const d = new Date(dateStr + 'T00:00:00')

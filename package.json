@@ -1,1 +1,37 @@
-{"name":"race-grid","version":"0.1.0","private":true,"scripts":{"dev":"next dev","prebuild":"npx tsx scripts/generate-ics.ts","build":"next build","start":"next start","lint":"next lint"},"dependencies":{"@vercel/analytics":"^2.0.1","clsx":"^2","date-fns":"^4","lucide-react":"^0.460","next":"15","react":"^19","react-dom":"^19"},"devDependencies":{"@tailwindcss/postcss":"^4","@types/node":"^22","@types/react":"^19","@types/react-dom":"^19","eslint":"^9","eslint-config-next":"15","tailwindcss":"^4","typescript":"^5"}}
+{
+  "name": "race-grid",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "npx tsx scripts/generate-ics.ts",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:data": "tsx scripts/validate-data.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "clsx": "^2",
+    "date-fns": "^4",
+    "lucide-react": "^0.460",
+    "next": "15",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/ui": "^4.1.7",
+    "eslint": "^9",
+    "eslint-config-next": "15",
+    "tailwindcss": "^4",
+    "tsx": "^4.22.3",
+    "typescript": "^5",
+    "vitest": "^4.1.7"
+  }
+}

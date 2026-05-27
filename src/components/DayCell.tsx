@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import Link from 'next/link'
 import { DaySeriesInfo } from '@/hooks/useCalendarEvents'
 
@@ -14,6 +14,7 @@ interface DayCellProps {
   seriesInfos: DaySeriesInfo[]
   moreLabel?: string
   nextUpLabel?: string
+  todayIso: string
 }
 
 function cleanEventName(name: string): string {
@@ -23,8 +24,8 @@ function cleanEventName(name: string): string {
     .replace(/^NLS\s*\d+\s*[—–-]\s*/i, '')
 }
 
-export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, isHighlighted, seriesInfos, moreLabel = 'more', nextUpLabel = 'Next up' }: DayCellProps) {
-  const isPast = !isToday && date < new Date().toISOString().slice(0, 10)
+function DayCellImpl({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, isHighlighted, seriesInfos, moreLabel = 'more', nextUpLabel = 'Next up', todayIso }: DayCellProps) {
+  const isPast = !isToday && date < todayIso
   const [expanded, setExpanded] = useState(false)
   const MAX_CHIPS = 3
   const showAll = expanded || seriesInfos.length <= MAX_CHIPS
@@ -190,3 +191,5 @@ export function DayCell({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDa
 
   return <div style={cellStyle}>{inner}</div>
 }
+
+export const DayCell = memo(DayCellImpl)

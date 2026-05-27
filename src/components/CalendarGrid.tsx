@@ -6,7 +6,7 @@ import {
   startOfMonth, endOfMonth, startOfWeek, endOfWeek,
   eachDayOfInterval, format, addMonths, subMonths,
   addWeeks, subWeeks,
-  isSameMonth, isToday as isDateToday,
+  isSameMonth,
 } from 'date-fns'
 import { DayCell } from './DayCell'
 import { MobileEventList } from './MobileEventList'
@@ -90,6 +90,7 @@ export function CalendarGrid({
 
   const days = viewMode === 'week' ? weekDays : monthDays
   const nextRaceDay = useMemo(() => findNextRaceDay(events), [events])
+  const todayIso = useMemo(() => format(new Date(), 'yyyy-MM-dd'), [])
 
   const mobileDays = useMemo(() => days.map(day => {
     const dateStr = format(day, 'yyyy-MM-dd')
@@ -97,11 +98,11 @@ export function CalendarGrid({
       dateStr,
       day,
       isCurrentMonth: viewMode === 'week' ? true : isSameMonth(day, currentDate),
-      isToday: isDateToday(day),
+      isToday: dateStr === todayIso,
       isNextRaceDay: dateStr === nextRaceDay,
       isHighlighted: dateStr === highlightDate,
     }
-  }), [days, viewMode, currentDate, nextRaceDay, highlightDate])
+  }), [days, viewMode, currentDate, nextRaceDay, highlightDate, todayIso])
 
   // Navigation
   const goToPrev = () => {
@@ -347,12 +348,13 @@ export function CalendarGrid({
                   date={dateStr}
                   dayNumber={day.getDate()}
                   isCurrentMonth={viewMode === 'week' ? true : isSameMonth(day, currentDate)}
-                  isToday={isDateToday(day)}
+                  isToday={dateStr === todayIso}
                   isNextRaceDay={dateStr === nextRaceDay}
                   isHighlighted={dateStr === highlightDate}
                   seriesInfos={events.get(dateStr) || []}
                   moreLabel={t('day.more', locale)}
                   nextUpLabel={t('day.nextUp', locale)}
+                  todayIso={todayIso}
                 />
               )
             })}

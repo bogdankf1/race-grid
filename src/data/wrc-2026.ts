@@ -86,11 +86,10 @@ export const wrc2026: RaceEvent[] = [
     name: 'Rally Japan',
     circuitId: 'toyota-city',
     sessions: [
-      { type: 'shakedown', label: 'Shakedown', startUtc: '2026-05-27T23:00:00Z', durationMinutes: 180 },
-      { type: 'stage', label: 'SS1–SS4', startUtc: '2026-05-28T00:08:00Z', durationMinutes: 240 },
-      { type: 'stage', label: 'SS5–SS12', startUtc: '2026-05-28T22:55:00Z', durationMinutes: 540 },
-      { type: 'stage', label: 'SS13–SS18', startUtc: '2026-05-29T22:55:00Z', durationMinutes: 480 },
-      { type: 'stage', label: 'SS19–SS21 (Power Stage)', startUtc: '2026-05-30T23:00:00Z', durationMinutes: 300 },
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2026-05-27T23:01:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1–SS6', startUtc: '2026-05-28T23:03:00Z', durationMinutes: 540 },
+      { type: 'stage', label: 'SS7–SS14', startUtc: '2026-05-29T22:41:00Z', durationMinutes: 620 },
+      { type: 'stage', label: 'SS15–SS20 (Power Stage)', startUtc: '2026-05-30T23:14:00Z', durationMinutes: 420 },
     ],
   },
   {

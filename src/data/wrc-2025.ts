@@ -165,11 +165,11 @@ export const wrc2025: RaceEvent[] = [
     name: 'Rally Japan',
     circuitId: 'toyota-city',
     sessions: [
-      { type: 'shakedown', label: 'Shakedown', startUtc: '2025-11-06T23:00:00Z', durationMinutes: 180 },
-      { type: 'stage', label: 'SS1–SS4', startUtc: '2025-11-07T00:08:00Z', durationMinutes: 240 },
-      { type: 'stage', label: 'SS5–SS12', startUtc: '2025-11-07T22:55:00Z', durationMinutes: 540 },
-      { type: 'stage', label: 'SS13–SS18', startUtc: '2025-11-08T22:55:00Z', durationMinutes: 480 },
-      { type: 'stage', label: 'SS19–SS21 (Power Stage)', startUtc: '2025-11-09T23:00:00Z', durationMinutes: 300 },
+      { type: 'shakedown', label: 'Shakedown', startUtc: '2025-11-06T00:01:00Z', durationMinutes: 180 },
+      { type: 'stage', label: 'SS1', startUtc: '2025-11-06T07:05:00Z', durationMinutes: 60 },
+      { type: 'stage', label: 'SS2–SS7', startUtc: '2025-11-06T22:11:00Z', durationMinutes: 620 },
+      { type: 'stage', label: 'SS8–SS14', startUtc: '2025-11-07T22:23:00Z', durationMinutes: 670 },
+      { type: 'stage', label: 'SS15–SS20 (Power Stage)', startUtc: '2025-11-08T23:39:00Z', durationMinutes: 400 },
     ],
   },
   {

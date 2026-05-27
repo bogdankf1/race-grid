@@ -6,12 +6,15 @@ import { t, type Locale } from '@/lib/i18n'
 import type { BroadcastInfo } from '@/data/broadcasts'
 
 interface WhereToWatchPopoverProps {
-  broadcasts: BroadcastInfo[]
+  seriesId: string
+  timezone: string
   locale: Locale
 }
 
-export function WhereToWatchPopover({ broadcasts, locale }: WhereToWatchPopoverProps) {
+export function WhereToWatchPopover({ seriesId, timezone, locale }: WhereToWatchPopoverProps) {
   const [open, setOpen] = useState(false)
+  const [broadcasts, setBroadcasts] = useState<BroadcastInfo[] | null>(null)
+  const [loaded, setLoaded] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -22,7 +25,20 @@ export function WhereToWatchPopover({ broadcasts, locale }: WhereToWatchPopoverP
     return () => document.removeEventListener('mousedown', handleClick)
   }, [])
 
-  if (broadcasts.length === 0) return null
+  useEffect(() => {
+    if (!open || loaded) return
+    let cancelled = false
+    import('@/data/broadcasts').then(mod => {
+      if (cancelled) return
+      const country = mod.detectCountry(timezone)
+      setBroadcasts(country ? mod.getBroadcasts(seriesId, country) : [])
+      setLoaded(true)
+    })
+    return () => { cancelled = true }
+  }, [open, loaded, seriesId, timezone])
+
+  // Hide the button entirely once we've loaded and confirmed no broadcasts exist.
+  if (loaded && broadcasts && broadcasts.length === 0) return null
 
   return (
     <div ref={ref} style={{ position: 'relative', flexShrink: 0 }}>
@@ -68,7 +84,13 @@ export function WhereToWatchPopover({ broadcasts, locale }: WhereToWatchPopoverP
             {t('watch.title', locale)}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {broadcasts.map((b, i) => (
+            {!loaded && (
+              <div style={{ fontSize: 13, color: 'var(--rg-text3)' }}>…</div>
+            )}
+            {loaded && broadcasts && broadcasts.length === 0 && (
+              <div style={{ fontSize: 13, color: 'var(--rg-text3)' }}>—</div>
+            )}
+            {broadcasts && broadcasts.map((b, i) => (
               <div
                 key={i}
                 style={{ fontSize: 13, lineHeight: 1.4 }}

@@ -6,7 +6,6 @@ import { SeriesConfig, RaceEvent, Session, SessionType } from '@/lib/types'
 import { getSeriesForYear } from '@/data/series-registry'
 import { getLocalDate, formatInTimezone, formatDuration } from '@/lib/timezone'
 import { SeriesChip } from './SeriesChip'
-import { getBroadcasts, detectCountry } from '@/data/broadcasts'
 import { getCircuit, getCircuitTypeLabel } from '@/data/circuits'
 import { CalendarExport } from './CalendarExport'
 import { Countdown } from './Countdown'
@@ -153,10 +152,8 @@ function EventCard({ series, event, sessions, now, timezone, locale, spoilerFree
         {!collapsed && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
             <WhereToWatchPopover
-              broadcasts={(() => {
-                const country = detectCountry(timezone)
-                return country ? getBroadcasts(series.id, country) : []
-              })()}
+              seriesId={series.id}
+              timezone={timezone}
               locale={locale}
             />
             <CalendarExport event={event} sessions={sessions} seriesName={series.name} seriesId={series.id} seriesEvents={series.events} locale={locale} />
