@@ -39,11 +39,11 @@ export const wecStandings2026: SeasonStandings = {
         { position: 3, driverId: 'dan-harper', teamId: 'team-wrt', points: 25, wins: 1 },
         { position: 4, driverId: 'catsburg', teamId: 'tf-sport', points: 22, wins: 0 },
         { position: 5, driverId: 'heriau', teamId: 'vista-af-corse', points: 20, wins: 0 },
-        { position: 6, driverId: 'james-i', teamId: 'heart-of-racing', points: 18, wins: 0 },
+        { position: 6, driverId: 'robichon', teamId: 'heart-of-racing', points: 18, wins: 0 },
         { position: 7, driverId: 'guven', teamId: 'manthey-dk', points: 18, wins: 0 },
         { position: 8, driverId: 'west', teamId: 'garage-59', points: 16, wins: 0 },
         { position: 9, driverId: 'farfus', teamId: 'team-wrt', points: 10, wins: 0 },
-        { position: 10, driverId: 'schmid-c', teamId: 'akkodis-asp', points: 8, wins: 0 },
+        { position: 10, driverId: 'schmid', teamId: 'akkodis-asp', points: 8, wins: 0 },
       ],
       constructors: [
         { position: 1, teamId: 'garage-59', points: 42, wins: 1 },
