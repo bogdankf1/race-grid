@@ -1,4 +1,4 @@
-import type { SeasonStandings } from './types'
+import type { ClassStandings, SeasonStandings } from './types'
 import { f1Standings2021 } from './f1-2021'
 import { f1Standings2022 } from './f1-2022'
 import { f1Standings2023 } from './f1-2023'
@@ -319,4 +319,15 @@ export function getStandings(seriesId: string, year: number): SeasonStandings | 
 
 export function hasStandings(seriesId: string, year: number): boolean {
   return `${seriesId}-${year}` in ALL_STANDINGS
+}
+
+export function getAllClassStandings(seriesId: string, year: number): ClassStandings[] {
+  const s = getStandings(seriesId, year)
+  if (!s) return []
+  const primary: ClassStandings = {
+    className: s.className ?? 'Overall',
+    drivers: s.drivers,
+    constructors: s.constructors,
+  }
+  return [primary, ...(s.otherClasses ?? [])]
 }
