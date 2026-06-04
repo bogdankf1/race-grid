@@ -140,6 +140,18 @@ Verify the standings page displays correctly for the updated series.
 ### NLS special case
 The NLS (Nurburgring Langstrecken-Serie) uses a class-based points system across hundreds of participants. There is no single consolidated driver standings table. Skip NLS standings unless a clear overall championship table can be sourced.
 
+### Multi-class series (WEC, IMSA)
+
+For series with multiple championship classes, the top-level `drivers`/`constructors` represent the **primary class**, and additional classes go in `otherClasses`:
+
+- **WEC**: primary = `Hypercar`, otherClasses = `[{ className: 'LMGT3', drivers, constructors }]`
+- **IMSA**: primary = `GTP`, otherClasses = `[{ className: 'GTD Pro', drivers, constructors: [] }, { className: 'GTD', drivers, constructors: [] }]`
+
+When refreshing standings:
+1. Update the primary class table (top-level fields) as before
+2. Update each `otherClasses[*]` table the same way — query each class's official source separately
+3. If a driver or team ID is not yet present in `drivers.ts`/`teams.ts`, skip that row and add a comment listing the skipped name. Do not invent IDs in the standings runbook — adding new drivers/teams is its own task
+
 ### Dakar special case
 The Dakar Rally is a single multi-stage event. Standings reflect the final overall classification (driver + co-driver). Use `className: 'Cars'` for the car category standings.
 
