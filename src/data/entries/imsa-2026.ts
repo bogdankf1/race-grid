@@ -67,4 +67,6 @@ export const imsaEntries2026: EntryItem[] = [
   { driverId: 'quinn', teamId: 'crowdstrike-racing', carNumber: 4, class: 'GTD' },
   { driverId: 'sowery', teamId: 'crowdstrike-racing', carNumber: 4, class: 'GTD' },
   { driverId: 'jakobsen', teamId: 'crowdstrike-racing', carNumber: 4, class: 'GTD' },
+  // Wayne Taylor Racing GTD
+  { driverId: 'formal', teamId: 'wayne-taylor-racing', class: 'GTD' },
 ]
