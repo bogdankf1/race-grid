@@ -23,6 +23,28 @@ export const gtwcResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Monza 3 Hours — pole to #64 HRT Ford (Drouet/Maini/Scherer); shock overall win
+  // by #66 Tresor Attempto Audi from 29th on the grid after Turn 1 pile-up.
+  'gtwc-2026-monza': {
+    qualifying: {
+      overall: { driverIds: ['drouet', 'maini', 'scherer'], teamId: 'hrt-ford' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['drouet', 'maini', 'scherer'], teamId: 'hrt-ford' },
+        ],
+      }],
+    },
+    endurance: {
+      overall: { driverIds: ['levi-a', 'ogaard', 'mazzola'], teamId: 'tresor-attempto' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['levi-a', 'ogaard', 'mazzola'], teamId: 'tresor-attempto' },
+        ],
+      }],
+    },
+  },
   'gtwc-2026-paul-ricard': {
     qualifying: {
       overall: { driverIds: ['stolz'], teamId: 'mann-filter' },

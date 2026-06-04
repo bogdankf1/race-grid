@@ -170,4 +170,28 @@ export const indycarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'indycar-2026-detroit': {
+    qualifying: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['power'], teamId: 'andretti-global' },
+          { position: 3, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          { position: 3, driverIds: ['rahal'], teamId: 'rahal-letterman-lanigan' },
+        ],
+      }],
+    },
+  },
 }

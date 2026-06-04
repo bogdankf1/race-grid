@@ -1830,6 +1830,9 @@ const DRIVERS: Record<string, Driver> = {
   'yvon': { id: 'yvon', name: 'Alexandre Yvon', shortName: 'Yvon', nationality: 'FR' },
   'zalloua': { id: 'zalloua', name: 'Marcel Zalloua', shortName: 'Zalloua', nationality: 'AU' },
   'zhefeng': { id: 'zhefeng', name: 'Xu Zhefeng', shortName: 'Zhefeng', nationality: 'CN' },
+  'levi-a': { id: 'levi-a', name: 'Ariel Levi', shortName: 'Levi', nationality: 'IL' },
+  'ogaard': { id: 'ogaard', name: 'Sebastian Øgaard', shortName: 'Øgaard', nationality: 'DK' },
+  'mazzola': { id: 'mazzola', name: 'Rocco Mazzola', shortName: 'Mazzola', nationality: 'IT' },
 
 }
 

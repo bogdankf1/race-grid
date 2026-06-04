@@ -216,4 +216,39 @@ export const motogpResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'motogp-2026-italy': {
+    qualifying: {
+      overall: { driverIds: ['bezzecchi'], teamId: 'aprilia-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['bezzecchi'], teamId: 'aprilia-racing' },
+          { position: 2, driverIds: ['fernandez-r'], teamId: 'trackhouse-motogp' },
+          { position: 3, driverIds: ['martin-j'], teamId: 'aprilia-racing' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['fernandez-r'], teamId: 'trackhouse-motogp' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['fernandez-r'], teamId: 'trackhouse-motogp' },
+          { position: 2, driverIds: ['martin-j'], teamId: 'aprilia-racing' },
+          { position: 3, driverIds: ['di-giannantonio'], teamId: 'vr46-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['bezzecchi'], teamId: 'aprilia-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['bezzecchi'], teamId: 'aprilia-racing' },
+          { position: 2, driverIds: ['martin-j'], teamId: 'aprilia-racing' },
+          { position: 3, driverIds: ['bagnaia'], teamId: 'ducati-lenovo' },
+        ],
+      }],
+    },
+  },
 }

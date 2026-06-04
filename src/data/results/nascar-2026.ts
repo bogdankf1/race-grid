@@ -244,6 +244,29 @@ export const nascarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Cracker Barrel 400 qualifying rained out; Hamlin awarded pole by NASCAR metric.
+  'nascar-2026-nashville': {
+    qualifying: {
+      overall: { driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+          { position: 2, driverIds: ['bell'], teamId: 'joe-gibbs-racing' },
+          { position: 3, driverIds: ['briscoe'], teamId: 'joe-gibbs-racing' },
+        ],
+      }],
+    },
+  },
   // Coca-Cola 600 qualifying rained out; pole awarded to Reddick by NASCAR metric.
   'nascar-2026-coca-cola-600': {
     qualifying: {

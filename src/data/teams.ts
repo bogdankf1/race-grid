@@ -462,6 +462,7 @@ const TEAMS: Record<string, Team> = {
   'iron-lynx-proton': { id: 'iron-lynx-proton', name: 'Iron Lynx – Proton', country: '' },
   'racers-edge-motorsports-with-wtr-andretti': { id: 'racers-edge-motorsports-with-wtr-andretti', name: 'Racers Edge Motorsports with WTR-Andretti', country: '' },
   'the-spirit-of-fff-racing': { id: 'the-spirit-of-fff-racing', name: 'The Spirit of FFF Racing', country: '' },
+  'tresor-attempto': { id: 'tresor-attempto', name: 'Tresor Attempto Racing', country: 'DE' },
 }
 
 export function getTeam(id: string): Team | null {

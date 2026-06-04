@@ -80,4 +80,17 @@ export const wrcResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'wrc-2026-japan': {
+    stage: {
+      overall: { driverIds: ['evans', 'scott-martin'], teamId: 'toyota-gazoo-racing' },
+      classes: [{
+        className: 'Overall',
+        podium: [
+          { position: 1, driverIds: ['evans', 'scott-martin'], teamId: 'toyota-gazoo-racing' },
+          { position: 2, driverIds: ['ogier', 'landais'], teamId: 'toyota-gazoo-racing' },
+          { position: 3, driverIds: ['pajari', 'salminen'], teamId: 'toyota-gazoo-racing' },
+        ],
+      }],
+    },
+  },
 }

@@ -17,4 +17,18 @@ export const wrxResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Round 2 — Kárai Trans Euro RX of Hungary (Nyirád)
+  'wrx-2026-hungary': {
+    race: {
+      overall: { driverIds: ['bakkerud'], teamId: 'set-promotion' },
+      classes: [{
+        className: 'RX1',
+        podium: [
+          { position: 1, driverIds: ['bakkerud'], teamId: 'set-promotion' },
+          { position: 2, driverIds: ['j-rytkonen'], teamId: 'set-promotion' },
+          { position: 3, driverIds: ['turpeinen'], teamId: 'set-promotion' },
+        ],
+      }],
+    },
+  },
 }

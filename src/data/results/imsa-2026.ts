@@ -103,6 +103,36 @@ export const imsaResults2026: Record<string, EventResults> = {
       ],
     },
   },
+  'imsa-2026-detroit': {
+    qualifying: {
+      overall: { driverIds: ['bamber'], teamId: 'whelen-engineering' },
+      classes: [{
+        className: 'GTP',
+        podium: [
+          { position: 1, driverIds: ['bamber'], teamId: 'whelen-engineering' },
+          { position: 2, driverIds: ['deletraz'], teamId: 'wayne-taylor-racing' },
+          { position: 3, driverIds: ['yelloly'], teamId: 'meyer-shank-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['aitken', 'bamber'], teamId: 'whelen-engineering' },
+      classes: [
+        {
+          className: 'GTP',
+          podium: [
+            { position: 1, driverIds: ['aitken', 'bamber'], teamId: 'whelen-engineering' },
+          ],
+        },
+        {
+          className: 'GTD Pro',
+          podium: [
+            { position: 1, driverIds: ['garcia', 'sims'], teamId: 'corvette-racing' },
+          ],
+        },
+      ],
+    },
+  },
   'imsa-2026-laguna-seca': {
     qualifying: {
       overall: { driverIds: ['deletraz'], teamId: 'wayne-taylor-racing' },
