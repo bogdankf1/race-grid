@@ -62,11 +62,10 @@ export const imsaEntries2026: EntryItem[] = [
   { driverId: 'ward-r', teamId: 'winward-racing', carNumber: 57, class: 'GTD' },
   { driverId: 'dontje', teamId: 'winward-racing', carNumber: 57, class: 'GTD' },
   { driverId: 'auer', teamId: 'winward-racing', carNumber: 57, class: 'GTD' },
+  // LMP2
   // CrowdStrike Racing
-  { driverId: 'kurtz', teamId: 'crowdstrike-racing', carNumber: 4, class: 'GTD' },
-  { driverId: 'quinn', teamId: 'crowdstrike-racing', carNumber: 4, class: 'GTD' },
-  { driverId: 'sowery', teamId: 'crowdstrike-racing', carNumber: 4, class: 'GTD' },
-  { driverId: 'jakobsen', teamId: 'crowdstrike-racing', carNumber: 4, class: 'GTD' },
-  // Wayne Taylor Racing GTD
-  { driverId: 'formal', teamId: 'wayne-taylor-racing', class: 'GTD' },
+  { driverId: 'kurtz', teamId: 'crowdstrike-racing', carNumber: 4, class: 'LMP2' },
+  { driverId: 'quinn', teamId: 'crowdstrike-racing', carNumber: 4, class: 'LMP2' },
+  { driverId: 'sowery', teamId: 'crowdstrike-racing', carNumber: 4, class: 'LMP2' },
+  { driverId: 'jakobsen', teamId: 'crowdstrike-racing', carNumber: 4, class: 'LMP2' },
 ]
