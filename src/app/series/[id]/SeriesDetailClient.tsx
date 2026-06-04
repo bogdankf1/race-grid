@@ -13,7 +13,8 @@ import { useYearData } from '@/hooks/useYearData'
 import { getCircuit } from '@/data/circuits'
 import { getResult } from '@/data/results'
 import { getEntries } from '@/data/entries'
-import { getStandings } from '@/data/standings'
+import { getStandings, getAllClassStandings } from '@/data/standings'
+import type { ClassStandings } from '@/data/standings/types'
 import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
 import type { SeriesConfig, RaceEvent, SessionType } from '@/lib/types'
@@ -59,16 +60,28 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
   const [tab, setTab] = useState<'calendar' | 'circuits' | 'drivers' | 'teams'>('calendar')
 
   const standingsData = useMemo(() => getStandings(seriesId, year), [seriesId, year])
+  const allClasses = useMemo(() => getAllClassStandings(seriesId, year), [seriesId, year])
+  const [activeClassIdx, setActiveClassIdx] = useState(0)
+
+  useEffect(() => { setActiveClassIdx(0) }, [seriesId, year])
+
+  const activeClass: ClassStandings | null = allClasses[activeClassIdx] ?? null
+
   const entries = useMemo(() => {
-    // Prefer standings data (has full grid) over entries (only podium finishers)
-    if (standingsData && standingsData.drivers.length > 0) {
+    // Prefer active-class standings (has full grid) over raw entries (only podium finishers)
+    if (activeClass && activeClass.drivers.length > 0) {
       const seen = new Set<string>()
-      return standingsData.drivers
+      return activeClass.drivers
         .filter(d => { if (seen.has(d.driverId)) return false; seen.add(d.driverId); return true })
         .map(d => ({ driverId: d.driverId, teamId: d.teamId, carNumber: undefined as number | undefined }))
     }
-    return getEntries(seriesId, year)
-  }, [standingsData, seriesId, year])
+    // Entries fallback — for multi-class series, narrow by the active class label
+    const rawEntries = getEntries(seriesId, year)
+    if (allClasses.length > 1 && activeClass) {
+      return rawEntries.filter(e => e.class === activeClass.className)
+    }
+    return rawEntries
+  }, [activeClass, allClasses.length, seriesId, year])
 
   // Unique teams for this series+year
   const teams = useMemo(() => {
@@ -306,10 +319,39 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
         {/* Drivers tab */}
         {tab === 'drivers' && entries.length > 0 && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {standingsData?.className && (
+            {allClasses.length > 1 && (
+              <div
+                className="rg-series-tabs"
+                style={{
+                  display: 'flex', gap: 2, background: 'var(--rg-btn-bg)',
+                  borderRadius: 10, padding: 2, marginBottom: 12,
+                  width: 'fit-content', maxWidth: '100%', flexWrap: 'wrap',
+                }}
+              >
+                {allClasses.map((cls, idx) => (
+                  <button
+                    key={cls.className}
+                    onClick={() => setActiveClassIdx(idx)}
+                    className="rg-series-tab"
+                    style={{
+                      padding: '6px 14px', borderRadius: 8, fontSize: 12, fontWeight: 700,
+                      letterSpacing: 0.5, textTransform: 'uppercase',
+                      background: idx === activeClassIdx ? 'var(--rg-elevated)' : 'transparent',
+                      border: idx === activeClassIdx ? '1px solid var(--rg-border)' : '1px solid transparent',
+                      color: idx === activeClassIdx ? 'var(--rg-text)' : 'var(--rg-text3)',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {cls.className}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {allClasses.length === 1 && allClasses[0].className && allClasses[0].className !== 'Overall' && (
               <div style={{ marginBottom: 8 }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--rg-text3)' }}>
-                  {standingsData.className}
+                  {allClasses[0].className}
                 </span>
               </div>
             )}
@@ -350,6 +392,43 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
         {/* Teams tab */}
         {tab === 'teams' && teams.length > 0 && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {allClasses.length > 1 && (
+              <div
+                className="rg-series-tabs"
+                style={{
+                  display: 'flex', gap: 2, background: 'var(--rg-btn-bg)',
+                  borderRadius: 10, padding: 2, marginBottom: 12,
+                  width: 'fit-content', maxWidth: '100%', flexWrap: 'wrap',
+                }}
+              >
+                {allClasses.map((cls, idx) => (
+                  <button
+                    key={cls.className}
+                    onClick={() => setActiveClassIdx(idx)}
+                    className="rg-series-tab"
+                    style={{
+                      padding: '6px 14px', borderRadius: 8, fontSize: 12, fontWeight: 700,
+                      letterSpacing: 0.5, textTransform: 'uppercase',
+                      background: idx === activeClassIdx ? 'var(--rg-elevated)' : 'transparent',
+                      border: idx === activeClassIdx ? '1px solid var(--rg-border)' : '1px solid transparent',
+                      color: idx === activeClassIdx ? 'var(--rg-text)' : 'var(--rg-text3)',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {cls.className}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {allClasses.length === 1 && allClasses[0].className && allClasses[0].className !== 'Overall' && (
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--rg-text3)' }}>
+                  {allClasses[0].className}
+                </span>
+              </div>
+            )}
+
             {teams.map(team => {
               // Find drivers for this team
               const teamDrivers = entries.filter(e => e.teamId === team.id)
