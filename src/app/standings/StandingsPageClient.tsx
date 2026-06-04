@@ -8,13 +8,13 @@ import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
-import { getStandings, hasStandings } from '@/data/standings'
+import { getStandings, hasStandings, getAllClassStandings } from '@/data/standings'
 import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
 import type { SessionType } from '@/lib/types'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import type { DriverStandingEntry, TeamStandingEntry } from '@/data/standings/types'
+import type { ClassStandings, DriverStandingEntry, TeamStandingEntry } from '@/data/standings/types'
 
 const ALL_SESSION_TYPES: SessionType[] = [
   'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
@@ -45,10 +45,17 @@ export function StandingsPageClient() {
   const standings = useMemo(() => getStandings(seriesId, year), [seriesId, year])
   const seriesMeta = SERIES_META.find(s => s.id === seriesId)
 
+  const allClasses = useMemo(() => getAllClassStandings(seriesId, year), [seriesId, year])
+  const [activeClassIdx, setActiveClassIdx] = useState(0)
+
+  useEffect(() => { setActiveClassIdx(0) }, [seriesId, year])
+
+  const activeClass: ClassStandings | null = allClasses[activeClassIdx] ?? null
+
   // Reset to drivers tab when switching to a series without constructors
   useEffect(() => {
-    if (standings && standings.constructors.length === 0) setTab('drivers')
-  }, [standings])
+    if (activeClass && activeClass.constructors.length === 0) setTab('drivers')
+  }, [activeClass])
 
   // Series that have standings data
   const availableSeries = useMemo(() => {
@@ -61,25 +68,25 @@ export function StandingsPageClient() {
   }, [])
 
   const filteredDrivers = useMemo(() => {
-    if (!standings) return []
-    if (!query.trim()) return standings.drivers
+    if (!activeClass) return []
+    if (!query.trim()) return activeClass.drivers
     const q = query.toLowerCase()
-    return standings.drivers.filter(entry => {
+    return activeClass.drivers.filter(entry => {
       const driver = getDriver(entry.driverId)
       const team = getTeam(entry.teamId)
       return driver?.name.toLowerCase().includes(q) || team?.name.toLowerCase().includes(q)
     })
-  }, [standings, query])
+  }, [activeClass, query])
 
   const filteredConstructors = useMemo(() => {
-    if (!standings) return []
-    if (!query.trim()) return standings.constructors
+    if (!activeClass) return []
+    if (!query.trim()) return activeClass.constructors
     const q = query.toLowerCase()
-    return standings.constructors.filter(entry => {
+    return activeClass.constructors.filter(entry => {
       const team = getTeam(entry.teamId)
       return team?.name.toLowerCase().includes(q)
     })
-  }, [standings, query])
+  }, [activeClass, query])
 
   const toggleSeries = (id: string) => {
     const updated = selectedSeries.includes(id) ? selectedSeries.filter(s => s !== id) : [...selectedSeries, id]
@@ -188,20 +195,48 @@ export function StandingsPageClient() {
 
         {standings ? (
           <>
-            {/* Class label for multi-class series */}
-            {standings.className && (
+            {allClasses.length > 1 && (
+              <div
+                className="rg-series-tabs"
+                style={{
+                  display: 'flex', gap: 2, background: 'var(--rg-btn-bg)',
+                  borderRadius: 10, padding: 2, marginBottom: 12,
+                  width: 'fit-content', maxWidth: '100%', flexWrap: 'wrap',
+                }}
+              >
+                {allClasses.map((cls, idx) => (
+                  <button
+                    key={cls.className}
+                    onClick={() => setActiveClassIdx(idx)}
+                    className="rg-series-tab"
+                    style={{
+                      padding: '6px 14px', borderRadius: 8, fontSize: 12, fontWeight: 700,
+                      letterSpacing: 0.5, textTransform: 'uppercase',
+                      background: idx === activeClassIdx ? 'var(--rg-elevated)' : 'transparent',
+                      border: idx === activeClassIdx ? '1px solid var(--rg-border)' : '1px solid transparent',
+                      color: idx === activeClassIdx ? 'var(--rg-text)' : 'var(--rg-text3)',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {cls.className}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {allClasses.length === 1 && allClasses[0].className && allClasses[0].className !== 'Overall' && (
               <div style={{ marginBottom: 12 }}>
                 <span style={{
                   fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase',
                   color: 'var(--rg-text3)',
                 }}>
-                  {standings.className}
+                  {allClasses[0].className}
                 </span>
               </div>
             )}
 
             {/* Tabs: Drivers / Constructors — hide tab bar if no constructors */}
-            {standings.constructors.length > 0 ? (
+            {(activeClass?.constructors.length ?? 0) > 0 ? (
               <div className="rg-series-tabs" style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content', maxWidth: '100%' }}>
                 <button
                   onClick={() => setTab('drivers')}
