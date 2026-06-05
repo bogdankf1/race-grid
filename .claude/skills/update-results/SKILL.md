@@ -22,6 +22,8 @@ Follow the runbook in `docs/UPDATE-RESULTS.md` to update race results:
 
 **Important:** Only use verified results from official sources. Never guess or fabricate data.
 
+**Multi-class series** (WEC, IMSA, ELMS, MLMC, IGTC, 24H Series, GTWC Europe/America/Asia/Australia, British GT, Super GT): for each event, fetch the result of **every class** (e.g. WEC Hypercar + LMGT3, IMSA GTP + GTD Pro + GTD) and populate them as separate entries in the `classes` array of the result. Don't stop at the overall winner — class winners count.
+
 **Examples:**
 - `/update-results` — update current year (2026), all series
 - `/update-results 2024 f1` — backfill F1 2024 results

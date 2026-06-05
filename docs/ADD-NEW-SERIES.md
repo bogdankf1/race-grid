@@ -287,6 +287,7 @@ Register in `src/data/standings/index.ts`:
 **`docs/UPDATE-STANDINGS.md`:**
 - Add the series to the official sources table
 - Note whether it has constructor/manufacturer standings or drivers-only
+- If multi-class: declare the primary class (headline championship) and any additional classes. Standings file uses top-level `drivers`/`constructors` for the primary class and `otherClasses: [{ className, drivers, constructors }]` for the rest. Entries rows in `src/data/entries/` should carry `class: '<Class Name>'`. See "Multi-class series" section in the runbook.
 
 **`docs/VERIFY-SEASON-DATA.md`:**
 - Add the series to the verification checklist

@@ -140,17 +140,30 @@ Verify the standings page displays correctly for the updated series.
 ### NLS special case
 The NLS (Nurburgring Langstrecken-Serie) uses a class-based points system across hundreds of participants. There is no single consolidated driver standings table. Skip NLS standings unless a clear overall championship table can be sourced.
 
-### Multi-class series (WEC, IMSA)
+### Multi-class series
 
-For series with multiple championship classes, the top-level `drivers`/`constructors` represent the **primary class**, and additional classes go in `otherClasses`:
+For series with multiple championship classes, the top-level `drivers`/`constructors` represent the **primary class** (the headline championship), and additional classes go in `otherClasses: [{ className, drivers, constructors }]`. The standings page renders a class pill row when `otherClasses` is non-empty.
 
+**Currently populated in the data layer:**
 - **WEC**: primary = `Hypercar`, otherClasses = `[{ className: 'LMGT3', drivers, constructors }]`
 - **IMSA**: primary = `GTP`, otherClasses = `[{ className: 'GTD Pro', drivers, constructors: [] }, { className: 'GTD', drivers, constructors: [] }]`
 
-When refreshing standings:
-1. Update the primary class table (top-level fields) as before
-2. Update each `otherClasses[*]` table the same way — query each class's official source separately
-3. If a driver or team ID is not yet present in `drivers.ts`/`teams.ts`, skip that row and add a comment listing the skipped name. Do not invent IDs in the standings runbook — adding new drivers/teams is its own task
+**Candidates for future multi-class backfill** (currently single-class in the data layer; extend to `otherClasses` when refreshing):
+- **ELMS**: primary = `LMP2`, candidates = `LMP3`, `LMGT3`
+- **MLMC**: primary = `LMP3`, candidates = `GT3`
+- **IGTC**: primary = drivers across the whole series, candidate splits = `Pro` / `Silver` / `Am`
+- **24H Series**: primary = `GT3`, candidates = `GT4`, `TCR`, `GTX`
+- **GTWC Europe**: primary = `Pro`, candidates = `Gold` / `Silver` / `Bronze`
+- **GTWC America / Asia / Australia**: primary = `Pro`, candidates = `Pro-Am` / `Am` / `Silver` (varies)
+- **British GT**: primary = `GT3`, candidate = `GT4`
+- **Super GT**: primary = `GT500`, candidate = `GT300`
+
+When refreshing standings for any multi-class series:
+1. **Fetch each class separately.** The official source typically has a dropdown or separate tab per class — query each one and capture top-N for that class.
+2. Update the primary class table (top-level fields) as before.
+3. Add or update each `otherClasses[*]` entry the same way.
+4. If a driver or team ID is not yet present in `drivers.ts`/`teams.ts`, skip that row and add an inline comment listing the skipped name. Do not invent IDs in the standings runbook — adding new drivers/teams is its own task.
+5. Multi-class entries on the `src/data/entries/` side should also be tagged with `class: '<Class Name>'` (matching the `className` strings above) so the series detail page can split rosters per class.
 
 ### Dakar special case
 The Dakar Rally is a single multi-stage event. Standings reflect the final overall classification (driver + co-driver). Use `className: 'Cars'` for the car category standings.
