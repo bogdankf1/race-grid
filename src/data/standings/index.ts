@@ -156,6 +156,7 @@ import { nlsStandings2025 } from './nls-2025'
 import { nlsStandings2026 } from './nls-2026'
 import { porscheSupercupStandings2025 } from './porsche-supercup-2025'
 import { porscheSupercupStandings2026 } from './porsche-supercup-2026'
+import { f1AcademyStandings2025 } from './f1-academy-2025'
 import { f1AcademyStandings2026 } from './f1-academy-2026'
 import { moto2Standings2026 } from './moto2-2026'
 import { moto3Standings2026 } from './moto3-2026'
@@ -321,6 +322,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'nls-2026': nlsStandings2026,
   'porsche-supercup-2025': porscheSupercupStandings2025,
   'porsche-supercup-2026': porscheSupercupStandings2026,
+  'f1-academy-2025': f1AcademyStandings2025,
   'f1-academy-2026': f1AcademyStandings2026,
   'moto2-2026': moto2Standings2026,
   'moto3-2026': moto3Standings2026,

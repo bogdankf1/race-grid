@@ -1894,6 +1894,17 @@ const DRIVERS: Record<string, Driver> = {
   'shi-wei': { id: 'shi-wei', name: 'Shi Wei', shortName: 'Shi', nationality: 'CN' },
   'fisher-a': { id: 'fisher-a', name: 'Autumn Fisher', shortName: 'Fisher', nationality: 'CA' },
   'florescu': { id: 'florescu', name: 'Zoe Florescu', shortName: 'Florescu', nationality: 'RO' },
+  // F1 Academy 2025 drivers (Doriane Pin 'pin' already exists above)
+  'weug': { id: 'weug', name: 'Maya Weug', shortName: 'Weug', nationality: 'NL' },
+  'hausmann': { id: 'hausmann', name: 'Tina Hausmann', shortName: 'Hausmann', nationality: 'CH' },
+  'chambers': { id: 'chambers', name: 'Chloe Chambers', shortName: 'Chambers', nationality: 'US' },
+  'ciconte': { id: 'ciconte', name: 'Joanne Ciconte', shortName: 'Ciconte', nationality: 'AU' },
+  'chong': { id: 'chong', name: 'Chloe Chong', shortName: 'Chong', nationality: 'GB' },
+  'crone': { id: 'crone', name: 'Courtney Crone', shortName: 'Crone', nationality: 'US' },
+  'nobels': { id: 'nobels', name: 'Aurelia Nobels', shortName: 'Nobels', nationality: 'BR' },
+  'block-l': { id: 'block-l', name: 'Lia Block', shortName: 'Block', nationality: 'US' },
+  'havrda': { id: 'havrda', name: 'Nicole Havrda', shortName: 'Havrda', nationality: 'CA' },
+  'anagnostiadis': { id: 'anagnostiadis', name: 'Aiva Anagnostiadis', shortName: 'Anagnostiadis', nationality: 'AU' },
   // Moto2 2026 full-season riders
   'guevara': { id: 'guevara', name: 'Izan Guevara', shortName: 'Guevara', nationality: 'ES' },
   'ferrandez': { id: 'ferrandez', name: 'Alberto Ferrández', shortName: 'Ferrández', nationality: 'ES' },

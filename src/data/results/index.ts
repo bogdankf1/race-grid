@@ -158,6 +158,7 @@ import { wrxResults2025 } from './wrx-2025'
 import { wrxResults2026 } from './wrx-2026'
 import { porscheSupercupResults2025 } from './porsche-supercup-2025'
 import { porscheSupercupResults2026 } from './porsche-supercup-2026'
+import { f1AcademyResults2025 } from './f1-academy-2025'
 import { f1AcademyResults2026 } from './f1-academy-2026'
 import { moto2Results2026 } from './moto2-2026'
 import { moto3Results2026 } from './moto3-2026'
@@ -323,6 +324,7 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...wrxResults2026,
   ...porscheSupercupResults2025,
   ...porscheSupercupResults2026,
+  ...f1AcademyResults2025,
   ...f1AcademyResults2026,
   ...moto2Results2026,
   ...moto3Results2026,
