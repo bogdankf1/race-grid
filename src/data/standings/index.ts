@@ -160,6 +160,7 @@ import { moto2Standings2026 } from './moto2-2026'
 import { moto3Standings2026 } from './moto3-2026'
 import { indyNxtStandings2026 } from './indy-nxt-2026'
 import { nascarXfinityStandings2026 } from './nascar-xfinity-2026'
+import { nascarTruckStandings2026 } from './nascar-truck-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -323,6 +324,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'moto3-2026': moto3Standings2026,
   'indy-nxt-2026': indyNxtStandings2026,
   'nascar-xfinity-2026': nascarXfinityStandings2026,
+  'nascar-truck-2026': nascarTruckStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {

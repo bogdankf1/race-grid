@@ -175,6 +175,8 @@ import { moto3Entries2026 } from './moto3-2026'
 import { indyNxtEntries2026 } from './indy-nxt-2026'
 // NASCAR Xfinity
 import { nascarXfinityEntries2026 } from './nascar-xfinity-2026'
+// NASCAR Craftsman Truck
+import { nascarTruckEntries2026 } from './nascar-truck-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -353,6 +355,8 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'indy-nxt-2026': indyNxtEntries2026,
   // NASCAR Xfinity
   'nascar-xfinity-2026': nascarXfinityEntries2026,
+  // NASCAR Craftsman Truck
+  'nascar-truck-2026': nascarTruckEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

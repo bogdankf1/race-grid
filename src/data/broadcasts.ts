@@ -950,6 +950,37 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
     ],
   },
+  'nascar-truck': {
+    US: [
+      { name: 'FS1', url: 'https://www.foxsports.com/live/fs1', note: 'Live broadcast — most 2026 Truck races' },
+      { name: 'FOX', url: 'https://www.foxsports.com', note: 'Selected races on broadcast network' },
+      { name: 'FOX Sports App', url: 'https://www.foxsports.com/live', note: 'Live streaming with TV provider login' },
+    ],
+    UA: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights only' },
+    ],
+    GB: [
+      { name: 'Premier Sports', url: 'https://premiersports.com', note: 'Selected races' },
+    ],
+    DE: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    PL: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    AU: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    BR: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    JP: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    CO: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

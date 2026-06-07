@@ -218,6 +218,8 @@ const CIRCUITS: Record<string, Circuit> = {
   'killarney-cape-town': { id: 'killarney-cape-town', name: 'Killarney International Raceway', country: 'South Africa', countryCode: 'ZA', length: '3.270 km', turns: 12, type: 'permanent', wikipedia: 'Killarney_International_Raceway' },
   'estering': { id: 'estering', name: 'Estering', country: 'Germany', countryCode: 'DE', length: '0.954 km', turns: 8, type: 'mixed', wikipedia: 'Estering' },
   'central-harbourfront-circuit': { id: 'central-harbourfront-circuit', name: 'Central Harbourfront Circuit', country: 'Hong Kong', countryCode: 'HK', length: '0.990 km', turns: 9, type: 'street' },
+  'lucas-oil-indianapolis-raceway-park': { id: 'lucas-oil-indianapolis-raceway-park', name: 'Lucas Oil Indianapolis Raceway Park', country: 'United States', countryCode: 'US', length: '1.094 km', turns: 4, type: 'oval', wikipedia: 'Lucas_Oil_Indianapolis_Raceway_Park' },
+  'naval-base-coronado-street-circuit': { id: 'naval-base-coronado-street-circuit', name: 'Naval Base Coronado Street Circuit', country: 'United States', countryCode: 'US', length: '4.000 km', turns: 14, type: 'street' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

@@ -530,6 +530,17 @@ const TEAMS: Record<string, Team> = {
   'chevrolet': { id: 'chevrolet', name: 'Chevrolet', country: 'US' },
   'ford': { id: 'ford', name: 'Ford', country: 'US' },
   'toyota': { id: 'toyota', name: 'Toyota', country: 'JP' },
+  'ram': { id: 'ram', name: 'Ram', country: 'US' },
+  // NASCAR Craftsman Truck Series 2026 teams (front-row-motorsports, spire-motorsports, kaulig-racing already defined above)
+  'thorsport-racing': { id: 'thorsport-racing', name: 'ThorSport Racing', country: 'US' },
+  'tricon-garage': { id: 'tricon-garage', name: 'Tricon Garage', country: 'US' },
+  'niece-motorsports': { id: 'niece-motorsports', name: 'Niece Motorsports', country: 'US' },
+  'halmar-friesen-racing': { id: 'halmar-friesen-racing', name: 'Halmar Friesen Racing', country: 'US' },
+  'mcanally-hilgemann-racing': { id: 'mcanally-hilgemann-racing', name: 'McAnally-Hilgemann Racing', country: 'US' },
+  'cr7-motorsports': { id: 'cr7-motorsports', name: 'CR7 Motorsports', country: 'US' },
+  'freedom-racing-enterprises': { id: 'freedom-racing-enterprises', name: 'Freedom Racing Enterprises', country: 'US' },
+  'rackley-war': { id: 'rackley-war', name: 'Rackley W.A.R.', country: 'US' },
+  'team-reaume-bros-racing': { id: 'team-reaume-bros-racing', name: 'Reaume Brothers Racing', country: 'US' },
 }
 
 export function getTeam(id: string): Team | null {
