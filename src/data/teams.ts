@@ -551,6 +551,9 @@ const TEAMS: Record<string, Team> = {
   'freedom-racing-enterprises': { id: 'freedom-racing-enterprises', name: 'Freedom Racing Enterprises', country: 'US' },
   'rackley-war': { id: 'rackley-war', name: 'Rackley W.A.R.', country: 'US' },
   'team-reaume-bros-racing': { id: 'team-reaume-bros-racing', name: 'Reaume Brothers Racing', country: 'US' },
+  // NASCAR Xfinity 2025 additions
+  'am-racing': { id: 'am-racing', name: 'AM Racing', country: 'US' },
+  'dgm-racing': { id: 'dgm-racing', name: 'DGM Racing', country: 'US' },
 }
 
 export function getTeam(id: string): Team | null {

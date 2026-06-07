@@ -2062,6 +2062,9 @@ const DRIVERS: Record<string, Driver> = {
   'reaume-josh': { id: 'reaume-josh', name: 'Josh Reaume', shortName: 'Reaume', nationality: 'US' },
   'mosack': { id: 'mosack', name: 'Connor Mosack', shortName: 'Mosack', nationality: 'US' },
   'heim': { id: 'heim', name: 'Corey Heim', shortName: 'Heim', nationality: 'US' },
+  // NASCAR Xfinity 2025 additions
+  'sanchez-n': { id: 'sanchez-n', name: 'Nick Sanchez', shortName: 'Sanchez', nationality: 'US' },
+  'williams-josh': { id: 'williams-josh', name: 'Josh Williams', shortName: 'J. Williams', nationality: 'US' },
 }
 
 export function getDriver(id: string): Driver | null {
