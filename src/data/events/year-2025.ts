@@ -29,6 +29,7 @@ import { special2025 } from '../special-2025'
 import { wrx2025 } from '../wrx-2025'
 import { porscheSupercup2025 } from '../porsche-supercup-2025'
 import { f1Academy2025 } from '../f1-academy-2025'
+import { moto22025 } from '../moto2-2025'
 
 export const events2025: Record<string, RaceEvent[]> = {
   'f1': f12025,
@@ -60,4 +61,5 @@ export const events2025: Record<string, RaceEvent[]> = {
   'wrx': wrx2025,
   'porsche-supercup': porscheSupercup2025,
   'f1-academy': f1Academy2025,
+  'moto2': moto22025,
 }

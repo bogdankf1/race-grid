@@ -170,6 +170,7 @@ import { porscheSupercupEntries2026 } from './porsche-supercup-2026'
 import { f1AcademyEntries2025 } from './f1-academy-2025'
 import { f1AcademyEntries2026 } from './f1-academy-2026'
 // Moto2
+import { moto2Entries2025 } from './moto2-2025'
 import { moto2Entries2026 } from './moto2-2026'
 // Moto3
 import { moto3Entries2026 } from './moto3-2026'
@@ -352,6 +353,7 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-academy-2025': f1AcademyEntries2025,
   'f1-academy-2026': f1AcademyEntries2026,
   // Moto2
+  'moto2-2025': moto2Entries2025,
   'moto2-2026': moto2Entries2026,
   // Moto3
   'moto3-2026': moto3Entries2026,

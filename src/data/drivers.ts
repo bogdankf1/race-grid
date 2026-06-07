@@ -1934,6 +1934,11 @@ const DRIVERS: Record<string, Driver> = {
   'van-den-goorbergh': { id: 'van-den-goorbergh', name: 'Zonta van den Goorbergh', shortName: 'van den Goorbergh', nationality: 'NL' },
   'aji': { id: 'aji', name: 'Mario Aji', shortName: 'Aji', nationality: 'ID' },
   'furusato': { id: 'furusato', name: 'Taiyo Furusato', shortName: 'Furusato', nationality: 'JP' },
+  // Moto2 2025 — additional full-season riders not present in 2026 lineup
+  'dixon-j': { id: 'dixon-j', name: 'Jake Dixon', shortName: 'J. Dixon', nationality: 'GB' },
+  'arenas': { id: 'arenas', name: 'Albert Arenas', shortName: 'Arenas', nationality: 'ES' },
+  'ramirez-m': { id: 'ramirez-m', name: 'Marcos Ramírez', shortName: 'Ramírez', nationality: 'ES' },
+  'kunii': { id: 'kunii', name: 'Yuki Kunii', shortName: 'Kunii', nationality: 'JP' },
   // Moto3 2026 — full-season riders
   'quiles': { id: 'quiles', name: 'Máximo Quiles', shortName: 'Quiles', nationality: 'ES' },
   'morelli-m': { id: 'morelli-m', name: 'Marco Morelli', shortName: 'Morelli', nationality: 'AR' },
