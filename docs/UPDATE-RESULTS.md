@@ -28,10 +28,17 @@ For each finished session without a result, search **official sources first**:
 | Series | Primary source |
 |--------|---------------|
 | F1 | formula1.com/en/results |
+| F1 Academy | f1academy.com/Standings, f1academy.com/Racing/Schedule | Wikipedia "20XX F1 Academy season" |
 | F2 | fiaformula2.com/Results |
 | F3 | fiaformula3.com/Results |
 | IndyCar | indycar.com/Results |
+| Indy NXT | indynxt.com/Standings, indynxt.com/Schedule | Wikipedia "20XX Indy NXT season" |
+| Moto2 | motogp.com/en/calendar/{year}/moto2 | Wikipedia "20XX Moto2 World Championship" |
+| Moto3 | motogp.com/en/calendar/{year}/moto3 | Wikipedia "20XX Moto3 World Championship" |
 | NASCAR | nascar.com/results |
+| NASCAR Xfinity | nascar.com/standings/nascar-xfinity-series | Wikipedia "20XX NASCAR Xfinity Series" |
+| NASCAR Craftsman Truck | nascar.com/standings/nascar-craftsman-truck-series | Wikipedia "20XX NASCAR Craftsman Truck Series" |
+| Porsche Supercup | porsche.com motorsport / pitwall.app/series/porsche-mobil-1-supercup | Wikipedia "20XX Porsche Supercup" |
 | WEC | fiawec.com/en/results |
 | IMSA | imsa.com/results |
 | ELMS | europeanlemansseries.com results |
@@ -144,5 +151,6 @@ Update race results: <list of events updated>
 - **For WRC:** Results go under the `stage` session type (the overall rally result, not individual stage results). Only one result per rally, keyed to the `stage` type — the dedup logic ensures it only shows once.
 - **For endurance series with classes:** Include class results in the `classes` array. Use official class names (e.g., "Hypercar", "LMGT3", "LMP2", "GT3", "GT4", "GTP", "GTD Pro", "GTD", "Pro-Am", "Am", "Silver").
 - **For multi-class series, fetch each class's result separately.** The applicable series are: **WEC** (Hypercar + LMGT3), **IMSA** (GTP + LMP2 + GTD Pro + GTD), **ELMS** (LMP2 + LMP3 + LMGT3), **MLMC** (LMP3 + GT3), **IGTC** (Pro + Silver + Am), **24H Series** (GT3 + GT4 + TCR), **GTWC Europe** (Pro + Gold + Silver + Bronze), **GTWC America / Asia / Australia** (Pro + Pro-Am + Am variants), **British GT** (GT3 + GT4), **Super GT** (GT500 + GT300). For each finished event, the official site usually publishes a per-class podium — populate one `classes` entry per class. Don't conflate them under "Overall" only.
+- **For feeder series sharing a parent weekend** (Moto2/Moto3 on MotoGP weekends, NASCAR Xfinity/Truck on Cup weekends, Indy NXT on IndyCar weekends, F1 Academy and Porsche Supercup on F1 weekends): cross-reference the parent series' calendar file before WebSearching — the dates are already in the repo and only the per-series session times differ.
 - **For qualifying:** Use `className: 'Top 3'` for the podium. The UI shows "Pole position" label for qualifying results automatically.
 - **Cancelled events:** If a race/session was cancelled (e.g., weather), remove the session from the calendar data file rather than leaving it without a result.

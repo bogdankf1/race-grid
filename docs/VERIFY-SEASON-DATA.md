@@ -24,8 +24,13 @@ Read `src/data/series-registry.ts` to get the full list of active series. As of 
 | ID | Series | Data file | Official source |
 |----|--------|-----------|-----------------|
 | `f1` | Formula 1 | `f1-2026.ts` | https://f1calendar.com/ or https://www.formula1.com/en/racing/2026 |
+| `f1-academy` | F1 Academy | `f1-academy-2026.ts` | https://www.f1academy.com/Racing/Schedule |
+| `porsche-supercup` | Porsche Supercup | `porsche-supercup-2026.ts` | https://newsroom.porsche.com/ motorsport / https://pitwall.app/series/porsche-mobil-1-supercup |
 | `indycar` | IndyCar | `indycar-2026.ts` | https://www.indycar.com/Schedule |
+| `indy-nxt` | Indy NXT | `indy-nxt-2026.ts` | https://www.indynxt.com/Schedule |
 | `nascar` | NASCAR Cup | `nascar-2026.ts` | https://www.nascar.com/nascar-cup-series/2026/schedule/ |
+| `nascar-xfinity` | NASCAR Xfinity | `nascar-xfinity-2026.ts` | https://www.nascar.com/schedule/xfinity-series |
+| `nascar-truck` | NASCAR Craftsman Truck | `nascar-truck-2026.ts` | https://www.nascar.com/schedule/craftsman-truck-series |
 | `wec` | WEC | `wec-2026.ts` | https://www.fiawec.com/ or https://racingcalendar.net/championship/wec/2026 |
 | `imsa` | IMSA | `imsa-2026.ts` | https://www.imsa.com/weathertech/weathertech-2026-schedule/ |
 | `wrc` | WRC | `wrc-2026.ts` | https://www.wrc.com/en/calendar |
@@ -47,6 +52,8 @@ Read `src/data/series-registry.ts` to get the full list of active series. As of 
 | `f3` | FIA Formula 3 | `f3-2026.ts` | https://www.fiaformula3.com/Schedule |
 | `dakar` | Dakar Rally | `dakar-2026.ts` | https://www.dakar.com/en |
 | `motogp` | MotoGP | `motogp-2026.ts` | https://www.motogp.com/en/calendar |
+| `moto2` | Moto2 | `moto2-2026.ts` | https://www.motogp.com/en/calendar/2026/moto2 |
+| `moto3` | Moto3 | `moto3-2026.ts` | https://www.motogp.com/en/calendar/2026/moto3 |
 | `fe` | Formula E | `fe-2026.ts` | https://www.fiaformulae.com/en/championship/race-calendar |
 | `wrx` | FIA Rallycross | `wrx-2026.ts` | https://www.fia-rallycross.com/calendar (Euro RX top tier from 2026) |
 | `special` | Special Events | `special-2026.ts` | Goodwood (goodwood.com), Pikes Peak (ppihc.org), Le Mans Classic (lemansclassic.com), Monaco Historique (monacograndprixhistoric.com), ROC (raceofchampions.com) — calendar-only |

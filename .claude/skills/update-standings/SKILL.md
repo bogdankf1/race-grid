@@ -24,6 +24,8 @@ Follow the runbook in `docs/UPDATE-STANDINGS.md` to update championship standing
 
 **Multi-class series** (WEC, IMSA, ELMS, MLMC, IGTC, 24H Series, GTWC Europe/America/Asia/Australia, British GT, Super GT): each class has its own championship table. Fetch each class's standings from the official source **separately**, place the headline class in the top-level `drivers`/`constructors`, and put additional classes in `otherClasses: [{ className, drivers, constructors }]`. See `docs/UPDATE-STANDINGS.md` for the per-series primary/extras breakdown.
 
+**Feeder series** (Moto2, Moto3, NASCAR Xfinity, NASCAR Truck, Indy NXT, F1 Academy, Porsche Supercup): each shares parent series race weekends but has its own driver/team championship. Fetch the feeder's standings separately from the parent. When updating the parent series' standings, also check whether the feeder needs a refresh — they typically run on the same calendar.
+
 **Examples:**
 - `/update-standings` — update current year (2026), all series
 - `/update-standings 2024 f1` — backfill F1 2024 final standings
