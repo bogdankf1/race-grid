@@ -1861,6 +1861,18 @@ const DRIVERS: Record<string, Driver> = {
   'festante': { id: 'festante', name: 'Aldo Festante', shortName: 'Festante', nationality: 'IT' },
   'young-j': { id: 'young-j', name: 'Jack Young', shortName: 'J. Young', nationality: 'GB' },
   'jacques-villeneuve': { id: 'jacques-villeneuve', name: 'Jacques Villeneuve', shortName: 'J. Villeneuve', nationality: 'CA' },
+  // Porsche Supercup 2025 additions
+  'marvin-klein': { id: 'marvin-klein', name: 'Marvin Klein', shortName: 'M. Klein', nationality: 'FR' },
+  'haverkort': { id: 'haverkort', name: 'Kas Haverkort', shortName: 'Haverkort', nationality: 'NL' },
+  'van-eijndhoven': { id: 'van-eijndhoven', name: 'Huub van Eijndhoven', shortName: 'Van Eijndhoven', nationality: 'NL' },
+  'stiak': { id: 'stiak', name: 'Janne Stiak', shortName: 'Stiak', nationality: 'DE' },
+  'tauscher': { id: 'tauscher', name: 'Alexander Tauscher', shortName: 'Tauscher', nationality: 'DE' },
+  'imperato': { id: 'imperato', name: 'Anthony Imperato', shortName: 'Imperato', nationality: 'US' },
+  'braschi': { id: 'braschi', name: 'Francesco Braschi', shortName: 'Braschi', nationality: 'IT' },
+  'azcona': { id: 'azcona', name: 'Mikel Azcona', shortName: 'Azcona', nationality: 'ES' },
+  'aaron-mason': { id: 'aaron-mason', name: 'Aaron Mason', shortName: 'Mason', nationality: 'GB' },
+  'schouten': { id: 'schouten', name: 'Dirk Schouten', shortName: 'Schouten', nationality: 'NL' },
+  'delli-guanti': { id: 'delli-guanti', name: 'Pietro Delli Guanti', shortName: 'Delli Guanti', nationality: 'IT' },
   // F1 Academy 2026 drivers
   'gademan': { id: 'gademan', name: 'Nina Gademan', shortName: 'Gademan', nationality: 'NL' },
   'hurup-larsen': { id: 'hurup-larsen', name: 'Alba Hurup Larsen', shortName: 'Hurup Larsen', nationality: 'DK' },

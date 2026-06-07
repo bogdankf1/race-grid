@@ -472,6 +472,9 @@ const TEAMS: Record<string, Team> = {
   'ombra-racing': { id: 'ombra-racing', name: 'Ombra Racing', country: 'IT' },
   'looping-by-cartech': { id: 'looping-by-cartech', name: 'Looping by CarTech', country: 'DE' },
   'target-competition': { id: 'target-competition', name: 'Target Competition', country: 'IT' },
+  // Porsche Supercup 2025 additions
+  'proton-huber-competition': { id: 'proton-huber-competition', name: 'Proton Huber Competition', country: 'DE' },
+  'hadeca-racing': { id: 'hadeca-racing', name: 'Hadeca Racing', country: 'ES' },
   // Moto2 2026 teams
   'pramac-yamaha-moto2': { id: 'pramac-yamaha-moto2', name: 'BLU CRU Pramac Yamaha Moto2', country: 'IT' },
   'marc-vds-moto2': { id: 'marc-vds-moto2', name: 'Elf Marc VDS Racing Team', country: 'BE' },
