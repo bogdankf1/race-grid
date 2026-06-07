@@ -491,6 +491,23 @@ const TEAMS: Record<string, Team> = {
   'kalex': { id: 'kalex', name: 'Kalex', country: 'DE' },
   'boscoscuro': { id: 'boscoscuro', name: 'Boscoscuro', country: 'IT' },
   'forward': { id: 'forward', name: 'Forward', country: 'CH' },
+  // Moto3 2026 teams
+  'aspar-moto3': { id: 'aspar-moto3', name: 'CFMoto Aspar Team', country: 'ES' },
+  'red-bull-ktm-ajo-moto3': { id: 'red-bull-ktm-ajo-moto3', name: 'Red Bull KTM Ajo', country: 'FI' },
+  'intact-gp-moto3': { id: 'intact-gp-moto3', name: 'Liqui Moly Dynavolt Intact GP', country: 'DE' },
+  'red-bull-ktm-tech3-moto3': { id: 'red-bull-ktm-tech3-moto3', name: 'Red Bull KTM Tech3', country: 'AT' },
+  'honda-team-asia-moto3': { id: 'honda-team-asia-moto3', name: 'Honda Team Asia', country: 'MY' },
+  'leopard-racing': { id: 'leopard-racing', name: 'Leopard Racing', country: 'LU' },
+  'gryd-mlav-racing': { id: 'gryd-mlav-racing', name: 'Gryd – MLav Racing', country: 'AU' },
+  'levelup-mta': { id: 'levelup-mta', name: 'LevelUp – MTA', country: 'IT' },
+  'cip-green-power': { id: 'cip-green-power', name: 'CIP Green Power', country: 'FR' },
+  'sic58-squadra-corse': { id: 'sic58-squadra-corse', name: 'Sic58 Squadra Corse', country: 'IT' },
+  'mt-helmets-msi-moto3': { id: 'mt-helmets-msi-moto3', name: 'Aeon Credit – MT Helmets – MSi', country: 'ES' },
+  'rivacold-snipers': { id: 'rivacold-snipers', name: 'Rivacold Snipers Team', country: 'IT' },
+  'code-motorsports': { id: 'code-motorsports', name: 'Code Motorsports', country: 'GB' },
+  // Moto3 chassis manufacturers (used in constructors standings)
+  'ktm': { id: 'ktm', name: 'KTM', country: 'AT' },
+  'honda': { id: 'honda', name: 'Honda', country: 'JP' },
 }
 
 export function getTeam(id: string): Team | null {
