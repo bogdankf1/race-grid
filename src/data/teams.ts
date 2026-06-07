@@ -520,6 +520,10 @@ const TEAMS: Record<string, Team> = {
   'abel-motorsports': { id: 'abel-motorsports', name: 'Abel Motorsports', country: 'US' },
   'cape-motorsports': { id: 'cape-motorsports', name: 'Cape Motorsports', country: 'US' },
   'cusick-morgan-motorsports': { id: 'cusick-morgan-motorsports', name: 'Cusick Morgan Motorsports', country: 'US' },
+  // Indy NXT 2025 — extra team entities
+  'andretti-cape': { id: 'andretti-cape', name: 'Andretti Cape', country: 'US' },
+  'abel-force-indy': { id: 'abel-force-indy', name: 'Abel Motorsports with Force Indy', country: 'US' },
+  'abel-miller-vinatieri': { id: 'abel-miller-vinatieri', name: 'Abel with Miller Vinatieri Motorsports', country: 'US' },
   // NASCAR Xfinity 2026 — Xfinity-specific teams
   // (joe-gibbs-racing, hendrick-motorsports, richard-childress-racing, haas-factory-team already defined above)
   'jr-motorsports': { id: 'jr-motorsports', name: 'JR Motorsports', country: 'US' },

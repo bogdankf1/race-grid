@@ -162,6 +162,7 @@ import { moto2Standings2025 } from './moto2-2025'
 import { moto2Standings2026 } from './moto2-2026'
 import { moto3Standings2025 } from './moto3-2025'
 import { moto3Standings2026 } from './moto3-2026'
+import { indyNxtStandings2025 } from './indy-nxt-2025'
 import { indyNxtStandings2026 } from './indy-nxt-2026'
 import { nascarXfinityStandings2026 } from './nascar-xfinity-2026'
 import { nascarTruckStandings2026 } from './nascar-truck-2026'
@@ -330,6 +331,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'moto2-2026': moto2Standings2026,
   'moto3-2025': moto3Standings2025,
   'moto3-2026': moto3Standings2026,
+  'indy-nxt-2025': indyNxtStandings2025,
   'indy-nxt-2026': indyNxtStandings2026,
   'nascar-xfinity-2026': nascarXfinityStandings2026,
   'nascar-truck-2026': nascarTruckStandings2026,

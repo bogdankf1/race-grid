@@ -164,6 +164,7 @@ import { moto2Results2025 } from './moto2-2025'
 import { moto2Results2026 } from './moto2-2026'
 import { moto3Results2025 } from './moto3-2025'
 import { moto3Results2026 } from './moto3-2026'
+import { indyNxtResults2025 } from './indy-nxt-2025'
 import { indyNxtResults2026 } from './indy-nxt-2026'
 import { nascarXfinityResults2026 } from './nascar-xfinity-2026'
 import { nascarTruckResults2026 } from './nascar-truck-2026'
@@ -332,6 +333,7 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...moto2Results2026,
   ...moto3Results2025,
   ...moto3Results2026,
+  ...indyNxtResults2025,
   ...indyNxtResults2026,
   ...nascarXfinityResults2026,
   ...nascarTruckResults2026,

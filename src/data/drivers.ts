@@ -1996,6 +1996,15 @@ const DRIVERS: Record<string, Driver> = {
   'stati': { id: 'stati', name: 'Nicolas Stati', shortName: 'Stati', nationality: 'AU' },
   'escotto': { id: 'escotto', name: 'Ricardo Escotto', shortName: 'Escotto', nationality: 'MX' },
   'koreiba': { id: 'koreiba', name: 'Alexander Koreiba', shortName: 'Koreiba', nationality: 'US' },
+  // Indy NXT 2025 — additional full/part-season drivers (hauger, collet, smith-t already defined above)
+  'hedge': { id: 'hedge', name: 'Callum Hedge', shortName: 'Hedge', nationality: 'NZ' },
+  'miller-jw': { id: 'miller-jw', name: 'Jack William Miller', shortName: 'J.W. Miller', nationality: 'US' },
+  'allaer': { id: 'allaer', name: 'Nolan Allaer', shortName: 'Allaer', nationality: 'US' },
+  'deegan-h': { id: 'deegan-h', name: 'Hailie Deegan', shortName: 'H. Deegan', nationality: 'US' },
+  'sceats': { id: 'sceats', name: 'Liam Sceats', shortName: 'Sceats', nationality: 'NZ' },
+  'browne-j': { id: 'browne-j', name: 'Jonathan Browne', shortName: 'Browne', nationality: 'IE' },
+  'd-orlando': { id: 'd-orlando', name: "Michael d'Orlando", shortName: "d'Orlando", nationality: 'US' },
+  'papasavvas': { id: 'papasavvas', name: 'Evagoras Papasavvas', shortName: 'Papasavvas', nationality: 'CY' },
   // NASCAR Xfinity 2026 — full-season drivers (burton-h, chastain, larson already defined above)
   'allgaier': { id: 'allgaier', name: 'Justin Allgaier', shortName: 'Allgaier', nationality: 'US' },
   'jesse-love': { id: 'jesse-love', name: 'Jesse Love', shortName: 'J. Love', nationality: 'US' },
