@@ -168,6 +168,7 @@ import { indyNxtResults2025 } from './indy-nxt-2025'
 import { indyNxtResults2026 } from './indy-nxt-2026'
 import { nascarXfinityResults2025 } from './nascar-xfinity-2025'
 import { nascarXfinityResults2026 } from './nascar-xfinity-2026'
+import { nascarTruckResults2025 } from './nascar-truck-2025'
 import { nascarTruckResults2026 } from './nascar-truck-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
@@ -338,6 +339,7 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...indyNxtResults2026,
   ...nascarXfinityResults2025,
   ...nascarXfinityResults2026,
+  ...nascarTruckResults2025,
   ...nascarTruckResults2026,
 }
 

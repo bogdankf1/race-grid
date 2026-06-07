@@ -2065,6 +2065,13 @@ const DRIVERS: Record<string, Driver> = {
   // NASCAR Xfinity 2025 additions
   'sanchez-n': { id: 'sanchez-n', name: 'Nick Sanchez', shortName: 'Sanchez', nationality: 'US' },
   'williams-josh': { id: 'williams-josh', name: 'Josh Williams', shortName: 'J. Williams', nationality: 'US' },
+  // NASCAR Craftsman Truck 2025 additions
+  'matt-crafton': { id: 'matt-crafton', name: 'Matt Crafton', shortName: 'Crafton', nationality: 'US' },
+  'breidinger': { id: 'breidinger', name: 'Toni Breidinger', shortName: 'Breidinger', nationality: 'US' },
+  'byrd-nathan': { id: 'byrd-nathan', name: 'Nathan Byrd', shortName: 'N. Byrd', nationality: 'US' },
+  'currey': { id: 'currey', name: 'Bayley Currey', shortName: 'Currey', nationality: 'US' },
+  'mills-m': { id: 'mills-m', name: 'Matt Mills', shortName: 'M. Mills', nationality: 'US' },
+  'fenhaus': { id: 'fenhaus', name: 'Luke Fenhaus', shortName: 'Fenhaus', nationality: 'US' },
 }
 
 export function getDriver(id: string): Driver | null {

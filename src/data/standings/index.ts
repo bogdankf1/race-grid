@@ -166,6 +166,7 @@ import { indyNxtStandings2025 } from './indy-nxt-2025'
 import { indyNxtStandings2026 } from './indy-nxt-2026'
 import { nascarXfinityStandings2025 } from './nascar-xfinity-2025'
 import { nascarXfinityStandings2026 } from './nascar-xfinity-2026'
+import { nascarTruckStandings2025 } from './nascar-truck-2025'
 import { nascarTruckStandings2026 } from './nascar-truck-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
@@ -336,6 +337,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'indy-nxt-2026': indyNxtStandings2026,
   'nascar-xfinity-2025': nascarXfinityStandings2025,
   'nascar-xfinity-2026': nascarXfinityStandings2026,
+  'nascar-truck-2025': nascarTruckStandings2025,
   'nascar-truck-2026': nascarTruckStandings2026,
 }
 

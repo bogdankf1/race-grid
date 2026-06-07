@@ -182,6 +182,7 @@ import { indyNxtEntries2026 } from './indy-nxt-2026'
 import { nascarXfinityEntries2025 } from './nascar-xfinity-2025'
 import { nascarXfinityEntries2026 } from './nascar-xfinity-2026'
 // NASCAR Craftsman Truck
+import { nascarTruckEntries2025 } from './nascar-truck-2025'
 import { nascarTruckEntries2026 } from './nascar-truck-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
@@ -368,6 +369,7 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'nascar-xfinity-2025': nascarXfinityEntries2025,
   'nascar-xfinity-2026': nascarXfinityEntries2026,
   // NASCAR Craftsman Truck
+  'nascar-truck-2025': nascarTruckEntries2025,
   'nascar-truck-2026': nascarTruckEntries2026,
 }
 
