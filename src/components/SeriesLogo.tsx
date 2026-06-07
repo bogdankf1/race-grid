@@ -36,6 +36,7 @@ const LOGO_MAP: Record<string, string> = {
   wrx: '/logos/wrx.svg',
   'porsche-supercup': '/logos/porsche-supercup.svg',
   'f1-academy': '/logos/f1-academy.svg',
+  moto2: '/logos/moto2.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {

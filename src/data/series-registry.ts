@@ -30,6 +30,7 @@ import { special2026 } from './special-2026'
 import { wrx2026 } from './wrx-2026'
 import { porscheSupercup2026 } from './porsche-supercup-2026'
 import { f1Academy2026 } from './f1-academy-2026'
+import { moto22026 } from './moto2-2026'
 
 interface SeriesMeta {
   id: string
@@ -71,6 +72,7 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'wrx', name: 'FIA Rallycross', shortName: 'WRX', color: '#0E5BA8', textColor: '#fff', wikipedia: 'World_Rallycross_Championship' },
   { id: 'porsche-supercup', name: 'Porsche Mobil 1 Supercup', shortName: 'PSC', color: '#D5001C', textColor: '#fff', wikipedia: 'Porsche_Supercup' },
   { id: 'f1-academy', name: 'F1 Academy', shortName: 'F1A', color: '#FF6B9D', textColor: '#fff', wikipedia: 'F1_Academy' },
+  { id: 'moto2', name: 'Moto2', shortName: 'M2', color: '#0066CC', textColor: '#fff', wikipedia: 'Moto2' },
 ]
 
 // 2026 events — eagerly loaded (current year, used by 95%+ of users)
@@ -87,6 +89,7 @@ const EVENTS_2026: Record<string, RaceEvent[]> = {
   wrx: wrx2026,
   'porsche-supercup': porscheSupercup2026,
   'f1-academy': f1Academy2026,
+  moto2: moto22026,
 }
 
 // Cache for lazily loaded historical years
@@ -106,7 +109,7 @@ export const SERIES_GROUPS: SeriesGroup[] = [
   { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'gtwcam', 'gtwcasia', 'gtwcau', 'britgt', 'supergt', 'nls', 'supercars', 'porsche-supercup'] },
   { labelKey: 'group.stock', ids: ['nascar'] },
   { labelKey: 'group.rally', ids: ['wrc', 'dakar', 'wrx'] },
-  { labelKey: 'group.motorcycle', ids: ['motogp'] },
+  { labelKey: 'group.motorcycle', ids: ['motogp', 'moto2'] },
   { labelKey: 'group.special', ids: ['special'] },
 ]
 

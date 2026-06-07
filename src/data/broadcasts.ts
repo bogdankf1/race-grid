@@ -828,6 +828,17 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
     JP: [],
     CO: [],
   },
+  moto2: {
+    US: [{ name: 'TNT Sports', note: 'All sessions live (with MotoGP package)' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com', note: 'All sessions live + on-demand' }],
+    UA: [{ name: 'Setanta Sports', url: 'https://setantasports.com' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    GB: [{ name: 'TNT Sports', url: 'https://www.tntsports.co.uk', note: 'All sessions live' }],
+    DE: [{ name: 'ServusTV', url: 'https://www.servustv.com' }, { name: 'DAZN', url: 'https://www.dazn.com/de-DE' }],
+    PL: [{ name: 'Polsat Sport' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    AU: [{ name: 'Fox Sports', url: 'https://www.foxsports.com.au' }, { name: 'Kayo Sports', url: 'https://kayosports.com.au' }],
+    BR: [{ name: 'ESPN Brasil' }, { name: 'Disney+', url: 'https://www.disneyplus.com' }],
+    JP: [{ name: 'Hulu Japan' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    CO: [{ name: 'ESPN Deportes' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+  },
   'f1-academy': {
     US: [
       { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Included in F1 package — all sessions' },

@@ -472,6 +472,25 @@ const TEAMS: Record<string, Team> = {
   'ombra-racing': { id: 'ombra-racing', name: 'Ombra Racing', country: 'IT' },
   'looping-by-cartech': { id: 'looping-by-cartech', name: 'Looping by CarTech', country: 'DE' },
   'target-competition': { id: 'target-competition', name: 'Target Competition', country: 'IT' },
+  // Moto2 2026 teams
+  'pramac-yamaha-moto2': { id: 'pramac-yamaha-moto2', name: 'BLU CRU Pramac Yamaha Moto2', country: 'IT' },
+  'marc-vds-moto2': { id: 'marc-vds-moto2', name: 'Elf Marc VDS Racing Team', country: 'BE' },
+  'speedrs-team': { id: 'speedrs-team', name: 'Beta Tools SpeedRS Team', country: 'IT' },
+  'klint-racing': { id: 'klint-racing', name: 'Klint Racing Team', country: 'ES' },
+  'aspar-moto2': { id: 'aspar-moto2', name: 'CFMOTO Inde Aspar Team', country: 'ES' },
+  'gresini-moto2': { id: 'gresini-moto2', name: 'Italjet Gresini Moto2', country: 'IT' },
+  'italtrans-racing': { id: 'italtrans-racing', name: 'Italtrans Racing Team', country: 'IT' },
+  'intact-gp': { id: 'intact-gp', name: 'Liqui Moly Dynavolt Intact GP', country: 'DE' },
+  'american-racing-moto2': { id: 'american-racing-moto2', name: 'OnlyFans American Racing Team', country: 'US' },
+  'qjmotor-msi': { id: 'qjmotor-msi', name: 'QJMOTOR - FRINSA - MSI', country: 'ES' },
+  'red-bull-ktm-ajo': { id: 'red-bull-ktm-ajo', name: 'Red Bull KTM Ajo', country: 'FI' },
+  'fantic-racing': { id: 'fantic-racing', name: 'Reds Fantic Racing', country: 'IT' },
+  'rw-racing-moto2': { id: 'rw-racing-moto2', name: 'Momoven Idrofoglia RW Racing Team', country: 'NL' },
+  'honda-team-asia': { id: 'honda-team-asia', name: 'Idemitsu Honda Team Asia', country: 'MY' },
+  // Moto2 chassis manufacturers (used in constructors standings)
+  'kalex': { id: 'kalex', name: 'Kalex', country: 'DE' },
+  'boscoscuro': { id: 'boscoscuro', name: 'Boscoscuro', country: 'IT' },
+  'forward': { id: 'forward', name: 'Forward', country: 'CH' },
 }
 
 export function getTeam(id: string): Team | null {
