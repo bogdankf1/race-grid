@@ -1966,6 +1966,14 @@ const DRIVERS: Record<string, Driver> = {
   'rios-j': { id: 'rios-j', name: 'Jesús Ríos', shortName: 'Ríos', nationality: 'ES' },
   'buchanan': { id: 'buchanan', name: 'Cormac Buchanan', shortName: 'Buchanan', nationality: 'NZ' },
   'moodley': { id: 'moodley', name: 'Ruché Moodley', shortName: 'Moodley', nationality: 'ZA' },
+  // Moto3 2025 — additional full-season riders not present in 2026 lineup
+  'foggia': { id: 'foggia', name: 'Dennis Foggia', shortName: 'Foggia', nationality: 'IT' },
+  'roulstone': { id: 'roulstone', name: 'Jacob Roulstone', shortName: 'Roulstone', nationality: 'AU' },
+  'dettwiler': { id: 'dettwiler', name: 'Noah Dettwiler', shortName: 'Dettwiler', nationality: 'CH' },
+  'nepa-s': { id: 'nepa-s', name: 'Stefano Nepa', shortName: 'Nepa', nationality: 'IT' },
+  'buasri': { id: 'buasri', name: 'Tatchakorn Buasri', shortName: 'Buasri', nationality: 'TH' },
+  'rossi-r': { id: 'rossi-r', name: 'Riccardo Rossi', shortName: 'R. Rossi', nationality: 'IT' },
+  'uriarte-m': { id: 'uriarte-m', name: 'Marcos Uriarte', shortName: 'M. Uriarte', nationality: 'ES' },
   // Indy NXT 2026 — full-season drivers (e-fittipaldi, nannini, correa already defined above)
   'hughes-l': { id: 'hughes-l', name: 'Lochie Hughes', shortName: 'L. Hughes', nationality: 'AU' },
   'murray-s': { id: 'murray-s', name: 'Sebastian Murray', shortName: 'S. Murray', nationality: 'GB' },

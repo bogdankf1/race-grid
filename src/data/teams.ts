@@ -511,6 +511,9 @@ const TEAMS: Record<string, Team> = {
   // Moto3 chassis manufacturers (used in constructors standings)
   'ktm': { id: 'ktm', name: 'KTM', country: 'AT' },
   'honda': { id: 'honda', name: 'Honda', country: 'JP' },
+  // Moto3 2025 teams (sponsor/name variants not covered by 2026 entries above)
+  'frinsa-mt-helmets-msi': { id: 'frinsa-mt-helmets-msi', name: 'Frinsa – MT Helmets – MSi', country: 'ES' },
+  'denssi-racing-boe': { id: 'denssi-racing-boe', name: 'Denssi Racing – Boé', country: 'ES' },
   // Indy NXT 2026 — feeder teams (andretti-global, chip-ganassi-racing,
   // a-j-foyt-enterprises, juncos-hollinger already defined above)
   'hmd-motorsports': { id: 'hmd-motorsports', name: 'HMD Motorsports', country: 'US' },
