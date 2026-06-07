@@ -34,6 +34,13 @@ const LOGO_MAP: Record<string, string> = {
   '24h': '/logos/24h.svg',
   special: '/logos/special.svg',
   wrx: '/logos/wrx.svg',
+  'porsche-supercup': '/logos/porsche-supercup.svg',
+  'f1-academy': '/logos/f1-academy.svg',
+  moto2: '/logos/moto2.svg',
+  moto3: '/logos/moto3.svg',
+  'indy-nxt': '/logos/indy-nxt.svg',
+  'nascar-xfinity': '/logos/nascar-xfinity.svg',
+  'nascar-truck': '/logos/nascar-truck.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {

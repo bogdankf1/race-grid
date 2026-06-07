@@ -1,4 +1,4 @@
-import type { SeasonStandings } from './types'
+import type { ClassStandings, SeasonStandings } from './types'
 import { f1Standings2021 } from './f1-2021'
 import { f1Standings2022 } from './f1-2022'
 import { f1Standings2023 } from './f1-2023'
@@ -154,6 +154,20 @@ import { nlsStandings2023 } from './nls-2023'
 import { nlsStandings2024 } from './nls-2024'
 import { nlsStandings2025 } from './nls-2025'
 import { nlsStandings2026 } from './nls-2026'
+import { porscheSupercupStandings2025 } from './porsche-supercup-2025'
+import { porscheSupercupStandings2026 } from './porsche-supercup-2026'
+import { f1AcademyStandings2025 } from './f1-academy-2025'
+import { f1AcademyStandings2026 } from './f1-academy-2026'
+import { moto2Standings2025 } from './moto2-2025'
+import { moto2Standings2026 } from './moto2-2026'
+import { moto3Standings2025 } from './moto3-2025'
+import { moto3Standings2026 } from './moto3-2026'
+import { indyNxtStandings2025 } from './indy-nxt-2025'
+import { indyNxtStandings2026 } from './indy-nxt-2026'
+import { nascarXfinityStandings2025 } from './nascar-xfinity-2025'
+import { nascarXfinityStandings2026 } from './nascar-xfinity-2026'
+import { nascarTruckStandings2025 } from './nascar-truck-2025'
+import { nascarTruckStandings2026 } from './nascar-truck-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -311,6 +325,20 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'nls-2024': nlsStandings2024,
   'nls-2025': nlsStandings2025,
   'nls-2026': nlsStandings2026,
+  'porsche-supercup-2025': porscheSupercupStandings2025,
+  'porsche-supercup-2026': porscheSupercupStandings2026,
+  'f1-academy-2025': f1AcademyStandings2025,
+  'f1-academy-2026': f1AcademyStandings2026,
+  'moto2-2025': moto2Standings2025,
+  'moto2-2026': moto2Standings2026,
+  'moto3-2025': moto3Standings2025,
+  'moto3-2026': moto3Standings2026,
+  'indy-nxt-2025': indyNxtStandings2025,
+  'indy-nxt-2026': indyNxtStandings2026,
+  'nascar-xfinity-2025': nascarXfinityStandings2025,
+  'nascar-xfinity-2026': nascarXfinityStandings2026,
+  'nascar-truck-2025': nascarTruckStandings2025,
+  'nascar-truck-2026': nascarTruckStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {
@@ -319,4 +347,15 @@ export function getStandings(seriesId: string, year: number): SeasonStandings | 
 
 export function hasStandings(seriesId: string, year: number): boolean {
   return `${seriesId}-${year}` in ALL_STANDINGS
+}
+
+export function getAllClassStandings(seriesId: string, year: number): ClassStandings[] {
+  const s = getStandings(seriesId, year)
+  if (!s) return []
+  const primary: ClassStandings = {
+    className: s.className ?? 'Overall',
+    drivers: s.drivers,
+    constructors: s.constructors,
+  }
+  return [primary, ...(s.otherClasses ?? [])]
 }

@@ -86,6 +86,7 @@ const CIRCUITS: Record<string, Circuit> = {
   'new-hampshire-motor-speedway': { id: 'new-hampshire-motor-speedway', name: 'New Hampshire Motor Speedway', country: 'United States', countryCode: 'US', length: '1.683 km', turns: 4, type: 'oval', wikipedia: 'New_Hampshire_Motor_Speedway' },
   'homestead-miami-speedway': { id: 'homestead-miami-speedway', name: 'Homestead-Miami Speedway', country: 'United States', countryCode: 'US', length: '2.414 km', turns: 4, type: 'oval', wikipedia: 'Homestead-Miami_Speedway' },
   'auto-club-speedway': { id: 'auto-club-speedway', name: 'Auto Club Speedway', country: 'United States', countryCode: 'US', length: '3.219 km', turns: 4, type: 'oval', wikipedia: 'Auto_Club_Speedway' },
+  'rockingham-speedway': { id: 'rockingham-speedway', name: 'Rockingham Speedway', country: 'United States', countryCode: 'US', length: '1.513 km', turns: 4, type: 'oval', wikipedia: 'Rockingham_Speedway' },
   'daytona-international-speedway-road-course': { id: 'daytona-international-speedway-road-course', name: 'Daytona International Speedway (Road Course)', country: 'United States', countryCode: 'US', length: '5.730 km', turns: 12, type: 'permanent', wikipedia: 'Daytona_International_Speedway' },
   'bristol-motor-speedway-dirt': { id: 'bristol-motor-speedway-dirt', name: 'Bristol Motor Speedway (Dirt)', country: 'United States', countryCode: 'US', length: '0.859 km', turns: 4, type: 'oval', wikipedia: 'Bristol_Motor_Speedway' },
   'nurburgring-nordschleife': { id: 'nurburgring-nordschleife', name: 'Nurburgring Nordschleife', country: 'Germany', countryCode: 'DE', length: '25.378 km', turns: 73, type: 'permanent', wikipedia: 'Nürburgring' },
@@ -217,6 +218,8 @@ const CIRCUITS: Record<string, Circuit> = {
   'killarney-cape-town': { id: 'killarney-cape-town', name: 'Killarney International Raceway', country: 'South Africa', countryCode: 'ZA', length: '3.270 km', turns: 12, type: 'permanent', wikipedia: 'Killarney_International_Raceway' },
   'estering': { id: 'estering', name: 'Estering', country: 'Germany', countryCode: 'DE', length: '0.954 km', turns: 8, type: 'mixed', wikipedia: 'Estering' },
   'central-harbourfront-circuit': { id: 'central-harbourfront-circuit', name: 'Central Harbourfront Circuit', country: 'Hong Kong', countryCode: 'HK', length: '0.990 km', turns: 9, type: 'street' },
+  'lucas-oil-indianapolis-raceway-park': { id: 'lucas-oil-indianapolis-raceway-park', name: 'Lucas Oil Indianapolis Raceway Park', country: 'United States', countryCode: 'US', length: '1.094 km', turns: 4, type: 'oval', wikipedia: 'Lucas_Oil_Indianapolis_Raceway_Park' },
+  'naval-base-coronado-street-circuit': { id: 'naval-base-coronado-street-circuit', name: 'Naval Base Coronado Street Circuit', country: 'United States', countryCode: 'US', length: '4.000 km', turns: 14, type: 'street' },
 }
 
 const TYPE_LABELS: Record<string, Record<string, string>> = {

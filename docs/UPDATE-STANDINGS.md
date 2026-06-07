@@ -22,11 +22,18 @@ For each series needing an update, search **official sources first**:
 | Series | Primary source | Fallback |
 |--------|---------------|----------|
 | F1 | formula1.com/en/results/{year}/drivers | Wikipedia "20XX Formula One World Championship" |
+| F1 Academy | f1academy.com/Standings, f1academy.com/Racing/Schedule | Wikipedia "20XX F1 Academy season" |
 | F2 | fiaformula2.com/Standings | Wikipedia "20XX Formula 2 Championship" |
 | F3 | fiaformula3.com/Standings | Wikipedia "20XX Formula 3 Championship" |
 | Formula E | fiaformulae.com/en/standings | Wikipedia "20XX Formula E World Championship" |
 | IndyCar | indycar.com/Standings | Wikipedia "20XX IndyCar Series" |
+| Indy NXT | indynxt.com/Standings, indynxt.com/Schedule | Wikipedia "20XX Indy NXT season" |
+| Moto2 | motogp.com/en/calendar/{year}/moto2 | Wikipedia "20XX Moto2 World Championship" |
+| Moto3 | motogp.com/en/calendar/{year}/moto3 | Wikipedia "20XX Moto3 World Championship" |
 | NASCAR | nascar.com/standings/nascar-cup-series | espn.com/racing/standings |
+| NASCAR Xfinity | nascar.com/standings/nascar-xfinity-series | Wikipedia "20XX NASCAR Xfinity Series" |
+| NASCAR Craftsman Truck | nascar.com/standings/nascar-craftsman-truck-series | Wikipedia "20XX NASCAR Craftsman Truck Series" |
+| Porsche Supercup | porsche.com motorsport / pitwall.app/series/porsche-mobil-1-supercup | Wikipedia "20XX Porsche Supercup" |
 | WEC | fiawec.com standings, autohebdof1.com | Wikipedia "20XX FIA World Endurance Championship" |
 | IMSA | imsa.com/weathertech/standings | indymotorspeedway.com |
 | ELMS | europeanlemansseries.com/ranking | speedsport-magazine.com |
@@ -124,6 +131,11 @@ Verify the standings page displays correctly for the updated series.
 - **GTWC Australia** — "Teams" championship
 - **IGTC** — "Manufacturers" championship
 - **MotoGP** — "Constructors" championship
+- **Moto2** — "Constructors" championship (Boscoscuro, Forward, Kalex chassis)
+- **Moto3** — "Constructors" championship (KTM, Honda, GASGAS, Husqvarna, CFMOTO)
+- **F1 Academy** — "Teams" championship
+- **NASCAR Xfinity** — "Manufacturers" championship (Chevrolet, Ford, Toyota)
+- **NASCAR Craftsman Truck** — "Manufacturers" championship
 
 ### Series WITHOUT constructor standings (use `constructors: []`)
 - **IndyCar** — Drivers only
@@ -136,9 +148,48 @@ Verify the standings page displays correctly for the updated series.
 - **Supercars** — Drivers only
 - **IMSA** — GTP drivers only (manufacturer title exists but not tracked here)
 - **Dakar** — Cars category drivers only
+- **Porsche Supercup** — One-make championship (drivers only)
+- **Indy NXT** — Drivers only (spec chassis)
 
 ### NLS special case
 The NLS (Nurburgring Langstrecken-Serie) uses a class-based points system across hundreds of participants. There is no single consolidated driver standings table. Skip NLS standings unless a clear overall championship table can be sourced.
+
+### Multi-class series
+
+For series with multiple championship classes, the top-level `drivers`/`constructors` represent the **primary class** (the headline championship), and additional classes go in `otherClasses: [{ className, drivers, constructors }]`. The standings page renders a class pill row when `otherClasses` is non-empty.
+
+**Currently populated in the data layer:**
+- **WEC**: primary = `Hypercar`, otherClasses = `[{ className: 'LMGT3', drivers, constructors }]`
+- **IMSA**: primary = `GTP`, otherClasses = `[{ className: 'GTD Pro', drivers, constructors: [] }, { className: 'GTD', drivers, constructors: [] }]`
+
+**Candidates for future multi-class backfill** (currently single-class in the data layer; extend to `otherClasses` when refreshing):
+- **ELMS**: primary = `LMP2`, candidates = `LMP3`, `LMGT3`
+- **MLMC**: primary = `LMP3`, candidates = `GT3`
+- **IGTC**: primary = drivers across the whole series, candidate splits = `Pro` / `Silver` / `Am`
+- **24H Series**: primary = `GT3`, candidates = `GT4`, `TCR`, `GTX`
+- **GTWC Europe**: primary = `Pro`, candidates = `Gold` / `Silver` / `Bronze`
+- **GTWC America / Asia / Australia**: primary = `Pro`, candidates = `Pro-Am` / `Am` / `Silver` (varies)
+- **British GT**: primary = `GT3`, candidate = `GT4`
+- **Super GT**: primary = `GT500`, candidate = `GT300`
+
+When refreshing standings for any multi-class series:
+1. **Fetch each class separately.** The official source typically has a dropdown or separate tab per class — query each one and capture top-N for that class.
+2. Update the primary class table (top-level fields) as before.
+3. Add or update each `otherClasses[*]` entry the same way.
+4. If a driver or team ID is not yet present in `drivers.ts`/`teams.ts`, skip that row and add an inline comment listing the skipped name. Do not invent IDs in the standings runbook — adding new drivers/teams is its own task.
+5. Multi-class entries on the `src/data/entries/` side should also be tagged with `class: '<Class Name>'` (matching the `className` strings above) so the series detail page can split rosters per class.
+
+### Feeder series
+
+Several series in the data layer are "feeders" whose calendars piggyback on a parent series. When updating standings:
+- **Moto2**, **Moto3**: race every MotoGP weekend. Source: motogp.com/en/standings/{year}/moto2 (or moto3)
+- **NASCAR Xfinity**: races ~32 of 33 NASCAR Cup weekends. Source: nascar.com/standings/nascar-xfinity-series
+- **NASCAR Craftsman Truck**: races a subset of Cup weekends + standalone events. Source: nascar.com/standings/nascar-craftsman-truck-series
+- **Indy NXT**: races ~14 of 17 IndyCar weekends. Source: indynxt.com/Standings
+- **F1 Academy**: races at selected F1 weekends (~7 rounds). Source: f1academy.com/Standings
+- **Porsche Supercup**: races at selected European F1 weekends (~7 rounds). Source: porsche.com motorsport / pitwall.app
+
+When refreshing a parent series' standings, also check whether its feeders need a refresh.
 
 ### Dakar special case
 The Dakar Rally is a single multi-stage event. Standings reflect the final overall classification (driver + co-driver). Use `className: 'Cars'` for the car category standings.

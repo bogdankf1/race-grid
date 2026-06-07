@@ -27,6 +27,13 @@ import { gtwcasia2025 } from '../gtwcasia-2025'
 import { twentyfourh2025 } from '../24h-2025'
 import { special2025 } from '../special-2025'
 import { wrx2025 } from '../wrx-2025'
+import { porscheSupercup2025 } from '../porsche-supercup-2025'
+import { f1Academy2025 } from '../f1-academy-2025'
+import { moto22025 } from '../moto2-2025'
+import { moto32025 } from '../moto3-2025'
+import { indyNxt2025 } from '../indy-nxt-2025'
+import { nascarXfinity2025 } from '../nascar-xfinity-2025'
+import { nascarTruck2025 } from '../nascar-truck-2025'
 
 export const events2025: Record<string, RaceEvent[]> = {
   'f1': f12025,
@@ -56,4 +63,11 @@ export const events2025: Record<string, RaceEvent[]> = {
   '24h': twentyfourh2025,
   'special': special2025,
   'wrx': wrx2025,
+  'porsche-supercup': porscheSupercup2025,
+  'f1-academy': f1Academy2025,
+  'moto2': moto22025,
+  'moto3': moto32025,
+  'indy-nxt': indyNxt2025,
+  'nascar-xfinity': nascarXfinity2025,
+  'nascar-truck': nascarTruck2025,
 }

@@ -807,6 +807,180 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
     ],
   },
+  'porsche-supercup': {
+    US: [
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'Included with F1 TV — all sessions live' },
+    ],
+    UA: [
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+    ],
+    GB: [
+      { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'Live race coverage on F1 weekends' },
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+    ],
+    DE: [
+      { name: 'Sky Deutschland', url: 'https://www.sky.de', note: 'All sessions live' },
+      { name: 'ServusTV On', url: 'https://www.servustv.com/sport/b/porsche-supercup/', note: 'Free livestream — all races' },
+    ],
+    PL: [],
+    AU: [],
+    BR: [],
+    JP: [],
+    CO: [],
+  },
+  moto2: {
+    US: [{ name: 'TNT Sports', note: 'All sessions live (with MotoGP package)' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com', note: 'All sessions live + on-demand' }],
+    UA: [{ name: 'Setanta Sports', url: 'https://setantasports.com' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    GB: [{ name: 'TNT Sports', url: 'https://www.tntsports.co.uk', note: 'All sessions live' }],
+    DE: [{ name: 'ServusTV', url: 'https://www.servustv.com' }, { name: 'DAZN', url: 'https://www.dazn.com/de-DE' }],
+    PL: [{ name: 'Polsat Sport' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    AU: [{ name: 'Fox Sports', url: 'https://www.foxsports.com.au' }, { name: 'Kayo Sports', url: 'https://kayosports.com.au' }],
+    BR: [{ name: 'ESPN Brasil' }, { name: 'Disney+', url: 'https://www.disneyplus.com' }],
+    JP: [{ name: 'Hulu Japan' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    CO: [{ name: 'ESPN Deportes' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+  },
+  moto3: {
+    US: [{ name: 'TNT Sports', note: 'All sessions live (with MotoGP package)' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com', note: 'All sessions live + on-demand' }],
+    UA: [{ name: 'Setanta Sports', url: 'https://setantasports.com' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    GB: [{ name: 'TNT Sports', url: 'https://www.tntsports.co.uk', note: 'All sessions live' }],
+    DE: [{ name: 'ServusTV', url: 'https://www.servustv.com' }, { name: 'DAZN', url: 'https://www.dazn.com/de-DE' }],
+    PL: [{ name: 'Polsat Sport' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    AU: [{ name: 'Fox Sports', url: 'https://www.foxsports.com.au' }, { name: 'Kayo Sports', url: 'https://kayosports.com.au' }],
+    BR: [{ name: 'ESPN Brasil' }, { name: 'Disney+', url: 'https://www.disneyplus.com' }],
+    JP: [{ name: 'Hulu Japan' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+    CO: [{ name: 'ESPN Deportes' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
+  },
+  'indy-nxt': {
+    US: [
+      { name: 'FOX / FS1 / FS2', note: 'All races live on FOX broadcast network and FS1/FS2' },
+      { name: 'FOX Sports App', url: 'https://www.foxsports.com', note: 'Streaming with TV login' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Official direct-to-consumer streaming' },
+    ],
+    UA: [
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Official streaming service' },
+    ],
+    GB: [
+      { name: 'Sky Sports', note: 'Live race coverage with IndyCar package' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    DE: [
+      { name: 'Sky Sport', note: 'Live coverage of selected races' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    PL: [
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    AU: [
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    BR: [
+      { name: 'ESPN Brasil', note: 'Selected races' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    JP: [
+      { name: 'GAORA Sports', note: 'Live coverage' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    CO: [
+      { name: 'ESPN', note: 'Selected races' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+  },
+  'f1-academy': {
+    US: [
+      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Included in F1 package — all sessions' },
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    UA: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    GB: [
+      { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'All sessions live' },
+      { name: 'NOW', url: 'https://www.nowtv.com', note: 'Sky Sports streaming' },
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    DE: [
+      { name: 'Sky Sport F1', url: 'https://www.sky.de', note: 'All sessions live' },
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    PL: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    AU: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    BR: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    JP: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    CO: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+  },
+  'nascar-xfinity': {
+    US: [
+      { name: 'The CW', url: 'https://www.cwtv.com', note: 'Exclusive live — all 33 races on free-to-air TV' },
+      { name: 'The CW App', url: 'https://www.cwtv.com/cwapp/', note: 'Practice & qualifying livestream' },
+      { name: 'ESPN Unlimited', url: 'https://plus.espn.com', note: 'Streaming for race broadcasts' },
+    ],
+    UA: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Select content & highlights' },
+    ],
+    GB: [
+      { name: 'Premier Sports', url: 'https://premiersports.com', note: 'Selected races' },
+    ],
+    DE: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    PL: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    AU: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    BR: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    JP: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    CO: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+  },
+  'nascar-truck': {
+    US: [
+      { name: 'FS1', url: 'https://www.foxsports.com/live/fs1', note: 'Live broadcast — most 2026 Truck races' },
+      { name: 'FOX', url: 'https://www.foxsports.com', note: 'Selected races on broadcast network' },
+      { name: 'FOX Sports App', url: 'https://www.foxsports.com/live', note: 'Live streaming with TV provider login' },
+    ],
+    UA: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights only' },
+    ],
+    GB: [
+      { name: 'Premier Sports', url: 'https://premiersports.com', note: 'Selected races' },
+    ],
+    DE: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    PL: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    AU: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    BR: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    JP: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    CO: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

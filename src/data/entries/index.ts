@@ -163,6 +163,27 @@ import { gtwcauEntries2022 } from './gtwcau-2022'
 import { gtwcauEntries2023 } from './gtwcau-2023'
 import { gtwcauEntries2024 } from './gtwcau-2024'
 import { gtwcauEntries2025 } from './gtwcau-2025'
+// Porsche Supercup
+import { porscheSupercupEntries2025 } from './porsche-supercup-2025'
+import { porscheSupercupEntries2026 } from './porsche-supercup-2026'
+// F1 Academy
+import { f1AcademyEntries2025 } from './f1-academy-2025'
+import { f1AcademyEntries2026 } from './f1-academy-2026'
+// Moto2
+import { moto2Entries2025 } from './moto2-2025'
+import { moto2Entries2026 } from './moto2-2026'
+// Moto3
+import { moto3Entries2025 } from './moto3-2025'
+import { moto3Entries2026 } from './moto3-2026'
+// Indy NXT
+import { indyNxtEntries2025 } from './indy-nxt-2025'
+import { indyNxtEntries2026 } from './indy-nxt-2026'
+// NASCAR Xfinity
+import { nascarXfinityEntries2025 } from './nascar-xfinity-2025'
+import { nascarXfinityEntries2026 } from './nascar-xfinity-2026'
+// NASCAR Craftsman Truck
+import { nascarTruckEntries2025 } from './nascar-truck-2025'
+import { nascarTruckEntries2026 } from './nascar-truck-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -329,6 +350,27 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'gtwcau-2023': gtwcauEntries2023,
   'gtwcau-2024': gtwcauEntries2024,
   'gtwcau-2025': gtwcauEntries2025,
+  // Porsche Supercup
+  'porsche-supercup-2025': porscheSupercupEntries2025,
+  'porsche-supercup-2026': porscheSupercupEntries2026,
+  // F1 Academy
+  'f1-academy-2025': f1AcademyEntries2025,
+  'f1-academy-2026': f1AcademyEntries2026,
+  // Moto2
+  'moto2-2025': moto2Entries2025,
+  'moto2-2026': moto2Entries2026,
+  // Moto3
+  'moto3-2025': moto3Entries2025,
+  'moto3-2026': moto3Entries2026,
+  // Indy NXT
+  'indy-nxt-2025': indyNxtEntries2025,
+  'indy-nxt-2026': indyNxtEntries2026,
+  // NASCAR Xfinity
+  'nascar-xfinity-2025': nascarXfinityEntries2025,
+  'nascar-xfinity-2026': nascarXfinityEntries2026,
+  // NASCAR Craftsman Truck
+  'nascar-truck-2025': nascarTruckEntries2025,
+  'nascar-truck-2026': nascarTruckEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

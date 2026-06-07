@@ -28,6 +28,13 @@ import { gtwcau2026 } from './gtwcau-2026'
 import { twentyfourh2026 } from './24h-2026'
 import { special2026 } from './special-2026'
 import { wrx2026 } from './wrx-2026'
+import { porscheSupercup2026 } from './porsche-supercup-2026'
+import { f1Academy2026 } from './f1-academy-2026'
+import { moto22026 } from './moto2-2026'
+import { moto32026 } from './moto3-2026'
+import { indyNxt2026 } from './indy-nxt-2026'
+import { nascarXfinity2026 } from './nascar-xfinity-2026'
+import { nascarTruck2026 } from './nascar-truck-2026'
 
 interface SeriesMeta {
   id: string
@@ -67,6 +74,13 @@ export const SERIES_META: SeriesMeta[] = [
   { id: '24h', name: 'Michelin 24H Series', shortName: '24H', color: '#1A2B4A', textColor: '#fff', wikipedia: '24H_Series' },
   { id: 'special', name: 'Special Events', shortName: 'SPEC', color: '#6B2C91', textColor: '#fff' },
   { id: 'wrx', name: 'FIA Rallycross', shortName: 'WRX', color: '#0E5BA8', textColor: '#fff', wikipedia: 'World_Rallycross_Championship' },
+  { id: 'porsche-supercup', name: 'Porsche Mobil 1 Supercup', shortName: 'PSC', color: '#D5001C', textColor: '#fff', wikipedia: 'Porsche_Supercup' },
+  { id: 'f1-academy', name: 'F1 Academy', shortName: 'F1A', color: '#FF6B9D', textColor: '#fff', wikipedia: 'F1_Academy' },
+  { id: 'moto2', name: 'Moto2', shortName: 'M2', color: '#0066CC', textColor: '#fff', wikipedia: 'Moto2' },
+  { id: 'moto3', name: 'Moto3', shortName: 'M3', color: '#FF6900', textColor: '#fff', wikipedia: 'Moto3' },
+  { id: 'indy-nxt', name: 'Indy NXT by Firestone', shortName: 'NXT', color: '#A6CE39', textColor: '#000', wikipedia: 'Indy_NXT' },
+  { id: 'nascar-xfinity', name: 'NASCAR Xfinity Series', shortName: 'XFIN', color: '#FFCD00', textColor: '#000', wikipedia: 'NASCAR_Xfinity_Series' },
+  { id: 'nascar-truck', name: 'NASCAR Craftsman Truck Series', shortName: 'TRUCK', color: '#0033A0', textColor: '#fff', wikipedia: 'NASCAR_Craftsman_Truck_Series' },
 ]
 
 // 2026 events — eagerly loaded (current year, used by 95%+ of users)
@@ -81,6 +95,13 @@ const EVENTS_2026: Record<string, RaceEvent[]> = {
   '24h': twentyfourh2026,
   special: special2026,
   wrx: wrx2026,
+  'porsche-supercup': porscheSupercup2026,
+  'f1-academy': f1Academy2026,
+  moto2: moto22026,
+  moto3: moto32026,
+  'indy-nxt': indyNxt2026,
+  'nascar-xfinity': nascarXfinity2026,
+  'nascar-truck': nascarTruck2026,
 }
 
 // Cache for lazily loaded historical years
@@ -95,12 +116,12 @@ export interface SeriesGroup {
 }
 
 export const SERIES_GROUPS: SeriesGroup[] = [
-  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula'] },
+  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'f1-academy', 'fe', 'indycar', 'indy-nxt', 'superformula'] },
   { labelKey: 'group.endurance', ids: ['wec', 'elms', 'mlmc', 'imsa', 'igtc', '24h'] },
-  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'gtwcam', 'gtwcasia', 'gtwcau', 'britgt', 'supergt', 'nls', 'supercars'] },
-  { labelKey: 'group.stock', ids: ['nascar'] },
+  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'gtwcam', 'gtwcasia', 'gtwcau', 'britgt', 'supergt', 'nls', 'supercars', 'porsche-supercup'] },
+  { labelKey: 'group.stock', ids: ['nascar', 'nascar-xfinity', 'nascar-truck'] },
   { labelKey: 'group.rally', ids: ['wrc', 'dakar', 'wrx'] },
-  { labelKey: 'group.motorcycle', ids: ['motogp'] },
+  { labelKey: 'group.motorcycle', ids: ['motogp', 'moto2', 'moto3'] },
   { labelKey: 'group.special', ids: ['special'] },
 ]
 

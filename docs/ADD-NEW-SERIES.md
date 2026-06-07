@@ -163,28 +163,18 @@ import { <seriesId><year> } from './<series-id>-<year>'
 
 ---
 
-### 7. Add to filter dropdown
+### 7. Add to filter group
 
-Edit `src/components/SeriesFilterDropdown.tsx` — add the series ID to the appropriate group in the `GROUPS` array:
+Edit `src/data/series-registry.ts` — add the series ID to the appropriate group in the `SERIES_GROUPS` array:
 
 ```typescript
-const GROUPS: SeriesGroup[] = [
-  { labelKey: 'group.openwheel', ids: ['f1', 'indycar', 'superformula'] },
-  { labelKey: 'group.endurance', ids: ['wec', 'elms', 'imsa', 'igtc'] },
-  { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'supergt', 'nls', 'supercars'] },
-  { labelKey: 'group.stock', ids: ['nascar'] },
-  { labelKey: 'group.rally', ids: ['wrc'] },
+export const SERIES_GROUPS: SeriesGroup[] = [
+  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula', '<new-id>'] },
+  // ...
 ]
 ```
 
-If the series doesn't fit an existing group, create a new one:
-- Add the group to `GROUPS`
-- Add i18n strings to `src/lib/i18n.ts` for both `en` and `uk` locales:
-  ```typescript
-  'group.newcategory': 'Category Name',  // en
-  'group.newcategory': 'Назва категорії', // uk
-  ```
-- Update `CLAUDE.md` series groups section
+If the series doesn't fit an existing group, create a new one with i18n strings for `en` and `uk`.
 
 ---
 
@@ -287,6 +277,7 @@ Register in `src/data/standings/index.ts`:
 **`docs/UPDATE-STANDINGS.md`:**
 - Add the series to the official sources table
 - Note whether it has constructor/manufacturer standings or drivers-only
+- If multi-class: declare the primary class (headline championship) and any additional classes. Standings file uses top-level `drivers`/`constructors` for the primary class and `otherClasses: [{ className, drivers, constructors }]` for the rest. Entries rows in `src/data/entries/` should carry `class: '<Class Name>'`. See "Multi-class series" section in the runbook.
 
 **`docs/VERIFY-SEASON-DATA.md`:**
 - Add the series to the verification checklist

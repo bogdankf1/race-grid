@@ -156,6 +156,20 @@ import { wrxResults2023 } from './wrx-2023'
 import { wrxResults2024 } from './wrx-2024'
 import { wrxResults2025 } from './wrx-2025'
 import { wrxResults2026 } from './wrx-2026'
+import { porscheSupercupResults2025 } from './porsche-supercup-2025'
+import { porscheSupercupResults2026 } from './porsche-supercup-2026'
+import { f1AcademyResults2025 } from './f1-academy-2025'
+import { f1AcademyResults2026 } from './f1-academy-2026'
+import { moto2Results2025 } from './moto2-2025'
+import { moto2Results2026 } from './moto2-2026'
+import { moto3Results2025 } from './moto3-2025'
+import { moto3Results2026 } from './moto3-2026'
+import { indyNxtResults2025 } from './indy-nxt-2025'
+import { indyNxtResults2026 } from './indy-nxt-2026'
+import { nascarXfinityResults2025 } from './nascar-xfinity-2025'
+import { nascarXfinityResults2026 } from './nascar-xfinity-2026'
+import { nascarTruckResults2025 } from './nascar-truck-2025'
+import { nascarTruckResults2026 } from './nascar-truck-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
   ...f1Results2021,
@@ -313,6 +327,20 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...wrxResults2024,
   ...wrxResults2025,
   ...wrxResults2026,
+  ...porscheSupercupResults2025,
+  ...porscheSupercupResults2026,
+  ...f1AcademyResults2025,
+  ...f1AcademyResults2026,
+  ...moto2Results2025,
+  ...moto2Results2026,
+  ...moto3Results2025,
+  ...moto3Results2026,
+  ...indyNxtResults2025,
+  ...indyNxtResults2026,
+  ...nascarXfinityResults2025,
+  ...nascarXfinityResults2026,
+  ...nascarTruckResults2025,
+  ...nascarTruckResults2026,
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {

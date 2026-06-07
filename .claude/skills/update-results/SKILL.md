@@ -22,6 +22,10 @@ Follow the runbook in `docs/UPDATE-RESULTS.md` to update race results:
 
 **Important:** Only use verified results from official sources. Never guess or fabricate data.
 
+**Multi-class series** (WEC, IMSA, ELMS, MLMC, IGTC, 24H Series, GTWC Europe/America/Asia/Australia, British GT, Super GT): for each event, fetch the result of **every class** (e.g. WEC Hypercar + LMGT3, IMSA GTP + GTD Pro + GTD) and populate them as separate entries in the `classes` array of the result. Don't stop at the overall winner — class winners count.
+
+**Feeder series** (Moto2, Moto3, NASCAR Xfinity, NASCAR Truck, Indy NXT, F1 Academy, Porsche Supercup): each rides at the same venues as a parent series already in the app. Before WebSearching, cross-reference the parent calendar file in `src/data/<parent>-2026.ts` to confirm round dates; only the per-feeder session times need to be fetched.
+
 **Examples:**
 - `/update-results` — update current year (2026), all series
 - `/update-results 2024 f1` — backfill F1 2024 results
