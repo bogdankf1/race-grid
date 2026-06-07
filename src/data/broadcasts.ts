@@ -828,6 +828,39 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
     JP: [],
     CO: [],
   },
+  'f1-academy': {
+    US: [
+      { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Included in F1 package — all sessions' },
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    UA: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    GB: [
+      { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'All sessions live' },
+      { name: 'NOW', url: 'https://www.nowtv.com', note: 'Sky Sports streaming' },
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    DE: [
+      { name: 'Sky Sport F1', url: 'https://www.sky.de', note: 'All sessions live' },
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    PL: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    AU: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    BR: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    JP: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+    CO: [
+      { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

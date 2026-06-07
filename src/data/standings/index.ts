@@ -155,6 +155,7 @@ import { nlsStandings2024 } from './nls-2024'
 import { nlsStandings2025 } from './nls-2025'
 import { nlsStandings2026 } from './nls-2026'
 import { porscheSupercupStandings2026 } from './porsche-supercup-2026'
+import { f1AcademyStandings2026 } from './f1-academy-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -313,6 +314,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'nls-2025': nlsStandings2025,
   'nls-2026': nlsStandings2026,
   'porsche-supercup-2026': porscheSupercupStandings2026,
+  'f1-academy-2026': f1AcademyStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {

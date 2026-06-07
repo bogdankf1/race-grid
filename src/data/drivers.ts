@@ -1861,6 +1861,27 @@ const DRIVERS: Record<string, Driver> = {
   'festante': { id: 'festante', name: 'Aldo Festante', shortName: 'Festante', nationality: 'IT' },
   'young-j': { id: 'young-j', name: 'Jack Young', shortName: 'J. Young', nationality: 'GB' },
   'jacques-villeneuve': { id: 'jacques-villeneuve', name: 'Jacques Villeneuve', shortName: 'J. Villeneuve', nationality: 'CA' },
+  // F1 Academy 2026 drivers
+  'gademan': { id: 'gademan', name: 'Nina Gademan', shortName: 'Gademan', nationality: 'NL' },
+  'hurup-larsen': { id: 'hurup-larsen', name: 'Alba Hurup Larsen', shortName: 'Hurup Larsen', nationality: 'DK' },
+  'kosterman': { id: 'kosterman', name: 'Esmee Kosterman', shortName: 'Kosterman', nationality: 'NL' },
+  'bruce-m': { id: 'bruce-m', name: 'Megan Bruce', shortName: 'Bruce', nationality: 'GB' },
+  'ferreira-r': { id: 'ferreira-r', name: 'Rafaela Ferreira', shortName: 'Ferreira', nationality: 'BR' },
+  'palmowski': { id: 'palmowski', name: 'Alisha Palmowski', shortName: 'Palmowski', nationality: 'GB' },
+  'felbermayr': { id: 'felbermayr', name: 'Emma Felbermayr', shortName: 'Felbermayr', nationality: 'AT' },
+  'lloyd-e': { id: 'lloyd-e', name: 'Ella Lloyd', shortName: 'Lloyd', nationality: 'GB' },
+  'stevens-e': { id: 'stevens-e', name: 'Ella Stevens', shortName: 'E. Stevens', nationality: 'GB' },
+  'paatz': { id: 'paatz', name: 'Mathilda Paatz', shortName: 'Paatz', nationality: 'DE' },
+  'westcott': { id: 'westcott', name: 'Payton Westcott', shortName: 'Westcott', nationality: 'US' },
+  'granada': { id: 'granada', name: 'Natalia Granada', shortName: 'Granada', nationality: 'ES' },
+  'billard': { id: 'billard', name: 'Lisa Billard', shortName: 'Billard', nationality: 'FR' },
+  'countryman': { id: 'countryman', name: 'Kaylee Countryman', shortName: 'Countryman', nationality: 'US' },
+  'jacquet': { id: 'jacquet', name: 'Jade Jacquet', shortName: 'Jacquet', nationality: 'FR' },
+  'dobson': { id: 'dobson', name: 'Ava Dobson', shortName: 'Dobson', nationality: 'US' },
+  'robertson-r': { id: 'robertson-r', name: 'Rachel Robertson', shortName: 'R. Robertson', nationality: 'GB' },
+  'shi-wei': { id: 'shi-wei', name: 'Shi Wei', shortName: 'Shi', nationality: 'CN' },
+  'fisher-a': { id: 'fisher-a', name: 'Autumn Fisher', shortName: 'Fisher', nationality: 'CA' },
+  'florescu': { id: 'florescu', name: 'Zoe Florescu', shortName: 'Florescu', nationality: 'RO' },
 }
 
 export function getDriver(id: string): Driver | null {

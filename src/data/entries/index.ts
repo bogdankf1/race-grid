@@ -165,6 +165,8 @@ import { gtwcauEntries2024 } from './gtwcau-2024'
 import { gtwcauEntries2025 } from './gtwcau-2025'
 // Porsche Supercup
 import { porscheSupercupEntries2026 } from './porsche-supercup-2026'
+// F1 Academy
+import { f1AcademyEntries2026 } from './f1-academy-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -333,6 +335,8 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'gtwcau-2025': gtwcauEntries2025,
   // Porsche Supercup
   'porsche-supercup-2026': porscheSupercupEntries2026,
+  // F1 Academy
+  'f1-academy-2026': f1AcademyEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {
