@@ -1938,6 +1938,28 @@ const DRIVERS: Record<string, Driver> = {
   'rios-j': { id: 'rios-j', name: 'Jesús Ríos', shortName: 'Ríos', nationality: 'ES' },
   'buchanan': { id: 'buchanan', name: 'Cormac Buchanan', shortName: 'Buchanan', nationality: 'NZ' },
   'moodley': { id: 'moodley', name: 'Ruché Moodley', shortName: 'Moodley', nationality: 'ZA' },
+  // Indy NXT 2026 — full-season drivers (e-fittipaldi, nannini, correa already defined above)
+  'hughes-l': { id: 'hughes-l', name: 'Lochie Hughes', shortName: 'L. Hughes', nationality: 'AU' },
+  'murray-s': { id: 'murray-s', name: 'Sebastian Murray', shortName: 'S. Murray', nationality: 'GB' },
+  'm-taylor': { id: 'm-taylor', name: 'Max Taylor', shortName: 'M. Taylor', nationality: 'US' },
+  'pierson': { id: 'pierson', name: 'Josh Pierson', shortName: 'Pierson', nationality: 'US' },
+  'de-alba': { id: 'de-alba', name: 'Salvador de Alba', shortName: 'de Alba', nationality: 'MX' },
+  'j-beeton': { id: 'j-beeton', name: 'Jack Beeton', shortName: 'Beeton', nationality: 'AU' },
+  'kucharczyk': { id: 'kucharczyk', name: 'Tymek Kucharczyk', shortName: 'Kucharczyk', nationality: 'PL' },
+  'garcia-m': { id: 'garcia-m', name: 'Max Garcia', shortName: 'M. Garcia', nationality: 'US' },
+  'missig': { id: 'missig', name: 'Jordan Missig', shortName: 'Missig', nationality: 'US' },
+  'kaminsky-c': { id: 'kaminsky-c', name: 'Colin Kaminsky', shortName: 'Kaminsky', nationality: 'US' },
+  'rowe': { id: 'rowe', name: 'Myles Rowe', shortName: 'Rowe', nationality: 'US' },
+  'roe': { id: 'roe', name: 'James Roe', shortName: 'Roe', nationality: 'IE' },
+  'b-aron': { id: 'b-aron', name: 'Bryce Aron', shortName: 'B. Aron', nationality: 'US' },
+  'koolen': { id: 'koolen', name: 'Niels Koolen', shortName: 'Koolen', nationality: 'NL' },
+  'etter': { id: 'etter', name: 'Carson Etter', shortName: 'Etter', nationality: 'US' },
+  'nikita-johnson': { id: 'nikita-johnson', name: 'Nikita Johnson', shortName: 'N. Johnson', nationality: 'US' },
+  'monteiro-n': { id: 'monteiro-n', name: 'Nicholas Monteiro', shortName: 'Monteiro', nationality: 'BR' },
+  'de-tullio': { id: 'de-tullio', name: 'Alessandro de Tullio', shortName: 'de Tullio', nationality: 'IT' },
+  'stati': { id: 'stati', name: 'Nicolas Stati', shortName: 'Stati', nationality: 'AU' },
+  'escotto': { id: 'escotto', name: 'Ricardo Escotto', shortName: 'Escotto', nationality: 'MX' },
+  'koreiba': { id: 'koreiba', name: 'Alexander Koreiba', shortName: 'Koreiba', nationality: 'US' },
 }
 
 export function getDriver(id: string): Driver | null {

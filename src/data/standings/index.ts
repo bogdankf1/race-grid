@@ -158,6 +158,7 @@ import { porscheSupercupStandings2026 } from './porsche-supercup-2026'
 import { f1AcademyStandings2026 } from './f1-academy-2026'
 import { moto2Standings2026 } from './moto2-2026'
 import { moto3Standings2026 } from './moto3-2026'
+import { indyNxtStandings2026 } from './indy-nxt-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -319,6 +320,7 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-academy-2026': f1AcademyStandings2026,
   'moto2-2026': moto2Standings2026,
   'moto3-2026': moto3Standings2026,
+  'indy-nxt-2026': indyNxtStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {

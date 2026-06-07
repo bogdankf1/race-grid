@@ -32,6 +32,7 @@ import { porscheSupercup2026 } from './porsche-supercup-2026'
 import { f1Academy2026 } from './f1-academy-2026'
 import { moto22026 } from './moto2-2026'
 import { moto32026 } from './moto3-2026'
+import { indyNxt2026 } from './indy-nxt-2026'
 
 interface SeriesMeta {
   id: string
@@ -75,6 +76,7 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'f1-academy', name: 'F1 Academy', shortName: 'F1A', color: '#FF6B9D', textColor: '#fff', wikipedia: 'F1_Academy' },
   { id: 'moto2', name: 'Moto2', shortName: 'M2', color: '#0066CC', textColor: '#fff', wikipedia: 'Moto2' },
   { id: 'moto3', name: 'Moto3', shortName: 'M3', color: '#FF6900', textColor: '#fff', wikipedia: 'Moto3' },
+  { id: 'indy-nxt', name: 'Indy NXT by Firestone', shortName: 'NXT', color: '#A6CE39', textColor: '#000', wikipedia: 'Indy_NXT' },
 ]
 
 // 2026 events — eagerly loaded (current year, used by 95%+ of users)
@@ -93,6 +95,7 @@ const EVENTS_2026: Record<string, RaceEvent[]> = {
   'f1-academy': f1Academy2026,
   moto2: moto22026,
   moto3: moto32026,
+  'indy-nxt': indyNxt2026,
 }
 
 // Cache for lazily loaded historical years
@@ -107,7 +110,7 @@ export interface SeriesGroup {
 }
 
 export const SERIES_GROUPS: SeriesGroup[] = [
-  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'f1-academy', 'fe', 'indycar', 'superformula'] },
+  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'f1-academy', 'fe', 'indycar', 'indy-nxt', 'superformula'] },
   { labelKey: 'group.endurance', ids: ['wec', 'elms', 'mlmc', 'imsa', 'igtc', '24h'] },
   { labelKey: 'group.gt', ids: ['dtm', 'gtwc', 'gtwcam', 'gtwcasia', 'gtwcau', 'britgt', 'supergt', 'nls', 'supercars', 'porsche-supercup'] },
   { labelKey: 'group.stock', ids: ['nascar'] },

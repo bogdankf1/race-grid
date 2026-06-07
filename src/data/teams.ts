@@ -508,6 +508,12 @@ const TEAMS: Record<string, Team> = {
   // Moto3 chassis manufacturers (used in constructors standings)
   'ktm': { id: 'ktm', name: 'KTM', country: 'AT' },
   'honda': { id: 'honda', name: 'Honda', country: 'JP' },
+  // Indy NXT 2026 — feeder teams (andretti-global, chip-ganassi-racing,
+  // a-j-foyt-enterprises, juncos-hollinger already defined above)
+  'hmd-motorsports': { id: 'hmd-motorsports', name: 'HMD Motorsports', country: 'US' },
+  'abel-motorsports': { id: 'abel-motorsports', name: 'Abel Motorsports', country: 'US' },
+  'cape-motorsports': { id: 'cape-motorsports', name: 'Cape Motorsports', country: 'US' },
+  'cusick-morgan-motorsports': { id: 'cusick-morgan-motorsports', name: 'Cusick Morgan Motorsports', country: 'US' },
 }
 
 export function getTeam(id: string): Team | null {

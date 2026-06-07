@@ -850,6 +850,42 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
     JP: [{ name: 'Hulu Japan' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
     CO: [{ name: 'ESPN Deportes' }, { name: 'MotoGP VideoPass', url: 'https://videopass.motogp.com' }],
   },
+  'indy-nxt': {
+    US: [
+      { name: 'FOX / FS1 / FS2', note: 'All races live on FOX broadcast network and FS1/FS2' },
+      { name: 'FOX Sports App', url: 'https://www.foxsports.com', note: 'Streaming with TV login' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Official direct-to-consumer streaming' },
+    ],
+    UA: [
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Official streaming service' },
+    ],
+    GB: [
+      { name: 'Sky Sports', note: 'Live race coverage with IndyCar package' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    DE: [
+      { name: 'Sky Sport', note: 'Live coverage of selected races' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    PL: [
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    AU: [
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    BR: [
+      { name: 'ESPN Brasil', note: 'Selected races' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    JP: [
+      { name: 'GAORA Sports', note: 'Live coverage' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+    CO: [
+      { name: 'ESPN', note: 'Selected races' },
+      { name: 'INDYCAR LIVE', url: 'https://www.indycar.com', note: 'Streaming' },
+    ],
+  },
   'f1-academy': {
     US: [
       { name: 'Apple TV', url: 'https://tv.apple.com', note: 'Included in F1 package — all sessions' },

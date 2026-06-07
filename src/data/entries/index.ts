@@ -171,6 +171,8 @@ import { f1AcademyEntries2026 } from './f1-academy-2026'
 import { moto2Entries2026 } from './moto2-2026'
 // Moto3
 import { moto3Entries2026 } from './moto3-2026'
+// Indy NXT
+import { indyNxtEntries2026 } from './indy-nxt-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -345,6 +347,8 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'moto2-2026': moto2Entries2026,
   // Moto3
   'moto3-2026': moto3Entries2026,
+  // Indy NXT
+  'indy-nxt-2026': indyNxtEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {
