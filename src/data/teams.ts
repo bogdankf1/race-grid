@@ -463,6 +463,15 @@ const TEAMS: Record<string, Team> = {
   'racers-edge-motorsports-with-wtr-andretti': { id: 'racers-edge-motorsports-with-wtr-andretti', name: 'Racers Edge Motorsports with WTR-Andretti', country: '' },
   'the-spirit-of-fff-racing': { id: 'the-spirit-of-fff-racing', name: 'The Spirit of FFF Racing', country: '' },
   'tresor-attempto': { id: 'tresor-attempto', name: 'Tresor Attempto Racing', country: 'DE' },
+  // Porsche Supercup 2026 additions
+  'bwt-lechner-racing': { id: 'bwt-lechner-racing', name: 'BWT Lechner Racing', country: 'AT' },
+  'dinamic-motorsport': { id: 'dinamic-motorsport', name: 'Dinamic Motorsport', country: 'IT' },
+  'schumacher-clrt': { id: 'schumacher-clrt', name: 'Schumacher CLRT', country: 'FR' },
+  'rgb-racing': { id: 'rgb-racing', name: 'RGB Racing', country: 'ES' },
+  'martinet-by-almeras': { id: 'martinet-by-almeras', name: 'Martinet by Alméras', country: 'FR' },
+  'ombra-racing': { id: 'ombra-racing', name: 'Ombra Racing', country: 'IT' },
+  'looping-by-cartech': { id: 'looping-by-cartech', name: 'Looping by CarTech', country: 'DE' },
+  'target-competition': { id: 'target-competition', name: 'Target Competition', country: 'IT' },
 }
 
 export function getTeam(id: string): Team | null {

@@ -807,6 +807,27 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'ppihc.org', url: 'https://ppihc.org/', note: 'Pikes Peak — official livestream' },
     ],
   },
+  'porsche-supercup': {
+    US: [
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'Included with F1 TV — all sessions live' },
+    ],
+    UA: [
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+    ],
+    GB: [
+      { name: 'Sky Sports F1', url: 'https://www.skysports.com/f1', note: 'Live race coverage on F1 weekends' },
+      { name: 'F1 TV Pro', url: 'https://f1tv.formula1.com', note: 'All sessions live' },
+    ],
+    DE: [
+      { name: 'Sky Deutschland', url: 'https://www.sky.de', note: 'All sessions live' },
+      { name: 'ServusTV On', url: 'https://www.servustv.com/sport/b/porsche-supercup/', note: 'Free livestream — all races' },
+    ],
+    PL: [],
+    AU: [],
+    BR: [],
+    JP: [],
+    CO: [],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {
