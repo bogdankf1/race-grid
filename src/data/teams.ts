@@ -514,6 +514,22 @@ const TEAMS: Record<string, Team> = {
   'abel-motorsports': { id: 'abel-motorsports', name: 'Abel Motorsports', country: 'US' },
   'cape-motorsports': { id: 'cape-motorsports', name: 'Cape Motorsports', country: 'US' },
   'cusick-morgan-motorsports': { id: 'cusick-morgan-motorsports', name: 'Cusick Morgan Motorsports', country: 'US' },
+  // NASCAR Xfinity 2026 — Xfinity-specific teams
+  // (joe-gibbs-racing, hendrick-motorsports, richard-childress-racing, haas-factory-team already defined above)
+  'jr-motorsports': { id: 'jr-motorsports', name: 'JR Motorsports', country: 'US' },
+  'sam-hunt-racing': { id: 'sam-hunt-racing', name: 'Sam Hunt Racing', country: 'US' },
+  'youngs-motorsports': { id: 'youngs-motorsports', name: "Young's Motorsports", country: 'US' },
+  'viking-motorsports': { id: 'viking-motorsports', name: 'Viking Motorsports', country: 'US' },
+  'alpha-prime-racing': { id: 'alpha-prime-racing', name: 'Alpha Prime Racing', country: 'US' },
+  'big-machine-racing': { id: 'big-machine-racing', name: 'Big Machine Racing', country: 'US' },
+  'jordan-anderson-racing': { id: 'jordan-anderson-racing', name: 'Jordan Anderson Racing', country: 'US' },
+  'jeremy-clements-racing': { id: 'jeremy-clements-racing', name: 'Jeremy Clements Racing', country: 'US' },
+  'rss-racing': { id: 'rss-racing', name: 'RSS Racing', country: 'US' },
+  'ss-green-light-racing': { id: 'ss-green-light-racing', name: 'SS-Green Light Racing', country: 'US' },
+  // NASCAR manufacturers (Honda already defined above)
+  'chevrolet': { id: 'chevrolet', name: 'Chevrolet', country: 'US' },
+  'ford': { id: 'ford', name: 'Ford', country: 'US' },
+  'toyota': { id: 'toyota', name: 'Toyota', country: 'JP' },
 }
 
 export function getTeam(id: string): Team | null {

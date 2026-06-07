@@ -919,6 +919,37 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'F1 Academy YouTube', url: 'https://www.youtube.com/@F1Academy', note: 'Free livestream — qualifying & races' },
     ],
   },
+  'nascar-xfinity': {
+    US: [
+      { name: 'The CW', url: 'https://www.cwtv.com', note: 'Exclusive live — all 33 races on free-to-air TV' },
+      { name: 'The CW App', url: 'https://www.cwtv.com/cwapp/', note: 'Practice & qualifying livestream' },
+      { name: 'ESPN Unlimited', url: 'https://plus.espn.com', note: 'Streaming for race broadcasts' },
+    ],
+    UA: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Select content & highlights' },
+    ],
+    GB: [
+      { name: 'Premier Sports', url: 'https://premiersports.com', note: 'Selected races' },
+    ],
+    DE: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    PL: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    AU: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    BR: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+    JP: [
+      { name: 'Motorsport.tv', url: 'https://motorsport.tv', note: 'Live coverage' },
+    ],
+    CO: [
+      { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {
