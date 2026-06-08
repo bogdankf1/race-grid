@@ -222,15 +222,16 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
           </div>
         )}
 
-        {/* Search */}
-        {series && series.events.length > 0 && (
-          <div style={{ marginBottom: 16 }}>
+        {/* Year + Search */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, flexWrap: 'wrap' }}>
+          <YearSelector year={year} years={AVAILABLE_YEARS} onChange={setYear} />
+          {series && series.events.length > 0 && (
             <div
               className="rg-control"
               style={{
                 display: 'flex', alignItems: 'center', gap: 8, padding: '0 12px',
                 borderRadius: 10, background: 'var(--rg-btn-bg)', border: '1px solid var(--rg-border)',
-                maxWidth: 480,
+                flex: 1, minWidth: 200, maxWidth: 480,
               }}
             >
               <Search style={{ width: 15, height: 15, color: 'var(--rg-text3)', flexShrink: 0 }} />
@@ -245,10 +246,8 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
                 }}
               />
             </div>
-          </div>
-        )}
-
-        <YearSelector year={year} years={AVAILABLE_YEARS} onChange={setYear} marginBottom={20} />
+          )}
+        </div>
 
         {/* Tab bar */}
         {series && (

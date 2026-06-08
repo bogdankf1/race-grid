@@ -135,6 +135,37 @@ export function CircuitsPageClient() {
               }}
             />
           </div>
+          {/* Track type dropdown — compact, sits left of the series filter */}
+          <div style={{ position: 'relative', width: 130, flexShrink: 0 }}>
+            <select
+              value={typeFilter}
+              onChange={e => setTypeFilter(e.target.value as TypeFilter)}
+              className="rg-control"
+              style={{
+                width: '100%',
+                height: 'var(--rg-control-h)',
+                padding: '0 28px 0 12px',
+                borderRadius: 10,
+                border: '1px solid var(--rg-border)',
+                background: 'var(--rg-btn-bg)',
+                color: 'var(--rg-text)',
+                fontSize: 13,
+                fontWeight: 500,
+                cursor: 'pointer',
+                appearance: 'none',
+                outline: 'none',
+              }}
+            >
+              <option value="all">{locale === 'uk' ? 'Усі типи' : 'All types'}</option>
+              {TYPE_FILTERS.filter(tf => tf !== 'all').map(tf => (
+                <option key={tf} value={tf}>{getCircuitTypeLabel(tf, locale)}</option>
+              ))}
+            </select>
+            <ChevronDown style={{
+              position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)',
+              width: 14, height: 14, color: 'var(--rg-text3)', pointerEvents: 'none',
+            }} />
+          </div>
           <SeriesFilterDropdown
             selectedIds={filterSeriesIds}
             onToggle={(id) => {
@@ -147,38 +178,6 @@ export function CircuitsPageClient() {
             locale={locale}
             showProgress={false}
           />
-        </div>
-
-        {/* Track type dropdown */}
-        <div className="rg-type-filter" style={{ position: 'relative', marginBottom: 24, maxWidth: 480 }}>
-          <select
-            value={typeFilter}
-            onChange={e => setTypeFilter(e.target.value as TypeFilter)}
-            className="rg-control"
-            style={{
-              width: '100%',
-              height: 'var(--rg-control-h)',
-              padding: '0 32px 0 12px',
-              borderRadius: 10,
-              border: '1px solid var(--rg-border)',
-              background: 'var(--rg-btn-bg)',
-              color: 'var(--rg-text)',
-              fontSize: 13,
-              fontWeight: 500,
-              cursor: 'pointer',
-              appearance: 'none',
-              outline: 'none',
-            }}
-          >
-            <option value="all">{locale === 'uk' ? 'Усі типи' : 'All types'}</option>
-            {TYPE_FILTERS.filter(tf => tf !== 'all').map(tf => (
-              <option key={tf} value={tf}>{getCircuitTypeLabel(tf, locale)}</option>
-            ))}
-          </select>
-          <ChevronDown style={{
-            position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
-            width: 14, height: 14, color: 'var(--rg-text3)', pointerEvents: 'none',
-          }} />
         </div>
 
         {/* Circuit list */}
