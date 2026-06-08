@@ -2,6 +2,8 @@
 
 This runbook is executed manually via Claude Code. It finds sessions that finished since the last update and adds their official results.
 
+> **Start in a worktree.** When running this by hand, kick off with `/new-session "update results"` first so all changes land in an isolated worktree (our default parallelized workflow — see CLAUDE.md). Then run `/update-results` inside it.
+
 ---
 
 ## Procedure
