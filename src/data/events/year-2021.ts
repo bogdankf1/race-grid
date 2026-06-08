@@ -32,6 +32,7 @@ import { moto32021 } from '../moto3-2021'
 import { indyNxt2021 } from '../indy-nxt-2021'
 import { nascarXfinity2021 } from '../nascar-xfinity-2021'
 import { nascarTruck2021 } from '../nascar-truck-2021'
+import { impc2021 } from '../impc-2021'
 
 // Note: GTWC Asia 2021 is intentionally absent — the entire season was cancelled
 // by SRO due to COVID-19 travel restrictions (no events took place that year).
@@ -69,4 +70,5 @@ export const events2021: Record<string, RaceEvent[]> = {
   'indy-nxt': indyNxt2021,
   'nascar-xfinity': nascarXfinity2021,
   'nascar-truck': nascarTruck2021,
+  'impc': impc2021,
 }

@@ -210,6 +210,12 @@ import { nascarTruckEntries2023 } from './nascar-truck-2023'
 import { nascarTruckEntries2024 } from './nascar-truck-2024'
 import { nascarTruckEntries2025 } from './nascar-truck-2025'
 import { nascarTruckEntries2026 } from './nascar-truck-2026'
+import { impcEntries2021 } from './impc-2021'
+import { impcEntries2022 } from './impc-2022'
+import { impcEntries2023 } from './impc-2023'
+import { impcEntries2024 } from './impc-2024'
+import { impcEntries2025 } from './impc-2025'
+import { impcEntries2026 } from './impc-2026'
 
 const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'f1-2022': f1Entries2022,
@@ -423,6 +429,12 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'nascar-truck-2024': nascarTruckEntries2024,
   'nascar-truck-2025': nascarTruckEntries2025,
   'nascar-truck-2026': nascarTruckEntries2026,
+  'impc-2021': impcEntries2021,
+  'impc-2022': impcEntries2022,
+  'impc-2023': impcEntries2023,
+  'impc-2024': impcEntries2024,
+  'impc-2025': impcEntries2025,
+  'impc-2026': impcEntries2026,
 }
 
 export function getEntries(seriesId: string, year: number): EntryItem[] {

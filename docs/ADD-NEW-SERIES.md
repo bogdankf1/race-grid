@@ -17,7 +17,7 @@ Before starting, gather:
 - **Official series website** (for calendar, results, standings)
 - **Series branding** — official name, abbreviation, brand color
 - **Logo** — SVG preferred (can be PNG as fallback)
-- **Which filter group** it belongs to: Open Wheel, Endurance, GT / Touring, Stock Car, Rally (or a new group)
+- **Which filter group** it belongs to: Open Wheel, Endurance, GT / Touring, Stock Car, Rally, Motorcycle, Special Events (or a new group)
 
 **Note:** This runbook adds the series for the **current year only** (2026). To backfill older years (e.g., 2025), use the `/support-year` skill afterward. The year switcher in the app lets users browse any supported year — a missing year will simply show the series with zero events, which is fine until backfilled.
 
@@ -29,7 +29,7 @@ Before starting, gather:
 
 Pick a short, kebab-case identifier. This ID is used everywhere — files, URLs, data keys.
 
-Examples: `f1`, `f2`, `f3`, `indycar`, `nascar`, `wec`, `imsa`, `wrc`, `dakar`, `dtm`, `gtwc`, `gtwcam`, `gtwcasia`, `gtwcau`, `britgt`, `nls`, `supergt`, `elms`, `mlmc`, `igtc`, `superformula`, `supercars`, `motogp`, `fe`, `24h`, `wrx`, `special`
+Examples: `f1`, `f2`, `f3`, `f1-academy`, `indycar`, `indy-nxt`, `nascar`, `nascar-xfinity`, `nascar-truck`, `wec`, `imsa`, `impc`, `wrc`, `dakar`, `dtm`, `gtwc`, `gtwcam`, `gtwcasia`, `gtwcau`, `britgt`, `nls`, `supergt`, `elms`, `mlmc`, `igtc`, `superformula`, `supercars`, `motogp`, `moto2`, `moto3`, `porsche-supercup`, `fe`, `24h`, `wrx`, `special`
 
 Rules:
 - Lowercase, kebab-case (no spaces, underscores, or capitals)
@@ -169,7 +169,7 @@ Edit `src/data/series-registry.ts` — add the series ID to the appropriate grou
 
 ```typescript
 export const SERIES_GROUPS: SeriesGroup[] = [
-  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'fe', 'indycar', 'superformula', '<new-id>'] },
+  { labelKey: 'group.openwheel', ids: ['f1', 'f2', 'f3', 'f1-academy', 'fe', 'indycar', 'indy-nxt', 'superformula', '<new-id>'] },
   // ...
 ]
 ```

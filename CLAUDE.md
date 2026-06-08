@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 34 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
+Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 35 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
 
 ## Workflow — isolate every change in a worktree
 
@@ -53,7 +53,7 @@ Invoke via the Skill tool. If the user describes a task that matches a skill but
 
 ### Mid-season data verification
 **When:** A race is canceled/rescheduled, geopolitical event affects a host country, monthly routine check, or user reports an error.
-**How:** Follow `docs/VERIFY-SEASON-DATA.md` — it walks through checking all 34 series against official sources and fixing discrepancies.
+**How:** Follow `docs/VERIFY-SEASON-DATA.md` — it walks through checking all 35 series against official sources and fixing discrepancies.
 **Command:** "Verify all race data" or "Check if calendar data is up to date"
 
 ### Race results update
@@ -77,7 +77,7 @@ Invoke via the Skill tool. If the user describes a task that matches a skill but
 ## Series groups (for filter dropdown)
 
 - **Open Wheel:** F1, F1 Academy, IndyCar, Indy NXT, Super Formula
-- **Endurance:** WEC, ELMS, MLMC, IMSA, IGTC, 24H Series
+- **Endurance:** WEC, ELMS, MLMC, IMSA, IMSA Michelin Pilot Challenge, IGTC, 24H Series
 - **GT / Touring:** DTM, GTWC, GTWC America, GTWC Asia, GTWC Australia, British GT, Super GT, NLS, Supercars, Porsche Supercup
 - **Stock Car:** NASCAR Cup, NASCAR Xfinity, NASCAR Truck
 - **Motorcycle:** MotoGP, Moto2, Moto3

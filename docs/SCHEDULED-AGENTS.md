@@ -8,7 +8,7 @@ Race Grid uses three Claude Code routines (remote agents running on a cron sched
 |---|---|---|---|
 | `race-grid-results-weekly` | Sun 22:00 | `/update-results` | PR with new entries in `src/data/results/<series>-<year>.ts` |
 | `race-grid-standings-weekly` | Mon 12:00 | `/update-standings` | PR with updated `src/data/standings/<series>-<year>.ts` |
-| `race-grid-calendar-monthly` | 1st of month, 06:00 | "Run the playbook in `docs/VERIFY-SEASON-DATA.md` for all 27 series. Open a PR with any corrections; open an issue if no diffs but you flagged a concern." | PR or issue with calendar discrepancies |
+| `race-grid-calendar-monthly` | 1st of month, 06:00 | "Run the playbook in `docs/VERIFY-SEASON-DATA.md` for all 35 series. Open a PR with any corrections; open an issue if no diffs but you flagged a concern." | PR or issue with calendar discrepancies |
 
 The schedules are deliberately staggered so results land before standings (standings depend on the latest race results being recorded), and the verify routine runs at a low-traffic hour at the start of each month.
 
@@ -50,7 +50,7 @@ Each routine is created with `/schedule` and a cron expression. Run these once i
 /schedule create
   name: race-grid-calendar-monthly
   cron: 0 6 1 * *
-  prompt: Run the playbook in docs/VERIFY-SEASON-DATA.md across all 27 series. Open a PR with any corrections needed. If all data matches official sources, open an issue summarising what was verified instead.
+  prompt: Run the playbook in docs/VERIFY-SEASON-DATA.md across all 35 series. Open a PR with any corrections needed. If all data matches official sources, open an issue summarising what was verified instead.
 ```
 
 ## Failure modes & recovery

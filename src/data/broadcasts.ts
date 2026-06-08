@@ -981,6 +981,37 @@ const BROADCASTS: Record<string, Partial<Record<CountryCode, BroadcastInfo[]>>> 
       { name: 'NASCAR YouTube', url: 'https://www.youtube.com/@NASCAR', note: 'Highlights' },
     ],
   },
+  impc: {
+    US: [
+      { name: 'Peacock', url: 'https://www.peacocktv.com/sports/imsa', note: 'Streaming — all rounds' },
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Free flag-to-flag streaming' },
+    ],
+    UA: [
+      { name: 'YouTube — IMSA Official', url: 'https://www.youtube.com/@IMSAOfficial', note: 'Free live stream for international viewers' },
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+    GB: [
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+    DE: [
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+    PL: [
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+    AU: [
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+    BR: [
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+    JP: [
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+    CO: [
+      { name: 'IMSA TV', url: 'https://www.imsa.com/tvlive/', note: 'Official live stream' },
+    ],
+  },
 }
 
 export function getBroadcasts(seriesId: string, countryCode: CountryCode): BroadcastInfo[] {

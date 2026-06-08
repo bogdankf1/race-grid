@@ -8,7 +8,7 @@ A public **Model Context Protocol** server for motorsport. Connect any MCP-aware
 - *"What's the IndyCar driver standings right now?"*
 - *"Give me every May 2026 race weekend across all series."*
 
-Backed by the same data that powers [race-grid.app](https://race-grid.app) — 27 racing series, 2021–2026 seasons, 90+ circuits, full session-level UTC timestamps.
+Backed by the same data that powers [race-grid.app](https://race-grid.app) — 35 racing series, 2021–2026 seasons, 90+ circuits, full session-level UTC timestamps.
 
 ---
 
@@ -81,7 +81,7 @@ Then point any stdio MCP client at `npx tsx <abs-path>/mcp/src/stdio.ts`.
 All seven tools return JSON in `content[0].text`. Pass JSON parameters in tool-call args.
 
 ### `list_series`
-List all 27 racing series and the years available. Call this first to discover valid `series_id` values.
+List all 35 racing series and the years available. Call this first to discover valid `series_id` values.
 
 No arguments.
 

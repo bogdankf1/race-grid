@@ -34,6 +34,7 @@ import { moto32023 } from '../moto3-2023'
 import { indyNxt2023 } from '../indy-nxt-2023'
 import { nascarXfinity2023 } from '../nascar-xfinity-2023'
 import { nascarTruck2023 } from '../nascar-truck-2023'
+import { impc2023 } from '../impc-2023'
 
 export const events2023: Record<string, RaceEvent[]> = {
   'f1': f12023,
@@ -70,4 +71,5 @@ export const events2023: Record<string, RaceEvent[]> = {
   'indy-nxt': indyNxt2023,
   'nascar-xfinity': nascarXfinity2023,
   'nascar-truck': nascarTruck2023,
+  'impc': impc2023,
 }

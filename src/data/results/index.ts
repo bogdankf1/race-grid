@@ -196,6 +196,12 @@ import { nascarTruckResults2023 } from './nascar-truck-2023'
 import { nascarTruckResults2024 } from './nascar-truck-2024'
 import { nascarTruckResults2025 } from './nascar-truck-2025'
 import { nascarTruckResults2026 } from './nascar-truck-2026'
+import { impcResults2021 } from './impc-2021'
+import { impcResults2022 } from './impc-2022'
+import { impcResults2023 } from './impc-2023'
+import { impcResults2024 } from './impc-2024'
+import { impcResults2025 } from './impc-2025'
+import { impcResults2026 } from './impc-2026'
 
 const ALL_RESULTS: Record<string, EventResults> = {
   ...f1Results2021,
@@ -393,6 +399,12 @@ const ALL_RESULTS: Record<string, EventResults> = {
   ...nascarTruckResults2024,
   ...nascarTruckResults2025,
   ...nascarTruckResults2026,
+  ...impcResults2021,
+  ...impcResults2022,
+  ...impcResults2023,
+  ...impcResults2024,
+  ...impcResults2025,
+  ...impcResults2026,
 }
 
 export function getResult(eventId: string, sessionType: SessionType): RaceResult | null {

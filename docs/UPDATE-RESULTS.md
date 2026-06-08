@@ -43,6 +43,7 @@ For each finished session without a result, search **official sources first**:
 | Porsche Supercup | porsche.com motorsport / pitwall.app/series/porsche-mobil-1-supercup | Wikipedia "20XX Porsche Supercup" |
 | WEC | fiawec.com/en/results |
 | IMSA | imsa.com/results |
+| IMSA Michelin Pilot Challenge | imsa.com/imsa-michelin-pilot-challenge/results | Wikipedia "20XX IMSA Michelin Pilot Challenge season" — multi-class (GS + TCR) |
 | ELMS | europeanlemansseries.com results |
 | MLMC | lemanscup.com results |
 | IGTC | intercontinentalgtchallenge.com/results |

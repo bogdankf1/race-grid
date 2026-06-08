@@ -194,6 +194,12 @@ import { nascarTruckStandings2023 } from './nascar-truck-2023'
 import { nascarTruckStandings2024 } from './nascar-truck-2024'
 import { nascarTruckStandings2025 } from './nascar-truck-2025'
 import { nascarTruckStandings2026 } from './nascar-truck-2026'
+import { impcStandings2021 } from './impc-2021'
+import { impcStandings2022 } from './impc-2022'
+import { impcStandings2023 } from './impc-2023'
+import { impcStandings2024 } from './impc-2024'
+import { impcStandings2025 } from './impc-2025'
+import { impcStandings2026 } from './impc-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -391,6 +397,12 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'nascar-truck-2024': nascarTruckStandings2024,
   'nascar-truck-2025': nascarTruckStandings2025,
   'nascar-truck-2026': nascarTruckStandings2026,
+  'impc-2021': impcStandings2021,
+  'impc-2022': impcStandings2022,
+  'impc-2023': impcStandings2023,
+  'impc-2024': impcStandings2024,
+  'impc-2025': impcStandings2025,
+  'impc-2026': impcStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {
