@@ -2,6 +2,8 @@
 
 This runbook is executed manually via Claude Code. It finds series with outdated or missing standings and updates them from official sources.
 
+> **Start in a worktree.** When running this by hand, kick off with `/new-session "update standings"` first so all changes land in an isolated worktree (our default parallelized workflow — see CLAUDE.md). Then run `/update-standings` inside it.
+
 ---
 
 ## Procedure

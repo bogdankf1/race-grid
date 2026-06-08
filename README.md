@@ -37,6 +37,10 @@ npx tsx scripts/validate-data.ts  # Referential-integrity check across all data
 npx next build                 # Static export to ./out
 ```
 
+### Workflow
+
+Every change — feature, fix, or data update — starts in an isolated git worktree so work stays parallelizable and the main checkout stays clean. In Claude Code, run `/new-session "<what we're working on>"` to spin one up (it forks from `main`, installs deps, and picks a free dev port), and `/clear-sessions` to remove worktrees once their branch is merged.
+
 ---
 
 ## AI Infrastructure
