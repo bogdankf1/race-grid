@@ -7,7 +7,7 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { AVAILABLE_YEARS, SERIES_META, SERIES_GROUPS } from '@/data/series-registry'
+import { AVAILABLE_YEARS, SERIES_GROUPS, getVisibleSeries } from '@/data/series-registry'
 import { useYearData } from '@/hooks/useYearData'
 import type { SeriesConfig, SessionType } from '@/lib/types'
 import { SeriesLogo } from '@/components/SeriesLogo'
@@ -17,6 +17,7 @@ const ALL_SESSION_TYPES: SessionType[] = [
   'practice', 'warmup', 'stage', 'shakedown', 'endurance',
 ]
 import { SeriesFilterDropdown } from '@/components/SeriesFilterDropdown'
+import { YearSelector } from '@/components/YearSelector'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
@@ -50,7 +51,7 @@ export function SeriesPageClient() {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
   const [year, setYear] = useLocalStorage<number>('race-grid:series-year', AVAILABLE_YEARS[0])
   const filterSeriesIds = selectedSeries
   const [query, setQuery] = useState('')
@@ -59,9 +60,8 @@ export function SeriesPageClient() {
 
   const allSeries = useYearData(year)
   const groupedSeries = useMemo(() => {
-    const all = allSeries
     const seriesSet = new Set(filterSeriesIds)
-    let filtered = all.filter(s => seriesSet.has(s.id))
+    let filtered = allSeries.filter(s => seriesSet.has(s.id))
     if (query.trim()) {
       const q = query.toLowerCase()
       filtered = filtered.filter(s =>
@@ -75,7 +75,7 @@ export function SeriesPageClient() {
         series: group.ids.map(id => byId.get(id)).filter((s): s is SeriesConfig => !!s),
       }))
       .filter(g => g.series.length > 0)
-  }, [year, filterSeriesIds, query])
+  }, [allSeries, filterSeriesIds, query])
 
   const toggleSeries = (id: string) => {
     const updated = selectedSeries.includes(id) ? selectedSeries.filter(s => s !== id) : [...selectedSeries, id]
@@ -137,29 +137,7 @@ export function SeriesPageClient() {
             locale={locale}
             showProgress={false}
           />
-        </div>
-
-        {/* Year selector */}
-        <div style={{ display: 'flex', gap: 6, marginBottom: 24 }}>
-          {AVAILABLE_YEARS.map(y => (
-            <button
-              key={y}
-              onClick={() => setYear(y)}
-              style={{
-                padding: '6px 16px',
-                borderRadius: 8,
-                fontSize: 14,
-                fontWeight: 600,
-                border: '1px solid var(--rg-border)',
-                background: year === y ? 'var(--rg-link)' : 'transparent',
-                color: year === y ? '#fff' : 'var(--rg-text2)',
-                cursor: 'pointer',
-                transition: 'all 0.15s',
-              }}
-            >
-              {y}
-            </button>
-          ))}
+          <YearSelector year={year} years={AVAILABLE_YEARS} onChange={setYear} />
         </div>
 
         {/* Series list grouped */}

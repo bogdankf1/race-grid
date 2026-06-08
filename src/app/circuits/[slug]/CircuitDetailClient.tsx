@@ -11,8 +11,9 @@ import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import type { SessionType } from '@/lib/types'
 import { getCircuitWithEvents, type CircuitEventInfo } from '@/data/circuit-events'
 import { getCircuitTypeLabel } from '@/data/circuits'
-import { SERIES_META } from '@/data/series-registry'
+import { getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
 import { Header } from '@/components/Header'
+import { YearSelector } from '@/components/YearSelector'
 
 const ALL_SESSION_TYPES: SessionType[] = [
   'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
@@ -32,7 +33,7 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
@@ -138,7 +139,7 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
         {/* Series that race here */}
         <div style={{ display: 'flex', gap: 6, marginBottom: 32, flexWrap: 'wrap' }}>
           {circuit.seriesIds.map(sid => {
-            const meta = SERIES_META.find(m => m.id === sid)
+            const meta = getSeriesMeta(sid)
             if (!meta) return null
             return (
               <Link
@@ -164,24 +165,7 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
           })}
         </div>
 
-        {/* Year selector */}
-        <div style={{ display: 'flex', gap: 6, marginBottom: 20 }}>
-          {years.map(y => (
-            <button
-              key={y}
-              onClick={() => setYear(y)}
-              style={{
-                padding: '6px 16px', borderRadius: 8, fontSize: 14, fontWeight: 600,
-                border: '1px solid var(--rg-border)',
-                background: year === y ? 'var(--rg-link)' : 'transparent',
-                color: year === y ? '#fff' : 'var(--rg-text2)',
-                cursor: 'pointer', transition: 'all 0.15s',
-              }}
-            >
-              {y}
-            </button>
-          ))}
-        </div>
+        <YearSelector year={year} years={years} onChange={setYear} marginBottom={20} />
 
         {/* Events for selected year */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -200,7 +184,7 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
 }
 
 function EventRow({ event }: { event: CircuitEventInfo; spoilerFree: boolean }) {
-  const meta = SERIES_META.find(m => m.id === event.seriesId)
+  const meta = getSeriesMeta(event.seriesId)
 
   return (
     <Link

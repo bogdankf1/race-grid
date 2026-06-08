@@ -10,7 +10,7 @@ import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import type { SessionType } from '@/lib/types'
 import { getAllCircuitsWithEvents, type CircuitWithEvents } from '@/data/circuit-events'
 import { getCircuitTypeLabel } from '@/data/circuits'
-import { SERIES_META } from '@/data/series-registry'
+import { getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
 import { Header } from '@/components/Header'
 
 const ALL_SESSION_TYPES: SessionType[] = [
@@ -35,7 +35,7 @@ export function CircuitsPageClient() {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
@@ -242,7 +242,7 @@ function CircuitRow({ circuit, locale }: { circuit: CircuitWithEvents; locale: L
       {/* Right: series badges */}
       <div style={{ display: 'flex', gap: 4, flexShrink: 0, flexWrap: 'wrap', justifyContent: 'flex-end', maxWidth: 200 }}>
         {circuit.seriesIds.map(sid => {
-          const meta = SERIES_META.find(m => m.id === sid)
+          const meta = getSeriesMeta(sid)
           if (!meta) return null
           return (
             <span

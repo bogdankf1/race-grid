@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <defs>
+    <linearGradient id="purpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B2C91"/>
+      <stop offset="100%" stop-color="#4A1B6B"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="40" rx="6" fill="url(#purpGrad)"/>
+  <path d="M14 8 L17 16 L25 16 L19 21 L21 29 L14 24 L7 29 L9 21 L3 16 L11 16 Z" fill="#F5C842" opacity="0.95"/>
+  <text x="32" y="24" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="white" letter-spacing="2">SPECIAL</text>
+  <text x="32" y="34" font-family="Arial, sans-serif" font-weight="700" font-size="8" fill="#F5C842" letter-spacing="3">EVENTS</text>
+</svg>

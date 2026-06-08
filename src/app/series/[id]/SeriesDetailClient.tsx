@@ -8,7 +8,7 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
+import { AVAILABLE_YEARS, getFamilyForSeries, getFamilyMembers, getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
 import { useYearData } from '@/hooks/useYearData'
 import { getCircuit } from '@/data/circuits'
 import { getResult } from '@/data/results'
@@ -19,6 +19,7 @@ import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
 import type { SeriesConfig, RaceEvent, SessionType } from '@/lib/types'
 import { SeriesLogo } from '@/components/SeriesLogo'
+import { YearSelector } from '@/components/YearSelector'
 import { Header } from '@/components/Header'
 
 const ALL_SESSION_TYPES: SessionType[] = [
@@ -38,7 +39,7 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
   const [year, setYear] = useLocalStorage<number>('race-grid:series-detail-year', AVAILABLE_YEARS[0])
 
   useEffect(() => { applyTheme(theme) }, [theme])
@@ -48,7 +49,11 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
     return allSeries.find(s => s.id === seriesId) ?? null
   }, [seriesId, allSeries])
 
-  const meta = SERIES_META.find(s => s.id === seriesId)
+  const meta = getSeriesMeta(seriesId)
+  const family = getFamilyForSeries(seriesId)
+  const familySiblings = family
+    ? getFamilyMembers(family.id).filter(m => m.id !== seriesId)
+    : []
   const totalRounds = series ? Math.max(series.events.length, ...series.events.map(e => e.round ?? 0)) : 0
   const now = Date.now()
   const completedRounds = series ? series.events.filter(event => {
@@ -182,6 +187,29 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
           </div>
         </div>
 
+        {/* Family — link to siblings if part of a family */}
+        {family && familySiblings.length > 0 && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--rg-text3)' }}>
+              {family.name} Family
+            </span>
+            {familySiblings.map(sibling => (
+              <Link
+                key={sibling.id}
+                href={`/series/${sibling.id}`}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', padding: '4px 10px',
+                  borderRadius: 6, fontSize: 11, fontWeight: 700, letterSpacing: 0.5,
+                  backgroundColor: sibling.color, color: sibling.textColor,
+                  textDecoration: 'none', lineHeight: 1, whiteSpace: 'nowrap',
+                }}
+              >
+                {sibling.shortName}
+              </Link>
+            ))}
+          </div>
+        )}
+
         {/* Progress */}
         {series && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16, maxWidth: 300 }}>
@@ -220,24 +248,7 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
           </div>
         )}
 
-        {/* Year selector */}
-        <div style={{ display: 'flex', gap: 6, marginBottom: 24 }}>
-          {AVAILABLE_YEARS.map(y => (
-            <button
-              key={y}
-              onClick={() => setYear(y)}
-              style={{
-                padding: '6px 16px', borderRadius: 8, fontSize: 14, fontWeight: 600,
-                border: '1px solid var(--rg-border)',
-                background: year === y ? 'var(--rg-link)' : 'transparent',
-                color: year === y ? '#fff' : 'var(--rg-text2)',
-                cursor: 'pointer', transition: 'all 0.15s',
-              }}
-            >
-              {y}
-            </button>
-          ))}
-        </div>
+        <YearSelector year={year} years={AVAILABLE_YEARS} onChange={setYear} marginBottom={20} />
 
         {/* Tab bar */}
         {series && (

@@ -36,7 +36,7 @@ import { indyNxt2026 } from './indy-nxt-2026'
 import { nascarXfinity2026 } from './nascar-xfinity-2026'
 import { nascarTruck2026 } from './nascar-truck-2026'
 
-interface SeriesMeta {
+export interface SeriesMeta {
   id: string
   name: string
   shortName: string
@@ -44,6 +44,8 @@ interface SeriesMeta {
   textColor: string
   logoBgWhite?: boolean
   wikipedia?: string
+  /** If true, this series is suppressed from every UI surface. Hiding a family head cascades to all members. */
+  hidden?: boolean
 }
 
 export const SERIES_META: SeriesMeta[] = [
@@ -59,12 +61,12 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'supergt', name: 'Super GT', shortName: 'SGT', color: '#E60012', textColor: '#fff', wikipedia: 'Super_GT' },
   { id: 'elms', name: 'European Le Mans Series', shortName: 'ELMS', color: '#00529B', textColor: '#fff', wikipedia: 'European_Le_Mans_Series' },
   { id: 'igtc', name: 'Intercontinental GT Challenge', shortName: 'IGTC', color: '#C8102E', textColor: '#fff', wikipedia: 'Intercontinental_GT_Challenge' },
-  { id: 'superformula', name: 'Super Formula', shortName: 'SF', color: '#1A1A6E', textColor: '#fff', wikipedia: 'Super_Formula' },
+  { id: 'superformula', name: 'Super Formula', shortName: 'SF', color: '#1A1A6E', textColor: '#fff', logoBgWhite: true, wikipedia: 'Super_Formula' },
   { id: 'supercars', name: 'Supercars Championship', shortName: 'SC', color: '#E31937', textColor: '#fff', wikipedia: 'Supercars_Championship' },
   { id: 'f2', name: 'FIA Formula 2', shortName: 'F2', color: '#0090D0', textColor: '#fff', wikipedia: 'FIA_Formula_2_Championship' },
   { id: 'f3', name: 'FIA Formula 3', shortName: 'F3', color: '#00B050', textColor: '#fff', wikipedia: 'FIA_Formula_3_Championship' },
-  { id: 'dakar', name: 'Dakar Rally', shortName: 'DAKAR', color: '#D7263D', textColor: '#fff', wikipedia: 'Dakar_Rally' },
-  { id: 'motogp', name: 'MotoGP', shortName: 'MGP', color: '#BE0F34', textColor: '#fff', wikipedia: 'MotoGP' },
+  { id: 'dakar', name: 'Dakar Rally', shortName: 'DAKAR', color: '#D7263D', textColor: '#fff', logoBgWhite: true, wikipedia: 'Dakar_Rally' },
+  { id: 'motogp', name: 'MotoGP', shortName: 'MGP', color: '#BE0F34', textColor: '#fff', logoBgWhite: true, wikipedia: 'MotoGP' },
   { id: 'fe', name: 'Formula E', shortName: 'FE', color: '#1E90FF', textColor: '#fff', wikipedia: 'Formula_E' },
   { id: 'mlmc', name: 'Michelin Le Mans Cup', shortName: 'MLMC', color: '#234B8A', textColor: '#fff', wikipedia: 'Michelin_Le_Mans_Cup' },
   { id: 'gtwcam', name: 'GT World Challenge America', shortName: 'GTWCA', color: '#D4A843', textColor: '#000', wikipedia: 'GT_World_Challenge_America' },
@@ -73,14 +75,71 @@ export const SERIES_META: SeriesMeta[] = [
   { id: 'gtwcau', name: 'GT World Challenge Australia', shortName: 'GTWCAU', color: '#00843D', textColor: '#fff', wikipedia: 'GT_World_Challenge_Australia' },
   { id: '24h', name: 'Michelin 24H Series', shortName: '24H', color: '#1A2B4A', textColor: '#fff', wikipedia: '24H_Series' },
   { id: 'special', name: 'Special Events', shortName: 'SPEC', color: '#6B2C91', textColor: '#fff' },
-  { id: 'wrx', name: 'FIA Rallycross', shortName: 'WRX', color: '#0E5BA8', textColor: '#fff', wikipedia: 'World_Rallycross_Championship' },
-  { id: 'porsche-supercup', name: 'Porsche Mobil 1 Supercup', shortName: 'PSC', color: '#D5001C', textColor: '#fff', wikipedia: 'Porsche_Supercup' },
-  { id: 'f1-academy', name: 'F1 Academy', shortName: 'F1A', color: '#FF6B9D', textColor: '#fff', wikipedia: 'F1_Academy' },
-  { id: 'moto2', name: 'Moto2', shortName: 'M2', color: '#0066CC', textColor: '#fff', wikipedia: 'Moto2' },
-  { id: 'moto3', name: 'Moto3', shortName: 'M3', color: '#FF6900', textColor: '#fff', wikipedia: 'Moto3' },
+  { id: 'wrx', name: 'FIA Rallycross', shortName: 'WRX', color: '#0E5BA8', textColor: '#fff', logoBgWhite: true, wikipedia: 'World_Rallycross_Championship' },
+  { id: 'porsche-supercup', name: 'Porsche Mobil 1 Supercup', shortName: 'PSC', color: '#D5001C', textColor: '#fff', logoBgWhite: true, wikipedia: 'Porsche_Supercup' },
+  { id: 'f1-academy', name: 'F1 Academy', shortName: 'F1A', color: '#FF6B9D', textColor: '#fff', logoBgWhite: true, wikipedia: 'F1_Academy' },
+  { id: 'moto2', name: 'Moto2', shortName: 'M2', color: '#0066CC', textColor: '#fff', logoBgWhite: true, wikipedia: 'Moto2' },
+  { id: 'moto3', name: 'Moto3', shortName: 'M3', color: '#FF6900', textColor: '#fff', logoBgWhite: true, wikipedia: 'Moto3' },
   { id: 'indy-nxt', name: 'Indy NXT by Firestone', shortName: 'NXT', color: '#A6CE39', textColor: '#000', wikipedia: 'Indy_NXT' },
   { id: 'nascar-xfinity', name: 'NASCAR Xfinity Series', shortName: 'XFIN', color: '#FFCD00', textColor: '#000', wikipedia: 'NASCAR_Xfinity_Series' },
   { id: 'nascar-truck', name: 'NASCAR Craftsman Truck Series', shortName: 'TRUCK', color: '#0033A0', textColor: '#fff', wikipedia: 'NASCAR_Craftsman_Truck_Series' },
+]
+
+// ─── Families ───────────────────────────────────────────────────────────────
+//
+// A Family groups a headline series with its direct feeders/supports.
+// Cascade rule: hiding the head series hides every member. Hiding a non-head
+// member hides only that one. Membership is explicit (not derived) so the
+// developer always sees exactly which series belong together.
+
+export interface Family {
+  /** Stable family slug — kebab-case, distinct from the head's series ID. */
+  id: string
+  /** Display name (brand name, e.g. "Formula 1", "MotoGP"). */
+  name: string
+  /** Series ID that represents the family head — must be a member. */
+  headSeriesId: string
+  /** Ordered member series IDs, head first. */
+  memberSeriesIds: string[]
+}
+
+export const FAMILIES: Family[] = [
+  {
+    id: 'f1-family',
+    name: 'Formula 1',
+    headSeriesId: 'f1',
+    memberSeriesIds: ['f1', 'f2', 'f3', 'f1-academy', 'porsche-supercup'],
+  },
+  {
+    id: 'motogp-family',
+    name: 'MotoGP',
+    headSeriesId: 'motogp',
+    memberSeriesIds: ['motogp', 'moto2', 'moto3'],
+  },
+  {
+    id: 'nascar-family',
+    name: 'NASCAR',
+    headSeriesId: 'nascar',
+    memberSeriesIds: ['nascar', 'nascar-xfinity', 'nascar-truck'],
+  },
+  {
+    id: 'indycar-family',
+    name: 'IndyCar',
+    headSeriesId: 'indycar',
+    memberSeriesIds: ['indycar', 'indy-nxt'],
+  },
+  {
+    id: 'fia-wec-family',
+    name: 'FIA WEC',
+    headSeriesId: 'wec',
+    memberSeriesIds: ['wec', 'elms', 'mlmc'],
+  },
+  {
+    id: 'sro-gt3-family',
+    name: 'SRO GT3',
+    headSeriesId: 'gtwc',
+    memberSeriesIds: ['gtwc', 'gtwcam', 'gtwcasia', 'gtwcau', 'igtc', 'britgt'],
+  },
 ]
 
 // 2026 events — eagerly loaded (current year, used by 95%+ of users)
@@ -147,14 +206,18 @@ export async function loadYear(year: number): Promise<void> {
 /**
  * Get series configs for a given year. Returns data from cache.
  * For 2026, always available. For other years, call loadYear() first.
+ * Hidden series (and members of hidden families) are excluded.
  */
 export function getSeriesForYear(year: number): SeriesConfig[] {
   const events = yearCache.get(year)
   if (!events) return []
-  return SERIES_META.map(meta => ({
-    ...meta,
-    events: events[meta.id] ?? [],
-  })).filter(s => s.events.length > 0)
+  return SERIES_META
+    .filter(meta => isSeriesVisible(meta.id))
+    .map(meta => ({
+      ...meta,
+      events: events[meta.id] ?? [],
+    }))
+    .filter(s => s.events.length > 0)
 }
 
 /**
@@ -166,3 +229,58 @@ export function isYearLoaded(year: number): boolean {
 
 // Backward-compatible default — 2026 is always available
 export const ALL_SERIES: SeriesConfig[] = getSeriesForYear(2026)
+
+/** Series meta lookup by ID. */
+export function getSeriesMeta(id: string): SeriesMeta | null {
+  return SERIES_META.find(s => s.id === id) ?? null
+}
+
+/** Family containing this series, or null if standalone. */
+export function getFamilyForSeries(seriesId: string): Family | null {
+  return FAMILIES.find(f => f.memberSeriesIds.includes(seriesId)) ?? null
+}
+
+/** Family by family ID. */
+export function getFamily(familyId: string): Family | null {
+  return FAMILIES.find(f => f.id === familyId) ?? null
+}
+
+/**
+ * Visibility predicate. A series is visible when:
+ *   1. It exists in SERIES_META
+ *   2. Its own `hidden` flag is not true
+ *   3. If it belongs to a family, the family head's `hidden` flag is not true
+ *      (cascade — hiding the head hides all members)
+ */
+export function isSeriesVisible(id: string): boolean {
+  const meta = getSeriesMeta(id)
+  if (!meta) return false
+  if (meta.hidden) return false
+  const family = getFamilyForSeries(id)
+  if (family && family.headSeriesId !== id) {
+    const head = getSeriesMeta(family.headSeriesId)
+    if (head?.hidden) return false
+  }
+  return true
+}
+
+/** All visible series in SERIES_META order. */
+export function getVisibleSeries(): SeriesMeta[] {
+  return SERIES_META.filter(s => isSeriesVisible(s.id))
+}
+
+/** Visible members of a family. Empty array if family unknown. */
+export function getFamilyMembers(familyId: string): SeriesMeta[] {
+  const family = getFamily(familyId)
+  if (!family) return []
+  return family.memberSeriesIds
+    .map(id => getSeriesMeta(id))
+    .filter((m): m is SeriesMeta => m !== null && isSeriesVisible(m.id))
+}
+
+/** All family heads whose head series is visible. */
+export function getFamilyHeads(): SeriesMeta[] {
+  return FAMILIES
+    .map(f => getSeriesMeta(f.headSeriesId))
+    .filter((m): m is SeriesMeta => m !== null && isSeriesVisible(m.id))
+}

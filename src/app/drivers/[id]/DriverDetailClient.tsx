@@ -8,12 +8,13 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { SERIES_META } from '@/data/series-registry'
+import { getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
 import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
 import type { SessionType } from '@/lib/types'
 import { getDriverResults } from '@/data/driver-results'
 import { Header } from '@/components/Header'
+import { YearSelector } from '@/components/YearSelector'
 
 const ALL_SESSION_TYPES: SessionType[] = [
   'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
@@ -39,7 +40,7 @@ export function DriverDetailClient({ driverId }: { driverId: string }) {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
@@ -109,7 +110,7 @@ export function DriverDetailClient({ driverId }: { driverId: string }) {
         {allSeasons.length > 0 && (
           <div style={{ display: 'flex', gap: 6, marginBottom: 16, flexWrap: 'wrap' }}>
             {[...new Set(allSeasons.map(s => s.seriesId))].map(sid => {
-              const meta = SERIES_META.find(m => m.id === sid)
+              const meta = getSeriesMeta(sid)
               if (!meta) return null
               return (
                 <Link key={sid} href={`/series/${sid}`} style={{
@@ -125,25 +126,8 @@ export function DriverDetailClient({ driverId }: { driverId: string }) {
           </div>
         )}
 
-        {/* Year selector */}
         {years.length > 0 && (
-          <div style={{ display: 'flex', gap: 6, marginBottom: 24 }}>
-            {years.map(y => (
-              <button
-                key={y}
-                onClick={() => setYear(y)}
-                style={{
-                  padding: '6px 16px', borderRadius: 8, fontSize: 14, fontWeight: 600,
-                  border: '1px solid var(--rg-border)',
-                  background: year === y ? 'var(--rg-link)' : 'transparent',
-                  color: year === y ? '#fff' : 'var(--rg-text2)',
-                  cursor: 'pointer', transition: 'all 0.15s',
-                }}
-              >
-                {y}
-              </button>
-            ))}
-          </div>
+          <YearSelector year={year} years={years} onChange={setYear} marginBottom={20} />
         )}
 
         {/* Season-by-season */}
