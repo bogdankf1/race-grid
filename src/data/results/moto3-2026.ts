@@ -3,6 +3,31 @@ import type { EventResults } from './types'
 // Moto3 2026 results — Rounds 1-7 completed (Thailand through Italy at Mugello)
 // Sources: crash.net, motomatters.com, motogp.com, BikeSportNews, Wikipedia
 export const moto3Results2026: Record<string, EventResults> = {
+  'moto3-2026-hungary': {
+    qualifying: {
+      overall: { driverIds: ['almansa'], teamId: 'intact-gp-moto3' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['almansa'], teamId: 'intact-gp-moto3' },
+          { position: 2, driverIds: ['quiles'], teamId: 'aspar-moto3' },
+          { position: 3, driverIds: ['uriarte-b'], teamId: 'red-bull-ktm-ajo-moto3' },
+        ],
+      }],
+    },
+    race: {
+      // Race ended under red flag; result taken back one lap (classified).
+      overall: { driverIds: ['quiles'], teamId: 'aspar-moto3' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['quiles'], teamId: 'aspar-moto3' },
+          { position: 2, driverIds: ['almansa'], teamId: 'intact-gp-moto3' },
+          { position: 3, driverIds: ['carpe'], teamId: 'red-bull-ktm-ajo-moto3' },
+        ],
+      }],
+    },
+  },
   'moto3-2026-thailand': {
     qualifying: {
       // Almansa pole with new lap record after switching from Honda to KTM

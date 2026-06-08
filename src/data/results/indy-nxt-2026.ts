@@ -3,6 +3,31 @@ import type { EventResults } from './types'
 // Indy NXT 2026 results — Rounds 1-7 completed (St. Petersburg through Detroit)
 // Sources: indynxt.com, Wikipedia "2026 Indy NXT", andrettiglobal.com race reports, pitdebrief.com
 export const indyNxtResults2026: Record<string, EventResults> = {
+  'indy-nxt-2026-wwtr': {
+    qualifying: {
+      overall: { driverIds: ['hughes-l'], teamId: 'andretti-global' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['hughes-l'], teamId: 'andretti-global' },
+          { position: 2, driverIds: ['de-tullio'], teamId: 'a-j-foyt-enterprises' },
+          { position: 3, driverIds: ['m-taylor'], teamId: 'andretti-global' },
+        ],
+      }],
+    },
+    race: {
+      // Rowe won from 24th (last) on the grid — a series record.
+      overall: { driverIds: ['rowe'], teamId: 'abel-force-indy' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['rowe'], teamId: 'abel-force-indy' },
+          { position: 2, driverIds: ['de-tullio'], teamId: 'a-j-foyt-enterprises' },
+          { position: 3, driverIds: ['pierson'], teamId: 'andretti-global' },
+        ],
+      }],
+    },
+  },
   'indy-nxt-2026-st-petersburg': {
     qualifying: {
       // Max Taylor pole — first NXT pole of his career

@@ -2,6 +2,41 @@ import type { EventResults } from './types'
 
 // FIA Formula 2 2026 results — verified from fiaformula2.com, Wikipedia
 export const f2Results2026: Record<string, EventResults> = {
+  'f2-2026-monaco': {
+    qualifying: {
+      overall: { driverIds: ['camara'], teamId: 'invicta-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['camara'], teamId: 'invicta-racing' },
+          { position: 2, driverIds: ['dunne'], teamId: 'rodin-motorsport' },
+          { position: 3, driverIds: ['beganovic'], teamId: 'dams' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['leon-n'], teamId: 'campos-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['leon-n'], teamId: 'campos-racing' },
+          { position: 2, driverIds: ['bilinski'], teamId: 'dams' },
+          { position: 3, driverIds: ['mini'], teamId: 'mp-motorsport' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['tsolov'], teamId: 'campos-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['tsolov'], teamId: 'campos-racing' },
+          { position: 2, driverIds: ['dunne'], teamId: 'rodin-motorsport' },
+          { position: 3, driverIds: ['beganovic'], teamId: 'dams' },
+        ],
+      }],
+    },
+  },
   'f2-2026-miami': {
     qualifying: {
       overall: { driverIds: ['k-maini'], teamId: 'art-grand-prix' },

@@ -2072,6 +2072,29 @@ const DRIVERS: Record<string, Driver> = {
   'currey': { id: 'currey', name: 'Bayley Currey', shortName: 'Currey', nationality: 'US' },
   'mills-m': { id: 'mills-m', name: 'Matt Mills', shortName: 'M. Mills', nationality: 'US' },
   'fenhaus': { id: 'fenhaus', name: 'Luke Fenhaus', shortName: 'Fenhaus', nationality: 'US' },
+  // 2026 results update (June) additions
+  'rivera-e': { id: 'rivera-e', name: 'Ean Rivera', shortName: 'Rivera', nationality: 'US' },
+  'oshea': { id: 'oshea', name: "Eddie O'Shea", shortName: "O'Shea", nationality: 'GB' },
+  'tadasuke-makino': { id: 'tadasuke-makino', name: 'Tadasuke Makino', shortName: 'Makino', nationality: 'JP' },
+  // 24H Series Paul Ricard 2026 additions
+  'partl': { id: 'partl', name: 'Maximilian Partl', shortName: 'Partl', nationality: '' },
+  'boisson': { id: 'boisson', name: 'Jordan Boisson', shortName: 'Boisson', nationality: 'FR' },
+  'paque': { id: 'paque', name: 'Benjamin Paque', shortName: 'Paque', nationality: 'BE' },
+  'charlaix': { id: 'charlaix', name: 'Patrick Charlaix', shortName: 'Charlaix', nationality: 'FR' },
+  'danz': { id: 'danz', name: 'Fabian Danz', shortName: 'Danz', nationality: 'CH' },
+  'de-rouw': { id: 'de-rouw', name: 'Johan de Rouw', shortName: 'de Rouw', nationality: 'NL' },
+  'huez': { id: 'huez', name: 'Olivier Huez', shortName: 'Huez', nationality: 'FR' },
+  'poppe': { id: 'poppe', name: 'Hugo Poppe', shortName: 'Poppe', nationality: 'NL' },
+  'dekker': { id: 'dekker', name: 'Norbert Dekker', shortName: 'Dekker', nationality: 'NL' },
+  'bonnel': { id: 'bonnel', name: 'Philippe Bonnel', shortName: 'Bonnel', nationality: 'FR' },
+  'boillot-j': { id: 'boillot-j', name: 'Julien Boillot', shortName: 'Boillot', nationality: 'FR' },
+  'de-bernardinis': { id: 'de-bernardinis', name: 'Alexandre De Bernardinis', shortName: 'De Bernardinis', nationality: 'FR' },
+  'ohlsson': { id: 'ohlsson', name: 'Pia Ohlsson', shortName: 'Ohlsson', nationality: 'SE' },
+  'teirlinck': { id: 'teirlinck', name: 'Steven Teirlinck', shortName: 'Teirlinck', nationality: 'BE' },
+  'gieras': { id: 'gieras', name: 'Rafał Gieras', shortName: 'Gieras', nationality: 'PL' },
+  'ayrton-redant': { id: 'ayrton-redant', name: 'Ayrton Redant', shortName: 'A. Redant', nationality: 'BE' },
+  'yannick-redant': { id: 'yannick-redant', name: 'Yannick Redant', shortName: 'Y. Redant', nationality: 'BE' },
+  'de-breucker': { id: 'de-breucker', name: 'Kobe de Breucker', shortName: 'de Breucker', nationality: 'BE' },
 }
 
 export function getDriver(id: string): Driver | null {
