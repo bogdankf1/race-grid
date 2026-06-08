@@ -164,24 +164,50 @@ import { gtwcauEntries2023 } from './gtwcau-2023'
 import { gtwcauEntries2024 } from './gtwcau-2024'
 import { gtwcauEntries2025 } from './gtwcau-2025'
 // Porsche Supercup
+import { porscheSupercupEntries2021 } from './porsche-supercup-2021'
+import { porscheSupercupEntries2022 } from './porsche-supercup-2022'
+import { porscheSupercupEntries2023 } from './porsche-supercup-2023'
+import { porscheSupercupEntries2024 } from './porsche-supercup-2024'
 import { porscheSupercupEntries2025 } from './porsche-supercup-2025'
 import { porscheSupercupEntries2026 } from './porsche-supercup-2026'
 // F1 Academy
+import { f1AcademyEntries2023 } from './f1-academy-2023'
+import { f1AcademyEntries2024 } from './f1-academy-2024'
 import { f1AcademyEntries2025 } from './f1-academy-2025'
 import { f1AcademyEntries2026 } from './f1-academy-2026'
 // Moto2
+import { moto2Entries2021 } from './moto2-2021'
+import { moto2Entries2022 } from './moto2-2022'
+import { moto2Entries2023 } from './moto2-2023'
+import { moto2Entries2024 } from './moto2-2024'
 import { moto2Entries2025 } from './moto2-2025'
 import { moto2Entries2026 } from './moto2-2026'
 // Moto3
+import { moto3Entries2021 } from './moto3-2021'
+import { moto3Entries2022 } from './moto3-2022'
+import { moto3Entries2023 } from './moto3-2023'
+import { moto3Entries2024 } from './moto3-2024'
 import { moto3Entries2025 } from './moto3-2025'
 import { moto3Entries2026 } from './moto3-2026'
 // Indy NXT
+import { indyNxtEntries2021 } from './indy-nxt-2021'
+import { indyNxtEntries2022 } from './indy-nxt-2022'
+import { indyNxtEntries2023 } from './indy-nxt-2023'
+import { indyNxtEntries2024 } from './indy-nxt-2024'
 import { indyNxtEntries2025 } from './indy-nxt-2025'
 import { indyNxtEntries2026 } from './indy-nxt-2026'
 // NASCAR Xfinity
+import { nascarXfinityEntries2021 } from './nascar-xfinity-2021'
+import { nascarXfinityEntries2022 } from './nascar-xfinity-2022'
+import { nascarXfinityEntries2023 } from './nascar-xfinity-2023'
+import { nascarXfinityEntries2024 } from './nascar-xfinity-2024'
 import { nascarXfinityEntries2025 } from './nascar-xfinity-2025'
 import { nascarXfinityEntries2026 } from './nascar-xfinity-2026'
 // NASCAR Craftsman Truck
+import { nascarTruckEntries2021 } from './nascar-truck-2021'
+import { nascarTruckEntries2022 } from './nascar-truck-2022'
+import { nascarTruckEntries2023 } from './nascar-truck-2023'
+import { nascarTruckEntries2024 } from './nascar-truck-2024'
 import { nascarTruckEntries2025 } from './nascar-truck-2025'
 import { nascarTruckEntries2026 } from './nascar-truck-2026'
 
@@ -351,24 +377,50 @@ const ALL_ENTRIES: Record<string, EntryItem[]> = {
   'gtwcau-2024': gtwcauEntries2024,
   'gtwcau-2025': gtwcauEntries2025,
   // Porsche Supercup
+  'porsche-supercup-2021': porscheSupercupEntries2021,
+  'porsche-supercup-2022': porscheSupercupEntries2022,
+  'porsche-supercup-2023': porscheSupercupEntries2023,
+  'porsche-supercup-2024': porscheSupercupEntries2024,
   'porsche-supercup-2025': porscheSupercupEntries2025,
   'porsche-supercup-2026': porscheSupercupEntries2026,
   // F1 Academy
+  'f1-academy-2023': f1AcademyEntries2023,
+  'f1-academy-2024': f1AcademyEntries2024,
   'f1-academy-2025': f1AcademyEntries2025,
   'f1-academy-2026': f1AcademyEntries2026,
   // Moto2
+  'moto2-2021': moto2Entries2021,
+  'moto2-2022': moto2Entries2022,
+  'moto2-2023': moto2Entries2023,
+  'moto2-2024': moto2Entries2024,
   'moto2-2025': moto2Entries2025,
   'moto2-2026': moto2Entries2026,
   // Moto3
+  'moto3-2021': moto3Entries2021,
+  'moto3-2022': moto3Entries2022,
+  'moto3-2023': moto3Entries2023,
+  'moto3-2024': moto3Entries2024,
   'moto3-2025': moto3Entries2025,
   'moto3-2026': moto3Entries2026,
   // Indy NXT
+  'indy-nxt-2021': indyNxtEntries2021,
+  'indy-nxt-2022': indyNxtEntries2022,
+  'indy-nxt-2023': indyNxtEntries2023,
+  'indy-nxt-2024': indyNxtEntries2024,
   'indy-nxt-2025': indyNxtEntries2025,
   'indy-nxt-2026': indyNxtEntries2026,
   // NASCAR Xfinity
+  'nascar-xfinity-2021': nascarXfinityEntries2021,
+  'nascar-xfinity-2022': nascarXfinityEntries2022,
+  'nascar-xfinity-2023': nascarXfinityEntries2023,
+  'nascar-xfinity-2024': nascarXfinityEntries2024,
   'nascar-xfinity-2025': nascarXfinityEntries2025,
   'nascar-xfinity-2026': nascarXfinityEntries2026,
   // NASCAR Craftsman Truck
+  'nascar-truck-2021': nascarTruckEntries2021,
+  'nascar-truck-2022': nascarTruckEntries2022,
+  'nascar-truck-2023': nascarTruckEntries2023,
+  'nascar-truck-2024': nascarTruckEntries2024,
   'nascar-truck-2025': nascarTruckEntries2025,
   'nascar-truck-2026': nascarTruckEntries2026,
 }
