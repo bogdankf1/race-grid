@@ -554,6 +554,88 @@ const TEAMS: Record<string, Team> = {
   // NASCAR Xfinity 2025 additions
   'am-racing': { id: 'am-racing', name: 'AM Racing', country: 'US' },
   'dgm-racing': { id: 'dgm-racing', name: 'DGM Racing', country: 'US' },
+  // Moto2 2024 additions
+  'mt-helmets-msi-moto2': { id: 'mt-helmets-msi-moto2', name: 'MT Helmets — MSi', country: 'ES' },
+  'speed-up-racing': { id: 'speed-up-racing', name: 'Sync SpeedUp Racing', country: 'IT' },
+  'klint-forward-factory': { id: 'klint-forward-factory', name: 'Klint Forward Factory Team', country: 'CH' },
+  'husqvarna-intact-gp': { id: 'husqvarna-intact-gp', name: 'Liqui Moly Husqvarna Intact GP', country: 'DE' },
+  'qjmotor-gresini-moto2': { id: 'qjmotor-gresini-moto2', name: 'QJmotor Gresini Moto2', country: 'IT' },
+  'mandalika-gas-up': { id: 'mandalika-gas-up', name: 'Pertamina Mandalika Gas Up Team', country: 'ID' },
+  'yamaha-vr46-master-camp-moto2': { id: 'yamaha-vr46-master-camp-moto2', name: 'Yamaha VR46 Master Camp Team', country: 'IT' },
+  // Moto3 2024 additions
+  'red-bull-gasgas-tech3-moto3': { id: 'red-bull-gasgas-tech3-moto3', name: 'Red Bull GasGas Tech3', country: 'AT' },
+  'mlav-racing': { id: 'mlav-racing', name: 'MLav Racing', country: 'GB' },
+  'intact-gp-husqvarna-moto3': { id: 'intact-gp-husqvarna-moto3', name: 'Liqui Moly Husqvarna Intact GP', country: 'DE' },
+  'boe-motorsports': { id: 'boe-motorsports', name: 'Boé Motorsports', country: 'ES' },
+  'mt-helmets-msi': { id: 'mt-helmets-msi', name: 'MT Helmets – MSi', country: 'ES' },
+  'cfmoto': { id: 'cfmoto', name: 'CFMoto', country: 'CN' },
+  'gas-gas': { id: 'gas-gas', name: 'GasGas', country: 'AT' },
+  'husqvarna': { id: 'husqvarna', name: 'Husqvarna', country: 'AT' },
+  // Indy NXT 2024 additions
+  'hmd-force-indy': { id: 'hmd-force-indy', name: 'HMD Motorsports with Force Indy', country: 'US' },
+  'miller-vinatieri-racing': { id: 'miller-vinatieri-racing', name: 'Miller Vinatieri Racing', country: 'US' },
+  // NASCAR Xfinity 2024 additions
+  'our-motorsports': { id: 'our-motorsports', name: 'Our Motorsports', country: 'US' },
+  // NASCAR Craftsman Truck 2024 additions
+  'rev-racing': { id: 'rev-racing', name: 'Rev Racing', country: 'US' },
+  'hill-motorsports': { id: 'hill-motorsports', name: 'Hill Motorsports', country: 'US' },
+  // Porsche Supercup 2021-2023 additions
+  'clrt': { id: 'clrt', name: 'CLRT', country: 'FR' },
+  'fach-auto-tech': { id: 'fach-auto-tech', name: 'Fach Auto Tech', country: 'CH' },
+  'huber-racing': { id: 'huber-racing', name: 'Huber Racing', country: 'DE' },
+  'nebulus-racing-huber': { id: 'nebulus-racing-huber', name: 'Nebulus Racing by Huber', country: 'DE' },
+  'richardson-racing': { id: 'richardson-racing', name: 'Richardson Racing', country: 'GB' },
+  'ssr-huber-racing': { id: 'ssr-huber-racing', name: 'SSR Huber Racing', country: 'DE' },
+  // F1 Academy 2023 additions
+  'rodin-carlin': { id: 'rodin-carlin', name: 'Rodin Carlin', country: 'GB' },
+  // Moto2 2021-2023 additions
+  'avintia-vr46-academy': { id: 'avintia-vr46-academy', name: 'Avintia VR46 Master Camp Team', country: 'ES' },
+  'carxpert-prustelgp': { id: 'carxpert-prustelgp', name: 'CarXpert PrüstelGP', country: 'DE' },
+  'correos-yamaha-vr46-moto2': { id: 'correos-yamaha-vr46-moto2', name: 'Correos Prepago Yamaha VR46 Master Camp Team', country: 'ES' },
+  'fieten-olie-racing-gp': { id: 'fieten-olie-racing-gp', name: 'Fieten Olie Racing GP', country: 'NL' },
+  'flexbox-hp40': { id: 'flexbox-hp40', name: 'Flexbox HP40', country: 'ES' },
+  'indonesian-racing-gresini': { id: 'indonesian-racing-gresini', name: 'Indonesian Racing Gresini Moto2', country: 'ID' },
+  'mooney-vr46-moto2': { id: 'mooney-vr46-moto2', name: 'Mooney VR46 Racing Team', country: 'IT' },
+  'mv-agusta-forward': { id: 'mv-agusta-forward', name: 'MV Agusta Forward Racing', country: 'CH' },
+  'pertamina-mandalika-sag': { id: 'pertamina-mandalika-sag', name: 'Pertamina Mandalika SAG Team', country: 'ID' },
+  'pons-wegow-los40': { id: 'pons-wegow-los40', name: 'Pons Wegow Los40', country: 'ES' },
+  'sky-vr46-moto2': { id: 'sky-vr46-moto2', name: 'Sky Racing Team VR46', country: 'IT' },
+  // Moto3 2021-2023 additions
+  'angeluss-mta': { id: 'angeluss-mta', name: 'Angeluss MTA Team', country: 'IT' },
+  'boe-owlride': { id: 'boe-owlride', name: 'BOÉ Owlride', country: 'ES' },
+  'cfmoto-racing-prustelgp': { id: 'cfmoto-racing-prustelgp', name: 'CFMoto Racing PrüstelGP', country: 'DE' },
+  'finetwork-team-boe': { id: 'finetwork-team-boe', name: 'Finetwork Team Boé', country: 'ES' },
+  'gasgas-aspar-team': { id: 'gasgas-aspar-team', name: 'GasGas Aspar Team', country: 'ES' },
+  'gaviota-gasgas-aspar': { id: 'gaviota-gasgas-aspar', name: 'Gaviota GasGas Aspar Team', country: 'ES' },
+  'petronas-sprinta': { id: 'petronas-sprinta', name: 'PETRONAS Sprinta Racing', country: 'MY' },
+  'petronas-sprinta-racing': { id: 'petronas-sprinta-racing', name: 'PETRONAS Sprinta Racing', country: 'MY' },
+  'qjmotor-avintia': { id: 'qjmotor-avintia', name: 'QJmotor Avintia Racing Team', country: 'ES' },
+  'sterilgarda-max-racing': { id: 'sterilgarda-max-racing', name: 'Sterilgarda Husqvarna Max Racing', country: 'IT' },
+  'valresa-gasgas-aspar': { id: 'valresa-gasgas-aspar', name: 'Valresa GasGas Aspar Team', country: 'ES' },
+  'visiontrack-racing': { id: 'visiontrack-racing', name: 'VisionTrack Racing Team', country: 'GB' },
+  // Indy NXT / Indy Lights 2021-2023 additions
+  'andretti-steinbrenner': { id: 'andretti-steinbrenner', name: 'Andretti Steinbrenner Autosport', country: 'US' },
+  'force-indy': { id: 'force-indy', name: 'Force Indy', country: 'US' },
+  'global-racing-group': { id: 'global-racing-group', name: 'Global Racing Group with HMD Motorsports', country: 'US' },
+  'hmd-dale-coyne': { id: 'hmd-dale-coyne', name: 'HMD Motorsports with Dale Coyne Racing', country: 'US' },
+  'juncos-racing': { id: 'juncos-racing', name: 'Juncos Racing', country: 'US' },
+  'pserra-racing': { id: 'pserra-racing', name: 'Pserra Racing', country: 'CA' },
+  'tj-speed': { id: 'tj-speed', name: 'TJ Speed Motorsports', country: 'US' },
+  // NASCAR Xfinity 2021-2023 additions
+  'bj-mcleod-motorsports': { id: 'bj-mcleod-motorsports', name: 'B.J. McLeod Motorsports', country: 'US' },
+  'brandonbilt-motorsports': { id: 'brandonbilt-motorsports', name: 'Brandonbilt Motorsports', country: 'US' },
+  'jd-motorsports': { id: 'jd-motorsports', name: 'JD Motorsports', country: 'US' },
+  'mbm-motorsports': { id: 'mbm-motorsports', name: 'MBM Motorsports', country: 'US' },
+  'mike-harmon-racing': { id: 'mike-harmon-racing', name: 'Mike Harmon Racing', country: 'US' },
+  // NASCAR Truck 2021-2023 additions
+  'bret-holmes-racing': { id: 'bret-holmes-racing', name: 'Bret Holmes Racing', country: 'US' },
+  'david-gilliland-racing': { id: 'david-gilliland-racing', name: 'David Gilliland Racing', country: 'US' },
+  'gms-racing': { id: 'gms-racing', name: 'GMS Racing', country: 'US' },
+  'hattori-racing-enterprises': { id: 'hattori-racing-enterprises', name: 'Hattori Racing Enterprises', country: 'US' },
+  'henderson-motorsports': { id: 'henderson-motorsports', name: 'Henderson Motorsports', country: 'US' },
+  'kyle-busch-motorsports': { id: 'kyle-busch-motorsports', name: 'Kyle Busch Motorsports', country: 'US' },
+  'on-point-motorsports': { id: 'on-point-motorsports', name: 'On Point Motorsports', country: 'US' },
+  'roper-racing': { id: 'roper-racing', name: 'Roper Racing', country: 'US' },
 }
 
 export function getTeam(id: string): Team | null {
