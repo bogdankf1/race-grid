@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Calendar, Flag, MapPin, Trophy } from 'lucide-react'
@@ -42,11 +43,16 @@ const NAV_ITEMS: NavItem[] = [
 /** Desktop nav links — rendered inside the header between logo and controls */
 export function DesktopNav({ locale }: { locale: Locale }) {
   const pathname = usePathname()
+  // Defer pathname-based active styling until after hydration. SSR doesn't
+  // know the route, so server and first client render both report no active
+  // link; the effect then re-renders with the real active state.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
 
   return (
     <nav className="rg-desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
       {NAV_ITEMS.map((item) => {
-        const active = item.match(pathname)
+        const active = mounted && item.match(pathname)
         return (
           <Link
             key={item.href}
@@ -72,6 +78,8 @@ export function DesktopNav({ locale }: { locale: Locale }) {
 /** Mobile bottom tab bar — rendered as a fixed bar at the viewport bottom */
 export function BottomNav({ locale }: { locale: Locale }) {
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
 
   return (
     <nav
@@ -92,7 +100,7 @@ export function BottomNav({ locale }: { locale: Locale }) {
     >
       <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', height: 56, maxWidth: 500, margin: '0 auto' }}>
         {NAV_ITEMS.map((item) => {
-          const active = item.match(pathname)
+          const active = mounted && item.match(pathname)
           const Icon = item.icon
           return (
             <Link

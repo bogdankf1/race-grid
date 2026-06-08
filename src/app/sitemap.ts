@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { eachDayOfInterval, format, subDays, addDays } from 'date-fns'
-import { getSeriesForYear, SERIES_META } from '@/data/series-registry'
+import { getSeriesForYear, getVisibleSeries } from '@/data/series-registry'
 import { ALL_HISTORICAL_EVENTS } from '@/data/events/all-years'
 import { getAllDrivers } from '@/data/drivers'
 import { getAllTeams } from '@/data/teams'
@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Series pages
-  const seriesPages: MetadataRoute.Sitemap = SERIES_META.map(s => ({
+  const seriesPages: MetadataRoute.Sitemap = getVisibleSeries().map(s => ({
     url: `${BASE_URL}/series/${s.id}`,
     changeFrequency: 'weekly',
     priority: 0.8,

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 40" fill="none">
+  <rect width="140" height="40" rx="6" fill="#BE0F34"/>
+  <text x="8" y="29" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="22" fill="white" letter-spacing="-0.5">MotoGP</text>
+  <rect x="108" y="8" width="24" height="24" rx="12" fill="white" fill-opacity="0.15"/>
+  <text x="114" y="26" font-family="Arial, sans-serif" font-weight="900" font-size="16" fill="white">TM</text>
+</svg>

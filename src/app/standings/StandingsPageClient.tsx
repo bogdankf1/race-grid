@@ -7,12 +7,13 @@ import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
+import { AVAILABLE_YEARS, getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
 import { getStandings, hasStandings, getAllClassStandings } from '@/data/standings'
 import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
 import type { SessionType } from '@/lib/types'
 import { Header } from '@/components/Header'
+import { YearSelector } from '@/components/YearSelector'
 import { Footer } from '@/components/Footer'
 import type { ClassStandings, DriverStandingEntry, TeamStandingEntry } from '@/data/standings/types'
 
@@ -34,7 +35,7 @@ export function StandingsPageClient() {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', SERIES_META.map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
   const [seriesId, setSeriesId] = useLocalStorage<string>('race-grid:standings-series', 'f1')
   const [year, setYear] = useLocalStorage<number>('race-grid:standings-year', 2025)
   const [query, setQuery] = useState('')
@@ -43,7 +44,7 @@ export function StandingsPageClient() {
   useEffect(() => { applyTheme(theme) }, [theme])
 
   const standings = useMemo(() => getStandings(seriesId, year), [seriesId, year])
-  const seriesMeta = SERIES_META.find(s => s.id === seriesId)
+  const seriesMeta = getSeriesMeta(seriesId)
 
   const allClasses = useMemo(() => getAllClassStandings(seriesId, year), [seriesId, year])
   const [activeClassIdx, setActiveClassIdx] = useState(0)
@@ -60,7 +61,7 @@ export function StandingsPageClient() {
   // Series that have standings data
   const availableSeries = useMemo(() => {
     const result: { id: string; years: number[] }[] = []
-    for (const meta of SERIES_META) {
+    for (const meta of getVisibleSeries()) {
       const years = AVAILABLE_YEARS.filter(y => hasStandings(meta.id, y))
       if (years.length > 0) result.push({ id: meta.id, years })
     }
@@ -136,6 +137,12 @@ export function StandingsPageClient() {
               }}
             />
           </div>
+          <YearSelector
+            year={year}
+            years={AVAILABLE_YEARS}
+            onChange={setYear}
+            isYearEnabled={y => hasStandings(seriesId, y)}
+          />
         </div>
 
         {/* Series selector dropdown */}
@@ -159,7 +166,7 @@ export function StandingsPageClient() {
             }}
           >
             {availableSeries.map(({ id }) => {
-              const meta = SERIES_META.find(m => m.id === id)
+              const meta = getSeriesMeta(id)
               if (!meta) return null
               return (
                 <option key={id} value={id}>{meta.name}</option>
@@ -172,26 +179,6 @@ export function StandingsPageClient() {
           }} />
         </div>
 
-        {/* Year selector */}
-        <div style={{ display: 'flex', gap: 6, marginBottom: 24 }}>
-          {AVAILABLE_YEARS.map(y => (
-            <button
-              key={y}
-              onClick={() => setYear(y)}
-              style={{
-                padding: '6px 16px', borderRadius: 8, fontSize: 14, fontWeight: 600,
-                border: '1px solid var(--rg-border)',
-                background: year === y ? 'var(--rg-link)' : 'transparent',
-                color: year === y ? '#fff' : 'var(--rg-text2)',
-                cursor: 'pointer', transition: 'all 0.15s',
-                opacity: hasStandings(seriesId, y) ? 1 : 0.4,
-              }}
-              disabled={!hasStandings(seriesId, y)}
-            >
-              {y}
-            </button>
-          ))}
-        </div>
 
         {standings ? (
           <>
