@@ -1,0 +1,65 @@
+// Mobile-only strings layered on top of the shared web dictionary.
+// `tm()` falls back to the shared `t()` so all existing keys keep working.
+
+import { t, type Locale } from '@/lib/i18n'
+
+const extra: Record<Locale, Record<string, string>> = {
+  en: {
+    'tab.schedule': 'Schedule',
+    'tab.series': 'Series',
+    'tab.settings': 'Settings',
+    'agenda.thisWeek': 'This week',
+    'agenda.showEarlier': 'Show earlier races',
+    'agenda.hideEarlier': 'Hide earlier races',
+    'agenda.empty': 'No series followed',
+    'agenda.emptyHint': 'Pick the series you follow in the Series tab.',
+    'agenda.updated': 'Calendar updated',
+    'agenda.updateFailed': 'Could not refresh — showing saved schedule',
+    'detail.sessions': 'Sessions',
+    'detail.circuit': 'Circuit',
+    'detail.lapRecord': 'Lap record',
+    'detail.notFound': 'Event not found',
+    'settings.spoilerHint': 'Hide results until you tap to reveal them',
+    'settings.notifyHint': 'Reminders before each session of followed series',
+    'settings.deviceTz': 'Device timezone',
+    'settings.about': 'About',
+    'settings.dataSync': 'Calendar data',
+    'settings.lastSync': 'Last refreshed',
+    'settings.never': 'never',
+    'settings.refreshNow': 'Refresh now',
+    'circuit.turns': 'turns',
+    'notify.followedOnly': 'Series to notify',
+    'notify.deniedOs': 'Notifications are blocked in system settings',
+  },
+  uk: {
+    'tab.schedule': 'Розклад',
+    'tab.series': 'Серії',
+    'tab.settings': 'Налаштування',
+    'agenda.thisWeek': 'Цей тиждень',
+    'agenda.showEarlier': 'Показати попередні гонки',
+    'agenda.hideEarlier': 'Сховати попередні гонки',
+    'agenda.empty': 'Немає обраних серій',
+    'agenda.emptyHint': 'Оберіть серії, за якими стежите, у вкладці «Серії».',
+    'agenda.updated': 'Календар оновлено',
+    'agenda.updateFailed': 'Не вдалося оновити — показано збережений розклад',
+    'detail.sessions': 'Сесії',
+    'detail.circuit': 'Траса',
+    'detail.lapRecord': 'Рекорд кола',
+    'detail.notFound': 'Подію не знайдено',
+    'settings.spoilerHint': 'Ховати результати, доки не натиснете',
+    'settings.notifyHint': 'Нагадування перед сесіями обраних серій',
+    'settings.deviceTz': 'Часова зона пристрою',
+    'settings.about': 'Про застосунок',
+    'settings.dataSync': 'Дані календаря',
+    'settings.lastSync': 'Останнє оновлення',
+    'settings.never': 'ніколи',
+    'settings.refreshNow': 'Оновити зараз',
+    'circuit.turns': 'поворотів',
+    'notify.followedOnly': 'Серії для сповіщень',
+    'notify.deniedOs': 'Сповіщення заблоковано в налаштуваннях системи',
+  },
+}
+
+export function tm(key: string, locale: Locale): string {
+  return extra[locale]?.[key] ?? extra.en[key] ?? t(key, locale)
+}
