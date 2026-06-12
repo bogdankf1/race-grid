@@ -2,10 +2,11 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { X, Sun, Moon, Globe, Search, Check, ChevronDown } from 'lucide-react'
+import { X, Sun, Moon, Globe, Search, Check, ChevronDown, Layers } from 'lucide-react'
 import { TIMEZONE_GROUPS, getTimezoneLabel } from '@/lib/timezone'
 import { t, type Locale } from '@/lib/i18n'
-import type { Theme } from '@/lib/theme'
+import { useUIVersion } from '@/hooks/useUIVersion'
+import type { Theme, UIVersion } from '@/lib/theme'
 import type { SessionType } from '@/lib/types'
 
 const ALL_SESSION_TYPES: SessionType[] = [
@@ -31,7 +32,7 @@ interface SettingsModalProps {
 
 function SettingRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 0', borderBottom: '1px solid var(--rg-border)' }}>
+    <div className="rg-setting-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 0', borderBottom: '1px solid var(--rg-border)' }}>
       <span style={{ fontSize: 14, color: 'var(--rg-text)' }}>{label}</span>
       {children}
     </div>
@@ -87,6 +88,8 @@ export function SettingsModal({
 }: SettingsModalProps) {
   const [sessionsOpen, setSessionsOpen] = useState(false)
   const [tzOpen, setTzOpen] = useState(false)
+  const [uiOpen, setUiOpen] = useState(false)
+  const [uiVersion, setUiVersionLive] = useUIVersion()
   const [tzSearch, setTzSearch] = useState('')
   const searchRef = useRef<HTMLInputElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
@@ -143,6 +146,13 @@ export function SettingsModal({
   if (!open) return null
 
   const cityLabel = timezone.split('/').pop()?.replace(/_/g, ' ') ?? timezone
+
+  const selectUIVersion = (version: UIVersion) => {
+    setUiVersionLive(version, theme)
+    setUiOpen(false)
+  }
+  const uiVersionLabel = (version: UIVersion) =>
+    version === 'v2' ? t('settings.uiV2', locale) : t('settings.uiV1', locale)
 
   const filtered = Object.entries(TIMEZONE_GROUPS).reduce<Record<string, string[]>>(
     (acc, [group, zones]) => {
@@ -213,7 +223,7 @@ export function SettingsModal({
       >
         {/* Drag handle */}
         <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 8px', cursor: 'grab' }}>
-          <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--rg-border)' }} />
+          <div className="rg-drag-handle" style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--rg-border)' }} />
         </div>
 
         {/* Header */}
@@ -222,6 +232,7 @@ export function SettingsModal({
             {t('settings.title', locale)}
           </h2>
           <button
+            className="rg-modal-close"
             onClick={onClose}
             aria-label="Close"
             style={{
@@ -238,6 +249,7 @@ export function SettingsModal({
         {/* Theme */}
         <SettingRow label={t('settings.theme', locale)}>
           <button
+            className="rg-setting-btn"
             onClick={onToggleTheme}
             style={{
               display: 'flex', alignItems: 'center', gap: 8,
@@ -254,6 +266,7 @@ export function SettingsModal({
         {/* Language */}
         <SettingRow label={t('settings.language', locale)}>
           <button
+            className="rg-setting-btn"
             onClick={onToggleLocale}
             style={{
               display: 'flex', alignItems: 'center', gap: 8,
@@ -266,6 +279,64 @@ export function SettingsModal({
           </button>
         </SettingRow>
 
+        {/* UI version */}
+        <div style={{ paddingTop: 14, borderBottom: '1px solid var(--rg-border)', paddingBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: uiOpen ? 12 : 0 }}>
+            <span style={{ fontSize: 14, color: 'var(--rg-text)' }}>{t('settings.uiVersion', locale)}</span>
+            <button
+              className="rg-setting-btn"
+              onClick={() => setUiOpen(!uiOpen)}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 8,
+                padding: '6px 14px', borderRadius: 8,
+                background: 'var(--rg-elevated)', border: '1px solid var(--rg-border)',
+                color: 'var(--rg-text)', fontSize: 13, cursor: 'pointer',
+              }}
+            >
+              <Layers style={{ width: 14, height: 14 }} />
+              {uiVersionLabel(uiVersion)}
+              <ChevronDown style={{ width: 13, height: 13, transition: 'transform 0.2s', transform: uiOpen ? 'rotate(180deg)' : 'none' }} />
+            </button>
+          </div>
+
+          {uiOpen && (
+            <div style={{
+              borderRadius: 12,
+              background: 'var(--rg-elevated)',
+              border: '1px solid var(--rg-border)',
+              padding: 6,
+            }}>
+              {(['v1', 'v2'] as UIVersion[]).map(version => {
+                const active = uiVersion === version
+                return (
+                  <button
+                    key={version}
+                    onClick={() => selectUIVersion(version)}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: 12,
+                      width: '100%', textAlign: 'left',
+                      padding: '9px 14px', borderRadius: 8,
+                      fontSize: 13, color: active ? 'var(--rg-text)' : 'var(--rg-text3)',
+                      background: active ? 'var(--rg-surface)' : 'transparent',
+                      border: 'none', cursor: 'pointer',
+                    }}
+                  >
+                    <span style={{
+                      width: 18, height: 18, borderRadius: 4,
+                      border: `2px solid ${active ? 'var(--rg-link)' : 'var(--rg-border)'}`,
+                      background: active ? 'var(--rg-link)' : 'transparent',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                    }}>
+                      {active && <Check style={{ width: 12, height: 12, color: '#fff' }} />}
+                    </span>
+                    <span>{uiVersionLabel(version)}</span>
+                  </button>
+                )
+              })}
+            </div>
+          )}
+        </div>
+
         {/* Spoiler-free */}
         <SettingRow label={t('spoiler.title', locale)}>
           <ToggleSwitch active={spoilerFree} onClick={onToggleSpoilerFree} />
@@ -276,6 +347,7 @@ export function SettingsModal({
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: sessionsOpen ? 12 : 0 }}>
             <span style={{ fontSize: 14, color: 'var(--rg-text)' }}>{t('settings.sessions', locale)}</span>
             <button
+              className="rg-setting-btn"
               onClick={() => setSessionsOpen(!sessionsOpen)}
               style={{
                 display: 'flex', alignItems: 'center', gap: 8,
@@ -367,6 +439,7 @@ export function SettingsModal({
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 14, color: 'var(--rg-text)' }}>{t('settings.timezone', locale)}</span>
             <button
+              className="rg-setting-btn"
               onClick={() => setTzOpen(!tzOpen)}
               style={{
                 display: 'flex', alignItems: 'center', gap: 8,

@@ -44,6 +44,7 @@ export function MobileEventList({ days, events, locale }: MobileEventListProps) 
               key={dateStr}
               href={`/day/${dateStr}`}
               data-mobile-date={dateStr}
+              className="rg-mob-empty"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -99,6 +100,7 @@ export function MobileEventList({ days, events, locale }: MobileEventListProps) 
           <div
             key={dateStr}
             data-mobile-date={dateStr}
+            className={`rg-mob-card${isNextRaceDay ? ' is-next' : ''}${isToday ? ' is-today' : ''}${isHighlighted ? ' is-highlight' : ''}`}
             style={{
               opacity: isPast ? 0.45 : 1,
               transition: 'opacity 0.2s',
@@ -116,6 +118,7 @@ export function MobileEventList({ days, events, locale }: MobileEventListProps) 
             {/* Date header */}
             <Link
               href={`/day/${dateStr}`}
+              className="rg-mob-card-head"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -125,7 +128,7 @@ export function MobileEventList({ days, events, locale }: MobileEventListProps) 
                 color: 'inherit',
               }}
             >
-              <span style={{
+              <span className="rg-mob-day-num" style={{
                 fontSize: 20,
                 fontWeight: 700,
                 color: isNextRaceDay
@@ -185,11 +188,12 @@ export function MobileEventList({ days, events, locale }: MobileEventListProps) 
             </Link>
 
             {/* Event rows */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3, padding: '2px 10px 10px' }}>
+            <div className="rg-mob-rows" style={{ display: 'flex', flexDirection: 'column', gap: 3, padding: '2px 10px 10px' }}>
               {infos.map((info) => (
                 <Link
                   key={info.series.id}
                   href={`/day/${dateStr}?event=${info.eventIds[0]}`}
+                  className="rg-mob-row"
                   style={{
                     display: 'flex',
                     alignItems: 'center',

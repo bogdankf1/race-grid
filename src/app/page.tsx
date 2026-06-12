@@ -19,6 +19,8 @@ import { CalendarGrid } from '@/components/CalendarGrid'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { UpcomingRaces } from '@/components/UpcomingRaces'
 import { Footer } from '@/components/Footer'
+import { HomeV2 } from '@/components/v2/HomeV2'
+import { useUIVersion } from '@/hooks/useUIVersion'
 
 export default function HomePage() {
   const [month, setMonth] = useLocalStorage<string>('race-grid:month', format(new Date(), 'yyyy-MM'))
@@ -40,6 +42,7 @@ export default function HomePage() {
   )
 
   useEffect(() => { applyTheme(theme) }, [theme])
+  const [uiVersion] = useUIVersion()
 
   // Highlight day cell we navigated back from
   const [highlightDate, setHighlightDate] = useState<string | null>(null)
@@ -92,28 +95,48 @@ export default function HomePage() {
         onToggleSessionType={toggleSessionType}
         onSetSessionTypes={setVisibleSessionTypes}
       />
-      <div className="rg-calendar-wrap" style={{ paddingBottom: 0 }}>
-        <UpcomingRaces
-          selectedSeriesIds={selectedSeries}
-          timezone={timezone}
-          locale={locale}
-        />
-      </div>
-      <ErrorBoundary>
-      <CalendarGrid
-        month={month}
-        onMonthChange={setMonth}
-        events={events}
-        locale={locale}
-        viewMode={viewMode}
-        onViewModeChange={setViewMode}
-        weekStart={weekStart}
-        onWeekStartChange={setWeekStart}
-        selectedSeriesIds={selectedSeries}
-        timezone={timezone}
-        highlightDate={highlightDate}
-      />
-      </ErrorBoundary>
+      {uiVersion === 'v2' ? (
+        <ErrorBoundary>
+          <HomeV2
+            month={month}
+            onMonthChange={setMonth}
+            events={events}
+            locale={locale}
+            viewMode={viewMode}
+            onViewModeChange={setViewMode}
+            weekStart={weekStart}
+            onWeekStartChange={setWeekStart}
+            selectedSeriesIds={selectedSeries}
+            timezone={timezone}
+            highlightDate={highlightDate}
+          />
+        </ErrorBoundary>
+      ) : (
+        <>
+          <div className="rg-calendar-wrap" style={{ paddingBottom: 0 }}>
+            <UpcomingRaces
+              selectedSeriesIds={selectedSeries}
+              timezone={timezone}
+              locale={locale}
+            />
+          </div>
+          <ErrorBoundary>
+          <CalendarGrid
+            month={month}
+            onMonthChange={setMonth}
+            events={events}
+            locale={locale}
+            viewMode={viewMode}
+            onViewModeChange={setViewMode}
+            weekStart={weekStart}
+            onWeekStartChange={setWeekStart}
+            selectedSeriesIds={selectedSeries}
+            timezone={timezone}
+            highlightDate={highlightDate}
+          />
+          </ErrorBoundary>
+        </>
+      )}
       <Footer locale={locale} />
     </div>
   )
