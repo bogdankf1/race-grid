@@ -2,18 +2,28 @@
 // timezone, color-coded per series, filtered to followed series.
 
 import { useRouter } from 'expo-router'
-import { Search, X } from 'lucide-react-native'
+import { CalendarDays, Rows3, Search, X } from 'lucide-react-native'
 import { useEffect, useMemo, useState } from 'react'
-import { Pressable, RefreshControl, SectionList, Text, TextInput, View } from 'react-native'
+import {
+  Pressable,
+  RefreshControl,
+  ScrollView,
+  SectionList,
+  Text,
+  TextInput,
+  View,
+} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { t } from '@/lib/i18n'
 import { getLocalDate } from '@/lib/timezone'
-import { buildAgenda, weekKeyOf, type AgendaEvent, type WeekGroup } from '~/lib/agenda'
+import { buildAgenda, toAgendaEvent, weekKeyOf, type AgendaEvent, type WeekGroup } from '~/lib/agenda'
 import { SEASON } from '~/lib/data'
 import { formatWeekLabel } from '~/lib/format'
+import { usePersistedState } from '~/lib/persisted'
 import { tm } from '~/lib/strings'
 import { AgendaCard } from '~/components/AgendaCard'
+import { buildMonthIndex, MonthGrid } from '~/components/MonthGrid'
 import { useData } from '~/state/data'
 import { useSettings } from '~/state/settings'
 import { useTheme } from '~/state/theme'
@@ -41,6 +51,11 @@ export default function ScheduleScreen() {
   const router = useRouter()
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState('')
+  const [viewMode, setViewMode] = usePersistedState<'agenda' | 'month'>(
+    'race-grid:view',
+    'agenda',
+  )
+  const [selectedDate, setSelectedDate] = useState<string | null>(null)
 
   const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
@@ -55,10 +70,35 @@ export default function ScheduleScreen() {
     [seriesList, followedSeriesIds, timezone, now, visibleSessionTypes],
   )
 
-  const thisWeekKey = useMemo(
-    () => weekKeyOf(getLocalDate(new Date(now).toISOString(), timezone)),
-    [now, timezone],
+  const today = useMemo(() => getLocalDate(new Date(now).toISOString(), timezone), [now, timezone])
+  const thisWeekKey = useMemo(() => weekKeyOf(today), [today])
+
+  const [month, setMonth] = usePersistedState<string>('race-grid:month', today.slice(0, 7))
+
+  const monthIndex = useMemo(
+    () => buildMonthIndex(seriesList, followedSeriesIds, timezone, visibleSessionTypes),
+    [seriesList, followedSeriesIds, timezone, visibleSessionTypes],
   )
+
+  const dayEvents = useMemo(() => {
+    if (!selectedDate) return []
+    const followed = new Set(followedSeriesIds)
+    const out: AgendaEvent[] = []
+    for (const series of seriesList) {
+      if (!followed.has(series.id)) continue
+      for (const event of series.events) {
+        const onDay = event.sessions.some(
+          (s) =>
+            visibleSessionTypes.includes(s.type) &&
+            getLocalDate(s.startUtc, timezone) === selectedDate,
+        )
+        if (!onDay) continue
+        const agendaEvent = toAgendaEvent(series, event, timezone, now, visibleSessionTypes)
+        if (agendaEvent) out.push(agendaEvent)
+      }
+    }
+    return out.sort((a, b) => a.startMs - b.startMs)
+  }, [selectedDate, seriesList, followedSeriesIds, timezone, now, visibleSessionTypes])
 
   const searching = query.trim().length > 0
   const sections = useMemo(() => {
@@ -81,21 +121,44 @@ export default function ScheduleScreen() {
         {refreshError && (
           <Text className="text-[10px] text-rg-text3">{tm('agenda.updateFailed', locale)}</Text>
         )}
-        <Pressable
-          onPress={() => {
-            setSearchOpen((open) => {
-              if (open) setQuery('')
-              return !open
-            })
-          }}
-          accessibilityRole="button"
-          className="rounded-lg border border-rg-border bg-rg-btn-bg p-2"
-        >
-          {searchOpen ? <X size={14} color={c('text2')} /> : <Search size={14} color={c('text2')} />}
-        </Pressable>
+        <View className="flex-row overflow-hidden rounded-lg border border-rg-border">
+          <Pressable
+            onPress={() => setViewMode('agenda')}
+            accessibilityRole="button"
+            accessibilityLabel={tm('view.agenda', locale)}
+            className={viewMode === 'agenda' ? 'bg-rg-elevated p-2' : 'p-2'}
+          >
+            <Rows3 size={14} color={viewMode === 'agenda' ? c('text') : c('text3')} />
+          </Pressable>
+          <Pressable
+            onPress={() => {
+              setViewMode('month')
+              if (!selectedDate) setSelectedDate(today)
+            }}
+            accessibilityRole="button"
+            accessibilityLabel={t('view.month', locale)}
+            className={viewMode === 'month' ? 'bg-rg-elevated p-2' : 'p-2'}
+          >
+            <CalendarDays size={14} color={viewMode === 'month' ? c('text') : c('text3')} />
+          </Pressable>
+        </View>
+        {viewMode === 'agenda' && (
+          <Pressable
+            onPress={() => {
+              setSearchOpen((open) => {
+                if (open) setQuery('')
+                return !open
+              })
+            }}
+            accessibilityRole="button"
+            className="rounded-lg border border-rg-border bg-rg-btn-bg p-2"
+          >
+            {searchOpen ? <X size={14} color={c('text2')} /> : <Search size={14} color={c('text2')} />}
+          </Pressable>
+        )}
       </View>
 
-      {searchOpen && (
+      {searchOpen && viewMode === 'agenda' && (
         <View className="mx-4 mb-2 flex-row items-center gap-2 rounded-xl border border-rg-border bg-rg-surface px-3">
           <Search size={14} color={c('text3')} />
           <TextInput
@@ -121,6 +184,54 @@ export default function ScheduleScreen() {
             </Text>
           </Pressable>
         </View>
+      ) : viewMode === 'month' ? (
+        <ScrollView
+          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
+          refreshControl={
+            <RefreshControl
+              refreshing={refreshing}
+              onRefresh={() => {
+                refresh().catch(() => {})
+              }}
+              tintColor={c('text3')}
+            />
+          }
+        >
+          <MonthGrid
+            month={month}
+            onMonthChange={setMonth}
+            index={monthIndex}
+            today={today}
+            selectedDate={selectedDate}
+            onSelectDate={setSelectedDate}
+            locale={locale}
+          />
+          {selectedDate && (
+            <View className="mt-3">
+              <Text className="mb-2 text-xs font-bold uppercase tracking-widest text-rg-text3">
+                {new Date(selectedDate + 'T12:00:00Z').toLocaleDateString(
+                  locale === 'uk' ? 'uk-UA' : 'en-US',
+                  { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' },
+                )}
+              </Text>
+              {dayEvents.length === 0 ? (
+                <Text className="py-4 text-center text-sm text-rg-text3">
+                  {t('day.noRaces', locale)} {t('day.offDay', locale)}
+                </Text>
+              ) : (
+                dayEvents.map((item) => (
+                  <AgendaCard
+                    key={item.key}
+                    item={item}
+                    timezone={timezone}
+                    locale={locale}
+                    now={now}
+                  />
+                ))
+              )}
+            </View>
+          )}
+        </ScrollView>
       ) : (
         <SectionList
           sections={sections}

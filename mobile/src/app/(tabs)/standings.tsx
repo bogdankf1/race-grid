@@ -1,6 +1,7 @@
 // Standings tab — port of the web /standings page: year + series pickers,
 // class tabs for multi-class series, Drivers/Constructors toggle, search.
 
+import { useRouter, type Href } from 'expo-router'
 import { Search } from 'lucide-react-native'
 import { useMemo, useState } from 'react'
 import { FlatList, Pressable, ScrollView, Text, TextInput, View } from 'react-native'
@@ -30,11 +31,14 @@ interface Row {
   team: string
   points: number
   wins: number
+  /** Route target: driver page for driver rows, team page for constructors. */
+  href: string
 }
 
 export default function StandingsScreen() {
   const { locale } = useSettings()
   const { c } = useTheme()
+  const router = useRouter()
   const [year, setYear] = usePersistedState<number>('race-grid:standings-year', SEASON)
   const [seriesId, setSeriesId] = usePersistedState<string>('race-grid:standings-series', 'f1')
   const [tab, setTab] = useState<'drivers' | 'constructors'>('drivers')
@@ -84,6 +88,7 @@ export default function StandingsScreen() {
               team: getTeam(d.teamId)?.name ?? d.teamId,
               points: d.points,
               wins: d.wins,
+              href: `/driver/${d.driverId}`,
             }
           })
         : activeClass.constructors.map((cRow) => ({
@@ -93,6 +98,7 @@ export default function StandingsScreen() {
             team: '',
             points: cRow.points,
             wins: cRow.wins,
+            href: `/team/${cRow.teamId}`,
           }))
     if (!q) return list
     return list.filter(
@@ -218,7 +224,9 @@ export default function StandingsScreen() {
           </Text>
         }
         renderItem={({ item }) => (
-          <View
+          <Pressable
+            onPress={() => router.push(item.href as Href)}
+            accessibilityRole="button"
             className="mb-1 flex-row items-center gap-3 rounded-xl border border-rg-card-border bg-rg-surface px-3 py-2.5"
             style={{
               backgroundColor: item.position <= 3 ? MEDAL_BG[item.position - 1] : undefined,
@@ -244,7 +252,7 @@ export default function StandingsScreen() {
                 {tm('standings.wins', locale)}: {item.wins}
               </Text>
             </View>
-          </View>
+          </Pressable>
         )}
       />
     </SafeAreaView>

@@ -1,4 +1,5 @@
 import '../global.css'
+import '~/lib/preload-years'
 
 import * as Notifications from 'expo-notifications'
 import { Stack, useRouter } from 'expo-router'

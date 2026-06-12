@@ -43,6 +43,9 @@ const extra: Record<Locale, Record<string, string>> = {
     'cal.added': 'Added to your calendar',
     'cal.addError': 'Could not access the calendar',
     'cal.device': 'Add all sessions to device calendar',
+    'cal.shareEvent': 'Share event (.ics)',
+    'cal.shareSeason': 'Share season (.ics)',
+    'view.agenda': 'List',
     'support.madeWith': 'Made with ❤ for motorsport fans',
   },
   uk: {
@@ -84,6 +87,9 @@ const extra: Record<Locale, Record<string, string>> = {
     'cal.added': 'Додано до вашого календаря',
     'cal.addError': 'Немає доступу до календаря',
     'cal.device': 'Додати всі сесії до календаря',
+    'cal.shareEvent': 'Поділитися подією (.ics)',
+    'cal.shareSeason': 'Поділитися сезоном (.ics)',
+    'view.agenda': 'Список',
     'support.madeWith': 'Зроблено з ❤ для фанатів автоспорту',
   },
 }

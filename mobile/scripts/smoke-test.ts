@@ -3,6 +3,7 @@
 // grouping, overlay merging, results precedence, notification planning.
 
 import { buildAgenda, eventStatus, weekKeyOf } from '../src/lib/agenda'
+import { buildMonthIndex, monthCells, shiftMonth } from '../src/lib/month'
 import {
   buildSeriesList,
   collectEventResults,
@@ -145,6 +146,29 @@ ok('collectEventResults: remote overlay wins over bundled snapshot', () => {
   // Qualifying still comes from the bundled snapshot.
   const quali = pairs.find((p) => p.session.type === 'qualifying')
   assert.ok(quali && quali.result.overall.drivers.length > 0)
+})
+
+// ───────── month grid ─────────
+ok('monthCells builds a Monday-start 6-week grid', () => {
+  const cells = monthCells('2026-06')
+  assert.equal(cells.length, 42)
+  assert.equal(cells[0].date, '2026-06-01') // June 2026 starts on a Monday
+  assert.equal(cells.filter((c) => c.inMonth).length, 30)
+  assert.equal(shiftMonth('2026-01', -1), '2025-12')
+  assert.equal(shiftMonth('2026-12', 1), '2027-01')
+})
+
+ok('buildMonthIndex marks the Le Mans weekend for followed series', () => {
+  const index = buildMonthIndex(seriesList, ['wec'], 'Europe/Kyiv', [
+    'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+    'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+  ])
+  const raceDay = index.get('2026-06-13')
+  assert.ok(raceDay, 'expected WEC activity on Jun 13')
+  assert.ok(raceDay!.eventCount >= 1)
+  // Filtering to race-type sessions only must not flag practice-only days.
+  const raceOnly = buildMonthIndex(seriesList, ['wec'], 'Europe/Kyiv', ['endurance'])
+  assert.ok(!raceOnly.has('2026-06-10'), 'practice day should be filtered out')
 })
 
 // ───────── notification planning ─────────

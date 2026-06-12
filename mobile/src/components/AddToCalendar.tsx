@@ -1,19 +1,30 @@
 // Native take on the web CalendarExport menu: insert the weekend's sessions
-// into the device calendar (expo-calendar), or open per-session Google
-// Calendar templates. Event titles match the web .ics convention:
+// into the device calendar (expo-calendar), open per-session Google Calendar
+// templates, share .ics files (same generators the web uses), or subscribe to
+// the hosted webcal feed. Event titles match the web .ics convention:
 //   `${seriesName}: ${session.label} — ${event.name}`
 
 import * as Calendar from 'expo-calendar'
+import { File, Paths } from 'expo-file-system'
+import * as Sharing from 'expo-sharing'
 import { CalendarPlus } from 'lucide-react-native'
 import { useState } from 'react'
 import { Alert, Linking, Platform, Pressable, Text, View } from 'react-native'
 
 import { getCircuit } from '@/data/circuits'
 import { t, type Locale } from '@/lib/i18n'
+import { generateIcs, generateSeriesIcs } from '@/lib/ical'
 import type { RaceEvent, Session } from '@/lib/types'
 import { DEFAULT_SESSION_MINUTES, isTba } from '~/lib/data'
 import { tm } from '~/lib/strings'
 import { useTheme } from '~/state/theme'
+
+async function shareIcs(filename: string, ics: string): Promise<void> {
+  const file = new File(Paths.cache, filename)
+  if (file.exists) file.delete()
+  file.write(ics)
+  await Sharing.shareAsync(file.uri, { mimeType: 'text/calendar', UTI: 'com.apple.ical.ics' })
+}
 
 function icsDate(iso: string): string {
   return iso.replace(/[-:]/g, '').replace(/\.\d{3}/, '')
@@ -50,11 +61,20 @@ async function writableCalendarId(): Promise<string | null> {
 interface AddToCalendarProps {
   event: RaceEvent
   sessions: Session[]
+  seriesId: string
   seriesName: string
+  seriesEvents: RaceEvent[]
   locale: Locale
 }
 
-export function AddToCalendar({ event, sessions, seriesName, locale }: AddToCalendarProps) {
+export function AddToCalendar({
+  event,
+  sessions,
+  seriesId,
+  seriesName,
+  seriesEvents,
+  locale,
+}: AddToCalendarProps) {
   const { c } = useTheme()
   const [expanded, setExpanded] = useState(false)
   const [busy, setBusy] = useState(false)
@@ -134,6 +154,44 @@ export function AddToCalendar({ event, sessions, seriesName, locale }: AddToCale
               <Text className="text-[13px] text-rg-link">{session.label}</Text>
             </Pressable>
           ))}
+
+          <Text className="mt-2 text-[11px] font-bold uppercase tracking-wider text-rg-text3">
+            {t('cal.export', locale)}
+          </Text>
+          <Pressable
+            onPress={() => {
+              shareIcs(`${event.id}.ics`, generateIcs(event, schedulable, seriesName)).catch(() =>
+                Alert.alert(tm('cal.addError', locale)),
+              )
+            }}
+            accessibilityRole="button"
+          >
+            <Text className="text-[13px] text-rg-link">{tm('cal.shareEvent', locale)}</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => {
+              shareIcs(`${seriesId}-season.ics`, generateSeriesIcs(seriesEvents, seriesName)).catch(
+                () => Alert.alert(tm('cal.addError', locale)),
+              )
+            }}
+            accessibilityRole="button"
+          >
+            <Text className="text-[13px] text-rg-link">{tm('cal.shareSeason', locale)}</Text>
+          </Pressable>
+
+          <Text className="mt-2 text-[11px] font-bold uppercase tracking-wider text-rg-text3">
+            {t('cal.subscribe', locale)}
+          </Text>
+          <Pressable
+            onPress={() => {
+              // Same hosted feed the web app subscribes to.
+              Linking.openURL(`webcal://race-grid.com/calendar/${seriesId}.ics`).catch(() => {})
+            }}
+            accessibilityRole="link"
+          >
+            <Text className="text-[13px] text-rg-link">{t('cal.subscribeSeries', locale)}</Text>
+            <Text className="text-[11px] text-rg-text3">{t('cal.subscribeHint', locale)}</Text>
+          </Pressable>
         </View>
       )}
     </View>

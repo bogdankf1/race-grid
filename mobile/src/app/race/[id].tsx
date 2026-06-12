@@ -172,7 +172,9 @@ export default function RaceDetailScreen() {
       <AddToCalendar
         event={event}
         sessions={sessionsByDay.flatMap(([, sessions]) => sessions)}
+        seriesId={series.id}
         seriesName={series.name}
+        seriesEvents={series.events}
         locale={locale}
       />
 

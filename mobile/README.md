@@ -99,14 +99,10 @@ extra space rather than stretch the phone UI:
 - **Settings**: split view (section list left, active section right).
 - Landscape support on tablets only (phones stay portrait-locked).
 
-### 2. Not yet ported from the web app
+### 2. Not ported (native N/A)
 
-- Driver and team detail pages (`/drivers/[id]`, `/teams/[id]`) — standings
-  rows would link to them.
-- Month-grid calendar view — the agenda list is a deliberate mobile design
-  swap, but a compact month grid could return as an optional view mode.
-- `webcal://` season subscription (auto-updating calendar feed) — device
-  calendar insert covers the one-shot case today.
-- `.ics` file share (expo-sharing) as an alternative to direct calendar
-  insert.
 - PWA-only features (install prompt, service worker) — N/A for native.
+
+Previously-listed gaps now shipped: driver/team detail pages (linked from
+standings), month-grid view mode on Schedule, `webcal://` season subscription,
+and `.ics` sharing via the system share sheet.

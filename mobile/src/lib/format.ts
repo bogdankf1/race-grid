@@ -17,6 +17,23 @@ export const SESSION_ICONS: Record<SessionType, string> = {
   endurance: '\u{1F3C1}',
 }
 
+/** Gold / silver / bronze accents for P1–P3 (web driver/team pages). */
+export const MEDAL_COLORS = ['#FFD700', '#C0C0C0', '#CD7F32']
+
+/** Localized country name from an ISO code (web driver/team pages). */
+export function countryName(code: string, locale: Locale): string {
+  if (!code) return ''
+  try {
+    return (
+      new Intl.DisplayNames([locale === 'uk' ? 'uk' : 'en'], { type: 'region' }).of(
+        code.toUpperCase(),
+      ) ?? code
+    )
+  } catch {
+    return code
+  }
+}
+
 /** Country code → emoji flag (web DayDetail). */
 export function countryFlag(countryCode: string): string {
   return countryCode
