@@ -78,3 +78,35 @@ npx expo export -p ios -p android --output-dir dist-export   # full Metro bundle
 Note: local notifications need a real device; in Expo Go on Android they are
 limited — use `npx expo run:android`/`run:ios` (or a dev build) for full
 notification behavior.
+
+## Roadmap
+
+Planned phases, in priority order. Items in the second group exist on the web
+and were intentionally not ported yet.
+
+### 1. iPad / tablet adaptive layouts
+
+Today the app is a single-column phone layout and `ios.supportsTablet` is off
+(iPads run it as a scaled iPhone app). The tablet phase should leverage the
+extra space rather than stretch the phone UI:
+
+- Enable `ios.supportsTablet` and size against `useWindowDimensions`
+  breakpoints (≥768pt = tablet).
+- **Schedule**: two-pane master–detail — agenda list on the left, the selected
+  race's detail (sessions/circuit/results) on the right, no navigation push.
+- **Series / Circuits / Standings**: multi-column grids instead of one card
+  per row; standings tables can show drivers and constructors side by side.
+- **Settings**: split view (section list left, active section right).
+- Landscape support on tablets only (phones stay portrait-locked).
+
+### 2. Not yet ported from the web app
+
+- Driver and team detail pages (`/drivers/[id]`, `/teams/[id]`) — standings
+  rows would link to them.
+- Month-grid calendar view — the agenda list is a deliberate mobile design
+  swap, but a compact month grid could return as an optional view mode.
+- `webcal://` season subscription (auto-updating calendar feed) — device
+  calendar insert covers the one-shot case today.
+- `.ics` file share (expo-sharing) as an alternative to direct calendar
+  insert.
+- PWA-only features (install prompt, service worker) — N/A for native.
