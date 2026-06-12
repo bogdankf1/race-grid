@@ -11,8 +11,14 @@ import { getSeriesForYear } from '@/data/series-registry'
 import type { Locale } from '@/lib/i18n'
 import type { Theme } from '@/lib/theme'
 import { getDefaultTimezone } from '@/lib/timezone'
+import type { SessionType } from '@/lib/types'
 import { SEASON } from '~/lib/data'
 import { DEFAULT_NOTIFICATION_PREFS, type NotificationPrefs } from '~/lib/notifications'
+
+export const ALL_SESSION_TYPES: SessionType[] = [
+  'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
+  'practice', 'warmup', 'stage', 'shakedown', 'endurance',
+]
 
 const KEYS = {
   theme: 'race-grid:theme',
@@ -21,6 +27,7 @@ const KEYS = {
   spoilerFree: 'race-grid:spoiler-free',
   series: 'race-grid:series',
   notify: 'race-grid:notify',
+  sessionTypes: 'race-grid:session-types',
 } as const
 
 export interface SettingsState {
@@ -30,6 +37,7 @@ export interface SettingsState {
   spoilerFree: boolean
   followedSeriesIds: string[]
   notifyPrefs: NotificationPrefs
+  visibleSessionTypes: SessionType[]
 }
 
 interface SettingsContextValue extends SettingsState {
@@ -41,6 +49,8 @@ interface SettingsContextValue extends SettingsState {
   setFollowedSeriesIds: (ids: string[]) => void
   toggleFollowedSeries: (id: string) => void
   setNotifyPrefs: (prefs: NotificationPrefs) => void
+  setVisibleSessionTypes: (types: SessionType[]) => void
+  toggleSessionType: (type: SessionType) => void
 }
 
 function defaultTheme(): Theme {
@@ -69,6 +79,7 @@ function defaults(): SettingsState {
     spoilerFree: false,
     followedSeriesIds: ids,
     notifyPrefs: { ...DEFAULT_NOTIFICATION_PREFS, seriesIds: ids },
+    visibleSessionTypes: ALL_SESSION_TYPES,
   }
 }
 
@@ -104,6 +115,10 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
             ...base.notifyPrefs,
             ...parse<Partial<NotificationPrefs>>(stored[KEYS.notify], base.notifyPrefs),
           },
+          visibleSessionTypes: parse<SessionType[]>(
+            stored[KEYS.sessionTypes],
+            base.visibleSessionTypes,
+          ),
         })
       })
       .catch(() => {})
@@ -140,6 +155,16 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         update('followedSeriesIds', KEYS.series, ids)
       },
       setNotifyPrefs: (prefs) => update('notifyPrefs', KEYS.notify, prefs),
+      setVisibleSessionTypes: (types) => {
+        if (types.length > 0) update('visibleSessionTypes', KEYS.sessionTypes, types)
+      },
+      toggleSessionType: (type) => {
+        const updated = state.visibleSessionTypes.includes(type)
+          ? state.visibleSessionTypes.filter((t) => t !== type)
+          : [...state.visibleSessionTypes, type]
+        // Web convention: never allow an empty selection.
+        if (updated.length > 0) update('visibleSessionTypes', KEYS.sessionTypes, updated)
+      },
     }),
     [state, hydrated, update],
   )

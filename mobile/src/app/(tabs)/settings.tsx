@@ -14,6 +14,9 @@ import {
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
+import { Check, Heart } from 'lucide-react-native'
+import { Linking } from 'react-native'
+
 import { t, type Locale } from '@/lib/i18n'
 import { getTimezoneLabel, TIMEZONE_GROUPS } from '@/lib/timezone'
 import type { ReactNode } from 'react'
@@ -21,8 +24,13 @@ import { ensureNotificationPermission, type LeadTime } from '~/lib/notifications
 import { tm } from '~/lib/strings'
 import { SeriesChip } from '~/components/SeriesChip'
 import { useData } from '~/state/data'
-import { useSettings } from '~/state/settings'
+import { ALL_SESSION_TYPES, useSettings } from '~/state/settings'
 import { useTheme } from '~/state/theme'
+
+const SUPPORT_LINKS = [
+  { key: 'support.ukraine.label', method: 'support.ukraine.method', url: 'https://send.monobank.ua/jar/EHzLuicin' },
+  { key: 'support.intl.label', method: 'support.intl.method', url: 'https://patreon.com/BohdanBurukhin' },
+]
 
 const TZ_GROUP_LABEL: Record<string, string> = {
   Americas: 'tz.americas',
@@ -238,6 +246,57 @@ export default function SettingsScreen() {
           </Row>
         </Section>
 
+        <Section title={t('settings.sessions', locale)}>
+          <View className="py-3">
+            <View className="mb-2 flex-row items-center justify-between">
+              <Text className="text-sm text-rg-text">
+                {settings.visibleSessionTypes.length === ALL_SESSION_TYPES.length
+                  ? t('filter.all', locale)
+                  : `${settings.visibleSessionTypes.length}/${ALL_SESSION_TYPES.length}`}
+              </Text>
+              <Pressable
+                onPress={() => settings.setVisibleSessionTypes(ALL_SESSION_TYPES)}
+                accessibilityRole="button"
+                className="rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
+              >
+                <Text className="text-xs font-semibold text-rg-text2">
+                  {t('filter.selectAll', locale)}
+                </Text>
+              </Pressable>
+            </View>
+            <View className="flex-row flex-wrap gap-2">
+              {ALL_SESSION_TYPES.map((type) => {
+                const active = settings.visibleSessionTypes.includes(type)
+                return (
+                  <Pressable
+                    key={type}
+                    onPress={() => settings.toggleSessionType(type)}
+                    accessibilityRole="checkbox"
+                    accessibilityState={{ checked: active }}
+                    className={
+                      active
+                        ? 'flex-row items-center gap-1 rounded-lg bg-rg-elevated border border-rg-border px-2.5 py-1.5'
+                        : 'flex-row items-center gap-1 rounded-lg border border-rg-border px-2.5 py-1.5'
+                    }
+                    style={{ opacity: active ? 1 : 0.55 }}
+                  >
+                    {active && <Check size={11} color={c('success')} />}
+                    <Text
+                      className={
+                        active
+                          ? 'text-xs font-semibold text-rg-text'
+                          : 'text-xs font-semibold text-rg-text3'
+                      }
+                    >
+                      {t(`session.${type}`, locale)}
+                    </Text>
+                  </Pressable>
+                )
+              })}
+            </View>
+          </View>
+        </Section>
+
         <Section title={t('notify.title', locale)}>
           <Row label={t('notify.enable', locale)} hint={tm('settings.notifyHint', locale)}>
             <Switch
@@ -309,6 +368,28 @@ export default function SettingsScreen() {
               </Text>
             </Pressable>
           </Row>
+        </Section>
+
+        <Section title={t('footer.support', locale)}>
+          {SUPPORT_LINKS.map((link) => (
+            <Row key={link.key} label={t(link.key, locale)} hint={t(link.method, locale)}>
+              <Pressable
+                onPress={() => {
+                  Linking.openURL(link.url).catch(() => {})
+                }}
+                accessibilityRole="link"
+                className="flex-row items-center gap-1.5 rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
+              >
+                <Heart size={12} color="#e25555" />
+                <Text className="text-xs font-semibold text-rg-text2">
+                  {t('footer.support', locale)}
+                </Text>
+              </Pressable>
+            </Row>
+          ))}
+          <View className="items-center py-3">
+            <Text className="text-xs text-rg-text3">{tm('support.madeWith', locale)}</Text>
+          </View>
         </Section>
       </ScrollView>
 

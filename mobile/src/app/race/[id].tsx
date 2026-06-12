@@ -11,24 +11,25 @@ import { formatInTimezone, getLocalDate } from '@/lib/timezone'
 import type { Session } from '@/lib/types'
 import { isStale, readCache, writeCache } from '~/lib/cache'
 import { collectEventResults, hasFinishedResultSession } from '~/lib/data'
+import { useEventRef } from '~/lib/event-ref'
 import { countryFlag } from '~/lib/format'
 import { fetchEventResults, type RemoteSessionResult } from '~/lib/mcp'
 import { tm } from '~/lib/strings'
+import { AddToCalendar } from '~/components/AddToCalendar'
 import { ResultBlock } from '~/components/ResultBlock'
 import { SeriesChip } from '~/components/SeriesChip'
 import { SessionRow } from '~/components/SessionRow'
 import { SpoilerGuard } from '~/components/SpoilerGuard'
-import { useData } from '~/state/data'
+import { WhereToWatch } from '~/components/WhereToWatch'
 import { useSettings } from '~/state/settings'
 
 const RESULTS_MAX_AGE_MS = 6 * 60 * 60 * 1000
 
 export default function RaceDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>()
-  const { eventIndex } = useData()
-  const { timezone, locale, spoilerFree } = useSettings()
+  const { timezone, locale, spoilerFree, visibleSessionTypes } = useSettings()
 
-  const ref = id ? eventIndex.get(id) : undefined
+  const { ref, loading } = useEventRef(id)
 
   const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
@@ -64,9 +65,9 @@ export default function RaceDetailScreen() {
 
   const sessionsByDay = useMemo(() => {
     if (!ref) return []
-    const sorted = [...ref.event.sessions].sort(
-      (a, b) => new Date(a.startUtc).getTime() - new Date(b.startUtc).getTime(),
-    )
+    const sorted = ref.event.sessions
+      .filter((s) => visibleSessionTypes.includes(s.type))
+      .sort((a, b) => new Date(a.startUtc).getTime() - new Date(b.startUtc).getTime())
     const days = new Map<string, Session[]>()
     for (const session of sorted) {
       const day = getLocalDate(session.startUtc, timezone)
@@ -75,13 +76,15 @@ export default function RaceDetailScreen() {
       else days.set(day, [session])
     }
     return [...days.entries()]
-  }, [ref, timezone])
+  }, [ref, timezone, visibleSessionTypes])
 
   if (!ref) {
     return (
       <View className="flex-1 items-center justify-center bg-rg-bg px-8">
         <Stack.Screen options={{ title: '' }} />
-        <Text className="text-base text-rg-text2">{tm('detail.notFound', locale)}</Text>
+        {!loading && (
+          <Text className="text-base text-rg-text2">{tm('detail.notFound', locale)}</Text>
+        )}
       </View>
     )
   }
@@ -159,6 +162,19 @@ export default function RaceDetailScreen() {
           </View>
         ))}
       </View>
+
+      <WhereToWatch
+        seriesId={series.id}
+        seriesColor={series.color}
+        timezone={timezone}
+        locale={locale}
+      />
+      <AddToCalendar
+        event={event}
+        sessions={sessionsByDay.flatMap(([, sessions]) => sessions)}
+        seriesName={series.name}
+        locale={locale}
+      />
 
       {resultPairs.length > 0 &&
         (spoilerFree ? (

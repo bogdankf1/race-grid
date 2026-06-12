@@ -4,7 +4,7 @@
 
 import { getCircuit } from '@/data/circuits'
 import { getLocalDate } from '@/lib/timezone'
-import type { RaceEvent, SeriesConfig, Session } from '@/lib/types'
+import type { RaceEvent, SeriesConfig, Session, SessionType } from '@/lib/types'
 import { DEFAULT_SESSION_MINUTES, sessionEndMs } from '~/lib/data'
 
 /** Session types that count as the headline "race" of an event (web UpcomingRaces). */
@@ -67,9 +67,13 @@ export function toAgendaEvent(
   event: RaceEvent,
   timezone: string,
   now: number,
+  visibleTypes?: SessionType[],
 ): AgendaEvent | null {
-  if (event.sessions.length === 0) return null
-  const sorted = [...event.sessions].sort(
+  const sessions = visibleTypes
+    ? event.sessions.filter((s) => visibleTypes.includes(s.type))
+    : event.sessions
+  if (sessions.length === 0) return null
+  const sorted = [...sessions].sort(
     (a, b) => new Date(a.startUtc).getTime() - new Date(b.startUtc).getTime(),
   )
   const startMs = new Date(sorted[0].startUtc).getTime()
@@ -103,13 +107,14 @@ export function buildAgenda(
   followedIds: string[],
   timezone: string,
   now: number,
+  visibleTypes?: SessionType[],
 ): Agenda {
   const followed = new Set(followedIds)
   const events: AgendaEvent[] = []
   for (const series of seriesList) {
     if (!followed.has(series.id)) continue
     for (const event of series.events) {
-      const agendaEvent = toAgendaEvent(series, event, timezone, now)
+      const agendaEvent = toAgendaEvent(series, event, timezone, now, visibleTypes)
       if (agendaEvent) events.push(agendaEvent)
     }
   }

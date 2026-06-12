@@ -2,13 +2,14 @@
 // timezone, color-coded per series, filtered to followed series.
 
 import { useRouter } from 'expo-router'
+import { Search, X } from 'lucide-react-native'
 import { useEffect, useMemo, useState } from 'react'
-import { Pressable, RefreshControl, SectionList, Text, View } from 'react-native'
+import { Pressable, RefreshControl, SectionList, Text, TextInput, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { t } from '@/lib/i18n'
 import { getLocalDate } from '@/lib/timezone'
-import { buildAgenda, weekKeyOf, type AgendaEvent } from '~/lib/agenda'
+import { buildAgenda, weekKeyOf, type AgendaEvent, type WeekGroup } from '~/lib/agenda'
 import { SEASON } from '~/lib/data'
 import { formatWeekLabel } from '~/lib/format'
 import { tm } from '~/lib/strings'
@@ -17,11 +18,29 @@ import { useData } from '~/state/data'
 import { useSettings } from '~/state/settings'
 import { useTheme } from '~/state/theme'
 
+function filterGroups(groups: WeekGroup[], query: string): WeekGroup[] {
+  const q = query.trim().toLowerCase()
+  if (!q) return groups
+  return groups
+    .map((g) => ({
+      ...g,
+      events: g.events.filter(
+        (e) =>
+          e.event.name.toLowerCase().includes(q) ||
+          e.circuitName.toLowerCase().includes(q) ||
+          e.seriesShortName.toLowerCase().includes(q),
+      ),
+    }))
+    .filter((g) => g.events.length > 0)
+}
+
 export default function ScheduleScreen() {
   const { seriesList, refresh, refreshing, refreshError, lastSync } = useData()
-  const { followedSeriesIds, timezone, locale } = useSettings()
+  const { followedSeriesIds, timezone, locale, visibleSessionTypes } = useSettings()
   const { c } = useTheme()
   const router = useRouter()
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [query, setQuery] = useState('')
 
   const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
@@ -32,8 +51,8 @@ export default function ScheduleScreen() {
   const [showEarlier, setShowEarlier] = useState(false)
 
   const agenda = useMemo(
-    () => buildAgenda(seriesList, followedSeriesIds, timezone, now),
-    [seriesList, followedSeriesIds, timezone, now],
+    () => buildAgenda(seriesList, followedSeriesIds, timezone, now, visibleSessionTypes),
+    [seriesList, followedSeriesIds, timezone, now, visibleSessionTypes],
   )
 
   const thisWeekKey = useMemo(
@@ -41,16 +60,19 @@ export default function ScheduleScreen() {
     [now, timezone],
   )
 
+  const searching = query.trim().length > 0
   const sections = useMemo(() => {
-    const groups = showEarlier ? [...agenda.past, ...agenda.current] : agenda.current
-    return groups.map((g) => ({ title: g.weekKey, data: g.events }))
-  }, [agenda, showEarlier])
+    // Searching looks across the whole season, not just upcoming weeks.
+    const groups =
+      showEarlier || searching ? [...agenda.past, ...agenda.current] : agenda.current
+    return filterGroups(groups, query).map((g) => ({ title: g.weekKey, data: g.events }))
+  }, [agenda, showEarlier, searching, query])
 
   const empty = followedSeriesIds.length === 0
 
   return (
     <SafeAreaView edges={['top']} className="flex-1 bg-rg-bg">
-      <View className="flex-row items-baseline gap-2 px-4 pb-2 pt-3">
+      <View className="flex-row items-center gap-2 px-4 pb-2 pt-3">
         <Text className="text-xl font-extrabold tracking-widest text-rg-text">
           {t('app.title', locale)}
         </Text>
@@ -59,7 +81,35 @@ export default function ScheduleScreen() {
         {refreshError && (
           <Text className="text-[10px] text-rg-text3">{tm('agenda.updateFailed', locale)}</Text>
         )}
+        <Pressable
+          onPress={() => {
+            setSearchOpen((open) => {
+              if (open) setQuery('')
+              return !open
+            })
+          }}
+          accessibilityRole="button"
+          className="rounded-lg border border-rg-border bg-rg-btn-bg p-2"
+        >
+          {searchOpen ? <X size={14} color={c('text2')} /> : <Search size={14} color={c('text2')} />}
+        </Pressable>
       </View>
+
+      {searchOpen && (
+        <View className="mx-4 mb-2 flex-row items-center gap-2 rounded-xl border border-rg-border bg-rg-surface px-3">
+          <Search size={14} color={c('text3')} />
+          <TextInput
+            className="flex-1 py-2 text-sm text-rg-text"
+            placeholder={t('search.placeholder', locale)}
+            placeholderTextColor={c('text3')}
+            value={query}
+            onChangeText={setQuery}
+            autoFocus
+            autoCapitalize="none"
+            autoCorrect={false}
+          />
+        </View>
+      )}
 
       {empty ? (
         <View className="flex-1 items-center justify-center px-8">
@@ -87,7 +137,7 @@ export default function ScheduleScreen() {
             />
           }
           ListHeaderComponent={
-            agenda.past.length > 0 ? (
+            agenda.past.length > 0 && !searching ? (
               <Pressable
                 onPress={() => setShowEarlier((v) => !v)}
                 accessibilityRole="button"

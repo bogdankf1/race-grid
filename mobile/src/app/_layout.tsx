@@ -85,7 +85,7 @@ function ThemedNavigator() {
           contentStyle: { backgroundColor: c('bg') },
         }}
       >
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false, title: '' }} />
         <Stack.Screen name="race/[id]" options={{ title: '' }} />
       </Stack>
     </>
