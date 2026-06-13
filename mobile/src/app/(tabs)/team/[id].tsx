@@ -1,7 +1,7 @@
 // Team detail — port of the web /teams/[id]: country header, series chips,
 // year selector, total wins, Drivers/Results tabs.
 
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router'
+import { useLocalSearchParams, useRouter } from 'expo-router'
 import { Trophy } from 'lucide-react-native'
 import { useMemo, useState } from 'react'
 import { ActivityIndicator, FlatList, Pressable, Text, View } from 'react-native'
@@ -15,6 +15,7 @@ import { t } from '@/lib/i18n'
 import { useAllYearsLoaded } from '~/lib/all-years'
 import { countryFlag, countryName, MEDAL_COLORS } from '~/lib/format'
 import { tm } from '~/lib/strings'
+import { useScreenTitle } from '~/lib/use-screen-title'
 import { SeriesChip } from '~/components/SeriesChip'
 import { YearSelector } from '~/components/YearSelector'
 import { useSettings } from '~/state/settings'
@@ -59,10 +60,11 @@ export default function TeamDetailScreen() {
     s.results.map((r) => ({ ...r, season: s })),
   )
 
+  useScreenTitle(team?.name ?? '')
+
   if (!team) {
     return (
       <View className="flex-1 items-center justify-center bg-rg-bg">
-        <Stack.Screen options={{ title: '' }} />
         <Text className="text-base text-rg-text2">{t('error.notFound', locale)}</Text>
       </View>
     )
@@ -137,7 +139,6 @@ export default function TeamDetailScreen() {
 
   return (
     <View className="flex-1 bg-rg-bg">
-      <Stack.Screen options={{ title: team.name }} />
       {tab === 'drivers' ? (
         <FlatList
           data={rosterIds}

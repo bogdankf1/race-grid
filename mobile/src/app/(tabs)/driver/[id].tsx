@@ -2,7 +2,7 @@
 // chips, year selector, season-by-season podium results (gold/silver/bronze
 // accents), rows open the race detail.
 
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router'
+import { useLocalSearchParams, useRouter } from 'expo-router'
 import { Trophy } from 'lucide-react-native'
 import { useMemo, useState } from 'react'
 import { ActivityIndicator, FlatList, Pressable, Text, View } from 'react-native'
@@ -14,6 +14,7 @@ import { getTeam } from '@/data/teams'
 import { t } from '@/lib/i18n'
 import { useAllYearsLoaded } from '~/lib/all-years'
 import { countryFlag, countryName, MEDAL_COLORS } from '~/lib/format'
+import { useScreenTitle } from '~/lib/use-screen-title'
 import { SeriesChip } from '~/components/SeriesChip'
 import { YearSelector } from '~/components/YearSelector'
 import { useSettings } from '~/state/settings'
@@ -41,10 +42,11 @@ export default function DriverDetailScreen() {
   const seasons = allSeasons.filter((s) => s.year === year)
   const seriesIds = [...new Set(allSeasons.map((s) => s.seriesId))]
 
+  useScreenTitle(driver?.shortName ?? '')
+
   if (!driver) {
     return (
       <View className="flex-1 items-center justify-center bg-rg-bg">
-        <Stack.Screen options={{ title: '' }} />
         <Text className="text-base text-rg-text2">{t('error.notFound', locale)}</Text>
       </View>
     )
@@ -52,7 +54,6 @@ export default function DriverDetailScreen() {
 
   return (
     <View className="flex-1 bg-rg-bg">
-      <Stack.Screen options={{ title: driver.shortName }} />
       <FlatList
         data={seasons}
         keyExtractor={(s) => `${s.seriesId}-${s.year}`}

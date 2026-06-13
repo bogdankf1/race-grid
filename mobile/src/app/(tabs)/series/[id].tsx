@@ -1,7 +1,7 @@
 // Series detail — port of the web /series/[id]: logo header, year selector,
 // season progress, family (related series) chips, full season calendar.
 
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router'
+import { useLocalSearchParams, useRouter } from 'expo-router'
 import { ExternalLink } from 'lucide-react-native'
 import { useMemo } from 'react'
 import { FlatList, Linking, Pressable, Text, View } from 'react-native'
@@ -17,6 +17,7 @@ import { t } from '@/lib/i18n'
 import { getLocalDate } from '@/lib/timezone'
 import { eventStatus } from '~/lib/agenda'
 import { SEASON, sessionEndMs } from '~/lib/data'
+import { useScreenTitle } from '~/lib/use-screen-title'
 import { countryFlag, formatDateRange } from '~/lib/format'
 import { usePersistedState } from '~/lib/persisted'
 import { tm } from '~/lib/strings'
@@ -58,10 +59,11 @@ export default function SeriesDetailScreen() {
     (e) => e.sessions.length > 0 && e.sessions.every((s) => now >= sessionEndMs(s)),
   ).length
 
+  useScreenTitle(meta?.shortName ?? '')
+
   if (!meta) {
     return (
       <View className="flex-1 items-center justify-center bg-rg-bg">
-        <Stack.Screen options={{ title: '' }} />
         <Text className="text-base text-rg-text2">{t('error.notFound', locale)}</Text>
       </View>
     )
@@ -69,7 +71,6 @@ export default function SeriesDetailScreen() {
 
   return (
     <View className="flex-1 bg-rg-bg">
-      <Stack.Screen options={{ title: meta.shortName }} />
       <FlatList
         data={events}
         keyExtractor={(e) => e.id}

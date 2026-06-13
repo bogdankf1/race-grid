@@ -1,7 +1,7 @@
 // Race detail: every session of the weekend in the user's timezone, circuit
 // info, and (spoiler-guarded) results once sessions have finished.
 
-import { Stack, useLocalSearchParams } from 'expo-router'
+import { useLocalSearchParams } from 'expo-router'
 import { useEffect, useMemo, useState } from 'react'
 import { ScrollView, Text, View } from 'react-native'
 
@@ -15,6 +15,7 @@ import { useEventRef } from '~/lib/event-ref'
 import { countryFlag } from '~/lib/format'
 import { fetchEventResults, type RemoteSessionResult } from '~/lib/mcp'
 import { tm } from '~/lib/strings'
+import { useScreenTitle } from '~/lib/use-screen-title'
 import { AddToCalendar } from '~/components/AddToCalendar'
 import { ResultBlock } from '~/components/ResultBlock'
 import { SeriesChip } from '~/components/SeriesChip'
@@ -78,10 +79,11 @@ export default function RaceDetailScreen() {
     return [...days.entries()]
   }, [ref, timezone, visibleSessionTypes])
 
+  useScreenTitle(ref?.series.shortName ?? '')
+
   if (!ref) {
     return (
       <View className="flex-1 items-center justify-center bg-rg-bg px-8">
-        <Stack.Screen options={{ title: '' }} />
         {!loading && (
           <Text className="text-base text-rg-text2">{tm('detail.notFound', locale)}</Text>
         )}
@@ -99,7 +101,6 @@ export default function RaceDetailScreen() {
       className="flex-1 bg-rg-bg"
       contentContainerStyle={{ padding: 16, paddingBottom: 40 }}
     >
-      <Stack.Screen options={{ title: series.shortName }} />
 
       <View className="flex-row items-center gap-3">
         <SeriesChip
