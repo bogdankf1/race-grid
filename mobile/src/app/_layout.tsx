@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'react'
 import { AppState } from 'react-native'
 
 import { rescheduleAll, setupNotificationChannel } from '~/lib/notifications'
+import { HeaderBack } from '~/components/HeaderBack'
 import { DataProvider, useData } from '~/state/data'
 import { SettingsProvider, useSettings } from '~/state/settings'
 import { ThemeProvider, useTheme } from '~/state/theme'
@@ -84,6 +85,10 @@ function ThemedNavigator() {
           headerTintColor: c('text'),
           headerTitleStyle: { color: c('text') },
           contentStyle: { backgroundColor: c('bg') },
+          // Every detail screen gets a guaranteed-working back/home control,
+          // including those entered via deep link or a notification cold-start.
+          headerLeft: () => <HeaderBack />,
+          headerBackVisible: false,
         }}
       >
         <Stack.Screen name="(tabs)" options={{ headerShown: false, title: '' }} />
