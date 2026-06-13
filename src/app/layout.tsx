@@ -24,16 +24,16 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   openGraph: {
     title: 'Race Grid — Motorsport Calendar',
-    description: 'All your motorsport in one calendar. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GTWC and more — with session times in your local timezone.',
+    description: 'All your motorsport in one calendar. F1, IndyCar, NASCAR, WEC, WRC and more — session times in your local timezone.',
     siteName: 'Race Grid',
     type: 'website',
-    images: [{ url: 'https://race-grid.com/og.svg', width: 1200, height: 630, alt: 'Race Grid — Motorsport Calendar' }],
+    images: [{ url: 'https://race-grid.com/og.png', width: 1200, height: 630, type: 'image/png', alt: 'Race Grid — Motorsport Calendar' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Race Grid — Motorsport Calendar',
     description: 'All your motorsport in one calendar. F1, IndyCar, NASCAR, WEC, WRC, IMSA, DTM, GTWC and more.',
-    images: ['https://race-grid.com/og.svg'],
+    images: ['https://race-grid.com/og.png'],
   },
   verification: {
     google: 'vCQu6tYFys2uv5hJLV14zFKjA1LJKHrS3HpjomGmh7Q',

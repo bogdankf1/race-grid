@@ -73,19 +73,22 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
   const activeClass: ClassStandings | null = allClasses[activeClassIdx] ?? null
 
   const entries = useMemo(() => {
-    // Prefer active-class standings (has full grid) over raw entries (only podium finishers)
+    // The entries file is the authoritative roster (full grid). Prefer it over
+    // standings, which for an in-progress/recent season only list classified or
+    // points-scoring drivers and undercount the field.
+    const rawEntries = getEntries(seriesId, year)
+    const scoped = allClasses.length > 1 && activeClass
+      ? rawEntries.filter(e => e.class === activeClass.className)
+      : rawEntries
+    if (scoped.length > 0) return scoped
+    // Fallback — no entries data for this class/season: derive roster from standings
     if (activeClass && activeClass.drivers.length > 0) {
       const seen = new Set<string>()
       return activeClass.drivers
         .filter(d => { if (seen.has(d.driverId)) return false; seen.add(d.driverId); return true })
         .map(d => ({ driverId: d.driverId, teamId: d.teamId, carNumber: undefined as number | undefined }))
     }
-    // Entries fallback — for multi-class series, narrow by the active class label
-    const rawEntries = getEntries(seriesId, year)
-    if (allClasses.length > 1 && activeClass) {
-      return rawEntries.filter(e => e.class === activeClass.className)
-    }
-    return rawEntries
+    return scoped
   }, [activeClass, allClasses.length, seriesId, year])
 
   // Unique teams for this series+year

@@ -1,12 +1,12 @@
 # Race Grid
 
-A universal motorsport calendar — 27 racing series, 6 seasons, every session in your local timezone. Live at [race-grid.app](https://race-grid.app).
+A universal motorsport calendar — 35 racing series, 6 seasons, every session in your local timezone. Live at [race-grid.app](https://race-grid.app).
 
 No accounts, no backend, no database. All preferences live in `localStorage`. The web app is a static Next.js export deployed on Vercel.
 
 ## What's tracked
 
-Open Wheel (F1, F2, F3, Formula E, IndyCar, Super Formula), Endurance (WEC, ELMS, MLMC, IMSA, IGTC, 24H Series), GT / Touring (DTM, GTWC Europe / America / Asia / Australia, British GT, Super GT, NLS, Supercars), Stock Car (NASCAR Cup), Rally (WRC, Dakar, FIA Rallycross), Motorcycle (MotoGP), and Special Events (Goodwood, Pikes Peak, Le Mans Classic, Race of Champions, etc.).
+Open Wheel (F1, F2, F3, F1 Academy, Formula E, IndyCar, Indy NXT, Super Formula), Endurance (WEC, ELMS, MLMC, IMSA WeatherTech, IMSA Michelin Pilot Challenge, IGTC, 24H Series), GT / Touring (DTM, GTWC Europe / America / Asia / Australia, British GT, Super GT, NLS, Supercars, Porsche Supercup), Stock Car (NASCAR Cup, Xfinity, Craftsman Truck), Rally (WRC, Dakar, FIA Rallycross), Motorcycle (MotoGP, Moto2, Moto3), and Special Events (Goodwood, Pikes Peak, Le Mans Classic, Race of Champions, etc.).
 
 ## Project layout
 
@@ -37,6 +37,10 @@ npx tsx scripts/validate-data.ts  # Referential-integrity check across all data
 npx next build                 # Static export to ./out
 ```
 
+### Workflow
+
+Every change — feature, fix, or data update — starts in an isolated git worktree so work stays parallelizable and the main checkout stays clean. In Claude Code, run `/new-session "<what we're working on>"` to spin one up (it forks from `main`, installs deps, and picks a free dev port), and `/clear-sessions` to remove worktrees once their branch is merged.
+
 ---
 
 ## AI Infrastructure
@@ -59,7 +63,7 @@ Three Claude Code routines run on cron to keep the data fresh:
 
 - **Weekly results** (Sun 22:00 UTC) — runs `/update-results`, opens a PR with new race finishes.
 - **Weekly standings** (Mon 12:00 UTC) — runs `/update-standings`, opens a PR with updated championship tables.
-- **Monthly calendar verify** (1st of month, 06:00 UTC) — runs the `VERIFY-SEASON-DATA.md` playbook against all 27 series, opens a PR with discrepancies or an issue if everything checks out.
+- **Monthly calendar verify** (1st of month, 06:00 UTC) — runs the `VERIFY-SEASON-DATA.md` playbook against all 35 series, opens a PR with discrepancies or an issue if everything checks out.
 
 Each routine reuses an existing project skill, so the runbooks in `docs/` remain the source of truth for *how* to update.
 
@@ -72,7 +76,7 @@ The same skills the scheduled agents call can be invoked by hand for backfills:
 | `/update-results` | Backfill or refresh results for a series/year |
 | `/update-standings` | Refresh championship tables |
 | `/add-series` | Onboard a brand-new racing series end-to-end |
-| `/support-year` | Backfill a whole new season year across all 27 series |
+| `/support-year` | Backfill a whole new season year across all 35 series |
 
 ---
 

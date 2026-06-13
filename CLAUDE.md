@@ -2,7 +2,18 @@
 
 ## Project overview
 
-Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 34 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
+Race Grid is a motorsport calendar web app (Next.js 15, static export) showing race schedules for 35 racing series with session times in the user's local timezone. Data accuracy is critical — real users rely on this for planning.
+
+## Workflow — isolate every change in a worktree
+
+**Our main workflow is parallelized work in git worktrees. Start any change this way.**
+
+Whenever you're about to implement *anything* — a feature, a fix, a data update like `/update-results` or `/update-standings`, a chore — begin by invoking **`/new-session`** with a short description of the work. It derives a branch name, spins up an isolated worktree (forked from `main`, deps installed, free dev port), and does all the work there so the main checkout stays clean and multiple tasks can run in parallel.
+
+- **`/new-session "<what we'll work on>"`** — the entry point for every change. It sets up the worktree, then starts the work (running the matching task skill below inside it).
+- **`/clear-sessions`** — clean up worktrees once their branch is merged into `main` and the remote branch is gone.
+
+Only skip `/new-session` for pure read-only work (answering questions, searching, reviewing) or when you're already inside a worktree. The matching task skills (`/update-results`, `/update-standings`, `/support-year`, `/add-series`) run *inside* the worktree that `/new-session` created.
 
 ## Architecture
 
@@ -29,6 +40,8 @@ Race Grid is a motorsport calendar web app (Next.js 15, static export) showing r
 
 Always invoke the matching project skill when the task fits its trigger — do not improvise an equivalent workflow when a skill already encodes it. One skill per task type:
 
+- **`/new-session`** — start of **every** change (feature, fix, data update, chore). Sets up an isolated worktree, then begins the work inside it. See the Workflow section above.
+- **`/clear-sessions`** — remove worktrees whose branch was merged into `main` and deleted on the remote.
 - **`/update-results`** — whenever the user asks to add/refresh race results, catch up on a weekend, or backfill a series/year. Runs the `docs/UPDATE-RESULTS.md` runbook.
 - **`/update-standings`** — whenever championship/driver/constructor standings need updating (typically alongside `/update-results`). Runs `docs/UPDATE-STANDINGS.md`.
 - **`/support-year`** — when adding a brand-new season year with full calendar data for all series.
@@ -40,7 +53,7 @@ Invoke via the Skill tool. If the user describes a task that matches a skill but
 
 ### Mid-season data verification
 **When:** A race is canceled/rescheduled, geopolitical event affects a host country, monthly routine check, or user reports an error.
-**How:** Follow `docs/VERIFY-SEASON-DATA.md` — it walks through checking all 34 series against official sources and fixing discrepancies.
+**How:** Follow `docs/VERIFY-SEASON-DATA.md` — it walks through checking all 35 series against official sources and fixing discrepancies.
 **Command:** "Verify all race data" or "Check if calendar data is up to date"
 
 ### Race results update
@@ -64,7 +77,7 @@ Invoke via the Skill tool. If the user describes a task that matches a skill but
 ## Series groups (for filter dropdown)
 
 - **Open Wheel:** F1, F1 Academy, IndyCar, Indy NXT, Super Formula
-- **Endurance:** WEC, ELMS, MLMC, IMSA, IGTC, 24H Series
+- **Endurance:** WEC, ELMS, MLMC, IMSA, IMSA Michelin Pilot Challenge, IGTC, 24H Series
 - **GT / Touring:** DTM, GTWC, GTWC America, GTWC Asia, GTWC Australia, British GT, Super GT, NLS, Supercars, Porsche Supercup
 - **Stock Car:** NASCAR Cup, NASCAR Xfinity, NASCAR Truck
 - **Motorcycle:** MotoGP, Moto2, Moto3

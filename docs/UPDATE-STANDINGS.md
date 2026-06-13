@@ -2,6 +2,8 @@
 
 This runbook is executed manually via Claude Code. It finds series with outdated or missing standings and updates them from official sources.
 
+> **Start in a worktree.** When running this by hand, kick off with `/new-session "update standings"` first so all changes land in an isolated worktree (our default parallelized workflow — see CLAUDE.md). Then run `/update-standings` inside it.
+
 ---
 
 ## Procedure
@@ -36,6 +38,7 @@ For each series needing an update, search **official sources first**:
 | Porsche Supercup | porsche.com motorsport / pitwall.app/series/porsche-mobil-1-supercup | Wikipedia "20XX Porsche Supercup" |
 | WEC | fiawec.com standings, autohebdof1.com | Wikipedia "20XX FIA World Endurance Championship" |
 | IMSA | imsa.com/weathertech/standings | indymotorspeedway.com |
+| IMSA Michelin Pilot Challenge | imsa.com/imsa-michelin-pilot-challenge/standings | Wikipedia "20XX IMSA Michelin Pilot Challenge season" — multi-class (GS + TCR) |
 | ELMS | europeanlemansseries.com/ranking | speedsport-magazine.com |
 | MLMC | lemanscup.com standings | Wikipedia "20XX Michelin Le Mans Cup" |
 | IGTC | intercontinentalgtchallenge.com | Wikipedia "20XX Intercontinental GT Challenge" |
@@ -147,6 +150,7 @@ Verify the standings page displays correctly for the updated series.
 - **MLMC** — Overall drivers only
 - **Supercars** — Drivers only
 - **IMSA** — GTP drivers only (manufacturer title exists but not tracked here)
+- **IMSA Michelin Pilot Challenge** — multi-class (GS + TCR), drivers only
 - **Dakar** — Cars category drivers only
 - **Porsche Supercup** — One-make championship (drivers only)
 - **Indy NXT** — Drivers only (spec chassis)
@@ -161,6 +165,7 @@ For series with multiple championship classes, the top-level `drivers`/`construc
 **Currently populated in the data layer:**
 - **WEC**: primary = `Hypercar`, otherClasses = `[{ className: 'LMGT3', drivers, constructors }]`
 - **IMSA**: primary = `GTP`, otherClasses = `[{ className: 'GTD Pro', drivers, constructors: [] }, { className: 'GTD', drivers, constructors: [] }]`
+- **IMSA Michelin Pilot Challenge**: primary = `GS`, otherClasses = `[{ className: 'TCR', drivers, constructors: [] }]`
 
 **Candidates for future multi-class backfill** (currently single-class in the data layer; extend to `otherClasses` when refreshing):
 - **ELMS**: primary = `LMP2`, candidates = `LMP3`, `LMGT3`
@@ -197,7 +202,7 @@ The Dakar Rally is a single multi-stage event. Standings reflect the final overa
 ### 24H Series
 The 24H Series uses GT3 overall standings. Use `className: 'GT3'`. Has both driver and team championships.
 
-### Multi-driver entries (WEC, IMSA, ELMS, MLMC, GTWC, IGTC, Super GT, 24H Series)
+### Multi-driver entries (WEC, IMSA, IMPC, ELMS, MLMC, GTWC, IGTC, Super GT, 24H Series)
 Endurance series have multi-driver crews sharing one car. For standings:
 - Use the **first listed driver** of the crew as the `driverId`
 - The full crew details are available through the `entries/` data and race results
@@ -210,6 +215,7 @@ Endurance series have multi-driver crews sharing one car. For standings:
 - **NASCAR**: Stage points + playoff reset system (top 4 get 5000+ base)
 - **WEC**: 38-27-23-19-15-12-9-6-4-2-1
 - **IMSA**: Cumulative points system (2000+ scale)
+- **IMSA Michelin Pilot Challenge**: Cumulative points system (similar IMSA-style scale), multi-class GS + TCR
 - **ELMS/MLMC**: 25-18-15-12-10-8-6-4-2-1
 - **WRC**: 25-18-15-12-10-8-6-4-2-1 (rally) + Power Stage points
 - **MotoGP**: 25-20-16-13-11-10-9-8-7-6-5-4-3-2-1 (race), 12-9-7-6-5-4-3-2-1 (sprint)

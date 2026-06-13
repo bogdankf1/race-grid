@@ -27,6 +27,13 @@ import { gtwcasia2022 } from '../gtwcasia-2022'
 import { twentyfourh2022 } from '../24h-2022'
 import { special2022 } from '../special-2022'
 import { wrx2022 } from '../wrx-2022'
+import { porscheSupercup2022 } from '../porsche-supercup-2022'
+import { moto22022 } from '../moto2-2022'
+import { moto32022 } from '../moto3-2022'
+import { indyNxt2022 } from '../indy-nxt-2022'
+import { nascarXfinity2022 } from '../nascar-xfinity-2022'
+import { nascarTruck2022 } from '../nascar-truck-2022'
+import { impc2022 } from '../impc-2022'
 
 export const events2022: Record<string, RaceEvent[]> = {
   'f1': f12022,
@@ -56,4 +63,11 @@ export const events2022: Record<string, RaceEvent[]> = {
   '24h': twentyfourh2022,
   'special': special2022,
   'wrx': wrx2022,
+  'porsche-supercup': porscheSupercup2022,
+  'moto2': moto22022,
+  'moto3': moto32022,
+  'indy-nxt': indyNxt2022,
+  'nascar-xfinity': nascarXfinity2022,
+  'nascar-truck': nascarTruck2022,
+  'impc': impc2022,
 }

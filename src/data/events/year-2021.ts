@@ -26,6 +26,13 @@ import { gtwcau2021 } from '../gtwcau-2021'
 import { twentyfourh2021 } from '../24h-2021'
 import { special2021 } from '../special-2021'
 import { wrx2021 } from '../wrx-2021'
+import { porscheSupercup2021 } from '../porsche-supercup-2021'
+import { moto22021 } from '../moto2-2021'
+import { moto32021 } from '../moto3-2021'
+import { indyNxt2021 } from '../indy-nxt-2021'
+import { nascarXfinity2021 } from '../nascar-xfinity-2021'
+import { nascarTruck2021 } from '../nascar-truck-2021'
+import { impc2021 } from '../impc-2021'
 
 // Note: GTWC Asia 2021 is intentionally absent — the entire season was cancelled
 // by SRO due to COVID-19 travel restrictions (no events took place that year).
@@ -57,4 +64,11 @@ export const events2021: Record<string, RaceEvent[]> = {
   '24h': twentyfourh2021,
   'special': special2021,
   'wrx': wrx2021,
+  'porsche-supercup': porscheSupercup2021,
+  'moto2': moto22021,
+  'moto3': moto32021,
+  'indy-nxt': indyNxt2021,
+  'nascar-xfinity': nascarXfinity2021,
+  'nascar-truck': nascarTruck2021,
+  'impc': impc2021,
 }

@@ -154,20 +154,52 @@ import { nlsStandings2023 } from './nls-2023'
 import { nlsStandings2024 } from './nls-2024'
 import { nlsStandings2025 } from './nls-2025'
 import { nlsStandings2026 } from './nls-2026'
+import { porscheSupercupStandings2021 } from './porsche-supercup-2021'
+import { porscheSupercupStandings2022 } from './porsche-supercup-2022'
+import { porscheSupercupStandings2023 } from './porsche-supercup-2023'
+import { porscheSupercupStandings2024 } from './porsche-supercup-2024'
 import { porscheSupercupStandings2025 } from './porsche-supercup-2025'
 import { porscheSupercupStandings2026 } from './porsche-supercup-2026'
+import { f1AcademyStandings2023 } from './f1-academy-2023'
+import { f1AcademyStandings2024 } from './f1-academy-2024'
 import { f1AcademyStandings2025 } from './f1-academy-2025'
 import { f1AcademyStandings2026 } from './f1-academy-2026'
+import { moto2Standings2021 } from './moto2-2021'
+import { moto2Standings2022 } from './moto2-2022'
+import { moto2Standings2023 } from './moto2-2023'
+import { moto2Standings2024 } from './moto2-2024'
 import { moto2Standings2025 } from './moto2-2025'
 import { moto2Standings2026 } from './moto2-2026'
+import { moto3Standings2021 } from './moto3-2021'
+import { moto3Standings2022 } from './moto3-2022'
+import { moto3Standings2023 } from './moto3-2023'
+import { moto3Standings2024 } from './moto3-2024'
 import { moto3Standings2025 } from './moto3-2025'
 import { moto3Standings2026 } from './moto3-2026'
+import { indyNxtStandings2021 } from './indy-nxt-2021'
+import { indyNxtStandings2022 } from './indy-nxt-2022'
+import { indyNxtStandings2023 } from './indy-nxt-2023'
+import { indyNxtStandings2024 } from './indy-nxt-2024'
 import { indyNxtStandings2025 } from './indy-nxt-2025'
 import { indyNxtStandings2026 } from './indy-nxt-2026'
+import { nascarXfinityStandings2021 } from './nascar-xfinity-2021'
+import { nascarXfinityStandings2022 } from './nascar-xfinity-2022'
+import { nascarXfinityStandings2023 } from './nascar-xfinity-2023'
+import { nascarXfinityStandings2024 } from './nascar-xfinity-2024'
 import { nascarXfinityStandings2025 } from './nascar-xfinity-2025'
 import { nascarXfinityStandings2026 } from './nascar-xfinity-2026'
+import { nascarTruckStandings2021 } from './nascar-truck-2021'
+import { nascarTruckStandings2022 } from './nascar-truck-2022'
+import { nascarTruckStandings2023 } from './nascar-truck-2023'
+import { nascarTruckStandings2024 } from './nascar-truck-2024'
 import { nascarTruckStandings2025 } from './nascar-truck-2025'
 import { nascarTruckStandings2026 } from './nascar-truck-2026'
+import { impcStandings2021 } from './impc-2021'
+import { impcStandings2022 } from './impc-2022'
+import { impcStandings2023 } from './impc-2023'
+import { impcStandings2024 } from './impc-2024'
+import { impcStandings2025 } from './impc-2025'
+import { impcStandings2026 } from './impc-2026'
 
 const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'f1-2021': f1Standings2021,
@@ -325,20 +357,52 @@ const ALL_STANDINGS: Record<string, SeasonStandings> = {
   'nls-2024': nlsStandings2024,
   'nls-2025': nlsStandings2025,
   'nls-2026': nlsStandings2026,
+  'porsche-supercup-2021': porscheSupercupStandings2021,
+  'porsche-supercup-2022': porscheSupercupStandings2022,
+  'porsche-supercup-2023': porscheSupercupStandings2023,
+  'porsche-supercup-2024': porscheSupercupStandings2024,
   'porsche-supercup-2025': porscheSupercupStandings2025,
   'porsche-supercup-2026': porscheSupercupStandings2026,
+  'f1-academy-2023': f1AcademyStandings2023,
+  'f1-academy-2024': f1AcademyStandings2024,
   'f1-academy-2025': f1AcademyStandings2025,
   'f1-academy-2026': f1AcademyStandings2026,
+  'moto2-2021': moto2Standings2021,
+  'moto2-2022': moto2Standings2022,
+  'moto2-2023': moto2Standings2023,
+  'moto2-2024': moto2Standings2024,
   'moto2-2025': moto2Standings2025,
   'moto2-2026': moto2Standings2026,
+  'moto3-2021': moto3Standings2021,
+  'moto3-2022': moto3Standings2022,
+  'moto3-2023': moto3Standings2023,
+  'moto3-2024': moto3Standings2024,
   'moto3-2025': moto3Standings2025,
   'moto3-2026': moto3Standings2026,
+  'indy-nxt-2021': indyNxtStandings2021,
+  'indy-nxt-2022': indyNxtStandings2022,
+  'indy-nxt-2023': indyNxtStandings2023,
+  'indy-nxt-2024': indyNxtStandings2024,
   'indy-nxt-2025': indyNxtStandings2025,
   'indy-nxt-2026': indyNxtStandings2026,
+  'nascar-xfinity-2021': nascarXfinityStandings2021,
+  'nascar-xfinity-2022': nascarXfinityStandings2022,
+  'nascar-xfinity-2023': nascarXfinityStandings2023,
+  'nascar-xfinity-2024': nascarXfinityStandings2024,
   'nascar-xfinity-2025': nascarXfinityStandings2025,
   'nascar-xfinity-2026': nascarXfinityStandings2026,
+  'nascar-truck-2021': nascarTruckStandings2021,
+  'nascar-truck-2022': nascarTruckStandings2022,
+  'nascar-truck-2023': nascarTruckStandings2023,
+  'nascar-truck-2024': nascarTruckStandings2024,
   'nascar-truck-2025': nascarTruckStandings2025,
   'nascar-truck-2026': nascarTruckStandings2026,
+  'impc-2021': impcStandings2021,
+  'impc-2022': impcStandings2022,
+  'impc-2023': impcStandings2023,
+  'impc-2024': impcStandings2024,
+  'impc-2025': impcStandings2025,
+  'impc-2026': impcStandings2026,
 }
 
 export function getStandings(seriesId: string, year: number): SeasonStandings | null {

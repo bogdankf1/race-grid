@@ -33,6 +33,7 @@ Read `src/data/series-registry.ts` to get the full list of active series. As of 
 | `nascar-truck` | NASCAR Craftsman Truck | `nascar-truck-2026.ts` | https://www.nascar.com/schedule/craftsman-truck-series |
 | `wec` | WEC | `wec-2026.ts` | https://www.fiawec.com/ or https://racingcalendar.net/championship/wec/2026 |
 | `imsa` | IMSA | `imsa-2026.ts` | https://www.imsa.com/weathertech/weathertech-2026-schedule/ |
+| `impc` | IMSA Michelin Pilot Challenge | `impc-2026.ts` | https://www.imsa.com/imsa-michelin-pilot-challenge/ |
 | `wrc` | WRC | `wrc-2026.ts` | https://www.wrc.com/en/calendar |
 | `dtm` | DTM | `dtm-2026.ts` | https://www.motorsport.com/dtm/schedule/2026/ |
 | `gtwc` | GTWC Europe | `gtwc-2026.ts` | https://www.gt-world-challenge-europe.com/calendar |

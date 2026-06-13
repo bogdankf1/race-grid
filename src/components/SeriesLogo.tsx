@@ -42,6 +42,7 @@ const LOGO_MAP: Record<string, string> = {
   'indy-nxt': '/logos/indy-nxt.png',
   'nascar-xfinity': '/logos/nascar-xfinity.svg',
   'nascar-truck': '/logos/nascar-truck.svg',
+  impc: '/logos/impc.svg',
 }
 
 export function SeriesLogo({ seriesId, className, height = 24 }: SeriesLogoProps) {
