@@ -1078,8 +1078,8 @@ const DRIVERS: Record<string, Driver> = {
   'angelard': { id: 'angelard', name: 'Maxime Angelard', shortName: 'Angelard', nationality: 'FR' },
   'iglesias': { id: 'iglesias', name: 'Lucas Iglesias', shortName: 'Iglesias', nationality: 'FR' },
   'dodds': { id: 'dodds', name: 'Matthew Dodds', shortName: 'Dodds', nationality: 'GB' },
-  'rogeon': { id: 'rogeon', name: 'Antoine Rogeon', shortName: 'Rogeon', nationality: 'FR' },
-  'raber': { id: 'raber', name: 'Alexander Raber', shortName: 'Raber', nationality: 'AT' },
+  'rogeon': { id: 'rogeon', name: 'Arthur Rogeon', shortName: 'Rogeon', nationality: 'FR' },
+  'raber': { id: 'raber', name: 'August Raber', shortName: 'Raber', nationality: 'SE' },
   'gomez-azza': { id: 'gomez-azza', name: 'Gonzalo Gomez Azza', shortName: 'Gomez Azza', nationality: 'ES' },
   'noble': { id: 'noble', name: 'Charlie Noble', shortName: 'Noble', nationality: 'GB' },
   'ryba': { id: 'ryba', name: 'Matus Ryba', shortName: 'Ryba', nationality: 'SK' },
@@ -2095,6 +2095,10 @@ const DRIVERS: Record<string, Driver> = {
   'ayrton-redant': { id: 'ayrton-redant', name: 'Ayrton Redant', shortName: 'A. Redant', nationality: 'BE' },
   'yannick-redant': { id: 'yannick-redant', name: 'Yannick Redant', shortName: 'Y. Redant', nationality: 'BE' },
   'de-breucker': { id: 'de-breucker', name: 'Kobe de Breucker', shortName: 'de Breucker', nationality: 'BE' },
+  // 2026 results update (June 13 weekend) additions — GT World Challenge Australia Queensland
+  'tigani': { id: 'tigani', name: 'Justin Tigani', shortName: 'Tigani', nationality: 'AU' },
+  'gracie': { id: 'gracie', name: 'Renee Gracie', shortName: 'Gracie', nationality: 'AU' },
+  'halstead': { id: 'halstead', name: 'Nathan Halstead', shortName: 'Halstead', nationality: 'AU' },
   // Porsche Supercup 2024 additions
   'ten-voorde': { id: 'ten-voorde', name: 'Larry ten Voorde', shortName: 'Ten Voorde', nationality: 'NL' },
   'harry-king': { id: 'harry-king', name: 'Harry King', shortName: 'H. King', nationality: 'GB' },

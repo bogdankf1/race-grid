@@ -132,4 +132,29 @@ export const wecResults2026: Record<string, EventResults> = {
       ],
     },
   },
+  // Le Mans: Wednesday Qualifying session result pending; Hyperpole (Thu) verified below.
+  // Race ongoing at time of update (starts 13 Jun 14:00 UTC) — to be added next update.
+  'wec-2026-le-mans': {
+    hyperpole: {
+      overall: { driverIds: ['vanthoor'], teamId: 'bmw-wrt' },
+      classes: [
+        {
+          className: 'Hypercar',
+          podium: [
+            { position: 1, driverIds: ['vanthoor'], teamId: 'bmw-wrt' },
+            { position: 2, driverIds: ['nato'], teamId: 'jota' },
+            { position: 3, driverIds: ['habsburg'], teamId: 'alpine' },
+          ],
+        },
+        {
+          className: 'LMGT3',
+          podium: [
+            { position: 1, driverIds: ['drudi'], teamId: 'heart-of-racing' },
+            { position: 2, driverIds: ['rovera'], teamId: 'vista-af-corse' },
+            { position: 3, driverIds: [], teamId: 'akkodis-asp' },
+          ],
+        },
+      ],
+    },
+  },
 }

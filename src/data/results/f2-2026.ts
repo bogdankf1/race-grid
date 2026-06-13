@@ -140,4 +140,18 @@ export const f2Results2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Barcelona: Sprint + Feature race results pending next update (Sprint ran 13 Jun midday).
+  'f2-2026-barcelona': {
+    qualifying: {
+      overall: { driverIds: ['camara'], teamId: 'invicta-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['camara'], teamId: 'invicta-racing' },
+          { position: 2, driverIds: ['durksen'], teamId: 'invicta-racing' },
+          { position: 3, driverIds: ['dunne'], teamId: 'rodin-motorsport' },
+        ],
+      }],
+    },
+  },
 }

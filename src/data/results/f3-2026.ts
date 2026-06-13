@@ -74,4 +74,29 @@ export const f3Results2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Barcelona: Feature race result pending next update (runs 14 Jun).
+  'f3-2026-barcelona': {
+    qualifying: {
+      overall: { driverIds: ['nael'], teamId: 'campos-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['nael'], teamId: 'campos-racing' },
+          { position: 2, driverIds: ['ugochukwu'], teamId: 'campos-racing' },
+          { position: 3, driverIds: ['yamakoshi'], teamId: 'van-amersfoort-racing' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['wharton'], teamId: 'prema-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['wharton'], teamId: 'prema-racing' },
+          { position: 2, driverIds: ['slater'], teamId: 'trident' },
+          { position: 3, driverIds: ['xie'], teamId: 'dams' },
+        ],
+      }],
+    },
+  },
 }

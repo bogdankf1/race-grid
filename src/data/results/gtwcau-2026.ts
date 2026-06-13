@@ -49,4 +49,29 @@ export const gtwcauResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Queensland: Race 1 (13 Jun) recorded; Race 2 runs 14 Jun. Qualifying = Race 1 pole.
+  'gtwcau-2026-queensland': {
+    qualifying: {
+      // Race 1 pole — Targett/Tigani, Tigani Motorsport's debut GTWCA pole
+      overall: { driverIds: ['targett', 'tigani'], teamId: 'tigani-motorsport' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['targett', 'tigani'], teamId: 'tigani-motorsport' },
+        ],
+      }],
+    },
+    race: {
+      // Race 1 — Gracie first woman to win a GTWCA race outright
+      overall: { driverIds: ['davison', 'gracie'], teamId: 'onlyfans-racing' },
+      classes: [{
+        className: 'Overall',
+        podium: [
+          { position: 1, driverIds: ['davison', 'gracie'], teamId: 'onlyfans-racing' },
+          { position: 2, driverIds: ['targett', 'tigani'], teamId: 'tigani-motorsport' },
+          { position: 3, driverIds: ['halstead', 'youlden'], teamId: 'tigani-motorsport' },
+        ],
+      }],
+    },
+  },
 }
