@@ -13,9 +13,10 @@ import { getStandings } from '@/data/standings'
 import { getTeam } from '@/data/teams'
 import { t } from '@/lib/i18n'
 import { useAllYearsLoaded } from '~/lib/all-years'
-import { countryFlag, countryName, MEDAL_COLORS } from '~/lib/format'
+import { countryName, MEDAL_COLORS } from '~/lib/format'
 import { tm } from '~/lib/strings'
 import { useScreenTitle } from '~/lib/use-screen-title'
+import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { YearSelector } from '~/components/YearSelector'
 import { useSettings } from '~/state/settings'
@@ -74,9 +75,10 @@ export default function TeamDetailScreen() {
     <View className="mb-3">
       <Text className="text-xl font-bold tracking-wide text-rg-text">{team.name}</Text>
       {team.country ? (
-        <Text className="mt-0.5 text-sm text-rg-text2">
-          {countryFlag(team.country)} {countryName(team.country, locale)}
-        </Text>
+        <View className="mt-1 flex-row items-center gap-1.5">
+          <CountryCode code={team.country} />
+          <Text className="text-sm text-rg-text2">{countryName(team.country, locale)}</Text>
+        </View>
       ) : null}
 
       {seriesIds.length > 0 && (
@@ -162,8 +164,8 @@ export default function TeamDetailScreen() {
                 accessibilityRole="button"
                 className="mb-1 flex-row items-center gap-2.5 rounded-lg border border-rg-card-border bg-rg-surface px-3.5 py-2.5"
               >
+                {driver?.nationality ? <CountryCode code={driver.nationality} /> : null}
                 <Text className="flex-1 text-sm font-semibold text-rg-text" numberOfLines={1}>
-                  {driver?.nationality ? `${countryFlag(driver.nationality)} ` : ''}
                   {driver?.name ?? driverId}
                 </Text>
                 <Text className="text-xs text-rg-text3">›</Text>

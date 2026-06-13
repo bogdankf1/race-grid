@@ -13,8 +13,9 @@ import { getSeriesMeta } from '@/data/series-registry'
 import { getTeam } from '@/data/teams'
 import { t } from '@/lib/i18n'
 import { useAllYearsLoaded } from '~/lib/all-years'
-import { countryFlag, countryName, MEDAL_COLORS } from '~/lib/format'
+import { countryName, MEDAL_COLORS } from '~/lib/format'
 import { useScreenTitle } from '~/lib/use-screen-title'
+import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { YearSelector } from '~/components/YearSelector'
 import { useSettings } from '~/state/settings'
@@ -62,9 +63,12 @@ export default function DriverDetailScreen() {
           <View className="mb-3">
             <Text className="text-xl font-bold tracking-wide text-rg-text">{driver.name}</Text>
             {driver.nationality ? (
-              <Text className="mt-0.5 text-sm text-rg-text2">
-                {countryFlag(driver.nationality)} {countryName(driver.nationality, locale)}
-              </Text>
+              <View className="mt-1 flex-row items-center gap-1.5">
+                <CountryCode code={driver.nationality} />
+                <Text className="text-sm text-rg-text2">
+                  {countryName(driver.nationality, locale)}
+                </Text>
+              </View>
             ) : null}
 
             {seriesIds.length > 0 && (

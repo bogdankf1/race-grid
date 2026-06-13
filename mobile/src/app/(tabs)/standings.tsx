@@ -1,9 +1,9 @@
 // Standings tab — port of the web /standings page: year + series pickers,
 // class tabs for multi-class series, Drivers/Constructors toggle, search.
 
-import { useRouter, type Href } from 'expo-router'
+import { useLocalSearchParams, useRouter, type Href } from 'expo-router'
 import { Search } from 'lucide-react-native'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { FlatList, Pressable, ScrollView, Text, TextInput, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
@@ -13,10 +13,11 @@ import { getStandings, hasStandings } from '@/data/standings'
 import type { ClassStandings } from '@/data/standings/types'
 import { getTeam } from '@/data/teams'
 import { t } from '@/lib/i18n'
-import { countryFlag } from '~/lib/format'
+import { countryCode } from '~/lib/format'
 import { usePersistedState } from '~/lib/persisted'
 import { SEASON } from '~/lib/data'
 import { tm } from '~/lib/strings'
+import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { YearSelector } from '~/components/YearSelector'
 import { useSettings } from '~/state/settings'
@@ -27,7 +28,7 @@ const MEDAL_BG = ['rgba(255,215,0,0.12)', 'rgba(192,192,192,0.10)', 'rgba(205,12
 interface Row {
   position: number
   name: string
-  flag: string
+  code: string
   team: string
   points: number
   wins: number
@@ -39,11 +40,20 @@ export default function StandingsScreen() {
   const { locale } = useSettings()
   const { c } = useTheme()
   const router = useRouter()
+  const params = useLocalSearchParams<{ series?: string; year?: string; tab?: string }>()
   const [year, setYear] = usePersistedState<number>('race-grid:standings-year', SEASON)
   const [seriesId, setSeriesId] = usePersistedState<string>('race-grid:standings-series', 'f1')
   const [tab, setTab] = useState<'drivers' | 'constructors'>('drivers')
   const [classIndex, setClassIndex] = useState(0)
   const [query, setQuery] = useState('')
+
+  // Honor deep-link params (e.g. opened from a series detail page).
+  useEffect(() => {
+    if (params.series) setSeriesId(params.series)
+    if (params.year) setYear(Number(params.year))
+    if (params.tab === 'drivers' || params.tab === 'constructors') setTab(params.tab)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.series, params.year, params.tab])
 
   const seriesWithStandings = useMemo(
     () => getVisibleSeries().filter((s) => hasStandings(s.id, year)),
@@ -84,7 +94,7 @@ export default function StandingsScreen() {
             return {
               position: d.position,
               name: driver?.shortName ?? d.driverId,
-              flag: driver?.nationality ? countryFlag(driver.nationality) : '',
+              code: driver?.nationality ? countryCode(driver.nationality) : '',
               team: getTeam(d.teamId)?.name ?? d.teamId,
               points: d.points,
               wins: d.wins,
@@ -94,7 +104,7 @@ export default function StandingsScreen() {
         : activeClass.constructors.map((cRow) => ({
             position: cRow.position,
             name: getTeam(cRow.teamId)?.name ?? cRow.teamId,
-            flag: '',
+            code: '',
             team: '',
             points: cRow.points,
             wins: cRow.wins,
@@ -125,12 +135,7 @@ export default function StandingsScreen() {
         />
       </View>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        className="grow-0"
-        contentContainerStyle={{ gap: 6, paddingHorizontal: 16, paddingBottom: 8 }}
-      >
+      <View className="flex-row flex-wrap gap-2 px-4 pb-2">
         {seriesWithStandings.map((s) => (
           <SeriesChip
             key={s.id}
@@ -144,7 +149,7 @@ export default function StandingsScreen() {
             }}
           />
         ))}
-      </ScrollView>
+      </View>
 
       <View className="mx-4 mb-2 flex-row items-center gap-2 rounded-xl border border-rg-border bg-rg-surface px-3">
         <Search size={14} color={c('text3')} />
@@ -236,12 +241,14 @@ export default function StandingsScreen() {
           >
             <Text className="w-7 text-center text-sm font-bold text-rg-text2">{item.position}</Text>
             <View className="flex-1">
-              <Text className="text-sm font-semibold text-rg-text" numberOfLines={1}>
-                {item.flag ? `${item.flag} ` : ''}
-                {item.name}
-              </Text>
+              <View className="flex-row items-center gap-1.5">
+                {item.code ? <CountryCode code={item.code} /> : null}
+                <Text className="flex-1 text-sm font-semibold text-rg-text" numberOfLines={1}>
+                  {item.name}
+                </Text>
+              </View>
               {item.team ? (
-                <Text className="text-xs text-rg-text3" numberOfLines={1}>
+                <Text className="mt-0.5 text-xs text-rg-text3" numberOfLines={1}>
                   {item.team}
                 </Text>
               ) : null}

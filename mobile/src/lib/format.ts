@@ -1,21 +1,6 @@
 // Display conventions ported 1:1 from the web app (DayDetail, UpcomingRaces).
 
 import type { Locale } from '@/lib/i18n'
-import type { SessionType } from '@/lib/types'
-
-/** Session icons from web DayDetail. */
-export const SESSION_ICONS: Record<SessionType, string> = {
-  race: '\u{1F3C1}',
-  qualifying: '⏱',
-  sprint: '⚡',
-  sprint_qualifying: '⚡',
-  hyperpole: '\u{1F3AF}',
-  practice: '\u{1F527}',
-  warmup: '\u{1F527}',
-  stage: '\u{1F5FA}',
-  shakedown: '\u{1F5FA}',
-  endurance: '\u{1F3C1}',
-}
 
 /** Gold / silver / bronze accents for P1–P3 (web driver/team pages). */
 export const MEDAL_COLORS = ['#FFD700', '#C0C0C0', '#CD7F32']
@@ -34,13 +19,13 @@ export function countryName(code: string, locale: Locale): string {
   }
 }
 
-/** Country code → emoji flag (web DayDetail). */
-export function countryFlag(countryCode: string): string {
-  return countryCode
-    .toUpperCase()
-    .split('')
-    .map((c) => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65))
-    .join('')
+/**
+ * Uppercase 2-letter country code for inline display. We show the code rather
+ * than a flag emoji because regional-indicator flag glyphs don't render on the
+ * iOS Simulator (and inconsistently elsewhere).
+ */
+export function countryCode(code: string): string {
+  return code ? code.toUpperCase() : ''
 }
 
 /** Coarse countdown, e.g. "2d 4h" / "3h" (web UpcomingRaces.formatCountdown). */

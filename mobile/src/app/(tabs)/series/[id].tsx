@@ -2,7 +2,7 @@
 // season progress, family (related series) chips, full season calendar.
 
 import { useLocalSearchParams, useRouter } from 'expo-router'
-import { ExternalLink } from 'lucide-react-native'
+import { ExternalLink, Trophy, Users } from 'lucide-react-native'
 import { useMemo } from 'react'
 import { FlatList, Linking, Pressable, Text, View } from 'react-native'
 
@@ -13,16 +13,18 @@ import {
   getSeriesMeta,
   isSeriesVisible,
 } from '@/data/series-registry'
+import { hasStandings } from '@/data/standings'
 import { t } from '@/lib/i18n'
 import { getLocalDate } from '@/lib/timezone'
 import { eventStatus } from '~/lib/agenda'
 import { SEASON, sessionEndMs } from '~/lib/data'
 import { useScreenTitle } from '~/lib/use-screen-title'
-import { countryFlag, formatDateRange } from '~/lib/format'
+import { formatDateRange } from '~/lib/format'
 import { usePersistedState } from '~/lib/persisted'
 import { tm } from '~/lib/strings'
 import { useYearData } from '~/lib/year-data'
 import { LiveBadge } from '~/components/AgendaCard'
+import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { SeriesLogo } from '~/components/SeriesLogo'
 import { YearSelector } from '~/components/YearSelector'
@@ -123,6 +125,35 @@ export default function SeriesDetailScreen() {
               <YearSelector year={year} years={AVAILABLE_YEARS} onChange={setYear} />
             </View>
 
+            {hasStandings(meta.id, year) && (
+              <View className="mt-3 flex-row gap-2">
+                <Pressable
+                  onPress={() =>
+                    router.push(`/standings?series=${meta.id}&year=${year}&tab=drivers`)
+                  }
+                  accessibilityRole="button"
+                  className="flex-1 flex-row items-center justify-center gap-1.5 rounded-lg border border-rg-border bg-rg-btn-bg py-2"
+                >
+                  <Users size={13} color={c('text2')} />
+                  <Text className="text-xs font-semibold text-rg-text2">
+                    {tm('standings.drivers', locale)}
+                  </Text>
+                </Pressable>
+                <Pressable
+                  onPress={() =>
+                    router.push(`/standings?series=${meta.id}&year=${year}&tab=constructors`)
+                  }
+                  accessibilityRole="button"
+                  className="flex-1 flex-row items-center justify-center gap-1.5 rounded-lg border border-rg-border bg-rg-btn-bg py-2"
+                >
+                  <Trophy size={13} color={c('text2')} />
+                  <Text className="text-xs font-semibold text-rg-text2">
+                    {tm('standings.constructors', locale)}
+                  </Text>
+                </Pressable>
+              </View>
+            )}
+
             <Text className="mt-4 text-xs font-bold uppercase tracking-widest text-rg-text3">
               {tm('series.calendar', locale)}
             </Text>
@@ -162,9 +193,12 @@ export default function SeriesDetailScreen() {
                   {item.name}
                 </Text>
                 {circuit && (
-                  <Text className="text-xs text-rg-text3" numberOfLines={1}>
-                    {countryFlag(circuit.countryCode)} {circuit.name}
-                  </Text>
+                  <View className="mt-0.5 flex-row items-center gap-1.5">
+                    <CountryCode code={circuit.countryCode} />
+                    <Text className="flex-1 text-xs text-rg-text3" numberOfLines={1}>
+                      {circuit.name}
+                    </Text>
+                  </View>
                 )}
               </View>
               <View className="items-end">

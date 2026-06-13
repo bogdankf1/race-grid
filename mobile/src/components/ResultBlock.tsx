@@ -1,26 +1,35 @@
 // Port of the web RaceResult component: collapsed "Results" disclosure that
 // expands to podiums (per class for endurance) and the fastest lap.
 
+import { ChevronDown, ChevronUp, Flag, Timer } from 'lucide-react-native'
 import { useState } from 'react'
 import { Pressable, Text, View } from 'react-native'
 
 import { t, type Locale } from '@/lib/i18n'
 import type { SessionResultPair } from '~/lib/data'
-
-const MEDAL = ['🥇', '🥈', '🥉']
+import { MEDAL_COLORS } from '~/lib/format'
+import { useTheme } from '~/state/theme'
 
 function PodiumRow({
   position,
   drivers,
   team,
+  textColor,
 }: {
   position: number
   drivers: string[]
   team: string
+  textColor: string
 }) {
+  const medal = position >= 1 && position <= 3 ? MEDAL_COLORS[position - 1] : null
   return (
     <View className="flex-row flex-wrap items-baseline gap-1.5">
-      <Text className="w-5 text-center text-[13px]">{MEDAL[position - 1] ?? `${position}.`}</Text>
+      <Text
+        className="w-6 text-center text-[13px] font-bold"
+        style={{ color: medal ?? textColor }}
+      >
+        P{position}
+      </Text>
       <Text className="text-[13px] font-semibold text-rg-text">{drivers.join(', ')}</Text>
       <Text className="text-xs text-rg-text3">— {team}</Text>
     </View>
@@ -28,7 +37,9 @@ function PodiumRow({
 }
 
 export function ResultBlock({ results, locale }: { results: SessionResultPair[]; locale: Locale }) {
+  const { c } = useTheme()
   const [expanded, setExpanded] = useState(false)
+  const Chevron = expanded ? ChevronUp : ChevronDown
 
   return (
     <View className="mt-3 rounded-xl border border-rg-card-border bg-rg-surface px-4 py-3.5">
@@ -37,11 +48,11 @@ export function ResultBlock({ results, locale }: { results: SessionResultPair[];
         onPress={() => setExpanded((e) => !e)}
         accessibilityRole="button"
       >
-        <Text className="text-xs">🏁</Text>
+        <Flag size={13} color={c('text3')} />
         <Text className="flex-1 text-xs font-semibold uppercase tracking-widest text-rg-text3">
           {t('result.title', locale)}
         </Text>
-        <Text className="text-xs text-rg-text3">{expanded ? '▲' : '▼'}</Text>
+        <Chevron size={14} color={c('text3')} />
       </Pressable>
 
       {expanded && (
@@ -70,6 +81,7 @@ export function ResultBlock({ results, locale }: { results: SessionResultPair[];
                             position={entry.position}
                             drivers={entry.drivers}
                             team={entry.team}
+                            textColor={c('text3')}
                           />
                         ))}
                       </View>
@@ -77,19 +89,21 @@ export function ResultBlock({ results, locale }: { results: SessionResultPair[];
                   ))}
                 </View>
               ) : (
-                <View className="flex-row flex-wrap items-baseline gap-1.5">
-                  <Text className="w-5 text-center text-[13px]">🏆</Text>
-                  <Text className="text-[13px] font-semibold text-rg-text">
-                    {result.overall.drivers.join(', ')}
-                  </Text>
-                  <Text className="text-xs text-rg-text3">— {result.overall.team}</Text>
-                </View>
+                <PodiumRow
+                  position={1}
+                  drivers={result.overall.drivers}
+                  team={result.overall.team}
+                  textColor={c('text3')}
+                />
               )}
 
               {result.fastestLap && (
-                <Text className="mt-1.5 text-xs text-rg-text3">
-                  ⏱ {t('result.fastestLap', locale)}: {result.fastestLap}
-                </Text>
+                <View className="mt-1.5 flex-row items-center gap-1.5">
+                  <Timer size={12} color={c('text3')} />
+                  <Text className="text-xs text-rg-text3">
+                    {t('result.fastestLap', locale)}: {result.fastestLap}
+                  </Text>
+                </View>
               )}
             </View>
           ))}

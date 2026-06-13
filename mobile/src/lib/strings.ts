@@ -46,7 +46,6 @@ const extra: Record<Locale, Record<string, string>> = {
     'cal.shareEvent': 'Share event (.ics)',
     'cal.shareSeason': 'Share season (.ics)',
     'view.agenda': 'List',
-    'support.madeWith': 'Made with ❤ for motorsport fans',
   },
   uk: {
     'tab.schedule': 'Розклад',
@@ -90,7 +89,6 @@ const extra: Record<Locale, Record<string, string>> = {
     'cal.shareEvent': 'Поділитися подією (.ics)',
     'cal.shareSeason': 'Поділитися сезоном (.ics)',
     'view.agenda': 'Список',
-    'support.madeWith': 'Зроблено з ❤ для фанатів автоспорту',
   },
 }
 

@@ -2,7 +2,7 @@
 // timezone, color-coded per series, filtered to followed series.
 
 import { useRouter } from 'expo-router'
-import { CalendarDays, Rows3, Search, X } from 'lucide-react-native'
+import { CalendarDays, Flag, Rows3, Search, X } from 'lucide-react-native'
 import { useEffect, useMemo, useState } from 'react'
 import {
   Pressable,
@@ -176,7 +176,7 @@ export default function ScheduleScreen() {
 
       {empty ? (
         <View className="flex-1 items-center justify-center px-8">
-          <Text className="text-4xl">🏎</Text>
+          <Flag size={40} color={c('text3')} />
           <Text className="mt-4 text-lg text-rg-text2">{tm('agenda.empty', locale)}</Text>
           <Pressable onPress={() => router.push('/series')} accessibilityRole="button">
             <Text className="mt-1.5 text-center text-sm text-rg-link">
@@ -280,7 +280,7 @@ export default function ScheduleScreen() {
           )}
           ListEmptyComponent={
             <View className="items-center px-8 pt-20">
-              <Text className="text-4xl">🏎</Text>
+              <Flag size={40} color={c('text3')} />
               <Text className="mt-4 text-base text-rg-text2">{t('week.noRaces', locale)}</Text>
             </View>
           }

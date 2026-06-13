@@ -12,11 +12,12 @@ import { t } from '@/lib/i18n'
 import { getLocalDate } from '@/lib/timezone'
 import type { RaceEvent, SeriesConfig } from '@/lib/types'
 import { SEASON } from '~/lib/data'
-import { countryFlag, formatDateRange } from '~/lib/format'
+import { formatDateRange } from '~/lib/format'
 import { usePersistedState } from '~/lib/persisted'
 import { tm } from '~/lib/strings'
 import { useScreenTitle } from '~/lib/use-screen-title'
 import { useYearData } from '~/lib/year-data'
+import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { YearSelector } from '~/components/YearSelector'
 import { useData } from '~/state/data'
@@ -80,10 +81,13 @@ export default function CircuitDetailScreen() {
         contentContainerStyle={{ padding: 16, paddingBottom: 40 }}
         ListHeaderComponent={
           <View className="mb-3">
-            <Text className="text-xl font-bold tracking-wide text-rg-text">
-              {countryFlag(circuit.countryCode)} {circuit.name}
-            </Text>
-            <Text className="mt-0.5 text-sm text-rg-text2">{circuit.country}</Text>
+            <View className="flex-row items-center gap-2">
+              <CountryCode code={circuit.countryCode} />
+              <Text className="flex-1 text-xl font-bold tracking-wide text-rg-text">
+                {circuit.name}
+              </Text>
+            </View>
+            <Text className="mt-1 text-sm text-rg-text2">{circuit.country}</Text>
             <Text className="mt-1 text-xs text-rg-text3">
               {circuit.length} · {circuit.turns} {tm('circuit.turns', locale)} ·{' '}
               {getCircuitTypeLabel(circuit.type, locale)}

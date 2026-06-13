@@ -4,13 +4,13 @@
 import { useRouter } from 'expo-router'
 import { Search } from 'lucide-react-native'
 import { useMemo, useState } from 'react'
-import { FlatList, Pressable, ScrollView, Text, TextInput, View } from 'react-native'
+import { FlatList, Pressable, Text, TextInput, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { getCircuit, getCircuitTypeLabel, type Circuit } from '@/data/circuits'
 import { t } from '@/lib/i18n'
-import { countryFlag } from '~/lib/format'
 import { tm } from '~/lib/strings'
+import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { useData } from '~/state/data'
 import { useSettings } from '~/state/settings'
@@ -83,12 +83,7 @@ export default function CircuitsScreen() {
         />
       </View>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        className="grow-0"
-        contentContainerStyle={{ gap: 6, paddingHorizontal: 16, paddingBottom: 8 }}
-      >
+      <View className="flex-row flex-wrap gap-2 px-4 pb-2">
         {[null, ...TYPES].map((type) => {
           const active = typeFilter === type
           return (
@@ -112,7 +107,7 @@ export default function CircuitsScreen() {
             </Pressable>
           )
         })}
-      </ScrollView>
+      </View>
 
       <FlatList
         data={rows}
@@ -129,9 +124,12 @@ export default function CircuitsScreen() {
             accessibilityRole="button"
             className="mb-1.5 rounded-xl border border-rg-card-border bg-rg-surface px-3 py-2.5"
           >
-            <Text className="text-sm font-semibold text-rg-text" numberOfLines={1}>
-              {countryFlag(item.circuit.countryCode)} {item.circuit.name}
-            </Text>
+            <View className="flex-row items-center gap-1.5">
+              <CountryCode code={item.circuit.countryCode} />
+              <Text className="flex-1 text-sm font-semibold text-rg-text" numberOfLines={1}>
+                {item.circuit.name}
+              </Text>
+            </View>
             <Text className="mt-0.5 text-xs text-rg-text3">
               {item.circuit.length} · {item.circuit.turns} {tm('circuit.turns', locale)} ·{' '}
               {getCircuitTypeLabel(item.circuit.type, locale)}

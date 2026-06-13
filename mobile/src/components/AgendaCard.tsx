@@ -9,8 +9,10 @@ import { t, type Locale } from '@/lib/i18n'
 import { formatInTimezone } from '@/lib/timezone'
 import type { AgendaEvent } from '~/lib/agenda'
 import { isTba } from '~/lib/data'
-import { countryFlag, formatCountdown, formatDateRange, SESSION_ICONS } from '~/lib/format'
+import { countryCode, formatCountdown, formatDateRange } from '~/lib/format'
+import { SessionIcon } from '~/components/SessionIcon'
 import { SeriesChip } from '~/components/SeriesChip'
+import { useTheme } from '~/state/theme'
 
 export function LiveBadge({ locale }: { locale: Locale }) {
   return (
@@ -29,6 +31,7 @@ interface AgendaCardProps {
 
 export function AgendaCard({ item, timezone, locale, now }: AgendaCardProps) {
   const router = useRouter()
+  const { c } = useTheme()
   const finished = item.status === 'finished'
   const main = item.mainSession
 
@@ -68,17 +71,21 @@ export function AgendaCard({ item, timezone, locale, now }: AgendaCardProps) {
         {item.event.name}
       </Text>
       <Text className="mt-0.5 text-xs text-rg-text3" numberOfLines={1}>
-        {countryFlag(item.countryCode)} {item.circuitName}
+        {item.countryCode ? `${countryCode(item.countryCode)}  ` : ''}
+        {item.circuitName}
         {'  ·  '}
         {formatDateRange(item.startDate, item.endDate, locale)}
       </Text>
 
       {main && (
-        <Text className="mt-1.5 text-xs text-rg-text2" numberOfLines={1}>
-          {SESSION_ICONS[main.type]} {main.label}
-          {' — '}
-          {isTba(main) ? 'TBA' : formatInTimezone(main.startUtc, timezone, 'datetime', locale)}
-        </Text>
+        <View className="mt-1.5 flex-row items-center gap-1.5">
+          <SessionIcon type={main.type} size={13} color={c('text2')} />
+          <Text className="flex-1 text-xs text-rg-text2" numberOfLines={1}>
+            {main.label}
+            {' — '}
+            {isTba(main) ? 'TBA' : formatInTimezone(main.startUtc, timezone, 'datetime', locale)}
+          </Text>
+        </View>
       )}
     </Pressable>
   )

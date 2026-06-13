@@ -14,7 +14,7 @@ import {
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import { Check, Heart } from 'lucide-react-native'
+import { Check, Heart, X } from 'lucide-react-native'
 import { Linking } from 'react-native'
 
 import { t, type Locale } from '@/lib/i18n'
@@ -124,8 +124,8 @@ function TimezonePicker({
           <Text className="flex-1 text-lg font-bold text-rg-text">
             {t('settings.timezone', locale)}
           </Text>
-          <Pressable onPress={onClose} accessibilityRole="button">
-            <Text className="text-2xl text-rg-text3">✕</Text>
+          <Pressable onPress={onClose} accessibilityRole="button" hitSlop={12}>
+            <X size={22} color="#888" />
           </Pressable>
         </View>
         <TextInput
@@ -387,8 +387,10 @@ export default function SettingsScreen() {
               </Pressable>
             </Row>
           ))}
-          <View className="items-center py-3">
-            <Text className="text-xs text-rg-text3">{tm('support.madeWith', locale)}</Text>
+          <View className="flex-row items-center justify-center gap-1.5 py-3">
+            <Text className="text-xs text-rg-text3">{t('footer.madeWith', locale)}</Text>
+            <Heart size={11} color="#e25555" />
+            <Text className="text-xs text-rg-text3">{t('footer.forFans', locale)}</Text>
           </View>
         </Section>
       </ScrollView>

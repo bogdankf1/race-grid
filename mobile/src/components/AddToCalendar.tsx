@@ -7,7 +7,7 @@
 import * as Calendar from 'expo-calendar'
 import { File, Paths } from 'expo-file-system'
 import * as Sharing from 'expo-sharing'
-import { CalendarPlus } from 'lucide-react-native'
+import { CalendarPlus, ChevronDown, ChevronUp } from 'lucide-react-native'
 import { useState } from 'react'
 import { Alert, Linking, Platform, Pressable, Text, View } from 'react-native'
 
@@ -121,7 +121,11 @@ export function AddToCalendar({
         <Text className="flex-1 text-xs font-semibold uppercase tracking-widest text-rg-text3">
           {t('cal.export', locale)}
         </Text>
-        <Text className="text-xs text-rg-text3">{expanded ? '▲' : '▼'}</Text>
+        {expanded ? (
+          <ChevronUp size={14} color={c('text3')} />
+        ) : (
+          <ChevronDown size={14} color={c('text3')} />
+        )}
       </Pressable>
 
       {expanded && (

@@ -7,8 +7,10 @@ import { t, type Locale } from '@/lib/i18n'
 import { formatDuration, formatInTimezone } from '@/lib/timezone'
 import type { Session } from '@/lib/types'
 import { isTba, sessionEndMs } from '~/lib/data'
-import { formatCountdown, SESSION_ICONS } from '~/lib/format'
+import { formatCountdown } from '~/lib/format'
 import { LiveBadge } from '~/components/AgendaCard'
+import { SessionIcon } from '~/components/SessionIcon'
+import { useTheme } from '~/state/theme'
 
 interface SessionRowProps {
   session: Session
@@ -18,6 +20,7 @@ interface SessionRowProps {
 }
 
 export function SessionRow({ session, timezone, locale, now }: SessionRowProps) {
+  const { c } = useTheme()
   const startMs = new Date(session.startUtc).getTime()
   const endMs = sessionEndMs(session)
   const live = now >= startMs && now < endMs
@@ -33,7 +36,9 @@ export function SessionRow({ session, timezone, locale, now }: SessionRowProps) 
         borderLeftColor: '#dc2626',
       }}
     >
-      <Text className="w-6 text-center text-base">{SESSION_ICONS[session.type]}</Text>
+      <View className="w-6 items-center">
+        <SessionIcon type={session.type} size={15} color={c('text2')} />
+      </View>
       <Text className="flex-1 text-sm font-semibold text-rg-text" numberOfLines={1}>
         {session.label}
       </Text>

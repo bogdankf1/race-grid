@@ -12,11 +12,11 @@ import type { Session } from '@/lib/types'
 import { isStale, readCache, writeCache } from '~/lib/cache'
 import { collectEventResults, hasFinishedResultSession } from '~/lib/data'
 import { useEventRef } from '~/lib/event-ref'
-import { countryFlag } from '~/lib/format'
 import { fetchEventResults, type RemoteSessionResult } from '~/lib/mcp'
 import { tm } from '~/lib/strings'
 import { useScreenTitle } from '~/lib/use-screen-title'
 import { AddToCalendar } from '~/components/AddToCalendar'
+import { CountryCode } from '~/components/CountryCode'
 import { ResultBlock } from '~/components/ResultBlock'
 import { SeriesChip } from '~/components/SeriesChip'
 import { SessionRow } from '~/components/SessionRow'
@@ -125,9 +125,12 @@ export default function RaceDetailScreen() {
           <Text className="mb-1 text-xs font-bold uppercase tracking-widest text-rg-text3">
             {tm('detail.circuit', locale)}
           </Text>
-          <Text className="text-sm font-semibold text-rg-text">
-            {countryFlag(circuit.countryCode)} {circuit.name}, {circuit.country}
-          </Text>
+          <View className="flex-row items-center gap-1.5">
+            <CountryCode code={circuit.countryCode} />
+            <Text className="flex-1 text-sm font-semibold text-rg-text">
+              {circuit.name}, {circuit.country}
+            </Text>
+          </View>
           <Text className="mt-1 text-xs text-rg-text3">
             {circuit.length} · {circuit.turns} {tm('circuit.turns', locale)} ·{' '}
             {getCircuitTypeLabel(circuit.type, locale)}

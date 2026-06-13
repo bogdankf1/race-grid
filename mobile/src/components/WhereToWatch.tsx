@@ -1,7 +1,7 @@
 // Port of the web WhereToWatchPopover: detects the user's country from their
 // timezone and lists that country's broadcasters for the series.
 
-import { Tv } from 'lucide-react-native'
+import { ChevronDown, ChevronUp, Tv } from 'lucide-react-native'
 import { useState } from 'react'
 import { Linking, Pressable, Text, View } from 'react-native'
 
@@ -37,7 +37,11 @@ export function WhereToWatch({ seriesId, seriesColor, timezone, locale }: WhereT
           {t('watch.title', locale)}
           {country ? `  ·  ${COUNTRY_LABELS[country]}` : ''}
         </Text>
-        <Text className="text-xs text-rg-text3">{expanded ? '▲' : '▼'}</Text>
+        {expanded ? (
+          <ChevronUp size={14} color={c('text3')} />
+        ) : (
+          <ChevronDown size={14} color={c('text3')} />
+        )}
       </Pressable>
 
       {expanded && (
