@@ -44,17 +44,21 @@ export const gtwcasia2026: RaceEvent[] = [
     round: 3,
     name: 'Shanghai',
     circuitId: 'shanghai-international-circuit',
+    // Relocated from the provisional June date to the official season finale weekend
+    // (Fri 30 Oct – Sun 1 Nov 2026) — SRO could not run on 7 Jun (China Gaokao exams).
+    // Source: gt-world-challenge-asia.com/calendar. Detailed session timetable not yet
+    // published; times of day below carried over from the provisional schedule (CST UTC+8).
     sessions: [
-      // Thursday 4 Jun (CST UTC+8)
-      { type: 'practice', label: 'Official Practice', startUtc: '2026-06-04T01:20:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Bronze Session', startUtc: '2026-06-04T02:25:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Pre-Qualifying', startUtc: '2026-06-04T06:55:00Z', durationMinutes: 60 },
-      // Friday 5 Jun
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-06-05T00:30:00Z', durationMinutes: 15 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-06-05T00:52:00Z', durationMinutes: 15 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-06-05T06:35:00Z', durationMinutes: 60 },
-      // Saturday 6 Jun
-      { type: 'race', label: 'Race 2', startUtc: '2026-06-06T02:50:00Z', durationMinutes: 60 },
+      // Friday 30 Oct (CST UTC+8)
+      { type: 'practice', label: 'Official Practice', startUtc: '2026-10-30T01:20:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Bronze Session', startUtc: '2026-10-30T02:25:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Pre-Qualifying', startUtc: '2026-10-30T06:55:00Z', durationMinutes: 60 },
+      // Saturday 31 Oct
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-10-31T00:30:00Z', durationMinutes: 15 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-10-31T00:52:00Z', durationMinutes: 15 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-10-31T06:35:00Z', durationMinutes: 60 },
+      // Sunday 1 Nov
+      { type: 'race', label: 'Race 2', startUtc: '2026-11-01T02:50:00Z', durationMinutes: 60 },
     ],
   },
   {

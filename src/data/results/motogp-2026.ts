@@ -3,6 +3,41 @@ import type { EventResults } from './types'
 // MotoGP 2026 results — Rounds 1-3 completed
 // Standings: Bezzecchi 81, Martín 77, Acosta 60, Di Giannantonio 50, Márquez 45
 export const motogpResults2026: Record<string, EventResults> = {
+  'motogp-2026-hungary': {
+    qualifying: {
+      overall: { driverIds: ['marquez-m'], teamId: 'ducati-lenovo' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['marquez-m'], teamId: 'ducati-lenovo' },
+          { position: 2, driverIds: ['acosta'], teamId: 'red-bull-ktm' },
+          { position: 3, driverIds: ['aldeguer'], teamId: 'gresini-racing' },
+        ],
+      }],
+    },
+    sprint: {
+      overall: { driverIds: ['marquez-m'], teamId: 'ducati-lenovo' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['marquez-m'], teamId: 'ducati-lenovo' },
+          { position: 2, driverIds: ['acosta'], teamId: 'red-bull-ktm' },
+          { position: 3, driverIds: ['bezzecchi'], teamId: 'aprilia-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['marquez-m'], teamId: 'ducati-lenovo' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['marquez-m'], teamId: 'ducati-lenovo' },
+          { position: 2, driverIds: ['acosta'], teamId: 'red-bull-ktm' },
+          { position: 3, driverIds: ['bagnaia'], teamId: 'ducati-lenovo' },
+        ],
+      }],
+    },
+  },
   'motogp-2026-thailand': {
     qualifying: {
       overall: { driverIds: ['martin-j'], teamId: 'aprilia-racing' },

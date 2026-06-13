@@ -2,6 +2,30 @@ import type { EventResults } from './types'
 
 // NASCAR 2026 results — verified from nascar.com, motorsport.com
 export const nascarResults2026: Record<string, EventResults> = {
+  'nascar-2026-michigan': {
+    qualifying: {
+      overall: { driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+          { position: 2, driverIds: ['hocevar'], teamId: 'spire-motorsports' },
+          { position: 3, driverIds: ['reddick'], teamId: '23xi-racing' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['hamlin'], teamId: 'joe-gibbs-racing' },
+          { position: 2, driverIds: ['jones'], teamId: 'legacy-motor-club' },
+          { position: 3, driverIds: ['wallace'], teamId: '23xi-racing' },
+        ],
+      }],
+    },
+  },
   'nascar-2026-daytona-500': {
     qualifying: {
       overall: { driverIds: ['busch'], teamId: 'richard-childress-racing' },

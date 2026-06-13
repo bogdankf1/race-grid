@@ -73,4 +73,44 @@ export const mlmcResults2026: Record<string, EventResults> = {
       ],
     },
   },
+  // Road to Le Mans (single 3h race). GT3: #77 SMC McLaren won on the road but was
+  // DSQ'd post-race (diffuser), promoting Racing Spirit of Léman #10 to the GT3 win.
+  // P2/P3 driver crews unverified at team level — recorded by team only.
+  'mlmc-2026-le-mans': {
+    qualifying: {
+      overall: { driverIds: ['rogeon'], teamId: 'brutal-fish-campos' },
+      classes: [
+        {
+          className: 'LMP3',
+          podium: [
+            { position: 1, driverIds: ['rogeon'], teamId: 'brutal-fish-campos' },
+          ],
+        },
+        {
+          className: 'GT3',
+          podium: [
+            { position: 1, driverIds: ['simmenauer'], teamId: 'smc-motorsport' },
+          ],
+        },
+      ],
+    },
+    endurance: {
+      overall: { driverIds: ['rogeon', 'raber'], teamId: 'brutal-fish-campos' },
+      classes: [
+        {
+          className: 'LMP3',
+          podium: [
+            { position: 1, driverIds: ['rogeon', 'raber'], teamId: 'brutal-fish-campos' },
+            { position: 2, driverIds: [], teamId: 'high-class-racing' },
+          ],
+        },
+        {
+          className: 'GT3',
+          podium: [
+            { position: 1, driverIds: [], teamId: 'racing-spirit-leman' },
+          ],
+        },
+      ],
+    },
+  },
 }

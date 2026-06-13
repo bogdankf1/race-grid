@@ -2,6 +2,30 @@ import type { EventResults } from './types'
 
 // IndyCar 2026 results — verified from indycar.com, motorsport.com
 export const indycarResults2026: Record<string, EventResults> = {
+  'indycar-2026-wwtr': {
+    qualifying: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+          { position: 2, driverIds: ['malukas'], teamId: 'team-penske' },
+          { position: 3, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['newgarden'], teamId: 'team-penske' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['newgarden'], teamId: 'team-penske' },
+          { position: 2, driverIds: ['ericsson'], teamId: 'andretti-global' },
+          { position: 3, driverIds: ['rasmussen'], teamId: 'ed-carpenter-racing' },
+        ],
+      }],
+    },
+  },
   'indycar-2026-st-petersburg': {
     qualifying: {
       overall: { driverIds: ['mclaughlin'], teamId: 'team-penske' },

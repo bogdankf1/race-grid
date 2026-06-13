@@ -554,6 +554,10 @@ const TEAMS: Record<string, Team> = {
   // NASCAR Xfinity 2025 additions
   'am-racing': { id: 'am-racing', name: 'AM Racing', country: 'US' },
   'dgm-racing': { id: 'dgm-racing', name: 'DGM Racing', country: 'US' },
+  // 24H Series Paul Ricard 2026 additions
+  'circuit-toys': { id: 'circuit-toys', name: 'Circuit Toys', country: 'NL' },
+  'vortex': { id: 'vortex', name: 'Vortex', country: 'FR' },
+  'asbest-racing': { id: 'asbest-racing', name: 'asBest Racing', country: '' },
   // Moto2 2024 additions
   'mt-helmets-msi-moto2': { id: 'mt-helmets-msi-moto2', name: 'MT Helmets — MSi', country: 'ES' },
   'speed-up-racing': { id: 'speed-up-racing', name: 'Sync SpeedUp Racing', country: 'IT' },

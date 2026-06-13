@@ -2,6 +2,31 @@ import type { EventResults } from './types'
 
 // F1 2026 results — verified from formula1.com, skysports.com
 export const f1Results2026: Record<string, EventResults> = {
+  'f1-2026-monaco': {
+    qualifying: {
+      overall: { driverIds: ['antonelli'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['verstappen'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['hamilton'], teamId: 'ferrari' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['antonelli'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['antonelli'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['hamilton'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['hadjar'], teamId: 'red-bull-racing' },
+        ],
+      }],
+      fastestLapDriverId: 'antonelli',
+    },
+  },
   'f1-2026-australia': {
     qualifying: {
       overall: { driverIds: ['russell'], teamId: 'mercedes' },

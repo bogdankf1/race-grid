@@ -3,6 +3,30 @@ import type { EventResults } from './types'
 // Moto2 2026 results — Rounds 1-7 completed (Thailand through Italy at Mugello)
 // Sources: crash.net, motomatters.com, motorsport.com, motogp.com
 export const moto2Results2026: Record<string, EventResults> = {
+  'moto2-2026-hungary': {
+    qualifying: {
+      overall: { driverIds: ['guevara'], teamId: 'pramac-yamaha-moto2' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['guevara'], teamId: 'pramac-yamaha-moto2' },
+          { position: 2, driverIds: ['salac'], teamId: 'american-racing-moto2' },
+          { position: 3, driverIds: ['agius'], teamId: 'intact-gp' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['gonzalez-m'], teamId: 'intact-gp' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['gonzalez-m'], teamId: 'intact-gp' },
+          { position: 2, driverIds: ['salac'], teamId: 'american-racing-moto2' },
+          { position: 3, driverIds: ['agius'], teamId: 'intact-gp' },
+        ],
+      }],
+    },
+  },
   'moto2-2026-thailand': {
     qualifying: {
       // Top 3 within 0.049s — Agius debut pole
