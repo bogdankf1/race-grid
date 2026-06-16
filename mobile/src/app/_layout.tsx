@@ -6,7 +6,7 @@ import { Stack, useRouter } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import * as ScreenOrientation from 'expo-screen-orientation'
 import { useEffect, useRef } from 'react'
-import { AppState, useWindowDimensions } from 'react-native'
+import { AppState, Platform, useWindowDimensions } from 'react-native'
 
 import { isTabletDevice } from '~/lib/responsive'
 import { rescheduleAll, setupNotificationChannel } from '~/lib/notifications'
@@ -74,7 +74,7 @@ function NotificationManager() {
 function OrientationLock() {
   const { width, height } = useWindowDimensions()
   useEffect(() => {
-    if (isTabletDevice(width, height)) {
+    if (Platform.OS === 'ios' && isTabletDevice(width, height)) {
       ScreenOrientation.unlockAsync().catch(() => {})
     } else {
       ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP).catch(() => {})
