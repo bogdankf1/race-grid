@@ -3,7 +3,7 @@
 
 import { useLocalSearchParams, useRouter, type Href } from 'expo-router'
 import { Search } from 'lucide-react-native'
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { FlatList, Pressable, ScrollView, Text, TextInput, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
@@ -12,7 +12,7 @@ import { AVAILABLE_YEARS, getSeriesMeta, getVisibleSeries } from '@/data/series-
 import { getStandings, hasStandings } from '@/data/standings'
 import type { ClassStandings } from '@/data/standings/types'
 import { getTeam } from '@/data/teams'
-import { t } from '@/lib/i18n'
+import { t, type Locale } from '@/lib/i18n'
 import { countryCode } from '~/lib/format'
 import { usePersistedState } from '~/lib/persisted'
 import { SEASON } from '~/lib/data'
@@ -20,6 +20,7 @@ import { tm } from '~/lib/strings'
 import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { YearSelector } from '~/components/YearSelector'
+import { useIsTablet } from '~/lib/use-is-tablet'
 import { useSettings } from '~/state/settings'
 import { useTheme } from '~/state/theme'
 
@@ -34,6 +35,70 @@ interface Row {
   wins: number
   /** Route target: driver page for driver rows, team page for constructors. */
   href: string
+}
+
+function StandingsColumn({
+  rows,
+  activeTab,
+  meta,
+  locale,
+  c,
+  query,
+  onOpen,
+}: {
+  rows: Row[]
+  activeTab: 'drivers' | 'constructors'
+  meta: ReturnType<typeof getSeriesMeta>
+  locale: Locale
+  c: ReturnType<typeof useTheme>['c']
+  query: string
+  onOpen: (href: string) => void
+}) {
+  return (
+    <FlatList
+      data={rows}
+      keyExtractor={(r) => `${activeTab}-${r.position}-${r.name}`}
+      contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
+      ListEmptyComponent={
+        <Text className="pt-16 text-center text-sm text-rg-text3">
+          {t(query ? 'search.noResults' : 'error.noData', locale)}
+        </Text>
+      }
+      renderItem={({ item }) => (
+        <Pressable
+          onPress={() => onOpen(item.href)}
+          accessibilityRole="button"
+          className="mb-1 flex-row items-center gap-3 rounded-xl border border-rg-card-border bg-rg-surface px-3 py-2.5"
+          style={{
+            backgroundColor: item.position <= 3 ? MEDAL_BG[item.position - 1] : undefined,
+            borderLeftWidth: 3,
+            borderLeftColor: meta?.color ?? c('border'),
+          }}
+        >
+          <Text className="w-7 text-center text-sm font-bold text-rg-text2">{item.position}</Text>
+          <View className="flex-1">
+            <View className="flex-row items-center gap-1.5">
+              {item.code ? <CountryCode code={item.code} /> : null}
+              <Text className="flex-1 text-sm font-semibold text-rg-text" numberOfLines={1}>
+                {item.name}
+              </Text>
+            </View>
+            {item.team ? (
+              <Text className="mt-0.5 text-xs text-rg-text3" numberOfLines={1}>
+                {item.team}
+              </Text>
+            ) : null}
+          </View>
+          <View className="items-end">
+            <Text className="text-sm font-bold text-rg-text">{item.points}</Text>
+            <Text className="text-[10px] text-rg-text3">
+              {tm('standings.wins', locale)}: {item.wins}
+            </Text>
+          </View>
+        </Pressable>
+      )}
+    />
+  )
 }
 
 export default function StandingsScreen() {
@@ -84,11 +149,11 @@ export default function StandingsScreen() {
   const hasConstructors = (activeClass?.constructors.length ?? 0) > 0
   const activeTab = tab === 'constructors' && !hasConstructors ? 'drivers' : tab
 
-  const rows = useMemo<Row[]>(() => {
+  const buildRows = useCallback((which: 'drivers' | 'constructors'): Row[] => {
     if (!activeClass) return []
     const q = query.trim().toLowerCase()
     const list: Row[] =
-      activeTab === 'drivers'
+      which === 'drivers'
         ? activeClass.drivers.map((d) => {
             const driver = getDriver(d.driverId)
             return {
@@ -114,7 +179,16 @@ export default function StandingsScreen() {
     return list.filter(
       (r) => r.name.toLowerCase().includes(q) || r.team.toLowerCase().includes(q),
     )
-  }, [activeClass, activeTab, query])
+  }, [activeClass, query])
+
+  const isTablet = useIsTablet()
+  const showBoth = isTablet && hasConstructors
+
+  const driverRows = useMemo(() => buildRows('drivers'), [buildRows])
+  const constructorRows = useMemo(() => buildRows('constructors'), [buildRows])
+  const activeRows = activeTab === 'drivers' ? driverRows : constructorRows
+
+  const handleOpen = useCallback((href: string) => router.push(href as Href), [router])
 
   const meta = getSeriesMeta(activeSeriesId)
 
@@ -196,72 +270,73 @@ export default function StandingsScreen() {
         </ScrollView>
       )}
 
-      <View className="mx-4 mb-2 flex-row overflow-hidden rounded-lg border border-rg-border">
-        {(['drivers', 'constructors'] as const).map((tabKey) => (
-          <Pressable
-            key={tabKey}
-            disabled={tabKey === 'constructors' && !hasConstructors}
-            onPress={() => setTab(tabKey)}
-            accessibilityRole="button"
-            className={activeTab === tabKey ? 'flex-1 items-center bg-rg-elevated py-2' : 'flex-1 items-center py-2'}
-            style={{ opacity: tabKey === 'constructors' && !hasConstructors ? 0.35 : 1 }}
-          >
-            <Text
-              className={
-                activeTab === tabKey
-                  ? 'text-xs font-bold text-rg-text'
-                  : 'text-xs font-semibold text-rg-text3'
-              }
+      {!showBoth && (
+        <View className="mx-4 mb-2 flex-row overflow-hidden rounded-lg border border-rg-border">
+          {(['drivers', 'constructors'] as const).map((tabKey) => (
+            <Pressable
+              key={tabKey}
+              disabled={tabKey === 'constructors' && !hasConstructors}
+              onPress={() => setTab(tabKey)}
+              accessibilityRole="button"
+              className={activeTab === tabKey ? 'flex-1 items-center bg-rg-elevated py-2' : 'flex-1 items-center py-2'}
+              style={{ opacity: tabKey === 'constructors' && !hasConstructors ? 0.35 : 1 }}
             >
-              {tm(`standings.${tabKey}`, locale)}
-            </Text>
-          </Pressable>
-        ))}
-      </View>
-
-      <FlatList
-        data={rows}
-        keyExtractor={(r) => `${activeTab}-${r.position}-${r.name}`}
-        contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
-        ListEmptyComponent={
-          <Text className="pt-16 text-center text-sm text-rg-text3">
-            {t(query ? 'search.noResults' : 'error.noData', locale)}
-          </Text>
-        }
-        renderItem={({ item }) => (
-          <Pressable
-            onPress={() => router.push(item.href as Href)}
-            accessibilityRole="button"
-            className="mb-1 flex-row items-center gap-3 rounded-xl border border-rg-card-border bg-rg-surface px-3 py-2.5"
-            style={{
-              backgroundColor: item.position <= 3 ? MEDAL_BG[item.position - 1] : undefined,
-              borderLeftWidth: 3,
-              borderLeftColor: meta?.color ?? c('border'),
-            }}
-          >
-            <Text className="w-7 text-center text-sm font-bold text-rg-text2">{item.position}</Text>
-            <View className="flex-1">
-              <View className="flex-row items-center gap-1.5">
-                {item.code ? <CountryCode code={item.code} /> : null}
-                <Text className="flex-1 text-sm font-semibold text-rg-text" numberOfLines={1}>
-                  {item.name}
-                </Text>
-              </View>
-              {item.team ? (
-                <Text className="mt-0.5 text-xs text-rg-text3" numberOfLines={1}>
-                  {item.team}
-                </Text>
-              ) : null}
-            </View>
-            <View className="items-end">
-              <Text className="text-sm font-bold text-rg-text">{item.points}</Text>
-              <Text className="text-[10px] text-rg-text3">
-                {tm('standings.wins', locale)}: {item.wins}
+              <Text
+                className={
+                  activeTab === tabKey
+                    ? 'text-xs font-bold text-rg-text'
+                    : 'text-xs font-semibold text-rg-text3'
+                }
+              >
+                {tm(`standings.${tabKey}`, locale)}
               </Text>
-            </View>
-          </Pressable>
-        )}
-      />
+            </Pressable>
+          ))}
+        </View>
+      )}
+
+      {showBoth ? (
+        <View className="flex-1 flex-row">
+          <View className="flex-1">
+            <Text className="px-4 pb-1 text-xs font-bold uppercase tracking-widest text-rg-text3">
+              {tm('standings.drivers', locale)}
+            </Text>
+            <StandingsColumn
+              rows={driverRows}
+              activeTab="drivers"
+              meta={meta}
+              locale={locale}
+              c={c}
+              query={query}
+              onOpen={handleOpen}
+            />
+          </View>
+          <View className="flex-1 border-l border-rg-border">
+            <Text className="px-4 pb-1 text-xs font-bold uppercase tracking-widest text-rg-text3">
+              {tm('standings.constructors', locale)}
+            </Text>
+            <StandingsColumn
+              rows={constructorRows}
+              activeTab="constructors"
+              meta={meta}
+              locale={locale}
+              c={c}
+              query={query}
+              onOpen={handleOpen}
+            />
+          </View>
+        </View>
+      ) : (
+        <StandingsColumn
+          rows={activeRows}
+          activeTab={activeTab}
+          meta={meta}
+          locale={locale}
+          c={c}
+          query={query}
+          onOpen={handleOpen}
+        />
+      )}
     </SafeAreaView>
   )
 }
