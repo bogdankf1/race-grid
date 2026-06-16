@@ -27,9 +27,10 @@ interface AgendaCardProps {
   timezone: string
   locale: Locale
   now: number
+  onPress?: () => void
 }
 
-export function AgendaCard({ item, timezone, locale, now }: AgendaCardProps) {
+export function AgendaCard({ item, timezone, locale, now, onPress }: AgendaCardProps) {
   const router = useRouter()
   const { c } = useTheme()
   const finished = item.status === 'finished'
@@ -37,7 +38,7 @@ export function AgendaCard({ item, timezone, locale, now }: AgendaCardProps) {
 
   return (
     <Pressable
-      onPress={() => router.push(`/race/${item.event.id}`)}
+      onPress={() => (onPress ? onPress() : router.push(`/race/${item.event.id}`))}
       accessibilityRole="button"
       className="mb-2.5 rounded-2xl border border-rg-card-border bg-rg-surface p-3"
       style={{ borderLeftWidth: 4, borderLeftColor: item.seriesColor, opacity: finished ? 0.6 : 1 }}

@@ -17,13 +17,16 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { t } from '@/lib/i18n'
 import { getLocalDate } from '@/lib/timezone'
-import { buildAgenda, toAgendaEvent, weekKeyOf, type AgendaEvent, type WeekGroup } from '~/lib/agenda'
+import { buildAgenda, firstUpcomingEventId, toAgendaEvent, weekKeyOf, type AgendaEvent, type WeekGroup } from '~/lib/agenda'
 import { SEASON } from '~/lib/data'
 import { formatWeekLabel } from '~/lib/format'
 import { usePersistedState } from '~/lib/persisted'
 import { tm } from '~/lib/strings'
 import { AgendaCard } from '~/components/AgendaCard'
 import { buildMonthIndex, MonthGrid } from '~/components/MonthGrid'
+import { RaceDetail } from '~/components/RaceDetail'
+import { SplitView } from '~/components/SplitView'
+import { useIsTablet } from '~/lib/use-is-tablet'
 import { useData } from '~/state/data'
 import { useSettings } from '~/state/settings'
 import { useTheme } from '~/state/theme'
@@ -56,6 +59,8 @@ export default function ScheduleScreen() {
     'agenda',
   )
   const [selectedDate, setSelectedDate] = useState<string | null>(null)
+  const isTablet = useIsTablet()
+  const [selectedEventId, setSelectedEventId] = useState<string | null>(null)
 
   const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
@@ -69,6 +74,13 @@ export default function ScheduleScreen() {
     () => buildAgenda(seriesList, followedSeriesIds, timezone, now, visibleSessionTypes),
     [seriesList, followedSeriesIds, timezone, now, visibleSessionTypes],
   )
+
+  // On tablet, default the detail pane to the nearest upcoming race.
+  useEffect(() => {
+    if (isTablet && !selectedEventId) {
+      setSelectedEventId(firstUpcomingEventId(agenda.current) ?? firstUpcomingEventId(agenda.past))
+    }
+  }, [isTablet, selectedEventId, agenda])
 
   const today = useMemo(() => getLocalDate(new Date(now).toISOString(), timezone), [now, timezone])
   const thisWeekKey = useMemo(() => weekKeyOf(today), [today])
@@ -109,6 +121,128 @@ export default function ScheduleScreen() {
   }, [agenda, showEarlier, searching, query])
 
   const empty = followedSeriesIds.length === 0
+
+  const listRegion = empty ? (
+    <View className="flex-1 items-center justify-center px-8">
+      <Flag size={40} color={c('text3')} />
+      <Text className="mt-4 text-lg text-rg-text2">{tm('agenda.empty', locale)}</Text>
+      <Pressable onPress={() => router.push('/series')} accessibilityRole="button">
+        <Text className="mt-1.5 text-center text-sm text-rg-link">
+          {tm('agenda.emptyHint', locale)}
+        </Text>
+      </Pressable>
+    </View>
+  ) : viewMode === 'month' ? (
+    <ScrollView
+      contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
+      refreshControl={
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={() => {
+            refresh().catch(() => {})
+          }}
+          tintColor={c('text3')}
+        />
+      }
+    >
+      <MonthGrid
+        month={month}
+        onMonthChange={setMonth}
+        index={monthIndex}
+        today={today}
+        selectedDate={selectedDate}
+        onSelectDate={setSelectedDate}
+        locale={locale}
+      />
+      {selectedDate && (
+        <View className="mt-3">
+          <Text className="mb-2 text-xs font-bold uppercase tracking-widest text-rg-text3">
+            {new Date(selectedDate + 'T12:00:00Z').toLocaleDateString(
+              locale === 'uk' ? 'uk-UA' : 'en-US',
+              { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' },
+            )}
+          </Text>
+          {dayEvents.length === 0 ? (
+            <Text className="py-4 text-center text-sm text-rg-text3">
+              {t('day.noRaces', locale)} {t('day.offDay', locale)}
+            </Text>
+          ) : (
+            dayEvents.map((item) => (
+              <AgendaCard
+                key={item.key}
+                item={item}
+                timezone={timezone}
+                locale={locale}
+                now={now}
+                onPress={isTablet ? () => setSelectedEventId(item.event.id) : undefined}
+              />
+            ))
+          )}
+        </View>
+      )}
+    </ScrollView>
+  ) : (
+    <SectionList
+      sections={sections}
+      keyExtractor={(item: AgendaEvent) => item.key}
+      stickySectionHeadersEnabled={false}
+      contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
+      refreshControl={
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={() => {
+            refresh().catch(() => {})
+          }}
+          tintColor={c('text3')}
+        />
+      }
+      ListHeaderComponent={
+        agenda.past.length > 0 && !searching ? (
+          <Pressable
+            onPress={() => setShowEarlier((v) => !v)}
+            accessibilityRole="button"
+            className="mb-3 items-center rounded-xl border border-rg-border bg-rg-btn-bg px-3 py-2"
+          >
+            <Text className="text-xs font-semibold text-rg-text2">
+              {showEarlier ? tm('agenda.hideEarlier', locale) : tm('agenda.showEarlier', locale)}{' '}
+              ({agenda.past.reduce((n, g) => n + g.events.length, 0)})
+            </Text>
+          </Pressable>
+        ) : null
+      }
+      renderSectionHeader={({ section }) => (
+        <View className="mb-2 mt-3 flex-row items-center gap-2">
+          <Text className="text-xs font-bold uppercase tracking-widest text-rg-text3">
+            {formatWeekLabel(section.title, locale)}
+          </Text>
+          {section.title === thisWeekKey && (
+            <View className="rounded-md bg-rg-elevated px-2 py-0.5">
+              <Text className="text-[10px] font-bold uppercase text-rg-text2">
+                {tm('agenda.thisWeek', locale)}
+              </Text>
+            </View>
+          )}
+        </View>
+      )}
+      renderItem={({ item }) => (
+        <AgendaCard item={item} timezone={timezone} locale={locale} now={now} onPress={isTablet ? () => setSelectedEventId(item.event.id) : undefined} />
+      )}
+      ListEmptyComponent={
+        <View className="items-center px-8 pt-20">
+          <Flag size={40} color={c('text3')} />
+          <Text className="mt-4 text-base text-rg-text2">{t('week.noRaces', locale)}</Text>
+        </View>
+      }
+      ListFooterComponent={
+        lastSync ? (
+          <Text className="mt-4 text-center text-[10px] text-rg-text3">
+            {tm('settings.lastSync', locale)}:{' '}
+            {new Date(lastSync).toLocaleString(locale === 'uk' ? 'uk-UA' : 'en-US')}
+          </Text>
+        ) : null
+      }
+    />
+  )
 
   return (
     <SafeAreaView edges={['top']} className="flex-1 bg-rg-bg">
@@ -174,125 +308,22 @@ export default function ScheduleScreen() {
         </View>
       )}
 
-      {empty ? (
-        <View className="flex-1 items-center justify-center px-8">
-          <Flag size={40} color={c('text3')} />
-          <Text className="mt-4 text-lg text-rg-text2">{tm('agenda.empty', locale)}</Text>
-          <Pressable onPress={() => router.push('/series')} accessibilityRole="button">
-            <Text className="mt-1.5 text-center text-sm text-rg-link">
-              {tm('agenda.emptyHint', locale)}
-            </Text>
-          </Pressable>
-        </View>
-      ) : viewMode === 'month' ? (
-        <ScrollView
-          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
-          refreshControl={
-            <RefreshControl
-              refreshing={refreshing}
-              onRefresh={() => {
-                refresh().catch(() => {})
-              }}
-              tintColor={c('text3')}
-            />
-          }
-        >
-          <MonthGrid
-            month={month}
-            onMonthChange={setMonth}
-            index={monthIndex}
-            today={today}
-            selectedDate={selectedDate}
-            onSelectDate={setSelectedDate}
-            locale={locale}
-          />
-          {selectedDate && (
-            <View className="mt-3">
-              <Text className="mb-2 text-xs font-bold uppercase tracking-widest text-rg-text3">
-                {new Date(selectedDate + 'T12:00:00Z').toLocaleDateString(
-                  locale === 'uk' ? 'uk-UA' : 'en-US',
-                  { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' },
-                )}
-              </Text>
-              {dayEvents.length === 0 ? (
-                <Text className="py-4 text-center text-sm text-rg-text3">
-                  {t('day.noRaces', locale)} {t('day.offDay', locale)}
-                </Text>
-              ) : (
-                dayEvents.map((item) => (
-                  <AgendaCard
-                    key={item.key}
-                    item={item}
-                    timezone={timezone}
-                    locale={locale}
-                    now={now}
-                  />
-                ))
-              )}
-            </View>
-          )}
-        </ScrollView>
-      ) : (
-        <SectionList
-          sections={sections}
-          keyExtractor={(item: AgendaEvent) => item.key}
-          stickySectionHeadersEnabled={false}
-          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
-          refreshControl={
-            <RefreshControl
-              refreshing={refreshing}
-              onRefresh={() => {
-                refresh().catch(() => {})
-              }}
-              tintColor={c('text3')}
-            />
-          }
-          ListHeaderComponent={
-            agenda.past.length > 0 && !searching ? (
-              <Pressable
-                onPress={() => setShowEarlier((v) => !v)}
-                accessibilityRole="button"
-                className="mb-3 items-center rounded-xl border border-rg-border bg-rg-btn-bg px-3 py-2"
-              >
-                <Text className="text-xs font-semibold text-rg-text2">
-                  {showEarlier ? tm('agenda.hideEarlier', locale) : tm('agenda.showEarlier', locale)}{' '}
-                  ({agenda.past.reduce((n, g) => n + g.events.length, 0)})
-                </Text>
-              </Pressable>
-            ) : null
-          }
-          renderSectionHeader={({ section }) => (
-            <View className="mb-2 mt-3 flex-row items-center gap-2">
-              <Text className="text-xs font-bold uppercase tracking-widest text-rg-text3">
-                {formatWeekLabel(section.title, locale)}
-              </Text>
-              {section.title === thisWeekKey && (
-                <View className="rounded-md bg-rg-elevated px-2 py-0.5">
-                  <Text className="text-[10px] font-bold uppercase text-rg-text2">
-                    {tm('agenda.thisWeek', locale)}
-                  </Text>
-                </View>
-              )}
-            </View>
-          )}
-          renderItem={({ item }) => (
-            <AgendaCard item={item} timezone={timezone} locale={locale} now={now} />
-          )}
-          ListEmptyComponent={
-            <View className="items-center px-8 pt-20">
-              <Flag size={40} color={c('text3')} />
-              <Text className="mt-4 text-base text-rg-text2">{t('week.noRaces', locale)}</Text>
-            </View>
-          }
-          ListFooterComponent={
-            lastSync ? (
-              <Text className="mt-4 text-center text-[10px] text-rg-text3">
-                {tm('settings.lastSync', locale)}:{' '}
-                {new Date(lastSync).toLocaleString(locale === 'uk' ? 'uk-UA' : 'en-US')}
-              </Text>
-            ) : null
+      {isTablet ? (
+        <SplitView
+          railWidth={360}
+          left={listRegion}
+          right={
+            selectedEventId ? (
+              <RaceDetail id={selectedEventId} />
+            ) : (
+              <View className="flex-1 items-center justify-center px-8">
+                <Text className="text-sm text-rg-text3">{tm('agenda.selectRace', locale)}</Text>
+              </View>
+            )
           }
         />
+      ) : (
+        listRegion
       )}
     </SafeAreaView>
   )

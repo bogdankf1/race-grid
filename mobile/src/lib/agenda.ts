@@ -98,6 +98,20 @@ export function toAgendaEvent(
 }
 
 /**
+ * The event id to pre-select in the iPad Schedule detail pane: the earliest
+ * non-finished event in the given week groups, falling back to the earliest
+ * event overall, or null when there are no events.
+ */
+export function firstUpcomingEventId(groups: WeekGroup[]): string | null {
+  const all = groups.flatMap((g) => g.events)
+  if (all.length === 0) return null
+  const pool = all.some((e) => e.status !== 'finished')
+    ? all.filter((e) => e.status !== 'finished')
+    : all
+  return pool.reduce((min, e) => (e.startMs < min.startMs ? e : min)).event.id
+}
+
+/**
  * Build the agenda: every event of the followed series, grouped by week and
  * split into `past` (week ended before the current one) and `current` (this
  * week and later). Weeks ascending, events within a week by start time.

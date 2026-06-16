@@ -3,7 +3,7 @@
 // grouping, overlay merging, results precedence, notification planning.
 
 import { gridColumns, isTabletDevice, isTabletWidth } from '../src/lib/responsive'
-import { buildAgenda, eventStatus, weekKeyOf } from '../src/lib/agenda'
+import { buildAgenda, eventStatus, firstUpcomingEventId, weekKeyOf } from '../src/lib/agenda'
 import { buildMonthIndex, monthCells, shiftMonth } from '../src/lib/month'
 import {
   buildSeriesList,
@@ -214,6 +214,38 @@ ok('isTabletDevice: uses the smaller dimension, so landscape phones stay phones'
   assert.equal(isTabletDevice(430, 932), false) // iPhone Pro Max portrait
   assert.equal(isTabletDevice(820, 1180), true) // iPad 10.9 portrait
   assert.equal(isTabletDevice(1180, 820), true) // iPad 10.9 landscape
+})
+
+// ───────── firstUpcomingEventId ─────────
+ok('firstUpcomingEventId picks the earliest non-finished event', () => {
+  const groups = [
+    {
+      weekKey: 'w',
+      events: [
+        { event: { id: 'b' }, startMs: 200, status: 'upcoming' },
+        { event: { id: 'a' }, startMs: 100, status: 'finished' },
+        { event: { id: 'c' }, startMs: 300, status: 'upcoming' },
+      ],
+    },
+  ] as never
+  assert.equal(firstUpcomingEventId(groups), 'b')
+})
+
+ok('firstUpcomingEventId falls back to the earliest event when all finished', () => {
+  const groups = [
+    {
+      weekKey: 'w',
+      events: [
+        { event: { id: 'x' }, startMs: 500, status: 'finished' },
+        { event: { id: 'y' }, startMs: 400, status: 'finished' },
+      ],
+    },
+  ] as never
+  assert.equal(firstUpcomingEventId(groups), 'y')
+})
+
+ok('firstUpcomingEventId returns null for an empty agenda', () => {
+  assert.equal(firstUpcomingEventId([]), null)
 })
 
 console.log(`\nAll ${passed} smoke tests passed.`)
