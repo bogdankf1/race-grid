@@ -11,6 +11,7 @@ import { SERIES_GROUPS } from '@/data/series-registry'
 import { t } from '@/lib/i18n'
 import type { SeriesConfig } from '@/lib/types'
 import { sessionEndMs } from '~/lib/data'
+import { useGridColumns } from '~/lib/use-is-tablet'
 import { SeriesLogo } from '~/components/SeriesLogo'
 import { useData } from '~/state/data'
 import { useSettings } from '~/state/settings'
@@ -24,11 +25,74 @@ function seasonProgress(series: SeriesConfig, now: number): { done: number; tota
   return { done, total: series.events.length }
 }
 
+function chunk<T>(arr: T[], size: number): T[][] {
+  if (size <= 1) return arr.map((x) => [x])
+  const out: T[][] = []
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size))
+  return out
+}
+
+function SeriesCard({
+  item,
+  active,
+  now,
+  c,
+  onToggle,
+  onOpen,
+}: {
+  item: SeriesConfig
+  active: boolean
+  now: number
+  c: ReturnType<typeof useTheme>['c']
+  onToggle: () => void
+  onOpen: () => void
+}) {
+  const progress = seasonProgress(item, now)
+  return (
+    <Pressable
+      onPress={onOpen}
+      accessibilityRole="button"
+      className="mb-1.5 flex-row items-center gap-3 rounded-xl border border-rg-card-border bg-rg-surface px-3 py-2.5"
+      style={{ opacity: active ? 1 : 0.55, borderLeftWidth: 4, borderLeftColor: item.color }}
+    >
+      <View className="w-14 items-center">
+        <SeriesLogo seriesId={item.id} height={22} />
+      </View>
+      <View className="flex-1">
+        <Text className="text-sm font-semibold text-rg-text" numberOfLines={1}>
+          {item.name}
+        </Text>
+        <View className="mt-1 flex-row items-center gap-2">
+          <View className="h-1 flex-1 overflow-hidden rounded-full bg-rg-elevated">
+            <View
+              className="h-1 rounded-full"
+              style={{
+                width: `${progress.total ? Math.round((progress.done / progress.total) * 100) : 0}%`,
+                backgroundColor: item.color,
+              }}
+            />
+          </View>
+          <Text className="text-[10px] text-rg-text3">
+            {progress.done}/{progress.total}
+          </Text>
+        </View>
+      </View>
+      <Switch
+        value={active}
+        onValueChange={onToggle}
+        trackColor={{ true: item.color, false: c('border') }}
+        thumbColor="#fff"
+      />
+    </Pressable>
+  )
+}
+
 export default function SeriesScreen() {
   const { seriesList } = useData()
   const { followedSeriesIds, setFollowedSeriesIds, toggleFollowedSeries, locale } = useSettings()
   const { c } = useTheme()
   const router = useRouter()
+  const cols = useGridColumns()
   const [query, setQuery] = useState('')
   const now = Date.now()
 
@@ -94,67 +158,71 @@ export default function SeriesScreen() {
         </Pressable>
       </View>
 
-      <SectionList
-        sections={sections}
-        keyExtractor={(item) => item.id}
-        stickySectionHeadersEnabled={false}
-        contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
-        ListEmptyComponent={
-          <Text className="pt-16 text-center text-sm text-rg-text3">
-            {t('search.noResults', locale)}
-          </Text>
-        }
-        renderSectionHeader={({ section }) => (
-          <Text className="mb-2 mt-4 text-xs font-bold uppercase tracking-widest text-rg-text3">
-            {section.title}
-          </Text>
-        )}
-        renderItem={({ item }) => {
-          const active = followed.has(item.id)
-          const progress = seasonProgress(item, now)
-          return (
-            <Pressable
-              onPress={() => router.push(`/series/${item.id}`)}
-              accessibilityRole="button"
-              className="mb-1.5 flex-row items-center gap-3 rounded-xl border border-rg-card-border bg-rg-surface px-3 py-2.5"
-              style={{
-                opacity: active ? 1 : 0.55,
-                borderLeftWidth: 4,
-                borderLeftColor: item.color,
-              }}
-            >
-              <View className="w-14 items-center">
-                <SeriesLogo seriesId={item.id} height={22} />
-              </View>
-              <View className="flex-1">
-                <Text className="text-sm font-semibold text-rg-text" numberOfLines={1}>
-                  {item.name}
-                </Text>
-                <View className="mt-1 flex-row items-center gap-2">
-                  <View className="h-1 flex-1 overflow-hidden rounded-full bg-rg-elevated">
-                    <View
-                      className="h-1 rounded-full"
-                      style={{
-                        width: `${progress.total ? Math.round((progress.done / progress.total) * 100) : 0}%`,
-                        backgroundColor: item.color,
-                      }}
-                    />
-                  </View>
-                  <Text className="text-[10px] text-rg-text3">
-                    {progress.done}/{progress.total}
-                  </Text>
+      {cols > 1 ? (
+        <SectionList
+          sections={sections.map((s) => ({ title: s.title, data: chunk(s.data, cols) }))}
+          keyExtractor={(row: SeriesConfig[]) => row.map((s) => s.id).join('-')}
+          stickySectionHeadersEnabled={false}
+          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
+          ListEmptyComponent={
+            <Text className="pt-16 text-center text-sm text-rg-text3">
+              {t('search.noResults', locale)}
+            </Text>
+          }
+          renderSectionHeader={({ section }) => (
+            <Text className="mb-2 mt-4 text-xs font-bold uppercase tracking-widest text-rg-text3">
+              {section.title}
+            </Text>
+          )}
+          renderItem={({ item: row }: { item: SeriesConfig[] }) => (
+            <View className="flex-row gap-3">
+              {row.map((s) => (
+                <View key={s.id} style={{ flex: 1 / cols }}>
+                  <SeriesCard
+                    item={s}
+                    active={followed.has(s.id)}
+                    now={now}
+                    c={c}
+                    onToggle={() => toggleFollowedSeries(s.id)}
+                    onOpen={() => router.push(`/series/${s.id}`)}
+                  />
                 </View>
-              </View>
-              <Switch
-                value={active}
-                onValueChange={() => toggleFollowedSeries(item.id)}
-                trackColor={{ true: item.color, false: c('border') }}
-                thumbColor="#fff"
-              />
-            </Pressable>
-          )
-        }}
-      />
+              ))}
+              {row.length < cols &&
+                Array.from({ length: cols - row.length }).map((_, i) => (
+                  <View key={`spacer-${i}`} style={{ flex: 1 / cols }} />
+                ))}
+            </View>
+          )}
+        />
+      ) : (
+        <SectionList
+          sections={sections}
+          keyExtractor={(item) => item.id}
+          stickySectionHeadersEnabled={false}
+          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
+          ListEmptyComponent={
+            <Text className="pt-16 text-center text-sm text-rg-text3">
+              {t('search.noResults', locale)}
+            </Text>
+          }
+          renderSectionHeader={({ section }) => (
+            <Text className="mb-2 mt-4 text-xs font-bold uppercase tracking-widest text-rg-text3">
+              {section.title}
+            </Text>
+          )}
+          renderItem={({ item }) => (
+            <SeriesCard
+              item={item}
+              active={followed.has(item.id)}
+              now={now}
+              c={c}
+              onToggle={() => toggleFollowedSeries(item.id)}
+              onOpen={() => router.push(`/series/${item.id}`)}
+            />
+          )}
+        />
+      )}
     </SafeAreaView>
   )
 }

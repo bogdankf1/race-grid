@@ -10,6 +10,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { getCircuit, getCircuitTypeLabel, type Circuit } from '@/data/circuits'
 import { t } from '@/lib/i18n'
 import { tm } from '~/lib/strings'
+import { useGridColumns } from '~/lib/use-is-tablet'
 import { CountryCode } from '~/components/CountryCode'
 import { SeriesChip } from '~/components/SeriesChip'
 import { useData } from '~/state/data'
@@ -28,6 +29,7 @@ export default function CircuitsScreen() {
   const { locale } = useSettings()
   const { c } = useTheme()
   const router = useRouter()
+  const cols = useGridColumns()
   const [query, setQuery] = useState('')
   const [typeFilter, setTypeFilter] = useState<string | null>(null)
 
@@ -110,8 +112,11 @@ export default function CircuitsScreen() {
       </View>
 
       <FlatList
+        key={cols}
         data={rows}
+        numColumns={cols}
         keyExtractor={(row) => row.circuit.id}
+        columnWrapperStyle={cols > 1 ? { gap: 12 } : undefined}
         contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
         ListEmptyComponent={
           <Text className="pt-16 text-center text-sm text-rg-text3">
@@ -123,6 +128,7 @@ export default function CircuitsScreen() {
             onPress={() => router.push(`/circuit/${item.circuit.id}`)}
             accessibilityRole="button"
             className="mb-1.5 rounded-xl border border-rg-card-border bg-rg-surface px-3 py-2.5"
+            style={cols > 1 ? { flex: 1 / cols } : undefined}
           >
             <View className="flex-row items-center gap-1.5">
               <CountryCode code={item.circuit.countryCode} />
