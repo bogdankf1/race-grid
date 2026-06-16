@@ -327,4 +327,28 @@ export const nascarXfinityResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'nascar-xfinity-2026-pocono': {
+    qualifying: {
+      overall: { driverIds: ['jones-brandon'], teamId: 'joe-gibbs-racing' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['jones-brandon'], teamId: 'joe-gibbs-racing' },
+          { position: 2, driverIds: ['gray-taylor'], teamId: 'joe-gibbs-racing' },
+          { position: 3, driverIds: ['byron'], teamId: 'jr-motorsports' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['allgaier'], teamId: 'jr-motorsports' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['allgaier'], teamId: 'jr-motorsports' },
+          { position: 2, driverIds: ['crews-brent'], teamId: 'joe-gibbs-racing' },
+          { position: 3, driverIds: ['byron'], teamId: 'jr-motorsports' },
+        ],
+      }],
+    },
+  },
 }

@@ -5,6 +5,18 @@ import type { EventResults } from './types'
 export const wrxResults2026: Record<string, EventResults> = {
   // Round 1 — Euro RX of Latvia (Biķernieki)
   'wrx-2026-latvia': {
+    qualifying: {
+      // Top Qualifier classification after the qualifying heats
+      overall: { driverIds: ['kristoffersson'], teamId: 'kristoffersson-motorsport' },
+      classes: [{
+        className: 'RX1',
+        podium: [
+          { position: 1, driverIds: ['kristoffersson'], teamId: 'kristoffersson-motorsport' },
+          { position: 2, driverIds: ['j-rytkonen'], teamId: 'set-promotion' },
+          { position: 3, driverIds: ['bakkerud'], teamId: 'set-promotion' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['kristoffersson'], teamId: 'kristoffersson-motorsport' },
       classes: [{
@@ -19,6 +31,18 @@ export const wrxResults2026: Record<string, EventResults> = {
   },
   // Round 2 — Kárai Trans Euro RX of Hungary (Nyirád)
   'wrx-2026-hungary': {
+    qualifying: {
+      // Top Qualifier classification after the qualifying heats
+      overall: { driverIds: ['bakkerud'], teamId: 'set-promotion' },
+      classes: [{
+        className: 'RX1',
+        podium: [
+          { position: 1, driverIds: ['bakkerud'], teamId: 'set-promotion' },
+          { position: 2, driverIds: ['kristoffersson'], teamId: 'kristoffersson-motorsport' },
+          { position: 3, driverIds: ['turpeinen'], teamId: 'set-promotion' },
+        ],
+      }],
+    },
     race: {
       overall: { driverIds: ['bakkerud'], teamId: 'set-promotion' },
       classes: [{
