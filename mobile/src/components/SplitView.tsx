@@ -18,7 +18,7 @@ export function SplitView({
 }) {
   return (
     <View className="flex-1 flex-row">
-      <View style={{ width: railWidth }} className="flex-1 border-r border-rg-border">
+      <View style={{ width: railWidth }} className="border-r border-rg-border">
         {left}
       </View>
       <View className="flex-1">{right}</View>
