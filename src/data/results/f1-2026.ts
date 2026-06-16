@@ -21,7 +21,7 @@ export const f1Results2026: Record<string, EventResults> = {
         podium: [
           { position: 1, driverIds: ['antonelli'], teamId: 'mercedes' },
           { position: 2, driverIds: ['hamilton'], teamId: 'ferrari' },
-          { position: 3, driverIds: ['hadjar'], teamId: 'red-bull-racing' },
+          { position: 3, driverIds: ['gasly'], teamId: 'alpine' },
         ],
       }],
       fastestLapDriverId: 'antonelli',
@@ -215,6 +215,31 @@ export const f1Results2026: Record<string, EventResults> = {
         ],
       }],
       fastestLapDriverId: 'antonelli',
+    },
+  },
+  'f1-2026-spain-barcelona': {
+    qualifying: {
+      overall: { driverIds: ['russell'], teamId: 'mercedes' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 2, driverIds: ['hamilton'], teamId: 'ferrari' },
+          { position: 3, driverIds: ['antonelli'], teamId: 'mercedes' },
+        ],
+      }],
+    },
+    race: {
+      overall: { driverIds: ['hamilton'], teamId: 'ferrari' },
+      classes: [{
+        className: 'Classification',
+        podium: [
+          { position: 1, driverIds: ['hamilton'], teamId: 'ferrari' },
+          { position: 2, driverIds: ['russell'], teamId: 'mercedes' },
+          { position: 3, driverIds: ['norris'], teamId: 'mclaren' },
+        ],
+      }],
+      fastestLapDriverId: 'hamilton',
     },
   },
 }

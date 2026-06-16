@@ -92,4 +92,19 @@ export const gtwcamResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  // Round 4 Road Atlanta (2026-06-14): only QUALIFYING is published as of 2026-06-15.
+  // The endurance race classification had not been posted by any source — to be added once available.
+  'gtwcam-2026-road-atlanta': {
+    qualifying: {
+      overall: { driverIds: ['perez-companc', 'schandorff'], teamId: 'af-corse-usa' },
+      classes: [{
+        className: 'Top 3',
+        podium: [
+          { position: 1, driverIds: ['perez-companc', 'schandorff'], teamId: 'af-corse-usa' },
+          { position: 2, driverIds: ['stephens', 'grenier'], teamId: 'jmf-motorsports' },
+          { position: 3, driverIds: ['rothberg', 'foley'], teamId: 'turner-motorsport' },
+        ],
+      }],
+    },
+  },
 }
