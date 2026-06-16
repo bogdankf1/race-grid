@@ -4,9 +4,11 @@ import '~/lib/preload-years'
 import * as Notifications from 'expo-notifications'
 import { Stack, useRouter } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
+import * as ScreenOrientation from 'expo-screen-orientation'
 import { useEffect, useRef } from 'react'
-import { AppState } from 'react-native'
+import { AppState, useWindowDimensions } from 'react-native'
 
+import { isTabletDevice } from '~/lib/responsive'
 import { rescheduleAll, setupNotificationChannel } from '~/lib/notifications'
 import { DataProvider, useData } from '~/state/data'
 import { SettingsProvider, useSettings } from '~/state/settings'
@@ -68,6 +70,19 @@ function NotificationManager() {
   return null
 }
 
+/** Phones stay portrait-locked; tablets (iPad) may rotate freely. */
+function OrientationLock() {
+  const { width, height } = useWindowDimensions()
+  useEffect(() => {
+    if (isTabletDevice(width, height)) {
+      ScreenOrientation.unlockAsync().catch(() => {})
+    } else {
+      ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP).catch(() => {})
+    }
+  }, [width, height])
+  return null
+}
+
 function ThemedNavigator() {
   const { theme, c } = useTheme()
   const { hydrated } = useSettings()
@@ -95,6 +110,7 @@ export default function RootLayout() {
     <SettingsProvider>
       <ThemeProvider>
         <DataProvider>
+          <OrientationLock />
           <ThemedNavigator />
         </DataProvider>
       </ThemeProvider>
