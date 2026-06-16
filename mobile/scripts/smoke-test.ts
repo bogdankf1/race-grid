@@ -2,6 +2,7 @@
 // the real bundled season data. Exercises the pure layer only: agenda
 // grouping, overlay merging, results precedence, notification planning.
 
+import { gridColumns, isTabletDevice, isTabletWidth } from '../src/lib/responsive'
 import { buildAgenda, eventStatus, weekKeyOf } from '../src/lib/agenda'
 import { buildMonthIndex, monthCells, shiftMonth } from '../src/lib/month'
 import {
@@ -190,6 +191,29 @@ ok('planNotifications matches web wording and respects lead/limit/TBA', () => {
   // Disabled prefs or unfollowed series produce nothing.
   assert.equal(planNotifications(seriesList, ['f1'], { ...prefs, enabled: false }, NOW).length, 0)
   assert.equal(planNotifications(seriesList, [], prefs, NOW).length, 0)
+})
+
+// ───────── responsive ─────────
+ok('isTabletWidth: phones below 768 are not tablet', () => {
+  assert.equal(isTabletWidth(390), false)
+  assert.equal(isTabletWidth(767), false)
+  assert.equal(isTabletWidth(768), true)
+  assert.equal(isTabletWidth(1024), true)
+})
+
+ok('gridColumns: 1 phone / 2 portrait tablet / 3 wide', () => {
+  assert.equal(gridColumns(390), 1)
+  assert.equal(gridColumns(768), 2)
+  assert.equal(gridColumns(900), 2)
+  assert.equal(gridColumns(1024), 3)
+  assert.equal(gridColumns(1366), 3)
+})
+
+ok('isTabletDevice: uses the smaller dimension, so landscape phones stay phones', () => {
+  assert.equal(isTabletDevice(932, 430), false) // iPhone Pro Max landscape
+  assert.equal(isTabletDevice(430, 932), false) // iPhone Pro Max portrait
+  assert.equal(isTabletDevice(820, 1180), true) // iPad 10.9 portrait
+  assert.equal(isTabletDevice(1180, 820), true) // iPad 10.9 landscape
 })
 
 console.log(`\nAll ${passed} smoke tests passed.`)
