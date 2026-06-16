@@ -23,9 +23,11 @@ import type { ReactNode } from 'react'
 import { ensureNotificationPermission, type LeadTime } from '~/lib/notifications'
 import { tm } from '~/lib/strings'
 import { SeriesChip } from '~/components/SeriesChip'
+import { SplitView } from '~/components/SplitView'
 import { useData } from '~/state/data'
 import { ALL_SESSION_TYPES, useSettings } from '~/state/settings'
 import { useTheme } from '~/state/theme'
+import { useIsTablet } from '~/lib/use-is-tablet'
 
 const SUPPORT_LINKS = [
   { key: 'support.ukraine.label', method: 'support.ukraine.method', url: 'https://send.monobank.ua/jar/EHzLuicin' },
@@ -194,206 +196,263 @@ export default function SettingsScreen() {
     settings.setNotifyPrefs({ ...settings.notifyPrefs, seriesIds: ids })
   }
 
-  return (
-    <SafeAreaView edges={['top']} className="flex-1 bg-rg-bg">
-      <ScrollView contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 32 }}>
-        <Text className="pb-3 pt-3 text-xl font-extrabold tracking-widest text-rg-text">
-          {t('settings.title', locale)}
-        </Text>
+  const isTablet = useIsTablet()
+  const [activeSection, setActiveSection] = useState('display')
 
-        <Section title={t('settings.theme', locale)}>
-          <Row label={t('settings.theme', locale)}>
-            <Segmented
-              options={[
-                { value: 'dark', label: t('settings.dark', locale) },
-                { value: 'light', label: t('settings.light', locale) },
-              ]}
-              value={settings.theme}
-              onChange={settings.setTheme}
-            />
-          </Row>
-          <Row label={t('settings.language', locale)}>
-            <Segmented
-              options={[
-                { value: 'en', label: 'EN' },
-                { value: 'uk', label: 'UA' },
-              ]}
-              value={settings.locale}
-              onChange={settings.setLocale}
-            />
-          </Row>
-          <Row label={t('settings.timezone', locale)}>
+  const sections: Array<{ id: string; label: string; render: () => ReactNode }> = [
+    { id: 'display', label: t('settings.theme', locale), render: () => (
+      <Section title={t('settings.theme', locale)}>
+        <Row label={t('settings.theme', locale)}>
+          <Segmented
+            options={[
+              { value: 'dark', label: t('settings.dark', locale) },
+              { value: 'light', label: t('settings.light', locale) },
+            ]}
+            value={settings.theme}
+            onChange={settings.setTheme}
+          />
+        </Row>
+        <Row label={t('settings.language', locale)}>
+          <Segmented
+            options={[
+              { value: 'en', label: 'EN' },
+              { value: 'uk', label: 'UA' },
+            ]}
+            value={settings.locale}
+            onChange={settings.setLocale}
+          />
+        </Row>
+        <Row label={t('settings.timezone', locale)}>
+          <Pressable
+            onPress={() => setTzPickerOpen(true)}
+            accessibilityRole="button"
+            className="rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
+          >
+            <Text className="text-xs font-semibold text-rg-text2">
+              {getTimezoneLabel(settings.timezone)}
+            </Text>
+          </Pressable>
+        </Row>
+      </Section>
+    ) },
+    { id: 'spoiler', label: t('spoiler.title', locale), render: () => (
+      <Section title={t('spoiler.title', locale)}>
+        <Row label={t('spoiler.title', locale)} hint={tm('settings.spoilerHint', locale)}>
+          <Switch
+            value={settings.spoilerFree}
+            onValueChange={settings.setSpoilerFree}
+            trackColor={{ true: c('success'), false: c('border') }}
+            thumbColor="#fff"
+          />
+        </Row>
+      </Section>
+    ) },
+    { id: 'sessions', label: t('settings.sessions', locale), render: () => (
+      <Section title={t('settings.sessions', locale)}>
+        <View className="py-3">
+          <View className="mb-2 flex-row items-center justify-between">
+            <Text className="text-sm text-rg-text">
+              {settings.visibleSessionTypes.length === ALL_SESSION_TYPES.length
+                ? t('filter.all', locale)
+                : `${settings.visibleSessionTypes.length}/${ALL_SESSION_TYPES.length}`}
+            </Text>
             <Pressable
-              onPress={() => setTzPickerOpen(true)}
+              onPress={() => settings.setVisibleSessionTypes(ALL_SESSION_TYPES)}
               accessibilityRole="button"
               className="rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
             >
               <Text className="text-xs font-semibold text-rg-text2">
-                {getTimezoneLabel(settings.timezone)}
+                {t('filter.selectAll', locale)}
               </Text>
             </Pressable>
-          </Row>
-        </Section>
-
-        <Section title={t('spoiler.title', locale)}>
-          <Row label={t('spoiler.title', locale)} hint={tm('settings.spoilerHint', locale)}>
-            <Switch
-              value={settings.spoilerFree}
-              onValueChange={settings.setSpoilerFree}
-              trackColor={{ true: c('success'), false: c('border') }}
-              thumbColor="#fff"
-            />
-          </Row>
-        </Section>
-
-        <Section title={t('settings.sessions', locale)}>
-          <View className="py-3">
-            <View className="mb-2 flex-row items-center justify-between">
-              <Text className="text-sm text-rg-text">
-                {settings.visibleSessionTypes.length === ALL_SESSION_TYPES.length
-                  ? t('filter.all', locale)
-                  : `${settings.visibleSessionTypes.length}/${ALL_SESSION_TYPES.length}`}
-              </Text>
-              <Pressable
-                onPress={() => settings.setVisibleSessionTypes(ALL_SESSION_TYPES)}
-                accessibilityRole="button"
-                className="rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
-              >
-                <Text className="text-xs font-semibold text-rg-text2">
-                  {t('filter.selectAll', locale)}
-                </Text>
-              </Pressable>
-            </View>
-            <View className="flex-row flex-wrap gap-2">
-              {ALL_SESSION_TYPES.map((type) => {
-                const active = settings.visibleSessionTypes.includes(type)
-                return (
-                  <Pressable
-                    key={type}
-                    onPress={() => settings.toggleSessionType(type)}
-                    accessibilityRole="checkbox"
-                    accessibilityState={{ checked: active }}
+          </View>
+          <View className="flex-row flex-wrap gap-2">
+            {ALL_SESSION_TYPES.map((type) => {
+              const active = settings.visibleSessionTypes.includes(type)
+              return (
+                <Pressable
+                  key={type}
+                  onPress={() => settings.toggleSessionType(type)}
+                  accessibilityRole="checkbox"
+                  accessibilityState={{ checked: active }}
+                  className={
+                    active
+                      ? 'flex-row items-center gap-1 rounded-lg bg-rg-elevated border border-rg-border px-2.5 py-1.5'
+                      : 'flex-row items-center gap-1 rounded-lg border border-rg-border px-2.5 py-1.5'
+                  }
+                  style={{ opacity: active ? 1 : 0.55 }}
+                >
+                  {active && <Check size={11} color={c('success')} />}
+                  <Text
                     className={
                       active
-                        ? 'flex-row items-center gap-1 rounded-lg bg-rg-elevated border border-rg-border px-2.5 py-1.5'
-                        : 'flex-row items-center gap-1 rounded-lg border border-rg-border px-2.5 py-1.5'
+                        ? 'text-xs font-semibold text-rg-text'
+                        : 'text-xs font-semibold text-rg-text3'
                     }
-                    style={{ opacity: active ? 1 : 0.55 }}
                   >
-                    {active && <Check size={11} color={c('success')} />}
-                    <Text
-                      className={
-                        active
-                          ? 'text-xs font-semibold text-rg-text'
-                          : 'text-xs font-semibold text-rg-text3'
-                      }
-                    >
-                      {t(`session.${type}`, locale)}
-                    </Text>
-                  </Pressable>
-                )
-              })}
-            </View>
+                    {t(`session.${type}`, locale)}
+                  </Text>
+                </Pressable>
+              )
+            })}
           </View>
-        </Section>
-
-        <Section title={t('notify.title', locale)}>
-          <Row label={t('notify.enable', locale)} hint={tm('settings.notifyHint', locale)}>
-            <Switch
-              value={settings.notifyPrefs.enabled}
-              onValueChange={(v) => {
-                toggleNotifications(v).catch(() => {})
-              }}
-              trackColor={{ true: c('success'), false: c('border') }}
-              thumbColor="#fff"
-            />
-          </Row>
-          {permissionDenied && (
-            <Text className="pb-2 text-xs text-rg-text3">{tm('notify.deniedOs', locale)}</Text>
-          )}
-          {settings.notifyPrefs.enabled && (
-            <>
-              <Row label={`${t('notify.lead', locale)} ${t('notify.before', locale)}`}>
-                <Segmented<LeadTime>
-                  options={[
-                    { value: 15, label: t('notify.15', locale) },
-                    { value: 30, label: t('notify.30', locale) },
-                    { value: 60, label: t('notify.60', locale) },
-                  ]}
-                  value={settings.notifyPrefs.leadMinutes}
-                  onChange={(leadMinutes) =>
-                    settings.setNotifyPrefs({ ...settings.notifyPrefs, leadMinutes })
-                  }
-                />
-              </Row>
-              <View className="py-3">
-                <Text className="mb-2 text-sm text-rg-text">{t('notify.series', locale)}</Text>
-                <View className="flex-row flex-wrap gap-2">
-                  {followedSeries.map((s) => (
-                    <SeriesChip
-                      key={s.id}
-                      shortName={s.shortName}
-                      color={s.color}
-                      textColor={s.textColor}
-                      active={settings.notifyPrefs.seriesIds.includes(s.id)}
-                      onPress={() => toggleNotifySeries(s.id)}
-                    />
-                  ))}
-                </View>
+        </View>
+      </Section>
+    ) },
+    { id: 'notifications', label: t('notify.title', locale), render: () => (
+      <Section title={t('notify.title', locale)}>
+        <Row label={t('notify.enable', locale)} hint={tm('settings.notifyHint', locale)}>
+          <Switch
+            value={settings.notifyPrefs.enabled}
+            onValueChange={(v) => {
+              toggleNotifications(v).catch(() => {})
+            }}
+            trackColor={{ true: c('success'), false: c('border') }}
+            thumbColor="#fff"
+          />
+        </Row>
+        {permissionDenied && (
+          <Text className="pb-2 text-xs text-rg-text3">{tm('notify.deniedOs', locale)}</Text>
+        )}
+        {settings.notifyPrefs.enabled && (
+          <>
+            <Row label={`${t('notify.lead', locale)} ${t('notify.before', locale)}`}>
+              <Segmented<LeadTime>
+                options={[
+                  { value: 15, label: t('notify.15', locale) },
+                  { value: 30, label: t('notify.30', locale) },
+                  { value: 60, label: t('notify.60', locale) },
+                ]}
+                value={settings.notifyPrefs.leadMinutes}
+                onChange={(leadMinutes) =>
+                  settings.setNotifyPrefs({ ...settings.notifyPrefs, leadMinutes })
+                }
+              />
+            </Row>
+            <View className="py-3">
+              <Text className="mb-2 text-sm text-rg-text">{t('notify.series', locale)}</Text>
+              <View className="flex-row flex-wrap gap-2">
+                {followedSeries.map((s) => (
+                  <SeriesChip
+                    key={s.id}
+                    shortName={s.shortName}
+                    color={s.color}
+                    textColor={s.textColor}
+                    active={settings.notifyPrefs.seriesIds.includes(s.id)}
+                    onPress={() => toggleNotifySeries(s.id)}
+                  />
+                ))}
               </View>
-            </>
-          )}
-        </Section>
-
-        <Section title={tm('settings.dataSync', locale)}>
-          <Row
-            label={tm('settings.lastSync', locale)}
-            hint={
-              lastSync
-                ? new Date(lastSync).toLocaleString(locale === 'uk' ? 'uk-UA' : 'en-US')
-                : tm('settings.never', locale)
-            }
+            </View>
+          </>
+        )}
+      </Section>
+    ) },
+    { id: 'data', label: tm('settings.dataSync', locale), render: () => (
+      <Section title={tm('settings.dataSync', locale)}>
+        <Row
+          label={tm('settings.lastSync', locale)}
+          hint={
+            lastSync
+              ? new Date(lastSync).toLocaleString(locale === 'uk' ? 'uk-UA' : 'en-US')
+              : tm('settings.never', locale)
+          }
+        >
+          <Pressable
+            onPress={() => {
+              refresh().catch(() => {})
+            }}
+            disabled={refreshing}
+            accessibilityRole="button"
+            className="rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
+            style={{ opacity: refreshing ? 0.5 : 1 }}
           >
+            <Text className="text-xs font-semibold text-rg-text2">
+              {tm('settings.refreshNow', locale)}
+            </Text>
+          </Pressable>
+        </Row>
+      </Section>
+    ) },
+    { id: 'support', label: t('footer.support', locale), render: () => (
+      <Section title={t('footer.support', locale)}>
+        {SUPPORT_LINKS.map((link) => (
+          <Row key={link.key} label={t(link.key, locale)} hint={t(link.method, locale)}>
             <Pressable
               onPress={() => {
-                refresh().catch(() => {})
+                Linking.openURL(link.url).catch(() => {})
               }}
-              disabled={refreshing}
-              accessibilityRole="button"
-              className="rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
-              style={{ opacity: refreshing ? 0.5 : 1 }}
+              accessibilityRole="link"
+              className="flex-row items-center gap-1.5 rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
             >
+              <Heart size={12} color="#e25555" />
               <Text className="text-xs font-semibold text-rg-text2">
-                {tm('settings.refreshNow', locale)}
+                {t('footer.support', locale)}
               </Text>
             </Pressable>
           </Row>
-        </Section>
+        ))}
+        <View className="flex-row items-center justify-center gap-1.5 py-3">
+          <Text className="text-xs text-rg-text3">{t('footer.madeWith', locale)}</Text>
+          <Heart size={11} color="#e25555" />
+          <Text className="text-xs text-rg-text3">{t('footer.forFans', locale)}</Text>
+        </View>
+      </Section>
+    ) },
+  ]
 
-        <Section title={t('footer.support', locale)}>
-          {SUPPORT_LINKS.map((link) => (
-            <Row key={link.key} label={t(link.key, locale)} hint={t(link.method, locale)}>
-              <Pressable
-                onPress={() => {
-                  Linking.openURL(link.url).catch(() => {})
-                }}
-                accessibilityRole="link"
-                className="flex-row items-center gap-1.5 rounded-lg border border-rg-border bg-rg-btn-bg px-3 py-1.5"
-              >
-                <Heart size={12} color="#e25555" />
-                <Text className="text-xs font-semibold text-rg-text2">
-                  {t('footer.support', locale)}
-                </Text>
-              </Pressable>
-            </Row>
+  return (
+    <SafeAreaView edges={['top']} className="flex-1 bg-rg-bg">
+      {isTablet ? (
+        <>
+          <Text className="px-4 pb-3 pt-3 text-xl font-extrabold tracking-widest text-rg-text">
+            {t('settings.title', locale)}
+          </Text>
+          <SplitView
+            railWidth={260}
+            left={
+              <ScrollView contentContainerStyle={{ padding: 12 }}>
+                {sections.map((s) => (
+                  <Pressable
+                    key={s.id}
+                    onPress={() => setActiveSection(s.id)}
+                    accessibilityRole="button"
+                    className={
+                      activeSection === s.id
+                        ? 'mb-1 rounded-xl bg-rg-elevated px-3 py-2.5'
+                        : 'mb-1 rounded-xl px-3 py-2.5'
+                    }
+                  >
+                    <Text
+                      className={
+                        activeSection === s.id
+                          ? 'text-sm font-bold text-rg-text'
+                          : 'text-sm font-semibold text-rg-text3'
+                      }
+                    >
+                      {s.label}
+                    </Text>
+                  </Pressable>
+                ))}
+              </ScrollView>
+            }
+            right={
+              <ScrollView key={activeSection} contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 32, paddingTop: 8 }}>
+                {sections.find((s) => s.id === activeSection)?.render()}
+              </ScrollView>
+            }
+          />
+        </>
+      ) : (
+        <ScrollView contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 32 }}>
+          <Text className="pb-3 pt-3 text-xl font-extrabold tracking-widest text-rg-text">
+            {t('settings.title', locale)}
+          </Text>
+          {sections.map((s) => (
+            <View key={s.id}>{s.render()}</View>
           ))}
-          <View className="flex-row items-center justify-center gap-1.5 py-3">
-            <Text className="text-xs text-rg-text3">{t('footer.madeWith', locale)}</Text>
-            <Heart size={11} color="#e25555" />
-            <Text className="text-xs text-rg-text3">{t('footer.forFans', locale)}</Text>
-          </View>
-        </Section>
-      </ScrollView>
+        </ScrollView>
+      )}
 
       <TimezonePicker
         visible={tzPickerOpen}
