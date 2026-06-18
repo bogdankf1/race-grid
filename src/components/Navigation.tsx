@@ -13,7 +13,7 @@ interface NavItem {
   match: (path: string) => boolean
 }
 
-const NAV_ITEMS: NavItem[] = [
+export const NAV_ITEMS: NavItem[] = [
   {
     href: '/',
     labelKey: 'nav.calendar',
@@ -57,6 +57,7 @@ export function DesktopNav({ locale }: { locale: Locale }) {
           <Link
             key={item.href}
             href={item.href}
+            className={`rg-nav-link${active ? ' is-active' : ''}`}
             style={{
               padding: '6px 14px',
               borderRadius: 8,
@@ -106,6 +107,7 @@ export function BottomNav({ locale }: { locale: Locale }) {
             <Link
               key={item.href}
               href={item.href}
+              className={`rg-tab-link${active ? ' is-active' : ''}`}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
