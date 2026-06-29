@@ -52,6 +52,21 @@ export function Footer({ locale }: FooterProps) {
         {t('footer.support', locale)}
       </button>
       <SupportModal open={supportOpen} onClose={() => setSupportOpen(false)} locale={locale} />
+      <a
+        href="https://built-by-bohdan.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: 'var(--rg-text3)',
+          fontSize: 12,
+          textDecoration: 'none',
+          transition: 'color 0.15s',
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--rg-link)')}
+        onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--rg-text3)')}
+      >
+        Built by Bohdan
+      </a>
     </footer>
   )
 }
