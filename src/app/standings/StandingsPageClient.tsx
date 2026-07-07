@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { Search, Trophy, Users, ChevronDown } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { useSelectedSeries } from '@/hooks/useSelectedSeries'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
@@ -13,6 +14,7 @@ import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
 import type { SessionType } from '@/lib/types'
 import { Header } from '@/components/Header'
+import { ClassTabs } from '@/components/ClassTabs'
 import { YearSelector } from '@/components/YearSelector'
 import { Footer } from '@/components/Footer'
 import type { ClassStandings, DriverStandingEntry, TeamStandingEntry } from '@/data/standings/types'
@@ -22,10 +24,7 @@ const ALL_SESSION_TYPES: SessionType[] = [
   'practice', 'warmup', 'stage', 'shakedown', 'endurance',
 ]
 
-function countryFlag(countryCode: string): string {
-  if (!countryCode) return ''
-  return countryCode.toUpperCase().split('').map(c => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65)).join('')
-}
+import { countryFlag } from '@/lib/format'
 
 const POSITION_STYLE: Record<number, string> = { 1: '#FFD700', 2: '#C0C0C0', 3: '#CD7F32' }
 
@@ -35,7 +34,7 @@ export function StandingsPageClient() {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useSelectedSeries()
   const [seriesId, setSeriesId] = useLocalStorage<string>('race-grid:standings-series', 'f1')
   const [year, setYear] = useLocalStorage<number>('race-grid:standings-year', 2025)
   const [query, setQuery] = useState('')
@@ -182,45 +181,7 @@ export function StandingsPageClient() {
 
         {standings ? (
           <>
-            {allClasses.length > 1 && (
-              <div
-                className="rg-series-tabs"
-                style={{
-                  display: 'flex', gap: 2, background: 'var(--rg-btn-bg)',
-                  borderRadius: 10, padding: 2, marginBottom: 12,
-                  width: 'fit-content', maxWidth: '100%', flexWrap: 'wrap',
-                }}
-              >
-                {allClasses.map((cls, idx) => (
-                  <button
-                    key={cls.className}
-                    onClick={() => setActiveClassIdx(idx)}
-                    className="rg-series-tab"
-                    style={{
-                      padding: '6px 14px', borderRadius: 8, fontSize: 12, fontWeight: 700,
-                      letterSpacing: 0.5, textTransform: 'uppercase',
-                      background: idx === activeClassIdx ? 'var(--rg-elevated)' : 'transparent',
-                      border: idx === activeClassIdx ? '1px solid var(--rg-border)' : '1px solid transparent',
-                      color: idx === activeClassIdx ? 'var(--rg-text)' : 'var(--rg-text3)',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {cls.className}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {allClasses.length === 1 && allClasses[0].className && allClasses[0].className !== 'Overall' && (
-              <div style={{ marginBottom: 12 }}>
-                <span style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase',
-                  color: 'var(--rg-text3)',
-                }}>
-                  {allClasses[0].className}
-                </span>
-              </div>
-            )}
+            <ClassTabs classes={allClasses} activeIdx={activeClassIdx} onSelect={setActiveClassIdx} singleLabelMarginBottom={12} />
 
             {/* Tabs: Drivers / Constructors — hide tab bar if no constructors */}
             {(activeClass?.constructors.length ?? 0) > 0 ? (

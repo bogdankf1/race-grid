@@ -2,25 +2,30 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import { MapPin, Search, Calendar, Users, Flag, ExternalLink } from 'lucide-react'
+import { Search, ExternalLink } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { useSelectedSeries } from '@/hooks/useSelectedSeries'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { AVAILABLE_YEARS, getFamilyForSeries, getFamilyMembers, getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
+import { AVAILABLE_YEARS, getFamilyForSeries, getFamilyMembers, getSeriesMeta } from '@/data/series-registry'
 import { useYearData } from '@/hooks/useYearData'
 import { getCircuit } from '@/data/circuits'
-import { getResult } from '@/data/results'
 import { getEntries } from '@/data/entries'
 import { getStandings, getAllClassStandings } from '@/data/standings'
 import type { ClassStandings } from '@/data/standings/types'
-import { getDriver } from '@/data/drivers'
 import { getTeam } from '@/data/teams'
-import type { SeriesConfig, RaceEvent, SessionType } from '@/lib/types'
+import type { SessionType } from '@/lib/types'
+import { getTotalRounds } from '@/lib/format'
 import { SeriesLogo } from '@/components/SeriesLogo'
 import { YearSelector } from '@/components/YearSelector'
 import { Header } from '@/components/Header'
+import { SeriesTabBar } from './SeriesTabBar'
+import { SeriesCalendarTab } from './SeriesCalendarTab'
+import { SeriesCircuitsTab } from './SeriesCircuitsTab'
+import { SeriesDriversTab } from './SeriesDriversTab'
+import { SeriesTeamsTab } from './SeriesTeamsTab'
 
 const ALL_SESSION_TYPES: SessionType[] = [
   'race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole',
@@ -28,18 +33,13 @@ const ALL_SESSION_TYPES: SessionType[] = [
 ]
 import { Footer } from '@/components/Footer'
 
-function countryFlag(countryCode: string): string {
-  if (!countryCode) return ''
-  return countryCode.toUpperCase().split('').map(c => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65)).join('')
-}
-
 export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
   const [timezone, setTimezone] = useLocalStorage<string>('race-grid:timezone', getDefaultTimezone())
   const [theme, setTheme] = useLocalStorage<Theme>('race-grid:theme', getDefaultTheme())
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useSelectedSeries()
   const [year, setYear] = useLocalStorage<number>('race-grid:series-detail-year', AVAILABLE_YEARS[0])
 
   useEffect(() => { applyTheme(theme) }, [theme])
@@ -54,7 +54,7 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
   const familySiblings = family
     ? getFamilyMembers(family.id).filter(m => m.id !== seriesId)
     : []
-  const totalRounds = series ? Math.max(series.events.length, ...series.events.map(e => e.round ?? 0)) : 0
+  const totalRounds = series ? getTotalRounds(series) : 0
   const now = Date.now()
   const completedRounds = series ? series.events.filter(event => {
     const last = event.sessions[event.sessions.length - 1]
@@ -254,225 +254,35 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
 
         {/* Tab bar */}
         {series && (
-          <div className="rg-series-tabs" style={{ display: 'flex', gap: 2, background: 'var(--rg-btn-bg)', borderRadius: 10, padding: 2, marginBottom: 20, width: 'fit-content', maxWidth: '100%' }}>
-            {([
-              { key: 'calendar' as const, icon: Calendar, label: t('nav.calendar', locale), count: series.events.length },
-              { key: 'circuits' as const, icon: MapPin, label: t('nav.circuits', locale), count: circuits.length },
-              { key: 'drivers' as const, icon: Users, label: 'Drivers', count: entries.length },
-              { key: 'teams' as const, icon: Flag, label: 'Teams', count: teams.length },
-            ] as const).filter(t => t.count > 0).map(item => (
-              <button
-                key={item.key}
-                onClick={() => setTab(item.key)}
-                className="rg-series-tab"
-                style={{
-                  padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600,
-                  background: tab === item.key ? 'var(--rg-elevated)' : 'transparent',
-                  border: tab === item.key ? '1px solid var(--rg-border)' : '1px solid transparent',
-                  color: tab === item.key ? 'var(--rg-text)' : 'var(--rg-text3)',
-                  cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, whiteSpace: 'nowrap', flexShrink: 0,
-                }}
-              >
-                <item.icon style={{ width: 14, height: 14 }} />
-                <span className="rg-series-tab-label">{item.label}</span>
-                <span className="rg-series-tab-label" style={{ fontSize: 11, color: 'var(--rg-text3)' }}>({item.count})</span>
-              </button>
-            ))}
-          </div>
+          <SeriesTabBar
+            activeTab={tab}
+            onSelect={setTab}
+            locale={locale}
+            eventCount={series.events.length}
+            circuitCount={circuits.length}
+            driverCount={entries.length}
+            teamCount={teams.length}
+          />
         )}
 
         {/* Calendar tab */}
-        {tab === 'calendar' && series && series.events.length > 0 && (() => {
-          const q = query.toLowerCase().trim()
-          const filteredEvents = q
-            ? series.events.filter(event => {
-                const circuit = getCircuit(event.circuitId)
-                return event.name.toLowerCase().includes(q) ||
-                  (circuit?.name.toLowerCase().includes(q)) ||
-                  (circuit?.country.toLowerCase().includes(q))
-              })
-            : series.events
-          return (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-              {filteredEvents.map(event => (
-                <EventRow key={event.id} event={event} series={series} spoilerFree={spoilerFree} locale={locale} />
-              ))}
-              {filteredEvents.length === 0 && (
-                <p style={{ color: 'var(--rg-text3)', textAlign: 'center', padding: '16px 0' }}>
-                  {t('search.noResults', locale)}
-                </p>
-              )}
-            </div>
-          )
-        })()}
+        {tab === 'calendar' && series && series.events.length > 0 && (
+          <SeriesCalendarTab series={series} query={query} spoilerFree={spoilerFree} locale={locale} />
+        )}
 
         {/* Circuits tab */}
         {tab === 'circuits' && circuits.length > 0 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {circuits.map(circuit => (
-              <Link
-                key={circuit.id}
-                href={`/circuits/${circuit.id}`}
-                style={{
-                  display: 'flex', alignItems: 'center', gap: 12, padding: '10px 16px',
-                  borderRadius: 10, background: 'var(--rg-surface)', border: '1px solid var(--rg-card-border)',
-                  textDecoration: 'none', color: 'inherit',
-                }}
-              >
-                <MapPin style={{ width: 14, height: 14, color: 'var(--rg-text3)', flexShrink: 0 }} />
-                <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--rg-text)', flex: 1 }}>{circuit.name}</span>
-                {circuit.countryCode && (
-                  <span style={{ fontSize: 13, color: 'var(--rg-text3)' }}>{countryFlag(circuit.countryCode)} {circuit.country}</span>
-                )}
-              </Link>
-            ))}
-          </div>
+          <SeriesCircuitsTab circuits={circuits} />
         )}
 
         {/* Drivers tab */}
         {tab === 'drivers' && entries.length > 0 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {allClasses.length > 1 && (
-              <div
-                className="rg-series-tabs"
-                style={{
-                  display: 'flex', gap: 2, background: 'var(--rg-btn-bg)',
-                  borderRadius: 10, padding: 2, marginBottom: 12,
-                  width: 'fit-content', maxWidth: '100%', flexWrap: 'wrap',
-                }}
-              >
-                {allClasses.map((cls, idx) => (
-                  <button
-                    key={cls.className}
-                    onClick={() => setActiveClassIdx(idx)}
-                    className="rg-series-tab"
-                    style={{
-                      padding: '6px 14px', borderRadius: 8, fontSize: 12, fontWeight: 700,
-                      letterSpacing: 0.5, textTransform: 'uppercase',
-                      background: idx === activeClassIdx ? 'var(--rg-elevated)' : 'transparent',
-                      border: idx === activeClassIdx ? '1px solid var(--rg-border)' : '1px solid transparent',
-                      color: idx === activeClassIdx ? 'var(--rg-text)' : 'var(--rg-text3)',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {cls.className}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {allClasses.length === 1 && allClasses[0].className && allClasses[0].className !== 'Overall' && (
-              <div style={{ marginBottom: 8 }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--rg-text3)' }}>
-                  {allClasses[0].className}
-                </span>
-              </div>
-            )}
-            {entries.map(entry => {
-              const driver = getDriver(entry.driverId)
-              const team = getTeam(entry.teamId)
-              if (!driver) return null
-              return (
-                <div
-                  key={entry.driverId}
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: 12, padding: '8px 16px',
-                    borderRadius: 8, background: 'var(--rg-surface)', border: '1px solid var(--rg-card-border)',
-                  }}
-                >
-                  {driver.nationality && (
-                    <span style={{ fontSize: 14, flexShrink: 0 }}>{countryFlag(driver.nationality)}</span>
-                  )}
-                  <Link href={`/drivers/${entry.driverId}`} style={{ fontSize: 14, fontWeight: 500, color: 'var(--rg-text)', flex: 1, textDecoration: 'none' }}>
-                    {driver.name}
-                  </Link>
-                  {entry.carNumber && (
-                    <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--rg-text3)', padding: '2px 6px', borderRadius: 4, background: 'var(--rg-elevated)' }}>
-                      #{entry.carNumber}
-                    </span>
-                  )}
-                  {team && (
-                    <Link href={`/teams/${entry.teamId}`} style={{ fontSize: 13, color: 'var(--rg-text3)', textAlign: 'right', textDecoration: 'none' }}>
-                      {team.name}
-                    </Link>
-                  )}
-                </div>
-              )
-            })}
-          </div>
+          <SeriesDriversTab entries={entries} allClasses={allClasses} activeClassIdx={activeClassIdx} onSelectClass={setActiveClassIdx} />
         )}
 
         {/* Teams tab */}
         {tab === 'teams' && teams.length > 0 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {allClasses.length > 1 && (
-              <div
-                className="rg-series-tabs"
-                style={{
-                  display: 'flex', gap: 2, background: 'var(--rg-btn-bg)',
-                  borderRadius: 10, padding: 2, marginBottom: 12,
-                  width: 'fit-content', maxWidth: '100%', flexWrap: 'wrap',
-                }}
-              >
-                {allClasses.map((cls, idx) => (
-                  <button
-                    key={cls.className}
-                    onClick={() => setActiveClassIdx(idx)}
-                    className="rg-series-tab"
-                    style={{
-                      padding: '6px 14px', borderRadius: 8, fontSize: 12, fontWeight: 700,
-                      letterSpacing: 0.5, textTransform: 'uppercase',
-                      background: idx === activeClassIdx ? 'var(--rg-elevated)' : 'transparent',
-                      border: idx === activeClassIdx ? '1px solid var(--rg-border)' : '1px solid transparent',
-                      color: idx === activeClassIdx ? 'var(--rg-text)' : 'var(--rg-text3)',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {cls.className}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {allClasses.length === 1 && allClasses[0].className && allClasses[0].className !== 'Overall' && (
-              <div style={{ marginBottom: 8 }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--rg-text3)' }}>
-                  {allClasses[0].className}
-                </span>
-              </div>
-            )}
-
-            {teams.map(team => {
-              // Find drivers for this team
-              const teamDrivers = entries.filter(e => e.teamId === team.id)
-              return (
-                <Link
-                  key={team.id}
-                  href={`/teams/${team.id}`}
-                  className="rg-team-row"
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: 12, padding: '10px 16px',
-                    borderRadius: 8, background: 'var(--rg-surface)', border: '1px solid var(--rg-card-border)',
-                    textDecoration: 'none', color: 'inherit',
-                  }}
-                >
-                  {team.country && (
-                    <span style={{ fontSize: 14, flexShrink: 0 }}>{countryFlag(team.country)}</span>
-                  )}
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--rg-text)' }}>
-                      {team.name}
-                    </div>
-                    {teamDrivers.length > 0 && (
-                      <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
-                        {teamDrivers.map(e => getDriver(e.driverId)?.shortName).filter(Boolean).join(', ')}
-                      </div>
-                    )}
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
+          <SeriesTeamsTab teams={teams} entries={entries} allClasses={allClasses} activeClassIdx={activeClassIdx} onSelectClass={setActiveClassIdx} />
         )}
 
         {/* No data for this year */}
@@ -485,68 +295,5 @@ export function SeriesDetailClient({ seriesId }: { seriesId: string }) {
 
       <Footer locale={locale} />
     </div>
-  )
-}
-
-function EventRow({ event, series, spoilerFree, locale }: { event: RaceEvent; series: SeriesConfig; spoilerFree: boolean; locale: Locale }) {
-  const circuit = getCircuit(event.circuitId)
-  const now = Date.now()
-  const lastSession = event.sessions[event.sessions.length - 1]
-  const isPast = lastSession ? new Date(lastSession.startUtc).getTime() + (lastSession.durationMinutes || 120) * 60000 <= now : false
-  const isNext = !isPast && event.sessions[0] && new Date(event.sessions[0].startUtc).getTime() > now
-
-  // Find race winner
-  let winnerDisplay: string | undefined
-  if (isPast && !spoilerFree) {
-    for (const type of ['race', 'endurance', 'stage'] as const) {
-      const result = getResult(event.id, type)
-      if (result) {
-        winnerDisplay = `${result.overall.drivers.join(', ')} (${result.overall.team})`
-        break
-      }
-    }
-  }
-
-  const totalRounds = Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))
-  const raceDate = lastSession ? lastSession.startUtc.slice(0, 10) : ''
-
-  return (
-    <Link
-      href={`/day/${raceDate}?event=${event.id}`}
-      style={{
-        display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px',
-        borderRadius: 10, background: 'var(--rg-surface)', border: '1px solid var(--rg-card-border)',
-        textDecoration: 'none', color: 'inherit',
-        borderLeft: isNext ? `3px solid ${series.color}` : undefined,
-      }}
-    >
-      {/* Round chip */}
-      {event.round && (
-        <span style={{
-          fontSize: 11, fontWeight: 600, color: 'var(--rg-text3)',
-          padding: '3px 8px', borderRadius: 6,
-          background: 'var(--rg-elevated)', border: '1px solid var(--rg-border)',
-          whiteSpace: 'nowrap', flexShrink: 0,
-        }}>
-          {t('progress.round', locale)} {event.round}/{totalRounds}
-        </span>
-      )}
-
-      {/* Event name + circuit */}
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--rg-text)' }}>{event.name}</div>
-        {circuit && (
-          <div style={{ fontSize: 12, color: 'var(--rg-text3)', marginTop: 2 }}>
-            {circuit.countryCode ? countryFlag(circuit.countryCode) + ' ' : ''}{circuit.name}
-          </div>
-        )}
-      </div>
-
-      {/* Date */}
-      <span style={{ fontSize: 13, color: 'var(--rg-text3)', flexShrink: 0 }}>
-        {raceDate && new Date(raceDate + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-      </span>
-
-    </Link>
   )
 }

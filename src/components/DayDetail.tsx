@@ -14,6 +14,7 @@ import { getResult } from '@/data/results'
 import { WhereToWatchPopover } from './WhereToWatchPopover'
 import { EyeOff, ChevronDown } from 'lucide-react'
 import { t, type Locale } from '@/lib/i18n'
+import { countryFlag, getTotalRounds } from '@/lib/format'
 
 function SpoilerGuard({ locale, results }: { locale: Locale; results: { session: Session; result: NonNullable<ReturnType<typeof getResult>> }[] }) {
   const [revealed, setRevealed] = useState(false)
@@ -48,11 +49,6 @@ const SESSION_ICONS: Record<SessionType, string> = {
   sprint_qualifying: '\u26A1', hyperpole: '\u{1F3AF}',
   practice: '\u{1F527}', warmup: '\u{1F527}',
   stage: '\u{1F5FA}', shakedown: '\u{1F5FA}', endurance: '\u{1F3C1}',
-}
-
-function countryFlag(countryCode: string): string {
-  return countryCode.toUpperCase().split('')
-    .map(c => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65)).join('')
 }
 
 interface DayEventInfo { series: SeriesConfig; event: RaceEvent; sessions: Session[] }
@@ -100,7 +96,7 @@ function EventCard({ series, event, sessions, now, timezone, locale, spoilerFree
                 padding: '3px 10px', borderRadius: 6,
                 background: 'var(--rg-elevated)', border: '1px solid var(--rg-border)',
               }}>
-                {t('progress.roundFull', locale)} {event.round}/{Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))}
+                {t('progress.roundFull', locale)} {event.round}/{getTotalRounds(series)}
               </span>
             )}
             {collapsed && (

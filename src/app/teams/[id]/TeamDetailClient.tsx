@@ -5,10 +5,11 @@ import Link from 'next/link'
 import { Trophy, Users } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { useSelectedSeries } from '@/hooks/useSelectedSeries'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { AVAILABLE_YEARS, getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
+import { AVAILABLE_YEARS, getSeriesMeta } from '@/data/series-registry'
 import { getTeam } from '@/data/teams'
 import { getDriver } from '@/data/drivers'
 import type { SessionType } from '@/lib/types'
@@ -23,10 +24,7 @@ const ALL_SESSION_TYPES: SessionType[] = [
 ]
 import { Footer } from '@/components/Footer'
 
-function countryFlag(countryCode: string): string {
-  if (!countryCode) return ''
-  return countryCode.toUpperCase().split('').map(c => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65)).join('')
-}
+import { countryFlag } from '@/lib/format'
 
 function countryName(code: string): string {
   if (!code) return ''
@@ -39,7 +37,7 @@ export function TeamDetailClient({ teamId }: { teamId: string }) {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useSelectedSeries()
   const [tab, setTab] = useState<'drivers' | 'results'>('drivers')
 
   useEffect(() => { applyTheme(theme) }, [theme])

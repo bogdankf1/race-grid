@@ -5,13 +5,14 @@ import Link from 'next/link'
 import { MapPin, Gauge, RotateCcw, ExternalLink } from 'lucide-react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { useSelectedSeries } from '@/hooks/useSelectedSeries'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, type Locale, t } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import type { SessionType } from '@/lib/types'
 import { getCircuitWithEvents, type CircuitEventInfo } from '@/data/circuit-events'
 import { getCircuitTypeLabel } from '@/data/circuits'
-import { getSeriesMeta, getVisibleSeries } from '@/data/series-registry'
+import { getSeriesMeta } from '@/data/series-registry'
 import { Header } from '@/components/Header'
 import { YearSelector } from '@/components/YearSelector'
 
@@ -21,11 +22,7 @@ const ALL_SESSION_TYPES: SessionType[] = [
 ]
 import { Footer } from '@/components/Footer'
 
-function countryFlag(countryCode: string): string {
-  if (!countryCode) return ''
-  return countryCode.toUpperCase().split('')
-    .map(c => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65)).join('')
-}
+import { countryFlag } from '@/lib/format'
 
 export function CircuitDetailClient({ slug }: { slug: string }) {
   const [timezone, setTimezone] = useLocalStorage<string>('race-grid:timezone', getDefaultTimezone())
@@ -33,7 +30,7 @@ export function CircuitDetailClient({ slug }: { slug: string }) {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useSelectedSeries()
 
   useEffect(() => { applyTheme(theme) }, [theme])
 

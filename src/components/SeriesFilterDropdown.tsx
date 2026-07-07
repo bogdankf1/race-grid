@@ -6,10 +6,11 @@ import { Filter, ChevronDown, Check } from 'lucide-react'
 import { ALL_SERIES, SERIES_GROUPS, type SeriesGroup } from '@/data/series-registry'
 import { t, type Locale } from '@/lib/i18n'
 import type { SeriesConfig } from '@/lib/types'
+import { getTotalRounds } from '@/lib/format'
 
 function getSeriesProgress(series: SeriesConfig): { completed: number; total: number } {
   const now = Date.now()
-  const total = Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))
+  const total = getTotalRounds(series)
   const completed = series.events.filter(event => {
     const lastSession = event.sessions[event.sessions.length - 1]
     if (!lastSession) return false

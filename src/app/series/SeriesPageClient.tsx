@@ -4,12 +4,14 @@ import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { Calendar, Search } from 'lucide-react'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { useSelectedSeries } from '@/hooks/useSelectedSeries'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { AVAILABLE_YEARS, SERIES_GROUPS, getVisibleSeries } from '@/data/series-registry'
+import { AVAILABLE_YEARS, SERIES_GROUPS } from '@/data/series-registry'
 import { useYearData } from '@/hooks/useYearData'
 import type { SeriesConfig, SessionType } from '@/lib/types'
+import { getTotalRounds } from '@/lib/format'
 import { SeriesLogo } from '@/components/SeriesLogo'
 
 const ALL_SESSION_TYPES: SessionType[] = [
@@ -23,7 +25,7 @@ import { Footer } from '@/components/Footer'
 
 function getSeriesProgress(series: SeriesConfig): { completed: number; total: number } {
   const now = Date.now()
-  const total = Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))
+  const total = getTotalRounds(series)
   const completed = series.events.filter(event => {
     const lastSession = event.sessions[event.sessions.length - 1]
     if (!lastSession) return false
@@ -51,7 +53,7 @@ export function SeriesPageClient() {
   const [locale, setLocale] = useLocalStorage<Locale>('race-grid:locale', getDefaultLocale())
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
-  const [selectedSeries, setSelectedSeries] = useLocalStorage<string[]>('race-grid:series', getVisibleSeries().map(s => s.id))
+  const [selectedSeries, setSelectedSeries] = useSelectedSeries()
   const [year, setYear] = useLocalStorage<number>('race-grid:series-year', AVAILABLE_YEARS[0])
   const filterSeriesIds = selectedSeries
   const [query, setQuery] = useState('')

@@ -1,6 +1,7 @@
 import { getSeriesForYear, AVAILABLE_YEARS, SERIES_META } from './series-registry'
 import { getCircuit, getAllCircuits, type Circuit } from './circuits'
 import { getResult } from './results'
+import { getTotalRounds } from '@/lib/format'
 
 export interface CircuitEventInfo {
   seriesId: string
@@ -28,7 +29,7 @@ function buildCircuitEventsMap(): Map<string, CircuitEventInfo[]> {
 
   for (const year of AVAILABLE_YEARS) {
     for (const series of getSeriesForYear(year)) {
-      const totalRounds = Math.max(series.events.length, ...series.events.map(e => e.round ?? 0))
+      const totalRounds = getTotalRounds(series)
       for (const event of series.events) {
         const circuitId = event.circuitId
         if (!map.has(circuitId)) map.set(circuitId, [])
