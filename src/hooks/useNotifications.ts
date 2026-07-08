@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 import { ALL_SERIES } from '@/data/series-registry'
+import { iterateSessions } from '@/lib/iterate-sessions'
 
 export type LeadTime = 15 | 30 | 60
 
@@ -85,22 +86,18 @@ export function useNotifications() {
     const now = Date.now()
     const sessions: Array<{ key: string; title: string; body: string; triggerAt: number; url: string }> = []
 
-    for (const series of selectedSeries) {
-      for (const event of series.events) {
-        for (const session of event.sessions) {
-          const startMs = new Date(session.startUtc).getTime()
-          const triggerAt = startMs - prefs.leadMinutes * 60 * 1000
-          if (triggerAt <= now) continue
+    for (const { series, event, session } of iterateSessions(selectedSeries)) {
+      const startMs = new Date(session.startUtc).getTime()
+      const triggerAt = startMs - prefs.leadMinutes * 60 * 1000
+      if (triggerAt <= now) continue
 
-          sessions.push({
-            key: `${event.id}-${session.label}-${session.startUtc}`,
-            title: `${series.shortName}: ${session.label}`,
-            body: `${event.name} — starts in ${prefs.leadMinutes} min`,
-            triggerAt,
-            url: `/day/${session.startUtc.slice(0, 10)}`,
-          })
-        }
-      }
+      sessions.push({
+        key: `${event.id}-${session.label}-${session.startUtc}`,
+        title: `${series.shortName}: ${session.label}`,
+        body: `${event.name} — starts in ${prefs.leadMinutes} min`,
+        triggerAt,
+        url: `/day/${session.startUtc.slice(0, 10)}`,
+      })
     }
 
     navigator.serviceWorker.ready.then((reg) => {

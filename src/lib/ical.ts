@@ -1,5 +1,6 @@
 import { RaceEvent, Session } from './types'
 import { getCircuit } from '@/data/circuits'
+import { iterateSessions } from './iterate-sessions'
 
 function formatIcsDate(utcString: string): string {
   const d = new Date(utcString)
@@ -99,12 +100,8 @@ export function generateSeriesIcs(events: RaceEvent[], seriesName: string): stri
 
 export function generateAllSeriesIcs(allSeries: Array<{ name: string; events: RaceEvent[] }>): string {
   const vevents: string[] = []
-  for (const series of allSeries) {
-    for (const event of series.events) {
-      for (let i = 0; i < event.sessions.length; i++) {
-        vevents.push(vevent(event, event.sessions[i], series.name, i))
-      }
-    }
+  for (const { series, event, session, sessionIndex } of iterateSessions(allSeries)) {
+    vevents.push(vevent(event, session, series.name, sessionIndex))
   }
 
   return [

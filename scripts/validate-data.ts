@@ -9,6 +9,7 @@ import { getCircuit } from '@/data/circuits'
 import { getSeriesForYear, AVAILABLE_YEARS, SERIES_META } from '@/data/series-registry'
 import { getEntries } from '@/data/entries'
 import { getStandings } from '@/data/standings'
+import { iterateSessions } from '@/lib/iterate-sessions'
 
 let errors = 0
 let warnings = 0
@@ -110,13 +111,9 @@ for (const [name, ids] of teamsByName) {
 console.log('🔍 Checking session types...')
 const validTypes = new Set(['race', 'qualifying', 'sprint', 'sprint_qualifying', 'hyperpole', 'practice', 'warmup', 'stage', 'shakedown', 'endurance'])
 for (const year of AVAILABLE_YEARS) {
-  for (const series of getSeriesForYear(year)) {
-    for (const event of series.events) {
-      for (const session of event.sessions) {
-        if (!validTypes.has(session.type)) {
-          error(`${series.id}-${year}: event "${event.name}" has invalid session type "${session.type}"`)
-        }
-      }
+  for (const { series, event, session } of iterateSessions(getSeriesForYear(year))) {
+    if (!validTypes.has(session.type)) {
+      error(`${series.id}-${year}: event "${event.name}" has invalid session type "${session.type}"`)
     }
   }
 }
@@ -127,26 +124,22 @@ for (const year of AVAILABLE_YEARS) {
 //    or invalid month/day values).
 console.log('🔍 Checking ISO 8601 validity of startUtc...')
 for (const year of AVAILABLE_YEARS) {
-  for (const series of getSeriesForYear(year)) {
-    for (const event of series.events) {
-      for (const session of event.sessions) {
-        const raw = session.startUtc
-        const parsed = new Date(raw)
-        if (Number.isNaN(parsed.getTime())) {
-          error(`${series.id}-${year}: event "${event.name}" session "${session.label}" has unparseable startUtc "${raw}"`)
-          continue
-        }
-        // Round-trip via toISOString to catch values like "2026-13-40T..." which
-        // Date may silently coerce, or strings whose normalized form differs.
-        const normalized = parsed.toISOString()
-        // Allow both with-ms (".000Z") and without-ms ("Z") forms — strip ms before comparing.
-        const stripMs = (s: string) => s.replace(/\.\d{3}Z$/, 'Z')
-        if (stripMs(normalized) !== stripMs(raw)) {
-          error(
-            `${series.id}-${year}: event "${event.name}" session "${session.label}" startUtc "${raw}" is not canonical ISO 8601 (parsed as ${normalized})`
-          )
-        }
-      }
+  for (const { series, event, session } of iterateSessions(getSeriesForYear(year))) {
+    const raw = session.startUtc
+    const parsed = new Date(raw)
+    if (Number.isNaN(parsed.getTime())) {
+      error(`${series.id}-${year}: event "${event.name}" session "${session.label}" has unparseable startUtc "${raw}"`)
+      continue
+    }
+    // Round-trip via toISOString to catch values like "2026-13-40T..." which
+    // Date may silently coerce, or strings whose normalized form differs.
+    const normalized = parsed.toISOString()
+    // Allow both with-ms (".000Z") and without-ms ("Z") forms — strip ms before comparing.
+    const stripMs = (s: string) => s.replace(/\.\d{3}Z$/, 'Z')
+    if (stripMs(normalized) !== stripMs(raw)) {
+      error(
+        `${series.id}-${year}: event "${event.name}" session "${session.label}" startUtc "${raw}" is not canonical ISO 8601 (parsed as ${normalized})`
+      )
     }
   }
 }
@@ -155,21 +148,17 @@ for (const year of AVAILABLE_YEARS) {
 //    Anything larger is almost certainly a typo or unit confusion.
 console.log('🔍 Checking session durations...')
 for (const year of AVAILABLE_YEARS) {
-  for (const series of getSeriesForYear(year)) {
-    for (const event of series.events) {
-      for (const session of event.sessions) {
-        if (session.durationMinutes === undefined) continue // optional
-        const d = session.durationMinutes
-        if (!Number.isFinite(d) || d <= 0) {
-          error(
-            `${series.id}-${year}: event "${event.name}" session "${session.label}" has non-positive durationMinutes (${d})`
-          )
-        } else if (d > 2880) {
-          error(
-            `${series.id}-${year}: event "${event.name}" session "${session.label}" has durationMinutes ${d} (> 48h, suspicious)`
-          )
-        }
-      }
+  for (const { series, event, session } of iterateSessions(getSeriesForYear(year))) {
+    if (session.durationMinutes === undefined) continue // optional
+    const d = session.durationMinutes
+    if (!Number.isFinite(d) || d <= 0) {
+      error(
+        `${series.id}-${year}: event "${event.name}" session "${session.label}" has non-positive durationMinutes (${d})`
+      )
+    } else if (d > 2880) {
+      error(
+        `${series.id}-${year}: event "${event.name}" session "${session.label}" has durationMinutes ${d} (> 48h, suspicious)`
+      )
     }
   }
 }
