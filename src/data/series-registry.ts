@@ -194,6 +194,16 @@ export const SERIES_GROUPS: SeriesGroup[] = [
 ]
 
 /**
+ * Pre-register a year's event data without a dynamic import. Used by the
+ * mobile app, which bundles all years statically (Metro's lazy dev bundling
+ * cannot resolve the `loadYear` import() for modules outside its root).
+ * No-op when the year is already cached.
+ */
+export function registerYearData(year: number, data: Record<string, RaceEvent[]>): void {
+  if (!yearCache.has(year)) yearCache.set(year, data)
+}
+
+/**
  * Load a historical year's event data into the cache.
  * Returns immediately if already loaded. No-op for 2026.
  */
