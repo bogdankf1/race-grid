@@ -34,7 +34,7 @@ function DayCellImpl({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, 
 
   const inner = (
     <div
-      className="rg-day-cell-inner"
+      className={`rg-day-cell-inner${isToday ? ' is-today' : ''}${isNextRaceDay ? ' is-next' : ''}${isHighlighted ? ' is-highlight' : ''}${!isCurrentMonth ? ' is-out' : ''}${isPast && isCurrentMonth ? ' is-past' : ''}`}
       style={{
         height: '100%',
         padding: 10,
@@ -108,6 +108,7 @@ function DayCellImpl({ date, dayNumber, isCurrentMonth, isToday, isNextRaceDay, 
           {visibleSeries.map(info => (
             <div
               key={info.series.id}
+              className="rg-chip-row"
               style={{
                 display: 'flex',
                 alignItems: 'center',

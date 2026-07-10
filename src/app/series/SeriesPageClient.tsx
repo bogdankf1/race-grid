@@ -22,6 +22,7 @@ import { SeriesFilterDropdown } from '@/components/SeriesFilterDropdown'
 import { YearSelector } from '@/components/YearSelector'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { useUIVersion } from '@/hooks/useUIVersion'
 
 function getSeriesProgress(series: SeriesConfig): { completed: number; total: number } {
   const now = Date.now()
@@ -57,6 +58,7 @@ export function SeriesPageClient() {
   const [year, setYear] = useLocalStorage<number>('race-grid:series-year', AVAILABLE_YEARS[0])
   const filterSeriesIds = selectedSeries
   const [query, setQuery] = useState('')
+  const [uiVersion] = useUIVersion()
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
@@ -105,6 +107,9 @@ export function SeriesPageClient() {
       />
 
       <div className="rg-calendar-wrap">
+        {uiVersion === 'v2' && (
+          <h1 className="font-display v2-page-title">{t('nav.series', locale)}</h1>
+        )}
         {/* Search + series filter */}
         <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 16, flexWrap: 'wrap' }}>
           <div
@@ -146,7 +151,7 @@ export function SeriesPageClient() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           {groupedSeries.map(group => (
             <div key={group.labelKey}>
-              <div style={{
+              <div className="rg-series-group-label" style={{
                 fontSize: 12,
                 fontWeight: 600,
                 textTransform: 'uppercase',
@@ -157,7 +162,7 @@ export function SeriesPageClient() {
               }}>
                 {t(group.labelKey, locale)}
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div className="rg-series-list" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {group.series.map(series => (
                   <SeriesCard key={series.id} series={series} locale={locale} />
                 ))}
@@ -185,6 +190,7 @@ function SeriesCard({ series }: { series: SeriesConfig; locale: Locale }) {
   return (
     <Link
       href={`/series/${series.id}`}
+      className="rg-series-card"
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -200,12 +206,12 @@ function SeriesCard({ series }: { series: SeriesConfig; locale: Locale }) {
       }}
     >
       {/* Logo */}
-      <div style={{ width: 56, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+      <div className="rg-series-card-logo" style={{ width: 56, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
         <SeriesLogo seriesId={series.id} height={28} />
       </div>
 
       {/* Info */}
-      <div style={{ flex: 1, minWidth: 0 }}>
+      <div className="rg-series-card-info" style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontWeight: 600, fontSize: 15, color: 'var(--rg-text)', marginBottom: 4 }}>
           {series.name}
         </div>

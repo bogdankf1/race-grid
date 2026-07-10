@@ -14,6 +14,7 @@ export function Footer({ locale }: FooterProps) {
 
   return (
     <footer
+      className="rg-footer"
       style={{
         padding: '32px 20px 40px',
         textAlign: 'center',
@@ -32,6 +33,7 @@ export function Footer({ locale }: FooterProps) {
       </span>
       <button
         type="button"
+        className="rg-support-btn"
         onClick={() => setSupportOpen(true)}
         style={{
           display: 'inline-flex',

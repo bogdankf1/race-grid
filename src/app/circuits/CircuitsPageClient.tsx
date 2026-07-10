@@ -20,6 +20,7 @@ const ALL_SESSION_TYPES: SessionType[] = [
 ]
 import { SeriesFilterDropdown } from '@/components/SeriesFilterDropdown'
 import { Footer } from '@/components/Footer'
+import { useUIVersion } from '@/hooks/useUIVersion'
 
 import { countryFlag } from '@/lib/format'
 
@@ -39,6 +40,7 @@ export function CircuitsPageClient() {
   const [query, setQuery] = useState('')
   const [typeFilter, setTypeFilter] = useState<TypeFilter>('all')
   const filterSeriesIds = selectedSeries
+  const [uiVersion] = useUIVersion()
 
   const allCircuits = useMemo(() => getAllCircuitsWithEvents(), [])
 
@@ -98,6 +100,9 @@ export function CircuitsPageClient() {
       />
 
       <div className="rg-calendar-wrap">
+        {uiVersion === 'v2' && (
+          <h1 className="font-display v2-page-title">{t('nav.circuits', locale)}</h1>
+        )}
         {/* Search + series filter */}
         <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 16, flexWrap: 'wrap' }}>
           <div
@@ -178,7 +183,7 @@ export function CircuitsPageClient() {
         </div>
 
         {/* Circuit list */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div className="rg-circuit-list" style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {filtered.map(circuit => (
             <CircuitRow key={circuit.id} circuit={circuit} locale={locale} />
           ))}
@@ -199,6 +204,7 @@ function CircuitRow({ circuit, locale }: { circuit: CircuitWithEvents; locale: L
   return (
     <Link
       href={`/circuits/${circuit.id}`}
+      className="rg-circuit-card"
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -213,13 +219,13 @@ function CircuitRow({ circuit, locale }: { circuit: CircuitWithEvents; locale: L
       }}
     >
       {/* Left: circuit info */}
-      <div style={{ flex: 1, minWidth: 0 }}>
+      <div className="rg-circuit-card-info" style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-          <span style={{ fontWeight: 600, fontSize: 15, color: 'var(--rg-text)' }}>
+          <span className="rg-circuit-card-name" style={{ fontWeight: 600, fontSize: 15, color: 'var(--rg-text)' }}>
             {circuit.name}
           </span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 13, color: 'var(--rg-text3)', flexWrap: 'wrap' }}>
+        <div className="rg-circuit-card-stats" style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 13, color: 'var(--rg-text3)', flexWrap: 'wrap' }}>
           {circuit.countryCode && (
             <span>{countryFlag(circuit.countryCode)} {circuit.country}</span>
           )}
@@ -236,7 +242,7 @@ function CircuitRow({ circuit, locale }: { circuit: CircuitWithEvents; locale: L
       </div>
 
       {/* Right: series badges */}
-      <div style={{ display: 'flex', gap: 4, flexShrink: 0, flexWrap: 'wrap', justifyContent: 'flex-end', maxWidth: 200 }}>
+      <div className="rg-circuit-card-badges" style={{ display: 'flex', gap: 4, flexShrink: 0, flexWrap: 'wrap', justifyContent: 'flex-end', maxWidth: 200 }}>
         {circuit.seriesIds.map(sid => {
           const meta = getSeriesMeta(sid)
           if (!meta) return null

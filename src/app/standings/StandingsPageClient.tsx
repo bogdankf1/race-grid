@@ -17,6 +17,7 @@ import { Header } from '@/components/Header'
 import { ClassTabs } from '@/components/ClassTabs'
 import { YearSelector } from '@/components/YearSelector'
 import { Footer } from '@/components/Footer'
+import { useUIVersion } from '@/hooks/useUIVersion'
 import type { ClassStandings, DriverStandingEntry, TeamStandingEntry } from '@/data/standings/types'
 
 const ALL_SESSION_TYPES: SessionType[] = [
@@ -39,6 +40,7 @@ export function StandingsPageClient() {
   const [year, setYear] = useLocalStorage<number>('race-grid:standings-year', 2025)
   const [query, setQuery] = useState('')
   const [tab, setTab] = useState<'drivers' | 'constructors'>('drivers')
+  const [uiVersion] = useUIVersion()
 
   useEffect(() => { applyTheme(theme) }, [theme])
 
@@ -114,6 +116,9 @@ export function StandingsPageClient() {
       />
 
       <div className="rg-calendar-wrap">
+        {uiVersion === 'v2' && (
+          <h1 className="font-display v2-page-title">{t('nav.standings', locale)}</h1>
+        )}
         {/* Search */}
         <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 16, flexWrap: 'wrap' }}>
           <div
@@ -261,6 +266,7 @@ function DriverRow({ entry }: { entry: DriverStandingEntry; seriesColor?: string
 
   return (
     <div
+      className={`rg-standing-row${entry.position <= 3 ? ` is-p${entry.position}` : ''}`}
       style={{
         display: 'flex', alignItems: 'center', gap: 12, padding: '10px 16px',
         borderRadius: 10, background: 'var(--rg-surface)', border: '1px solid var(--rg-card-border)',
@@ -268,7 +274,7 @@ function DriverRow({ entry }: { entry: DriverStandingEntry; seriesColor?: string
       }}
     >
       {/* Position */}
-      <span style={{ width: 28, fontSize: 14, fontWeight: 700, color: posColor ?? 'var(--rg-text3)', textAlign: 'center', flexShrink: 0 }}>
+      <span className="rg-standing-pos" style={{ width: 28, fontSize: 14, fontWeight: 700, color: posColor ?? 'var(--rg-text3)', textAlign: 'center', flexShrink: 0 }}>
         {entry.position}
       </span>
 
@@ -293,7 +299,7 @@ function DriverRow({ entry }: { entry: DriverStandingEntry; seriesColor?: string
       )}
 
       {/* Points */}
-      <span style={{ fontSize: 15, fontWeight: 700, color: 'var(--rg-text)', minWidth: 40, textAlign: 'right', flexShrink: 0 }}>
+      <span className="rg-standing-pts" style={{ fontSize: 15, fontWeight: 700, color: 'var(--rg-text)', minWidth: 40, textAlign: 'right', flexShrink: 0 }}>
         {entry.points}
       </span>
     </div>
@@ -306,6 +312,7 @@ function ConstructorRow({ entry }: { entry: TeamStandingEntry; seriesColor?: str
 
   return (
     <div
+      className={`rg-standing-row${entry.position <= 3 ? ` is-p${entry.position}` : ''}`}
       style={{
         display: 'flex', alignItems: 'center', gap: 12, padding: '10px 16px',
         borderRadius: 10, background: 'var(--rg-surface)', border: '1px solid var(--rg-card-border)',
@@ -313,7 +320,7 @@ function ConstructorRow({ entry }: { entry: TeamStandingEntry; seriesColor?: str
       }}
     >
       {/* Position */}
-      <span style={{ width: 28, fontSize: 14, fontWeight: 700, color: posColor ?? 'var(--rg-text3)', textAlign: 'center', flexShrink: 0 }}>
+      <span className="rg-standing-pos" style={{ width: 28, fontSize: 14, fontWeight: 700, color: posColor ?? 'var(--rg-text3)', textAlign: 'center', flexShrink: 0 }}>
         {entry.position}
       </span>
 
@@ -332,7 +339,7 @@ function ConstructorRow({ entry }: { entry: TeamStandingEntry; seriesColor?: str
       )}
 
       {/* Points */}
-      <span style={{ fontSize: 15, fontWeight: 700, color: 'var(--rg-text)', minWidth: 40, textAlign: 'right', flexShrink: 0 }}>
+      <span className="rg-standing-pts" style={{ fontSize: 15, fontWeight: 700, color: 'var(--rg-text)', minWidth: 40, textAlign: 'right', flexShrink: 0 }}>
         {entry.points}
       </span>
     </div>
