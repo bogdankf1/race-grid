@@ -1,7 +1,8 @@
 import { RaceEvent } from '@/lib/types'
 
-// WRC 2026 calendar — 14 rounds across 4 continents
-// Source: wrc.com, canevarally.com verified calendar
+// WRC 2026 calendar — 13 rounds (Rally Saudi Arabia, the planned 14th-round finale, was removed in September
+// due to the Middle East conflict; Rally Italia Sardegna on 1–4 Oct is the season finale)
+// Source: wrc.com, en.wikipedia.org/wiki/2026_World_Rally_Championship — re-verified Oct 2026
 export const wrc2026: RaceEvent[] = [
   {
     id: 'wrc-2026-monte-carlo',
@@ -168,19 +169,6 @@ export const wrc2026: RaceEvent[] = [
       { type: 'stage', label: 'SS4–SS11', startUtc: '2026-10-02T05:28:00Z', durationMinutes: 540 },
       { type: 'stage', label: 'SS12–SS17', startUtc: '2026-10-03T05:38:00Z', durationMinutes: 480 },
       { type: 'stage', label: 'SS18–SS20 (Power Stage)', startUtc: '2026-10-04T06:00:00Z', durationMinutes: 300 },
-    ],
-  },
-  {
-    id: 'wrc-2026-saudi-arabia',
-    round: 14,
-    name: 'Rally Saudi Arabia',
-    circuitId: 'jeddah-neom',
-    sessions: [
-      { type: 'shakedown', label: 'Shakedown', startUtc: '2026-11-11T07:00:00Z', durationMinutes: 180 },
-      { type: 'stage', label: 'SS1–SS3', startUtc: '2026-11-11T14:08:00Z', durationMinutes: 180 },
-      { type: 'stage', label: 'SS4–SS9', startUtc: '2026-11-12T06:08:00Z', durationMinutes: 540 },
-      { type: 'stage', label: 'SS10–SS15', startUtc: '2026-11-13T06:08:00Z', durationMinutes: 540 },
-      { type: 'stage', label: 'SS16–SS18 (Power Stage)', startUtc: '2026-11-14T07:00:00Z', durationMinutes: 300 },
     ],
   },
 ]
