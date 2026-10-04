@@ -1,7 +1,8 @@
 import { RaceEvent } from '@/lib/types'
 
 // GT World Challenge Australia 2026 — 6 events, 12 one-hour races
-// Source: gt-world-challenge-australia.com (official event timetables)
+// Source: gt-world-challenge-australia.com timetable PDFs (Phillip Island, The Bend) and speedseries.com.au /
+// Supercars schedules (Queensland, Darwin, Sydney, Adelaide) — re-verified Oct 2026
 export const gtwcau2026: RaceEvent[] = [
   {
     id: 'gtwcau-2026-phillip-island',
@@ -44,15 +45,14 @@ export const gtwcau2026: RaceEvent[] = [
     name: 'GT Festival Queensland',
     circuitId: 'queensland-raceway',
     sessions: [
-      // Friday 12 Jun (AEST UTC+10)
+      // Friday 12 Jun (AEST UTC+10) — official SpeedSeries timetable
       { type: 'practice', label: 'Free Practice 1', startUtc: '2026-06-11T23:30:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-06-12T03:00:00Z', durationMinutes: 60 },
-      // Saturday 13 Jun
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-06-13T00:00:00Z', durationMinutes: 15 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-06-13T00:20:00Z', durationMinutes: 15 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-06-13T05:00:00Z', durationMinutes: 60 },
-      // Sunday 14 Jun
-      { type: 'race', label: 'Race 2', startUtc: '2026-06-14T03:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Bronze Practice', startUtc: '2026-06-12T02:10:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-06-12T05:05:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-06-12T23:00:00Z', durationMinutes: 15 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-06-12T23:25:00Z', durationMinutes: 15 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-06-13T03:15:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-06-14T00:25:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -61,15 +61,14 @@ export const gtwcau2026: RaceEvent[] = [
     name: 'GT Festival Darwin',
     circuitId: 'hidden-valley-raceway',
     sessions: [
-      // Friday 24 Jul (ACST UTC+9:30)
-      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-07-24T00:00:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-07-24T03:30:00Z', durationMinutes: 60 },
-      // Saturday 25 Jul
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-25T00:30:00Z', durationMinutes: 15 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-25T00:50:00Z', durationMinutes: 15 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-07-25T05:30:00Z', durationMinutes: 60 },
-      // Sunday 26 Jul
-      { type: 'race', label: 'Race 2', startUtc: '2026-07-26T03:30:00Z', durationMinutes: 60 },
+      // Friday 24 Jul (ACST UTC+9:30) — official SpeedSeries timetable
+      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-07-24T03:20:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Bronze Practice', startUtc: '2026-07-24T06:00:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-07-24T07:55:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-25T02:10:00Z', durationMinutes: 15 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-25T02:35:00Z', durationMinutes: 15 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-07-25T06:15:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-07-26T00:40:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -78,15 +77,14 @@ export const gtwcau2026: RaceEvent[] = [
     name: 'GT Festival Sydney',
     circuitId: 'sydney-motorsport-park',
     sessions: [
-      // Friday 18 Sep (AEST UTC+10)
-      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-09-17T23:30:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-09-18T03:00:00Z', durationMinutes: 60 },
-      // Saturday 19 Sep
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-09-19T00:00:00Z', durationMinutes: 15 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-09-19T00:20:00Z', durationMinutes: 15 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-09-19T05:00:00Z', durationMinutes: 60 },
-      // Sunday 20 Sep
-      { type: 'race', label: 'Race 2', startUtc: '2026-09-20T03:00:00Z', durationMinutes: 60 },
+      // Friday 18 Sep (AEST UTC+10) — official SpeedSeries timetable (Race 1 is a night race)
+      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-09-17T23:25:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Bronze Practice', startUtc: '2026-09-18T03:30:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-09-18T07:15:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-09-19T04:35:00Z', durationMinutes: 15 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-09-19T05:00:00Z', durationMinutes: 15 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-09-19T09:50:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-09-20T04:05:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -95,15 +93,13 @@ export const gtwcau2026: RaceEvent[] = [
     name: 'Adelaide Grand Final',
     circuitId: 'adelaide-street-circuit',
     sessions: [
-      // Friday 27 Nov (ACDT UTC+10:30)
-      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-11-26T23:00:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-11-27T02:30:00Z', durationMinutes: 60 },
-      // Saturday 28 Nov
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-11-27T23:30:00Z', durationMinutes: 15 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-11-27T23:50:00Z', durationMinutes: 15 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-11-28T04:30:00Z', durationMinutes: 60 },
-      // Sunday 29 Nov
-      { type: 'race', label: 'Race 2', startUtc: '2026-11-29T02:30:00Z', durationMinutes: 60 },
+      // Thursday 26 Nov (ACDT UTC+10:30) — Adelaide Grand Final schedule (Supercars support timetable)
+      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-11-25T21:50:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-11-26T01:55:00Z', durationMinutes: 40 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-11-27T00:45:00Z', durationMinutes: 10 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-11-27T01:05:00Z', durationMinutes: 10 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-11-27T22:40:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-11-28T23:10:00Z', durationMinutes: 60 },
     ],
   },
 ]
