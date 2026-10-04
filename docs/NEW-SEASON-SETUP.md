@@ -191,3 +191,14 @@ Copy and fill this for each new season setup:
 - [ ] Build passes? ___
 - [ ] Manual spot-check done? ___
 ```
+
+---
+
+## Partially published seasons (how 2027 was set up)
+
+When only *dates* are published (typical for the year ahead), the new season is added with placeholder sessions:
+
+- Add `src/data/<series>-<year>.ts` per series with the published events only (never guess dates; omit rounds that are still TBC and note them in the file header).
+- Every session carries `tba: true` — the UI then shows "TBA" instead of a time. Placeholder start times follow the equivalent previous-season weekend (shifted to the new weekday) so the event lands on the right day; replace them with official UTC times once the weekend timetables are released and remove the `tba` flag.
+- Create `src/data/events/year-<year>.ts` (map of series id → events), add the year to `loadYear()` and `AVAILABLE_YEARS` (newest first) in `series-registry.ts`, and to `ALL_HISTORICAL_EVENTS` in `events/all-years.ts` so day pages are generated.
+- `DEFAULT_YEAR` in `series-registry.ts` controls the season shown by default — keep it on the current season until the new year is complete enough to switch.

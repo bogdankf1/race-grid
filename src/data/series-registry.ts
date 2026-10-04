@@ -176,7 +176,10 @@ const EVENTS_2026: Record<string, RaceEvent[]> = {
 const yearCache = new Map<number, Record<string, RaceEvent[]>>()
 yearCache.set(2026, EVENTS_2026)
 
-export const AVAILABLE_YEARS = [2026, 2025, 2024, 2023, 2022, 2021]
+export const AVAILABLE_YEARS = [2027, 2026, 2025, 2024, 2023, 2022, 2021]
+
+/** The season shown by default (the current one). 2027 is available but only partially published. */
+export const DEFAULT_YEAR = 2026
 
 export interface SeriesGroup {
   labelKey: string
@@ -202,6 +205,7 @@ export async function loadYear(year: number): Promise<void> {
 
   let data: Record<string, RaceEvent[]>
   switch (year) {
+    case 2027: data = (await import('./events/year-2027')).events2027; break
     case 2025: data = (await import('./events/year-2025')).events2025; break
     case 2024: data = (await import('./events/year-2024')).events2024; break
     case 2023: data = (await import('./events/year-2023')).events2023; break
