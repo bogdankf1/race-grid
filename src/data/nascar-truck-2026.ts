@@ -107,7 +107,7 @@ export const nascarTruck2026: RaceEvent[] = [
     name: 'North Carolina Education Lottery 200',
     circuitId: 'charlotte-motor-speedway',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-22T20:35:00Z', durationMinutes: -1065251315 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-22T20:35:00Z', durationMinutes: 60 },
       { type: 'race', label: 'North Carolina Education Lottery 200', startUtc: '2026-05-24T14:00:00Z', durationMinutes: 150 },
     ],
   },
@@ -186,7 +186,7 @@ export const nascarTruck2026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-08-14T17:00:00Z', durationMinutes: 50 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-14T18:05:00Z', durationMinutes: 55 },
-      { type: 'race', label: 'Black\'s Tire 250 presented by BTS Rewards', startUtc: '2026-08-15T16:00:00Z', durationMinutes: 150 },
+      { type: 'race', label: 'Race', startUtc: '2026-08-15T16:00:00Z', durationMinutes: 180 },
     ],
   },
   {

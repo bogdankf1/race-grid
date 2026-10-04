@@ -111,7 +111,7 @@ export const nascar2026: RaceEvent[] = [
     circuitId: 'talladega-superspeedway',
     sessions: [
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-25T14:30:00Z', durationMinutes: 90 },
-      { type: 'race', label: 'Jack Link\'s 500', startUtc: '2026-04-26T19:00:00Z', durationMinutes: 200 },
+      { type: 'race', label: 'Race', startUtc: '2026-04-26T19:00:00Z', durationMinutes: 180 },
     ],
   },
   {
@@ -142,8 +142,7 @@ export const nascar2026: RaceEvent[] = [
     name: 'Coca-Cola 600',
     circuitId: 'charlotte-motor-speedway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-23T18:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-23T18:40:00Z', durationMinutes: 50 },
+      { type: 'qualifying', label: 'Practice & Qualifying', startUtc: '2026-05-23T18:30:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Coca-Cola 600', startUtc: '2026-05-24T22:00:00Z', durationMinutes: 260 },
     ],
   },
@@ -153,8 +152,7 @@ export const nascar2026: RaceEvent[] = [
     name: 'Cracker Barrel 400',
     circuitId: 'nashville-superspeedway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-30T21:40:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-30T21:40:00Z', durationMinutes: 50 },
+      { type: 'qualifying', label: 'Practice & Qualifying', startUtc: '2026-05-30T21:40:00Z', durationMinutes: 50 },
       { type: 'race', label: 'Race', startUtc: '2026-05-31T23:00:00Z', durationMinutes: 180 },
     ],
   },
@@ -229,8 +227,7 @@ export const nascar2026: RaceEvent[] = [
     name: 'Window World 450',
     circuitId: 'north-wilkesboro-speedway',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-18T22:10:00Z', durationMinutes: 50 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-18T22:30:00Z', durationMinutes: 50 },
+      { type: 'qualifying', label: 'Practice & Qualifying', startUtc: '2026-07-18T22:10:00Z', durationMinutes: 70 },
       { type: 'race', label: 'Race', startUtc: '2026-07-19T23:00:00Z', durationMinutes: 180 },
     ],
   },

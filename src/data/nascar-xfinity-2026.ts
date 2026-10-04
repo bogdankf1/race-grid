@@ -87,7 +87,7 @@ export const nascarXfinity2026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-04-03T17:30:00Z', durationMinutes: 50 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-03T18:35:00Z', durationMinutes: 55 },
-      { type: 'race', label: 'North Carolina Education Lottery 250 Presented by Black\'s Tire', startUtc: '2026-04-04T18:30:00Z', durationMinutes: 180 },
+      { type: 'race', label: 'Race', startUtc: '2026-04-04T18:30:00Z', durationMinutes: 180 },
     ],
   },
   {
@@ -138,8 +138,7 @@ export const nascarXfinity2026: RaceEvent[] = [
     name: 'Mission 200 at The Glen',
     circuitId: 'watkins-glen-international',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-09T14:45:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-09T15:35:00Z', durationMinutes: 55 },
+      { type: 'qualifying', label: 'Practice & Qualifying', startUtc: '2026-05-09T14:45:00Z', durationMinutes: 105 },
       { type: 'race', label: 'Mission 200 at The Glen', startUtc: '2026-05-09T20:00:00Z', durationMinutes: 180 },
     ],
   },
@@ -170,8 +169,7 @@ export const nascarXfinity2026: RaceEvent[] = [
     name: 'Sports Illustrated Resorts 250',
     circuitId: 'nashville-superspeedway',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-30T19:05:00Z', durationMinutes: 55 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-30T19:10:00Z', durationMinutes: 50 },
+      { type: 'qualifying', label: 'Practice & Qualifying', startUtc: '2026-05-30T19:05:00Z', durationMinutes: 55 },
       { type: 'race', label: 'Sports Illustrated Resorts 250', startUtc: '2026-05-30T23:30:00Z', durationMinutes: 180 },
     ],
   },
@@ -214,8 +212,7 @@ export const nascarXfinity2026: RaceEvent[] = [
     name: 'Cuervo 300',
     circuitId: 'chicagoland-speedway',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-04T17:30:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-04T17:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Practice & Qualifying', startUtc: '2026-07-04T17:30:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Race', startUtc: '2026-07-04T21:30:00Z', durationMinutes: 180 },
     ],
   },
@@ -356,7 +353,7 @@ export const nascarXfinity2026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'Practice', startUtc: '2026-11-06T21:00:00Z', durationMinutes: 50 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-07T18:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'NASCAR O\'Reilly Auto Parts Series Championship Race', startUtc: '2026-11-07T22:00:00Z', durationMinutes: 180 },
+      { type: 'race', label: 'Race', startUtc: '2026-11-07T22:00:00Z', durationMinutes: 180 },
     ],
   },
 ]
