@@ -1,7 +1,7 @@
 import { RaceEvent } from '@/lib/types'
 
 // F1 2026 calendar — from f1calendar.com with verified UTC session times
-// Bahrain & Saudi Arabia cancelled due to geopolitical situation
+// Saudi Arabia cancelled (Middle East conflict); Bahrain GP relocated to Sepang, Malaysia (2-4 Oct) — 23 rounds
 // Sprint weekends: China, Miami, Canada, Great Britain, Netherlands, Singapore
 export const f12026: RaceEvent[] = [
   {
@@ -49,7 +49,7 @@ export const f12026: RaceEvent[] = [
     name: 'Miami Grand Prix',
     circuitId: 'miami-international-autodrome',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-01T16:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-01T16:00:00Z', durationMinutes: 90 },
       { type: 'sprint_qualifying', label: 'Sprint Qualifying', startUtc: '2026-05-01T20:30:00Z', durationMinutes: 45 },
       { type: 'sprint', label: 'Sprint', startUtc: '2026-05-02T16:00:00Z', durationMinutes: 30 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-02T20:00:00Z', durationMinutes: 60 },
@@ -200,8 +200,21 @@ export const f12026: RaceEvent[] = [
     ],
   },
   {
-    id: 'f1-2026-singapore',
+    id: 'f1-2026-bahrain',
     round: 16,
+    name: 'Bahrain Grand Prix (Malaysia)',
+    circuitId: 'sepang-international-circuit',
+    sessions: [
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-02T04:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-10-02T08:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 3', startUtc: '2026-10-03T04:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-03T08:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race', startUtc: '2026-10-04T07:00:00Z', durationMinutes: 120 },
+    ],
+  },
+  {
+    id: 'f1-2026-singapore',
+    round: 17,
     name: 'Singapore Grand Prix',
     circuitId: 'marina-bay-street-circuit',
     sessions: [
@@ -214,7 +227,7 @@ export const f12026: RaceEvent[] = [
   },
   {
     id: 'f1-2026-united-states',
-    round: 17,
+    round: 18,
     name: 'United States Grand Prix',
     circuitId: 'circuit-of-the-americas',
     sessions: [
@@ -227,7 +240,7 @@ export const f12026: RaceEvent[] = [
   },
   {
     id: 'f1-2026-mexico',
-    round: 18,
+    round: 19,
     name: 'Mexico City Grand Prix',
     circuitId: 'autodromo-hermanos-rodriguez',
     sessions: [
@@ -240,7 +253,7 @@ export const f12026: RaceEvent[] = [
   },
   {
     id: 'f1-2026-brazil',
-    round: 19,
+    round: 20,
     name: 'Brazilian Grand Prix',
     circuitId: 'autodromo-jose-carlos-pace',
     sessions: [
@@ -253,7 +266,7 @@ export const f12026: RaceEvent[] = [
   },
   {
     id: 'f1-2026-las-vegas',
-    round: 20,
+    round: 21,
     name: 'Las Vegas Grand Prix',
     circuitId: 'las-vegas-strip-circuit',
     sessions: [
@@ -266,7 +279,7 @@ export const f12026: RaceEvent[] = [
   },
   {
     id: 'f1-2026-qatar',
-    round: 21,
+    round: 22,
     name: 'Qatar Grand Prix',
     circuitId: 'lusail-international-circuit',
     sessions: [
@@ -279,7 +292,7 @@ export const f12026: RaceEvent[] = [
   },
   {
     id: 'f1-2026-abu-dhabi',
-    round: 22,
+    round: 23,
     name: 'Abu Dhabi Grand Prix',
     circuitId: 'yas-marina-circuit',
     sessions: [

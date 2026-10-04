@@ -9,7 +9,7 @@ import { useSelectedSeries } from '@/hooks/useSelectedSeries'
 import { getDefaultLocale, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
 import { getDefaultTimezone } from '@/lib/timezone'
-import { AVAILABLE_YEARS, getSeriesMeta } from '@/data/series-registry'
+import { AVAILABLE_YEARS, DEFAULT_YEAR, getSeriesMeta } from '@/data/series-registry'
 import { getTeam } from '@/data/teams'
 import { getDriver } from '@/data/drivers'
 import type { SessionType } from '@/lib/types'
@@ -47,7 +47,7 @@ export function TeamDetailClient({ teamId }: { teamId: string }) {
 
   // Available years for this team
   const years = useMemo(() => [...new Set(allSeasons.map(s => s.year))].sort((a, b) => b - a), [allSeasons])
-  const [year, setYear] = useState(() => years[0] ?? AVAILABLE_YEARS[0])
+  const [year, setYear] = useState(() => years[0] ?? DEFAULT_YEAR)
 
   // Seasons for selected year
   const seasons = useMemo(() => allSeasons.filter(s => s.year === year), [allSeasons, year])

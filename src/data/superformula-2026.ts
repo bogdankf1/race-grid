@@ -1,20 +1,10 @@
 import { RaceEvent } from '@/lib/types'
 
-// Super Formula 2026 season calendar — 12 races across 7 weekends, 5 double-headers
-// Sources: superformula.net, honda.racing/super-formula/calendar/super-formula-2026,
-// en.wikipedia.org/wiki/2026_Super_Formula_Championship, mr-motegi.jp/eng/2and4/
-// Verified April 2026
-//
-// 2026 race weekend format: each race day on a double-header has its own qualifying
-// in the morning and race in the afternoon (uniform race distance, ~250km / ~1h).
-// Single-race weekends (Autopolis, Sugo) use a three-stage knockout qualifying.
-//
+// Super Formula 2026 season calendar — 12 rounds across 7 weekends
+// Sources: superformula.net, as-web.jp time schedules, J SPORTS broadcast guide — re-verified Oct 2026
+// Rd.3 (Autopolis, 26 Apr) was abandoned after heavy rain and re-run as a 25-lap sprint at the Fuji July weekend.
 // All times Japan Standard Time (JST = UTC+9, no DST). UTC = JST − 9h.
-//
-// NOTE: Only Round 1-2 (Motegi) session times are officially published by the venue.
-// Subsequent rounds use placeholder times based on typical Super Formula scheduling
-// (practice ~10:00 JST / 01:00 UTC, qualifying ~10:00 JST / 01:00 UTC, race ~14:45 JST
-// / 05:45 UTC). These should be updated as each venue publishes its official timetable.
+// Sessions flagged TBA have no published timetable yet.
 export const superformula2026: RaceEvent[] = [
   {
     id: 'sf-2026-motegi',
@@ -42,9 +32,11 @@ export const superformula2026: RaceEvent[] = [
     name: 'Autopolis — Rd. 3',
     circuitId: 'autopolis',
     sessions: [
-      // Race cancelled due to wet conditions — qualifying result carried over to rescheduled race
-      { type: 'practice', label: 'Practice', startUtc: '2026-04-25T01:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-25T04:00:00Z', durationMinutes: 60 },
+      // Sat 25 Apr FP 09:15, Q1-Q3 14:15-15:17; Sun 26 Apr FP 09:40 (JST). The Rd.3 race (14:30) was red-flagged after one
+      // safety-car lap and abandoned — rescheduled to the Fuji July weekend (see sf-2026-fuji-1). Source: as-web.jp
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-25T00:15:00Z', durationMinutes: 115 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-25T05:15:00Z', durationMinutes: 62 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-04-26T00:40:00Z', durationMinutes: 30 },
     ],
   },
   {
@@ -53,26 +45,28 @@ export const superformula2026: RaceEvent[] = [
     name: 'Suzuka — Rds. 4 & 5',
     circuitId: 'suzuka-international-racing-course',
     sessions: [
-      // Placeholder times — Suzuka has not published official 2026 schedule
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-22T01:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-05-23T00:30:00Z', durationMinutes: 45 },
+      // Sat Q1 09:15 / Sun Q1 10:25 JST, races 14:45 JST (31 laps). Friday practice time not published (shown as TBA)
+      { type: 'practice', label: 'Practice', startUtc: '2026-05-22T01:00:00Z', durationMinutes: 90, tba: true },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-05-23T00:15:00Z', durationMinutes: 45 },
       { type: 'race', label: 'Race 1', startUtc: '2026-05-23T05:45:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-05-24T01:10:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-05-24T01:25:00Z', durationMinutes: 45 },
       { type: 'race', label: 'Race 2', startUtc: '2026-05-24T05:45:00Z', durationMinutes: 75 },
     ],
   },
   {
     id: 'sf-2026-fuji-1',
     round: 6,
-    name: 'Fuji — Rds. 6 & 7',
+    name: 'Fuji — Rds. 3, 6 & 7',
     circuitId: 'fuji-speedway',
     sessions: [
-      // Placeholder times — Fuji has not published official 2026 schedule
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-17T01:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-18T00:30:00Z', durationMinutes: 45 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-07-18T05:45:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-19T01:10:00Z', durationMinutes: 45 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-07-19T05:45:00Z', durationMinutes: 75 },
+      // Triple-header: Rd.6 Q 08:15 + race 16:15 (Sat), Rd.7 Q 10:35 (Sat) + race 15:35 (Sun), plus the replacement Rd.3 race
+      // (25 laps, Sunday morning, grid from the Autopolis qualifying — start time not published, shown as TBA). Times JST.
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-17T01:00:00Z', durationMinutes: 90, tba: true },
+      { type: 'qualifying', label: 'Qualifying 1 (Rd.6)', startUtc: '2026-07-17T23:15:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 2 (Rd.7)', startUtc: '2026-07-18T01:35:00Z', durationMinutes: 45 },
+      { type: 'race', label: 'Race 1 (Rd.6)', startUtc: '2026-07-18T07:15:00Z', durationMinutes: 75 },
+      { type: 'race', label: 'Race (Rd.3 replacement)', startUtc: '2026-07-19T01:00:00Z', durationMinutes: 45, tba: true },
+      { type: 'race', label: 'Race 2 (Rd.7)', startUtc: '2026-07-19T06:35:00Z', durationMinutes: 75 },
     ],
   },
   {
@@ -81,10 +75,11 @@ export const superformula2026: RaceEvent[] = [
     name: 'Sugo — Rd. 8',
     circuitId: 'sportsland-sugo',
     sessions: [
-      // Placeholder times — Sugo has not published official 2026 schedule
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-08T01:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-08T04:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-08-09T05:45:00Z', durationMinutes: 75 },
+      // Sat FP1 09:00, Q1-Q3 14:20-15:22; Sun FP2 09:30, race 14:20 JST (51 laps). Source: as-web.jp
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-08T00:00:00Z', durationMinutes: 115 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-08T05:20:00Z', durationMinutes: 62 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-09T00:30:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race', startUtc: '2026-08-09T05:20:00Z', durationMinutes: 75 },
     ],
   },
   {
@@ -93,12 +88,12 @@ export const superformula2026: RaceEvent[] = [
     name: 'Fuji — Rds. 9 & 10',
     circuitId: 'fuji-speedway',
     sessions: [
-      // Placeholder times — Fuji autumn round not yet published
-      { type: 'practice', label: 'Practice', startUtc: '2026-10-09T01:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-10-10T00:30:00Z', durationMinutes: 45 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-10-10T05:45:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-10-11T01:10:00Z', durationMinutes: 45 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-10-11T05:45:00Z', durationMinutes: 75 },
+      // Official timetable not yet published — times are estimates from the J SPORTS broadcast windows (shown as TBA)
+      { type: 'practice', label: 'Practice', startUtc: '2026-10-09T01:00:00Z', durationMinutes: 90, tba: true },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-10-10T00:30:00Z', durationMinutes: 45, tba: true },
+      { type: 'race', label: 'Race 1', startUtc: '2026-10-10T05:35:00Z', durationMinutes: 75, tba: true },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-10-11T00:50:00Z', durationMinutes: 45, tba: true },
+      { type: 'race', label: 'Race 2', startUtc: '2026-10-11T05:35:00Z', durationMinutes: 75, tba: true },
     ],
   },
   {
@@ -107,12 +102,12 @@ export const superformula2026: RaceEvent[] = [
     name: 'Suzuka Finale — Rds. 11 & 12',
     circuitId: 'suzuka-international-racing-course',
     sessions: [
-      // Placeholder times — Suzuka finale not yet published
-      { type: 'practice', label: 'Practice', startUtc: '2026-11-20T01:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-11-21T00:30:00Z', durationMinutes: 45 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-11-21T05:45:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-11-22T01:10:00Z', durationMinutes: 45 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-11-22T05:45:00Z', durationMinutes: 75 },
+      // Official timetable not yet published — times are estimates (shown as TBA)
+      { type: 'practice', label: 'Practice', startUtc: '2026-11-20T01:00:00Z', durationMinutes: 90, tba: true },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-11-21T00:30:00Z', durationMinutes: 45, tba: true },
+      { type: 'race', label: 'Race 1', startUtc: '2026-11-21T05:45:00Z', durationMinutes: 75, tba: true },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-11-22T01:10:00Z', durationMinutes: 45, tba: true },
+      { type: 'race', label: 'Race 2', startUtc: '2026-11-22T05:45:00Z', durationMinutes: 75, tba: true },
     ],
   },
 ]

@@ -8,7 +8,7 @@ import { useSelectedSeries } from '@/hooks/useSelectedSeries'
 import { getDefaultTimezone } from '@/lib/timezone'
 import { getDefaultLocale, t, type Locale } from '@/lib/i18n'
 import { applyTheme, getDefaultTheme, type Theme } from '@/lib/theme'
-import { AVAILABLE_YEARS, SERIES_GROUPS } from '@/data/series-registry'
+import { AVAILABLE_YEARS, DEFAULT_YEAR, SERIES_GROUPS } from '@/data/series-registry'
 import { useYearData } from '@/hooks/useYearData'
 import type { SeriesConfig, SessionType } from '@/lib/types'
 import { getTotalRounds } from '@/lib/format'
@@ -54,7 +54,7 @@ export function SeriesPageClient() {
   const [spoilerFree, setSpoilerFree] = useLocalStorage<boolean>('race-grid:spoiler-free', false)
   const [visibleSessionTypes, setVisibleSessionTypes] = useLocalStorage<SessionType[]>('race-grid:session-types', ALL_SESSION_TYPES)
   const [selectedSeries, setSelectedSeries] = useSelectedSeries()
-  const [year, setYear] = useLocalStorage<number>('race-grid:series-year', AVAILABLE_YEARS[0])
+  const [year, setYear] = useLocalStorage<number>('race-grid:series-year', DEFAULT_YEAR)
   const filterSeriesIds = selectedSeries
   const [query, setQuery] = useState('')
 

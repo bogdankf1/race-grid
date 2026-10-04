@@ -1,7 +1,7 @@
 import { RaceEvent } from '@/lib/types'
 
 // Supercars Championship 2026 — 14 rounds
-// Sources: supercars.com (official calendar + per-event schedules), v8sleuth, speedcafe — verified April 2026
+// Sources: supercars.com (official calendar + per-event schedules), v8sleuth, speedcafe — re-verified Oct 2026
 // Australian DST 2026: ends Sun 5 Apr (NSW/VIC/TAS/ACT/SA), resumes Sun 4 Oct.
 // NZ DST 2026: ends Sun 5 Apr, resumes Sun 27 Sep.
 // QLD always AEST (UTC+10), NT always ACST (UTC+9:30), WA always AWST (UTC+8).
@@ -208,102 +208,93 @@ export const supercars2026: RaceEvent[] = [
     ],
   },
   {
-    // Round 10: Airtouch 500 at The Bend — The Bend Motorsport Park, 11–13 Sep 2026 (SA, ACST UTC+9:30, before DST)
-    // First Enduro Cup round. Co-driver enduro = 500 km race
+    // Round 10: The Bend 500 — 11–13 Sep 2026 (SA, ACST UTC+9:30). Single 500 km race (147 laps, West layout). Source: supercars.com track schedule
     id: 'sc-2026-the-bend',
     round: 10,
     name: 'Airtouch 500 at The Bend',
     circuitId: 'the-bend-motorsport-park',
     sessions: [
-      // Fri 11 Sep
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-11T00:30:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-09-11T04:30:00Z', durationMinutes: 60 },
-      // Sat 12 Sep
-      { type: 'practice', label: 'Practice 3', startUtc: '2026-09-12T00:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T03:00:00Z', durationMinutes: 40 },
-      // Sun 13 Sep — 500 km enduro
-      { type: 'endurance', label: 'The Bend 500', startUtc: '2026-09-13T01:30:00Z', durationMinutes: 240 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-11T01:55:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Practice 2 (additional drivers)', startUtc: '2026-09-11T04:15:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Practice 3', startUtc: '2026-09-11T06:10:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Practice 4 (co-drivers)', startUtc: '2026-09-12T00:20:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Practice 5', startUtc: '2026-09-12T02:30:00Z', durationMinutes: 40 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T05:15:00Z', durationMinutes: 30 },
+      { type: 'qualifying', label: 'Top 10 Shootout', startUtc: '2026-09-12T07:30:00Z', durationMinutes: 30 },
+      { type: 'warmup', label: 'Warm Up', startUtc: '2026-09-13T00:45:00Z', durationMinutes: 20 },
+      { type: 'endurance', label: 'The Bend 500', startUtc: '2026-09-13T04:15:00Z', durationMinutes: 210 },
     ],
   },
   {
-    // Round 11: Repco Bathurst 1000 — Mount Panorama, 8–11 Oct 2026 (NSW, AEDT UTC+11 from 4 Oct)
-    // Great Race — 1000 km enduro
+    // Round 11: Repco Bathurst 1000 — 8–11 Oct 2026 (NSW, AEDT UTC+11). Race 11:30 AEDT, 161 laps. Source: supercars.com track schedule
     id: 'sc-2026-bathurst',
     round: 11,
     name: 'Repco Bathurst 1000',
     circuitId: 'mount-panorama-circuit',
     sessions: [
-      // Thu 8 Oct
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-07T22:30:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-10-08T03:30:00Z', durationMinutes: 60 },
-      // Fri 9 Oct
-      { type: 'practice', label: 'Practice 3', startUtc: '2026-10-08T22:30:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Practice 4', startUtc: '2026-10-09T02:30:00Z', durationMinutes: 60 },
-      // Sat 10 Oct — qualifying + Top 10 Shootout
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-10T00:00:00Z', durationMinutes: 40 },
-      { type: 'qualifying', label: 'Top 10 Shootout', startUtc: '2026-10-10T05:00:00Z', durationMinutes: 60 },
-      // Sun 11 Oct — 1000 km Great Race
-      { type: 'warmup', label: 'Warmup', startUtc: '2026-10-10T22:00:00Z', durationMinutes: 20 },
-      { type: 'endurance', label: 'Bathurst 1000', startUtc: '2026-10-11T00:15:00Z', durationMinutes: 420 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-08T02:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 2 (co-drivers)', startUtc: '2026-10-08T04:45:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 3', startUtc: '2026-10-08T23:05:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 4', startUtc: '2026-10-09T02:15:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-09T05:15:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'Practice 5 (co-drivers)', startUtc: '2026-10-09T23:05:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 6', startUtc: '2026-10-10T02:10:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Top 10 Shootout', startUtc: '2026-10-10T06:05:00Z', durationMinutes: 45 },
+      { type: 'warmup', label: 'Warm Up', startUtc: '2026-10-10T21:30:00Z', durationMinutes: 20 },
+      { type: 'endurance', label: 'Bathurst 1000', startUtc: '2026-10-11T00:30:00Z', durationMinutes: 400 },
     ],
   },
   {
-    // Round 12: Boost Mobile Gold Coast 500 — Surfers Paradise Street Circuit, 23–25 Oct 2026 (QLD, AEST UTC+10)
-    // Finals series opener
+    // Round 12: Gold Coast 500 — 23–25 Oct 2026 (QLD, AEST UTC+10). Two 250 km races (85 laps). Source: supercars.com / v8sleuth track schedule
     id: 'sc-2026-gold-coast',
     round: 12,
     name: 'Boost Mobile Gold Coast 500',
     circuitId: 'surfers-paradise-street-circuit',
     sessions: [
-      // Fri 23 Oct ~10:00 AEST = 00:00 UTC
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-23T00:00:00Z', durationMinutes: 45 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-10-23T03:30:00Z', durationMinutes: 45 },
-      // Sat 24 Oct
-      { type: 'qualifying', label: 'Qualifying (Race 1)', startUtc: '2026-10-24T00:00:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-10-24T03:30:00Z', durationMinutes: 75 },
-      // Sun 25 Oct
-      { type: 'qualifying', label: 'Qualifying (Race 2)', startUtc: '2026-10-25T00:00:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-10-25T03:30:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-23T01:45:00Z', durationMinutes: 25 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-10-23T03:50:00Z', durationMinutes: 25 },
+      { type: 'qualifying', label: 'Qualifying (Race 1)', startUtc: '2026-10-23T06:05:00Z', durationMinutes: 30 },
+      { type: 'qualifying', label: 'Top 10 Shootout (Race 1)', startUtc: '2026-10-24T02:35:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race 1 (250 km)', startUtc: '2026-10-24T05:15:00Z', durationMinutes: 125 },
+      { type: 'qualifying', label: 'Qualifying (Race 2)', startUtc: '2026-10-25T01:20:00Z', durationMinutes: 32 },
+      { type: 'qualifying', label: 'Top 10 Shootout (Race 2)', startUtc: '2026-10-25T02:05:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race 2 (250 km)', startUtc: '2026-10-25T04:45:00Z', durationMinutes: 125 },
     ],
   },
   {
-    // Round 13: Penrite Oil Sandown 500 — Sandown Raceway, 6–8 Nov 2026 (VIC, AEDT UTC+11)
-    // Source: supercars.com news 2026 calendar announcement
+    // Round 13: Sandown 500 — 6–8 Nov 2026 (VIC, AEDT UTC+11). Two 250 km races (79 laps). Source: supercars.com track schedule
     id: 'sc-2026-sandown',
     round: 13,
     name: 'Penrite Oil Sandown 500',
     circuitId: 'sandown-raceway',
     sessions: [
-      // Fri 6 Nov
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-11-05T22:30:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-11-06T02:30:00Z', durationMinutes: 60 },
-      // Sat 7 Nov
-      { type: 'practice', label: 'Practice 3', startUtc: '2026-11-06T22:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-07T02:00:00Z', durationMinutes: 40 },
-      // Sun 8 Nov — 500 km enduro
-      { type: 'endurance', label: 'Sandown 500', startUtc: '2026-11-08T01:30:00Z', durationMinutes: 240 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-11-06T03:40:00Z', durationMinutes: 25 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-11-06T04:25:00Z', durationMinutes: 25 },
+      { type: 'qualifying', label: 'Qualifying (Race 1)', startUtc: '2026-11-07T00:20:00Z', durationMinutes: 20 },
+      { type: 'qualifying', label: 'Top 10 Shootout (Race 1)', startUtc: '2026-11-07T01:05:00Z', durationMinutes: 25 },
+      { type: 'race', label: 'Race 1 (250 km)', startUtc: '2026-11-07T04:30:00Z', durationMinutes: 115 },
+      { type: 'qualifying', label: 'Qualifying (Race 2)', startUtc: '2026-11-08T00:20:00Z', durationMinutes: 20 },
+      { type: 'qualifying', label: 'Top 10 Shootout (Race 2)', startUtc: '2026-11-08T01:05:00Z', durationMinutes: 25 },
+      { type: 'race', label: 'Race 2 (250 km)', startUtc: '2026-11-08T04:30:00Z', durationMinutes: 115 },
     ],
   },
   {
-    // Round 14: bp Adelaide Grand Final — Adelaide Street Circuit, 26–29 Nov 2026 (SA, ACDT UTC+10:30)
-    // Season finale (4 days). Source: supercars.com news 2026 calendar announcement
+    // Round 14: Adelaide Grand Final — 26–29 Nov 2026 (SA, ACDT UTC+10:30). Races of 100 / 250 / 250 km. Source: v8sleuth / supercars.com track schedule
     id: 'sc-2026-adelaide',
     round: 14,
     name: 'bp Adelaide Grand Final',
     circuitId: 'adelaide-street-circuit',
     sessions: [
-      // Thu 26 Nov ~13:00 ACDT = 02:30 UTC
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-11-26T02:30:00Z', durationMinutes: 45 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-11-26T05:30:00Z', durationMinutes: 45 },
-      // Fri 27 Nov
-      { type: 'qualifying', label: 'Qualifying (Race 1)', startUtc: '2026-11-27T01:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-11-27T05:00:00Z', durationMinutes: 75 },
-      // Sat 28 Nov
-      { type: 'qualifying', label: 'Qualifying (Race 2)', startUtc: '2026-11-28T01:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-11-28T05:00:00Z', durationMinutes: 75 },
-      // Sun 29 Nov — Grand Final 250 km
-      { type: 'qualifying', label: 'Knockout Qualifying', startUtc: '2026-11-29T01:30:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Grand Final', startUtc: '2026-11-29T05:00:00Z', durationMinutes: 130 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-11-26T04:45:00Z', durationMinutes: 25 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-11-26T23:30:00Z', durationMinutes: 25 },
+      { type: 'qualifying', label: 'Qualifying (Race 1)', startUtc: '2026-11-27T02:40:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1 (100 km)', startUtc: '2026-11-27T05:50:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying (Race 2)', startUtc: '2026-11-28T01:15:00Z', durationMinutes: 24 },
+      { type: 'qualifying', label: 'Top 10 Shootout (Race 2)', startUtc: '2026-11-28T02:05:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race 2 (250 km)', startUtc: '2026-11-28T04:50:00Z', durationMinutes: 125 },
+      { type: 'qualifying', label: 'Qualifying (Race 3)', startUtc: '2026-11-29T01:15:00Z', durationMinutes: 24 },
+      { type: 'qualifying', label: 'Top 10 Shootout (Race 3)', startUtc: '2026-11-29T02:05:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race 3 (250 km)', startUtc: '2026-11-29T04:45:00Z', durationMinutes: 125 },
     ],
   },
 ]

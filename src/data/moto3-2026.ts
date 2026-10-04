@@ -1,8 +1,8 @@
 import { RaceEvent } from '@/lib/types'
 
 // Moto3 2026 calendar — 22 rounds, all session times in UTC
-// Verified from motogp.com/en/calendar/2026 and per-round official time schedules
-// Weekend format: FP1 (Fri AM), Practice (Fri PM), Qualifying Q1+Q2 (Sat), Race (Sun — earliest race of the day)
+// Source: motogp.com official API (api.motogp.pulselive.com), re-verified Oct 2026
+// Weekend format: FP1 + Practice (Fri), FP2 + Qualifying Q1+Q2 (Sat), Race (Sun — earliest race of the day)
 // Note: Moto3 warm-up was abolished from the 2024 season — not included
 export const moto32026: RaceEvent[] = [
   {
@@ -13,6 +13,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-02-27T02:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-02-27T06:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-02-28T01:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-02-28T05:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-03-01T05:00:00Z', durationMinutes: 40 },
     ],
@@ -23,10 +24,11 @@ export const moto32026: RaceEvent[] = [
     name: 'Moto3 Brazil',
     circuitId: 'autodromo-ayrton-senna',
     sessions: [
-      { type: 'practice', label: 'FP1', startUtc: '2026-03-20T12:00:00Z', durationMinutes: 35 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-03-20T16:15:00Z', durationMinutes: 50 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-21T15:45:00Z', durationMinutes: 35 },
-      { type: 'race', label: 'Race', startUtc: '2026-03-22T15:00:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'FP1', startUtc: '2026-03-20T13:00:00Z', durationMinutes: 35 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-03-20T17:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-03-21T11:40:00Z', durationMinutes: 35 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-21T20:10:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race', startUtc: '2026-03-22T15:30:00Z', durationMinutes: 40 },
     ],
   },
   {
@@ -37,8 +39,9 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-03-27T14:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-03-27T18:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-03-28T13:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-28T17:45:00Z', durationMinutes: 35 },
-      { type: 'race', label: 'Race', startUtc: '2026-03-29T16:00:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Race', startUtc: '2026-03-29T17:00:00Z', durationMinutes: 40 },
     ],
   },
   {
@@ -49,6 +52,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-04-24T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-04-24T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-04-25T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-25T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-04-26T09:00:00Z', durationMinutes: 40 },
     ],
@@ -61,8 +65,9 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-05-08T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-05-08T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-05-09T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-09T10:45:00Z', durationMinutes: 35 },
-      { type: 'race', label: 'Race', startUtc: '2026-05-10T09:00:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Race', startUtc: '2026-05-10T09:05:00Z', durationMinutes: 40 },
     ],
   },
   {
@@ -73,6 +78,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-05-15T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-05-15T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-05-16T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-16T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-05-17T09:00:00Z', durationMinutes: 40 },
     ],
@@ -85,6 +91,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-05-29T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-05-29T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-05-30T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-30T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-05-31T09:00:00Z', durationMinutes: 40 },
     ],
@@ -97,6 +104,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-06-05T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-06-05T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-06-06T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-06T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-06-07T09:00:00Z', durationMinutes: 40 },
     ],
@@ -109,6 +117,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-06-19T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-06-19T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-06-20T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-20T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-06-21T09:00:00Z', durationMinutes: 40 },
     ],
@@ -120,7 +129,8 @@ export const moto32026: RaceEvent[] = [
     circuitId: 'tt-circuit-assen',
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-06-26T07:00:00Z', durationMinutes: 35 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-06-26T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-06-26T11:20:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-06-27T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-27T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-06-28T09:00:00Z', durationMinutes: 40 },
     ],
@@ -133,6 +143,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-07-10T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-07-10T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-07-11T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-11T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-07-12T09:00:00Z', durationMinutes: 40 },
     ],
@@ -143,10 +154,11 @@ export const moto32026: RaceEvent[] = [
     name: 'Moto3 Great Britain',
     circuitId: 'silverstone-circuit',
     sessions: [
-      { type: 'practice', label: 'FP1', startUtc: '2026-08-07T08:00:00Z', durationMinutes: 35 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-07T12:15:00Z', durationMinutes: 50 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-08T11:45:00Z', durationMinutes: 35 },
-      { type: 'race', label: 'Race', startUtc: '2026-08-09T10:00:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'FP1', startUtc: '2026-08-07T09:00:00Z', durationMinutes: 35 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-08-07T13:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-08-08T08:40:00Z', durationMinutes: 35 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-08T12:45:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race', startUtc: '2026-08-09T13:30:00Z', durationMinutes: 40 },
     ],
   },
   {
@@ -157,6 +169,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-08-28T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-08-28T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-08-29T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-29T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-08-30T09:00:00Z', durationMinutes: 40 },
     ],
@@ -169,6 +182,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-09-11T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-09-11T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-09-12T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-09-13T09:00:00Z', durationMinutes: 40 },
     ],
@@ -181,6 +195,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-09-18T07:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-09-18T11:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-09-19T06:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-19T10:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-09-20T09:00:00Z', durationMinutes: 40 },
     ],
@@ -193,6 +208,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-10-02T00:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-10-02T04:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-10-02T23:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-03T03:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-10-04T02:00:00Z', durationMinutes: 40 },
     ],
@@ -205,8 +221,9 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-10-09T01:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-10-09T05:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-10-10T00:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-10T04:45:00Z', durationMinutes: 35 },
-      { type: 'race', label: 'Race', startUtc: '2026-10-11T03:00:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Race', startUtc: '2026-10-11T04:00:00Z', durationMinutes: 40 },
     ],
   },
   {
@@ -217,6 +234,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-10-22T22:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-10-23T02:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-10-23T21:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-24T01:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-10-25T00:00:00Z', durationMinutes: 40 },
     ],
@@ -229,6 +247,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-10-30T01:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-10-30T05:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-10-31T00:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-31T04:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-11-01T03:00:00Z', durationMinutes: 40 },
     ],
@@ -239,9 +258,10 @@ export const moto32026: RaceEvent[] = [
     name: 'Moto3 Qatar',
     circuitId: 'lusail-international-circuit',
     sessions: [
-      { type: 'practice', label: 'FP1', startUtc: '2026-11-06T10:00:00Z', durationMinutes: 35 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-11-06T14:15:00Z', durationMinutes: 50 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-07T13:45:00Z', durationMinutes: 35 },
+      { type: 'practice', label: 'FP1', startUtc: '2026-11-06T11:00:00Z', durationMinutes: 35 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-11-06T15:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-11-07T10:30:00Z', durationMinutes: 35 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-07T14:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-11-08T14:00:00Z', durationMinutes: 40 },
     ],
   },
@@ -251,10 +271,11 @@ export const moto32026: RaceEvent[] = [
     name: 'Moto3 Portugal',
     circuitId: 'algarve-international-circuit',
     sessions: [
-      { type: 'practice', label: 'FP1', startUtc: '2026-11-20T08:00:00Z', durationMinutes: 35 },
-      { type: 'practice', label: 'Practice', startUtc: '2026-11-20T12:15:00Z', durationMinutes: 50 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-21T11:45:00Z', durationMinutes: 35 },
-      { type: 'race', label: 'Race', startUtc: '2026-11-22T11:00:00Z', durationMinutes: 40 },
+      { type: 'practice', label: 'FP1', startUtc: '2026-11-20T09:00:00Z', durationMinutes: 35 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-11-20T13:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-11-21T08:40:00Z', durationMinutes: 35 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-21T12:45:00Z', durationMinutes: 35 },
+      { type: 'race', label: 'Race', startUtc: '2026-11-22T14:30:00Z', durationMinutes: 40 },
     ],
   },
   {
@@ -265,6 +286,7 @@ export const moto32026: RaceEvent[] = [
     sessions: [
       { type: 'practice', label: 'FP1', startUtc: '2026-11-27T08:00:00Z', durationMinutes: 35 },
       { type: 'practice', label: 'Practice', startUtc: '2026-11-27T12:15:00Z', durationMinutes: 50 },
+      { type: 'practice', label: 'FP2', startUtc: '2026-11-28T07:40:00Z', durationMinutes: 35 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-11-28T11:45:00Z', durationMinutes: 35 },
       { type: 'race', label: 'Race', startUtc: '2026-11-29T10:00:00Z', durationMinutes: 40 },
     ],

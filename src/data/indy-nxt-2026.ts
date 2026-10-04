@@ -3,7 +3,7 @@ import { RaceEvent } from '@/lib/types'
 // Indy NXT by Firestone 2026 calendar — 17 races at 12 tracks
 // Source: indynxt.com/Schedule/2026, FOX Sports schedule release
 // Times converted from ET to UTC (EST = UTC-5 before Mar 8; EDT = UTC-4 after).
-// Where official practice/qualifying times have not been published per round, only race is listed.
+// Session times verified Oct 2026 against indynxt.com per-round schedules.
 export const indyNxt2026: RaceEvent[] = [
   {
     id: 'indy-nxt-2026-st-petersburg',
@@ -118,6 +118,8 @@ export const indyNxt2026: RaceEvent[] = [
     name: 'Indy NXT Honda Indy 200 at Mid-Ohio — Race 1',
     circuitId: 'mid-ohio-sports-car-course',
     sessions: [
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-03T18:00:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-04T13:00:00Z', durationMinutes: 45 },
       { type: 'race', label: 'Race 1', startUtc: '2026-07-04T17:00:00Z', durationMinutes: 60 },
     ],
   },
@@ -135,9 +137,10 @@ export const indyNxt2026: RaceEvent[] = [
     round: 13,
     name: 'Indy NXT Music City Grand Prix',
     circuitId: 'nashville-superspeedway',
-    // Sunday July 19, 2026 — race start time TBA per official schedule
     sessions: [
-      { type: 'race', label: 'Race', startUtc: '2026-07-19T22:00:00Z', durationMinutes: 75, tba: true },
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-18T15:30:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-18T20:30:00Z', durationMinutes: 45 },
+      { type: 'race', label: 'Race', startUtc: '2026-07-19T17:00:00Z', durationMinutes: 75 },
     ],
   },
   {
@@ -146,6 +149,9 @@ export const indyNxt2026: RaceEvent[] = [
     name: 'Indy NXT Grand Prix of Portland',
     circuitId: 'portland-international-raceway',
     sessions: [
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-07T20:30:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-08T16:00:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-08T19:00:00Z', durationMinutes: 45 },
       { type: 'race', label: 'Race', startUtc: '2026-08-09T18:00:00Z', durationMinutes: 60 },
     ],
   },
@@ -155,6 +161,8 @@ export const indyNxt2026: RaceEvent[] = [
     name: 'Indy NXT at Milwaukee Mile',
     circuitId: 'milwaukee-mile',
     sessions: [
+      { type: 'practice', label: 'Practice', startUtc: '2026-08-29T13:00:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-29T16:30:00Z', durationMinutes: 45 },
       { type: 'race', label: 'Race', startUtc: '2026-08-30T15:00:00Z', durationMinutes: 60 },
     ],
   },
@@ -164,6 +172,9 @@ export const indyNxt2026: RaceEvent[] = [
     name: 'Indy NXT Grand Prix of Monterey — Race 1',
     circuitId: 'weathertech-raceway-laguna-seca',
     sessions: [
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-04T20:00:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-09-04T22:30:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-05T19:00:00Z', durationMinutes: 45 },
       { type: 'race', label: 'Race 1', startUtc: '2026-09-05T22:30:00Z', durationMinutes: 60 },
     ],
   },

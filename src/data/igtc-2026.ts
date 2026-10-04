@@ -1,7 +1,8 @@
 import { RaceEvent } from '@/lib/types'
 
 // Intercontinental GT Challenge 2026 — 5 rounds
-// Source: intercontinentalgtchallenge.com — verified March 2026
+// Source: intercontinentalgtchallenge.com event timetables, re-verified Oct 2026 (UTC computed from local times;
+// the site's GMT column ignores Australian DST). Spa follows the newer GTWC Europe timetable (Draft 6).
 export const igtc2026: RaceEvent[] = [
   {
     id: 'igtc-2026-bathurst',
@@ -28,8 +29,9 @@ export const igtc2026: RaceEvent[] = [
     sessions: [
       { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-05-14T11:15:00Z', durationMinutes: 120 },
       { type: 'qualifying', label: 'Qualifying 2 (Night)', startUtc: '2026-05-14T18:00:00Z', durationMinutes: 210 },
-      { type: 'qualifying', label: 'Top Qualifying 1', startUtc: '2026-05-15T06:50:00Z', durationMinutes: 35 },
-      { type: 'qualifying', label: 'Top Qualifying 2', startUtc: '2026-05-15T07:45:00Z', durationMinutes: 35 },
+      { type: 'qualifying', label: 'Top Qualifying 1', startUtc: '2026-05-15T08:15:00Z', durationMinutes: 35 },
+      { type: 'qualifying', label: 'Top Qualifying 2', startUtc: '2026-05-15T09:00:00Z', durationMinutes: 35 },
+      { type: 'qualifying', label: 'Qualifying 3', startUtc: '2026-05-15T10:00:00Z', durationMinutes: 90 },
       { type: 'qualifying', label: 'Top Qualifying 3', startUtc: '2026-05-15T11:35:00Z', durationMinutes: 60 },
       { type: 'warmup', label: 'Warmup', startUtc: '2026-05-16T08:00:00Z', durationMinutes: 75 },
       { type: 'endurance', label: '24h Nürburgring', startUtc: '2026-05-16T13:00:00Z', durationMinutes: 1440 },
@@ -41,10 +43,15 @@ export const igtc2026: RaceEvent[] = [
     name: 'CrowdStrike 24 Hours of Spa',
     circuitId: 'circuit-de-spa-francorchamps',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-06-25T09:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-06-25T14:00:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-26T16:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Super Pole', startUtc: '2026-06-26T18:00:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-06-25T08:10:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-06-25T14:10:00Z', durationMinutes: 120 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-06-25T17:45:00Z', durationMinutes: 20 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-06-25T18:05:00Z', durationMinutes: 30 },
+      { type: 'qualifying', label: 'Qualifying 3', startUtc: '2026-06-25T18:35:00Z', durationMinutes: 30 },
+      { type: 'qualifying', label: 'Qualifying 4', startUtc: '2026-06-25T19:05:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Night Practice', startUtc: '2026-06-25T20:55:00Z', durationMinutes: 40 },
+      { type: 'qualifying', label: 'Super Pole', startUtc: '2026-06-26T13:05:00Z', durationMinutes: 50 },
+      { type: 'warmup', label: 'Warm-up', startUtc: '2026-06-26T17:20:00Z', durationMinutes: 30 },
       { type: 'endurance', label: '24 Hours of Spa', startUtc: '2026-06-27T14:30:00Z', durationMinutes: 1440 },
     ],
   },
@@ -54,10 +61,14 @@ export const igtc2026: RaceEvent[] = [
     name: 'Suzuka 1000km',
     circuitId: 'suzuka-international-racing-course',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-11T01:00:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-09-11T06:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-12T01:00:00Z', durationMinutes: 45 },
-      { type: 'endurance', label: 'Suzuka 1000km', startUtc: '2026-09-13T01:00:00Z', durationMinutes: 480 },
+      { type: 'practice', label: 'Test Session 1', startUtc: '2026-09-11T00:10:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Test Session 2', startUtc: '2026-09-11T03:10:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Night Practice', startUtc: '2026-09-11T08:50:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Pre-Qualifying', startUtc: '2026-09-12T01:40:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-09-12T08:40:00Z', durationMinutes: 20 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-09-12T09:02:00Z', durationMinutes: 20 },
+      { type: 'qualifying', label: 'Qualifying 3', startUtc: '2026-09-12T09:25:00Z', durationMinutes: 20 },
+      { type: 'endurance', label: 'Suzuka 1000km', startUtc: '2026-09-13T03:50:00Z', durationMinutes: 480 },
     ],
   },
   {
@@ -66,13 +77,14 @@ export const igtc2026: RaceEvent[] = [
     name: 'Indianapolis 8 Hour',
     circuitId: 'indianapolis-motor-speedway-road-course',
     sessions: [
-      { type: 'practice', label: 'Test Session 2', startUtc: '2026-10-08T14:20:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Test Session', startUtc: '2026-10-08T22:25:00Z', durationMinutes: 30 },
-      { type: 'practice', label: 'Free Practice', startUtc: '2026-10-08T22:55:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Test Session 1', startUtc: '2026-10-07T19:25:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Test Session 2', startUtc: '2026-10-08T14:45:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Bronze Test', startUtc: '2026-10-08T22:30:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Free Practice', startUtc: '2026-10-08T23:00:00Z', durationMinutes: 90 },
       { type: 'practice', label: 'Pre-Qualifying', startUtc: '2026-10-09T13:50:00Z', durationMinutes: 90 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-09T19:57:00Z', durationMinutes: 38 },
-      { type: 'qualifying', label: 'Pole Shootout', startUtc: '2026-10-09T21:45:00Z', durationMinutes: 15 },
-      { type: 'endurance', label: 'Indianapolis 8 Hour', startUtc: '2026-10-10T16:20:00Z', durationMinutes: 480 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-09T19:35:00Z', durationMinutes: 65 },
+      { type: 'qualifying', label: 'Pole Shootout', startUtc: '2026-10-09T21:35:00Z', durationMinutes: 15 },
+      { type: 'endurance', label: 'Indianapolis 8 Hour', startUtc: '2026-10-10T16:30:00Z', durationMinutes: 480 },
     ],
   },
 ]

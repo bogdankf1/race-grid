@@ -2,7 +2,7 @@ import { RaceEvent } from '@/lib/types'
 
 // NLS (Nurburgring Langstrecken-Serie) 2026 — 50th anniversary season
 // 10 races at 8 events, all at Nurburgring Nordschleife
-// Source: nuerburgring-langstrecken-serie.de official calendar
+// Source: nuerburgring-langstrecken-serie.de, 24h-rennen.de official timetables — re-verified Oct 2026
 export const nls2026: RaceEvent[] = [
   // NLS 1 cancelled due to weather — removed from schedule
   {
@@ -42,6 +42,7 @@ export const nls2026: RaceEvent[] = [
     circuitId: 'nurburgring-nordschleife',
     sessions: [
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-19T06:15:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Top Qualifying', startUtc: '2026-04-19T08:40:00Z', durationMinutes: 60 },
       { type: 'endurance', label: '4h Qualifying Race 2', startUtc: '2026-04-19T11:00:00Z', durationMinutes: 240 },
     ],
   },

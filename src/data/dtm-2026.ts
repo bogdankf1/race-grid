@@ -1,7 +1,7 @@
 import { RaceEvent } from '@/lib/types'
 
 // DTM 2026 — 8 rounds, 2 races per weekend
-// Source: 51gt3.com, autosport.com
+// Source: dtm.com per-round timetables (local CEST, converted to UTC) — re-verified Oct 2026
 export const dtm2026: RaceEvent[] = [
   {
     id: 'dtm-2026-red-bull-ring',
@@ -9,15 +9,13 @@ export const dtm2026: RaceEvent[] = [
     name: 'Red Bull Ring',
     circuitId: 'red-bull-ring',
     sessions: [
-      // Source: redbullring.com official DTM 2026 programme. Local CEST (UTC+2).
-      // FP1 11:30 → 09:30Z, FP2 16:00 → 14:00Z, Q1 Sat 09:40 → 07:40Z,
-      // Race 1 13:30 → 11:30Z, Q2 Sun 09:50 → 07:50Z, Race 2 13:30 → 11:30Z.
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-24T09:30:00Z', durationMinutes: 55 },
-      { type: 'practice', label: 'Practice 2', startUtc: '2026-04-24T14:00:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-04-25T07:40:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-04-25T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-04-26T07:50:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-04-26T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-24T09:25:00Z', durationMinutes: 35 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-04-24T11:15:00Z', durationMinutes: 20 },
+      { type: 'practice', label: 'Practice 3', startUtc: '2026-04-24T15:00:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-04-25T08:40:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-04-25T12:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-04-26T08:30:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-04-26T12:30:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -26,11 +24,12 @@ export const dtm2026: RaceEvent[] = [
     name: 'Zandvoort',
     circuitId: 'circuit-zandvoort',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-22T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-05-23T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-05-23T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-05-24T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-05-24T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-22T11:00:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-22T15:20:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-05-23T08:45:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-05-23T12:35:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-05-24T08:40:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-05-24T12:30:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -39,11 +38,12 @@ export const dtm2026: RaceEvent[] = [
     name: 'Lausitzring',
     circuitId: 'lausitzring',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-06-19T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-06-20T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-06-20T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-06-21T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-06-21T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-06-19T10:40:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-06-19T15:10:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-06-20T08:00:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-06-20T12:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-06-21T08:05:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-06-21T12:30:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -52,11 +52,12 @@ export const dtm2026: RaceEvent[] = [
     name: 'Norisring',
     circuitId: 'norisring',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-03T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-04T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-07-04T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-05T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-07-05T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-03T10:30:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-07-03T15:00:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1 (Groups A/B)', startUtc: '2026-07-04T08:35:00Z', durationMinutes: 45 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-07-04T12:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 2 (Groups B/A)', startUtc: '2026-07-05T08:10:00Z', durationMinutes: 45 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-07-05T12:45:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -65,11 +66,12 @@ export const dtm2026: RaceEvent[] = [
     name: 'Oschersleben',
     circuitId: 'motorsport-arena-oschersleben',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-24T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-25T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-07-25T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-26T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-07-26T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-24T10:00:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-07-24T14:35:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-25T08:45:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-07-25T12:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-26T08:25:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-07-26T12:30:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -78,11 +80,12 @@ export const dtm2026: RaceEvent[] = [
     name: 'Nurburgring',
     circuitId: 'nurburgring',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-14T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-08-15T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-08-15T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-08-16T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-08-16T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-14T10:30:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-14T15:00:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-08-15T08:55:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-08-15T12:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-08-16T08:10:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-08-16T12:30:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -91,11 +94,12 @@ export const dtm2026: RaceEvent[] = [
     name: 'Sachsenring',
     circuitId: 'sachsenring',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-11T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-09-12T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-09-12T11:30:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-09-13T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-09-13T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-11T10:30:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-09-11T14:50:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-09-12T08:55:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-09-12T12:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-09-13T08:00:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-09-13T12:30:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -104,11 +108,12 @@ export const dtm2026: RaceEvent[] = [
     name: 'Hockenheimring',
     circuitId: 'hockenheimring',
     sessions: [
-      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-09T08:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-10-10T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-10-10T11:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-10-09T11:05:00Z', durationMinutes: 55 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-10-09T14:30:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-10-10T08:35:00Z', durationMinutes: 20 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-10-10T12:30:00Z', durationMinutes: 60 },
       { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-10-11T08:30:00Z', durationMinutes: 20 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-10-11T11:30:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-10-11T15:30:00Z', durationMinutes: 60 },
     ],
   },
 ]
