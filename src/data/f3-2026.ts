@@ -1,9 +1,7 @@
 import { RaceEvent } from '@/lib/types'
 
 // FIA Formula 3 2026 calendar — 9 rounds supporting F1
-// Source: fiaformula3.com, f3calendar.com — verified April 2026
-// F3 format: Practice (45 min), Qualifying (30 min), Sprint Race (40 min), Feature Race (45 min)
-// F3 runs on F1 support weekends alongside F2
+// Source: sportstimes/f1 schedule data (matches fiaformula3.com), session times in UTC — re-verified Oct 2026
 export const f32026: RaceEvent[] = [
   {
     id: 'f3-2026-melbourne',
@@ -11,10 +9,10 @@ export const f32026: RaceEvent[] = [
     name: 'Melbourne',
     circuitId: 'albert-park-circuit',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-03-05T21:30:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-06T02:05:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-03-07T01:50:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-03-07T22:55:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-03-05T21:50:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-06T03:00:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-03-07T00:15:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-03-07T21:50:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -23,10 +21,10 @@ export const f32026: RaceEvent[] = [
     name: 'Monaco',
     circuitId: 'circuit-de-monaco',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-06-05T08:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-05T12:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-06-06T07:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-06-07T07:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-06-04T11:25:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-05T09:05:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-06-06T08:45:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-06-07T05:45:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -35,10 +33,10 @@ export const f32026: RaceEvent[] = [
     name: 'Barcelona',
     circuitId: 'circuit-de-barcelona-catalunya',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-06-12T08:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-12T12:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-06-13T07:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-06-14T07:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-06-12T07:55:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-12T13:00:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-06-13T08:05:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-06-14T06:40:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -47,10 +45,10 @@ export const f32026: RaceEvent[] = [
     name: 'Spielberg',
     circuitId: 'red-bull-ring',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-06-26T08:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-26T12:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-06-27T07:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-06-28T07:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-06-26T07:55:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-26T13:00:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-06-27T08:05:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-06-28T06:40:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -59,10 +57,10 @@ export const f32026: RaceEvent[] = [
     name: 'Silverstone',
     circuitId: 'silverstone-circuit',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-03T09:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-03T13:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-07-04T08:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-07-05T08:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-03T07:50:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-03T13:00:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-07-04T08:35:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-07-05T07:25:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -71,10 +69,10 @@ export const f32026: RaceEvent[] = [
     name: 'Spa-Francorchamps',
     circuitId: 'circuit-de-spa-francorchamps',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-17T08:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-17T12:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-07-18T07:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-07-19T07:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-17T07:55:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-17T13:00:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-07-18T08:00:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-07-19T06:30:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -83,10 +81,10 @@ export const f32026: RaceEvent[] = [
     name: 'Budapest',
     circuitId: 'hungaroring',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-24T08:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-24T12:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-07-25T07:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-07-26T07:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-07-24T07:55:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-24T13:00:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-07-25T08:05:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-07-26T06:40:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -95,10 +93,10 @@ export const f32026: RaceEvent[] = [
     name: 'Monza',
     circuitId: 'autodromo-nazionale-monza',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-09-04T08:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-04T12:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-09-05T07:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-09-06T07:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-09-04T06:35:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-04T12:00:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-09-05T07:30:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-09-06T06:15:00Z', durationMinutes: 45 },
     ],
   },
   {
@@ -107,10 +105,10 @@ export const f32026: RaceEvent[] = [
     name: 'Madrid',
     circuitId: 'circuito-de-madrid',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-09-11T08:05:00Z', durationMinutes: 45 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-11T12:15:00Z', durationMinutes: 30 },
-      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-09-12T07:00:00Z', durationMinutes: 40 },
-      { type: 'race', label: 'Feature Race', startUtc: '2026-09-13T07:25:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-09-11T07:55:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-11T16:25:00Z', durationMinutes: 30 },
+      { type: 'sprint', label: 'Sprint Race', startUtc: '2026-09-12T09:05:00Z', durationMinutes: 40 },
+      { type: 'race', label: 'Feature Race', startUtc: '2026-09-13T07:45:00Z', durationMinutes: 45 },
     ],
   },
 ]
