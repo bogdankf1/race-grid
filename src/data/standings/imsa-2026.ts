@@ -1,41 +1,54 @@
 import type { SeasonStandings } from './types'
 
-// IMSA WeatherTech 2026 standings — GTP, GTD Pro, GTD — verified from autohebdof1.com and en.wikipedia.org (after Round 5 Detroit Sprint)
+// IMSA WeatherTech 2026 standings — GTP, GTD Pro, GTD — verified from en.wikipedia.org/wiki/2026_IMSA_SportsCar_Championship (after Round 10 Petit Le Mans, 3 Oct 2026; season complete).
+// imsa.com/weathertech/standings only showed totals through Round 9 (Indianapolis) at the time of writing (Petit Le Mans column still 0), so the full-season figures come from Wikipedia.
+// One first-listed driver per crew per runbook convention (crews with identical points are merged in the source). Top 10 per class.
+// Wins counted from race results data (class wins).
 export const imsaStandings2026: SeasonStandings = {
   className: 'GTP',
   drivers: [
-    { position: 1, driverId: 'aitken', teamId: 'whelen-engineering', points: 1760, wins: 1 },
-    { position: 2, driverId: 'heinrich', teamId: 'porsche-penske', points: 1616, wins: 2 },
-    { position: 3, driverId: 'nasr', teamId: 'porsche-penske', points: 1606, wins: 2 },
-    { position: 3, driverId: 'andlauer', teamId: 'porsche-penske', points: 1606, wins: 2 },
-    { position: 5, driverId: 'bamber', teamId: 'whelen-engineering', points: 1412, wins: 1 },
+    { position: 1, driverId: 'aitken', teamId: 'whelen-engineering', points: 3020, wins: 2 },
+    { position: 2, driverId: 'heinrich', teamId: 'jdc-miller', points: 2859, wins: 3 },
+    { position: 3, driverId: 'yelloly', teamId: 'meyer-shank-racing', points: 2723, wins: 1 },
+    { position: 4, driverId: 'estre', teamId: 'porsche-penske', points: 2709, wins: 1 },
+    { position: 5, driverId: 'bamber', teamId: 'whelen-engineering', points: 2672, wins: 2 },
+    { position: 6, driverId: 's-van-der-linde', teamId: 'bmw-wrt', points: 2650, wins: 1 },
+    { position: 7, driverId: 'andlauer', teamId: 'porsche-penske', points: 2638, wins: 2 },
+    { position: 8, driverId: 'deletraz', teamId: 'wayne-taylor-racing', points: 2556, wins: 0 },
+    { position: 9, driverId: 'van-der-helm', teamId: 'jdc-miller', points: 2525, wins: 1 },
+    { position: 10, driverId: 'blomqvist', teamId: 'meyer-shank-racing', points: 2465, wins: 0 },
   ],
   constructors: [],
   otherClasses: [
     {
       className: 'GTD Pro',
-      // Source: en.wikipedia.org/wiki/2026_IMSA_SportsCar_Championship — after Round 5 Detroit Sprint 2026 (GTD Pro contested DAY, SEB, LGA, DET)
-      // One first-listed driver per crew per runbook convention.
-      // Skipped rows (driver/team IDs not in repo): Pos 3 Mies/Vervisch (#65 Ford Racing — team not in teams.ts), Pos 5 Harry King/Tandy (Harry King not in drivers.ts), Pos 6 Caldarelli/Mitchell (#9 Pfaff Motorsports — team not in teams.ts), Pos 7 Barker/Olsen (#64 Ford Racing — team not in teams.ts), Pos 8 Barnicoat/Hawksworth (#14 Vasser Sullivan — team not in teams.ts)
       drivers: [
-        { position: 1, driverId: 'catsburg', teamId: 'corvette-racing', points: 1243, wins: 0 },
-        { position: 2, driverId: 'de-phillippi', teamId: 'paul-miller-racing', points: 1225, wins: 1 },
-        { position: 4, driverId: 'garcia', teamId: 'corvette-racing', points: 1212, wins: 1 },
+        { position: 1, driverId: 'de-phillippi', teamId: 'paul-miller-racing', points: 3012, wins: 1 },
+        { position: 2, driverId: 'caldarelli', teamId: 'pfaff-motorsports', points: 2979, wins: 2 },
+        { position: 3, driverId: 'catsburg', teamId: 'corvette-racing', points: 2949, wins: 0 },
+        { position: 4, driverId: 'harry-king', teamId: 'ao-racing', points: 2921, wins: 0 },
+        { position: 5, driverId: 'mies', teamId: 'ford-multimatic', points: 2825, wins: 1 },
+        { position: 6, driverId: 'barker', teamId: 'ford-multimatic', points: 2821, wins: 1 },
+        { position: 7, driverId: 'barnicoat', teamId: 'vasser-sullivan', points: 2779, wins: 2 },
+        { position: 8, driverId: 'garcia', teamId: 'corvette-racing', points: 2776, wins: 1 },
+        { position: 9, driverId: 'esterson', teamId: 'rll-team-mclaren', points: 2392, wins: 0 },
+        { position: 10, driverId: 'bachler', teamId: 'manthey', points: 1379, wins: 0 },
       ],
       constructors: [],
     },
     {
       className: 'GTD',
-      // Source: en.wikipedia.org/wiki/2026_IMSA_SportsCar_Championship — after Round 4 Laguna Seca 2026 (GTD did not contest Detroit Round 5; contested DAY, SEB, LBH, LGA)
-      // One first-listed driver per crew per runbook convention.
-      // Skipped rows (driver/team IDs not in repo): Pos 3 Pedersen/Telitz (#12 Vasser Sullivan — team not in teams.ts), Pos 6 Iribe/Schandorff (#70 Inception Racing — team not in teams.ts)
       drivers: [
-        { position: 1, driverId: 'e-barrichello', teamId: 'heart-of-racing', points: 1280, wins: 0 },
-        { position: 2, driverId: 'foley', teamId: 'turner-motorsport', points: 1140, wins: 0 },
-        { position: 4, driverId: 'ellis-p', teamId: 'winward-racing', points: 1080, wins: 1 },
-        { position: 5, driverId: 'gamble', teamId: 'heart-of-racing', points: 1040, wins: 0 },
-        { position: 7, driverId: 'formal', teamId: 'wayne-taylor-racing', points: 973, wins: 1 },
-        { position: 8, driverId: 'adelson', teamId: 'wright-motorsports', points: 936, wins: 0 },
+        { position: 1, driverId: 'ellis-p', teamId: 'winward-racing', points: 3078, wins: 5 },
+        { position: 2, driverId: 'foley', teamId: 'turner-motorsport', points: 2843, wins: 1 },
+        { position: 3, driverId: 'e-barrichello', teamId: 'heart-of-racing', points: 2742, wins: 0 },
+        { position: 4, driverId: 'pedersen-b', teamId: 'vasser-sullivan', points: 2677, wins: 0 },
+        { position: 5, driverId: 'm-bell', teamId: '13-autosport', points: 2414, wins: 0 },
+        { position: 6, driverId: 'iribe', teamId: 'inception-racing', points: 2398, wins: 0 },
+        { position: 7, driverId: 'adelson', teamId: 'wright-motorsports', points: 2387, wins: 0 },
+        { position: 8, driverId: 'costa-a', teamId: 'conquest-racing', points: 2363, wins: 0 },
+        { position: 9, driverId: 'schandorff', teamId: 'inception-racing', points: 2268, wins: 0 },
+        { position: 10, driverId: 'gamble', teamId: 'heart-of-racing', points: 2217, wins: 0 },
       ],
       constructors: [],
     },

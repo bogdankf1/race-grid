@@ -1,44 +1,41 @@
 import type { SeasonStandings } from './types'
 
-// IGTC 2026 standings — after Round 2 (24h Nürburgring)
-// Multi-class: Overall (primary) + Independent Cup (sub-classification for FIA Bronze-graded drivers)
-// Source: pitdebrief.com, intercontinentalgtchallenge.com
+// IGTC 2026 standings — verified from en.wikipedia.org/wiki/2026_Intercontinental_GT_Challenge (after Round 4 Suzuka 1000km, 5 Sep 2026; Indianapolis 8 Hour still to run).
+// Multi-class: Overall (primary) + Independent Cup (sub-classification for FIA Bronze-graded drivers). Wins counted from race results.
 export const igtcStandings2026: SeasonStandings = {
   className: 'Overall',
   drivers: [
-    { position: 1, driverId: 'engel', teamId: 'mercedes-amg', points: 50, wins: 2 },
-    { position: 2, driverId: 'martin', teamId: 'mercedes-amg', points: 50, wins: 2 },
-    { position: 3, driverId: 'stolz', teamId: 'mercedes-amg', points: 33, wins: 1 },
-    { position: 4, driverId: 'hesse-m', teamId: 'bmw-m', points: 30, wins: 0 },
-    { position: 5, driverId: 'grenier', teamId: 'mercedes-amg', points: 25, wins: 1 },
-    { position: 6, driverId: 'schiller', teamId: 'mercedes-amg', points: 25, wins: 1 },
-    { position: 7, driverId: 'buus', teamId: 'porsche-motorsport', points: 22, wins: 0 },
-    { position: 8, driverId: 'heinrich', teamId: 'porsche-motorsport', points: 21, wins: 0 },
-    { position: 9, driverId: 'feller', teamId: 'porsche-motorsport', points: 21, wins: 0 },
-    { position: 10, driverId: 'boccolacci', teamId: 'porsche-motorsport', points: 18, wins: 0 },
+    { position: 1, driverId: 'engel', teamId: 'mercedes-amg', points: 68, wins: 2 },
+    { position: 2, driverId: 'stolz', teamId: 'mercedes-amg', points: 61, wins: 1 },
+    { position: 3, driverId: 'martin', teamId: 'mercedes-amg', points: 60, wins: 2 },
+    { position: 4, driverId: 'buus', teamId: 'porsche-motorsport', points: 47, wins: 1 },
+    { position: 5, driverId: 'heinrich', teamId: 'porsche-motorsport', points: 46, wins: 1 },
+    { position: 6, driverId: 'picariello', teamId: 'porsche-motorsport', points: 41, wins: 1 },
+    { position: 7, driverId: 'boccolacci', teamId: 'porsche-motorsport', points: 39, wins: 0 },
+    { position: 8, driverId: 'hesse-m', teamId: 'bmw-m', points: 38, wins: 0 },
+    { position: 9, driverId: 'dan-harper', teamId: 'bmw-m', points: 32, wins: 0 },
+    { position: 10, driverId: 'mies', teamId: 'ford-multimatic', points: 28, wins: 0 },
   ],
   constructors: [
-    { position: 1, teamId: 'mercedes-amg', points: 64, wins: 2 },
-    { position: 2, teamId: 'porsche-motorsport', points: 55, wins: 0 },
-    { position: 3, teamId: 'bmw-m', points: 53, wins: 0 },
-    { position: 4, teamId: 'ferrari', points: 10, wins: 0 },
-    { position: 5, teamId: 'ford-multimatic', points: 10, wins: 0 },
+    { position: 1, teamId: 'porsche-motorsport', points: 132, wins: 2 },
+    { position: 2, teamId: 'mercedes-amg', points: 94, wins: 2 },
+    { position: 3, teamId: 'bmw-m', points: 74, wins: 0 },
+    { position: 4, teamId: 'ferrari', points: 47, wins: 0 },
+    { position: 5, teamId: 'ford-multimatic', points: 32, wins: 0 },
   ],
   otherClasses: [
     {
       className: 'Independent Cup',
-      // Source: https://www.intercontinentalgtchallenge.com/standings?filter_igtcstandingtype_id=7
-      // Sources: pitdebrief.com Round 2 standings article; intercontinentalgtchallenge.com news 1942
+      // Source: en.wikipedia.org/wiki/2026_Intercontinental_GT_Challenge ("Independent Cup" table, after Suzuka).
       // Skipped rows:
-      //  - P6 Johannes Zelger (Tsunami RT, Porsche, 8 pts) — no team ID for Tsunami RT
-      //  - P7 Adrian D'Silva (0 pts, has not competed yet — team unknown)
-      // Note: IGTC 2026 has no Silver/Pro-Am/Am sub-cups; the only sub-classification is Independent Cup.
+      //  - P3 Johannes Zelger (Tsunami RT, Porsche, 33 pts) — no team ID for Tsunami RT
+      //  - P7 Adrian D'Silva (8 pts) — team not identifiable
       drivers: [
-        { position: 1, driverId: 'li-kerong', teamId: 'high-class-racing', points: 50, wins: 2 },
-        { position: 2, driverId: 'habul', teamId: 'sunenergy1-racing', points: 18, wins: 0 },
-        { position: 3, driverId: 'jonathan-hui', teamId: 'ziggo-tempesta', points: 15, wins: 0 },
-        { position: 4, driverId: 'ralf-bohn', teamId: 'herberth-motorsport', points: 12, wins: 0 },
-        { position: 5, driverId: 'jefri-ibrahim', teamId: 'jmr-motorsports', points: 10, wins: 0 },
+        { position: 1, driverId: 'li-kerong', teamId: 'high-class-racing', points: 93, wins: 3 },
+        { position: 2, driverId: 'jefri-ibrahim', teamId: 'jmr-motorsports', points: 50, wins: 1 },
+        { position: 4, driverId: 'ralf-bohn', teamId: 'herberth-motorsport', points: 30, wins: 0 },
+        { position: 5, driverId: 'jonathan-hui', teamId: 'ziggo-tempesta', points: 27, wins: 0 },
+        { position: 6, driverId: 'habul', teamId: 'sunenergy1-racing', points: 18, wins: 0 },
       ],
       constructors: [],
     },

@@ -218,4 +218,243 @@ export const indycarResults2026: Record<string, EventResults> = {
       }],
     },
   },
+  'indycar-2026-road-america': {
+    qualifying: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+            { position: 2, driverIds: ['malukas'], teamId: 'team-penske' },
+            { position: 3, driverIds: ['armstrong'], teamId: 'meyer-shank-racing' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+            { position: 2, driverIds: ['malukas'], teamId: 'team-penske' },
+            { position: 3, driverIds: ['power'], teamId: 'andretti-global' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-mid-ohio': {
+    qualifying: {
+      overall: { driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+            { position: 2, driverIds: ['oward'], teamId: 'arrow-mclaren' },
+            { position: 3, driverIds: ['power'], teamId: 'andretti-global' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['oward'], teamId: 'arrow-mclaren' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['oward'], teamId: 'arrow-mclaren' },
+            { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+            { position: 3, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-nashville': {
+    qualifying: {
+      overall: { driverIds: ['kirkwood'], teamId: 'andretti-global' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+            { position: 2, driverIds: ['newgarden'], teamId: 'team-penske' },
+            { position: 3, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+            { position: 2, driverIds: ['newgarden'], teamId: 'team-penske' },
+            { position: 3, driverIds: ['malukas'], teamId: 'team-penske' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-portland': {
+    qualifying: {
+      overall: { driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+            { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+            { position: 3, driverIds: ['power'], teamId: 'andretti-global' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+            { position: 2, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+            { position: 3, driverIds: ['power'], teamId: 'andretti-global' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-markham': {
+    qualifying: {
+      overall: { driverIds: ['foster'], teamId: 'rahal-letterman-lanigan' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['foster'], teamId: 'rahal-letterman-lanigan' },
+            { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+            { position: 3, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['ericsson'], teamId: 'andretti-global' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['ericsson'], teamId: 'andretti-global' },
+            { position: 2, driverIds: ['grosjean'], teamId: 'dale-coyne-racing' },
+            { position: 3, driverIds: ['power'], teamId: 'andretti-global' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-washington': {
+    qualifying: {
+      overall: { driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+            { position: 2, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+            { position: 3, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['kirkwood'], teamId: 'andretti-global' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+            { position: 2, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+            { position: 3, driverIds: ['power'], teamId: 'andretti-global' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-milwaukee-1': {
+    qualifying: {
+      overall: { driverIds: ['mclaughlin'], teamId: 'team-penske' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+            { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+            { position: 3, driverIds: ['malukas'], teamId: 'team-penske' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['oward'], teamId: 'arrow-mclaren' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['oward'], teamId: 'arrow-mclaren' },
+            { position: 2, driverIds: ['malukas'], teamId: 'team-penske' },
+            { position: 3, driverIds: ['veekay'], teamId: 'juncos-hollinger' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-milwaukee-2': {
+    race: {
+      overall: { driverIds: ['oward'], teamId: 'arrow-mclaren' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['oward'], teamId: 'arrow-mclaren' },
+            { position: 2, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+            { position: 3, driverIds: ['lundgaard'], teamId: 'arrow-mclaren' },
+          ],
+        },
+      ],
+    },
+  },
+  'indycar-2026-laguna-seca': {
+    qualifying: {
+      overall: { driverIds: ['mclaughlin'], teamId: 'team-penske' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+            { position: 2, driverIds: ['palou'], teamId: 'chip-ganassi-racing' },
+            { position: 3, driverIds: ['rosenqvist'], teamId: 'meyer-shank-racing' },
+          ],
+        },
+      ],
+    },
+    race: {
+      overall: { driverIds: ['mclaughlin'], teamId: 'team-penske' },
+      classes: [
+        {
+          className: 'Classification',
+          podium: [
+            { position: 1, driverIds: ['mclaughlin'], teamId: 'team-penske' },
+            { position: 2, driverIds: ['kirkwood'], teamId: 'andretti-global' },
+            { position: 3, driverIds: ['a-rossi'], teamId: 'ed-carpenter-racing' },
+          ],
+        },
+      ],
+    },
+  },
 }

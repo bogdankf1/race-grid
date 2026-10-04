@@ -54,4 +54,78 @@ export const igtcResults2026: Record<string, EventResults> = {
       ],
     },
   },
+  'igtc-2026-spa': {
+    qualifying: {
+      overall: { driverIds: ['rovera', 'mosca', 'nielsen'], teamId: 'af-corse' },
+      classes: [
+        {
+          className: 'Super Pole',
+          podium: [
+            { position: 1, driverIds: ['rovera', 'mosca', 'nielsen'], teamId: 'af-corse' },
+            { position: 2, driverIds: ['fleming', 'l-prette', 'goethe'], teamId: 'garage-59' },
+            { position: 3, driverIds: ['juncadella', 'c-lulham', 'gounon'], teamId: 'mercedes-amg-team-verstappen' },
+          ],
+        },
+      ],
+    },
+    endurance: {
+      overall: { driverIds: ['feller', 'preining', 'buus'], teamId: 'lionspeed' },
+      classes: [
+        {
+          className: 'Overall',
+          podium: [
+            { position: 1, driverIds: ['feller', 'preining', 'buus'], teamId: 'lionspeed' },
+            { position: 2, driverIds: ['auer', 'stolz', 'engel'], teamId: 'mann-filter' },
+            { position: 3, driverIds: ['rovera', 'mosca', 'nielsen'], teamId: 'af-corse' },
+          ],
+        },
+      ],
+    },
+  },
+  'igtc-2026-suzuka': {
+    qualifying: {
+      overall: { driverIds: ['mies', 'olsen', 'vervisch'], teamId: 'miedecke-motorsport-by-team-mpc' },
+      classes: [
+        {
+          className: 'Top 3',
+          podium: [
+            { position: 1, driverIds: ['mies', 'olsen', 'vervisch'], teamId: 'miedecke-motorsport-by-team-mpc' },
+            { position: 2, driverIds: ['nonaka', 'tadasuke-makino', 'shinohara'], teamId: 'ponos-racing' },
+            { position: 3, driverIds: ['ghiretti', 'guven', 'boccolacci'], teamId: 'absolute-racing' },
+          ],
+        },
+      ],
+    },
+    endurance: {
+      overall: { driverIds: ['andlauer', 'heinrich', 'picariello'], teamId: 'absolute-racing' },
+      classes: [
+        {
+          className: 'Overall',
+          podium: [
+            { position: 1, driverIds: ['andlauer', 'heinrich', 'picariello'], teamId: 'absolute-racing' },
+            { position: 2, driverIds: ['mies', 'olsen', 'vervisch'], teamId: 'miedecke-motorsport-by-team-mpc' },
+            { position: 3, driverIds: ['boccolacci', 'ghiretti', 'guven'], teamId: 'absolute-racing' },
+          ],
+        },
+        {
+          className: 'Bronze',
+          podium: [
+            { position: 1, driverIds: ['dan-harper', 'mcintosh', 'thompson-p'], teamId: 'team-wrt' },
+          ],
+        },
+        {
+          className: 'Pro-Am',
+          podium: [
+            { position: 1, driverIds: ['fisichella', 'wakisaka', 'nakanishi'], teamId: 'lm-corsa' },
+          ],
+        },
+        {
+          className: 'Am',
+          podium: [
+            { position: 1, driverIds: ['nishikawa', 'tanaka', 't-tanaka'], teamId: 'runup-sports' },
+          ],
+        },
+      ],
+    },
+  },
 }
