@@ -1,7 +1,8 @@
 import { RaceEvent } from '@/lib/types'
 
 // GT World Challenge Europe 2026 — 5 Endurance Cup + 5 Sprint Cup rounds
-// Source: gt-world-challenge-europe.com (official event timetables, V1)
+// Source: gt-world-challenge-europe.com (official event timetables — GMT column, re-verified Oct 2026)
+// Portimão finale moved to Saturday evening (clash with WEC Barcelona)
 export const gtwc2026: RaceEvent[] = [
   {
     id: 'gtwc-2026-paul-ricard',
@@ -59,10 +60,15 @@ export const gtwc2026: RaceEvent[] = [
       // Thursday 25 June (CEST UTC+2)
       { type: 'practice', label: 'Free Practice 1', startUtc: '2026-06-25T08:10:00Z', durationMinutes: 120 },
       { type: 'practice', label: 'Free Practice 2', startUtc: '2026-06-25T14:10:00Z', durationMinutes: 120 },
-      // Combined Qualifying Thu 21:06 local = 19:06Z
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-25T19:06:00Z', durationMinutes: 60 },
-      // Friday 26 June — Superpole 15:25 local = 13:25Z
-      { type: 'qualifying', label: 'Super Pole', startUtc: '2026-06-26T13:25:00Z', durationMinutes: 30 },
+      // Qualifying 1-4 Thu 19:45 / 20:05 / 20:35 / 21:05 local, Night Practice 22:55 local
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-06-25T17:45:00Z', durationMinutes: 20 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-06-25T18:05:00Z', durationMinutes: 30 },
+      { type: 'qualifying', label: 'Qualifying 3', startUtc: '2026-06-25T18:35:00Z', durationMinutes: 30 },
+      { type: 'qualifying', label: 'Qualifying 4', startUtc: '2026-06-25T19:05:00Z', durationMinutes: 30 },
+      { type: 'practice', label: 'Night Practice', startUtc: '2026-06-25T20:55:00Z', durationMinutes: 40 },
+      // Friday 26 June — Superpole 15:05 local = 13:05Z, Warm-up 19:20 local = 17:20Z
+      { type: 'qualifying', label: 'Super Pole', startUtc: '2026-06-26T13:05:00Z', durationMinutes: 50 },
+      { type: 'warmup', label: 'Warm-up', startUtc: '2026-06-26T17:20:00Z', durationMinutes: 30 },
       // Saturday 27 June — Race 16:30 local = 14:30Z
       { type: 'endurance', label: '24 Hours of Spa', startUtc: '2026-06-27T14:30:00Z', durationMinutes: 1440 },
     ],
@@ -73,15 +79,15 @@ export const gtwc2026: RaceEvent[] = [
     name: 'Misano Sprint',
     circuitId: 'misano-world-circuit',
     sessions: [
-      // Friday 17 July (CEST UTC+2) — FP1 13:40 local = 11:40Z, FP2 20:00 local = 18:00Z
-      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-07-17T11:40:00Z', durationMinutes: 60 },
-      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-07-17T18:00:00Z', durationMinutes: 60 },
-      // Saturday 18 July — Q1 11:40 local = 09:40Z, Race 1 18:55 local = 16:55Z
-      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-18T09:40:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-07-18T16:55:00Z', durationMinutes: 60 },
-      // Sunday 19 July — Q2 10:20 local = 08:20Z, Race 2 15:00 local = 13:00Z
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-19T08:20:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race 2', startUtc: '2026-07-19T13:00:00Z', durationMinutes: 60 },
+      // Friday 17 July (CEST UTC+2) — FP1 14:50 local = 12:50Z, FP2 20:10 local = 18:10Z
+      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-07-17T12:50:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-07-17T18:10:00Z', durationMinutes: 60 },
+      // Saturday 18 July — Q1 13:05 local = 11:05Z, Race 1 20:30 local = 18:30Z
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-07-18T11:05:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-07-18T18:30:00Z', durationMinutes: 60 },
+      // Sunday 19 July — Q2 10:05 local = 08:05Z, Race 2 14:30 local = 12:30Z
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-07-19T08:05:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race 2', startUtc: '2026-07-19T12:30:00Z', durationMinutes: 60 },
     ],
   },
   {
@@ -93,11 +99,11 @@ export const gtwc2026: RaceEvent[] = [
       // Friday 31 July (CEST UTC+2) — FP1 13:30 local = 11:30Z, FP2 20:40 local = 18:40Z
       { type: 'practice', label: 'Free Practice 1', startUtc: '2026-07-31T11:30:00Z', durationMinutes: 60 },
       { type: 'practice', label: 'Free Practice 2', startUtc: '2026-07-31T18:40:00Z', durationMinutes: 60 },
-      // Saturday 1 August — Q1 14:55 local = 12:55Z, Race 1 21:15 local = 19:15Z
+      // Saturday 1 August — Q1 14:55 local = 12:55Z, Race 1 21:05 local = 19:05Z
       { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-08-01T12:55:00Z', durationMinutes: 30 },
-      { type: 'race', label: 'Race 1', startUtc: '2026-08-01T19:15:00Z', durationMinutes: 60 },
-      // Sunday 2 August — Q2 10:55 local = 08:55Z, Race 2 15:30 local = 13:30Z
-      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-08-02T08:55:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race 1', startUtc: '2026-08-01T19:05:00Z', durationMinutes: 60 },
+      // Sunday 2 August — Q2 10:50 local = 08:50Z, Race 2 15:30 local = 13:30Z
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-08-02T08:50:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race 2', startUtc: '2026-08-02T13:30:00Z', durationMinutes: 60 },
     ],
   },
@@ -107,13 +113,13 @@ export const gtwc2026: RaceEvent[] = [
     name: '3 Hours of Nurburgring',
     circuitId: 'nurburgring',
     sessions: [
-      // Friday 28 August (CEST UTC+2) — Bronze Test 17:40 local = 15:40Z
-      { type: 'practice', label: 'Bronze Test', startUtc: '2026-08-28T15:40:00Z', durationMinutes: 120 },
-      // Saturday 29 August — FP1 11:20 local = 09:20Z, FP2 16:45 local = 14:45Z
-      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-08-29T09:20:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-08-29T14:45:00Z', durationMinutes: 90 },
-      // Sunday 30 August — Q 10:20 local = 08:20Z, Race 15:00 local = 13:00Z
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-30T08:20:00Z', durationMinutes: 60 },
+      // Friday 28 August (CEST UTC+2) — Bronze Test 16:40 local = 14:40Z
+      { type: 'practice', label: 'Bronze Test', startUtc: '2026-08-28T14:40:00Z', durationMinutes: 120 },
+      // Saturday 29 August — FP1 10:50 local = 08:50Z, FP2 16:15 local = 14:15Z
+      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-08-29T08:50:00Z', durationMinutes: 90 },
+      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-08-29T14:15:00Z', durationMinutes: 90 },
+      // Sunday 30 August — Q1 09:45 local = 07:45Z (Q2 10:20, Q3 10:35), Race 15:00 local = 13:00Z
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-30T07:45:00Z', durationMinutes: 70 },
       { type: 'endurance', label: '3 Hours of Nurburgring', startUtc: '2026-08-30T13:00:00Z', durationMinutes: 180 },
     ],
   },
@@ -157,14 +163,13 @@ export const gtwc2026: RaceEvent[] = [
     name: '3 Hours of Portimao',
     circuitId: 'algarve-international-circuit',
     sessions: [
-      // Thursday 15 October (WEST UTC+1) — Bronze Test 15:50 local = 14:50Z
-      { type: 'practice', label: 'Bronze Test', startUtc: '2026-10-15T14:50:00Z', durationMinutes: 120 },
-      // Saturday 17 October — FP1 08:30 local = 07:30Z, FP2 12:40 local = 11:40Z
-      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-10-17T07:30:00Z', durationMinutes: 90 },
-      { type: 'practice', label: 'Free Practice 2', startUtc: '2026-10-17T11:40:00Z', durationMinutes: 90 },
-      // Sunday 18 October — Q 10:40 local = 09:40Z, Race 15:15 local = 14:15Z
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-18T09:40:00Z', durationMinutes: 60 },
-      { type: 'endurance', label: '3 Hours of Portimao', startUtc: '2026-10-18T14:15:00Z', durationMinutes: 180 },
+      // Thursday 15 October (WEST UTC+1) — Bronze Test 17:40 local = 16:40Z
+      { type: 'practice', label: 'Bronze Test', startUtc: '2026-10-15T16:40:00Z', durationMinutes: 120 },
+      // Friday 16 October — FP1 08:45 local = 07:45Z, Qualifying 17:55 local = 16:55Z
+      { type: 'practice', label: 'Free Practice 1', startUtc: '2026-10-16T07:45:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-10-16T16:55:00Z', durationMinutes: 60 },
+      // Saturday 17 October — Race 17:00 local = 16:00Z
+      { type: 'endurance', label: '3 Hours of Portimao', startUtc: '2026-10-17T16:00:00Z', durationMinutes: 180 },
     ],
   },
 ]

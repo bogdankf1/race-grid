@@ -1,8 +1,8 @@
 import { RaceEvent } from '@/lib/types'
 
-// IndyCar Series 2026 calendar — 17 races across 16 weekends
-// Source: indycar.com official schedule
-// Times converted from ET to UTC (ET = UTC-4 during DST, UTC-5 in winter)
+// IndyCar Series 2026 calendar — 18 rounds (Milwaukee doubleheader = rounds 16 & 17)
+// Source: indycar.com official race pages (times listed in ET, converted to UTC)
+// ET = UTC-4 during DST (from 8 Mar), UTC-5 before that (St. Petersburg, Phoenix)
 export const indycar2026: RaceEvent[] = [
   {
     id: 'indycar-2026-st-petersburg',
@@ -10,8 +10,10 @@ export const indycar2026: RaceEvent[] = [
     name: 'Firestone Grand Prix of St. Petersburg',
     circuitId: 'streets-of-st-petersburg',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-02-27T17:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-02-28T17:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-02-27T18:30:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-02-28T14:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-02-28T21:30:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-03-01T14:00:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-03-01T17:00:00Z', durationMinutes: 120 },
     ],
   },
@@ -21,8 +23,9 @@ export const indycar2026: RaceEvent[] = [
     name: 'Good Ranchers 250',
     circuitId: 'phoenix-raceway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-03-06T20:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-07T00:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-03-06T15:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-06T19:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'High Line & Final Practice', startUtc: '2026-03-06T21:30:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Race', startUtc: '2026-03-07T20:00:00Z', durationMinutes: 120 },
     ],
   },
@@ -32,9 +35,11 @@ export const indycar2026: RaceEvent[] = [
     name: 'Java House Grand Prix of Arlington',
     circuitId: 'streets-of-arlington',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-03-14T16:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-14T20:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-03-15T16:30:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-03-13T20:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-03-14T13:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-14T18:30:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-03-15T13:30:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race', startUtc: '2026-03-15T15:30:00Z', durationMinutes: 120 },
     ],
   },
   {
@@ -43,8 +48,10 @@ export const indycar2026: RaceEvent[] = [
     name: "Children's of Alabama Indy Grand Prix",
     circuitId: 'barber-motorsports-park',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-03-28T15:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-28T19:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-03-27T19:30:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-03-28T15:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-03-28T18:30:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-03-29T14:00:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-03-29T17:00:00Z', durationMinutes: 120 },
     ],
   },
@@ -54,8 +61,10 @@ export const indycar2026: RaceEvent[] = [
     name: 'Acura Grand Prix of Long Beach',
     circuitId: 'streets-of-long-beach',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-04-17T19:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-18T21:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-04-17T22:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-04-18T17:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-04-18T22:30:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-04-19T17:00:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-04-19T21:30:00Z', durationMinutes: 120 },
     ],
   },
@@ -65,8 +74,10 @@ export const indycar2026: RaceEvent[] = [
     name: 'Sonsio Grand Prix',
     circuitId: 'indianapolis-motor-speedway-road-course',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-08T16:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-09T18:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-08T13:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-08T17:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-05-09T14:30:00Z', durationMinutes: 45 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-05-09T15:30:00Z', durationMinutes: 45 },
       { type: 'race', label: 'Race', startUtc: '2026-05-09T20:30:00Z', durationMinutes: 120 },
     ],
   },
@@ -75,11 +86,19 @@ export const indycar2026: RaceEvent[] = [
     round: 7,
     name: '110th Indianapolis 500',
     circuitId: 'indianapolis-motor-speedway-oval',
+    // Saturday 16 May qualifying was rained out — all qualifying moved to Sunday 17 May
     sessions: [
-      { type: 'practice', label: 'Practice - Opening Day', startUtc: '2026-05-12T16:00:00Z', durationMinutes: 360 },
-      { type: 'qualifying', label: 'Qualifying - Day 1', startUtc: '2026-05-16T15:00:00Z', durationMinutes: 360 },
-      { type: 'qualifying', label: 'Qualifying - Day 2', startUtc: '2026-05-17T15:00:00Z', durationMinutes: 300 },
-      { type: 'race', label: 'Indianapolis 500', startUtc: '2026-05-24T14:00:00Z', durationMinutes: 200 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-12T16:00:00Z', durationMinutes: 360 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-13T16:00:00Z', durationMinutes: 360 },
+      { type: 'practice', label: 'Practice 3', startUtc: '2026-05-14T16:00:00Z', durationMinutes: 360 },
+      { type: 'practice', label: 'Fast Friday', startUtc: '2026-05-15T18:30:00Z', durationMinutes: 240 },
+      { type: 'practice', label: 'Practice 6', startUtc: '2026-05-17T13:30:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying (All Cars)', startUtc: '2026-05-17T16:00:00Z', durationMinutes: 150 },
+      { type: 'qualifying', label: 'Qualifying (Top 12)', startUtc: '2026-05-17T20:00:00Z', durationMinutes: 90 },
+      { type: 'qualifying', label: 'Qualifying (Firestone Fast 6)', startUtc: '2026-05-17T22:00:00Z', durationMinutes: 45 },
+      { type: 'practice', label: 'Practice 7', startUtc: '2026-05-18T17:00:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Carb Day Final Practice', startUtc: '2026-05-22T15:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Indianapolis 500', startUtc: '2026-05-24T16:30:00Z', durationMinutes: 200 },
     ],
   },
   {
@@ -88,8 +107,10 @@ export const indycar2026: RaceEvent[] = [
     name: 'Chevrolet Detroit Grand Prix',
     circuitId: 'streets-of-detroit',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-05-30T16:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-30T20:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-05-29T19:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-05-30T13:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-05-30T17:00:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-05-31T13:30:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-05-31T16:30:00Z', durationMinutes: 120 },
     ],
   },
@@ -99,8 +120,9 @@ export const indycar2026: RaceEvent[] = [
     name: 'Bommarito Automotive Group 500',
     circuitId: 'world-wide-technology-raceway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-06-06T20:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-07T00:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-06-06T16:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-06T20:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Final Practice', startUtc: '2026-06-07T01:00:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Race', startUtc: '2026-06-08T01:00:00Z', durationMinutes: 120 },
     ],
   },
@@ -110,8 +132,10 @@ export const indycar2026: RaceEvent[] = [
     name: 'XPEL Grand Prix at Road America',
     circuitId: 'road-america',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-06-20T16:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-20T20:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-06-19T20:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-06-20T15:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-06-20T18:00:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-06-21T15:00:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-06-21T18:00:00Z', durationMinutes: 120 },
     ],
   },
@@ -121,8 +145,10 @@ export const indycar2026: RaceEvent[] = [
     name: 'Honda Indy 200 at Mid-Ohio',
     circuitId: 'mid-ohio-sports-car-course',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-04T15:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-04T19:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-03T19:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-07-04T14:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-04T21:15:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-07-05T13:00:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-07-05T16:30:00Z', durationMinutes: 120 },
     ],
   },
@@ -131,20 +157,25 @@ export const indycar2026: RaceEvent[] = [
     round: 12,
     name: 'Borchetta Bourbon Music City Grand Prix',
     circuitId: 'nashville-superspeedway',
+    // Race was scheduled for Sun 19 Jul (night, after the World Cup final) — postponed by rain to Mon 20 Jul 3 PM ET,
+    // distance cut to 225 laps due to heat
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-07-18T18:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-18T22:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-07-19T20:00:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-07-18T14:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-07-18T19:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Final Practice', startUtc: '2026-07-18T22:00:00Z', durationMinutes: 60 },
+      { type: 'race', label: 'Race', startUtc: '2026-07-20T19:00:00Z', durationMinutes: 120 },
     ],
   },
   {
     id: 'indycar-2026-portland',
     round: 13,
-    name: 'BITNILE.com Grand Prix of Portland',
+    name: 'OnlyBulls Grand Prix of Portland',
     circuitId: 'portland-international-raceway',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-08T19:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-07T21:30:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-08T17:00:00Z', durationMinutes: 60 },
       { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-08T23:00:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-08-09T17:00:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-08-09T20:00:00Z', durationMinutes: 120 },
     ],
   },
@@ -154,8 +185,11 @@ export const indycar2026: RaceEvent[] = [
     name: 'Ontario Honda Dealers Indy at Markham',
     circuitId: 'streets-of-markham',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-15T15:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-15T19:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-15T14:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-15T18:30:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying 1', startUtc: '2026-08-15T22:30:00Z', durationMinutes: 30 },
+      { type: 'qualifying', label: 'Qualifying 2', startUtc: '2026-08-15T23:00:00Z', durationMinutes: 30 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-08-16T12:30:00Z', durationMinutes: 30 },
       { type: 'race', label: 'Race', startUtc: '2026-08-16T16:00:00Z', durationMinutes: 120 },
     ],
   },
@@ -165,9 +199,11 @@ export const indycar2026: RaceEvent[] = [
     name: 'Freedom 250 Grand Prix of Washington, D.C.',
     circuitId: 'streets-of-washington-dc',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-22T16:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T20:00:00Z', durationMinutes: 60 },
-      { type: 'race', label: 'Race', startUtc: '2026-08-23T18:00:00Z', durationMinutes: 120 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-08-22T13:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-08-22T17:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-22T21:00:00Z', durationMinutes: 60 },
+      { type: 'warmup', label: 'Warmup', startUtc: '2026-08-23T13:00:00Z', durationMinutes: 30 },
+      { type: 'race', label: 'Race', startUtc: '2026-08-23T17:00:00Z', durationMinutes: 120 },
     ],
   },
   {
@@ -175,9 +211,10 @@ export const indycar2026: RaceEvent[] = [
     round: 16,
     name: 'Snap-on Makers and Fixers 250',
     circuitId: 'milwaukee-mile',
+    // Race 1 started Sat 29 Aug (2:30 PM ET), red-flagged at lap 90 by rain, then completed Sun 30 Aug (6 PM ET)
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-08-28T18:00:00Z', durationMinutes: 60 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-29T16:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice', startUtc: '2026-08-28T22:00:00Z', durationMinutes: 75 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-29T15:00:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Race 1', startUtc: '2026-08-29T18:30:00Z', durationMinutes: 90 },
     ],
   },
@@ -187,18 +224,19 @@ export const indycar2026: RaceEvent[] = [
     name: 'Snap-on Milwaukee Mile 250',
     circuitId: 'milwaukee-mile',
     sessions: [
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-08-30T15:00:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Race 2', startUtc: '2026-08-30T17:00:00Z', durationMinutes: 90 },
     ],
   },
   {
     id: 'indycar-2026-laguna-seca',
     round: 18,
-    name: 'Firestone Grand Prix of Monterey',
+    name: 'Mission Foods Grand Prix of Monterey',
     circuitId: 'weathertech-raceway-laguna-seca',
     sessions: [
-      { type: 'practice', label: 'Practice', startUtc: '2026-09-05T19:00:00Z', durationMinutes: 75 },
-      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-05T23:00:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Practice 1', startUtc: '2026-09-04T21:00:00Z', durationMinutes: 75 },
+      { type: 'practice', label: 'Practice 2', startUtc: '2026-09-05T17:00:00Z', durationMinutes: 60 },
+      { type: 'qualifying', label: 'Qualifying', startUtc: '2026-09-05T20:30:00Z', durationMinutes: 60 },
+      { type: 'practice', label: 'Final Practice', startUtc: '2026-09-06T00:00:00Z', durationMinutes: 60 },
       { type: 'race', label: 'Race', startUtc: '2026-09-06T18:30:00Z', durationMinutes: 120 },
     ],
   },
