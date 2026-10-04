@@ -158,7 +158,7 @@ export const gtwcamResults2026: Record<string, EventResults> = {
           podium: [
             { position: 1, driverIds: ['rothberg', 'foley'], teamId: 'turner-motorsport' },
             { position: 2, driverIds: ['stephens', 'grenier'], teamId: 'jmf-motorsports' },
-            { position: 3, driverIds: ['williams-b', 'morad'], teamId: 'tr3-racing' },
+            { position: 3, driverIds: ['williams-b', 'morad-d'], teamId: 'tr3-racing' },
           ],
         },
         {
@@ -170,7 +170,7 @@ export const gtwcamResults2026: Record<string, EventResults> = {
         {
           className: 'Pro-Am',
           podium: [
-            { position: 1, driverIds: ['williams-b', 'morad'], teamId: 'tr3-racing' },
+            { position: 1, driverIds: ['williams-b', 'morad-d'], teamId: 'tr3-racing' },
           ],
         },
         {

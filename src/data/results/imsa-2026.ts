@@ -28,7 +28,7 @@ export const imsaResults2026: Record<string, EventResults> = {
         {
           className: 'LMP2',
           podium: [
-            { position: 1, driverIds: ['kurtz', 'quinn', 'sowery', 'jakobsen'], teamId: 'crowdstrike-racing' },
+            { position: 1, driverIds: ['kurtz-g', 'quinn', 'sowery-t', 'jakobsen'], teamId: 'crowdstrike-racing' },
           ],
         },
         {
@@ -222,7 +222,7 @@ export const imsaResults2026: Record<string, EventResults> = {
           className: 'LMP2',
           podium: [
             { position: 1, driverIds: ['cameron', 'edgar', 'hyett'], teamId: 'ao-racing' },
-            { position: 2, driverIds: ['quinn', 'sowery', 'kurtz'], teamId: 'crowdstrike-racing' },
+            { position: 2, driverIds: ['quinn', 'sowery-t', 'kurtz-g'], teamId: 'crowdstrike-racing' },
             { position: 3, driverIds: ['habsburg', 'abel', 'rao'], teamId: 'era-motorsport' },
           ],
         },
@@ -282,7 +282,7 @@ export const imsaResults2026: Record<string, EventResults> = {
           className: 'LMP2',
           podium: [
             { position: 1, driverIds: ['dillmann', 'clarke'], teamId: 'inter-europol' },
-            { position: 2, driverIds: ['kurtz', 'quinn'], teamId: 'crowdstrike-racing' },
+            { position: 2, driverIds: ['kurtz-g', 'quinn'], teamId: 'crowdstrike-racing' },
             { position: 3, driverIds: ['cameron', 'hyett'], teamId: 'ao-racing' },
           ],
         },
@@ -357,7 +357,7 @@ export const imsaResults2026: Record<string, EventResults> = {
         {
           className: 'LMP2',
           podium: [
-            { position: 1, driverIds: ['sowery', 'kurtz', 'quinn'], teamId: 'crowdstrike-racing' },
+            { position: 1, driverIds: ['sowery-t', 'kurtz-g', 'quinn'], teamId: 'crowdstrike-racing' },
             { position: 2, driverIds: ['lutke', 'heinemeier-hansson', 'beche'], teamId: 'tds-racing' },
             { position: 3, driverIds: ['cameron', 'edgar', 'hyett'], teamId: 'ao-racing' },
           ],
@@ -427,14 +427,14 @@ export const imsaResults2026: Record<string, EventResults> = {
   },
   'imsa-2026-indianapolis': {
     qualifying: {
-      overall: { driverIds: ['blomqvist', 'braun'], teamId: 'meyer-shank-racing' },
+      overall: { driverIds: ['aitken', 'bamber'], teamId: 'whelen-engineering' },
       classes: [
         {
           className: 'GTP',
           podium: [
-            { position: 1, driverIds: ['blomqvist', 'braun'], teamId: 'meyer-shank-racing' },
-            { position: 2, driverIds: ['aitken', 'bamber'], teamId: 'whelen-engineering' },
-            { position: 3, driverIds: ['vanthoor', 's-van-der-linde'], teamId: 'bmw-wrt' },
+            { position: 1, driverIds: ['aitken', 'bamber'], teamId: 'whelen-engineering' },
+            { position: 2, driverIds: ['vanthoor', 's-van-der-linde'], teamId: 'bmw-wrt' },
+            { position: 3, driverIds: ['j-taylor', 'deletraz'], teamId: 'wayne-taylor-racing' },
           ],
         },
         {
@@ -553,7 +553,7 @@ export const imsaResults2026: Record<string, EventResults> = {
         {
           className: 'LMP2',
           podium: [
-            { position: 1, driverIds: ['quinn', 'sowery', 'kurtz'], teamId: 'crowdstrike-racing' },
+            { position: 1, driverIds: ['quinn', 'sowery-t', 'kurtz-g'], teamId: 'crowdstrike-racing' },
             { position: 2, driverIds: ['dillmann', 'clarke', 'garg'], teamId: 'inter-europol' },
             { position: 3, driverIds: ['abel', 'rao', 'habsburg'], teamId: 'era-motorsport' },
           ],

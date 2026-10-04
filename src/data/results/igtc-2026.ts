@@ -97,12 +97,12 @@ export const igtcResults2026: Record<string, EventResults> = {
       ],
     },
     endurance: {
-      overall: { driverIds: ['auer', 'heinrich', 'picariello'], teamId: 'absolute-racing' },
+      overall: { driverIds: ['andlauer', 'heinrich', 'picariello'], teamId: 'absolute-racing' },
       classes: [
         {
           className: 'Overall',
           podium: [
-            { position: 1, driverIds: ['auer', 'heinrich', 'picariello'], teamId: 'absolute-racing' },
+            { position: 1, driverIds: ['andlauer', 'heinrich', 'picariello'], teamId: 'absolute-racing' },
             { position: 2, driverIds: ['mies', 'olsen', 'vervisch'], teamId: 'miedecke-motorsport-by-team-mpc' },
             { position: 3, driverIds: ['boccolacci', 'ghiretti', 'guven'], teamId: 'absolute-racing' },
           ],

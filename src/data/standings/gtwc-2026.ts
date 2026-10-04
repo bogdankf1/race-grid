@@ -1,36 +1,115 @@
 import type { SeasonStandings } from './types'
 
-// GTWC Europe Endurance Cup 2026 standings — verified from pitdebrief.com (after Round 3 Monza)
-// Pro Cup is the primary class. Sub-cup data sourced from:
-//   https://www.pitdebrief.com/post/2026-gtwc-europe-standings-after-round-3-at-monza
+// GT World Challenge Europe 2026 standings (Sprint + Endurance combined) — verified from gt-world-challenge-europe.com/standings
+// (after Round 9 Barcelona Sprint Race 1, 3 Oct 2026; Barcelona Race 2 and Portimão still to run). Top 10 per table.
+// Primary = Overall (Pro) championship; Gold / Silver / Bronze Cup tables in otherClasses. Wins counted from race results
+// (overall race wins for Overall; class wins for the cups).
 export const gtwcStandings2026: SeasonStandings = {
-  className: 'Pro',
+  className: 'Overall',
   drivers: [
-    { position: 1, driverId: 'engel', teamId: 'mann-filter', points: 43, wins: 0 },
-    { position: 2, driverId: 'thiim', teamId: 'comtoyou-racing', points: 33, wins: 1 },
-    { position: 3, driverId: 'levi-a', teamId: 'tresor-attempto', points: 25, wins: 1 },
-    { position: 4, driverId: 'prette', teamId: 'garage-59', points: 19, wins: 0 },
+    { position: 1, driverId: 'auer', teamId: 'mann-filter', points: 131.5, wins: 0 },
+    { position: 2, driverId: 'feller', teamId: 'lionspeed', points: 102, wins: 3 },
+    { position: 3, driverId: 'k-van-der-linde', teamId: 'team-wrt', points: 92.5, wins: 2 },
+    { position: 4, driverId: 'stolz', teamId: 'mann-filter', points: 86, wins: 0 },
+    { position: 5, driverId: 'juncadella', teamId: 'mercedes-amg-team-verstappen', points: 74, wins: 1 },
+    { position: 6, driverId: 'thiim', teamId: 'comtoyou-racing', points: 72.5, wins: 2 },
+    { position: 7, driverId: 'a-leclerc', teamId: 'af-corse', points: 63.5, wins: 1 },
+    { position: 8, driverId: 'sorensen', teamId: 'comtoyou-racing', points: 59, wins: 2 },
+    { position: 9, driverId: 'pepper', teamId: 'team-wrt', points: 56, wins: 0 },
+    { position: 10, driverId: 'gounon', teamId: 'mercedes-amg-team-verstappen', points: 53.5, wins: 1 },
   ],
-  constructors: [],
+  constructors: [
+    { position: 1, teamId: 'team-wrt', points: 138, wins: 2 },
+    { position: 2, teamId: 'winward-racing', points: 136.5, wins: 0 },
+    { position: 3, teamId: 'lionspeed', points: 104, wins: 3 },
+    { position: 4, teamId: 'garage-59', points: 83.5, wins: 1 },
+    { position: 5, teamId: '2seas-motorsport', points: 82, wins: 0 },
+    { position: 6, teamId: 'comtoyou-racing', points: 78, wins: 2 },
+    { position: 7, teamId: 'af-corse', points: 75.5, wins: 1 },
+    { position: 8, teamId: 'boutsen-vds', points: 66.5, wins: 0 },
+    { position: 9, teamId: 'tresor-attempto', points: 58, wins: 2 },
+    { position: 10, teamId: 'emil-frey-racing', points: 54.5, wins: 1 },
+  ],
   otherClasses: [
-    // Gold Cup skipped: only 2 of top 3 driver crews have verifiable IDs
-    // (Gachet missing; Louis Prette / Fleming pair maps ambiguously) — < 3 verifiable rows.
-    // Silver Cup skipped: top 2 driver crews (Montenegro/Lismont, Nesov/Malykhin) lack lead-driver IDs
-    // and Pure Rxcing team ID is missing — < 3 verifiable rows.
     {
-      className: 'Bronze Cup',
+      className: 'Gold',
       drivers: [
-        { position: 1, driverId: 'patrese', teamId: 'kessel-racing', points: 37, wins: 0 },
-        { position: 2, driverId: 'hartog', teamId: 'rutronik-racing', points: 33, wins: 0 },
-        // Row 3 skipped: Kellett/Leung — 'kellett' driver ID missing.
-        // Row 4 skipped: Piana/Dienst/Salikhov — 'piana' and 'salikhov' IDs missing.
+        { position: 1, driverId: 'fleming', teamId: 'garage-59', points: 165, wins: 2 },
+        { position: 2, driverId: 'rougier', teamId: 'csa-racing', points: 126.5, wins: 1 },
+        { position: 3, driverId: 'gachet', teamId: 'csa-racing', points: 126.5, wins: 1 },
+        { position: 4, driverId: 'pereira', teamId: 'tresor-attempto', points: 108.5, wins: 4 },
+        { position: 5, driverId: 'knutsson', teamId: 'boutsen-vds', points: 108.5, wins: 1 },
+        { position: 6, driverId: 'aka', teamId: 'tresor-attempto', points: 107.5, wins: 4 },
+        { position: 7, driverId: 'zagazeta', teamId: 'af-corse', points: 98.5, wins: 2 },
+        { position: 8, driverId: 'klingmann', teamId: 'rowe-racing', points: 89, wins: 1 },
+        { position: 9, driverId: 'goethe', teamId: 'garage-59', points: 86, wins: 1 },
+        { position: 10, driverId: 'ebdrup', teamId: 'selected-car-racing', points: 78, wins: 1 },
       ],
       constructors: [
-        { position: 1, teamId: 'kessel-racing', points: 37, wins: 0 },
-        { position: 2, teamId: 'rutronik-racing', points: 33, wins: 0 },
-        { position: 3, teamId: 'paradine-competition', points: 29, wins: 0 },
-        { position: 4, teamId: 'winward-racing', points: 25, wins: 0 },
-        { position: 5, teamId: 'century-motorsport', points: 24, wins: 0 },
+        { position: 1, teamId: 'af-corse', points: 177.5, wins: 2 },
+        { position: 2, teamId: 'garage-59', points: 168.5, wins: 2 },
+        { position: 3, teamId: 'csa-racing', points: 150, wins: 2 },
+        { position: 4, teamId: 'boutsen-vds', points: 111.5, wins: 1 },
+        { position: 5, teamId: 'tresor-attempto', points: 110, wins: 4 },
+        { position: 6, teamId: 'rowe-racing', points: 89, wins: 1 },
+        { position: 7, teamId: 'vsr-racing', points: 56.5, wins: 0 },
+        { position: 8, teamId: 'kpx-motorsport', points: 48, wins: 0 },
+        { position: 9, teamId: 'steller-motorsport', points: 43, wins: 0 },
+        { position: 10, teamId: 'optimum-motorsport', points: 36, wins: 0 },
+      ],
+    },
+    {
+      className: 'Silver',
+      drivers: [
+        { position: 1, driverId: 'montenegro', teamId: 'team-wrt', points: 210, wins: 5 },
+        { position: 2, driverId: 'g-oliveira', teamId: 'optimum-motorsport', points: 101, wins: 2 },
+        { position: 3, driverId: 'soderstrom', teamId: 'comtoyou-racing', points: 99, wins: 1 },
+        { position: 4, driverId: 'panis', teamId: 'getspeed', points: 97, wins: 1 },
+        { position: 5, driverId: 'stadsbader', teamId: 'af-corse', points: 92.5, wins: 0 },
+        { position: 6, driverId: 'cordeel', teamId: 'team-wrt', points: 87, wins: 0 },
+        { position: 7, driverId: 'levi-a', teamId: 'tresor-attempto', points: 84, wins: 1 },
+        { position: 8, driverId: 'm-villagomez', teamId: 'walkenhorst', points: 83, wins: 0 },
+        { position: 9, driverId: 'day', teamId: 'walkenhorst', points: 77, wins: 0 },
+        { position: 10, driverId: 'dorison', teamId: 'comtoyou-racing', points: 67, wins: 1 },
+      ],
+      constructors: [
+        { position: 1, teamId: 'team-wrt', points: 211.5, wins: 5 },
+        { position: 2, teamId: 'comtoyou-racing', points: 107, wins: 1 },
+        { position: 3, teamId: 'optimum-motorsport', points: 104, wins: 2 },
+        { position: 4, teamId: 'getspeed', points: 102, wins: 1 },
+        { position: 5, teamId: 'af-corse', points: 101.5, wins: 0 },
+        { position: 6, teamId: 'tresor-attempto', points: 86, wins: 1 },
+        { position: 7, teamId: 'walkenhorst', points: 83, wins: 0 },
+        { position: 8, teamId: 'pure-rxcing', points: 72, wins: 1 },
+        { position: 9, teamId: 'hrt-ford', points: 56, wins: 1 },
+        { position: 10, teamId: 'dinamic-gt', points: 47.5, wins: 0 },
+      ],
+    },
+    {
+      className: 'Bronze',
+      drivers: [
+        { position: 1, driverId: 'marschall', teamId: 'kessel-racing', points: 149.5, wins: 2 },
+        { position: 2, driverId: 'dienst', teamId: 'winward-racing', points: 131.5, wins: 2 },
+        { position: 3, driverId: 'darren-leung', teamId: 'paradine-competition', points: 128.5, wins: 1 },
+        { position: 4, driverId: 'd-blattner', teamId: 'kessel-racing', points: 122.5, wins: 2 },
+        { position: 5, driverId: 'dawson', teamId: '2seas-motorsport', points: 120.5, wins: 1 },
+        { position: 6, driverId: 'cheever', teamId: 'ziggo-tempesta', points: 118.5, wins: 3 },
+        { position: 7, driverId: 'dempsey', teamId: 'ziggo-tempesta', points: 99.5, wins: 3 },
+        { position: 8, driverId: 'kellett', teamId: 'paradine-competition', points: 71, wins: 0 },
+        { position: 9, driverId: 'piana', teamId: 'winward-racing', points: 58, wins: 0 },
+        { position: 10, driverId: 'rindone', teamId: 'getspeed', points: 57.5, wins: 1 },
+      ],
+      constructors: [
+        { position: 1, teamId: 'kessel-racing', points: 152.5, wins: 2 },
+        { position: 2, teamId: 'winward-racing', points: 131.5, wins: 2 },
+        { position: 3, teamId: 'paradine-competition', points: 128.5, wins: 1 },
+        { position: 4, teamId: '2seas-motorsport', points: 120.5, wins: 1 },
+        { position: 5, teamId: 'ziggo-tempesta', points: 118.5, wins: 3 },
+        { position: 6, teamId: 'getspeed', points: 61.5, wins: 1 },
+        { position: 7, teamId: 'rutronik-racing', points: 50, wins: 1 },
+        { position: 8, teamId: 'dinamic-gt', points: 38, wins: 0 },
+        { position: 9, teamId: 'century-motorsport', points: 34, wins: 0 },
+        { position: 10, teamId: 'ecurie-ecosse-blackthorn', points: 33, wins: 0 },
       ],
     },
   ],

@@ -230,7 +230,7 @@ export const gtwcResults2026: Record<string, EventResults> = {
           className: 'Race 1',
           podium: [
             { position: 1, driverIds: ['gounon', 'juncadella'], teamId: 'mercedes-amg-team-verstappen' },
-            { position: 2, driverIds: ['auer', 'a-leclerc'], teamId: 'af-corse' },
+            { position: 2, driverIds: ['neubauer', 'a-leclerc'], teamId: 'af-corse' },
             { position: 3, driverIds: ['pauwels', 'thiim'], teamId: 'comtoyou-racing' },
           ],
         },

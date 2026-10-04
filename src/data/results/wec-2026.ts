@@ -140,8 +140,8 @@ export const wecResults2026: Record<string, EventResults> = {
           className: 'Hypercar',
           podium: [
             { position: 1, driverIds: ['da-costa', 'habsburg', 'milesi'], teamId: 'alpine' },
-            { position: 2, driverIds: ['mann', 'nato', 'stevens'], teamId: 'jota' },
-            { position: 3, driverIds: ['mann', 'mann', 'mann'], teamId: 'cadillac' },
+            { position: 2, driverIds: ['deletraz', 'nato', 'stevens'], teamId: 'jota' },
+            { position: 3, driverIds: ['albuquerque', 'j-taylor', 'r-taylor'], teamId: 'cadillac' },
           ],
         },
         {
@@ -189,7 +189,7 @@ export const wecResults2026: Record<string, EventResults> = {
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, driverIds: ['catsburg', 'edgar', 'mann'], teamId: 'tf-sport' },
+            { position: 1, driverIds: ['catsburg', 'edgar', 'keating'], teamId: 'tf-sport' },
             { position: 2, driverIds: ['david-h', 'hawksworth', 'van-rompuy'], teamId: 'akkodis-asp' },
             { position: 3, driverIds: ['adam', 'e-barrichello', 'newell-g'], teamId: 'heart-of-racing' },
           ],
@@ -235,7 +235,7 @@ export const wecResults2026: Record<string, EventResults> = {
           podium: [
             { position: 1, driverIds: ['adam', 'pauwels', 'newell-g'], teamId: 'heart-of-racing' },
             { position: 2, driverIds: ['cressoni', 'hodenius', 'zelger'], teamId: 'iron-lynx' },
-            { position: 3, driverIds: ['jm-lopez', 'schmid', 'mann'], teamId: 'akkodis-asp' },
+            { position: 3, driverIds: ['jm-lopez', 'schmid-c', 'r-umbrarescu'], teamId: 'akkodis-asp' },
           ],
         },
       ],
@@ -256,7 +256,7 @@ export const wecResults2026: Record<string, EventResults> = {
           podium: [
             { position: 1, driverIds: ['dempsey', 'eastwood', 'yoluc'], teamId: 'racing-team-turkey-tf' },
             { position: 2, driverIds: ['dan-harper', 'mcintosh', 'thompson-p'], teamId: 'team-wrt' },
-            { position: 3, driverIds: ['lietz', 'pera', 'shahin-y'], teamId: 'the-bend-manthey' },
+            { position: 3, driverIds: ['lietz', 'pera-r', 'shahin-y'], teamId: 'the-bend-manthey' },
           ],
         },
       ],
@@ -277,9 +277,9 @@ export const wecResults2026: Record<string, EventResults> = {
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, driverIds: ['mann', 'levorato', 'sargeant'], teamId: 'proton-competition' },
-            { position: 2, driverIds: ['andrade', 'mann', 'martin'], teamId: 'iron-lynx' },
-            { position: 3, driverIds: ['mann', 'goethe', 'west'], teamId: 'garage-59' },
+            { position: 1, driverIds: ['gattuso', 'levorato', 'sargeant'], teamId: 'proton-competition' },
+            { position: 2, driverIds: ['andrade', 'm-berry', 'martin'], teamId: 'iron-lynx' },
+            { position: 3, driverIds: ['gehrsitz', 'goethe', 'west'], teamId: 'garage-59' },
           ],
         },
       ],
@@ -299,7 +299,7 @@ export const wecResults2026: Record<string, EventResults> = {
           className: 'LMGT3',
           podium: [
             { position: 1, driverIds: ['adam', 'pauwels', 'newell-g'], teamId: 'heart-of-racing' },
-            { position: 2, driverIds: ['drudi', 'mann', 'robichon'], teamId: 'heart-of-racing' },
+            { position: 2, driverIds: ['drudi', 'james-i', 'robichon'], teamId: 'heart-of-racing' },
             { position: 3, driverIds: ['boguslavskiy', 'cottingham', 'guven'], teamId: 'manthey-dk' },
           ],
         },
@@ -319,7 +319,7 @@ export const wecResults2026: Record<string, EventResults> = {
         {
           className: 'LMGT3',
           podium: [
-            { position: 1, driverIds: ['drudi', 'mann', 'robichon'], teamId: 'heart-of-racing' },
+            { position: 1, driverIds: ['drudi', 'james-i', 'robichon'], teamId: 'heart-of-racing' },
             { position: 2, driverIds: ['boguslavskiy', 'cottingham', 'guven'], teamId: 'manthey-dk' },
             { position: 3, driverIds: ['adam', 'pauwels', 'newell-g'], teamId: 'heart-of-racing' },
           ],
@@ -343,7 +343,7 @@ export const wecResults2026: Record<string, EventResults> = {
           className: 'LMGT3',
           podium: [
             { position: 1, driverIds: ['farfus', 'gelael', 'darren-leung'], teamId: 'team-wrt' },
-            { position: 2, driverIds: ['drudi', 'mann', 'robichon'], teamId: 'heart-of-racing' },
+            { position: 2, driverIds: ['drudi', 'james-i', 'robichon'], teamId: 'heart-of-racing' },
             { position: 3, driverIds: ['dempsey', 'eastwood', 'yoluc'], teamId: 'racing-team-turkey-tf' },
           ],
         },
